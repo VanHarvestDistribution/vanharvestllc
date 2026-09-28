@@ -9,11 +9,11 @@
 - **框架**：Astro + React + TypeScript；公开页面通过 Astro 静态生成，搜索目录作为 React 交互岛。
 - **路由**：`/`、`/products`、`/products/:category`、`/company`、`/services`、`/contact`。
 - **数据**：用户提供 PDF 已被提取并清洗为 2,390 条有效静态 JSON 数据，包含 Product ID、Code、English Name；编号前缀形成九类一级分类。
-- **图片目录**：`/products` 首先呈现九张可点击的圆形原创品类摄影卡，取代原有的 1–9 文本列表。每张卡链接至静态生成的品类详情页。
+- **图片目录**：`/products` 首先呈现九张可点击的圆形原创品类摄影卡，取代原有的 1–9 文本列表。首页则以四张图片首屏轮播和九张图片无限循环画廊展示目录，悬停时暂停并放大，点击进入品类详情页。每张卡链接至静态生成的品类详情页。
 - **Featured Products**：每个品类页从真实目录中选择四条有代表性的产品作为 Featured Products；产品卡链接回带有类别和产品编号搜索参数的完整目录。
 - **交互**：前端即时搜索、类别筛选、加载更多和无结果状态；无后端和数据库。
 - **部署**：静态构建输出到 `dist`。HTML 使用更新友好的 no-cache 策略；构建指纹资源使用长期 immutable 缓存。
-- **SEO**：每个路由提供唯一标题与描述；公开页面均含可读正文、语义化标题、Open Graph 基础信息和 robots。生产域名未确定前不猜测 canonical 或绝对 sitemap 地址。
+- **SEO**：每个路由提供唯一标题与描述；公开页面均含可读正文、语义化标题、Open Graph 基础信息和 robots。生产域名未确定前不猜测 canonical 或绝对 sitemap 地址。首页轮播和循环画廊均提供有意义的 alt 文本、真实链接和 reduced-motion 降级。
 
 ## 项目结构
 
