@@ -2,6 +2,15 @@
   "routes": [
     { "path": "/", "title": "Home" },
     { "path": "/products", "title": "Product Catalog" },
+    { "path": "/products/meat", "title": "Meat & Poultry" },
+    { "path": "/products/produce", "title": "Produce & Fruit" },
+    { "path": "/products/seafood", "title": "Seafood" },
+    { "path": "/products/pantry", "title": "Sauces & Seasonings" },
+    { "path": "/products/preserved", "title": "Canned & Preserved" },
+    { "path": "/products/supplies", "title": "Restaurant Supplies" },
+    { "path": "/products/dry", "title": "Rice, Noodles & Dry Goods" },
+    { "path": "/products/cleaning", "title": "Cleaning & Janitorial" },
+    { "path": "/products/prepared", "title": "Frozen & Prepared" },
     { "path": "/company", "title": "Company" },
     { "path": "/services", "title": "Services" },
     { "path": "/contact", "title": "Contact" }

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CallToAction from '@/components/CallToAction.astro';
+import productsData from '@/data/products.json';
+import { categories } from '@/data/site';
+
+type Product = { id: string; code: string; name: string; category: string };
+type Category = typeof categories[number];
+
+export function getStaticPaths() {
+  const allProducts = productsData as Product[];
+  return categories.map((category) => {
+    const categoryProducts = allProducts.filter((product) => product.category === category.key);
+    const featured = category.featuredIds.map((id) => categoryProducts.find((product) => product.id === id)).filter((product): product is Product => Boolean(product));
+    return { params: { category: category.key }, props: { category, productCount: categoryProducts.length, featured } };
+  });
+}
+
+const { category, productCount, featured } = Astro.props as { category: Category; productCount: number; featured: Product[] };
+---
+<BaseLayout title={`${category.name} Wholesale Products | Van Harvest`} description={`Browse Van Harvest ${category.name.toLowerCase()} products, including selected Featured Products from our Charlotte wholesale food catalog.`} active="/products" ogImage={category.image}>
+  <section class="category-detail-hero">
+    <div class="category-detail-media"><img src={category.image} alt={`${category.name} wholesale catalog category`} /></div><div class="category-detail-shade"></div>
+    <div class="shell category-detail-inner"><p class="breadcrumb"><a href="/products">Product catalog</a><span>/</span>{category.name}</p><div class="category-detail-copy reveal"><p class="eyebrow eyebrow-light">{category.index} · {productCount.toLocaleString()} catalog items</p><h1>{category.name}<br /><em>for the professional kitchen.</em></h1><p>{category.short}</p><a class="button" href={`/products?category=${category.key}#catalog`}>Browse all {productCount.toLocaleString()} items →</a></div></div>
+  </section>
+  <section class="featured-products"><div class="shell"><div class="featured-products-heading reveal"><div><p class="eyebrow">Category highlights</p><h2>Featured<br /><em>Products.</em></h2></div><p>A practical introduction to this department, selected directly from the current Van Harvest catalog. Select any item to open it inside the searchable list.</p></div><div class="featured-product-grid">{featured.map((product, index) => <a class="featured-product-card reveal" href={`/products?category=${category.key}&q=${product.id}#catalog`}><span>{String(index + 1).padStart(2, '0')}</span><div><small>Item {product.id}</small><h3>{product.name}</h3><p>{product.code || 'Product code available on request'}</p></div><b aria-hidden="true">↗</b></a>)}</div><div class="featured-products-footer reveal"><p>{productCount.toLocaleString()} {category.name.toLowerCase()} products are available to search by item number, code or product name.</p><a class="text-link" href={`/products?category=${category.key}#catalog`}>View full category →</a></div></div></section>
+  <CallToAction />
+</BaseLayout>
