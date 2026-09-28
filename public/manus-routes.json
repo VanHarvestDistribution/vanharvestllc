@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home" },
+    { "path": "/products", "title": "Product Catalog" },
+    { "path": "/company", "title": "Company" },
+    { "path": "/services", "title": "Services" },
+    { "path": "/contact", "title": "Contact" }
+  ]
+}

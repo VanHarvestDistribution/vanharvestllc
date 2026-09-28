@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CatalogExplorer from '@/components/CatalogExplorer';
+import CallToAction from '@/components/CallToAction.astro';
+import products from '@/data/products.json';
+---
+<BaseLayout title="Wholesale Food Product Catalog | Van Harvest Charlotte" description="Search more than 2,300 Van Harvest wholesale food items by product number, code, name or category, and download the complete PDF catalog." active="/products">
+  <section class="inner-hero"><div class="shell inner-grid"><div class="reveal"><p class="eyebrow">Product catalog</p><h1>Find exactly<br /><em>what you need.</em></h1></div><div class="inner-copy reveal"><p>Search {products.length.toLocaleString()} active catalog records across proteins, produce, seafood, pantry ingredients, restaurant supplies and prepared foods.</p><a class="button" href="/catalog/van-harvest-product-catalog.pdf" target="_blank" rel="noopener noreferrer">Download complete PDF ↗</a></div></div></section>
+  <section class="catalog-section" id="catalog"><div class="shell"><div class="catalog-intro-note"><span>Search by product ID, code or English name</span><span>Catalog source · August 28, 2024</span></div><CatalogExplorer client:load /></div></section>
+  <CallToAction />
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+interface Props { active?: string }
+const { active = '' } = Astro.props;
+const items = [
+  ['Home', '/'],
+  ['Products', '/products'],
+  ['Company', '/company'],
+  ['Services', '/services'],
+  ['Contact', '/contact']
+];
+---
+<header class="site-header" data-header>
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Van Harvest Distribution home">
+      <img src="/brand/van-harvest-mark.svg" width="42" height="42" alt="" />
+      <span>Van Harvest<small>Distribution</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {items.map(([label, href]) => <a href={href} class:list={{ active: active === href }}>{label}</a>)}
+    </nav>
+    <a class="header-call" href="tel:+17043928718"><span>Talk with us</span>(704) 392-8718</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+      <i></i><i></i><span>Menu</span>
+    </button>
+  </div>
+</header>
+<div class="mobile-drawer" data-mobile-menu aria-hidden="true">
+  <div class="mobile-drawer-top">
+    <a class="brand" href="/"><img src="/brand/van-harvest-mark.svg" width="42" height="42" alt="" /><span>Van Harvest<small>Distribution</small></span></a>
+    <button type="button" aria-label="Close menu" data-menu-close>Close</button>
+  </div>
+  <nav aria-label="Mobile navigation">
+    {items.map(([label, href], index) => <a href={href}><span>0{index + 1}</span>{label}<b aria-hidden="true">↗</b></a>)}
+  </nav>
+  <div class="mobile-drawer-contact"><span>Charlotte office</span><a href="tel:+17043928718">(704) 392-8718</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
+</div>
+<script is:inline>
+  const header = document.querySelector('[data-header]');
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const close = document.querySelector('[data-menu-close]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  const setMenu = (open) => {
+    menu?.classList.toggle('is-open', open);
+    menu?.setAttribute('aria-hidden', String(!open));
+    toggle?.setAttribute('aria-expanded', String(open));
+    if (toggle) toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+  };
+  toggle?.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  close?.addEventListener('click', () => setMenu(false));
+  addEventListener('scroll', () => header?.classList.toggle('is-scrolled', scrollY > 18), { passive: true });
+</script>

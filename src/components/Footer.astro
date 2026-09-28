@@ -1,0 +1,15 @@
+---
+import { contact } from '@/data/site';
+---
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-intro">
+      <a class="brand brand-light" href="/"><img src="/brand/van-harvest-mark.svg" width="48" height="48" alt="" /><span>Van Harvest<small>Distribution</small></span></a>
+      <p>A Charlotte foodservice distributor built around selection, consistency and practical service.</p>
+    </div>
+    <div class="footer-column"><span>Navigate</span><a href="/products">Products</a><a href="/company">Company</a><a href="/services">Services</a><a href="/contact">Contact</a></div>
+    <div class="footer-column"><span>Catalog</span><a href="/products">Search products</a><a href="/catalog/van-harvest-product-catalog.pdf" target="_blank" rel="noopener noreferrer">Download PDF ↗</a></div>
+    <div class="footer-column"><span>Charlotte office</span><a href={`tel:${contact.phoneHref}`}>{contact.phoneDisplay}</a><a href={contact.mapsUrl} target="_blank" rel="noopener noreferrer">{contact.address} ↗</a></div>
+  </div>
+  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} Van Harvest LLC</span><span>Wholesale food distribution · Charlotte, NC</span><a href="#main">Back to top ↑</a></div>
+</footer>
