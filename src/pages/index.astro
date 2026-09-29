@@ -4,7 +4,6 @@ import CallToAction from '@/components/CallToAction.astro';
 import HomeCatalogMarquee from '@/components/HomeCatalogMarquee.astro';
 import products from '@/data/products.json';
 import { categories, heroImage } from '@/data/site';
-const featured = categories.slice(0, 3) as Array<(typeof categories)[number] & { image: string }>;
 const heroSlides = [heroImage, categories[0].image, categories[1].image, categories[2].image];
 ---
 <BaseLayout title="Van Harvest Distribution | Wholesale Food in Charlotte" description="Explore Van Harvest Distribution's wholesale food catalog for meat, produce, seafood, pantry staples and restaurant supplies in Charlotte, NC." active="/" ogImage={heroImage}>
@@ -18,7 +17,6 @@ const heroSlides = [heroImage, categories[0].image, categories[1].image, categor
   </section>
   <section class="home-intro"><div class="shell split-heading reveal"><div><p class="eyebrow">One catalog. Many kitchens.</p><h2>Foodservice supply,<br /><em>selected with purpose.</em></h2></div><div class="split-copy"><p>Van Harvest is a Charlotte-based wholesale food distributor serving the practical needs of professional kitchens. Our catalog brings proteins, produce, seafood, Asian pantry staples, prepared foods and operational supplies into one searchable place.</p><p>Use an item number, product code or everyday name to quickly find what your operation needs.</p><a class="text-link" href="/company">Meet Van Harvest →</a></div></div></section>
   <section class="statement"><div class="shell statement-grid reveal"><span>Broad selection, clearly organized.</span><p>Our item-number system keeps a large catalog easy to navigate: products beginning with 1 cover meat and poultry, 2 covers produce and fruit, and each following department has its own clear home.</p></div></section>
-  <section class="featured-categories"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">Core departments</p><h2>Fresh, frozen<br />and <em>ready.</em></h2></div><p>Start with the three categories at the center of many menus, then continue into our full foodservice assortment.</p></div><div class="featured-grid">{featured.map((item) => <a class="feature-card reveal" href={`/products/${item.key}`}><img src={item.image} alt={`${item.name} wholesale product selection`} loading="lazy" /><div class="feature-card-copy"><span>{item.index}</span><h3>{item.name} ↗</h3></div></a>)}</div></div></section>
   <HomeCatalogMarquee />
   <section class="catalog-banner"><div class="shell catalog-banner-grid reveal"><div><p class="eyebrow eyebrow-light">Current item list</p><h2>Your next order<br />starts with <em>the catalog.</em></h2></div><div class="catalog-banner-copy"><p>Search the digital catalog for speed, or keep the complete PDF handy for purchasing and kitchen planning.</p><div class="catalog-banner-actions"><a class="button" href="/products">Search products →</a><a class="button button-outline" href="/catalog/van-harvest-product-catalog.pdf" target="_blank" rel="noopener noreferrer">Download PDF ↗</a></div></div></div></section>
   <CallToAction />
