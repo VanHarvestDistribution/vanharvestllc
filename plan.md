@@ -48,3 +48,8 @@
 ## 验证
 
 TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由、2,390 条目录记录、九张图片分类卡、九个品类详情页、Featured Products 跳转、PDF 下载路径、电话和地图链接。Preview 启动后检查 `/manus-routes.json` 返回 200 JSON，并根据用户明确要求进行桌面和手机端视觉检查。
+
+
+## 参考图片研究
+
+已检查 Ideal Meat Shop 的肉类产品摄影和 US Foods 产品分类结构。Ideal Meat 图片 CDN 对直接下载请求返回 403，US Foods 产品页当前返回 CloudFront 403，因此不将外部热链或未经固化的图片写入生产资源；站点继续使用本地原创品类摄影，待用户提供正式产品图片后替换。
