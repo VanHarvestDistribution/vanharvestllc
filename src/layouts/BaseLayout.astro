@@ -1,6 +1,7 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import { absoluteUrl, languagePaths } from '@/data/seo';
 import '@/styles/global.css';
 
 interface Props {
@@ -13,8 +14,9 @@ interface Props {
 }
 
 const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png', jsonLd, lang = 'en' } = Astro.props;
-const localized = Astro.url.pathname.startsWith('/en') || Astro.url.pathname.startsWith('/zh');
-const contactHref = localized ? `/${lang}/contact` : '/contact';
+const alternates = languagePaths(Astro.url.pathname);
+const canonical = absoluteUrl(Astro.url.pathname);
+const ogImageUrl = absoluteUrl(ogImage) || ogImage;
 ---
 <!doctype html>
 <html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
@@ -23,12 +25,16 @@ const contactHref = localized ? `/${lang}/contact` : '/contact';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="keywords" content="food distributor, wholesale food, Charlotte NC, restaurant supplier, Asian produce" />
-    <meta name="theme-color" content="#27242A" />
+    <meta name="theme-color" content="#102B52" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Van Harvest Distribution" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImageUrl} />
+    {canonical && <><link rel="canonical" href={canonical} /><meta property="og:url" content={canonical} /></>}
+    <link rel="alternate" hreflang="en" href={absoluteUrl(alternates.english) || alternates.english} />
+    <link rel="alternate" hreflang="zh-CN" href={absoluteUrl(alternates.chinese) || alternates.chinese} />
+    <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.default) || alternates.default} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -44,12 +50,18 @@ const contactHref = localized ? `/${lang}/contact` : '/contact';
     <Header active={active} lang={lang} />
     <main id="main"><slot /></main>
     <Footer />
-    <a class="contact-fab" href="tel:+17043928717" aria-label={lang === 'zh' ? '电话联系 Van Harvest' : 'Talk to Van Harvest'}><span aria-hidden="true">☎</span>{lang === 'zh' ? '电话联系' : 'Talk to us'}</a>
+    <a class="contact-fab" href="tel:+17043928717" aria-label={lang === 'zh' ? '电话联系 Van Harvest' : 'Talk to Van Harvest'}><span aria-hidden="true">☎</span><span class="contact-fab-label">{lang === 'zh' ? '电话联系' : 'Talk to us'}</span></a>
     <script is:inline>
-      const reveal = new IntersectionObserver((entries) => entries.forEach((entry) => {
-        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); reveal.unobserve(entry.target); }
-      }), { threshold: .1, rootMargin: '0px 0px -4% 0px' });
-      document.querySelectorAll('.reveal').forEach((element) => reveal.observe(element));
+      const revealAll = () => document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
+      try {
+        if ('IntersectionObserver' in window) {
+          const reveal = new IntersectionObserver((entries) => entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('is-visible'); reveal.unobserve(entry.target); }
+          }), { threshold: .1, rootMargin: '0px 0px -4% 0px' });
+          document.querySelectorAll('.reveal').forEach((element) => reveal.observe(element));
+        } else revealAll();
+      } catch (_) { revealAll(); }
+      window.setTimeout(revealAll, 1500);
     </script>
   </body>
 </html>

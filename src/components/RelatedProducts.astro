@@ -1,0 +1,21 @@
+---
+import productsData from '@/data/products.json';
+import { productImageFor } from '@/data/productImages';
+interface Props { product: any; category: any; lang?: 'en' | 'zh'; localized?: boolean }
+const { product, category, lang = 'en', localized = false } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+const allProducts = productsData as any[];
+const currentImage = productImageFor(product.id);
+const usedImages = new Set<string>(currentImage ? [currentImage] : []);
+const related: Array<{ product: any; image?: string }> = [];
+for (const candidate of allProducts.filter((item) => item.category === product.category && item.id !== product.id)) {
+  const candidateImage = productImageFor(candidate.id);
+  const image = candidateImage && !usedImages.has(candidateImage) ? candidateImage : undefined;
+  if (image) usedImages.add(image);
+  related.push({ product: candidate, image });
+  if (related.length === 8) break;
+}
+const categoryName = zh ? category.nameZh : category.name;
+---
+<section class="related-products"><div class="shell"><div class="related-heading"><div><p class="eyebrow">{zh ? '继续浏览' : 'Keep browsing'}</p><h2>{zh ? '同类产品' : 'Related products'}</h2></div><a class="text-link" href={`${prefix}/products/catalog?category=${category.key}#catalog`}>{zh ? `查看全部${categoryName} →` : `View all ${categoryName} →`}</a></div><div class="related-product-grid">{related.map(({ product: item, image }) => <a class="related-product-card" href={`${prefix}/products/${category.key}/${item.id}`}>{image ? <img src={image} alt={`${item.name} product photo`} loading="lazy" /> : <div class="related-product-icon" role="img" aria-label={zh ? `${categoryName} 分类产品` : `${categoryName} category item`}></div>}<div><small>Item {item.id}</small><h3>{item.name}</h3>{item.nameZh && <p>{item.nameZh}</p>}</div><b aria-hidden="true">↗</b></a>)}</div></div></section>

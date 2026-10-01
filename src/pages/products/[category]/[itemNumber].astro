@@ -1,8 +1,7 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
 import productsData from '@/data/products.json';
-import { categories, contact } from '@/data/site';
-import { productImageFor } from '@/data/productImages';
+import { categories } from '@/data/site';
+import LocalizedProductDetail from '@/components/LocalizedProductDetail.astro';
 
 type Product = { id: string; name: string; nameZh: string; category: string; packSize?: string; storage?: string; active: boolean };
 export function getStaticPaths() {
@@ -10,13 +9,5 @@ export function getStaticPaths() {
   return allProducts.map((product) => ({ params: { category: product.category, itemNumber: product.id }, props: { product, category: categories.find((entry) => entry.key === product.category) || categories[0] } }));
 }
 const { product, category } = Astro.props as { product: Product; category: typeof categories[number] };
-const storageLabel = product.storage === 'frozen' ? 'Frozen / 冷冻' : product.storage === 'refrigerated' ? 'Fresh or refrigerated / 新鲜或冷藏' : 'Dry / 常温';
-const detailTitle = `${product.name} | Item ${product.id} | Van Harvest`;
-const detailDescription = `Item ${product.id}: ${product.name}${product.nameZh ? ` / ${product.nameZh}` : ''}. Browse product details and contact Van Harvest Distribution in Charlotte.`;
-const productImage = productImageFor(product.id, category.image);
-const jsonLd = { '@context': 'https://schema.org', '@type': 'Product', name: product.name, sku: product.id, category: category.name, description: detailDescription, image: [productImage], brand: { '@type': 'Brand', name: 'Van Harvest Distribution' }, additionalProperty: [{ '@type': 'PropertyValue', name: 'Chinese name', value: product.nameZh || 'Not provided' }, { '@type': 'PropertyValue', name: 'Storage', value: storageLabel }] };
 ---
-<BaseLayout title={detailTitle} description={detailDescription} active="/products" ogImage={productImage} jsonLd={jsonLd}>
-  <section class="category-detail-hero product-detail-hero"><div class="category-detail-media"><img src={productImage} alt={`${product.name} product photo`} /></div><div class="category-detail-shade"></div><div class="shell category-detail-inner"><p class="breadcrumb"><a href="/products">Product catalog</a><span>/</span><a href={`/products/${category.key}`}>{category.name}</a><span>/</span>Item {product.id}</p><div class="category-detail-copy"><p class="eyebrow eyebrow-light">Item {product.id} · {category.name}</p><h1>{product.name}</h1>{product.nameZh && <p class="detail-zh">{product.nameZh}</p>}<div class="detail-meta-grid"><div class="detail-meta"><small>Item #</small><strong>{product.id}</strong></div><div class="detail-meta"><small>Storage / 温层</small><strong>{storageLabel}</strong></div><div class="detail-meta"><small>Pack / 包装</small><strong>{product.packSize || 'Confirm with sales / 请向销售确认'}</strong></div></div></div></div></section>
-  <section class="product-detail-body"><div class="shell product-detail-grid"><div class="product-placeholder"><img src={productImage} alt={`${product.name} product photo`} loading="lazy" /></div><div class="product-detail-copy"><p class="eyebrow">Product information / 产品信息</p><h2>Built for the<br /><em>professional kitchen.</em></h2><p class="detail-zh">{product.nameZh || '中文名称待补充'}</p><p class="detail-description">This item is part of the Van Harvest wholesale catalog. Product availability, pack details and substitutions can change; contact the office for current purchasing guidance. No pricing is shown online.</p><div class="detail-actions"><a class="button" href="/apply">Apply for an account / 申请开户 →</a><a class="button button-outline" href={`mailto:${contact.officeEmail}?subject=${encodeURIComponent(`Sales inquiry · Item ${product.id}`)}`}>Contact sales / 联系销售 →</a></div><div class="detail-note"><small>Catalog reference</small><p>Item {product.id} · {category.name} · {storageLabel}</p></div></div></div></section>
-</BaseLayout>
+<LocalizedProductDetail product={product} category={category} lang="en" />

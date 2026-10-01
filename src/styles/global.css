@@ -6,6 +6,8 @@
 @import './company-story.css';
 @import './navigation-refinement.css';
 @import './products-subpages-refinement.css';
+@import './product-detail-refinement.css';
+@import './interface-refinement.css';
 
 :root{
   --navy:#102b52;

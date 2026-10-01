@@ -15,27 +15,34 @@ const items = [
   [lang === 'zh' ? '服务' : 'Services', '/services'],
   [lang === 'zh' ? '联系我们' : 'Contact', '/contact']
 ];
+const mobileItems = [
+  items[0], items[1],
+  [lang === 'zh' ? '申请开户' : 'Apply for an account', '/apply'],
+  [lang === 'zh' ? '配送范围' : 'Delivery areas', '/delivery'],
+  [lang === 'zh' ? '服务客户' : 'Who we serve', '/industries'],
+  ...items.slice(2)
+];
 ---
 <header class="site-header" data-header>
   <div class="shell header-inner">
-    <a class="brand official-brand" href={localHref('/')} aria-label="Van Harvest Distribution home"><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
+    <a class="brand official-brand" href={localHref('/')} aria-label="Van Harvest Distribution home"><img class="brand-logo brand-logo-dark" src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /><img class="brand-logo brand-logo-light" src="/brand/van-harvest-official-light.png" width="142" height="101" alt="" aria-hidden="true" /></a>
     <nav class="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
-    {items.map(([label, href]) => <a href={localHref(href)} class:list={{ active: active === href || (href === '/products' && active === '/products') }}>{label}</a>)}<span class="nav-divider" aria-hidden="true"></span><a class="language-switch language-switch-active" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a>
+      {items.map(([label, href]) => <a href={localHref(href)} class:list={{ active: active === href || (href === '/products' && active === '/products') }}>{label}</a>)}
+      <span class="nav-divider" aria-hidden="true"></span><a class="language-switch language-switch-active" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a>
     </nav>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
-      <i></i><i></i><span>Menu</span>
-    </button>
+    <a class="header-apply button" href={localHref('/apply')}>{lang === 'zh' ? '申请开户' : 'Apply for an account'}</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle><i></i><i></i><span>{lang === 'zh' ? '菜单' : 'Menu'}</span></button>
   </div>
 </header>
 <div class="mobile-drawer" data-mobile-menu aria-hidden="true">
   <div class="mobile-drawer-top">
-      <a class="brand official-brand" href={localHref('/')}><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
-    <button type="button" aria-label={lang === 'zh' ? '关闭菜单' : 'Close menu'} data-menu-close>{lang === 'zh' ? '关闭' : 'Close'}</button>
+    <a class="brand official-brand" href={localHref('/')}><img class="brand-logo brand-logo-dark" src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /><img class="brand-logo brand-logo-light" src="/brand/van-harvest-official-light.png" width="142" height="101" alt="" aria-hidden="true" /></a>
+    <div class="mobile-drawer-actions"><a class="mobile-language" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a><button type="button" aria-label={lang === 'zh' ? '关闭菜单' : 'Close menu'} data-menu-close>{lang === 'zh' ? '关闭' : 'Close'}</button></div>
   </div>
   <nav aria-label="Mobile navigation">
-    {items.map(([label, href]) => <a href={localHref(href)}><span class="mobile-menu-label">{label}</span><b aria-hidden="true">↗</b></a>)}
+    {mobileItems.map(([label, href]) => <a href={localHref(href)}><span class="mobile-menu-label">{label}</span><b aria-hidden="true">↗</b></a>)}
   </nav>
-  <div class="mobile-drawer-contact"><span>{lang === 'zh' ? '语言 / Language' : 'Language / 语言'}</span><p><a href={switchHref}>{lang === 'zh' ? 'English' : '中文'}</a></p><span>{lang === 'zh' ? '夏洛特办公室' : 'Charlotte office'}</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
+  <div class="mobile-drawer-contact"><span>{lang === 'zh' ? '夏洛特办公室' : 'Charlotte office'}</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
 </div>
 <script is:inline>
   const header = document.querySelector('[data-header]');

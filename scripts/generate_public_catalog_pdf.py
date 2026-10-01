@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the downloadable public bilingual Van Harvest catalog without prices or internal codes."""
+"""Generate the downloadable bilingual Van Harvest product catalog."""
 from __future__ import annotations
 
 import json
@@ -12,15 +12,15 @@ MARKDOWN = ROOT / 'data/public-bilingual-catalog.md'
 PDF = ROOT / 'public/catalog/van-harvest-product-catalog.pdf'
 
 CATEGORY_NAMES = {
-    'meat': ('Meat & Poultry', '肉类与禽类'),
+    'meat': ('Meat & Poultry', '肉类禽类'),
     'produce': ('Produce & Fruit', '蔬菜水果'),
     'seafood': ('Seafood', '海鲜'),
-    'pantry': ('Sauces & Seasonings', '酱料与调味品'),
-    'preserved': ('Canned & Preserved', '罐藏与保鲜食品'),
+    'pantry': ('Sauces & Seasonings', '酱料调味'),
+    'preserved': ('Canned & Preserved', '罐头腌制'),
     'supplies': ('Restaurant Supplies', '餐饮用品'),
-    'dry': ('Rice, Noodles & Dry Goods', '米面与干货'),
+    'dry': ('Rice, Noodles & Dry Goods', '米面干货'),
     'cleaning': ('Cleaning & Janitorial', '清洁用品'),
-    'prepared': ('Frozen, Prepared & Snacks', '冷冻、预制食品与零食饮料'),
+    'prepared': ('Frozen, Prepared & Snacks', '冷冻点心与零食'),
 }
 CATEGORY_ORDER = list(CATEGORY_NAMES)
 STORAGE = {'frozen': 'Frozen / 冷冻', 'refrigerated': 'Fresh or refrigerated / 新鲜或冷藏', 'dry': 'Dry / 常温'}
@@ -33,39 +33,24 @@ def esc(value: str) -> str:
 def main() -> None:
     products = json.loads(PRODUCTS.read_text())
     lines = [
-        '# Van Harvest Distribution',
-        '## Bilingual Wholesale Product Catalog / 中英双语产品目录',
-        '',
-        '**Charlotte, North Carolina**  \\',
-        '**Phone:** (704) 392-8717  \\',
-        '**Sales:** ordersvhd@gmail.com  \\',
-        '**Office:** vanharvestoffice2019@gmail.com',
-        '',
-        '> This public catalog shows customer-facing Item #, English name, Chinese name, category, pack format and storage guidance. It does not contain pricing, inventory levels or private supplier references.',
-        '> 本公开目录仅展示客户可见的 Item #、中英文名称、分类、包装及温层参考；不显示价格、库存数量或内部供应商编号。',
-        '',
+        '# Van Harvest Distribution', '## Bilingual Wholesale Product Catalog / 中英双语产品目录', '',
+        '**Charlotte, North Carolina**  \\', '**Phone:** (704) 392-8717  \\', '**Sales:** ordersvhd@gmail.com  \\', '**Office:** vanharvestoffice2019@gmail.com', '',
+        '> Search by Item #, English name or Chinese name. Apply for an account to see pricing.',
+        '> 可按 Item #、英文名或中文名查找产品；申请开户查看价格。', ''
     ]
     for category in CATEGORY_ORDER:
         en, zh = CATEGORY_NAMES[category]
         rows = [product for product in products if product['category'] == category]
         if not rows:
             continue
-        lines.extend([
-            f'## {en} / {zh}',
-            '',
-            '| Item # | English name | 中文名称 | Pack format | Storage |',
-            '| --- | --- | --- | --- | --- |',
-        ])
+        lines.extend([f'## {en} / {zh}', '', '| Item # | English name | 中文名称 | Pack format | Storage |', '| --- | --- | --- | --- | --- |'])
         for product in rows:
-            lines.append(
-                f"| {esc(product['id'])} | {esc(product['name'])} | {esc(product.get('nameZh'))} | {esc(product.get('packSize'))} | {esc(STORAGE.get(product.get('storage'), 'Dry / 常温'))} |"
-            )
+            lines.append(f"| {esc(product['id'])} | {esc(product['name'])} | {esc(product.get('nameZh'))} | {esc(product.get('packSize'))} | {esc(STORAGE.get(product.get('storage'), 'Dry / 常温'))} |")
         lines.append('')
     MARKDOWN.write_text('\n'.join(lines), encoding='utf-8')
     PDF.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(['manus-md-to-pdf', str(MARKDOWN), str(PDF)], check=True)
     print(json.dumps({'products': len(products), 'markdown': str(MARKDOWN), 'pdf': str(PDF)}))
-
 
 if __name__ == '__main__':
     main()

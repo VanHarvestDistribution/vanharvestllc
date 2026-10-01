@@ -112,4 +112,16 @@ export const productImages: Record<string, string> = {
   '92790': '/images/products/featured/92790.webp',
 };
 
-export const productImageFor = (itemId: string, fallback: string) => productImages[itemId] || fallback;
+export const productImageFor = (itemId: string) => productImages[itemId];
+
+export const categoryPlaceholder = '/images/placeholders/product-category.svg';
+
+const brandMatchers: Array<[RegExp, string]> = [
+  [/\bSmithfield\b/i, 'Smithfield'], [/\bNongshim\b/i, 'Nongshim'], [/\bKangshifu\b|康师傅/i, 'Kangshifu'],
+  [/\bLee Kum Kee\b|李锦记/i, 'Lee Kum Kee'], [/\bKikkoman\b/i, 'Kikkoman'], [/\bHuy Fong\b/i, 'Huy Fong Foods'],
+  [/\bTU['’]ONG\b/i, "TU'ONG"], [/\bKewpie\b/i, 'Kewpie'], [/\bAjinomoto\b/i, 'Ajinomoto'],
+  [/\bPerdue\b/i, 'Perdue'], [/\bPilgrim['’]?s\b/i, "Pilgrim's"], [/\bSanderson\b/i, 'Sanderson Farms'],
+  [/\bJBS\b/i, 'JBS'], [/\bIBP\b/i, 'IBP'], [/\bChaokoh\b/i, 'Chaokoh']
+];
+
+export const brandForProduct = (name: string, nameZh = '') => brandMatchers.find(([matcher]) => matcher.test(`${name} ${nameZh}`))?.[1];

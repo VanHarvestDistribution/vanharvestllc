@@ -5,28 +5,7 @@ interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang, localized = false } = Astro.props;
 const prefix = localized && lang ? `/${lang}` : '';
 const zh = lang === 'zh';
-const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '酱料与调味品', preserved: '罐藏与保鲜食品', supplies: '餐饮用品', dry: '米面与干货', cleaning: '清洁用品', prepared: '冷冻、预制食品与零食饮料' };
-
-const counts = products.reduce<Record<string, number>>((result, product) => {
-  result[product.category] = (result[product.category] || 0) + 1;
-  return result;
-}, {});
+const counts = products.reduce<Record<string, number>>((result, product) => { result[product.category] = (result[product.category] || 0) + 1; return result; }, {});
 const loop = [...categories, ...categories];
 ---
-<section class="home-catalog-marquee" aria-labelledby="full-catalog-title">
-  <div class="shell">
-    <div class="marquee-heading reveal">
-      <div><p class="eyebrow">{zh ? '完整产品目录' : 'The full catalog'}</p><h2 id="full-catalog-title">{zh ? <>九个品类。<br /><em>一个可靠来源。</em></> : <>Nine departments.<br /><em>One dependable source.</em></>}</h2></div>
-      <div class="marquee-heading-side"><p>{zh ? '从新鲜肉类、蔬菜水果和海鲜，到食品杂货、预制食品和餐饮用品，先通过图片浏览完整产品范围。悬停暂停并放大，点击进入 Featured Products。' : 'From fresh meat, produce and seafood to pantry staples, prepared foods and restaurant supplies, explore the complete assortment through imagery first. Hover to pause and enlarge a department; click to open its Featured Products.'}</p><a class="text-link" href={`${prefix}/products/catalog`}>{zh ? '搜索完整目录 →' : 'Search full catalog →'}</a></div>
-    </div>
-  </div>
-  <div class="marquee-window" aria-label="Nine product departments">
-    <div class="marquee-track">
-      {loop.map((item, index) => <a class="marquee-card" href={`${prefix}/products/${item.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${item.name}`} tabindex={index >= categories.length ? -1 : 0}>
-        <div class="marquee-card-image"><img src={item.image} alt={`${zh ? categoryZh[item.key] : item.name} wholesale selection`} loading="lazy" /><span>{item.index}</span><i aria-hidden="true">↗</i></div>
-        <div class="marquee-card-meta"><h3>{zh ? categoryZh[item.key] : item.name}</h3><p>{counts[item.key].toLocaleString()} {zh ? '个目录产品' : 'catalog items'}</p></div>
-      </a>)}
-    </div>
-  </div>
-  <div class="shell marquee-footer"><span>{zh ? '悬停暂停 · 点击浏览' : 'Hover to pause · Click to explore'}</span><span>01—{String(categories.length).padStart(2, '0')} / {categories.length} {zh ? '个品类' : 'departments'}</span></div>
-</section>
+<section class="home-catalog-marquee" aria-labelledby="full-catalog-title"><div class="shell"><div class="marquee-heading reveal"><div><p class="eyebrow">{zh ? '完整产品目录' : 'The full catalog'}</p><h2 id="full-catalog-title">{zh ? <>九大品类。<br /><em>一个可靠来源。</em></> : <>Nine departments.<br /><em>One dependable source.</em></>}</h2></div><div class="marquee-heading-side"><p>{zh ? '从肉类禽类、蔬菜水果和海鲜，到酱料调味、米面干货和餐饮用品，先从图片浏览，再进入品类或完整目录查找。' : 'From meat, produce and seafood to pantry staples, dry goods and restaurant supplies, browse visually first, then open a department or search the full catalog.'}</p><a class="text-link" href={`${prefix}/products/catalog`}>{zh ? '搜索完整目录 →' : 'Search full catalog →'}</a></div></div></div><div class="marquee-window" aria-label="Nine product departments"><div class="marquee-track">{loop.map((item, index) => <a class="marquee-card" href={`${prefix}/products/${item.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${zh ? item.nameZh : item.name}`} tabindex={index >= categories.length ? -1 : 0}><div class="marquee-card-image"><img src={item.image} alt={`${zh ? item.nameZh : item.name} wholesale selection`} loading="lazy" /><i aria-hidden="true">↗</i></div><div class="marquee-card-meta"><h3>{zh ? item.nameZh : item.name}</h3><p>{counts[item.key].toLocaleString()} {zh ? '个产品' : 'products'}</p></div></a>)}</div></div><div class="shell marquee-footer"><span>{zh ? '悬停暂停 · 点击浏览' : 'Hover to pause · Click to explore'}</span><span>{categories.length} {zh ? '个品类' : 'departments'}</span></div></section>

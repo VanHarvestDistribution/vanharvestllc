@@ -1,14 +1,30 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import RelatedProducts from '@/components/RelatedProducts.astro';
 import { contact } from '@/data/site';
-import { productImageFor } from '@/data/productImages';
-interface Props { product: any; category: any; lang: 'en'|'zh'; }
-const { product, category, lang } = Astro.props;
+import { absoluteUrl } from '@/data/seo';
+import { brandForProduct, categoryPlaceholder, productImageFor } from '@/data/productImages';
+interface Props { product: any; category: any; lang: 'en'|'zh'; localized?: boolean }
+const { product, category, lang, localized = false } = Astro.props;
 const zh = lang === 'zh';
-const storage = product.storage === 'frozen' ? (zh ? '冷冻 / Frozen' : 'Frozen / 冷冻') : product.storage === 'refrigerated' ? (zh ? '新鲜或冷藏 / Fresh or refrigerated' : 'Fresh or refrigerated / 新鲜或冷藏') : (zh ? '常温 / Dry' : 'Dry / 常温');
-const title = `${product.name}${product.nameZh ? ` / ${product.nameZh}` : ''} | Item ${product.id}`;
-const description = `${zh ? 'Van Harvest 产品详情' : 'Van Harvest product detail'}: ${product.name}${product.nameZh ? ` / ${product.nameZh}` : ''}.`;
-const productImage = productImageFor(product.id, category.image);
-const prefix = `/${lang}`;
+const categoryName = zh ? category.nameZh : category.name;
+const storage = product.storage === 'frozen' ? (zh ? '冷冻' : 'Frozen') : product.storage === 'refrigerated' ? (zh ? '新鲜或冷藏' : 'Fresh or refrigerated') : (zh ? '常温' : 'Shelf-stable');
+const title = zh ? `${product.nameZh || product.name} | ${categoryName} | Van Harvest` : `${product.name} | ${category.name} Wholesale Product | Van Harvest`;
+const description = zh ? `查看 ${product.nameZh || product.name} 的产品编号、包装与温层。申请开户查看价格。` : `Review Item #, pack and storage details for ${product.name}. Apply for an account to see pricing.`;
+const realImage = productImageFor(product.id);
+const productImage = realImage || categoryPlaceholder;
+const imageAlt = realImage ? `${product.name} product photo` : (zh ? `${categoryName} 分类产品图` : `${categoryName} department product illustration`);
+const prefix = localized ? `/${lang}` : '';
+const brand = brandForProduct(product.name, product.nameZh);
+const imageUrl = realImage ? absoluteUrl(realImage) : undefined;
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'Product', name: product.name, sku: product.id, category: category.name,
+  description, ...(imageUrl ? { image: [imageUrl] } : {}), ...(brand ? { brand: { '@type': 'Brand', name: brand } } : {}),
+  additionalProperty: [{ '@type': 'PropertyValue', name: 'Chinese name', value: product.nameZh || '' }, { '@type': 'PropertyValue', name: 'Storage', value: storage }]
+};
 ---
-<BaseLayout title={title} description={description} active="/products" lang={lang} ogImage={productImage}><section class="category-detail-hero"><div class="category-detail-media"><img src={productImage} alt={`${product.name} product photo`} /></div><div class="category-detail-shade"></div><div class="shell category-detail-inner"><p class="breadcrumb"><a href={`${prefix}/products`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{category.name}<span>/</span>Item {product.id}</p><div class="category-detail-copy"><p class="eyebrow eyebrow-light">Item {product.id} · {category.name}</p><h1>{product.name}</h1>{product.nameZh && <p class="detail-zh">{product.nameZh}</p>}<div class="detail-meta-grid"><div class="detail-meta"><small>Item #</small><strong>{product.id}</strong></div><div class="detail-meta"><small>{zh ? '温层 / Storage' : 'Storage / 温层'}</small><strong>{storage}</strong></div><div class="detail-meta"><small>{zh ? '包装 / Pack' : 'Pack / 包装'}</small><strong>{product.packSize || (zh ? '请向销售确认' : 'Confirm with sales')}</strong></div></div></div></div></section><section class="product-detail-body"><div class="shell product-detail-grid"><div class="product-placeholder"><img src={productImage} alt={`${product.name} product photo`} loading="lazy" /></div><div class="product-detail-copy"><p class="eyebrow">{zh ? '产品信息' : 'Product information'}</p><h2>{zh ? '为专业厨房准备。' : 'Built for the professional kitchen.'}</h2><p class="detail-zh">{product.nameZh || (zh ? '中文名称待补充' : '')}</p><p class="detail-description">{zh ? '本产品属于 Van Harvest 批发目录。库存、包装和替代品可能变化，请联系办公室确认。网站不显示价格。' : 'This item is part of the Van Harvest wholesale catalog. Availability, pack details and substitutions can change; contact the office for current guidance. No pricing is shown online.'}</p><div class="detail-actions"><a class="button" href={`${prefix}/apply`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a><a class="button button-outline" href={`mailto:${contact.officeEmail}`}>{zh ? '联系销售 →' : 'Contact sales →'}</a></div></div></div></section></BaseLayout>
+<BaseLayout title={title} description={description} active="/products" lang={lang} ogImage={productImage} jsonLd={jsonLd}>
+  <section class="category-detail-hero product-detail-hero"><div class="category-detail-media"><img src={productImage} alt={imageAlt} /></div><div class="category-detail-shade"></div><div class="shell category-detail-inner"><p class="breadcrumb"><a href={`${prefix}/products`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span><a href={`${prefix}/products/${category.key}`}>{categoryName}</a><span>/</span>{zh ? `产品编号 ${product.id}` : `Item ${product.id}`}</p><div class="category-detail-copy"><p class="eyebrow eyebrow-light">{zh ? `产品编号 ${product.id}` : `Item ${product.id}`} · {categoryName}</p><h1>{product.name}</h1>{product.nameZh && <p class="detail-zh">{product.nameZh}</p>}<div class="detail-meta-grid"><div class="detail-meta"><small>Item #</small><strong>{product.id}</strong></div><div class="detail-meta"><small>{zh ? '温层' : 'Storage'}</small><strong>{storage}</strong></div><div class="detail-meta"><small>{zh ? '包装' : 'Pack'}</small><strong>{product.packSize || '—'}</strong></div></div></div></div></section>
+  <section class="product-detail-body"><div class="shell product-detail-copy product-detail-copy-wide"><p class="eyebrow">{zh ? '产品信息' : 'Product information'}</p><h2>{zh ? <>为你的采购，<br /><em>做好准备。</em></> : <>Prepared for<br /><em>your operation.</em></>}</h2>{product.nameZh && <p class="detail-zh">{product.nameZh}</p>}<p class="detail-description">{zh ? '通过产品编号、包装和温层信息快速确认所需产品。申请开户查看价格。' : 'Use the item number, pack and storage details to identify what you need. Apply for an account to see pricing.'}</p><div class="detail-actions"><a class="button" href={`${prefix}/apply`}>{zh ? '申请开户查看价格 →' : 'Apply for an account to see pricing →'}</a><a class="button button-outline" href={`mailto:${contact.salesEmail}?subject=${encodeURIComponent(`Sales inquiry · Item ${product.id}`)}`}>{zh ? '联系销售 →' : 'Contact sales →'}</a></div><div class="detail-note"><small>{zh ? '产品参考' : 'Product reference'}</small><p>Item {product.id} · {categoryName} · {storage}</p></div></div></section>
+  <RelatedProducts product={product} category={category} lang={lang} localized={localized} />
+</BaseLayout>
