@@ -2,6 +2,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CategoryGallery from '@/components/CategoryGallery.astro';
 import CatalogExplorer from '@/components/CatalogExplorer';
-import UploadedProductGallery from '@/components/UploadedProductGallery.astro';
+import CallToAction from '@/components/CallToAction.astro';
 ---
-<BaseLayout title="Product Catalog | Van Harvest" description="Search Van Harvest wholesale products by Item #, English name or Chinese name." active="/products" lang="en"><section class="inner-hero"><div class="shell inner-grid"><div><p class="eyebrow">Product catalog</p><h1>Find the right<br /><em>product.</em></h1></div><div class="inner-copy"><p>Search the bilingual catalog by Item #, English name or Chinese name.</p></div></div></section><CategoryGallery lang="en" /><UploadedProductGallery lang="en" /><section class="catalog-section-index"><div class="shell"><CatalogExplorer lang="en" /></div></section></BaseLayout>
+<BaseLayout title="Product Catalog | Van Harvest" description="Search Van Harvest wholesale products by Item #, English name or Chinese name." active="/products" lang="en"><section class="inner-hero"><div class="shell inner-grid"><div><p class="eyebrow">Product catalog</p><h1>Find the right<br /><em>product.</em></h1></div><div class="inner-copy"><p>Browse nine visual departments, then search the bilingual catalog by Item #, English name or Chinese name.</p></div></div></section><CategoryGallery lang="en" /><section class="catalog-section-index"><div class="shell"><CatalogExplorer lang="en" /></div></section><CallToAction lang="en" localized /></BaseLayout>

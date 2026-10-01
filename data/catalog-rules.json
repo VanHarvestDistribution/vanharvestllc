@@ -25,7 +25,15 @@
     "9": "prepared"
   },
   "category_keyword_overrides": {
-    "snacks": ["snack", "drink", "mooncake", "dimsum", "zongzi", "rice dumpling", "cookie", "pastry", "cake", "bread", "dessert", "bun"]
+    "prepared": ["snack", "drink", "beverage", "tea", "juice", "soda", "mooncake", "dimsum", "zongzi", "rice dumpling", "cookie", "pastry", "cake", "bread", "dessert", "bun", "饮料", "绿茶", "红茶", "果汁", "康师傅"]
   },
-  "manual_item_category": {}
+  "manual_item_category": {
+    "10104": "meat", "12023": "meat", "12110": "meat", "24324": "meat",
+    "21389": "produce", "22045": "produce",
+    "23045": "seafood", "23329": "seafood", "32008": "seafood", "33120": "seafood", "33140": "seafood", "33141": "seafood", "33150": "seafood", "33605": "seafood", "33608": "seafood", "35001": "seafood", "36101": "seafood", "36102": "seafood",
+    "41012": "pantry", "41130": "pantry", "42200": "pantry", "43225": "pantry",
+    "21277": "preserved", "25025": "preserved", "25102": "preserved", "25427": "preserved",
+    "73310": "dry", "73332": "dry", "74074": "dry", "74225": "dry", "74500": "dry", "74690": "dry",
+    "25521": "prepared", "25655": "prepared", "25940": "prepared", "25943": "prepared", "91054": "prepared", "92641": "prepared", "92655": "prepared", "92842": "prepared"
+  }
 }

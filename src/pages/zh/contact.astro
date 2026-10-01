@@ -1,5 +1,4 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import { contact } from '@/data/site';
+import LocalizedContactPage from '@/components/LocalizedContactPage.astro';
 ---
-<BaseLayout title="联系 Van Harvest" description="联系 Van Harvest 夏洛特办公室。" active="/contact" lang="zh"><section class="inner-hero"><div class="shell inner-grid"><div><p class="eyebrow">联系我们 / Contact</p><h1>找到正确的<br /><em>沟通方式。</em></h1></div><div class="inner-copy"><p>拨打夏洛特办公室电话，或发送邮件给 Van Harvest 团队。</p></div></div></section><section class="contact-section"><div class="shell contact-grid"><div class="contact-details"><p class="eyebrow">夏洛特办公室 / Charlotte office</p><h2>我们愿意<br /><em>帮助你。</em></h2><div class="contact-line"><span>01</span><div><small>电话 / Phone</small><a href={`tel:${contact.phoneHref}`}>{contact.phoneDisplay}</a></div></div><div class="contact-line"><span>02</span><div><small>办公室邮箱 / Office email</small><a href={`mailto:${contact.officeEmail}`}>{contact.officeEmail}</a></div></div><div class="contact-line"><span>03</span><div><small>地址 / Address</small><a href={contact.mapsUrl}>{contact.address} ↗</a></div></div><div class="map-widget"><iframe src={contact.mapsEmbedUrl} title="Van Harvest office location on Google Maps" loading="lazy"></iframe></div></div></div></section></BaseLayout>
+<LocalizedContactPage lang="zh" localized />

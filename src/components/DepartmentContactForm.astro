@@ -1,34 +1,40 @@
 ---
+interface Props { lang?: 'en' | 'zh' }
+const { lang = 'en' } = Astro.props;
+const zh = lang === 'zh';
 const departments = [
-  { value: 'sales', label: 'Sales / 销售', copy: 'Product and account inquiries / 产品与开户咨询' },
-  { value: 'customer-service', label: 'Customer Service / 客服', copy: 'Current order and service questions / 订单与服务问题' },
-  { value: 'purchasing', label: 'Purchasing / 采购', copy: 'Vendor and product conversations / 供应商与产品沟通' },
-  { value: 'hr', label: 'Human Resources / 人事', copy: 'Employment and workplace inquiries / 招聘与工作咨询' }
+  { value: 'sales', label: zh ? '销售' : 'Sales', copy: zh ? '产品与开户咨询' : 'Product and account inquiries' },
+  { value: 'customer-service', label: zh ? '客服' : 'Customer Service', copy: zh ? '订单与服务问题' : 'Current order and service questions' },
+  { value: 'purchasing', label: zh ? '采购' : 'Purchasing', copy: zh ? '供应商与产品沟通' : 'Vendor and product conversations' },
+  { value: 'hr', label: zh ? '人事' : 'Human Resources', copy: zh ? '招聘与工作咨询' : 'Employment and workplace inquiries' }
 ];
+const mailbox = 'vanharvestoffice2019@gmail.com';
 ---
 <div class="department-form-wrap">
-  <div class="form-heading"><p class="eyebrow">Send / 发送</p><h3>Tell us how<br /><em>we can help.</em></h3><p>Choose a department. Your message will be addressed to the Van Harvest office mailbox.</p></div>
-  <form class="department-form" data-department-form>
-    <label><span>Department / 部门</span><select name="department" required>{departments.map((department) => <option value={department.value}>{department.label}</option>)}</select></label>
-    <div class="form-grid"><label><span>Your name / 姓名</span><input name="name" autocomplete="name" required /></label><label><span>Company / 公司</span><input name="company" autocomplete="organization" /></label></div>
-    <div class="form-grid"><label><span>Email / 邮箱</span><input type="email" name="email" autocomplete="email" required /></label><label><span>Phone / 电话</span><input type="tel" name="phone" autocomplete="tel" /></label></div>
-    <label><span>Message / 留言</span><textarea name="message" rows="5" required></textarea></label>
-    <div class="form-actions"><button class="button" type="submit">Send / 发送 →</button><span class="form-status" data-form-status aria-live="polite"></span></div>
+  <div class="form-heading"><p class="eyebrow">{zh ? '发送信息' : 'Send'}</p><h3>{zh ? <>告诉我们<br /><em>如何帮助你。</em></> : <>Tell us how<br /><em>we can help.</em></>}</h3><p>{zh ? '选择部门。邮件将发送至 Van Harvest 办公室邮箱。' : 'Choose a department. Your message will be addressed to the Van Harvest office mailbox.'}</p></div>
+  <form class="department-form" data-department-form action={`mailto:${mailbox}`} method="post" enctype="text/plain">
+    <label><span>{zh ? '部门' : 'Department'}</span><select name="department" required>{departments.map((department) => <option value={department.value}>{department.label}</option>)}</select></label>
+    <div class="form-grid"><label><span>{zh ? '姓名' : 'Your name'}</span><input name="name" autocomplete="name" required /></label><label><span>{zh ? '公司' : 'Company'}</span><input name="company" autocomplete="organization" /></label></div>
+    <div class="form-grid"><label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" autocomplete="email" required /></label><label><span>{zh ? '电话' : 'Phone'}</span><input type="tel" name="phone" autocomplete="tel" /></label></div>
+    <label><span>{zh ? '留言' : 'Message'}</span><textarea name="message" rows="5" required></textarea></label>
+    <div class="form-actions"><button class="button" type="submit">{zh ? '发送 →' : 'Send →'}</button><span class="form-status" data-form-status aria-live="polite"></span></div>
   </form>
 </div>
 <script is:inline>
-  const departmentForm = document.querySelector('[data-department-form]');
-  if (departmentForm) {
+  document.querySelectorAll('[data-department-form]').forEach((departmentForm) => {
+    if (departmentForm.dataset.bound) return;
+    departmentForm.dataset.bound = 'true';
     departmentForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const form = event.currentTarget;
       const data = new FormData(form);
       const option = form.querySelector('option:checked');
-      const mailbox = 'vanharvestoffice2019@gmail.com';
-      const department = option?.textContent?.trim() || 'the team';
+      const department = option?.textContent?.trim() || 'Van Harvest team';
       const subject = `${department} inquiry from ${data.get('name')}`;
       const body = [`Name: ${data.get('name')}`, `Company: ${data.get('company') || 'Not provided'}`, `Email: ${data.get('email')}`, `Phone: ${data.get('phone') || 'Not provided'}`, '', String(data.get('message') || '')].join('\n');
-      window.location.href = `mailto:${mailbox}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const status = form.querySelector('[data-form-status]');
+      if (status) status.textContent = 'Opening your email draft… / 正在打开邮件草稿…';
+      window.location.href = `mailto:vanharvestoffice2019@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
-  }
+  });
 </script>

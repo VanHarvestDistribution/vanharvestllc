@@ -1,0 +1,541 @@
+{
+  "source": "Stocklist.xls",
+  "publicFieldPolicy": "Item #, Code, English name, Chinese name, category, pack format and storage only. No price, cost, quantity, allocation or reorder fields are imported.",
+  "rawCount": 2954,
+  "cleanCount": 2821,
+  "rejectedCount": 133,
+  "rejected": [
+    {
+      "id": "10011",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "10031",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "10061",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "10078",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "10084",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "10085",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "10114",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11021",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11025",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11210",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11211",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11214",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11215",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11217",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11223",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11361",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12006",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12061",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12075",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12089",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12098",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12133",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "13011",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "21141",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "21325",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "22060",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "22306",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "23330",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "23332",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "23464",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "24231",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "25507",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "25610",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "33697",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "33986",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "33987",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "33988",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34011",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34033",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34040",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34041",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34048",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34059",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34071",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "34075",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35043",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35051",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35080",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35179",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35404",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35769",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "40202",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "40303",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "40355",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "40431",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40432",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40433",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40434",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40435",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40625",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "41135",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "41616",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "42118",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "42350",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "44009",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "51026",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "51121",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "54004",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "54016",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "54346",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "54359",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "54484",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "60005",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "60106",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "61300",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "61421",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "61424",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "62002",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "62012",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "63112",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "63131",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "63132",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "64547",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "64565",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "64569",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66117",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66118",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66119",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66131",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66202",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66204",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66212",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66213",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66217",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66302",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66304",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "66398",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "67000",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "67009",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "67063",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "67079",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "70265",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "71009",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "71025",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "72055",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "72090",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "73003",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "73508",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "73509",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "74211",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "74795",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "80000",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "80130",
+      "reason": "keyword:cement"
+    },
+    {
+      "id": "81100",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "85013",
+      "reason": "keyword:calendar"
+    },
+    {
+      "id": "85110",
+      "reason": "keyword:hand truck"
+    },
+    {
+      "id": "92721",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99000",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99002",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99121",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99231",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99331",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99509",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99511",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99660",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99730",
+      "reason": "keyword:for free"
+    },
+    {
+      "id": "99802",
+      "reason": "keyword:for free"
+    },
+    {
+      "id": "99807",
+      "reason": "keyword:for free"
+    },
+    {
+      "id": "99920",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99992",
+      "reason": "keyword:calender"
+    },
+    {
+      "id": "99996",
+      "reason": "item:99996"
+    },
+    {
+      "id": "99997",
+      "reason": "keyword:special item"
+    },
+    {
+      "id": "99999",
+      "reason": "item:99999"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ const STEP = 50;
 export default function CatalogExplorer({ lang }: Props) {
   const zh = lang === 'zh';
   const prefix = lang ? `/${lang}` : '';
-  const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '食品杂货', preserved: '罐藏与冷冻', supplies: '餐饮用品', dry: '干货', cleaning: '清洁用品', prepared: '预制食品', snacks: '零食与饮料' };
+  const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '食品杂货', preserved: '罐藏与冷冻', supplies: '餐饮用品', dry: '干货', cleaning: '清洁用品', prepared: '冷冻、预制食品与零食饮料' };
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
   const [limit, setLimit] = useState(STEP);

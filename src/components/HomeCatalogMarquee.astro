@@ -5,7 +5,7 @@ interface Props { lang?: 'en' | 'zh' }
 const { lang } = Astro.props;
 const prefix = lang ? `/${lang}` : '';
 const zh = lang === 'zh';
-const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '酱料与调味品', preserved: '罐藏与保鲜食品', supplies: '餐饮用品', dry: '米面与干货', cleaning: '清洁用品', prepared: '冷冻与预制食品', snacks: '零食与饮料' };
+const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '酱料与调味品', preserved: '罐藏与保鲜食品', supplies: '餐饮用品', dry: '米面与干货', cleaning: '清洁用品', prepared: '冷冻、预制食品与零食饮料' };
 
 const counts = products.reduce<Record<string, number>>((result, product) => {
   result[product.category] = (result[product.category] || 0) + 1;
@@ -16,7 +16,7 @@ const loop = [...categories, ...categories];
 <section class="home-catalog-marquee" aria-labelledby="full-catalog-title">
   <div class="shell">
     <div class="marquee-heading reveal">
-      <div><p class="eyebrow">{zh ? '完整产品目录' : 'The full catalog'}</p><h2 id="full-catalog-title">{zh ? <>十个品类。<br /><em>一个可靠来源。</em></> : <>Ten departments.<br /><em>One dependable source.</em></>}</h2></div>
+      <div><p class="eyebrow">{zh ? '完整产品目录' : 'The full catalog'}</p><h2 id="full-catalog-title">{zh ? <>九个品类。<br /><em>一个可靠来源。</em></> : <>Nine departments.<br /><em>One dependable source.</em></>}</h2></div>
       <div class="marquee-heading-side"><p>{zh ? '从新鲜肉类、蔬菜水果和海鲜，到食品杂货、预制食品和餐饮用品，先通过图片浏览完整产品范围。悬停暂停并放大，点击进入 Featured Products。' : 'From fresh meat, produce and seafood to pantry staples, prepared foods and restaurant supplies, explore the complete assortment through imagery first. Hover to pause and enlarge a department; click to open its Featured Products.'}</p><a class="text-link" href={`${prefix}/products`}>{zh ? '搜索全部产品 →' : 'Search all products →'}</a></div>
     </div>
   </div>
@@ -28,5 +28,5 @@ const loop = [...categories, ...categories];
       </a>)}
     </div>
   </div>
-  <div class="shell marquee-footer"><span>{zh ? '悬停暂停 · 点击浏览' : 'Hover to pause · Click to explore'}</span><span>01—10 / 10 departments</span></div>
+  <div class="shell marquee-footer"><span>{zh ? '悬停暂停 · 点击浏览' : 'Hover to pause · Click to explore'}</span><span>01—{String(categories.length).padStart(2, '0')} / {categories.length} {zh ? '个品类' : 'departments'}</span></div>
 </section>

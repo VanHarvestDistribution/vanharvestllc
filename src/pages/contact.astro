@@ -1,15 +1,4 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import DepartmentContactForm from '@/components/DepartmentContactForm.astro';
-import { contact } from '@/data/site';
-const departments = [
-  ['01', 'Sales', 'Product and account inquiries'],
-  ['02', 'Customer Service', 'Current order and service questions'],
-  ['03', 'Purchasing', 'Vendor and product conversations'],
-  ['04', 'Human Resources', 'Employment and workplace inquiries']
-];
+import LocalizedContactPage from '@/components/LocalizedContactPage.astro';
 ---
-<BaseLayout title="Contact Van Harvest Distribution | Charlotte, NC" description="Contact Van Harvest Distribution at 5226 Terminal St in Charlotte, NC. Call (704) 392-8717 for sales, customer service, purchasing or HR." active="/contact">
-  <section class="inner-hero"><div class="shell inner-grid"><div class="reveal"><p class="eyebrow">Contact Van Harvest</p><h1>Start with the<br /><em>right conversation.</em></h1></div><div class="inner-copy reveal"><p>Call our Charlotte office or send a message to the Van Harvest office team. We will route your request to the right department.</p></div></div></section>
-  <section class="contact-section"><div class="shell contact-grid"><div class="contact-details reveal"><p class="eyebrow">Charlotte office</p><h2>We’re here<br /><em>to help.</em></h2><div class="contact-line"><span>01</span><div><small>Phone</small><a href={`tel:${contact.phoneHref}`} aria-label={`Call Van Harvest at ${contact.phoneDisplay}`}>{contact.phoneDisplay}</a></div></div><div class="contact-line"><span>02</span><div><small>Office email</small><a href={`mailto:${contact.officeEmail}`}>{contact.officeEmail}</a></div></div><div class="contact-line"><span>03</span><div><small>Address</small><a href={contact.mapsUrl} target="_blank" rel="noopener noreferrer">{contact.address} ↗</a></div></div><div class="map-widget"><iframe src={contact.mapsEmbedUrl} title="Van Harvest office location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="contact-line"><span>04</span><div><small>Directions</small><a href={contact.mapsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div></div></div><div class="department-panel reveal"><p class="eyebrow">Choose a department</p><p>Choose Sales, Customer Service, Purchasing or Human Resources. Your message will be prepared for the Van Harvest office mailbox and can be sent from your email client.</p><div class="department-list">{departments.map(([index, title, copy]) => <article class="department-card"><span>{index}</span><div><h3>{title}</h3><p>{copy}</p></div><small class="status-pill">Office routing</small></article>)}</div><DepartmentContactForm /><div class="contact-callout"><p>Need assistance now? Our main line is the fastest way to reach the team.</p><a class="button" href={`tel:${contact.phoneHref}`} aria-label={`Call Van Harvest at ${contact.phoneDisplay}`}>Call {contact.phoneDisplay}</a></div></div></div></section>
-</BaseLayout>
+<LocalizedContactPage lang="en" />
