@@ -1,6 +1,10 @@
 ---
 import products from '@/data/products.json';
 import { categories } from '@/data/site';
+interface Props { lang?: 'en' | 'zh' }
+const { lang } = Astro.props;
+const prefix = lang ? `/${lang}` : '';
+const zh = lang === 'zh';
 
 const counts = products.reduce<Record<string, number>>((result, product) => {
   result[product.category] = (result[product.category] || 0) + 1;
@@ -11,17 +15,17 @@ const loop = [...categories, ...categories];
 <section class="home-catalog-marquee" aria-labelledby="full-catalog-title">
   <div class="shell">
     <div class="marquee-heading reveal">
-      <div><p class="eyebrow">The full catalog</p><h2 id="full-catalog-title">Nine departments.<br /><em>One dependable source.</em></h2></div>
-      <div class="marquee-heading-side"><p>From fresh meat, produce and seafood to pantry staples, prepared foods and restaurant supplies, explore the complete assortment through imagery first. Hover to pause and enlarge a department; click to open its Featured Products.</p><a class="text-link" href="/products">Search all products →</a></div>
+      <div><p class="eyebrow">{zh ? '完整产品目录' : 'The full catalog'}</p><h2 id="full-catalog-title">{zh ? <>十个品类。<br /><em>一个可靠来源。</em></> : <>Ten departments.<br /><em>One dependable source.</em></>}</h2></div>
+      <div class="marquee-heading-side"><p>{zh ? '从新鲜肉类、蔬菜水果和海鲜，到食品杂货、预制食品和餐饮用品，先通过图片浏览完整产品范围。悬停暂停并放大，点击进入 Featured Products。' : 'From fresh meat, produce and seafood to pantry staples, prepared foods and restaurant supplies, explore the complete assortment through imagery first. Hover to pause and enlarge a department; click to open its Featured Products.'}</p><a class="text-link" href={`${prefix}/products`}>{zh ? '搜索全部产品 →' : 'Search all products →'}</a></div>
     </div>
   </div>
   <div class="marquee-window" aria-label="Nine product departments">
     <div class="marquee-track">
-      {loop.map((item, index) => <a class="marquee-card" href={`/products/${item.key}`} aria-label={`Explore ${item.name}`} tabindex={index >= categories.length ? -1 : 0}>
+      {loop.map((item, index) => <a class="marquee-card" href={`${prefix}/products/${item.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${item.name}`} tabindex={index >= categories.length ? -1 : 0}>
         <div class="marquee-card-image"><img src={item.image} alt={`${item.name} wholesale selection`} loading="lazy" /><span>{item.index}</span><i aria-hidden="true">↗</i></div>
-        <div class="marquee-card-meta"><h3>{item.name}</h3><p>{counts[item.key].toLocaleString()} catalog items</p></div>
+        <div class="marquee-card-meta"><h3>{item.name}</h3><p>{counts[item.key].toLocaleString()} {zh ? '个目录产品' : 'catalog items'}</p></div>
       </a>)}
     </div>
   </div>
-  <div class="shell marquee-footer"><span>Hover to pause · Click to explore</span><span>01—09 / 09 departments</span></div>
+  <div class="shell marquee-footer"><span>{zh ? '悬停暂停 · 点击浏览' : 'Hover to pause · Click to explore'}</span><span>01—10 / 10 departments</span></div>
 </section>

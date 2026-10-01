@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import CatalogExplorer from '@/components/CatalogExplorer';
 import CategoryGallery from '@/components/CategoryGallery.astro';
 import RealProductHighlights from '@/components/RealProductHighlights.astro';
+import UploadedProductGallery from '@/components/UploadedProductGallery.astro';
 import CallToAction from '@/components/CallToAction.astro';
 import products from '@/data/products.json';
 ---
@@ -10,6 +11,7 @@ import products from '@/data/products.json';
   <section class="inner-hero products-intro"><div class="shell inner-grid"><div class="reveal"><p class="eyebrow">Product catalog</p><h1>Start with a<br /><em>category.</em></h1></div><div class="inner-copy reveal"><p>Choose a department to see Featured Products and the full category path, or search all {products.length.toLocaleString()} catalog records in one place.</p><a class="button" href="/catalog/van-harvest-product-catalog.pdf" target="_blank" rel="noopener noreferrer">Download complete PDF ↗</a></div></div></section>
   <CategoryGallery />
   <RealProductHighlights />
-  <section class="catalog-section catalog-section-index" id="catalog"><div class="shell"><div class="catalog-explorer-heading reveal"><div><p class="eyebrow">Search the complete inventory</p><h2>Already know<br /><em>what you need?</em></h2></div><p>Search the full catalog by product ID, code or English name. Use the visual category cards above to begin a more focused browse.</p></div><div class="catalog-intro-note"><span>Search by product ID, code or English name</span><span>Catalog source · August 28, 2024</span></div><CatalogExplorer client:load /></div></section>
+  <UploadedProductGallery />
+  <section class="catalog-section catalog-section-index" id="catalog"><div class="shell"><div class="catalog-explorer-heading reveal"><div><p class="eyebrow">Search the complete inventory</p><h2>Already know<br /><em>what you need?</em></h2></div><p>Search the full catalog by Item #, English name or Chinese name. Use the visual category cards above to begin a more focused browse.</p></div><div class="catalog-intro-note"><span>Search by Item #, English name or Chinese name</span><span>{products.length.toLocaleString()} cleaned catalog records</span></div><CatalogExplorer client:load /></div></section>
   <CallToAction />
 </BaseLayout>

@@ -13,6 +13,8 @@ interface Props {
 }
 
 const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png', jsonLd, lang = 'en' } = Astro.props;
+const localized = Astro.url.pathname.startsWith('/en') || Astro.url.pathname.startsWith('/zh');
+const contactHref = localized ? `/${lang}/contact` : '/contact';
 ---
 <!doctype html>
 <html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
@@ -39,10 +41,10 @@ const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png'
   </head>
   <body class:list={{ 'inner-page': active !== '/' }}>
     <a class="skip-link" href="#main">Skip to content</a>
-    <Header active={active} />
+    <Header active={active} lang={lang} />
     <main id="main"><slot /></main>
     <Footer />
-    <a class="contact-fab" href="/contact" aria-label="Contact Van Harvest">Contact</a>
+    <a class="contact-fab" href={contactHref} aria-label={lang === 'zh' ? '联系 Van Harvest' : 'Contact Van Harvest'}>{lang === 'zh' ? '联系' : 'Contact'}</a>
     <script is:inline>
       const reveal = new IntersectionObserver((entries) => entries.forEach((entry) => {
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); reveal.unobserve(entry.target); }

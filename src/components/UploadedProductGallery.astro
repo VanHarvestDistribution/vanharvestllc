@@ -1,0 +1,8 @@
+---
+import images from '@/data/uploadedProductImages.json';
+interface Props { lang?: 'en' | 'zh'; limit?: number }
+const { lang = 'en', limit = 48 } = Astro.props;
+const zh = lang === 'zh';
+const visible = images.slice(0, limit);
+---
+<section class="uploaded-product-gallery" aria-labelledby="uploaded-products-title"><div class="shell"><div class="uploaded-gallery-heading reveal"><div><p class="eyebrow">{zh ? '最新上传图片' : 'Recently uploaded'}</p><h2 id="uploaded-products-title">{zh ? '真实产品。<br /><em>逐一整理。</em>' : <>Real products.<br /><em>Being matched.</em></>}</h2></div><div><p>{zh ? `已载入 ${images.length} 张 Van Harvest 产品照片。当前文件名只有 IMG 编号，Item # 对照表确认后会逐条绑定到产品详情页。` : `${images.length} Van Harvest product photos are loaded. The files currently contain IMG numbers only; once the Item # cross-reference is confirmed, each image will be attached to its product detail page.`}</p><small>{zh ? `当前展示 ${visible.length} 张 · 未做错误匹配` : `Showing ${visible.length} of ${images.length} · no guessed matches`}</small></div></div><div class="uploaded-gallery-grid">{visible.map((image, index) => <a class="uploaded-product-card reveal" href={image.src} target="_blank" rel="noopener noreferrer"><img src={image.src} alt={`${zh ? 'Van Harvest 产品照片' : 'Van Harvest product photo'} ${image.label}`} loading="lazy" /><span class="uploaded-product-index">{String(index + 1).padStart(2, '0')}</span><span class="uploaded-product-label">{image.label}<small>{zh ? '待匹配 Item #' : 'Item # pending'}</small></span></a>)}</div></div></section>

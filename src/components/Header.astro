@@ -1,21 +1,27 @@
 ---
-interface Props { active?: string }
-const { active = '' } = Astro.props;
+interface Props { active?: string; lang?: 'en' | 'zh' }
+const { active = '', lang = 'en' } = Astro.props;
+const path = Astro.url.pathname;
+const isLocalized = path === '/en' || path.startsWith('/en/') || path === '/zh' || path.startsWith('/zh/');
+const prefix = isLocalized ? `/${lang}` : '';
+const localHref = (href: string) => `${prefix}${href === '/' ? '' : href}` || '/';
+const switchHref = isLocalized ? path.replace(/^\/(en|zh)(?=\/|$)/, lang === 'zh' ? '/en' : '/zh') || '/' : lang === 'zh' ? '/en' : '/zh';
 const items = [
-  ['Home', '/'],
-  ['Products', '/products'],
-  ['Company', '/company'],
-  ['Services', '/services'],
-  ['Contact', '/contact']
+  [lang === 'zh' ? '首页' : 'Home', '/'],
+  [lang === 'zh' ? '产品目录' : 'Products', '/products'],
+  [lang === 'zh' ? '公司介绍' : 'Company', '/company'],
+  [lang === 'zh' ? '服务' : 'Services', '/services'],
+  [lang === 'zh' ? '联系我们' : 'Contact', '/contact']
 ];
 ---
 <header class="site-header" data-header>
   <div class="shell header-inner">
-    <a class="brand official-brand" href="/" aria-label="Van Harvest Distribution home"><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      {items.map(([label, href]) => <a href={href} class:list={{ active: active === href }}>{label}</a>)}
+    <a class="brand official-brand" href={localHref('/')} aria-label="Van Harvest Distribution home"><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
+    <nav class="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
+      {items.map(([label, href]) => <a href={localHref(href)} class:list={{ active: active === href }}>{label}</a>)}
+      <span class="nav-divider" aria-hidden="true"></span><a class="language-switch language-switch-active" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a>
     </nav>
-    <div class="header-actions"><a class="language-switch" href="/en">EN</a><a class="language-switch" href="/zh">中文</a><a class="header-call" href="tel:+17043928717"><span>Talk with us</span>(704) 392-8717</a></div>
+    <div class="header-actions"><a class="header-call" href="tel:+17043928717"><span>{lang === 'zh' ? '电话联系' : 'Talk with us'}</span>(704) 392-8717</a></div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
       <i></i><i></i><span>Menu</span>
     </button>
@@ -23,13 +29,13 @@ const items = [
 </header>
 <div class="mobile-drawer" data-mobile-menu aria-hidden="true">
   <div class="mobile-drawer-top">
-    <a class="brand official-brand" href="/"><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
-    <button type="button" aria-label="Close menu" data-menu-close>Close</button>
+      <a class="brand official-brand" href={localHref('/')}><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
+    <button type="button" aria-label={lang === 'zh' ? '关闭菜单' : 'Close menu'} data-menu-close>{lang === 'zh' ? '关闭' : 'Close'}</button>
   </div>
   <nav aria-label="Mobile navigation">
-    {items.map(([label, href], index) => <a href={href}><span>0{index + 1}</span>{label}<b aria-hidden="true">↗</b></a>)}
+    {items.map(([label, href], index) => <a href={localHref(href)}><span>0{index + 1}</span>{label}<b aria-hidden="true">↗</b></a>)}
   </nav>
-  <div class="mobile-drawer-contact"><span>Language / 语言</span><p><a href="/en">English</a> · <a href="/zh">中文</a></p><span>Charlotte office</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
+  <div class="mobile-drawer-contact"><span>{lang === 'zh' ? '语言 / Language' : 'Language / 语言'}</span><p><a href={switchHref}>{lang === 'zh' ? 'English' : '中文'}</a></p><span>{lang === 'zh' ? '夏洛特办公室' : 'Charlotte office'}</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
 </div>
 <script is:inline>
   const header = document.querySelector('[data-header]');
