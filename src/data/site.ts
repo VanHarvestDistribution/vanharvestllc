@@ -22,10 +22,10 @@ export const categories = [
 
 /** Homepage-only food imagery; distinct from the Products department card images. */
 export const heroImages = [
-  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-1.webp',
-  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-2.webp',
-  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-3.webp',
-  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-4.webp',
+  '/images/home/hero-produce-market.webp',
+  '/images/home/hero-butcher-meat.webp',
+  '/images/home/hero-seafood-market.webp',
+  '/images/home/hero-summer-berries.webp',
 ] as const;
 
 export const heroImage = heroImages[0];
