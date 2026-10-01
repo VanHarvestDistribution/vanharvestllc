@@ -5,6 +5,7 @@ interface Props { lang?: 'en' | 'zh' }
 const { lang } = Astro.props;
 const prefix = lang ? `/${lang}` : '';
 const zh = lang === 'zh';
+const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '酱料与调味品', preserved: '罐藏与保鲜食品', supplies: '餐饮用品', dry: '米面与干货', cleaning: '清洁用品', prepared: '冷冻与预制食品', snacks: '零食与饮料' };
 
 const counts = products.reduce<Record<string, number>>((result, product) => {
   result[product.category] = (result[product.category] || 0) + 1;
@@ -22,8 +23,8 @@ const loop = [...categories, ...categories];
   <div class="marquee-window" aria-label="Nine product departments">
     <div class="marquee-track">
       {loop.map((item, index) => <a class="marquee-card" href={`${prefix}/products/${item.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${item.name}`} tabindex={index >= categories.length ? -1 : 0}>
-        <div class="marquee-card-image"><img src={item.image} alt={`${item.name} wholesale selection`} loading="lazy" /><span>{item.index}</span><i aria-hidden="true">↗</i></div>
-        <div class="marquee-card-meta"><h3>{item.name}</h3><p>{counts[item.key].toLocaleString()} {zh ? '个目录产品' : 'catalog items'}</p></div>
+        <div class="marquee-card-image"><img src={item.image} alt={`${zh ? categoryZh[item.key] : item.name} wholesale selection`} loading="lazy" /><span>{item.index}</span><i aria-hidden="true">↗</i></div>
+        <div class="marquee-card-meta"><h3>{zh ? categoryZh[item.key] : item.name}</h3><p>{counts[item.key].toLocaleString()} {zh ? '个目录产品' : 'catalog items'}</p></div>
       </a>)}
     </div>
   </div>

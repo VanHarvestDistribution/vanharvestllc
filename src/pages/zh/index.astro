@@ -1,6 +1,4 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import HomeCatalogMarquee from '@/components/HomeCatalogMarquee.astro';
-import products from '@/data/products.json';
+import LocalizedHomePage from '@/components/LocalizedHomePage.astro';
 ---
-<BaseLayout title="Van Harvest | 夏洛特食品批发供应" description="为夏洛特餐馆、超市和专业厨房提供食品批发供应。" active="/" lang="zh"><section class="home-hero"><div class="home-hero-shade"></div><div class="shell hero-inner"><div class="hero-topline"><span>食品批发供应</span><span>Charlotte, North Carolina</span></div><div class="hero-copy reveal"><p class="eyebrow">为专业厨房服务</p><h1>好食材，来自<br /><em>可靠的供应。</em></h1><div class="hero-copy-bottom"><p>为餐馆、超市和餐饮团队提供新鲜、冷冻及常温食品。</p><a class="button" href="/zh/products">浏览产品目录 →</a></div></div><div class="hero-bottom"><div class="hero-stats"><div><strong>{products.length.toLocaleString()}+</strong><span>目录产品</span></div><div><strong>CLT</strong><span>服务基地</span></div></div></div></div></section><HomeCatalogMarquee lang="zh" /></BaseLayout>
+<LocalizedHomePage lang="zh" localized />
