@@ -1,9 +1,9 @@
 ---
 import products from '@/data/products.json';
 import { categories } from '@/data/site';
-interface Props { lang?: 'en' | 'zh' }
-const { lang } = Astro.props;
-const prefix = lang ? `/${lang}` : '';
+interface Props { lang?: 'en' | 'zh'; localized?: boolean }
+const { lang, localized = false } = Astro.props;
+const prefix = localized && lang ? `/${lang}` : '';
 const zh = lang === 'zh';
 const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '酱料与调味品', preserved: '罐藏与保鲜食品', supplies: '餐饮用品', dry: '米面与干货', cleaning: '清洁用品', prepared: '冷冻、预制食品与零食饮料' };
 

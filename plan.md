@@ -78,3 +78,9 @@ TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由
 - 首页主视觉改用食品、食材与产品摄影；仓库、冷库和配送图片仅保留在设施介绍区。
 - `/products`、`/en/products` 与 `/zh/products` 仅承担九大品类浏览；完整可搜索目录迁移到对应的 `/products/catalog` 子页面，支持带品类筛选的深链接。
 - `scripts/import_stocklist.py` 的公开 JSON 输出不再包含内部 Code 与原始供应商字段，并清除名称中的内部编号；`scripts/generate_public_catalog_pdf.py` 从同一公开数据层重建中英双语、无价格、无内部编号的 PDF。
+
+## Homepage, catalog visibility and company narrative (2026-10-01)
+
+- 首页采用一张专属、明亮的食品批发主视觉，不复用 Products 的九类图片；仓库、冷库和运输照片仅在设施展示中承担供应链说明。
+- Full Catalog 通过首页首屏按钮、首页提前出现的图片目录带、主导航和 Products 子导航四处进入；中英文切换保留当前 pathname，例如 `/products/catalog` 对应 `/zh/products/catalog`。
+- Company 页面改为创始于 2019 年的长文案叙事，使用用户提供的公司海报，并以 Charlotte 为中心连接 NC、SC、Atlanta 和 Virginia 的网络图替代编号式概览卡片。
