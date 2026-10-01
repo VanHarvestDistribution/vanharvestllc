@@ -11,7 +11,6 @@ const switchHref = lang === 'zh'
 const items = [
   [lang === 'zh' ? '首页' : 'Home', '/'],
   [lang === 'zh' ? '产品目录' : 'Products', '/products'],
-  [lang === 'zh' ? '完整目录' : 'Full Catalog', '/products/catalog'],
   [lang === 'zh' ? '公司介绍' : 'Company', '/company'],
   [lang === 'zh' ? '服务' : 'Services', '/services'],
   [lang === 'zh' ? '联系我们' : 'Contact', '/contact']
@@ -34,7 +33,7 @@ const items = [
     <button type="button" aria-label={lang === 'zh' ? '关闭菜单' : 'Close menu'} data-menu-close>{lang === 'zh' ? '关闭' : 'Close'}</button>
   </div>
   <nav aria-label="Mobile navigation">
-    {items.map(([label, href]) => <a href={localHref(href)}>{label}<b aria-hidden="true">↗</b></a>)}
+    {items.map(([label, href]) => <a href={localHref(href)}><span class="mobile-menu-label">{label}</span><b aria-hidden="true">↗</b></a>)}
   </nav>
   <div class="mobile-drawer-contact"><span>{lang === 'zh' ? '语言 / Language' : 'Language / 语言'}</span><p><a href={switchHref}>{lang === 'zh' ? 'English' : '中文'}</a></p><span>{lang === 'zh' ? '夏洛特办公室' : 'Charlotte office'}</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
 </div>

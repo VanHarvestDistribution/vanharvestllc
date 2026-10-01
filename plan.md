@@ -84,3 +84,10 @@ TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由
 - 首页采用一张专属、明亮的食品批发主视觉，不复用 Products 的九类图片；仓库、冷库和运输照片仅在设施展示中承担供应链说明。
 - Full Catalog 通过首页首屏按钮、首页提前出现的图片目录带、主导航和 Products 子导航四处进入；中英文切换保留当前 pathname，例如 `/products/catalog` 对应 `/zh/products/catalog`。
 - Company 页面改为创始于 2019 年的长文案叙事，使用用户提供的公司海报，并以 Charlotte 为中心连接 NC、SC、Atlanta 和 Virginia 的网络图替代编号式概览卡片。
+
+## Full catalog rendering, navigation hierarchy, and button palette (2026-10-01)
+
+- 完整目录搜索从客户端 React 岛升级为服务端优先预渲染加原生轻量脚本，首屏直接渲染前 50 条产品、分类药丸和搜索框，消除无水合时的空白现象。
+- Full Catalog 纯化为 Products 的子页面，不再出现在桌面与移动主菜单第一层；Products 子导航去掉 `01/02` 编号，保留「按品类浏览」与「完整产品目录」两个干净的子栏目标签。
+- 全站按钮彻底去除暗红色，统一采用 Van Harvest 的深海蓝为主色、暖金色（Gold/Sand）为悬停和线框辅助色；右下角浮动联系按钮同步切换为深蓝金边。
+- 移动端抽屉菜单条目改用 flex 两端对齐，箭头符号与右侧对齐并保持垂直居中，排除了由于宽度不同导致的箭头位移问题。

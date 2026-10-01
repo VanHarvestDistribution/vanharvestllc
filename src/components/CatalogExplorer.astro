@@ -1,0 +1,69 @@
+---
+import productsData from '@/data/products.json';
+import { categories } from '@/data/site';
+interface Props { lang?: 'en' | 'zh'; localized?: boolean }
+const { lang = 'en', localized = false } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+const STEP = 50;
+const products = productsData as Array<{ id: string; name: string; nameZh: string; category: string; packSize?: string; storage?: string }>;
+const categoryZh: Record<string, string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '食品杂货', preserved: '罐藏与冷冻', supplies: '餐饮用品', dry: '干货', cleaning: '清洁用品', prepared: '冷冻、预制食品与零食饮料' };
+const initialProducts = products.slice(0, STEP);
+const labels = zh ? {
+  all: '全部产品', results: '个结果', searchLabel: '搜索目录 / Search the catalog', placeholder: '搜索 Item #、英文名或中文名', quick: '快速筛选', noResults: '暂无结果 / No products found', noResultsBody: '请尝试 Item #、英文名、中文名或品类。', clear: '清除筛选 / Clear filters', load: '加载更多', product: '产品 / Product', item: 'Item #'
+} : {
+  all: 'All products', results: 'results / 结果', searchLabel: 'Search the catalog / 搜索目录', placeholder: 'Search Item #, English or Chinese name', quick: 'Quick filter', noResults: 'No products found / 暂无结果', noResultsBody: 'Try an Item #, English name, Chinese name or category.', clear: 'Clear filters / 清除筛选', load: 'Load more', product: 'Product / 产品', item: 'Item #'
+};
+const catalogData = JSON.stringify(products).replace(/</g, '\\u003c');
+const labelData = JSON.stringify(labels).replace(/</g, '\\u003c');
+const row = (product: typeof products[number]) => `<a class="product-row" role="row" href="${prefix}/products/${product.category}/${product.id}"><code role="cell">${product.id}</code><strong role="cell"><span>${product.name}</span>${product.nameZh ? `<small>${product.nameZh}</small>` : ''}</strong></a>`;
+---
+<div class="catalog-shell catalog-shell-wide" data-catalog data-prefix={prefix} data-labels={labelData} data-step={STEP}>
+  <div class="catalog-main">
+    <div class="catalog-search"><label for="product-search">{labels.searchLabel}</label><input id="product-search" type="search" placeholder={labels.placeholder} autocomplete="off" /><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
+    <div class="catalog-filter-row" aria-label={zh ? '快速筛选' : 'Quick category filter'}><span>{labels.quick}</span><div>{[{ key: 'all', name: labels.all }, ...categories.map((item) => ({ key: item.key, name: zh ? categoryZh[item.key] : item.name }))].map((item) => <button type="button" class:list={['category-pill', { 'is-active': item.key === 'all' }]} data-category={item.key} aria-pressed={item.key === 'all'}>{item.name}</button>)}</div></div>
+    <div class="catalog-summary" aria-live="polite"><span data-current-name>{labels.all}</span><span data-result-count>{products.length.toLocaleString()} {labels.results}</span></div>
+    <div class="product-table" role="table" aria-label={zh ? 'Van Harvest 产品目录' : 'Van Harvest product catalog'}><div class="product-head" role="row"><span role="columnheader">{labels.item}</span><span role="columnheader">{labels.product}</span></div><div data-product-results set:html={initialProducts.map(row).join('')}></div></div>
+    <div class="load-more" data-load-wrap hidden><button type="button" data-load-more></button></div>
+  </div>
+</div>
+<script id="catalog-data" type="application/json" set:html={catalogData}></script>
+<script is:inline>
+  const root = document.querySelector('[data-catalog]');
+  if (root) {
+    const allProducts = JSON.parse(document.querySelector('#catalog-data')?.textContent || '[]');
+    const labels = JSON.parse(root.dataset.labels || '{}');
+    const prefix = root.dataset.prefix || '';
+    const step = Number(root.dataset.step || 50);
+    const input = root.querySelector('#product-search');
+    const resultNode = root.querySelector('[data-product-results]');
+    const nameNode = root.querySelector('[data-current-name]');
+    const countNode = root.querySelector('[data-result-count]');
+    const loadWrap = root.querySelector('[data-load-wrap]');
+    const loadButton = root.querySelector('[data-load-more]');
+    const buttons = [...root.querySelectorAll('[data-category]')];
+    let category = 'all'; let query = ''; let limit = step;
+    const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' }[char]));
+    const nameFor = (key) => buttons.find((button) => button.dataset.category === key)?.textContent?.trim() || labels.all;
+    const row = (product) => `<a class="product-row" role="row" href="${prefix}/products/${product.category}/${product.id}"><code role="cell">${escapeHtml(product.id)}</code><strong role="cell"><span>${escapeHtml(product.name)}</span>${product.nameZh ? `<small>${escapeHtml(product.nameZh)}</small>` : ''}</strong></a>`;
+    const render = () => {
+      const term = query.trim().toLowerCase();
+      const filtered = allProducts.filter((product) => (category === 'all' || product.category === category) && (!term || `${product.id} ${product.name} ${product.nameZh || ''}`.toLowerCase().includes(term)));
+      nameNode.textContent = nameFor(category);
+      countNode.textContent = `${filtered.length.toLocaleString()} ${labels.results}`;
+      resultNode.innerHTML = filtered.length ? filtered.slice(0, limit).map(row).join('') : `<div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div>`;
+      const remaining = filtered.length - limit;
+      loadWrap.hidden = remaining <= 0;
+      loadButton.textContent = `${labels.load} · ${Math.min(step, Math.max(remaining, 0))} ${labels.results}`;
+      buttons.forEach((button) => { const active = button.dataset.category === category; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
+      resultNode.querySelector('[data-clear]')?.addEventListener('click', () => { category = 'all'; query = ''; limit = step; input.value = ''; render(); });
+    };
+    const params = new URLSearchParams(location.search);
+    if (buttons.some((button) => button.dataset.category === params.get('category'))) category = params.get('category');
+    if (params.get('q')) { query = params.get('q'); input.value = query; }
+    input.addEventListener('input', () => { query = input.value; limit = step; render(); });
+    buttons.forEach((button) => button.addEventListener('click', () => { category = button.dataset.category || 'all'; limit = step; render(); }));
+    loadButton.addEventListener('click', () => { limit += step; render(); });
+    render();
+  }
+</script>
