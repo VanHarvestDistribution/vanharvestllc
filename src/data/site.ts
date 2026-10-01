@@ -20,7 +20,15 @@ export const categories = [
   { key: 'prepared', prefix: '9', index: '09', name: 'Frozen, Prepared & Snacks', nameZh: '冷冻点心与零食', short: 'Frozen dim sum, appetizers, drinks, bakery treats and ready-to-cook specialties.', shortZh: '冷冻点心、小食、饮料、烘焙及方便烹饪食品。', image: '/images/category-prepared.webp', featuredIds: ['74622', '74630', '74615', '74618', '74612', '74613', '74639', '92641', '92643', '92653', '92651', '92790'] }
 ] as const;
 
-export const heroImage = '/manus-storage/async-images/XljMz1XrWAwOxJtF4PYNsg/image-1.webp';
+/** Homepage-only food imagery; distinct from the Products department card images. */
+export const heroImages = [
+  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-1.webp',
+  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-2.webp',
+  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-3.webp',
+  '/manus-storage/async-images/FkT1Zo9784htY2gbSSBijM/image-4.webp',
+] as const;
+
+export const heroImage = heroImages[0];
 
 export const facilityImages = {
   warehouse: '/images/facilities/warehouse-facility.webp',

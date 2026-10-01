@@ -4,12 +4,12 @@ import CallToAction from '@/components/CallToAction.astro';
 import FacilityNetwork from '@/components/FacilityNetwork.astro';
 import HomeCatalogMarquee from '@/components/HomeCatalogMarquee.astro';
 import products from '@/data/products.json';
-import { contact, heroImage } from '@/data/site';
+import { contact, heroImage, heroImages } from '@/data/site';
 interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang = 'en', localized = false } = Astro.props;
 const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
-const heroSlides = [heroImage];
+const heroSlides = heroImages;
 const organizationJsonLd = {
   '@context': 'https://schema.org', '@graph': [
     { '@type': 'Organization', name: 'Van Harvest Distribution LLC', telephone: contact.phoneDisplay, email: contact.officeEmail, address: { '@type': 'PostalAddress', streetAddress: '5226 Terminal St', addressLocality: 'Charlotte', addressRegion: 'NC', postalCode: '28208', addressCountry: 'US' } },
