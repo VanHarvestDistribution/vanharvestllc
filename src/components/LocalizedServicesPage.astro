@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CallToAction from '@/components/CallToAction.astro';
+interface Props { lang: 'en' | 'zh' }
+const { lang } = Astro.props; const zh = lang === 'zh';
+const blocks = zh ? [
+  { label:'配送 · 退换货 · 问题', eyebrow:'订单支持', title:'让厨房持续运转。', copy:'关于配送计划、替代品、损坏商品和退换货，请联系办公室。最终配送日、截单时间和退换货窗口将在确认后发布。', points:['配送协调','产品咨询','退换货支持','客服联系'] },
+  { label:'开户 · 账期 · 下单', eyebrow:'账户支持', title:'准备好下一次采购。', copy:'新客户可以提交开户申请。账期、最低起送额和所需文件目前以确认后的公司政策为准。', points:['申请开户','电话下单','短信 / 微信下单','审批后确定账期'] },
+  { label:'肉类 · 蔬果 · 海鲜 · 食品杂货', eyebrow:'批发目录', title:'一个目录，服务专业厨房。', copy:'Van Harvest 目录覆盖核心食品品类和餐饮运营所需的用品。', points:['新鲜及冷冻蛋白','蔬菜水果','海鲜产品','食品杂货'] }
+] : [
+  { label:'Delivery · Returns · Questions', eyebrow:'Order care', title:'Keep the kitchen moving.', copy:'Talk with the office about delivery planning, substitutions, damaged goods and returns. Final delivery days, cutoff times and return windows will be published after confirmation.', points:['Delivery coordination','Product questions','Returns support','Customer service'] },
+  { label:'Account setup · Terms · Ordering', eyebrow:'Account support', title:'Set up your next order.', copy:'New customers can submit an account application. Credit terms, minimums and required documents follow Van Harvest confirmation.', points:['Apply for an account','Phone ordering','SMS / WeChat ordering','Terms by approval'] },
+  { label:'Proteins · Produce · Seafood · Pantry', eyebrow:'Wholesale assortment', title:'One catalog for the kitchen and beyond.', copy:"Van Harvest's catalog spans core food categories and the operational essentials that keep a foodservice environment ready.", points:['Fresh & frozen proteins','Produce & fruit','Seafood assortment','Pantry ingredients'] }
+];
+---
+<BaseLayout title={zh ? '食品批发服务 | Van Harvest' : 'Wholesale Food Supply Services | Van Harvest'} description={zh ? '了解 Van Harvest 的配送、开户、下单和退换货支持。' : 'Explore Van Harvest delivery, account, ordering and returns support.'} active="/services" lang={lang}>
+<section class="inner-hero"><div class="shell inner-grid"><div class="reveal"><p class="eyebrow">{zh ? '我们如何支持厨房' : 'How we support kitchens'}</p><h1>{zh ? <>供应支持，<br /><em>少一点阻力。</em></> : <>Supply support<br />with <em>less friction.</em></>}</h1></div><div class="inner-copy reveal"><p>{zh ? '从配送沟通、开户到产品问题和退换货，我们帮助餐饮经营者保持订单顺畅。' : 'From delivery conversations and account setup to product questions and returns, our team helps foodservice operators keep orders moving.'}</p><a class="text-link" href={`${lang === 'zh' ? '/zh' : '/en'}/apply`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a></div></div></section>
+<section class="services-list">{blocks.map((block, i) => <article class="service-block"><div class:list={['service-visual', i === 1 && 'is-produce', i === 2 && 'is-gold']}><span class="service-number">0{i + 1}</span><p>{block.label}</p></div><div class="service-content reveal"><span class="eyebrow">{block.eyebrow}</span><h2>{block.title}</h2><p>{block.copy}</p><div class="service-points">{block.points.map((point) => <span>{point}</span>)}</div></div></article>)}</section><CallToAction />
+</BaseLayout>

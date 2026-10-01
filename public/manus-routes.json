@@ -19,12 +19,16 @@
     { "path": "/en/products/:category", "title": "English Product Category" },
     { "path": "/en/products/:category/:itemNumber", "title": "English Product Detail" },
     { "path": "/en/contact", "title": "English Contact" },
+    { "path": "/en/company", "title": "English Company" },
+    { "path": "/en/services", "title": "English Services" },
     { "path": "/en/:slug", "title": "English Information Page" },
     { "path": "/zh", "title": "中文首页" },
     { "path": "/zh/products", "title": "中文产品目录" },
     { "path": "/zh/products/:category", "title": "中文产品分类" },
     { "path": "/zh/products/:category/:itemNumber", "title": "中文产品详情" },
     { "path": "/zh/contact", "title": "中文联系" },
+    { "path": "/zh/company", "title": "中文公司介绍" },
+    { "path": "/zh/services", "title": "中文服务" },
     { "path": "/zh/:slug", "title": "中文信息页面" }
   ]
 }

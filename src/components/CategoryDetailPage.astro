@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CallToAction from '@/components/CallToAction.astro';
+import productsData from '@/data/products.json';
+import { categoryUploadedImages } from '@/data/categoryUploadedImages';
+interface Props { category: any; lang?: 'en' | 'zh'; localized?: boolean }
+const { category, lang = 'en', localized = false } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+const products = productsData.filter((product: any) => product.category === category.key);
+const featured = category.featuredIds.map((id: string) => products.find((product: any) => product.id === id)).filter(Boolean).slice(0, 4);
+const photos = categoryUploadedImages[category.key] || [];
+const photo = (name: string) => `/images/products/uploaded/${name}`;
+const categoryZh: Record<string,string> = { meat: '肉类与禽类', produce: '蔬菜水果', seafood: '海鲜', pantry: '酱料与调味品', preserved: '罐藏与保鲜食品', supplies: '餐饮用品', dry: '米面与干货', cleaning: '清洁用品', prepared: '冷冻与预制食品', snacks: '零食与饮料' };
+const name = zh ? categoryZh[category.key] : category.name;
+const title = `${name} ${zh ? '批发产品' : 'Wholesale Products'} | Van Harvest`;
+const description = zh ? `浏览 Van Harvest ${name}产品和精选 Featured Products。网站不显示价格。` : `Browse Van Harvest ${category.name.toLowerCase()} products and selected Featured Products. No pricing is shown online.`;
+---
+<BaseLayout title={title} description={description} active="/products" lang={lang}>
+  <section class="category-detail-hero"><div class="category-detail-media"><img src={category.image} alt={`${name} ${zh ? '产品目录' : 'wholesale catalog category'}`} /></div><div class="category-detail-shade"></div><div class="shell category-detail-inner"><p class="breadcrumb"><a href={`${prefix}/products`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p><div class="category-detail-copy reveal"><p class="eyebrow eyebrow-light">{category.index} · {products.length.toLocaleString()} {zh ? '个目录产品' : 'catalog items'}</p><h1>{name}<br /><em>{zh ? '为专业厨房准备。' : 'for the professional kitchen.'}</em></h1><p>{zh ? `${category.short} 点击下方产品，查看中英文名称、包装和温层信息。` : category.short}</p><a class="button" href={`${prefix}/products?category=${category.key}#catalog`}>{zh ? `浏览全部 ${products.length.toLocaleString()} 个产品 →` : `Browse all ${products.length.toLocaleString()} items →`}</a></div></div></section>
+  <section class="featured-products"><div class="shell"><div class="featured-products-heading reveal"><div><p class="eyebrow">{zh ? '品类精选' : 'Category highlights'}</p><h2>{zh ? <>精选<br /><em>产品。</em></> : <>Featured<br /><em>Products.</em></>}</h2></div><p>{zh ? '以下图片来自 Van Harvest 上传的真实产品照片。每个精选产品都可进入独立的双语详情页，网站不显示价格。' : 'These images come from Van Harvest uploaded product photography. Every featured item opens a bilingual detail page; no pricing is shown online.'}</p></div><div class="featured-product-grid">{featured.map((product: any, index: number) => <a class="featured-product-card featured-product-card-with-image reveal" href={`${prefix}/products/${category.key}/${product.id}`}><div class="featured-product-thumb"><img src={photo(photos[index] || photos[0])} alt={`${product.name} product photo`} loading="lazy" /></div><span>{String(index + 1).padStart(2, '0')}</span><div><small>Item {product.id} · {product.storage || (zh ? '目录产品' : 'catalog item')}</small><h3>{product.name}</h3>{product.nameZh && <p class="product-zh">{product.nameZh}</p>}<p>{product.packSize || (zh ? '批发包装' : 'Wholesale format')}</p></div><b aria-hidden="true">↗</b></a>)}</div><div class="featured-products-footer reveal"><p>{products.length.toLocaleString()} {name} {zh ? '产品可按 Item #、英文名或中文名搜索。' : 'products are available to search by Item #, English name or Chinese name.'}</p><a class="text-link" href={`${prefix}/products?category=${category.key}#catalog`}>{zh ? '查看完整品类 →' : 'View full category →'}</a></div></div></section>
+  <CallToAction />
+</BaseLayout>

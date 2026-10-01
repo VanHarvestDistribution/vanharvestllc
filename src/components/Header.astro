@@ -19,9 +19,8 @@ const items = [
     <a class="brand official-brand" href={localHref('/')} aria-label="Van Harvest Distribution home"><img src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /></a>
     <nav class="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
       {items.map(([label, href]) => <a href={localHref(href)} class:list={{ active: active === href }}>{label}</a>)}
-      <span class="nav-divider" aria-hidden="true"></span><a class="language-switch language-switch-active" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a>
     </nav>
-    <div class="header-actions"><a class="header-call" href="tel:+17043928717"><span>{lang === 'zh' ? '电话联系' : 'Talk with us'}</span>(704) 392-8717</a></div>
+    <div class="header-actions"><a class="header-call" href="tel:+17043928717"><span>{lang === 'zh' ? '电话联系' : 'Talk with us'}</span>(704) 392-8717</a><span class="nav-divider" aria-hidden="true"></span><a class="language-switch language-switch-active" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a></div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
       <i></i><i></i><span>Menu</span>
     </button>
