@@ -19,11 +19,19 @@ RULES = ROOT / 'data/catalog-rules.json'
 PLACEHOLDER = re.compile(r'^(?:[*._\s-]+|n/?a|none|unknown|\*\*)$', re.I)
 PACK = re.compile(r'(?i)(?:\b\d+(?:\.\d+)?\s*[x×]\s*\d+(?:\.\d+)?\s*(?:oz|lb|lbs|g|kg|ml|pc|pcs)\b|\b\d+(?:\.\d+)?\s*(?:lb|lbs|oz|g|kg|ml|l|pc|pcs|pkg|cs)\b(?:\s*/\s*(?:cs|pkg|case))?)')
 REPLACEMENTS = [(r'\bFRZ\b', 'Frozen'), (r'\bBnls\b', 'Boneless'), (r'Smithfiled', 'Smithfield'), (r'Favor', 'Flavor'), (r'Murshrooms', 'Mushrooms'), (r'Approxmi', 'Approx.')]
+INTERNAL_PAREN_CODE = re.compile(r'\(\s*(?:[A-Z]{1,4}\s*[-/]?\s*)?\d{4,}[A-Z0-9./-]*\s*\)', re.I)
+LEADING_INTERNAL_CODE = re.compile(r'^(?:[A-Z]{1,3}\d{3,}|[A-Z]\s*-\s*\d{3,})\s*[-/:]?\s*', re.I)
+TRAILING_INTERNAL_CODE = re.compile(r'\s+(?:\d{1,2}-\d{4,}|[A-Z]\d[A-Z]\d[A-Z]|[A-Z]{1,3}\d{4,})\s*$', re.I)
+INTERNAL_ITEM_TOKEN = re.compile(r'\b(?:item\s*#?\s*|sku\s*#?\s*)\d{4,}\b', re.I)
 
 
 def clean(value: str, chinese: bool = False) -> str:
     value = str(value or '')
     value = re.sub(r'\*(?:\s*\d[\d\s/&.-]*)\*', ' ', value)
+    value = INTERNAL_PAREN_CODE.sub(' ', value)
+    value = INTERNAL_ITEM_TOKEN.sub(' ', value)
+    value = LEADING_INTERNAL_CODE.sub('', value)
+    value = TRAILING_INTERNAL_CODE.sub('', value)
     value = value.replace('"', '').replace('“', '').replace('”', '')
     value = re.sub(r'(?<!\w)[*_]+|[*_]+(?!\w)', ' ', value)
     if not chinese:
@@ -87,7 +95,8 @@ def main() -> None:
         storage_text = f"{record['rawName']} {record['rawNameZh']}".lower()
         storage = 'frozen' if any(term in storage_text for term in ['frozen', 'frz', '冷冻', '冷凍']) else ('refrigerated' if any(term in storage_text for term in ['fresh', 'chilled', '新鲜', '冷藏']) else 'dry')
         pack = PACK.search(record['rawName'])
-        safe = {'id': item_id, 'code': record['code'], 'name': name, 'nameZh': name_zh, 'rawName': record['rawName'], 'rawNameZh': record['rawNameZh'], 'category': category_for(record, rules), 'packSize': pack.group(0) if pack else '', 'storage': storage, 'active': True}
+        # The public browser payload intentionally contains no internal Code or raw supplier-name fields.
+        safe = {'id': item_id, 'name': name, 'nameZh': name_zh, 'category': category_for(record, rules), 'packSize': pack.group(0) if pack else '', 'storage': storage, 'active': True}
         public.append(safe)
         raw.append({'Product_ID': item_id, 'Code': record['code'], 'Product_English_Name': name, 'Product_Chinese_Name': name_zh, 'Category_Name': safe['category']})
     public.sort(key=lambda item: int(item['id']))
@@ -96,7 +105,7 @@ def main() -> None:
     with SAFE_SOURCE.open('w', newline='', encoding='utf-8') as fh:
         writer = csv.DictWriter(fh, fieldnames=['Product_ID', 'Code', 'Product_English_Name', 'Product_Chinese_Name', 'Category_Name'])
         writer.writeheader(); writer.writerows(raw)
-    REPORT.write_text(json.dumps({'source': 'Stocklist.xls', 'publicFieldPolicy': 'Item #, Code, English name, Chinese name, category, pack format and storage only. No price, cost, quantity, allocation or reorder fields are imported.', 'rawCount': int(len(df)), 'cleanCount': len(public), 'rejectedCount': len(rejected), 'rejected': rejected}, ensure_ascii=False, indent=2))
+    REPORT.write_text(json.dumps({'source': 'Stocklist.xls', 'publicFieldPolicy': 'Item #, cleaned English name, cleaned Chinese name, category, pack format and storage only. Internal Code, raw supplier names, prices, costs, quantities, allocation and reorder fields are not written to the public catalog.', 'rawCount': int(len(df)), 'cleanCount': len(public), 'rejectedCount': len(rejected), 'rejected': rejected}, ensure_ascii=False, indent=2))
     print(json.dumps({'raw': len(df), 'public': len(public), 'rejected': len(rejected)}))
 
 if __name__ == '__main__':

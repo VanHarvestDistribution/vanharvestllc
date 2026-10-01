@@ -10,7 +10,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 10034,BM08I,FROZEN Bone In Butt Fresh,冷冻有骨猪肉 ANY BRAND,meat
 10050,BM24,Pork Chop 10LB /PKG,猪扒(A级)10LB/包 (3),meat
 10086,BM06,Boneless Pork Butt (FRESH),新鲜无骨猪肉,meat
-10087,,Black Oak Smoked Sausage (13054)-10LB,香肠,meat
+10087,,Black Oak Smoked Sausage -10LB,香肠,meat
 10088,BM10T,Pork Sausage-Taiwan 1LB,台湾香肠,meat
 10089,BM10W,WC Taiwan Sausage 12oz,味全台湾香肠,meat
 10090,BM07,Frozen Boneless Pork Ham,全瘦猪腿肉-冷冻,meat
@@ -21,11 +21,11 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 10100,BM04K,Pork Spare Rib 98 Red Ink Box,唐人排骨 98 红字 /箱,meat
 10102,BM04SZ,Frozen #2 Spareribs St.Louis,# 2 冷冻上等排骨,meat
 10104,BM04SZ,PATEL 1400C Frozen Pork Back Ribs PVC-215394,冷冻上等排骨PVC-215394,meat
-10109,BM04SZ,Pork Loin Back Ribs Portinons,短排骨 (20225),meat
+10109,BM04SZ,Pork Loin Back Ribs Portinons,短排骨,meat
 10113,BM04,Pork SpareRibs 4.3 Down,猪排骨 4.3,meat
 10117,BM04SJ,(JBS) Spare Rib CUT,上等排骨条,meat
 10174,BM35,Pork Spare Ribs 5LB/Pkg,点心排骨,meat
-10208,BM32W,Pork Brisket Bone Approx 35LB,排骨尾 (12023),meat
+10208,BM32W,Pork Brisket Bone Approx 35LB,排骨尾,meat
 10229,BM32,68/4941 Pork Spareib Tips,68/4941 排骨尾,meat
 10300,BM06R,Seasoned SLiced Pork and Binder 20LB,叉烧块-20磅/箱,meat
 10301,B,Roasted Pork Cubes 30lb,叉烧粒 30lb,meat
@@ -33,7 +33,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 10329,,Smoked Sausage 23.625Lb,香肠(Hillshire Farm)-23.625Lb/箱,meat
 10330,,Smoked Sausage 12x3lb (20031&20205x20125),香肠,meat
 10331,BM10B,BlackOak Smoked Sausage 11LB,香肠 (Black Oak),meat
-10332,,HML CDK HAM (13507) 2x13LB / CS,火腿(13507) 2x13LB / 箱,meat
+10332,,HML CDK HAM 2x13LB / CS,火腿 2x13LB / 箱,meat
 11024,BC16,Chicken Bone 40LB,鸡骨,meat
 11042,,General Tso's Chicken 33LB /CS,酥脆左宗鸡(Oriental Taste) /箱,meat
 11050,BC16S,Chicken Skin 40LB,鸡皮,meat
@@ -42,7 +42,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 11069,,641614R Chicken Dark Meat Chunks 40LB,黑肉左宗鸡 40LB 641614R,meat
 11072,BC17X,Chicken Dark Meat Chunks 10LB,黑肉左宗鸡 10LB,meat
 11074,BC16,Frozen Chicken Breast Bone 25LB,鸡胸骨 25LB,meat
-11075,BC20L,91914 FRITTER 10 F4L8C,91914 鸡块 10 F4L8C,meat
+11075,BC20L,91914 FRITTER 10,91914 鸡块 10,meat
 11076,BC20,91918 DICED LEGMEAT F4R12,91918 切块鸡腿 F4R12,meat
 11110,BC03,Boneless Breast (Case Farms),无骨鸡胸,meat
 11111,BC03,Boneless Breast (HOR),无骨鸡胸 (HOR),meat
@@ -94,7 +94,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 11363,BC07MP,Fresh MED Wing (PERDUE),中鸡翅(140只) 新鲜,meat
 11364,BC07W,Whole Wing (WAYNE),新鲜大鸡翅(100-110只),meat
 11370,BC07Z,FZ Whole Wing MED Sanderson,冷冻中鸡翅,meat
-11382,,Frozen MED Wing DD082025 (DON'T SALE),冷冻中鸡翅 DD082025,meat
+11382,,Frozen MED Wing DD082025 (DON'T SALE),冷冻中鸡翅,meat
 11384,BC05E,Economy Party Wings,切鸡翅(冻)-95321-40lb/箱,meat
 11389,BC07M,MED Wing (Mountaire),中鸡翅 40LB,meat
 11390,BC05H,Frozen MED Cut Wing (HARVESTLAND),冷冻 中号切翅,meat
@@ -128,15 +128,15 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 11432,BC08B,Leg Meat 40LB (Amick Farm),无骨鸡腿肉,meat
 11433,BC08U,Frozen Select cut Leg Meat 40LB,冷冻*Select cut 无骨鸡腿肉,meat
 11473,BC08B,Leg Meat 40LB*Brighton River,萬泉鸡腿肉,meat
-12001,BM01,Fresh Flank Steak (19341) EXCEL,新鲜上等牛肉 (19341),meat
+12001,BM01,Fresh Flank Steak EXCEL,新鲜上等牛肉,meat
 12003,BM01A,AMH Australia Flank Steak 204764,冷冻澳牛AMH,meat
-12004,BM02L,Beef Loin (A380031) Peel Strip,新鲜 P 牛,meat
-12005,BM02L,(700110) Fresh Beef Loin Strip,鲜牛肉条 (700110) (appox 50lb),meat
+12004,BM02L,Beef Loin Peel Strip,新鲜 P 牛,meat
+12005,BM02L,Fresh Beef Loin Strip,鲜牛肉条 (appox 50lb),meat
 12023,BM01A,FLS-592/597 Frozen Flank Steak (BA-FLS),(BA-FLS) 冷冻澳洲方牛,meat
-12060,BM02T,Beef Loin Ball Tip (18845) EXCEL,新鲜牛腰脊 (18845),meat
+12060,BM02T,Beef Loin Ball Tip EXCEL,新鲜牛腰脊,meat
 12085,BM02LF,FROZEN Beef Loin /Peeled Beef,(冻) P牛100%,meat
-12090,,Boneless Beef SP (A-0147),碎牛 (A-0147),meat
-12091,,Beef Bottom Round Flat (16945) EXCEL,碎牛 (16945),meat
+12090,,Boneless Beef SP,碎牛,meat
+12091,,Beef Bottom Round Flat EXCEL,碎牛,meat
 12097,BM01A,Australian Flank Steak (A-FLS) MIDFIELD,MIDFIELD冷冻澳洲方牛(A-FLS)22101,meat
 12099,BM01T,Frozen Flank Steak*TEYS#2210 60LB Australia,冷冻上等牛肉 TEYS#2210,meat
 12100,BM01TF,Frozen Flank Steak (B) Mid Field,冷冻方牛牛肉,meat
@@ -151,25 +151,25 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 12129,BM04PB,Beef Short Rib 5LB,三骨雪花牛仔骨 (6),meat
 12130,BM28L,FZ Beef Chuck Riblet (National),冷冻牛胸骨,meat
 12131,BM28L,FZ Beef Chuck Riblet (National) PKG,冷冻牛胸骨/袋PKG (3),meat
-12132,BM02,Beef Short Plate (22138) EXCEL (Navel),精品肥牛 (22138),meat
+12132,BM02,Beef Short Plate EXCEL (Navel),精品肥牛,meat
 12134,BM28L,FZ Beef Chuck Riblet - 20 LB / cs,冷冻牛胸骨 (切）- 20LB,meat
-12151,BM02L,W58030 Beef Strip Loin (Cargill),鲜牛肉条 (W58030),meat
-12152,BM02,Beef Tenderloin (18944) EXCEL,Filet Mignon 菲力牛排 (18944),meat
+12151,BM02L,W58030 Beef Strip Loin (Cargill),鲜牛肉条,meat
+12152,BM02,Beef Tenderloin EXCEL,Filet Mignon 菲力牛排,meat
 12153,BM02PK,#89420 Fresh Beef Pectoral 5 Star,新鲜牛胸肉-(五星),meat
-12154,BM02P,Pectoral Beef Chuck (11445/35) EXCEL,新鲜牛胸肉 (11445/35),meat
+12154,BM02P,Pectoral Beef Chuck EXCEL,新鲜牛胸肉,meat
 12155,BM02L,Beef Loin Strip (Friboi),铁板牛肉条,meat
-12156,BM02P,Frozen Pectoral Beef Chuck (11425/11435/11445)Excel,冷冻牛胸肉(Excel),meat
-12157,BM02,Beef Round knuckle (16630) EXCEL,新鲜牛里脊 (16630),meat
+12156,BM02P,Frozen Pectoral Beef Chuck Excel,冷冻牛胸肉(Excel),meat
+12157,BM02,Beef Round knuckle EXCEL,新鲜牛里脊,meat
 12158,BM01F,Frozen Flank Steak (NATURAFRIG),冷冻巴西方牛,meat
 12185,BM01c,FRESH SUKARNE Flank Steak,新鲜好牛肉-(Sukarne)-约30LB/箱,meat
 12186,BM01S,Fresh Sukarne 53486 Mexico Flank Steak,新鲜好牛肉(53486 Sukarne),meat
-12187,BM01M,Frozen Sukarne 53486 FlankSteak Mexcio,冷冻好牛肉(53486-Sukarne),meat
-12188,BM03,Tere Major (11486/97) EXCEL,牛肉條 (Petite Tender) (11486/97),meat
+12187,BM01M,Frozen Sukarne 53486 FlankSteak Mexcio,冷冻好牛肉,meat
+12188,BM03,Tere Major EXCEL,牛肉條 (Petite Tender),meat
 12189,BM02,Frozen.Wagyu Peeled Knuckle (North Georgia),冷冻牛里脊,meat
 12190,BM02,Beef Wagyu Short Plate (North Georgia),冷冻肥牛,meat
-12260,BM03K,Beef Round Top Inside (16836) EXCEL,牛臀肉 (16836),meat
+12260,BM03K,Beef Round Top Inside EXCEL,牛臀肉,meat
 12268,,SP OFFER EYE ROUND BEEF FRZN,SP OFFER EYE ROUND BEEF,meat
-12269,BM03,Eye Round Beef (17125) EXCEL,牛眼肉 (17125),meat
+12269,BM03,Eye Round Beef EXCEL,牛眼肉,meat
 12270,BM30C,Individual Pack Beef Bone 40LB,牛骨独立包装(2LBx20Pkg),meat
 12271,BM28,Beef Bone 35LB,牛骨,meat
 12272,BM20,Pork Fat 50LB 10013,猪油,meat
@@ -227,7 +227,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 21012,BP36,String Bean-WoodCS(Check Immediately),四季豆-木箱A (请当场检查),produce
 21020,BF03K,FZ Peas & Carrots 12x2LB,冷冻青红豆,produce
 21021,BF03,Fine Line FZ Peas & Carrots 12x40oz,冷冻青红豆 (30LB),produce
-21022,BF03K,FZ Peas & Carrot 24LB (JNK1036/EcoVally),冷冻青红豆(JNK/EcoVally),produce
+21022,BF03K,FZ Peas & Carrot 24LB,冷冻青红豆(JNK/EcoVally),produce
 21029,BF02,Frozen Green Peas 12x40oz FINE LINE,冷冻青豆,produce
 21030,BF02K,Green Peas # IQF,青豆-1.2*0.2,produce
 21040,BF11,Frozen Slice Carrot-Med 20LB FINE LINE,冷冻红萝卜片,produce
@@ -345,7 +345,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 21525,BP20,Nature Tofu 5LB,(大田) 大豆腐 5LB,produce
 21530,,Mapo MILD Tofu Kit (Nature's Soy) - 16.8oz / PK,大田 麻婆豆腐 / 包 (12),produce
 21531,,Mapo HOT Tofu Kit (Nature's Soy) - 16.8oz / PK,大田 (加辣）麻婆豆腐 / 包 (12),produce
-21570,BP16P,JNK Tofu Puffs 2LB/Pkg (20570031),豆腐卜-包 (10),produce
+21570,BP16P,JNK Tofu Puffs 2LB/Pkg,豆腐卜-包 (10),produce
 21572,,Organic Unsweet Soy Drink(8),原味有机豆浆,prepared
 21573,,Sweet Soy Drink(8),原味甜豆浆,prepared
 21574,,Organic Sweet Soy Drink(8),有机甜豆浆,prepared
@@ -560,7 +560,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 24001,BC17B,Black Chicken PC,乌鸡-头 (15),produce
 24002,BC17F,FRESH COOK CHICKEN Fortune Chicken,平安鸡(公）-约4Lb / 头 4214,produce
 24006,,Hot Pepper Boneless Chicken Feet / PKG,无骨泡椒凤爪 / 包,produce
-24007,BC14C,Chicken Paws 44 LB,鸡脚 (87015) 44LB/箱,produce
+24007,BC14C,Chicken Paws 44 LB,鸡脚 44LB/箱,produce
 24008,C,CASE FARM Chicken Paws 33.07LB,鸡脚33.07LB /箱 CASE FARM,produce
 24009,BC14,Chicken Paws 5LB,鸡脚 5LB (6),produce
 24010,BC17,Aged Chicken PC,老鸡-头 (15),produce
@@ -569,16 +569,16 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 24038,,JONG'S Fresh Quail Eggs 15pc /PKG,新鲜鹌鹑蛋 15颗 /盒 (40),produce
 24049,BC17R,Ranged Chicken 4LB/PKG,走地鸡(约4LB)/头,produce
 24064,BC17C,Aged Chicken,老鸡,produce
-24100,BC13P,CULVER Head&Feet On Duck (20055),有头冻鸭5.5LB*CULVER,produce
+24100,BC13P,CULVER Head&Feet On Duck,有头冻鸭5.5LB*CULVER,produce
 24101,BC11L,Winona Duck Without Neck,PN0000014 无头鸭,produce
 24102,BC11,Bay Brand Duckling Headless #5.5,无头冻鸭 #5.5 (#32/33/34/35) Bay Brand,produce
-24103,BC13C,CULVER Head&Feet On Duck (20050),有头冻鸭5.0LBCULVER,produce
+24103,BC13C,CULVER Head&Feet On Duck,有头冻鸭5.0LBCULVER,produce
 24104,BC13C,Buddhist (Blue) Duck W/Head #5.5,有头冻鸭#5.5 (#47/48/49) Premium Poultry,produce
 24105,BC13C,Buddhist (Blue) Duck W/Head #6,有头冻鸭#6 (#144) Premium Poultry,produce
 24106,BC11,VALLEY FORGE Duckling Headless #4.5,无头冻鸭 (VALLEY FORGE) (6),produce
 24107,BC11,Bay Brand Duckling Headless #6.0,无头冻鸭 #6.0 (#34) Bay Brand,produce
 24108,BC11X,CULVER Duckling Headless 5.0,无头冻鸭 (6pc) CULVER,produce
-24109,BC13C,CULVER Head&Feet On Duck (20060),有头冻鸭6.0LBCULVER,produce
+24109,BC13C,CULVER Head&Feet On Duck,有头冻鸭6.0LBCULVER,produce
 24110,,Mature Duck (#197) - PC,老鸭-头,produce
 24111,BC11R,ACC Roasted Duck Hong Kong/PC,Duck-1 烧鸭/只*ACC*Hong Kong (6),produce
 24112,,Duck Head - CS,鸭头 - 箱,produce
@@ -639,7 +639,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 24326,BM15,Beef Omasum 30LBS (Any Brand),牛百叶-30LB /箱,produce
 24330,BM17P,Beef Brisket 5LB/PKG,牛腩 5LB/包 (8),produce
 24331,BM17,18415 Boneless Beef Flank (Four Star),牛腩 (Four Star) 约35磅 /箱,produce
-24332,BM06C,Beef Rough Flank Steak,牛腩 (3530/054),produce
+24332,BM06C,Beef Rough Flank Steak,牛腩,produce
 24333,BM06C,Beef Wagyu Brisket (North Georgia),冷冻牛腩 约50磅,produce
 24340,BM09,Beef Tendon 10LB (A.L. Beck),牛筋,produce
 24341,BM09B,BEEF AORTA 30LB/CS,黃喉/牛心頂 30 磅 箱,produce
@@ -660,7 +660,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 24414,,Pork Slice,猪劲肉片-约1LB/合,produce
 24450,LAMB,Sliced Lamb 16oz - Hot Pot,火锅羊肉片,produce
 24451,BM37,Sliced Beef 1LB - Hot Pot,火锅肥牛片,produce
-24460,BF44,Taro 1LB - Hot Pot,火锅芋头 F3S4E,produce
+24460,BF44,Taro 1LB - Hot Pot,火锅芋头,produce
 24474,BM12,Bone In Cubes Goat 2.2LB (BLUE),欧洲切块带骨草羊2.2LB,produce
 24475,BM12G,Bone In Cubes Goat 5LB,带皮切块全羊,produce
 24490,LAMB,G456 Bone In Lamb,G456 有骨羊腩 (FLETCHER),produce
@@ -757,7 +757,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 25529,DRINK,Yeo's White Gourd Drink 24x300ml,杨协成冬瓜茶 (罐装),prepared
 25530,DRINK,Yeo's Grass Jelly Drink 24x300ml,杨协成仙草蜜 (罐装),prepared
 25531,DRINK,Yeo's Lychee Drink 24x300ml,杨协成荔枝水 (罐装),prepared
-25532,DRINK,A04103 Mandarin Soda 24can/cs,北冰洋 桔子味汽水24罐,prepared
+25532,DRINK,Mandarin Soda 24can/cs,北冰洋 桔子味汽水24罐,prepared
 25533,DRINK,Yeo's Sugar Canned Tea 24x300ml,杨协成甘蔗水 (罐装),prepared
 25534,DRINK,JNK White Fungus Soup 12x7oz /CS,枸杞红枣银耳羹(12瓶) 箱,prepared
 25535,DRINK,Yeo's Chrysanthemum Tea 24x300ml,杨协成菊花茶 (罐装),prepared
@@ -792,7 +792,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 25619,DIMSUM,ACC E-19 BrownSugar GlutinousRiceCake/PKG,E-19红糖糍粑(麻薯)(20),prepared
 25620,DIMSUM,JNKSweet Rice Cake 300g 40461004,红糖爆浆糍粑 (12) 40461004,prepared
 25633,BF43C,FuZhou FIsh Ball 400g/PKG,福州鱼丸 400g,produce
-25635,GM12,FISH CAKE .50#/PKG F3S4A,鱼饼 .50#/PKG F3S4A,prepared
+25635,GM12,FISH CAKE .50#/PKG,鱼饼 .50#/PKG,prepared
 25641,,Seafood Tofu 40x400g,鱼豆腐,produce
 25642,,Seafood Tofu LAMSHENG KEE 240g/Pkg,鱼豆腐 (40),produce
 25644,,JNKShrimp Ball Lychee Shape 200g (24）,荔枝虾球,produce
@@ -801,7 +801,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 25655,GM23,(O.Tasty) Pork Dumpling 50pcx8Pkg,全美猪肉锅贴,prepared
 25656,,(O.Tasty) Dumping Chicken/Veg 50pcx8Pkg,鸡肉锅贴(全美),produce
 25657,GM22C,Chicken&Veg OCM Gyoza 12x32oz,(李先生)鸡肉煎饺,produce
-25659,GM22P,Pork&Veg OCM GYOZA 12x32oz (03101),(李先生)猪肉煎饺,produce
+25659,GM22P,Pork&Veg OCM GYOZA 12x32oz,(李先生)猪肉煎饺,produce
 25661,GM21K,WC Veg&PorkPotsticker 8x32oz,王府井猪肉锅贴(味全),produce
 25665,GM22,WC Veg&Pork GYOZA 8x32oz,猪肉煎饺(味全),produce
 25666,GM21,WC Pork&VegPotsticker 12x21oz,王府井猪肉锅贴(味全)1LB装,produce
@@ -947,7 +947,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 30639,BS18,Whole Shrimp Cooked Shell On 80/100 11LB,北极甜虾,seafood
 30800,BS03B,21-25 Bread Shrimp Butterfly 24LB/CS,21-25 蝴蝶虾 24LB /箱,prepared
 30801,BS03B,21-25 Bread Butterfly Shrimp 8x3lb,21-25 蝴蝶虾/箱 TENG,prepared
-30810,,Bread Popcorn Shrimp (900385) 20LB / CS,有粉园炸虾 （900385） / 箱,prepared
+30810,,Bread Popcorn Shrimp 20LB / CS,有粉园炸虾 （900385） / 箱,prepared
 31020,BS03,21-25 Headless Shell-On Shrimp 50LB,21-25 无头有壳虾,seafood
 31021,BS03X,21-25 Headless Shell-On Shrimp 40LB Ocean,21-25南美有壳虾 Ocean,seafood
 31022,BS03X,21-25 HEADLESS Shell-on Shrimp 4LB/PKG,21-25无头有壳虾 PKG,seafood
@@ -1035,7 +1035,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 33317,live seafood,(FRESH) Elephant Trunk Clam (Geoduck) - PC,象拔蚌 () 海鲜-保鲜不保活,seafood
 33318,live seafood,(FRESH) Conch (L) /PKG,响螺 海鲜-保鲜不保活 /袋,seafood
 33319,,Live Clam - LB,蚬子(海鲜),seafood
-33320,BS50,COOKED CLAMS FROZEN 1#,COOKED 蛤蜊 1# F1S2B,seafood
+33320,BS50,COOKED CLAMS FROZEN 1#,COOKED 蛤蜊 1#,seafood
 33321,live seafood,Rock Fish - PC,石头鱼（海鲜）- 磅,seafood
 33322,live seafood,(FRESH) Mussel 3LB /PKG,青口 (淡菜) 海鲜-保鲜不保活 3LB,seafood
 33323,live seafood,(FRESH) LingCod - PC,鲟龙鱼(新鲜 -保鲜不保活)- 磅,seafood
@@ -1089,11 +1089,11 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 33901,G3,Frozen Mashed Taro /pkg,芋泥 380g/ 包(24),seafood
 33902,,Pollock Fish Dumpling 90g /PKG LAUREL'S,桂冠 鱼饺 90g /包 (25),seafood
 33903,,Pollock Fish Roll 100g /PKG LAUREL'S,桂冠 火锅饺 100g /包 (25),seafood
-33904,,SoicyMiniCuredPorkPattyLink,辣味亲亲肠(4706)-10oz/包,seafood
-33905,,Mini Cured Pork Sausage 10oz,亲亲肠 (PS4700),seafood
-33906,,(Prime Food)Taiwan Brand PorkPatty,亲亲肠 PS4766,seafood
-33907,,MiniCuredPorkPattyLink/Corn,猪肉玉米亲亲肠(4720)-10oz/包,seafood
-33910,,MiniCuredChickenPattyLink/Corn,鸡肉玉米亲亲肠(4710)-10oz/包,seafood
+33904,,SoicyMiniCuredPorkPattyLink,辣味亲亲肠 -10oz/包,seafood
+33905,,Mini Cured Pork Sausage 10oz,亲亲肠,seafood
+33906,,(Prime Food)Taiwan Brand PorkPatty,亲亲肠,seafood
+33907,,MiniCuredPorkPattyLink/Corn,猪肉玉米亲亲肠 -10oz/包,seafood
+33910,,MiniCuredChickenPattyLink/Corn,鸡肉玉米亲亲肠 -10oz/包,seafood
 33918,,WC Beef Tendon Ball 8oz/Pkg,味全牛筋丸*WC 1-41120 (30),seafood
 33919,,Beef Meat Ball 8oz,牛肉丸,seafood
 33920,,ACC C-25 Beef Patty Ball 5LBS /PKG,C-25 牛肉丸 5LBS / 包,seafood
@@ -1125,22 +1125,22 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 34065,BF01KB,CTC8701 1/2 Straight Fries 30LB,有味粗薯条 30LB,seafood
 34066,BF01,3/8 Straight Cut Seasoned Fries 27LB,3/8寸 有味麦当劳薯条 27LB,seafood
 34067,BF01K,French Fried Potatoes 3/8 Straight Cut 6x5lb 21300,细薯条3/8寸 30LBS Straight Cut 21300,seafood
-34076,,Tater Tots/ French Potatoes (34111) - 30LB / CS,炸薯球(34111) / 箱,seafood
+34076,,Tater Tots/ French Potatoes - 30LB / CS,炸薯球 / 箱,seafood
 34081,BF01KQ,CTE94 3/8 Straight Cut Fries 30LB,麦当劳细薯条 30LB (CTE94),seafood
-34082,BF01S,Seasoned 1/2 Straight Fries 30LB,1/2 直有味薯条 (1013331),seafood
+34082,BF01S,Seasoned 1/2 Straight Fries 30LB,1/2 直有味薯条,seafood
 34084,,Mini Turkey Corn Dogs 10.75LB,迷你玉米热狗 10.75LB,seafood
 34206,BF35,Onion Rings (RED ROBIN) 5.25lb,棕箱洋葱环（38061）-5.25Lb/箱,seafood
 34207,BF35,Onion Rings 10lb,洋葱环-10Lb/箱,seafood
 34208,GP62C,Heavy Breaded Okra 10LB,炸秋葵,seafood
 34251,,WC Fried Garlic -6oz / PKG,油蒜酥 (50),seafood
 34254,,Crispy Fried Onion CS,油葱酥(荘园)-10x1Lb/箱,seafood
-34300,,Chicken Pattie Fritters 20LB,麦当劳 鸡粒 20LB (069302),seafood
-34301,BC18,Sweet & Sour Chicken (114741) 30LB,甜酸鸡 (114741) 30LB,seafood
-34305,,Chicken Nuggets 20LB,炸鸡块 (342758) /箱,seafood
+34300,,Chicken Pattie Fritters 20LB,麦当劳 鸡粒 20LB,seafood
+34301,BC18,Sweet & Sour Chicken 30LB,甜酸鸡 30LB,seafood
+34305,,Chicken Nuggets 20LB,炸鸡块 /箱,seafood
 34320,,Chicken Nuggets (CTC626A) 30LB,炸鸡块 麦当劳 (CTC626A) /箱,seafood
 34363,,Sweet & Sour Chicken 24LB,冷冻甜酸鸡块 24LB,seafood
 34501,BF40,Corn Nugget 6x2LB /CS,炸玉米粒12LB,seafood
-34906,korean,DASIDA Beef Soup Stock*CJ (179123)10x1KG,CJ 牛肉汤粉10x1KG,seafood
+34906,korean,DASIDA Beef Soup Stock*CJ 10x1KG,CJ 牛肉汤粉10x1KG,seafood
 34907,korean,ASSI FRIED FISH CAKE 22x14oz 20433K,ASSI*韩国三角鱼豆腐,prepared
 35000,,3 Sushi Stick UMINOKO 20x1.1LB,3寸顶好日本蟹条SushiStick-20x1.1LB/箱,seafood
 35001,,Asian Star ICHIBAN 3 Sushi Stick 500G,3寸顶好日本蟹条1.1LB /包 (20),seafood
@@ -1264,7 +1264,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 37109,BS44,Tempura Shrimp (13/15) 6.6lb Marichi 29206,炸甜不辣虾 (13/15) / 箱 100pc,seafood
 37200,,Beef Short Plate IBP 50-70LB,精品肥牛 IBP,seafood
 37201,LAMB,Lamb Boneless Shoulder Roll (ANY BRAND),无骨羊肩肉筒 (B401/10-361),seafood
-37202,LAMB,LL0339 Boneless LAMB SHOULDER MEAT,LL0339 LAMB SHOULDER MEAT,seafood
+37202,LAMB,Boneless LAMB SHOULDER MEAT,LAMB SHOULDER MEAT,seafood
 37203,LAMB,Lamb Boneless Shoulder Roll (ANY BRAND),无骨羊肩肉筒 (B401),seafood
 37600,,BBQ Squid cut Tube Stripes PKG,龙尾串（切丝）/包 (10),seafood
 37601,,BBQ Squid Wing Carving 1.1LB / PKG,凤尾串 /包（10）,seafood
@@ -1375,7 +1375,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 41664,,WHITE Rock Sugar (Lump) /PKG,白冰糖 /盒 (50),pantry
 41666,A130,Honey 6x5LB (Kari-Out) 1900900,胶蜜 6x5LB (Kari-Out) 1900900,pantry
 41701,,Mayo,美奶酱-罐,pantry
-41707,B01,(BROWN) Mayonnaise SuperChef 4x1GAL,美奶酱4x1Gal (B44141-SC),pantry
+41707,B01,(BROWN) Mayonnaise SuperChef 4x1GAL,美奶酱4x1Gal,pantry
 41708,B01L,(WHITE) Mayonnaise SuperChef 4GAL/ TUB,美奶酱4GAL/桶,pantry
 41712,,Cocktail Sauce,冷虾酱-罐,pantry
 41713,,Tar Tar Sauce,它它酱,pantry
@@ -1390,7 +1390,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 42000,AS13,KC Double Dark SoySauce 6Can/CS,双老抽(冠珍)/箱,pantry
 42001,AS39,KC Black (Dark) Soy Sauce 6x5LB,单老头抽 (冠珍),pantry
 42002,AS13,KC Chee Hou Sauce 6X5LB,柱候酱 (冠珍),pantry
-42020,AS12,Mushroom SoySauce-Pearl 3-86014,草菰老抽-珠江桥牌(12x5LB),pantry
+42020,AS12,Mushroom SoySauce-Pearl,草菰老抽-珠江桥牌(12x5LB),pantry
 42022,,Strawmushroom Sauce,草菰老抽(珠江)-瓶,pantry
 42029,,Black Soy Sauce DSB - 12x21.3oz / CS,黑酱油老抽(DSB) / 箱SP380-1,pantry
 42040,AS12K,KUM CHUN StrawMushroom SoySauce,锦珍-草菰老抽(12'/CS),pantry
@@ -1475,7 +1475,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 43707,korean,Wang Sweet Rice Flour 8x3LB,Wang 韓囯糯米粉8x3LB,pantry
 43708,korean,WANG Hangawee Rice 40LB,Wang 韓囯大米 40LB,pantry
 43709,korean,CJ Clam Soup Stock (1KG*10EA) CS,CJ 花蛤汤粉 (10),pantry
-43710,korean,ASSI Hot Pepper Paste 37LB (03433K),ASSI*韩式辣椒酱 37LB/罐,pantry
+43710,korean,ASSI Hot Pepper Paste 37LB,ASSI*韩式辣椒酱 37LB/罐,pantry
 43711,korean,WANG Soy Bean Paste 30.8LB,WANG 韩国黄豆大酱(桶）,pantry
 43712,,Wang Shou Yi Multi-Flv (10 Box) /PKG,十三香(王守义) (10小盒) /包 (10),pantry
 43713,korean,WANG Red Pepper Powder COARSE 6x5 LB,WANG 韩国辣椒粉(粗) 6x5LB,pantry
@@ -1489,8 +1489,8 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 43806,,Grape Gelatin,葡萄果冻-12x1.5Lb/箱,pantry
 43807,AM04,ACC Lychee Gelatin 12x1.5LB,Jello-o 荔枝果冻 (12),pantry
 43808,,Mango Gelatin,芒果果冻-12x1.5Lb/箱,pantry
-43823,BM52,ButterMargarineSuperChef 30x1LB,牛油块30x1LB (B83330-SC),pantry
-43838,BM52X,35LB LiquidMagarine SC,35LB 液体牛油(B83735-SC),pantry
+43823,BM52,ButterMargarineSuperChef 30x1LB,牛油块30x1LB,pantry
+43838,BM52X,35LB LiquidMagarine SC,35LB 液体牛油,pantry
 43843,BM52L,2/17.5LB LiquidMagarine SC,液体牛油 2/17.5LB -83717-SC,pantry
 43849,BM51V,STK CreamCheese 10x3LB (LV),金芝士(Valley) 10x3LB (LV),pantry
 43885,BM51,Totole Mushroom Bouillon 1.8LB/PKG,(太太乐) 蘑菇精 1.8LB /罐 (12),pantry
@@ -1510,14 +1510,14 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 43910,korean,ASSI Soybean Paste 37LB,ASSI 韩国黄豆大酱(桶) 37LB,pantry
 43911,korean,ASSI Beef Soup Stock 10x2.2LB,ASSI 韩国牛肉汤底料 (10),pantry
 43912,korean,ASSI Clam Flavor Soup Stock 30x10.5OZ,ASSI 花蛤汤粉 30x10.5OZ,pantry
-43913,korean,ASSI Red Pepper Powder (FINE) 8x5LB (05019D),ASSI 韓囯红辣椒粉(细) (8),pantry
+43913,korean,ASSI Red Pepper Powder (FINE) 8x5LB,ASSI 韓囯红辣椒粉(细) (8),pantry
 43914,korean,ASSI Red Chili Pepper Flakes (KIMCHI) 8x5LB,ASSI*韓囯红辣椒粉KIMCHI (粗),pantry
 43915,korean,ASSI Luncheon Meat (Spam) 24x12oz,ASSI 午餐肉 (24),pantry
 43916,korean,ASSI Pickle Whole Radish 2.2lb /PKG,ASSI 韓囯腌萝卜2.2LB /包(15),pantry
 43917,korean,ASSI Sliced Vegan Kimchi 14.01oz /PKG,ASSI 韓國素泡菜 14.01oz /罐(24),pantry
 43918,korean,ASSI YogurtFlavoredDrink5x5(10.5oz)/PKG,ASSI*韓國养乐多 (4),pantry
-43919,korean,ASSI Frozen OYSTER IQF 8oz/Pkg (20086K),ASSI 韓囯急冻生蚝 (40),pantry
-43920,korean,Tempura Aged Ball 24.2LB (20371J),日本关东煮炸鱼饼 24.2lb,pantry
+43919,korean,ASSI Frozen OYSTER IQF 8oz/Pkg,ASSI 韓囯急冻生蚝 (40),pantry
+43920,korean,Tempura Aged Ball 24.2LB,日本关东煮炸鱼饼 24.2lb,pantry
 43921,korean,ASSI Frozen Veg Dumpling 12x23.8oz 20556K,ASSI 韓囯急凍蔬菜餃子/箱,pantry
 43922,korean,ASSI Veg Dumpling 23.8oz PKG,ASSI 韓囯急凍蔬菜餃子/包(12),pantry
 43923,DRINK,KWANGDONG Corn Silk Tea 1.5L /PKG,韩国玉米须茶 1.5L (12) PKG,prepared
@@ -1525,14 +1525,14 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 43925,korean,TOKAI AJI KIMCHI 4.59oz /PKG,TOKAI 日本泡菜 4.59oz (10),pantry
 43926,korean,ASSI Topokki Rice Cake 2LB,ASSI 年糕条/PKG (20),prepared
 43927,korean,ASSI Crispy Seaweed Rolls 1.1 lb /PKG,ASSI 酥脆海苔卷 1.1lb (16),pantry
-43928,korean,ASSI Roasted Soy Powder 25x1LB (02065K),ASSI 韩国黄豆粉 25x1LB,pantry
+43928,korean,ASSI Roasted Soy Powder 25x1LB,ASSI 韩国黄豆粉 25x1LB,pantry
 43929,korean,RB Furikake Katsuo & Mirin 30x1.6oz,味醂鲣鱼海苔香松30x1.6oz,pantry
 43930,korean,07198K Kakao Friends Crispy Seaweed 10x80g,韩国烤海苔味拌饭料 10x80g,pantry
 43931,korean,ASSI Rice Cake (Ball) 1.1LB*19974K (12),ASSI 年糕球/包1.1LB*19974K (12),prepared
 43933,korean,DAERIM Champion Fish Sausag 20x1.1lb,韩国鱼肉火腿肠 20x1.1lb,pantry
 43934,korean,OTTOGI Tonkatsu (PorkLoin Fritter) 12oz,日式炸猪排 12oz /包 (16),pantry
-43935,korean,SHAO Korean Chill Powder 30LB (30480245),SHAO 韓囯辣椒粉 6X5LB (6),pantry
-43936,korean,SHAO Korean Chill Flake 30LB (30480246),SHAO 韓囯辣椒片 6X5LB (6),pantry
+43935,korean,SHAO Korean Chill Powder 30LB,SHAO 韓囯辣椒粉 6X5LB (6),pantry
+43936,korean,SHAO Korean Chill Flake 30LB,SHAO 韓囯辣椒片 6X5LB (6),pantry
 43937,korean,208302 KABUTO ZARU SOBA 9x4LB,韩国 荞麦面条 9x4LB,pantry
 43938,korean,BEKSUL Frying Mix 10x1kg,韩国煎炸粉 10x1kg,pantry
 43940,korean,ASSI Sliced Rice Cake GREEN (20)2LB/PKG 219975,ASSI*年糕片/包 (20) 219975,prepared
@@ -1694,7 +1694,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 45620,,Pepper Pack 3000',胡椒包 -3000包 /箱,pantry
 45630,,Tartar Sauce Pack 200',它它包,pantry
 45640,AS19P,Ketchup Pack1000' (Red Gold),番茄包,pantry
-45652,,Iced Tea Bag 96'x1oz (30669/9077),冰茶包 96包 /箱 (30669/9077),prepared
+45652,,Iced Tea Bag 96'x1oz,冰茶包 96包 /箱,prepared
 45657,,Chinese Tea Bags 600pc (K),乌龙茶包 (K),prepared
 45658,A35B,Chinese Oolong Tea Bags 600' (K),福建乌龙茶叶包,prepared
 45659,A35,"Oolong Tea 6x5LB 20402G (JT&TEA,INC)",好生意乌龙茶叶(绿袋)/箱,prepared
@@ -1764,7 +1764,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 53084,A08N,Baby Corn 200' (Tasty Joy / Nature Pro) 6Can,整枝玉米(极品）200枝*B010990,preserved
 53087,A08V,Whole Baby Corn 300' (Vesin) 6Can,整枝玉米300枝,preserved
 53088,A08T,Whole Baby Corn 200' (JHC),整枝玉米(JHC) 200枝-6罐,preserved
-53095,A08HN,Cut Baby Corn Item#11567 (WELLUCK) 6Can,切断玉米-合时牌,preserved
+53095,A08HN,Cut Baby Corn (WELLUCK) 6Can,切断玉米-合时牌,preserved
 53096,A08HW,WC Cut Baby Corn 6Can,切断玉米-味全,preserved
 53097,A08HL,Sweet Baby Corn PreCut #11567*WELLUCK,切断玉米-合时,preserved
 54005,A13N,Pineapple Chunk (Always The Best) 6x108oz,菠萝角(恒泰) (B),preserved
@@ -1860,11 +1860,11 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 56016,BOBA,BOBA Plastic Cup 700ML（500）,奶茶塑料杯,preserved
 56017,BOBA,BOBA Plastic Cup Lid 700ML（1000）,奶茶杯盖（红心塞）,preserved
 56018,BOBA,9' Boba Straw 40x40pcs,奶茶吸管,preserved
-60000,A79V,EFF182 Plastic Film 18x2000 (EXPRESS),EFF182 保鲜纸 18寸 EXPRESS,supplies
+60000,A79V,EFF182 Plastic Film 18x2000 (EXPRESS),保鲜纸 18寸 EXPRESS,supplies
 60001,A79VS,EFF122 910 Plastic Film 12x2000' (EXPRESS),12寸保鲜纸910 EFF122 EXPRESS,supplies
 60002,A79,914 Plastic Film REYNOLD 18x2000,914保鲜纸18寸,supplies
 60003,A79L,916 Plastic Film REYNOLD 24x2000,916保鲜纸24寸,supplies
-60004,A79L,EFF242 Plastic Film 24x2000 (EXPRESS),EFF242 保鲜纸 24寸 916EXPRESS,supplies
+60004,A79L,EFF242 Plastic Film 24x2000 (EXPRESS),保鲜纸 24寸 916EXPRESS,supplies
 60010,A79,EFF182 Film Wrap 18x2000',保鲜纸 18寸x2000',supplies
 60011,A79,EFF122 Film Wrap 12x2000',保鲜纸 12寸x2000',supplies
 60012,A79LK,EFF242 Film Wrap 24x2000',保鲜纸 24寸x2000',supplies
@@ -1874,30 +1874,30 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 60051,,Big Clear Wrap,捆纸-个,supplies
 60060,,Tape,透明胶布-箱,supplies
 60105,A126,631 Low Fold Napkins 9.3/4in*7in 8000' (EP588 | LFN631),631短纸巾8000' (EP588 | LFN631),supplies
-60120,A126,633 Short Fold Napkin N1100,短纸巾(633-N1100),supplies
+60120,A126,633 Short Fold Napkin,短纸巾(633-N1100),supplies
 60206,A127,TFN 611 Tall Fold Napkin 8000’,TFN 611 长纸巾 8000',supplies
-60210,A127,611 Tall Fold Napkin 8000' Novex N1000,611长纸巾(Novex N1000),supplies
+60210,A127,611 Tall Fold Napkin 8000' Novex,611长纸巾(Novex N1000),supplies
 60212,,Tall Fold Napkin 611*FiHood,611 长纸巾*FiHood,supplies
 60311,,Dinner Napkin,堂吃纸巾1717 Morsoft-单张-17x17,supplies
-60320,A86,Dinner Napkin15x17 Novex 5281- N1500,堂吃纸巾双层(Novex 5281 N1500),supplies
+60320,A86,Dinner Napkin15x17 Novex 5281,堂吃纸巾双层(Novex 5281 N1500),supplies
 60321,A86,(ZZ-N11400A) 2-ply dinner napkins SUNSHINE,堂吃纸巾 3000,supplies
-60322,A86,Dinner Napkin 17x17 Novex N2200,堂吃纸巾单层(Novex N2200),supplies
-60340,,DN128 Dinner Napkin 15x17 3000‘,DN128 双层堂吃纸巾15x17,supplies
+60322,A86,Dinner Napkin 17x17 Novex,堂吃纸巾单层(Novex N2200),supplies
+60340,,DN128 Dinner Napkin 15x17 3000‘,双层堂吃纸巾15x17,supplies
 60347,A127S,(Novex) N-3000-6000 Dispenser Napkin,桌面抽纸(Novex),supplies
-60348,A85,Interfold Napkin 4250VN Valay 24/250,桌面抽纸(4250VN),supplies
-60349,A127K,N3000 Interfolded Dispenser Napkin Novex,桌面抽纸(Novex N3000),supplies
+60348,A85,Interfold Napkin 4250VN Valay 24/250,桌面抽纸,supplies
+60349,A127K,Interfolded Dispenser Napkin Novex,桌面抽纸(Novex N3000),supplies
 60370,A85,Lunch Napkin CH-7172 Zhong Mei,桌面抽纸,supplies
 60371,A127I,CH-7172 Dispenser Napkin 12X600,桌面抽纸 (Zhongmei),supplies
 60372,A127V,Dispenser Napkin 24 4250VN,桌面抽纸VALAY)6000/箱,supplies
 60373,A85,Lunch Napkin L12500 10x13,桌面抽纸,supplies
-60413,A87,Paper Towel -2ply MORSOFT,擦手纸(410136),supplies
-60414,A87B,KLEENLINE Paper Towel (855305),擦手纸kleen Line 855305,supplies
+60413,A87,Paper Towel -2ply MORSOFT,擦手纸,supplies
+60414,A87B,KLEENLINE Paper Towel,擦手纸kleen Line 855305,supplies
 60415,A88,Roll Towel R12350&R12300 12Roll (Machine),(棕色)机装抹手纸,supplies
 60416,A87B,78000002 RC Towel Brown (Machine)12Roll,棕色机装抹手纸78000002 RC,supplies
 60417,A87W,855305 Roll Towel WHT30 Roll,白色抹手纸,supplies
-60446,A87N,J4700 DispenserRollTowels(Machine)12Roll Novex,棕色机装抹手纸J4700 Novex,supplies
-60503,A88N,J4800 9JumboRoll Tissue(Machine)12' Novex,机装厕所纸 J4800 Novex,supplies
-60522,A88X,Bath Tissue 96ct (410001),厕所纸,supplies
+60446,A87N,DispenserRollTowels(Machine)12Roll Novex,棕色机装抹手纸J4700 Novex,supplies
+60503,A88N,9JumboRoll Tissue(Machine)12' Novex,机装厕所纸 J4800 Novex,supplies
+60522,A88X,Bath Tissue 96ct,厕所纸,supplies
 60523,A88,Bath Tissue 36 Rolls,厕所纸袋,supplies
 60524,A88,129X Morsoft White Jumbo Bath Tissue 12 rolls,129X Morsoft White Jumbo Bath Tissue 12 rolls,supplies
 60541,A88M,78000037 RC BathTissue (Machine)12Roll,机装厕所纸78000037 RC,supplies
@@ -1920,7 +1920,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 61200,A64,20 # Brown Bag 500CT (IN BAG),20 # 纸袋(袋装）,supplies
 61203,A65,25 LB Shorty Brown Bag 400 CT,25LB 纸袋 (短),supplies
 61204,A65,25# Brown Bag 500 CT,25# 纸袋 500 CT,supplies
-61205,A64K,#20 Brown Bag 400 CT (70221),#20 纸袋 400 CT (70221),supplies
+61205,A64K,#20 Brown Bag 400 CT,#20 纸袋 400 CT,supplies
 61206,A64B,20 # Brown Bag Squat 500CT(IN BOX),20 # 纸袋(箱装),supplies
 61210,A66S,1/8 # 57 Brown Bag 500CT-BAG,1/8 # 57 纸袋,supplies
 61211,A66S,1/8 # 57/60 Brown Bag 500CT-CASE,1/8 # 57/60 纸袋(箱装),supplies
@@ -1946,8 +1946,8 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 62018,,Plastic Flat Bagg (290 30).,防雾大号菜袋（290 30）,supplies
 62019,,Plastic Flat Bagg (290 30).,防雾小号菜袋（290 30）,supplies
 62022,,Pe Bag (Seafood Boil) 18x24 500' BEST FOOD,#18 手抓海鮮熟食袋 (18x24),supplies
-62030,A81S,24x32 12-16 Gal 46' Can Liner(H4832MW),老外46垃圾袋 白色,supplies
-62032,A81,VL3858XHW 38x58 WHT XH 100 60Gal Liner,垃圾袋 60Gal,supplies
+62030,A81S,24x32 12-16 Gal 46' Can Liner,老外46垃圾袋 白色,supplies
+62032,A81,XHW 38x58 WHT XH 100 60Gal Liner,垃圾袋 60Gal,supplies
 62040,A81B,46 XX HD BLK Trash Bag,老外黑垃圾袋*EF,supplies
 62048,A104,Poly Bags 11x8x24 500' WITH HOLE,白透明膠袋 500个 有孔,supplies
 62059,A107,Poly Bags 6x3x15 1000',白透明膠袋 无孔,supplies
@@ -2058,7 +2058,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 64523,A160,Mic.Containers 96-35 Black150',方椭圆9635-B黑底胶盒,supplies
 64526,A114K,8623/26 Med MicCont BLK*MC6630B (K),8623/26 方椭圆黑底胶盒 (K),supplies
 64529,A115LK,8629 Shallow Mic.Cont. BLK MC6610B (K),8628/30 方椭圆黑底胶盒 (K),supplies
-64530,A139P,PP206 Container 150' (Ecopax),PP206 胶盒,supplies
+64530,A139P,Container 150' (Ecopax),胶盒,supplies
 64544,,小库-FH-78W-白(86-30)-150/箱,小库-FH-78W-白(86-30)-150/箱,supplies
 64546,A114,FH-878B BLACK Mic.Container150' 30oz,方椭圆FH-878B黑底胶盒30oz,supplies
 64558,,Mic.containers,FH-18W-白(618)/16oz-150/箱,supplies
@@ -2072,55 +2072,55 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 64613,A102B,FS-18B 150' (替C6-18 BLK),(圆) FS-18B 黑底胶盒16oz-150,supplies
 64625,A102,Mic.Containers C6-18 16oz White 150',圆C6-18 白底胶盒,supplies
 64700,A160,MT 2-Comp 2850B 150' TRIPAK,两格方椭圆(K)黑底胶盒,supplies
-64805,A52,GREEN PP241 WHT3-Comp 7x7 150',PP241小三隔盒白微波盒,supplies
-64824,,GREEN PP991 WHT 9''x9'' 1-CMP 150',PP991 白一格盒 150',supplies
-64830,A139P,GREEN PP206 WHT 9''x6'' 1-Comp 150',PP206 白一格盒150',supplies
-64846,A53R,GREEN PP883 WHT 8''x8'' 3-Comp 150',PP883 白三隔盒 150',supplies
-64877,PP993,GREEN/ANY PP993 WHT 9''x9'' 3-CMP 150',PP993 白三隔盒 150' (ANYBRAND),supplies
-65006,A140,M205 (DARNEL)6.75x9.25x2.75 200',M205浅白(DARNEL),supplies
+64805,A52,GREEN PP241 WHT3-Comp 7x7 150',小三隔盒白微波盒,supplies
+64824,,GREEN PP991 WHT 9''x9'' 1-CMP 150',白一格盒 150',supplies
+64830,A139P,GREEN PP206 WHT 9''x6'' 1-Comp 150',白一格盒150',supplies
+64846,A53R,GREEN PP883 WHT 8''x8'' 3-Comp 150',白三隔盒 150',supplies
+64877,PP993,GREEN/ANY PP993 WHT 9''x9'' 3-CMP 150',白三隔盒 150' (ANYBRAND),supplies
+65006,A140,(DARNEL)6.75x9.25x2.75 200',浅白(DARNEL),supplies
 65007,,(K) 205 (33-02205)-200/ Foam Container,205 (33-02205)-200/ Foam Container KARI OUT,supplies
 65008,A140,205 (Ecopax) 9.25x6.375x2.875 200',205 白一格盒,supplies
 65010,,Foam Containers,20500白(GENPAK)-200/箱,supplies
 65101,A139K,206 Foam Tray 200' (K'3301206) 200',206 浅花一隔盒(熊猫),supplies
 65103,A139L,206-1 Foam Container 1-Comp 200' (Lucky),206-1浅花一隔盒(福),supplies
-65104,A139K,206 Foam Tray Panda 200' (K-3302206),206白一隔盒(熊猫K3302206),supplies
-65105,A139,M206 FoamTray(Du403101SH)Darnel 200',206浅白泡沫盒(DARNEL),supplies
+65104,A139K,206 Foam Tray Panda 200',206白一隔盒(熊猫K3302206),supplies
+65105,A139,FoamTray Darnel 200',206浅白泡沫盒(DARNEL),supplies
 65110,,Foam Containers,20600白(GENPAK)-200/箱,supplies
 65111,A68,9PWQR 9 Laminated FoamPlate WHT 500',白圆盘-泡沫(9PWQR),supplies
 65118,A109KL,206 LG All Purpose Highed Sandwich Conts (Ecopax),206 大三明治盒(泡沫)200',supplies
 65119,A139K,206-P All Purpose Hinged Tray 200' (LUCKY),206-P 浅花一隔盒 (福),supplies
 65125,A139R,RF-883 Pebble Containers 150‘,RF-883 环保盒 150/箱,supplies
 65129,A139,206 White Foam Tray (Ceres) 200',206 白高盒(Ceres),supplies
-65200,A109,SN225 Genpak LG Sandwich Conts 500',SN225 大三明治盒(Genpak),supplies
+65200,A109,Genpak LG Sandwich Conts 500',大三明治盒(Genpak),supplies
 65203,A109K,225 LG HingedSquareCont.(Ecopax/Ceres),225 三明治盒-大500',supplies
-65303,A143,SN203 3-Comp LG 9.25x9.25x3 200' Genpak,SN203大三隔盒(GENPAK),supplies
+65303,A143,3-Comp LG 9.25x9.25x3 200' Genpak,大三隔盒(GENPAK),supplies
 65304,,241 3COMP(Ecopax) 8x7x3-200 /CS,241 三隔盒(ECOPAX) 8X7X3 (中) 200/箱,supplies
-65305,A52,PP241 WHT3-Comp7x7 150' (Biocean),(Biocean)PP241小三隔盒白微波盒,supplies
+65305,A52,WHT3-Comp7x7 150' (Biocean),(Biocean)PP241小三隔盒白微波盒,supplies
 65306,A143k,Satinware # 71426 - 9x9x3,71426 三隔盒 (satinware) 9.25X9.25X3-200/箱,supplies
 65307,A143k,Satinware # 71433 - 8x8x3,71433 三隔盒 (satinware) 8x8x3-200/箱,supplies
 65314,A114,RF-241 WHT Pebble Cont. 150',RF-241 环保三格盒(白) 150',supplies
 65319,A133K,(K) 22310 Small 3-C Tray 200',22310小三格泡沫盒-(熊猫),supplies
-65320,A53,SN243 Med 3-C Tray Genpak 8.25x8x3 200',SN243 中三隔盒(Genpak),supplies
+65320,A53,Med 3-C Tray Genpak 8.25x8x3 200',中三隔盒(Genpak),supplies
 65321,A132,Containers 900053,900053三隔盒 8.25x8X3(GENPAK)中-200/箱,supplies
-65322,,SN240 FormTray 8.25x8x3 GENPAK 200',SN240无隔泡沫方盒(GENPAK),supplies
-65323,A144,SN200 Form Tray 9.25x9.25x3 (GENPAK) 200',SN200无隔泡沫方盒 9.25x9.25X3(GENPAK),supplies
+65322,,FormTray 8.25x8x3 GENPAK 200',无隔泡沫方盒(GENPAK),supplies
+65323,A144,Form Tray 9.25x9.25x3 (GENPAK) 200',无隔泡沫方盒 9.25x9.25X3(GENPAK),supplies
 65324,A142H,3-Com TERMOPAC Med 8x8x3 200',中三隔泡沫盒(佳和900053),supplies
 65325,A142HL,1-Com TERMOPAC Med 8x8x3 200',中单隔泡沫盒(佳和900075),supplies
-65326,A156,S-1 9x9x3 Tray 9x9x3-1/8DU4061101)Darnel 200',S-1无隔盒(DU4061101),supplies
+65326,A156,S-1 9x9x3 Tray 9x9x3-1/8DU4061101)Darnel 200',S-1无隔盒,supplies
 65332,A139T,Q-1 HINGED 1-COMP 8x8x3 DARNEL,Q-1 中单格盒子(8x8x3),supplies
-65340,PP883S,PP883S (Ecopax)1-CompFormTray 8x8x3 IVORY,PP883S (Ecopax)1-Comp PLASTIC Tray 8x8x3 IVORY,supplies
-65345,A53R,RE883 8''x8'' 3-Comp Foam (Ecopax),RE883 三隔泡沫盒,supplies
-65346,PP883,PP883 (Ecopax) 3CMP 8x8x3 150',PP883 中三隔盒 微波盒,supplies
-65347,A52E,RE883S(Ecopax) 1-CompTray 8x8x1,RE883S一隔盒(Ecopax/200'),supplies
-65348,,Q-1无隔盒 白-(DU4051101)8-1/8x8-1/8x3 Darnel-200/箱,Q-1无隔盒 白-(DU4051101)8-1/8x8-1/8x3 Darnel-200/箱,supplies
-65349,A155,S-3 (DU4063101)9x9x3-1/8 Darnel-200',S-3三隔盒(DU4063101),supplies
-65350,A109P,PP225 WHT (Ecopax) 1-Comp Tray 6x6x3.25,PP225 (Ecopax)1-Comp Tray 6x6x3.25,supplies
-65363,A133,C707 (12656)3-CompFoamTray (S) 200',小三格泡沫盒(C707),supplies
-65376,A142R,RE993 3-CompFoamTray 9.5x9.25x3.75,RE993大三隔泡沫盒(Ecopax/200'),supplies
-65377,PP993,PP993 3-CMP PLASTIC Tray (Ecopax) 9.125x8.81x3 150',PP993 大三隔盒 150' 微波盒,supplies
-65378,PP993S,PP993S 1-CompFoamTray 9.125x8.81 IVORY,PP993S 1-CompFoamTray 9.125x8.81 IVORY,supplies
-65379,A142,RE993S 1-CompFoamTray 9.5x9.25x3.75,RE993S 1 COMP Ecopax/200'),supplies
-65380,A142,Q-3 (DU4053101)8-1/8x8-1/8x3 200' Darnel,Q-3 中白三隔泡沫盒,supplies
+65340,PP883S,S (Ecopax)1-CompFormTray 8x8x3 IVORY,S (Ecopax)1-Comp PLASTIC Tray 8x8x3 IVORY,supplies
+65345,A53R,8''x8'' 3-Comp Foam (Ecopax),三隔泡沫盒,supplies
+65346,PP883,(Ecopax) 3CMP 8x8x3 150',中三隔盒 微波盒,supplies
+65347,A52E,S(Ecopax) 1-CompTray 8x8x1,S一隔盒(Ecopax/200'),supplies
+65348,,Q-1无隔盒 白- 8-1/8x8-1/8x3 Darnel-200/箱,Q-1无隔盒 白- 8-1/8x8-1/8x3 Darnel-200/箱,supplies
+65349,A155,S-3 9x9x3-1/8 Darnel-200',S-3三隔盒,supplies
+65350,A109P,WHT (Ecopax) 1-Comp Tray 6x6x3.25,(Ecopax)1-Comp Tray 6x6x3.25,supplies
+65363,A133,3-CompFoamTray (S) 200',小三格泡沫盒(C707),supplies
+65376,A142R,3-CompFoamTray 9.5x9.25x3.75,大三隔泡沫盒(Ecopax/200'),supplies
+65377,PP993,3-CMP PLASTIC Tray (Ecopax) 9.125x8.81x3 150',大三隔盒 150' 微波盒,supplies
+65378,PP993S,S 1-CompFoamTray 9.125x8.81 IVORY,S 1-CompFoamTray 9.125x8.81 IVORY,supplies
+65379,A142,S 1-CompFoamTray 9.5x9.25x3.75,S 1 COMP Ecopax/200'),supplies
+65380,A142,Q-3 8-1/8x8-1/8x3 200' Darnel,Q-3 中白三隔泡沫盒,supplies
 65390,A133,22310 (Ecopax) Small 3-C Tray 200',22310 小三隔盒(Ecopax),supplies
 65391,SD3,703 Pactiv 3-CompTray Small 150',703 小三格盒(Pactiv),supplies
 65392,A100,803 Containers 150pc,803三格盒-150,supplies
@@ -2129,7 +2129,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 65398,A133,23300 (ECOPAX) 3-CMP 8x8x3 Tray 200',23300 中三隔盒(ECOPAX),supplies
 65399,A133,23300 (K) 3-CMP 8x8x3 Tray 200',23300 熊猫大三隔盒(Kari-Out),supplies
 65405,,Du5009101(Darnel)- Containers,8-7/8纸盘,supplies
-65438,,AP9125 (ECOPAX)-500 FOAM PLATES 9,9寸泡沫盘 (ECOPAX)-500,supplies
+65438,,(ECOPAX)-500 FOAM PLATES 9,9寸泡沫盘 (ECOPAX)-500,supplies
 66001,A48,White*32oz Food Pails 500' w/wired(EP|Other Brand),32oz饭盒-白500个/箱 (EP|Other Brand),supplies
 66002,A45,White 8oz Food Pail wired (BIOCEAN 1000 | Other Brand 500 x2),8oz饭盒-白-个/箱(BIOCEAN|Other Brand),supplies
 66003,A46,White*16oz Food Pail 500' w/wired(EP|Other Brand),16oz饭盒-白-500个/箱(EP|Other Brand),supplies
@@ -2169,7 +2169,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 67016,A57CB,MW 3 IN 1 Cutlery Kit KC500FSN3,叉羹纸-白(独立包装)500',supplies
 67017,A58W,HW Wrapped BLKPlastic Spoon Biocean|ANY BRAND,独立包 装 黑大胶更*Biocean|ANY BRAND,supplies
 67018,A58B,Wrapped Black Plastic Spoon (KC-950),独立包 装 黑大胶更(KC-950）,supplies
-67019,A56W,HW WrappedFork WHT 1000'(Biocean/KC),独立包装重型白胶叉(KC50950F),supplies
+67019,A56W,HW WrappedFork WHT 1000'(Biocean/KC),独立包装重型白胶叉,supplies
 67020,A56,Med-Weight PlasticFork WHT 1000'(Biocean),(Biocean)散装中型白胶叉,supplies
 67021,A58,Med-Weight Plastic Spoon WHT 1000' (Biocean),(Biocean) 散装中型白胶更 1000',supplies
 67022,A56,M Weight Plastic Fork1000' KC-25926F,中量胶叉1000' KC-25926F,supplies
@@ -2179,16 +2179,16 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 67026,A58J,KC25926S/JIALE M-Weight PlasticSpoonWHT 1000',KC/佳乐*散装中型白胶更1000',supplies
 67041,A57,Clear Plastic Knife 1000',透明塑料刀-1000/盒,supplies
 67052,A58,Plastic Wrapped Spoon (KC-925SP),独立包 装 胶更(KC-925SP)PP1000,supplies
-67053,A58I,A204S PLASTIC SPOON 1000 WHITE BOX,A204S PLASTIC SPOON 1000 WHITE,supplies
+67053,A58I,S PLASTIC SPOON 1000 WHITE BOX,S PLASTIC SPOON 1000 WHITE,supplies
 67080,A56W,HW Wrapped BLK PlasticFork 1000'(Biocean/KC),独立包装重型黑胶叉(Biocean/KC),supplies
-67081,A58W,Single Wrapped Spoon 1000' KC25925-S,独立包装胶汤羹(KC25925-S),supplies
+67081,A58W,Single Wrapped Spoon 1000' KC25925-S,独立包装胶汤羹,supplies
 67114,AS50,8 Bamboo Stick (WHITE BOX) 1600PCS / PKG,8寸竹签 1600PCS (白盒） (10),supplies
 67120,,Toothpick 24x800ct,牙签-(24小盒),supplies
 67122,,Unwrap Toothpick 72x800pcs,盒装牙签 72盒x800pcs(大箱）,supplies
 67140,AS49,6 Bamboo Skewer 1000P PKG,6寸竹签 1000支(20),supplies
 67141,AS50,(K) 8 BambooSkewer 10bag /BOX,8寸竹签 (20),supplies
 67142,AS49,6 Bamboo Skewer 100x100PC,6寸竹签 100支x100袋 CS,supplies
-67143,AS49,6 BambooSkewer 700pc Kari-Out,6寸竹签 (1100060),supplies
+67143,AS49,6 BambooSkewer 700pc Kari-Out,6寸竹签,supplies
 67147,AS50,JIALE 8 Bamboo Skewer 700pc,佳乐 8寸竹签 (20 ),supplies
 67200,AS50C,8'' Bamboo Skewer 100x100PC,8寸竹签100支x100袋/箱,supplies
 67201,AS43,FiHood Straws 24x400 7 3/4',FiHood 吸管-24盒 7 3/4',supplies
@@ -2216,16 +2216,16 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 67416,,A004-0007 1oz Cup & Lid 2000' (Biocean),(Biocean) 1oz 酱料杯+盖 2000',supplies
 67417,,Translucent Gloves (XL) 1000' (Biocean),(Biocean) 透明胶手套 XL,supplies
 67418,,3.25--5.5oz Portion cup LID (Biocean) / CASE,(Biocean) 3.25-5.5oz 酱料盖 2500' / 箱,supplies
-67419,A109P,GREEN PP225 WHT 6''x6'' 1-Comp 250',PP225 白三明治盒 250' /箱,supplies
-67420,A109P,PP225 WHT 6''x6'' 1-Comp 250' (Biocean),(Biocean) PP225 250',supplies
+67419,A109P,GREEN PP225 WHT 6''x6'' 1-Comp 250',白三明治盒 250' /箱,supplies
+67420,A109P,WHT 6''x6'' 1-Comp 250' (Biocean),(Biocean) PP225 250',supplies
 67421,A53R,PP883 BLK 8''x8'' 3-Comp 150' (Biocean),(Biocean) PP883 黑三隔盒 150‘,supplies
 67422,PP993,PP993 BLK 9''x9'' 3-CMP 150' (Biocean),(Biocean) PP993 黑三隔盒 150',supplies
-67423,,GREEN PP881 WHITE 8''x8'' 1-CMP 150',PP881 白一格盒 150',supplies
-67424,,PP991 WHITE 9''x9'' 1-CMP 150' (Biocean),(Biocean) PP991 白一格盒 150',supplies
-67425,A139P,PP206 WHT 1-Comp 150' (Biocean),PP206 白一格盒150',supplies
-67426,A53R,PP883 WHT 8''x8'' 3-Comp 150' (Biocean),(Biocean) PP883 白三隔盒 150',supplies
+67423,,GREEN PP881 WHITE 8''x8'' 1-CMP 150',白一格盒 150',supplies
+67424,,WHITE 9''x9'' 1-CMP 150' (Biocean),(Biocean) PP991 白一格盒 150',supplies
+67425,A139P,WHT 1-Comp 150' (Biocean),白一格盒150',supplies
+67426,A53R,WHT 8''x8'' 3-Comp 150' (Biocean),(Biocean) PP883 白三隔盒 150',supplies
 67427,PP993,PP993 WHT 9''x9'' 3-CMP 150' (Biocean),(Biocean) PP993 白三隔盒 150',supplies
-67428,,PP881 WHT 8''x8'' 1-CMP 150' (Biocean),PP881 白一格盒 150',supplies
+67428,,WHT 8''x8'' 1-CMP 150' (Biocean),白一格盒 150',supplies
 67815,,F-98 12-24oz PET Clear FLAT Lid 1000' /CS,F-98 12-24oz PET平盖-1000 /箱,supplies
 70000,A01L,Lucky Rice 50LB,大三元 米,dry
 70001,A01LX,Lucky Rice 100LB,大三元米100磅,dry
@@ -2301,9 +2301,9 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 72020,AS04K,K Potato Starch 44LB (Panda),K 超级生粉熊猫(Panda),dry
 72025,AS04R,Royal Wagon Potato Starch 44LB,超级生粉-金马车,dry
 72038,,Bread Crumb,小库中粗面包 粉--Janpanese,prepared
-72039,AS34,Japanese Bread Crumb 20LB (B61638),中粗面包粉 (B61638),prepared
-72040,AS34P,Japanese Bread Crumbs 25 LBS (B60004),粗面包粉 (B60004),prepared
-72049,,A10011 -Cornmeal (Cracker Meal) / CS,细面包 粉-25LB/包JAPANESE,dry
+72039,AS34,Japanese Bread Crumb 20LB,中粗面包粉,prepared
+72040,AS34P,Japanese Bread Crumbs 25 LBS,粗面包粉,prepared
+72049,,Cornmeal (Cracker Meal) / CS,细面包 粉-25LB/包JAPANESE,dry
 72053,korean,GOMPYO Strong Wheat Flour 02054k Yellow Bag,韩国白熊高筋面粉 6x5.5LB,dry
 72054,korean,GOMPYO All Purpose Wheat Flour (Blue Bag),韩国白熊多用途面粉 6X5LB,dry
 72058,AS04,Windmill Potato Starch 50LB,风车超级生粉(Windmill),dry
@@ -2413,7 +2413,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 74039,BN14T,THIN Noodle 16oz/Pkg (Twin Marquis),(真味)上海幼面/包 (50),dry
 74040,BN14T,THICK Wonton Noodle12oz/Pkg (Twin Marquis),(真味)粗全蛋雲吞麵/包 (45),dry
 74054,,Baily Egg Noodle 6x5LB,全蛋捞面-粗(百利),dry
-74060,,条形意大利面(114411)Spaghetti-2x10Lb/箱,条形意大利面(114411)Spaghetti-2x10Lb/箱,dry
+74060,,条形意大利面 Spaghetti-2x10Lb/箱,条形意大利面 Spaghetti-2x10Lb/箱,dry
 74064,BN27X,THICK LoMein Noodle30LB 1025GD GB,(粗)金碗蛋面大黄色 FLMBT 0626B,dry
 74067,,Noodle,面(金厨)-粗/磅,dry
 74073,,H K Style Pan Fried Noodle 16oz,港式炒面(真味),dry
@@ -2491,7 +2491,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 74609,DIMSUM,WC Glutinous Rice Roll 6PC/PKG,味全紫菜虾米饭团 6PC/包 (16),prepared
 74610,BN09,WC Spring Roll Skin 1-71002 40Pkg,味全上海春卷皮,dry
 74611,BN09,WC Spring Roll Skin PKg,味全上海春卷皮包,dry
-74612,BN09X,WC Spring Roll Pastry 40Pkgx11oz 1-71008,味全润饼皮,prepared
+74612,BN09X,WC Spring Roll Pastry 40Pkgx11oz,味全润饼皮,prepared
 74613,DIMSUM,WC Green Onion & Seasame Roll 330g/PKG,味全葱香大饼 330g/包 (12),prepared
 74614,DIMSUM,WC Black Pepper & Green Onion Roll 330g/PKG,味全黑胡椒大饼 330g/包 (12),prepared
 74615,DIMSUM,WC Bbq Chicken Bun 25PC/PKG,味全BBQ鸡肉包 25个/包 (4),prepared
@@ -2499,7 +2499,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 74617,SNACK,AD Yogurt Flavored Drink 24PC /CS,哇哈哈 AD钙奶饮料,prepared
 74618,DIMSUM,WC Glutinous Rice Dumpling 4PC /PC,味全荷叶糯米饭 4PC/包 (16),prepared
 74619,DIMSUM,WC Beef Don Rice Bowl 10.7oz/PKG,味全牛丼饭 10.7oz/包 (12),prepared
-74620,BN11,WC Moo Shu Shell 36Pkg 1-71010,味全木须皮,dry
+74620,BN11,WC Moo Shu Shell 36Pkg,味全木须皮,dry
 74621,BN11P,Moo Shu Skin WC 12pc/Pkg,味全木须皮/包,dry
 74622,DIMSUM,WC Vegetable Mushroom Bun / CS,(味全）香菇菜包 6个x20/箱,prepared
 74623,DIMSUM,WC Vegetable Mushroom Bun PKG,(味全）香菇菜包 PKG,prepared
@@ -2520,7 +2520,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 74638,BF18L,3oz Pork Affinity Eggroll,春卷(亚辉)3oz-18LB/箱,dry
 74639,DIMSUM,WC Cabbage & Pork Bun 24oz /PKG,味全高丽菜肉包 (10),prepared
 74640,,Spring Roll wrappers Golden Bowl,金碗-(上海春卷皮)25/40/箱,dry
-74641,BN09X,WC Peking Duck Wrapper 30x12PC 1-71031,味全烤鸭皮 (30盒),dry
+74641,BN09X,WC Peking Duck Wrapper 30x12PC,味全烤鸭皮 (30盒),dry
 74642,DIMSUM,3LB WC H.K.BBQ Bun 25PC /PKG,味全港式叉烧包3LB (4),prepared
 74651,BN11K,Moo Shu Skin GoldenBowl 12pcx22Pkg,金碗木须皮,dry
 74654,BF30L,3oz Pork Egg Roll CHIA YING,3oz猪肉春卷(佳盈)-13.50lb/箱,dry
@@ -2549,7 +2549,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 74804,,Baily CANTON Dry noodle S,白扁广东干面(百利)-小号-30LB/箱,dry
 80001,A77W,Theochem SoapPowder High100139 (WhiteBox),砚粉(白纸箱装),cleaning
 80004,A77P,So-kleen Soap Powder Pink/TUB,砚粉-粉红桶装,cleaning
-80010,A77L,LYE-12 Drain Opener - UN1823,LYE (12罐),cleaning
+80010,A77L,LYE-12 Drain Opener,LYE (12罐),cleaning
 80100,A89,Bleach 6x1GAL,漂白水,cleaning
 80115,A77D,Detergent Green 4 Bottle*Any Brand,洗洁精(绿),cleaning
 80125,A77O,Oven&Grill Cleaner Heavy Duty 4 Bottle,强力炉头水,cleaning
@@ -2564,7 +2564,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 81021,A75DC,Deck Brush 12pc,炉头刷,cleaning
 81030,,B. Handle,炉头柄(把)Deck,cleaning
 81060,,厨帽Chefs Hat(100pcs)/盒,厨帽Chefs Hat(100pcs)/盒,cleaning
-81101,A78,(K) Metal Steel Sponge (K1400612) 12PC /PKG,(K) 超强钢丝刷 (6),cleaning
+81101,A78,(K) Metal Steel Sponge 12PC /PKG,(K) 超强钢丝刷 (6),cleaning
 81102,A78C,Steeless Sponge BLESS 10x10pc/ CS,铁丝刷10x10pc/盒 / 箱,cleaning
 81120,A78S,HD Stainless Steel Sponge 12pc/PKG,不锈钢丝球檫12PC/盒 (6),cleaning
 81122,A78,Stainless Sponge 72pcs,超强钢丝刷 (6),cleaning
@@ -2655,8 +2655,8 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 92602,DIMSUM,JNK Peach Bun 20pc /PKG,JNK 寿桃包 20颗/包 (10),prepared
 92603,DIMSUM,B-07 Custard Bun,奶黄包(B-07),prepared
 92604,DIMSUM,ACC B-07 Custard Bun 20pc,B-07 奶黄包(6),prepared
-92605,DIMSUM,WC Shumai Pork&Shrimp Pkg 1-73278,味全猪肉鲜虾烧卖(12),prepared
-92606,BM23,WC HK Shrimp Wonton Pkg 1-73292,味全港式虾云吞,prepared
+92605,DIMSUM,WC Shumai Pork&Shrimp Pkg,味全猪肉鲜虾烧卖(12),prepared
+92606,BM23,WC HK Shrimp Wonton Pkg,味全港式虾云吞,prepared
 92607,JNK,KIMBO Shrimp Shaomai 500gx12,金宝虾烧卖 500gx12,prepared
 92609,DIMSUM,Frozen Gua Bao CHIMEI-300g /Pkg,奇美刈包冷冻/包 (20),prepared
 92610,DIMSUM,WC Mini Lotuss Leaf Buns / CS,味全 小荷叶包 / 箱 (16),prepared
@@ -2680,7 +2680,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 92632,DIMSUM,ACC B-03 Red Bean Bun 20pc,B-03 红豆包 /ACC (6),prepared
 92633,DIMSUM,WC Lotus Leaf Bun 12Pkg (L),味全 大荷叶包,prepared
 92634,DIMSUM,WC Bamboo Pork&ChickenBun 10Pkg,味全笋丁肉包,prepared
-92635,BD14,E06 Egg Custard Tarts,E06 蛋挞 F4L5B,prepared
+92635,BD14,E06 Egg Custard Tarts,E06 蛋挞,prepared
 92636,BD14,ACC E-06 Egg Custard Tarts /PKG,E-06 蛋挞/ACC(10),prepared
 92637,DIMSUM,ACC F-12 Red Bean Dumpling / PKG (3),F-12 豆沙粽 30颗/袋 (3),prepared
 92638,DIMSUM,ACC B-04 Peach Bun 35pc/ Pkg (6),B-04 寿桃包/ACC,prepared
@@ -2740,14 +2740,14 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 92961,,葱油花卷-300g/袋,葱油花卷-300g/袋,prepared
 92966,DIMSUM,JNK Seasoned Pork Ribs 32LB,点心排骨 32LB,prepared
 92967,DIMSUM,TF Black Golden Creamy Bun 10lb,黑金流沙包 10lb,prepared
-92968,DIMSUM,TF Shrimp Dumpling (50351) 9.6oz/Pkg,水晶虾饺(小美点) (16）,prepared
-92969,DIMSUM,TF Seasoned Chicken Paw (50347)12oz/Pkg,豉汁凤爪(小美点) (16),prepared
-92970,BM13,TF Pork&Shrimp Shumai (50350)14.4z/Pkg,虾&猪肉烧卖(Shumai)(小美点)(16),prepared
-92971,DIMSUM,TF Pork & Veg Bun (50343)16oz /Pkg,菜肉包(小美点) (10),prepared
-92972,DIMSUM,TF CK Sticky Rice (50349) 13.5oz/Pkg,糯米鸡(小美点) (16),prepared
-92973,DIMSUM,TF Curry Chicken Bun (50345) 16oz/Pkg,咖喱鸡包(小美点) (10),prepared
-92975,DIMSUM,TF Brown Sugar Bun (50355)16oz /Pkg,黑糖流沙包(小美点) (10),prepared
-92976,DIMSUM,TF HK BBQ Pork Bun (50341) 17.6oz/Pkg,港式叉烧包(小美点) (10),prepared
+92968,DIMSUM,TF Shrimp Dumpling 9.6oz/Pkg,水晶虾饺(小美点) (16）,prepared
+92969,DIMSUM,TF Seasoned Chicken Paw 12oz/Pkg,豉汁凤爪(小美点) (16),prepared
+92970,BM13,TF Pork&Shrimp Shumai 14.4z/Pkg,虾&猪肉烧卖(Shumai)(小美点)(16),prepared
+92971,DIMSUM,TF Pork & Veg Bun 16oz /Pkg,菜肉包(小美点) (10),prepared
+92972,DIMSUM,TF CK Sticky Rice 13.5oz/Pkg,糯米鸡(小美点) (16),prepared
+92973,DIMSUM,TF Curry Chicken Bun 16oz/Pkg,咖喱鸡包(小美点) (10),prepared
+92975,DIMSUM,TF Brown Sugar Bun 16oz /Pkg,黑糖流沙包(小美点) (10),prepared
+92976,DIMSUM,TF HK BBQ Pork Bun 17.6oz/Pkg,港式叉烧包(小美点) (10),prepared
 93001,DIMSUM,WF Lava Custard Bun 10.6oz /Pkg,爆汁流心包 (FoodWise) (12),prepared
 93002,DIMSUM,WF Purple Potato Bun 10.6oz /Pkg,紫薯包 (FoodWise) (12),prepared
 93003,DIMSUM,WF Custard Bun 10.6oz /Pkg,奶黄包 (FoodWise) (12),prepared
@@ -2816,7 +2816,7 @@ Product_ID,Code,Product_English_Name,Product_Chinese_Name,Category_Name
 99911,GM11,LIU XIN NAI HUANG 6pc,北月湾流心月饼6pc,prepared
 99915,,鸡腿40磅/箱,鸡腿40磅/箱,prepared
 99921,,#11445 SEBeef Pectoral Meat EF,牛胸 Pectoral EF,prepared
-99922,,#17125 Eye of Round Beef 001/4 EF,牛肉眼Excel(17125)- EF,prepared
+99922,,#17125 Eye of Round Beef 001/4 EF,牛肉眼Excel - EF,prepared
 99960,DIMSUM,Buns BENIE (Assorted) 10pc/Pkg,面包(综合)BENIE /袋,prepared
 99983,,PICK UP PAYMENT,收款,prepared
 99984,,PICK UP RETURN PRODUCTS,取退货产品,prepared

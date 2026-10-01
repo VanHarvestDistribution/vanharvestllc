@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CatalogExplorer from '@/components/CatalogExplorer';
+import CallToAction from '@/components/CallToAction.astro';
+import ProductsSubnav from '@/components/ProductsSubnav.astro';
+import products from '@/data/products.json';
+interface Props { lang?: 'en' | 'zh'; localized?: boolean }
+const { lang = 'en', localized = false } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+---
+<BaseLayout title={zh ? '完整产品目录 | Van Harvest' : 'Full Product Catalog | Van Harvest'} description={zh ? '搜索 Van Harvest 完整双语食品批发目录：按 Item #、英文名或中文名查找。' : 'Search the full bilingual Van Harvest wholesale catalog by Item #, English name or Chinese name.'} active="/products" lang={lang}>
+  <section class="inner-hero catalog-subpage-hero"><div class="shell inner-grid"><div><p class="eyebrow">{zh ? '完整产品目录' : 'Full product catalog'}</p><h1>{zh ? <>准确搜索<br /><em>所需产品。</em></> : <>Search the full<br /><em>assortment.</em></>}</h1></div><div class="inner-copy"><p>{zh ? `使用 Item #、英文名或中文名搜索 ${products.length.toLocaleString()} 个已清洗目录产品。页面和 PDF 不显示价格或内部供应商编号。` : `Search ${products.length.toLocaleString()} cleaned catalog products by Item #, English name or Chinese name. The page and PDF do not show prices or internal supplier codes.`}</p><a class="button" href={`${prefix}/products`}>{zh ? '按品类浏览 →' : 'Browse departments →'}</a></div></div></section>
+  <ProductsSubnav lang={lang} localized={localized} active="catalog" />
+  <section class="catalog-section catalog-subpage-section" id="catalog"><div class="shell"><div class="catalog-explorer-heading"><div><p class="eyebrow">{zh ? '中英双语搜索' : 'Bilingual item search'}</p><h2>{zh ? <>知道你要什么？<br /><em>直接搜索。</em></> : <>Know what you need?<br /><em>Search directly.</em></>}</h2></div><p>{zh ? '每一项均可点击进入独立产品页，查看中英文名称、包装和温层信息。' : 'Every result opens a dedicated product page with English and Chinese names, pack format and storage guidance.'}</p></div><div class="catalog-intro-note"><span>{zh ? '按 Item #、英文名或中文名搜索' : 'Search Item #, English name or Chinese name'}</span><span>{products.length.toLocaleString()} {zh ? '个已清洗目录产品' : 'cleaned catalog products'}</span></div><CatalogExplorer client:load lang={lang} /></div></section>
+  <CallToAction lang={lang} localized={localized} />
+</BaseLayout>

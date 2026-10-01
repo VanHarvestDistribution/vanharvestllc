@@ -1,0 +1,11 @@
+---
+interface Props { lang?: 'en' | 'zh'; localized?: boolean; active?: 'departments' | 'catalog' }
+const { lang = 'en', localized = false, active = 'departments' } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+---
+<nav class="products-subnav shell" aria-label={zh ? '产品目录子导航' : 'Product catalog subnavigation'}>
+  <a href={`${prefix}/products`} class:list={{ active: active === 'departments' }}><span>01</span>{zh ? '按品类浏览' : 'Browse departments'}</a>
+  <a href={`${prefix}/products/catalog`} class:list={{ active: active === 'catalog' }}><span>02</span>{zh ? '完整产品目录' : 'Full catalog search'}</a>
+  <a class="products-subnav-pdf" href="/catalog/van-harvest-product-catalog.pdf" target="_blank" rel="noopener noreferrer">{zh ? '下载双语 PDF ↗' : 'Download bilingual PDF ↗'}</a>
+</nav>

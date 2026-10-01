@@ -1,6 +1,6 @@
 {
   "source": "Stocklist.xls",
-  "publicFieldPolicy": "Item #, Code, English name, Chinese name, category, pack format and storage only. No price, cost, quantity, allocation or reorder fields are imported.",
+  "publicFieldPolicy": "Item #, cleaned English name, cleaned Chinese name, category, pack format and storage only. Internal Code, raw supplier names, prices, costs, quantities, allocation and reorder fields are not written to the public catalog.",
   "rawCount": 2954,
   "cleanCount": 2821,
   "rejectedCount": 133,

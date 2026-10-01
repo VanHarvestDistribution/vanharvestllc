@@ -72,3 +72,9 @@ TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由
 - 首页改用更明亮的红、深蓝、米色品牌体系，并以仓库、冷库和配送运营摄影取代过暗背景；保持首屏文字可读性。
 - 首页新增设施展示：29,000 SF 仓库、冷链能力、North Carolina / South Carolina / Atlanta, GA / Virginia 配送覆盖。三处运营地点的完整地址待 Van Harvest 提供后写入。
 - 九大分类页将升级为每类至少 12 个 Featured Products；优先关联用户上传实拍，缺图时使用经公开来源核验的准确产品包装或产品摄影。
+
+## Product landing and downloadable catalog refinement (2026-10-01)
+
+- 首页主视觉改用食品、食材与产品摄影；仓库、冷库和配送图片仅保留在设施介绍区。
+- `/products`、`/en/products` 与 `/zh/products` 仅承担九大品类浏览；完整可搜索目录迁移到对应的 `/products/catalog` 子页面，支持带品类筛选的深链接。
+- `scripts/import_stocklist.py` 的公开 JSON 输出不再包含内部 Code 与原始供应商字段，并清除名称中的内部编号；`scripts/generate_public_catalog_pdf.py` 从同一公开数据层重建中英双语、无价格、无内部编号的 PDF。

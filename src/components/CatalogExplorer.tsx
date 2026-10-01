@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import productsData from '@/data/products.json';
 import { categories } from '@/data/site';
 
-type Product = { id: string; code: string; name: string; nameZh: string; category: string; packSize?: string; storage?: string };
+type Product = { id: string; name: string; nameZh: string; category: string; packSize?: string; storage?: string };
 type Props = { lang?: 'en' | 'zh' };
 const products = productsData as Product[];
 const STEP = 50;

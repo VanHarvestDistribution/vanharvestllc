@@ -20,7 +20,7 @@ export const categories = [
   { key: 'prepared', prefix: '9', index: '09', name: 'Frozen, Prepared & Snacks', short: 'Frozen dim sum, appetizers, drinks, bakery treats and ready-to-cook specialties.', image: '/images/category-prepared.webp', featuredIds: ['74622', '74630', '74615', '74618', '74612', '74613', '74639', '92641', '92643', '92653', '92651', '92790'] }
 ] as const;
 
-export const heroImage = '/images/facilities/hero-warehouse-bright.webp';
+export const heroImage = '/images/category-produce.webp';
 
 export const facilityImages = {
   warehouse: '/images/facilities/warehouse-facility.webp',

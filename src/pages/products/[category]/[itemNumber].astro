@@ -4,7 +4,7 @@ import productsData from '@/data/products.json';
 import { categories, contact } from '@/data/site';
 import { productImageFor } from '@/data/productImages';
 
-type Product = { id: string; code: string; name: string; nameZh: string; rawName: string; rawNameZh: string; category: string; packSize?: string; storage?: string; active: boolean };
+type Product = { id: string; name: string; nameZh: string; category: string; packSize?: string; storage?: string; active: boolean };
 export function getStaticPaths() {
   const allProducts = productsData as Product[];
   return allProducts.map((product) => ({ params: { category: product.category, itemNumber: product.id }, props: { product, category: categories.find((entry) => entry.key === product.category) || categories[0] } }));

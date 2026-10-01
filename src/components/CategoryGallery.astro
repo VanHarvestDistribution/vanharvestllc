@@ -15,7 +15,7 @@ const counts = products.reduce<Record<string, number>>((result, product) => {
   <div class="shell">
     <div class="category-gallery-heading reveal">
       <div><p class="eyebrow">{zh ? '按品类浏览' : 'Shop by category'}</p><h2 id="shop-by-category">{zh ? <>从你经营的<br /><em>品类开始。</em></> : <>Start with<br /><em>what you serve.</em></>}</h2></div>
-      <p>{zh ? '每个品类都有独立页面，并展示来自 Van Harvest 产品清单的 Featured Products。' : 'Every department opens to a dedicated category page with a short, useful selection of Featured Products from the Van Harvest item list.'}</p>
+      <p>{zh ? '每个品类都有独立页面，并展示 12 个来自 Van Harvest 产品清单、带产品图片的精选产品。' : 'Every department opens to a dedicated category page with twelve image-led Featured Products from the Van Harvest item list.'}</p>
     </div>
     <div class="category-gallery-grid">
       {categories.map((category) => <a class="category-gallery-card reveal" href={`${prefix}/products/${category.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${category.name}`}>

@@ -2,6 +2,7 @@
   "routes": [
     { "path": "/", "title": "Home" },
     { "path": "/products", "title": "Product Catalog" },
+    { "path": "/products/catalog", "title": "Full Product Catalog" },
     { "path": "/products/:category", "title": "Product Category" },
     { "path": "/products/:category/:itemNumber", "title": "Product Detail" },
     { "path": "/company", "title": "Company" },
@@ -16,6 +17,7 @@
     { "path": "/terms", "title": "Terms" },
     { "path": "/en", "title": "English Home" },
     { "path": "/en/products", "title": "English Product Catalog" },
+    { "path": "/en/products/catalog", "title": "English Full Product Catalog" },
     { "path": "/en/products/:category", "title": "English Product Category" },
     { "path": "/en/products/:category/:itemNumber", "title": "English Product Detail" },
     { "path": "/en/contact", "title": "English Contact" },
@@ -24,6 +26,7 @@
     { "path": "/en/:slug", "title": "English Information Page" },
     { "path": "/zh", "title": "中文首页" },
     { "path": "/zh/products", "title": "中文产品目录" },
+    { "path": "/zh/products/catalog", "title": "中文完整产品目录" },
     { "path": "/zh/products/:category", "title": "中文产品分类" },
     { "path": "/zh/products/:category/:itemNumber", "title": "中文产品详情" },
     { "path": "/zh/contact", "title": "中文联系" },
