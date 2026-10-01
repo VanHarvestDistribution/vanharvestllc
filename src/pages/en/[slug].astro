@@ -1,6 +1,20 @@
 ---
-import LocalizedInfoPage from '@/components/LocalizedInfoPage.astro';
-export function getStaticPaths(){ const kinds = ['apply','delivery','industries','careers','suppliers','privacy','terms','company','services']; return kinds.map((slug) => ({ params: { slug }, props: { kind: slug } })); }
-const { kind } = Astro.props as { kind: string };
+export function getStaticPaths() {
+  const kinds = ['apply','delivery','industries','careers','suppliers','privacy','terms','company','services'];
+  return kinds.map((slug) => ({ params: { slug } }));
+}
+const { slug } = Astro.params;
+const target = `/${slug}`;
 ---
-<LocalizedInfoPage kind={kind} lang="en" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={`https://vanharvest.com${target}`} />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>{target}</a>...</p>
+  </body>
+</html>

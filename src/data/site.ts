@@ -22,13 +22,14 @@ export const categories = [
 
 /** Homepage-only food imagery; distinct from the Products department card images. */
 export const heroImages = [
-  '/images/home/hero-produce-market.webp',
-  '/images/home/hero-fruit-still-life.webp',
   '/images/home/hero-beef-steaks.webp',
-  '/images/home/hero-summer-berries.webp',
+  '/images/home/hero-produce-market.webp',
+  '/images/home/hero-asian-produce.webp',
+  '/images/home/hero-cold-chain.webp',
 ] as const;
 
 export const heroImage = heroImages[0];
+export const liveSeafoodImage = '/images/home/live-seafood-tank.webp';
 
 export const facilityImages = {
   warehouse: '/images/facilities/warehouse-facility.webp',

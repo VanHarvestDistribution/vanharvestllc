@@ -23,7 +23,7 @@ CATEGORY_NAMES = {
     'prepared': ('Frozen, Prepared & Snacks', '冷冻点心与零食'),
 }
 CATEGORY_ORDER = list(CATEGORY_NAMES)
-STORAGE = {'frozen': 'Frozen / 冷冻', 'refrigerated': 'Fresh or refrigerated / 新鲜或冷藏', 'dry': 'Dry / 常温'}
+STORAGE = {'frozen': 'Frozen / 冷冻', 'refrigerated': 'Refrigerated / 冷藏'}
 
 
 def esc(value: str) -> str:
@@ -45,7 +45,8 @@ def main() -> None:
             continue
         lines.extend([f'## {en} / {zh}', '', '| Item # | English name | 中文名称 | Pack format | Storage |', '| --- | --- | --- | --- | --- |'])
         for product in rows:
-            lines.append(f"| {esc(product['id'])} | {esc(product['name'])} | {esc(product.get('nameZh'))} | {esc(product.get('packSize'))} | {esc(STORAGE.get(product.get('storage'), 'Dry / 常温'))} |")
+            storage_val = STORAGE.get(product.get('storage'), '—')
+            lines.append(f"| {esc(product['id'])} | {esc(product['name'])} | {esc(product.get('nameZh'))} | {esc(product.get('packSize'))} | {esc(storage_val)} |")
         lines.append('')
     MARKDOWN.write_text('\n'.join(lines), encoding='utf-8')
     PDF.parent.mkdir(parents=True, exist_ok=True)

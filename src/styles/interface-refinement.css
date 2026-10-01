@@ -1,23 +1,327 @@
-.header-inner{grid-template-columns:auto minmax(0,1fr) auto;gap:26px}.desktop-nav{justify-self:center}.header-apply{justify-self:end;white-space:nowrap;padding:12px 16px!important;font-size:9px!important;letter-spacing:.05em}.official-brand{position:relative}.official-brand .brand-logo{display:block;width:142px;height:70px;object-fit:contain}.official-brand .brand-logo-light{display:none}.site-header:not(.is-scrolled) .official-brand .brand-logo-dark{display:none}.site-header:not(.is-scrolled) .official-brand .brand-logo-light{display:block}.site-header.is-scrolled .language-switch{color:var(--navy)!important}.site-header.is-scrolled .language-switch:hover{color:var(--gold)!important}.mobile-drawer .brand-logo-light{display:none!important}.mobile-drawer .brand-logo-dark{display:block!important}.mobile-drawer-actions{display:flex;align-items:center;gap:18px}.mobile-language{color:var(--navy);font:700 12px var(--sans);text-decoration:none}.mobile-drawer{overflow-y:auto;overscroll-behavior:contain}.mobile-drawer nav a{min-height:48px;padding-block:11px}.mobile-drawer-contact{padding-bottom:34px}.mobile-drawer-contact p{overflow:visible;white-space:normal;line-height:1.5}.facility-card-meta{display:block!important}.facility-card-meta .facility-label{margin:0 0 11px;color:var(--gold);font:700 9px var(--mono);letter-spacing:.1em;text-transform:uppercase}.facility-card-meta h3{margin:0 0 13px;text-align:left}.facility-card-meta>p:last-child{margin:0;text-align:left}.marquee-card-image{border-radius:18px}.marquee-card-image:after{border-radius:18px}.live-seafood-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1fr);gap:clamp(34px,7vw,110px);align-items:center}.live-seafood-media{height:clamp(280px,34vw,450px);overflow:hidden;border-radius:4px}.live-seafood-media img{width:100%;height:100%;object-fit:cover}.live-seafood-grid h2{margin:0 0 22px}.live-seafood-grid p:not(.eyebrow){max-width:460px;margin:0 0 28px}.featured-product-placeholder:before,.related-product-icon:before{content:'VH';display:grid;place-items:center;width:58px;height:58px;border:1px solid var(--gold);border-radius:50%;color:var(--navy);font:700 13px var(--mono);letter-spacing:.08em}.related-product-icon img{display:none}.catalog-search-hero{padding:74px 0 108px;background:var(--paper)}.catalog-search-heading{max-width:720px;margin-bottom:30px}.catalog-search-heading h1{margin:0 0 12px;font-size:clamp(2.8rem,5.6vw,5.5rem);line-height:.96}.catalog-search-heading p:last-child{max-width:510px;margin:0;color:var(--muted);font-size:15px;line-height:1.55}.catalog-search-hero .catalog-shell{padding:0}.catalog-help{padding:28px 0;background:var(--bone)}.catalog-help .shell{display:flex;align-items:center;justify-content:space-between;gap:20px}.catalog-help p{margin:0;color:var(--ink)}.contact-fab{display:inline-flex;align-items:center;gap:8px}.cta-actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px}.cta-actions .text-link{font:600 13px var(--sans);letter-spacing:0}.legal-reading{max-width:850px;display:grid;gap:34px}.legal-reading article{padding-bottom:30px;border-bottom:1px solid var(--line)}.legal-reading article:last-child{border-bottom:0}.legal-reading h2{margin:0 0 12px;color:var(--navy);font:500 clamp(1.8rem,3vw,2.8rem)/1 var(--serif)}.legal-reading p{margin:0;color:var(--muted);font-size:15px;line-height:1.7}@media(max-width:1040px){.desktop-nav{gap:17px}.header-apply{padding:10px 12px!important;font-size:8px!important}}@media(max-width:900px){.header-inner{grid-template-columns:1fr auto}.desktop-nav,.header-apply{display:none}.menu-toggle{display:flex;justify-self:end}.site-header:not(.is-scrolled) .official-brand .brand-logo-dark{display:none}.site-header:not(.is-scrolled) .official-brand .brand-logo-light{display:block}.live-seafood-grid{grid-template-columns:1fr}.live-seafood-media{height:330px}.contact-fab{right:14px;bottom:14px;width:48px;height:48px;justify-content:center;padding:0;border-radius:50%;font-size:0}.contact-fab>span:first-child{font-size:18px}.contact-fab-label{display:none}.catalog-search-hero{padding:48px 0 70px}}@media(max-width:680px){.official-brand .brand-logo{width:122px;height:58px}.mobile-drawer{padding:21px 22px 18px}.mobile-drawer nav{margin:28px 0 16px}.mobile-drawer nav a{font-size:clamp(1.45rem,7vw,2.1rem);line-height:1.02}.mobile-drawer nav a b{font-size:18px}.mobile-drawer-contact{margin-top:10px;font-size:13px}.mobile-drawer-contact>a{font-size:15px}.facility-label{font-size:8px!important}.live-seafood-grid{gap:25px}.live-seafood-media{height:245px}.catalog-search-hero{padding:36px 0 62px}.catalog-search-heading{margin-bottom:22px}.catalog-search-heading h1{font-size:2.6rem}.catalog-search-heading p:last-child{font-size:13px}.catalog-help .shell{align-items:flex-start;flex-direction:column;gap:9px}.cta-actions{align-items:flex-start;flex-direction:column;gap:15px}}
+/* Interface and responsive refinements */
+.official-brand{position:relative}
+.official-brand .brand-logo{display:block;object-fit:contain}
 
-/* Contact details: compact horizontal key-value layout. */
-.contact-information{margin-top:30px;border-top:1px solid var(--line)}
-.contact-line{display:grid;grid-template-columns:116px minmax(0,1fr);align-items:baseline;gap:18px;margin:0;padding:15px 0;border-bottom:1px solid var(--line)}
-.contact-line small{color:var(--green);font:500 8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.contact-line a{min-width:0;margin:0;color:var(--ink);font-size:14px;line-height:1.45;overflow-wrap:anywhere}
-.contact-line a:hover{color:var(--gold)}
-.contact-line-directions{margin-top:18px;border-top:1px solid var(--line)}
-.contact-line-directions small{align-self:center}
-.contact-line-address a span{white-space:nowrap}
+/* Seamless fading hero slider without jarring backward rewind */
+.home-hero-slideshow{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.home-hero-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  background-position:center;
+  background-size:cover;
+  opacity:0;
+  transition:opacity 1.2s ease-in-out;
+  animation:hero-fade-sequence 24s infinite;
+}
+.home-hero-slide:nth-child(1){animation-delay:0s}
+.home-hero-slide:nth-child(2){animation-delay:6s}
+.home-hero-slide:nth-child(3){animation-delay:12s}
+.home-hero-slide:nth-child(4){animation-delay:18s}
 
-/* Keep the angled company poster, without its former navy backing plate. */
-.company-hero-poster:before{display:none}
-.company-hero-poster{overflow:hidden;border:0;background:transparent}
-.company-hero-poster img{display:block}
+@keyframes hero-fade-sequence{
+  0%{opacity:0}
+  4%{opacity:1}
+  25%{opacity:1}
+  29%{opacity:0}
+  100%{opacity:0}
+}
 
+/* Fallback for non-animated or reduced-motion environments */
+@media(prefers-reduced-motion:reduce){
+  .home-hero-slide{animation:none;opacity:0}
+  .home-hero-slide:first-child{opacity:1}
+}
+
+/* Ensure above-the-fold content shows instantly */
+main > section:first-of-type,
+main > section:first-of-type *,
+.home-hero,
+.home-hero *,
+.inner-hero,
+.inner-hero *,
+.category-detail-hero,
+.category-detail-hero *,
+.product-detail-clean-hero,
+.product-detail-clean-hero * {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* Unified modern rounded rectangles for all category gallery cards without circular or white-oval masks */
+.category-gallery-image {
+  border-radius: 14px !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  aspect-ratio: 4 / 3 !important;
+  margin: 0 auto 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 24px rgba(16, 43, 82, 0.08) !important;
+}
+.category-gallery-image picture,
+.category-gallery-image img {
+  border-radius: 14px !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.category-gallery-image:after {
+  border-radius: 14px !important;
+  border: 1px solid rgba(16, 43, 82, 0.06) !important;
+}
+
+/* Facility cards: label strictly on its own line above left-aligned title */
+.facility-card-meta{display:flex!important;flex-direction:column;align-items:flex-start}
+.facility-card-meta .facility-label{
+  margin:0 0 10px;
+  color:var(--gold);
+  font:700 11px var(--mono);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-align:left;
+}
+.facility-card-meta h3{
+  margin:0 0 12px;
+  text-align:left;
+  font-size:clamp(1.4rem,2.1vw,1.9rem);
+  line-height:1.15;
+}
+.facility-card-meta>p:last-child{
+  margin:0;
+  text-align:left;
+  font-size:14px;
+  line-height:1.55;
+}
+
+/* Category cards in marquee: uniform rounded rectangle, no white oval masking */
+.marquee-card-image{
+  border-radius:12px;
+  background:#dfd7cc;
+}
+.marquee-card-image img{
+  border-radius:12px;
+  object-fit:cover;
+}
+.marquee-card-image:after{
+  border-radius:12px;
+  border:1px solid rgba(16,43,82,.14);
+}
+
+/* Live seafood section: clean left-image, right-copy with distinct tank asset */
+.live-seafood-band{padding:100px 0;background:var(--navy);color:#fff}
+.live-seafood-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(32px,6vw,84px);
+  align-items:center;
+}
+.live-seafood-media{
+  height:clamp(300px,36vw,440px);
+  overflow:hidden;
+  border-radius:8px;
+  box-shadow:0 18px 40px rgba(0,0,0,.32);
+}
+.live-seafood-media img{width:100%;height:100%;object-fit:cover}
+.live-seafood-grid h2{margin:0 0 18px;color:#fff}
+.live-seafood-grid p:not(.eyebrow){max-width:480px;margin:0 0 26px;color:rgba(255,255,255,.8);font-size:16px;line-height:1.6}
+
+/* Catalog full search hero: compact spacing, instant search input on mobile */
+.catalog-search-hero{padding:48px 0 84px;background:var(--paper)}
+.catalog-search-heading{max-width:760px;margin-bottom:20px}
+.catalog-search-heading h1{margin:0 0 10px;font-size:clamp(2.5rem,4.8vw,4.8rem);line-height:1}
+.catalog-search-heading p:last-child{max-width:540px;margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+.catalog-search-hero .catalog-shell{padding:0}
+
+/* Catalog table full layout with Pack and Storage columns */
+.catalog-table-wrap{
+  margin-top:28px;
+  border:1px solid var(--line);
+  background:var(--paper);
+  overflow-x:auto;
+}
+.catalog-table{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+  font-size:14px;
+}
+.catalog-table th{
+  padding:14px 16px;
+  background:var(--bone);
+  color:var(--navy);
+  font:700 11px/1 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--line);
+  white-space:nowrap;
+}
+.catalog-table td{
+  padding:16px;
+  border-bottom:1px solid var(--line);
+  vertical-align:middle;
+}
+.catalog-table tr:hover td{
+  background:rgba(248,243,235,.75);
+}
+.catalog-table .col-id{width:110px;font-family:var(--mono);color:var(--gold);font-weight:700}
+.catalog-table .col-product{min-width:280px}
+.catalog-table .col-product a{display:block;color:var(--ink)}
+.catalog-table .col-product .name-en{display:block;font-weight:600;line-height:1.35;word-break:break-word}
+.catalog-table .col-product .name-zh{display:block;margin-top:4px;color:var(--green);font-size:13px;line-height:1.35}
+.catalog-table .col-pack{width:160px;color:var(--text);font-family:var(--mono);font-size:13px}
+.catalog-table .col-storage{width:150px;white-space:nowrap}
+.catalog-table .col-action{width:120px;text-align:right}
+
+.storage-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 9px;
+  border-radius:2px;
+  font:700 11px/1 var(--mono);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.storage-badge.frozen{background:rgba(44,98,154,.14);color:#195089}
+.storage-badge.refrigerated{background:rgba(50,82,123,.14);color:#24466b}
+.storage-badge.dry{background:rgba(184,134,72,.14);color:#7c5520}
+
+/* Mobile catalog view with pack & storage nested below product name */
+.catalog-mobile-meta{display:none}
+@media(max-width:820px){
+  .catalog-table th.col-pack,
+  .catalog-table th.col-storage,
+  .catalog-table td.col-pack,
+  .catalog-table td.col-storage{display:none}
+  .catalog-mobile-meta{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    margin-top:6px;
+    font-size:12px;
+    color:var(--muted);
+  }
+}
+
+/* Product detail: solid color hero, natural image in content, refined related products */
+.product-detail-clean-hero{
+  padding:150px 0 60px;
+  background:linear-gradient(180deg,var(--navy),var(--navy2));
+  color:#fff;
+}
+.product-detail-clean-hero .breadcrumb a{color:var(--goldLight)}
+.product-detail-clean-hero h1{color:#fff;font-size:clamp(2.8rem,5.5vw,5.6rem);line-height:1.05;margin:10px 0 6px}
+.product-detail-clean-hero .detail-zh-sub{color:var(--goldLight);font-size:clamp(1.2rem,2.2vw,2rem);margin:0 0 24px}
+.product-detail-clean-hero .detail-en-sub{color:rgba(255,255,255,.82);font-size:clamp(1.1rem,1.8vw,1.6rem);margin:0 0 24px;font-style:italic}
+
+.product-detail-main{padding:72px 0 100px;background:var(--paper)}
+.product-detail-main-grid{
+  display:grid;
+  grid-template-columns:minmax(0,440px) minmax(0,1fr);
+  gap:clamp(36px,6vw,84px);
+  align-items:start;
+}
+.product-detail-photo-card{
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:24px;
+  border-radius:4px;
+}
+.product-detail-photo-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:2px;
+  background:#fff;
+}
+.product-detail-fallback-badge{
+  aspect-ratio:1/1;
+  display:grid;
+  place-content:center;
+  text-align:center;
+  gap:8px;
+  background:var(--bone);
+  border:1px dashed var(--line);
+  color:var(--navy);
+  font:700 13px var(--mono);
+}
+.product-specs-list{display:grid;gap:14px;margin-bottom:32px}
+.product-spec-row{
+  display:grid;
+  grid-template-columns:130px 1fr;
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  font-size:15px;
+}
+.product-spec-row small{color:var(--green);font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.product-spec-row strong{color:var(--ink);font-weight:600}
+
+/* Related products: keyword + brand + storage matching */
+.related-products{padding:84px 0 110px;background:var(--cream);border-top:1px solid var(--line)}
+.related-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px}
+.related-product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+}
+.related-product-card{
+  display:flex;
+  flex-direction:column;
+  padding:18px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:3px;
+  transition:transform 200ms ease,box-shadow 200ms ease;
+}
+.related-product-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(16,43,82,.08);
+}
+.related-product-card img{
+  width:100%;
+  aspect-ratio:1.15;
+  object-fit:cover;
+  border-radius:2px;
+  background:var(--bone);
+  margin-bottom:14px;
+}
+.related-product-placeholder{
+  width:100%;
+  aspect-ratio:1.15;
+  display:grid;
+  place-items:center;
+  background:var(--bone);
+  border-radius:2px;
+  margin-bottom:14px;
+  color:var(--gold);
+  font:700 12px var(--mono);
+}
+.related-product-card small{color:var(--green);font:700 11px var(--mono);text-transform:uppercase}
+.related-product-card h3{margin:6px 0 4px;font:600 15px/1.25 var(--sans);color:var(--ink)}
+.related-product-card p{margin:0;color:var(--muted);font-size:13px}
+
+/* Mobile responsive adjustments */
+@media(max-width:980px){
+  .related-product-grid{grid-template-columns:repeat(2,1fr)}
+  .product-detail-main-grid{grid-template-columns:1fr}
+}
 @media(max-width:680px){
-  .contact-information{margin-top:24px}
-  .contact-line{grid-template-columns:94px minmax(0,1fr);gap:12px;padding:14px 0}
-  .contact-line a{font-size:13px}
-  .company-hero-poster{margin-left:0}
+  .catalog-search-hero{padding:32px 0 60px}
+  .live-seafood-band{padding:68px 0}
+  .live-seafood-grid{grid-template-columns:1fr}
+  .live-seafood-media{height:250px}
+  .product-detail-clean-hero{padding:110px 0 44px}
+  .related-products{padding:60px 0 80px}
+  .related-product-grid{grid-template-columns:1fr;gap:14px}
 }

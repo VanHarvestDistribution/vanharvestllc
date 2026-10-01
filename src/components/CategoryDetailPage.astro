@@ -2,7 +2,9 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CallToAction from '@/components/CallToAction.astro';
 import productsData from '@/data/products.json';
-import { isYellowLabelProductImage, productImageFor } from '@/data/productImages';
+import { productImageFor } from '@/data/productImages';
+import { curatedCategoryFeaturedIds } from '@/data/curatedCategoryFeatured';
+import ResponsivePicture from '@/components/ResponsivePicture.astro';
 
 interface Props { category: any; lang?: 'en' | 'zh'; localized?: boolean }
 const { category, lang = 'en', localized = false } = Astro.props;
@@ -10,41 +12,29 @@ const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
 const products = (productsData as any[]).filter((product) => product.category === category.key);
 
-/**
- * Treat colour, size and package variants as one concept in the curated showcase.
- * The full catalog remains the place to compare each individual variant.
- */
-const productConcept = (product: any) => product.name
-  .toLowerCase()
-  .replace(/\([^)]*\)/g, ' ')
-  .replace(/\b(?:white|red|green|yellow|black|brown|purple|orange|pink|gold|silver|clear|large|small|medium|mini|jumbo|extra[-\s]?large|xl|xxl|xs|[sml])\b/g, ' ')
-  .replace(/\b\d+(?:\.\d+)?\s*(?:oz|lb|lbs|g|kg|ml|l|ct|pc|pcs|pk|pkg|case|cs)\b/g, ' ')
-  .replace(/\b\d+\b/g, ' ')
-  .replace(/[^a-z]+/g, ' ')
-  .replace(/\s+/g, ' ')
-  .trim();
+const configuredIds = curatedCategoryFeaturedIds[category.key] || [];
+const curatedItems: any[] = [];
+for (const id of configuredIds) {
+  const match = products.find((p) => p.id === id);
+  if (match) curatedItems.push(match);
+}
+// Add remaining items if needed to satisfy 8-12 items
+if (curatedItems.length < 8) {
+  for (const item of products) {
+    if (!curatedItems.some((c) => c.id === item.id)) {
+      curatedItems.push(item);
+      if (curatedItems.length >= 10) break;
+    }
+  }
+}
 
-const featuredOrder: any[] = category.featuredIds
-  .map((id: string) => products.find((product) => product.id === id))
-  .filter(Boolean);
-const yellowLabelFirst = products.filter((product) => isYellowLabelProductImage(product.id));
-const showcaseCandidates = [
-  ...yellowLabelFirst,
-  ...featuredOrder,
-  ...products.filter((product) => !yellowLabelFirst.some((matched) => matched.id === product.id) && !featuredOrder.some((featured) => featured.id === product.id)),
-];
-const seenConcepts = new Set<string>();
 const usedImages = new Set<string>();
 const featured: Array<{ product: any; image?: string }> = [];
-for (const product of showcaseCandidates) {
-  const concept = productConcept(product) || product.id;
-  if (seenConcepts.has(concept)) continue;
-  seenConcepts.add(concept);
+for (const product of curatedItems) {
   const source = productImageFor(product.id);
   const image = source && !usedImages.has(source) ? source : undefined;
   if (image) usedImages.add(image);
   featured.push({ product, image });
-  if (featured.length === 12) break;
 }
 
 const name = zh ? category.nameZh : category.name;
@@ -53,7 +43,7 @@ const description = zh ? `浏览 Van Harvest ${name}的精选产品、中英文�
 ---
 <BaseLayout title={title} description={description} active="/products" lang={lang}>
   <section class="category-detail-hero">
-    <div class="category-detail-media"><img src={category.image} alt={`${name} ${zh ? '产品分类' : 'wholesale category'}`} /></div>
+    <div class="category-detail-media"><ResponsivePicture src={category.image} alt={`${name} ${zh ? '产品分类' : 'wholesale category'}`} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="eager" /></div>
     <div class="category-detail-shade"></div>
     <div class="shell category-detail-inner">
       <p class="breadcrumb"><a href={`${prefix}/products`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p>
@@ -70,7 +60,7 @@ const description = zh ? `浏览 Van Harvest ${name}的精选产品、中英文�
     <div class="shell">
       <div class="featured-products-heading">
         <div><p class="eyebrow">{zh ? '精选产品' : 'Featured products'}</p><h2>{zh ? <>精选<br /><em>产品。</em></> : <>Featured<br /><em>products.</em></>}</h2></div>
-        <p>{zh ? '精选不同产品类型，方便快速浏览；颜色、尺寸和包装变体可在完整目录中比较。' : 'A curated mix of distinct product types. Compare color, size and package variations in the full catalog.'}</p>
+        <p>{zh ? '精选代表性常备条目，方便快速了解品类；更多规格可在完整目录中检索。' : 'A curated selection of representative items. Find full specifications and item numbers in our catalog.'}</p>
       </div>
       <div class="featured-product-grid">
         {featured.map(({ product, image }) => (

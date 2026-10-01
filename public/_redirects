@@ -1,0 +1,16 @@
+/en / 301
+/en/products /products 301
+/en/products/catalog /products/catalog 301
+/en/products/:category /products/:category 301
+/en/products/:category/:id /products/:category/:id 301
+/en/company /company 301
+/en/services /services 301
+/en/contact /contact 301
+/en/apply /apply 301
+/en/delivery /delivery 301
+/en/industries /industries 301
+/en/careers /careers 301
+/en/suppliers /suppliers 301
+/en/privacy /privacy 301
+/en/terms /terms 301
+/en/* /:splat 301

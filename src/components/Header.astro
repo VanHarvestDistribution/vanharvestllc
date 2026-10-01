@@ -2,48 +2,78 @@
 interface Props { active?: string; lang?: 'en' | 'zh' }
 const { active = '', lang = 'en' } = Astro.props;
 const path = Astro.url.pathname;
-const isLocalized = path === '/en' || path.startsWith('/en/') || path === '/zh' || path.startsWith('/zh/');
-const prefix = isLocalized ? `/${lang}` : '';
-const localHref = (href: string) => `${prefix}${href === '/' ? '' : href}` || '/';
-const switchHref = lang === 'zh'
-  ? (path.replace(/^\/zh(?=\/|$)/, '') || '/')
-  : (path.startsWith('/en') ? (path.replace(/^\/en(?=\/|$)/, '/zh') || '/zh') : `/zh${path === '/' ? '' : path}`);
+const isZh = lang === 'zh';
+// In the unified routing plan, default /... serves English and /zh/... serves Chinese.
+const cleanPath = path.replace(/^\/(?:en|zh)(?=\/|$)/, '') || '/';
+const localHref = (href: string) => isZh ? `/zh${href === '/' ? '' : href}` : href;
+const switchHref = isZh ? cleanPath : `/zh${cleanPath === '/' ? '' : cleanPath}`;
+
 const items = [
-  [lang === 'zh' ? '首页' : 'Home', '/'],
-  [lang === 'zh' ? '产品目录' : 'Products', '/products'],
-  [lang === 'zh' ? '公司介绍' : 'Company', '/company'],
-  [lang === 'zh' ? '服务' : 'Services', '/services'],
-  [lang === 'zh' ? '联系我们' : 'Contact', '/contact']
+  [isZh ? '首页' : 'Home', '/'],
+  [isZh ? '产品目录' : 'Products', '/products'],
+  [isZh ? '公司介绍' : 'Company', '/company'],
+  [isZh ? '服务' : 'Services', '/services'],
+  [isZh ? '联系我们' : 'Contact', '/contact']
 ];
+
 const mobileItems = [
-  items[0], items[1],
-  [lang === 'zh' ? '申请开户' : 'Apply for an account', '/apply'],
-  [lang === 'zh' ? '配送范围' : 'Delivery areas', '/delivery'],
-  [lang === 'zh' ? '服务客户' : 'Who we serve', '/industries'],
+  items[0],
+  items[1],
+  [isZh ? '申请开户' : 'Apply for an account', '/apply'],
+  [isZh ? '配送范围' : 'Delivery areas', '/delivery'],
+  [isZh ? '服务客户' : 'Who we serve', '/industries'],
   ...items.slice(2)
 ];
 ---
 <header class="site-header" data-header>
   <div class="shell header-inner">
-    <a class="brand official-brand" href={localHref('/')} aria-label="Van Harvest Distribution home"><img class="brand-logo brand-logo-dark" src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /><img class="brand-logo brand-logo-light" src="/brand/van-harvest-official-light.png" width="142" height="101" alt="" aria-hidden="true" /></a>
-    <nav class="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
-      {items.map(([label, href]) => <a href={localHref(href)} class:list={{ active: active === href || (href === '/products' && active === '/products') }}>{label}</a>)}
-      <span class="nav-divider" aria-hidden="true"></span><a class="language-switch language-switch-active" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a>
+    <a class="brand official-brand" href={localHref('/')} aria-label="Van Harvest Distribution home">
+      <img class="brand-logo brand-logo-dark" src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" />
+      <img class="brand-logo brand-logo-light" src="/brand/van-harvest-official-light.png" width="142" height="101" alt="" aria-hidden="true" />
+    </a>
+
+    <nav class="desktop-nav" aria-label={isZh ? '主导航' : 'Primary navigation'}>
+      {items.map(([label, href]) => (
+        <a href={localHref(href)} class:list={{ active: active === href || (href === '/products' && active === '/products') }}>{label}</a>
+      ))}
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a class="language-switch language-switch-active" href={switchHref}>{isZh ? 'EN' : '中文'}</a>
     </nav>
-    <a class="header-apply button" href={localHref('/apply')}>{lang === 'zh' ? '申请开户' : 'Apply for an account'}</a>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle><i></i><i></i><span>{lang === 'zh' ? '菜单' : 'Menu'}</span></button>
+
+    <div class="header-actions-group">
+      <a class="header-apply button header-apply-desktop" href={localHref('/apply')}>{isZh ? '申请开户' : 'Apply for an account'}</a>
+      <a class="header-apply-mobile button" href={localHref('/apply')}>{isZh ? '开户' : 'Apply'}</a>
+      <button class="menu-toggle" type="button" aria-label={isZh ? '打开菜单' : 'Open menu'} aria-expanded="false" data-menu-toggle>
+        <i></i><i></i>
+        <span>{isZh ? '菜单' : 'Menu'}</span>
+      </button>
+    </div>
   </div>
 </header>
+
 <div class="mobile-drawer" data-mobile-menu aria-hidden="true">
   <div class="mobile-drawer-top">
-    <a class="brand official-brand" href={localHref('/')}><img class="brand-logo brand-logo-dark" src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" /><img class="brand-logo brand-logo-light" src="/brand/van-harvest-official-light.png" width="142" height="101" alt="" aria-hidden="true" /></a>
-    <div class="mobile-drawer-actions"><a class="mobile-language" href={switchHref}>{lang === 'zh' ? 'EN' : '中文'}</a><button type="button" aria-label={lang === 'zh' ? '关闭菜单' : 'Close menu'} data-menu-close>{lang === 'zh' ? '关闭' : 'Close'}</button></div>
+    <a class="brand official-brand" href={localHref('/')}>
+      <img class="brand-logo brand-logo-dark" src="/brand/van-harvest-official.png" width="142" height="101" alt="Van Harvest Distribution" />
+      <img class="brand-logo brand-logo-light" src="/brand/van-harvest-official-light.png" width="142" height="101" alt="" aria-hidden="true" />
+    </a>
+    <div class="mobile-drawer-actions">
+      <a class="mobile-language" href={switchHref}>{isZh ? 'English (EN)' : '中文界面'}</a>
+      <button type="button" aria-label={isZh ? '关闭菜单' : 'Close menu'} data-menu-close>{isZh ? '关闭' : 'Close'}</button>
+    </div>
   </div>
   <nav aria-label="Mobile navigation">
-    {mobileItems.map(([label, href]) => <a href={localHref(href)}><span class="mobile-menu-label">{label}</span><b aria-hidden="true">↗</b></a>)}
+    {mobileItems.map(([label, href]) => (
+      <a href={localHref(href)}><span class="mobile-menu-label">{label}</span><b aria-hidden="true">↗</b></a>
+    ))}
   </nav>
-  <div class="mobile-drawer-contact"><span>{lang === 'zh' ? '夏洛特办公室' : 'Charlotte office'}</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
+  <div class="mobile-drawer-contact">
+    <span>{isZh ? '夏洛特办公室' : 'Charlotte office'}</span>
+    <a href="tel:+17043928717">(704) 392-8717</a>
+    <p>5226 Terminal St<br />Charlotte, NC 28208</p>
+  </div>
 </div>
+
 <script is:inline>
   const header = document.querySelector('[data-header]');
   const toggle = document.querySelector('[data-menu-toggle]');
@@ -58,5 +88,7 @@ const mobileItems = [
   };
   toggle?.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
   close?.addEventListener('click', () => setMenu(false));
-  addEventListener('scroll', () => header?.classList.toggle('is-scrolled', scrollY > 18), { passive: true });
+  const updateScrolled = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+  addEventListener('scroll', updateScrolled, { passive: true });
+  updateScrolled();
 </script>

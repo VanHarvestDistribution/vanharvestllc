@@ -4,25 +4,155 @@ import CallToAction from '@/components/CallToAction.astro';
 import FacilityNetwork from '@/components/FacilityNetwork.astro';
 import HomeCatalogMarquee from '@/components/HomeCatalogMarquee.astro';
 import products from '@/data/products.json';
-import { contact, heroImage, heroImages } from '@/data/site';
+import { contact, heroImage, heroImages, liveSeafoodImage } from '@/data/site';
+import { absoluteUrl } from '@/data/seo';
+import ResponsivePicture from '@/components/ResponsivePicture.astro';
+
 interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang = 'en', localized = false } = Astro.props;
 const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
 const heroSlides = heroImages;
+
 const organizationJsonLd = {
-  '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Organization', name: 'Van Harvest Distribution LLC', telephone: contact.phoneDisplay, email: contact.officeEmail, address: { '@type': 'PostalAddress', streetAddress: '5226 Terminal St', addressLocality: 'Charlotte', addressRegion: 'NC', postalCode: '28208', addressCountry: 'US' } },
-    { '@type': 'LocalBusiness', name: 'Van Harvest Distribution LLC', telephone: contact.phoneDisplay, address: { '@type': 'PostalAddress', streetAddress: '5226 Terminal St', addressLocality: 'Charlotte', addressRegion: 'NC', postalCode: '28208', addressCountry: 'US' } }
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'Van Harvest Distribution LLC',
+      url: absoluteUrl('/') || 'https://vanharvest.com',
+      logo: absoluteUrl('/brand/van-harvest-official.png'),
+      telephone: contact.phoneDisplay,
+      email: contact.officeEmail,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '5226 Terminal St',
+        addressLocality: 'Charlotte',
+        addressRegion: 'NC',
+        postalCode: '28208',
+        addressCountry: 'US'
+      }
+    },
+    {
+      '@type': 'LocalBusiness',
+      name: 'Van Harvest Distribution LLC',
+      url: absoluteUrl('/') || 'https://vanharvest.com',
+      telephone: contact.phoneDisplay,
+      priceRange: '$$$',
+      image: absoluteUrl(heroImage),
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '5226 Terminal St',
+        addressLocality: 'Charlotte',
+        addressRegion: 'NC',
+        postalCode: '28208',
+        addressCountry: 'US'
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '08:00',
+          closes: '17:00'
+        }
+      ]
+    }
   ]
 };
+
+const pageTitle = zh
+  ? '夏洛特食品批发与冷链配送 | Van Harvest'
+  : 'Wholesale Food Distributor & Cold-Chain Logistics in Charlotte | Van Harvest';
+const pageDescription = zh
+  ? 'Van Harvest Distribution 为夏洛特、北卡、南卡、亚特兰大及维吉尼亚的餐馆、超市提供新鲜肉类、蔬果、水产及常温干货批发，一站采购。'
+  : 'Van Harvest Distribution supplies restaurants, markets and professional kitchens across NC, SC, GA and VA with fresh meats, produce, seafood and dry staples.';
 ---
-<BaseLayout title={zh ? '夏洛特食品批发供应商 | Van Harvest' : 'Wholesale Food Distributor in Charlotte | Van Harvest'} description={zh ? 'Van Harvest 为夏洛特及周边餐馆、超市与专业厨房提供新鲜、冷冻和常温食品，一站采购。' : 'Van Harvest supplies restaurants, markets and professional kitchens in Charlotte with fresh, frozen and shelf-stable foodservice products.'} active="/" lang={lang} ogImage={heroImage} jsonLd={organizationJsonLd}>
-<section class="home-hero"><div class="home-hero-slideshow" aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>{heroSlides.map((image, index) => <div class="home-hero-slide" style={`background-image:url('${image}')`} aria-hidden={index !== 0}></div>)}</div><div class="home-hero-shade"></div><div class="shell hero-inner"><div class="hero-topline"><span>{zh ? '食品批发供应' : 'Wholesale food distribution'}</span><span>Charlotte, North Carolina</span></div><div class="hero-copy"><p class="eyebrow">{zh ? '服务专业厨房' : 'Built for professional kitchens'}</p><h1>{zh ? <>新鲜、冷冻、<br /><em>常温食品，一站采购。</em></> : <>Good food starts<br />with a <em>reliable source.</em></>}</h1><div class="hero-copy-bottom"><p>{zh ? '为餐馆、超市和专业厨房提供稳定的食品批发选择与区域配送服务。' : 'A dependable wholesale food source for restaurants, markets and professional kitchens across the region.'}</p><div class="hero-actions"><a class="button" href={`${prefix}/apply`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a><a class="button button-outline" href={`${prefix}/products/catalog`}>{zh ? '搜索产品 →' : 'Search products →'}</a></div></div></div><div class="hero-bottom"><div class="hero-stats"><div><strong>{products.length.toLocaleString()}+</strong><span>{zh ? '上架产品' : 'catalog items'}</span></div><div><strong>29K</strong><span>{zh ? '平方英尺仓库' : 'SF warehouse'}</span></div><div><strong>4</strong><span>{zh ? '配送区域' : 'delivery regions'}</span></div></div><span class="scroll-note">{zh ? '向下浏览 ↓' : 'Scroll to explore ↓'}</span></div></div></section>
-<section class="home-intro"><div class="shell split-heading"><div><p class="eyebrow">{zh ? '一个目录，多种厨房。' : 'One catalog. Many kitchens.'}</p><h2>{zh ? <>餐饮供应，<br /><em>用心选择。</em></> : <>Foodservice supply,<br /><em>selected with purpose.</em></>}</h2></div><div class="split-copy"><p>{zh ? 'Van Harvest 扎根 Charlotte，为餐馆、超市和便利店提供丰富、实用的食品及餐饮用品。' : 'Van Harvest is a Charlotte-based wholesale food distributor serving restaurants, supermarkets and convenience stores across the region.'}</p><p>{zh ? '新鲜、冷冻、常温食品，一站采购。' : 'Fresh, frozen and shelf-stable foodservice essentials—sourced through one practical partner.'}</p><a class="text-link" href={`${prefix}/company`}>{zh ? '了解 Van Harvest →' : 'Meet Van Harvest →'}</a></div></div></section>
-<HomeCatalogMarquee lang={lang} localized={localized} />
-<section class="statement"><div class="shell statement-grid"><span>{zh ? '为本地厨房建立信任。' : 'Trust built for local kitchens.'}</span><p><strong>{zh ? '29,000 平方英尺仓库' : '29,000 SF warehouse'}</strong> · <strong>{zh ? '配送至 NC、SC、Atlanta, GA 和 Virginia' : 'delivering across NC, SC, Atlanta, GA and Virginia'}</strong> · {zh ? '冷链产品能力 · 餐馆、亚洲厨房和零售客户。' : 'cold-chain capable assortment · restaurants, Asian kitchens and retailers.'}</p></div></section>
-<FacilityNetwork lang={lang} />
-<section class="live-seafood-band"><div class="shell live-seafood-grid"><div class="live-seafood-media"><img src="/images/category-seafood.webp" alt={zh ? 'Van Harvest 海鲜供应' : 'Van Harvest seafood selection'} loading="lazy" /></div><div><p class="eyebrow eyebrow-light">{zh ? 'Van Harvest 的特色' : 'A Van Harvest difference'}</p><h2>{zh ? <>活海鲜，<br /><em>按需采购。</em></> : <>Live seafood<br /><em>when it matters.</em></>}</h2><p>{zh ? '为专业厨房提供活海鲜与时令海鲜采购支持。' : 'Talk with our team about live seafood and seasonal sourcing for professional kitchens.'}</p><a class="button" href={`${prefix}/products/seafood`}>{zh ? '浏览海鲜 →' : 'Explore seafood →'}</a></div></div></section>
-<CallToAction lang={lang} localized={localized} />
+<BaseLayout title={pageTitle} description={pageDescription} active="/" lang={lang} ogImage={heroImage} jsonLd={organizationJsonLd}>
+  <section class="home-hero">
+    <div class="home-hero-slideshow" aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>
+      {heroSlides.map((image, index) => (
+        <div class="home-hero-slide" style={`background-image:url('${image}')`} aria-hidden={index !== 0}></div>
+      ))}
+    </div>
+    <div class="home-hero-shade"></div>
+    <div class="shell hero-inner">
+      <div class="hero-topline">
+        <span>{zh ? '食品批发供应' : 'Wholesale food distribution'}</span>
+        <span>Charlotte, North Carolina</span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">{zh ? '服务专业厨房' : 'Built for professional kitchens'}</p>
+        <h1>
+          {zh ? (
+            <>新鲜、冷冻、<br /><em>常温食品，一站采购。</em></>
+          ) : (
+            <>Good food starts<br />with a <em>reliable source.</em></>
+          )}
+        </h1>
+        <div class="hero-copy-bottom">
+          <p>
+            {zh
+              ? '为餐馆、超市和专业厨房提供稳定的食品批发选择与区域配送服务。'
+              : 'A dependable wholesale food source for restaurants, markets and professional kitchens across the region.'}
+          </p>
+          <div class="hero-actions">
+            <a class="button" href={`${prefix}/apply`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a>
+            <a class="button button-outline" href={`${prefix}/products/catalog`}>{zh ? '搜索产品 →' : 'Search products →'}</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-stats">
+          <div><strong>{products.length.toLocaleString()}+</strong><span>{zh ? '上架产品' : 'catalog items'}</span></div>
+          <div><strong>29K</strong><span>{zh ? '平方英尺仓库' : 'SF warehouse'}</span></div>
+          <div><strong>4</strong><span>{zh ? '配送区域' : 'delivery regions'}</span></div>
+        </div>
+        <span class="scroll-note">{zh ? '向下浏览 ↓' : 'Scroll to explore ↓'}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-intro">
+    <div class="shell split-heading">
+      <div>
+        <p class="eyebrow">{zh ? '一个目录，多种厨房。' : 'One catalog. Many kitchens.'}</p>
+        <h2>{zh ? <>餐饮供应，<br /><em>用心选择。</em></> : <>Foodservice supply,<br /><em>selected with purpose.</em></>}</h2>
+      </div>
+      <div class="split-copy">
+        <p>{zh ? 'Van Harvest 扎根 Charlotte，为餐馆、超市和便利店提供丰富、实用的食品及餐饮用品。' : 'Van Harvest is a Charlotte-based wholesale food distributor serving restaurants, supermarkets and convenience stores across the region.'}</p>
+        <p>{zh ? '新鲜、冷冻、常温食品，一站采购。' : 'Fresh, frozen and shelf-stable foodservice essentials—sourced through one practical partner.'}</p>
+        <a class="text-link" href={`${prefix}/company`}>{zh ? '了解 Van Harvest →' : 'Meet Van Harvest →'}</a>
+      </div>
+    </div>
+  </section>
+
+  <HomeCatalogMarquee lang={lang} localized={localized} />
+
+  <section class="statement">
+    <div class="shell statement-grid">
+      <span>{zh ? '为本地厨房建立信任。' : 'Trust built for local kitchens.'}</span>
+      <p>
+        <strong>{zh ? '29,000 平方英尺仓库' : '29,000 SF warehouse'}</strong> · <strong>{zh ? '配送至 NC、SC、Atlanta, GA 和 Virginia' : 'delivering across NC, SC, Atlanta, GA and Virginia'}</strong> · {zh ? '冷链产品能力 · 餐馆、亚洲厨房和零售客户。' : 'cold-chain capable assortment · restaurants, Asian kitchens and retailers.'}
+      </p>
+    </div>
+  </section>
+
+  <FacilityNetwork lang={lang} />
+
+  <!-- Distinct live seafood media: live seafood tank, lobster/crab holding facility -->
+  <section class="live-seafood-band">
+    <div class="shell live-seafood-grid">
+      <div class="live-seafood-media">
+        <ResponsivePicture src={liveSeafoodImage} alt={zh ? 'Van Harvest 活海鲜水产缸与活蟹活龙虾展示' : 'Van Harvest live seafood holding tanks featuring live crab and lobster'} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="lazy" />
+      </div>
+      <div>
+        <p class="eyebrow eyebrow-light">{zh ? 'Van Harvest 的特色' : 'A Van Harvest difference'}</p>
+        <h2>{zh ? <>活海鲜，<br /><em>按需采购。</em></> : <>Live seafood<br /><em>when it matters.</em></>}</h2>
+        <p>{zh ? '专业海鲜暂养缸设施，为餐馆与超市提供鲜活龙虾、螃蟹及优质水产直配服务。' : 'Dedicated live holding tanks supplying restaurants and markets with live lobster, crab and market-fresh shellfish.'}</p>
+        <a class="button" href={`${prefix}/products/seafood`}>{zh ? '浏览海鲜品类 →' : 'Explore seafood →'}</a>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction lang={lang} localized={localized} />
 </BaseLayout>

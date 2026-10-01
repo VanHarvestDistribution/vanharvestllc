@@ -118,7 +118,7 @@ export const productImages: Record<string, string> = {
 export const productImageFor = (itemId: string) => productImages[itemId];
 export const isYellowLabelProductImage = hasYellowLabelProductImage;
 
-export const categoryPlaceholder = '/images/placeholders/product-category.svg';
+export const categoryPlaceholder = (categoryKey?: string) => '/images/placeholders/product-category.svg';
 
 const brandMatchers: Array<[RegExp, string]> = [
   [/\bSmithfield\b/i, 'Smithfield'], [/\bNongshim\b/i, 'Nongshim'], [/\bKangshifu\b|康师傅/i, 'Kangshifu'],

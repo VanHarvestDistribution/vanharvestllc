@@ -1,10 +1,38 @@
 ---
 import products from '@/data/products.json';
 import { categories } from '@/data/site';
+import ResponsivePicture from '@/components/ResponsivePicture.astro';
+
 interface Props { lang?: 'en' | 'zh' }
 const { lang } = Astro.props;
 const prefix = lang ? `/${lang}` : '';
 const zh = lang === 'zh';
-const counts = products.reduce<Record<string, number>>((result, product) => { result[product.category] = (result[product.category] || 0) + 1; return result; }, {});
+const counts = products.reduce<Record<string, number>>((result, product) => {
+  result[product.category] = (result[product.category] || 0) + 1;
+  return result;
+}, {});
 ---
-<section class="category-gallery" aria-labelledby="shop-by-category"><div class="shell"><div class="category-gallery-heading reveal"><div><p class="eyebrow">{zh ? '按品类浏览' : 'Browse by department'}</p><h2 id="shop-by-category">{zh ? <>从你经营的<br /><em>品类开始。</em></> : <>Start with<br /><em>what you serve.</em></>}</h2></div><p>{zh ? '每个品类都有独立页面，集中展示精选产品及中英文产品信息。' : 'Every department has its own page with selected products and bilingual product information.'}</p></div><div class="category-gallery-grid">{categories.map((category) => <a class="category-gallery-card reveal" href={`${prefix}/products/${category.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${zh ? category.nameZh : category.name}`}><div class="category-gallery-image"><img src={category.image} alt={`${zh ? category.nameZh : category.name} wholesale selection`} loading="lazy" /></div><div class="category-gallery-copy"><h3>{zh ? category.nameZh : category.name}</h3><p>{counts[category.key].toLocaleString()} {zh ? '个产品' : 'products'}</p></div></a>)}</div></div></section>
+<section class="category-gallery" aria-labelledby="shop-by-category">
+  <div class="shell">
+    <div class="category-gallery-heading reveal">
+      <div>
+        <p class="eyebrow">{zh ? '按品类浏览' : 'Browse by department'}</p>
+        <h2 id="shop-by-category">{zh ? <>从你经营的<br /><em>品类开始。</em></> : <>Start with<br /><em>what you serve.</em></>}</h2>
+      </div>
+      <p>{zh ? '每个品类都有独立页面，集中展示精选产品及中英文产品信息。' : 'Every department has its own page with selected products and bilingual product information.'}</p>
+    </div>
+    <div class="category-gallery-grid">
+      {categories.map((category) => (
+        <a class="category-gallery-card reveal" href={`${prefix}/products/${category.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${zh ? category.nameZh : category.name}`}>
+          <div class="category-gallery-image">
+            <ResponsivePicture src={category.image} alt={`${zh ? category.nameZh : category.name} wholesale selection`} sizes="(max-width: 640px) 400px, 600px" loading="lazy" />
+          </div>
+          <div class="category-gallery-copy">
+            <h3>{zh ? category.nameZh : category.name}</h3>
+            <p>{counts[category.key].toLocaleString()} {zh ? '个产品' : 'products'}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

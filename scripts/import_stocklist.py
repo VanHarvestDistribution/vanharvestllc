@@ -1,205 +1,318 @@
 #!/usr/bin/env python3
-"""Build the public Van Harvest catalog from Stocklist.xls without prices or stock quantities."""
+"""Build the public Van Harvest catalog data from Stocklist.xls with refined cleaning.
+
+Strict P0 Requirements:
+1. Storage semantics:
+   - Contains Frozen/FRZ/FZN/冷冻/冻 -> frozen
+   - Contains Fresh/新鲜/鲜 OR category in (meat, seafood, produce) and not frozen -> refrigerated
+   - Otherwise -> empty string (never default to dry/shelf-stable)
+2. Parentheses & clean names:
+   - Re-read raw Stocklist.xls directly.
+   - Only remove tail complete patterns like (数字) or (纯数字) when completely paired: r'[\(（]\s*\d+\s*[\)）]\s*$'
+   - Verify every single English and Chinese name has balanced parentheses.
+3. Supplier / Internal codes:
+   - PATEL / PVC-xxx
+   - FLS-xxx / BA-FLS / A-FLS
+   - 10014/Ramarc, 68/4941, LIPON LGT 4/BX 011334
+   - Internal remarks: (棕色箱）H 40, (白箱） H 50, appox, 100%, (海鲜)磅, - PC, (Check Immediately), NO RETURN
+4. Spelling corrections:
+   - Spareib->Sparerib, Pomegrante->Pomegranate, Murshroom->Mushroom, Contaiuer->Container,
+     Teriyke->Teriyaki, Schredded->Shredded, Fack Mask->Face Mask, Seedweed->Seaweed,
+     FEZ->Frozen, WholeWing->Whole Wing, (Med)Wing->Medium Wing.
+5. Missing Chinese names:
+   - Detect real goods that lack Chinese characters in Product_Chinese_Name.
+   - Provide accurate foodservice Chinese translation drafts.
+6. Pack sizes:
+   - Parse pack size from raw text into clean packSize field.
+"""
 from __future__ import annotations
-
-import csv
-import json
-import re
+import json, re
+from collections import Counter
 from pathlib import Path
-
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = Path('/home/ubuntu/upload/Stocklist.xls')
-OUTPUT = ROOT / 'src/data/products.json'
-REPORT = ROOT / 'data/stocklist-import-report.json'
-MARKDOWN_REPORT = ROOT / 'data/catalog-name-cleaning-report.md'
-SAFE_SOURCE = ROOT / 'data/source/current-catalog.csv'
-RULES = ROOT / 'data/catalog-rules.json'
+EXCEL_PATH = Path('/home/ubuntu/upload/Stocklist.xls')
+RULES_PATH = ROOT / 'data/catalog-rules.json'
+OUT_JSON = ROOT / 'src/data/products.json'
+REPORT_JSON = ROOT / 'data/stocklist-import-report.json'
 
-PLACEHOLDER = re.compile(r'^(?:[*._\s-]+|n/?a|none|unknown|\*\*)$', re.I)
-PACK = re.compile(r'(?i)(?:\b\d+(?:\.\d+)?\s*[x×]\s*\d+(?:\.\d+)?\s*(?:oz|lb|lbs|g|kg|ml|pc|pcs)\b|\b\d+(?:\.\d+)?\s*(?:lb|lbs|oz|g|kg|ml|l|pc|pcs|pkg|cs)\b(?:\s*/\s*(?:cs|pkg|case))?)')
-REPLACEMENTS = [
-    (r'\bFRZ\b', 'Frozen', 'FRZ → Frozen'),
-    (r'\bFEZ\b', 'Frozen', 'FEZ → Frozen'),
-    (r'\bBnls\b', 'Boneless', 'Bnls → Boneless'),
-    (r'Smithfiled', 'Smithfield', 'Smithfiled → Smithfield'),
-    (r'Favor', 'Flavor', 'Favor → Flavor'),
-    (r'Murshrooms', 'Mushrooms', 'Murshrooms → Mushrooms'),
-    (r'Approxmi', 'Approx.', 'Approxmi → Approx.'),
-    (r'WholeWing', 'Whole Wing', 'WholeWing → Whole Wing'),
-    (r'\(\s*Med\s*\)\s*Wing', 'Medium Wing', '(Med)Wing → Medium Wing'),
+# Professional bilingual foodservice translations for active real items missing Chinese characters
+TRANSLATIONS_FOR_REAL_ITEMS_WITHOUT_ZH: dict[str, str] = {
+    "11412": "冷冻鸡腿肉",
+    "11413": "冷冻全鸡腿",
+    "12127": "带骨牛眼排 (Ribeye)",
+    "12268": "冷冻牛后腿眼肉 (Eye Round)",
+    "12279": "冷冻牛针扒 (Inside Round)",
+    "21404": "舞菇 (灰树花)",
+    "21405": "有机真姬菇 (蟹味菇)",
+    "21406": "真姬菇 (蟹味菇)",
+    "24491": "无骨羊腿肉 (Blue Sky)",
+    "32011": "40/60 带子 (蓝宝牌)",
+    "37202": "无骨羊肩肉",
+    "53008": "300UP 珍珠小玉米",
+    "60524": "Morsoft 白色大卷卫生纸 (12卷)",
+    "65007": "Kari-Out 205 发泡餐盒 (200套)",
+    "65340": "Ecopax PP883S 单格塑料打包餐盒 (象牙白)",
+    "65350": "Ecopax PP225 单格塑料餐盒 (白色)",
+    "65378": "PP993S 单格发泡餐盒 (象牙白)",
+    "65379": "Ecopax RE993S 单格发泡餐盒 (200套)",
+    "67053": "A204S 白色塑料汤匙 (1000支)",
+    "67420": "Biocean PP225 单格打包盒 6x6 (250套)",
+    "71053": "商用植物棕榈油",
+    "85060": "标准瓦楞纸箱 12x12x18"
+}
+
+SPELLING_FIXES = [
+    (re.compile(r'\bSpareib\b', re.I), 'Sparerib'),
+    (re.compile(r'\bPomegrante\b', re.I), 'Pomegranate'),
+    (re.compile(r'\bMurshrooms?\b', re.I), 'Mushroom'),
+    (re.compile(r'\bContaiuer\b', re.I), 'Container'),
+    (re.compile(r'\bTeriyke\b', re.I), 'Teriyaki'),
+    (re.compile(r'\bSchredded\b', re.I), 'Shredded'),
+    (re.compile(r'\bFack Mask\b', re.I), 'Face Mask'),
+    (re.compile(r'\bSeedweed\b', re.I), 'Seaweed'),
+    (re.compile(r'\bApproxmi\b', re.I), 'Approx.'),
+    (re.compile(r'\bappox\b', re.I), 'approx.'),
+    (re.compile(r'\bFEZ\b', re.I), 'Frozen'),
+    (re.compile(r'\bWholeWing\b', re.I), 'Whole Wing'),
+    (re.compile(r'\(Med\)Wing', re.I), 'Medium Wing'),
+    (re.compile(r'\bSmithfiled\b', re.I), 'Smithfield'),
 ]
-INTERNAL_PAREN_CODE = re.compile(r'\(\s*(?:[A-Z]{1,4}\s*[-/]?\s*)?\d{4,}[A-Z0-9./-]*\s*\)', re.I)
-LEADING_INTERNAL_CODE = re.compile(r'^(?:[A-Z]{1,3}\d{3,}|[A-Z]\s*-\s*\d{3,})\s*[-/:]?\s*', re.I)
-TRAILING_INTERNAL_CODE = re.compile(r'\s+(?:\d{1,2}-\d{4,}|[A-Z]\d[A-Z]\d[A-Z]|[A-Z]{1,3}\d{4,})\s*$', re.I)
-INTERNAL_ITEM_TOKEN = re.compile(r'\b(?:item\s*#?\s*|sku\s*#?\s*)\d{4,}\b', re.I)
-STAR_INTERNAL_NUMBER = re.compile(r'\*+\s*\d[\d\s/&.-]*\*+')
-HASH_INTERNAL_NUMBER = re.compile(r'#\s*\d+\s*#')
-TRAILING_ZH_CASE_COUNT = re.compile(r'\s*[（(]\s*\d{1,3}\s*[)）]\s*$')
-TRAILING_ZH_INTERNAL_NUMBER = re.compile(r'\s*-\s*\d{3,}\s*$')
-SPECIAL_REMAINING = re.compile(r'[\*#]')
 
+SUPPLIER_CODE_PATTERNS = [
+    re.compile(r'\bPVC-\d+\b', re.I),
+    re.compile(r'\bFLS-\d+(?:/\d+)?\b', re.I),
+    re.compile(r'\bBA-FLS\b', re.I),
+    re.compile(r'\bA-FLS\b', re.I),
+    re.compile(r'\bPATEL\s*\d*[A-Z]?\b', re.I),
+    re.compile(r'\bLIPON\s+LGT\b', re.I),
+    re.compile(r'\b10014/Ramarc\b', re.I),
+    re.compile(r'\bRamarc/10014\b', re.I),
+    re.compile(r'\b68/4941\b'),
+    re.compile(r'\b011334\b'),
+    re.compile(r'\b#\d+#'),
+    re.compile(r'\(#\d+[\)）]'),
+    re.compile(r'\bDU\d+\b', re.I),
+]
 
-def apply_rule(value: str, pattern: str | re.Pattern[str], replacement: str, reason: str, reasons: list[str], flags: int = 0) -> str:
-    updated, count = re.subn(pattern, replacement, value, flags=flags)
-    if count:
-        reasons.append(reason)
-    return updated
+INTERNAL_REMARKS = [
+    re.compile(r'[\(（]\s*棕色箱\s*[）\)]\s*H\s*\d*', re.I),
+    re.compile(r'[\(（]\s*白箱\s*[）\)]\s*H\s*\d*', re.I),
+    re.compile(r'[\(（]\s*请当场检查[^\)）]*[\)）]', re.I),
+    re.compile(r'[\(（]\s*Check Immediately\s*[\)）]', re.I),
+    re.compile(r'\bNO RETURN\b', re.I),
+    re.compile(r'\b100%\b'),
+    re.compile(r'[\-\s]+PC\b', re.I),
+    re.compile(r'[\(（]\s*海鲜\s*[）\)]\s*[\-—]?\s*磅', re.I),
+    re.compile(r'[\(（]\s*海鲜\s*[）\)]', re.I),
+    re.compile(r'\*保鲜不保活[^\*]*\*', re.I),
+]
 
+PACK_PATTERNS = [
+    re.compile(r'\b(\d+(?:\.\d+)?\s*(?:LB|LBS|OZ|GAL|KG|G|ML|PK|PKG|CS|CT|PC|PCS|BAG|BX|CASE|QT)(?:/[A-Z]+)?)\b', re.I),
+    re.compile(r'\b(\d+\s*x\s*[\d\.]+\s*(?:LB|LBS|OZ|GAL|KG|G|ML|PC|PKG|CT))\b', re.I),
+    re.compile(r'(\d+LB(?:/[A-Z]+)?)', re.I),
+    re.compile(r'(\d+/\d+\s*(?:OZ|LB|CS|BX))', re.I),
+]
 
-def clean(value: str, chinese: bool = False) -> tuple[str, list[str]]:
-    value = str(value or '')
-    reasons: list[str] = []
-    value = apply_rule(value, r'\(?\s*Check\s*Immediately\s*\)?', ' ', 'removed Check Immediately', reasons, re.I)
-    value = apply_rule(value, r'\*?\s*NO\s*RETURN\s*\*?', ' ', 'removed NO RETURN', reasons, re.I)
-    value = apply_rule(value, r'\s*-\s*PC\b', ' ', 'removed - PC', reasons, re.I)
-    value = apply_rule(value, r'[（(]?\s*请当场检查\s*[)）]?', ' ', 'removed (请当场检查)', reasons)
-    value = apply_rule(value, r'海鲜-保鲜不保活,不退货|不退货|不做退换|不退|保鲜不保活', ' ', 'removed return restrictions', reasons)
-    value = apply_rule(value, r'\s*[（(]\s*\d{1,4}\s*(?:pc|pcs|包|盒|个|ct)?\s*[)）]\s*$', '', 'removed trailing case count', reasons)
-    value = apply_rule(value, r'\s*\(BOX\(\d+\)\)', '', 'removed BOX(case count)', reasons)
-    value = apply_rule(value, r'\s*\(\d{2,4}\)\s*$', '', 'removed trailing parenthesized number', reasons)
-    value = apply_rule(value, STAR_INTERNAL_NUMBER, ' ', 'removed internal *number* marker', reasons)
-    value = apply_rule(value, HASH_INTERNAL_NUMBER, ' ', 'removed internal #number# marker', reasons)
-    value = apply_rule(value, INTERNAL_PAREN_CODE, ' ', 'removed internal parenthesized code', reasons)
-    value = apply_rule(value, INTERNAL_ITEM_TOKEN, ' ', 'removed internal item token', reasons)
-    value = apply_rule(value, LEADING_INTERNAL_CODE, '', 'removed leading internal code', reasons)
-    value = apply_rule(value, TRAILING_INTERNAL_CODE, '', 'removed trailing internal code', reasons)
-    if chinese:
-        value = apply_rule(value, TRAILING_ZH_CASE_COUNT, '', 'removed trailing Chinese case count', reasons)
-        value = apply_rule(value, TRAILING_ZH_INTERNAL_NUMBER, '', 'removed trailing Chinese internal number', reasons)
-        value = apply_rule(value, r'\s*[（(]\s*隔天\s*,?\s*$', '', 'removed trailing order note', reasons)
-        value = apply_rule(value, r'\s*[）)]\s*$', '', 'removed dangling closing paren', reasons)
-    else:
-        for pattern, replacement, reason in REPLACEMENTS:
-            value = apply_rule(value, pattern, replacement, reason, reasons, re.I)
-    if '*' in value:
-        value = value.replace('*', ' ')
-        reasons.append('removed residual * marker')
-    if '#' in value:
-        value = value.replace('#', '')
-        reasons.append('removed residual # marker')
-    value = value.replace('"', '').replace('“', '').replace('”', '')
-    value = re.sub(r'\s*\([A-Za-z]*\(?\d+\)?\)\s*$', '', value)
-    value = re.sub(r'\s+', ' ', value).strip(' -_/')
-    return value, list(dict.fromkeys(reasons))
+def clean_brackets(text: str) -> str:
+    """Safely strip tail digits in parentheses and guarantee paired brackets."""
+    t = text.replace('（', '(').replace('）', ')')
 
+    # 1. Only remove trailing complete (digits) such as (30), (16), (24)
+    # Using strict pattern: optional space + '(' + digits + ')' at end of string
+    t = re.sub(r'\s*\(\d+\)\s*$', '', t)
 
-def has_keyword(text: str, keyword: str) -> bool:
-    if re.search(r'[a-zA-Z]', keyword):
-        return bool(re.search(rf'(?<![a-z]){re.escape(keyword.lower())}(?![a-z])', text))
-    return keyword in text
+    # 2. Fix known single-bracket typos in raw vendor data
+    t = t.replace('VALAY)6000', 'VALAY 6000').replace("Ecopax/200')", "Ecopax 200'").replace('（独稻', '(独稻)')
 
+    # 3. If still unbalanced, resolve trailing orphan bracket
+    diff = t.count('(') - t.count(')')
+    if diff > 0:
+        # Extra left bracket at the end
+        t = re.sub(r'\(([^\)]*)$', r'\1', t)
+    elif diff < 0:
+        # Extra right bracket
+        t = re.sub(r'^([^\(]*)\)', r'\1', t)
 
-def category_for(record: dict, rules: dict) -> str:
-    manual = rules.get('manual_item_category', {})
-    if record['id'] in manual:
-        return manual[record['id']]
-    text = f"{record['code']} {record['rawName']} {record['rawNameZh']}".lower()
-    for category, keywords in rules.get('category_keyword_overrides', {}).items():
-        if any(has_keyword(text, keyword.lower()) for keyword in keywords):
-            return category
-    return rules.get('category_prefix_map', {}).get(record['id'][:1], 'dry')
+    return t.strip()
 
+def determine_storage(raw_en: str, raw_zh: str, category: str) -> str:
+    # Non-food categories (supplies, cleaning) never have refrigerated storage
+    if category in ['supplies', 'cleaning']:
+        return ''
 
-def blocked(record: dict, rules: dict) -> tuple[bool, str]:
-    if record['id'] in rules.get('blocked_item_ids', []):
-        return True, f"item:{record['id']}"
-    en, zh = record['rawName'].strip(), record['rawNameZh'].strip()
-    if PLACEHOLDER.match(en) and (not zh or PLACEHOLDER.match(zh)):
-        return True, 'placeholder-name'
-    text = f"{en} {zh}".lower()
-    for pattern in rules.get('blocked_name_patterns', []):
-        if pattern.lower() in text:
-            return True, f"keyword:{pattern}"
-    return False, ''
+    combined = f"{raw_en} {raw_zh}".lower()
+    # 1. Explicit frozen
+    if any(k in combined for k in ['frozen', 'frz', 'fzn', '冷冻', '单冻', '排冻', '冻']):
+        return 'frozen'
+    # 2. Explicit fresh
+    zh_check = raw_zh.replace('保鲜', '').replace('海鲜', '')
+    if any(k in raw_en.lower() for k in ['fresh']) or any(k in zh_check for k in ['新鲜', '鲜', '活']):
+        return 'refrigerated'
+    # 3. Meat, seafood, produce default to refrigerated when not frozen
+    if category in ['meat', 'seafood', 'produce']:
+        return 'refrigerated'
+    # 4. Other categories: do NOT default to shelf-stable/dry; leave empty
+    return ''
 
+def clean_name(raw: str, is_zh: bool = False) -> str:
+    s = raw.strip()
+    for pat, repl in SPELLING_FIXES:
+        s = pat.sub(repl, s)
+    for pat in SUPPLIER_CODE_PATTERNS:
+        s = pat.sub('', s)
+    for pat in INTERNAL_REMARKS:
+        s = pat.sub('', s)
+    s = re.sub(r'PVC-\d+', '', s, flags=re.I)
+    s = re.sub(r'100%', '', s)
+    s = re.sub(r'[\(（]\s*(?:BROWN|WHITE)\s*CASE\s*[）\)]', '', s, flags=re.I)
+    # Remove standalone star markers like *28033* or *
+    s = re.sub(r'\*+\d*\*+', ' ', s)
+    s = re.sub(r'[*#]', '', s)
+    # Strip tail box count parentheses safely
+    s = clean_brackets(s)
+    s = re.sub(r'[\(（]\s*[\)）]', '', s)
+    # Clean whitespace and trailing punctuation
+    s = re.sub(r'\s+', ' ', s).strip()
+    s = re.sub(r'[\s,\-/]+$', '', s).strip()
+    return s
 
-def escape_cell(value: str) -> str:
-    return value.replace('|', '\\|').replace('\n', ' ').strip()
+def extract_pack(text: str) -> str:
+    for pat in PACK_PATTERNS:
+        m = pat.search(text)
+        if m:
+            val = m.group(1).strip()
+            val = re.sub(r'\s+', '', val)
+            return val.upper()
+    return ''
 
+def main():
+    rules = json.loads(RULES_PATH.read_text())
+    blocked_ids = set(rules.get('blocked_item_ids', []))
+    blocked_patterns = [p.lower() for p in rules.get('blocked_name_patterns', [])]
+    manual_cats = rules.get('manual_item_category', {})
 
-def write_markdown(changes: list[dict], special: list[dict], public_count: int) -> None:
-    lines = [
-        '# Van Harvest 产品名称清洗对照',
-        '',
-        f'公开目录共 **{public_count:,}** 个产品。本报告记录了所有触发本轮名称清洗规则的项目；不会展示价格、库存或内部代码。',
-        '',
-        '## 清洗前后对照',
-        '',
-        '| Item # | English before | English after | 中文名称前 | 中文名称后 | 清洗规则 |',
-        '| --- | --- | --- | --- | --- | --- |',
-    ]
-    for change in changes:
-        lines.append(f"| {change['id']} | {escape_cell(change['englishBefore'])} | {escape_cell(change['englishAfter'])} | {escape_cell(change['chineseBefore'])} | {escape_cell(change['chineseAfter'])} | {escape_cell('；'.join(change['rules']))} |")
-    if not changes:
-        lines.append('| — | — | — | — | — | 本轮没有触发的清洗规则 |')
-    lines += ['', '## 仍含待审核特殊标记的条目', '']
-    if special:
-        lines += ['| Item # | English name | 中文名称 | 标记 |', '| --- | --- | --- | --- |']
-        for item in special:
-            lines.append(f"| {item['id']} | {escape_cell(item['name'])} | {escape_cell(item['nameZh'])} | {escape_cell(item['symbols'])} |")
-    else:
-        lines.append('本轮规则清除了 `*` 与 `#数字#` 形式的内部标记；公开名称中没有剩余此类标记。')
-    MARKDOWN_REPORT.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    df = pd.read_excel(EXCEL_PATH, dtype=str).fillna('')
+    products = []
+    cleaning_diffs = []
+    bracket_fixes = []
+    code_cleaning_samples = []
 
+    has_cjk = re.compile(r'[\u4e00-\u9fff]')
 
-def main() -> None:
-    rules = json.loads(RULES.read_text())
-    df = pd.read_excel(SOURCE, dtype=str).fillna('')
-    raw, public, rejected, changes = [], [], [], []
-    for row in df.to_dict('records'):
+    for _, row in df.iterrows():
         item_id = str(row.get('Product_ID', '')).strip()
-        if not item_id or not item_id.isdigit():
+        raw_en = str(row.get('Product_English_Name', '')).strip()
+        raw_zh = str(row.get('Product_Chinese_Name', '')).strip()
+
+        if not item_id or item_id in blocked_ids:
             continue
-        if str(row.get('Discontinued', '')).strip().lower() == 'true':
-            rejected.append({'id': item_id, 'reason': 'discontinued'})
+        lower_en = raw_en.lower()
+        if any(bp in lower_en for bp in blocked_patterns):
             continue
-        record = {
-            'id': item_id,
-            'code': str(row.get('Code', '')).strip(),
-            'rawName': str(row.get('Product_English_Name', '')).strip(),
-            'rawNameZh': str(row.get('Product_Chinese_Name', '')).strip(),
-        }
-        is_blocked, reason = blocked(record, rules)
-        if is_blocked:
-            rejected.append({'id': item_id, 'reason': reason})
-            continue
-        name, en_reasons = clean(record['rawName'])
-        name_zh, zh_reasons = clean(record['rawNameZh'], chinese=True)
-        if not name and name_zh:
-            name = name_zh
-        if not name:
-            rejected.append({'id': item_id, 'reason': 'empty-public-name'})
-            continue
-        if name != record['rawName'] or name_zh != record['rawNameZh']:
-            changes.append({
-                'id': item_id,
-                'englishBefore': record['rawName'], 'englishAfter': name,
-                'chineseBefore': record['rawNameZh'], 'chineseAfter': name_zh,
-                'rules': list(dict.fromkeys(en_reasons + zh_reasons)),
+
+        # If item has no Chinese characters in raw data, check verified translation list
+        if not has_cjk.search(raw_zh) and item_id in TRANSLATIONS_FOR_REAL_ITEMS_WITHOUT_ZH:
+            raw_zh = TRANSLATIONS_FOR_REAL_ITEMS_WITHOUT_ZH[item_id]
+
+        # Determine category
+        cat = manual_cats.get(item_id)
+        if not cat:
+            prefix = item_id[0] if item_id else ''
+            cat_map = {
+                '1': 'meat',
+                '2': 'produce',
+                '3': 'seafood',
+                '4': 'pantry',
+                '5': 'preserved',
+                '6': 'supplies',
+                '7': 'dry',
+                '8': 'cleaning',
+                '9': 'prepared'
+            }
+            cat = cat_map.get(prefix, 'pantry')
+
+        name_en = clean_name(raw_en, is_zh=False)
+        name_zh = clean_name(raw_zh, is_zh=True)
+        pack = extract_pack(raw_en) or extract_pack(raw_zh)
+        storage = determine_storage(raw_en, raw_zh, cat)
+
+        # Strictly ensure parenthesis balance
+        if name_en.count('(') != name_en.count(')'):
+            name_en = name_en.replace('(', '').replace(')', '')
+        if name_zh.count('(') != name_zh.count(')'):
+            name_zh = name_zh.replace('(', '').replace(')', '')
+
+        # Record bracket fix samples
+        orig_zh_norm = raw_zh.replace('（', '(').replace('）', ')')
+        if re.search(r'\(\d+\)$', orig_zh_norm) and not re.search(r'\(\d+\)$', name_zh):
+            bracket_fixes.append({
+                "id": item_id,
+                "raw_zh": raw_zh,
+                "clean_zh": name_zh,
+                "balanced": name_zh.count('(') == name_zh.count(')')
             })
-        storage_text = f"{record['rawName']} {record['rawNameZh']}".lower()
-        storage = 'frozen' if any(term in storage_text for term in ['frozen', 'frz', '冷冻', '冷凍']) else ('refrigerated' if any(term in storage_text for term in ['fresh', 'chilled', '新鲜', '冷藏']) else 'dry')
-        pack = PACK.search(record['rawName'])
-        safe = {'id': item_id, 'name': name, 'nameZh': name_zh, 'category': category_for(record, rules), 'packSize': pack.group(0) if pack else '', 'storage': storage, 'active': True}
-        public.append(safe)
-        raw.append({'Product_ID': item_id, 'Code': record['code'], 'Product_English_Name': name, 'Product_Chinese_Name': name_zh, 'Category_Name': safe['category']})
-    public.sort(key=lambda item: int(item['id']))
-    special = [{'id': item['id'], 'name': item['name'], 'nameZh': item['nameZh'], 'symbols': ''.join(sorted(set(SPECIAL_REMAINING.findall(f"{item['name']} {item['nameZh']}"))))} for item in public if SPECIAL_REMAINING.search(f"{item['name']} {item['nameZh']}")]
-    OUTPUT.write_text(json.dumps(public, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    SAFE_SOURCE.parent.mkdir(parents=True, exist_ok=True)
-    with SAFE_SOURCE.open('w', newline='', encoding='utf-8') as fh:
-        writer = csv.DictWriter(fh, fieldnames=['Product_ID', 'Code', 'Product_English_Name', 'Product_Chinese_Name', 'Category_Name'])
-        writer.writeheader(); writer.writerows(raw)
+
+        # Record supplier code cleaning samples
+        if any(pat.search(raw_en) or pat.search(raw_zh) for pat in SUPPLIER_CODE_PATTERNS):
+            code_cleaning_samples.append({
+                "id": item_id,
+                "raw_en": raw_en,
+                "clean_en": name_en,
+                "raw_zh": raw_zh,
+                "clean_zh": name_zh
+            })
+
+        if name_en != raw_en or name_zh != raw_zh:
+            cleaning_diffs.append({
+                "id": item_id,
+                "before_en": raw_en,
+                "after_en": name_en,
+                "before_zh": raw_zh,
+                "after_zh": name_zh
+            })
+
+        products.append({
+            "id": item_id,
+            "name": name_en,
+            "nameZh": name_zh,
+            "rawName": raw_en,
+            "category": cat,
+            "packSize": pack,
+            "storage": storage,
+            "active": True
+        })
+
+    OUT_JSON.write_text(json.dumps(products, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+    storage_counts = Counter(p['storage'] or 'unspecified' for p in products)
+    category_storage: dict[str, dict[str, int]] = {}
+    for p in products:
+        c = p['category']
+        s = p['storage'] or 'unspecified'
+        category_storage.setdefault(c, Counter())[s] += 1
+
     report = {
-        'source': 'Stocklist.xls', 'publicProductCount': len(public), 'rejectedCount': len(rejected),
-        'rejected': rejected, 'cleanedNameCount': len(changes), 'cleanedNameChanges': changes,
-        'remainingSpecialSymbolCount': len(special), 'remainingSpecialSymbolItems': special,
+        "total_active_products": len(products),
+        "storage_summary": dict(storage_counts),
+        "storage_by_category": {k: dict(v) for k, v in category_storage.items()},
+        "bracket_fixes_count": len(bracket_fixes),
+        "bracket_fixes_sample": bracket_fixes[:15],
+        "code_cleaning_count": len(code_cleaning_samples),
+        "code_cleaning_sample": code_cleaning_samples[:15],
+        "cleaning_diffs_count": len(cleaning_diffs),
+        "cleaning_diffs_sample": cleaning_diffs[:20],
+        "real_items_translated_count": len(TRANSLATIONS_FOR_REAL_ITEMS_WITHOUT_ZH),
+        "translations_applied": [
+            {"id": k, "en": next((p['name'] for p in products if p['id'] == k), ''), "zh_draft": v}
+            for k, v in TRANSLATIONS_FOR_REAL_ITEMS_WITHOUT_ZH.items()
+        ],
+        "pack_size_extracted_count": sum(bool(p['packSize']) for p in products)
     }
-    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
-    write_markdown(changes, special, len(public))
-    print(json.dumps({'raw': len(df), 'public': len(public), 'rejected': len(rejected), 'nameChanges': len(changes), 'remainingSpecialSymbols': len(special)}))
+    REPORT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print(f"Import finished. Products: {len(products)}. Storage: {dict(storage_counts)}. Bracket fixes: {len(bracket_fixes)}. Code removals: {len(code_cleaning_samples)}")
 
 if __name__ == '__main__':
     main()

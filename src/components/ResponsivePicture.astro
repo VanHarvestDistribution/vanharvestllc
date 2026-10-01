@@ -1,0 +1,40 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  class?: string;
+  imgClass?: string;
+}
+
+const {
+  src,
+  alt,
+  sizes = '(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px',
+  loading = 'lazy',
+  class: className,
+  imgClass
+} = Astro.props;
+
+// Extract filename without extension
+const match = src.match(/([^/]+)\.(?:webp|png|jpg|jpeg)$/i);
+const baseName = match ? match[1] : '';
+
+const hasVariants = Boolean(baseName);
+const avifSrcset = hasVariants
+  ? `/images/responsive/${baseName}-400w.avif 400w, /images/responsive/${baseName}-800w.avif 800w, /images/responsive/${baseName}-1200w.avif 1200w`
+  : undefined;
+const webpSrcset = hasVariants
+  ? `/images/responsive/${baseName}-400w.webp 400w, /images/responsive/${baseName}-800w.webp 800w, /images/responsive/${baseName}-1200w.webp 1200w`
+  : undefined;
+---
+{hasVariants ? (
+  <picture class={className}>
+    <source type="image/avif" srcset={avifSrcset} sizes={sizes} />
+    <source type="image/webp" srcset={webpSrcset} sizes={sizes} />
+    <img src={src} alt={alt} loading={loading} class={imgClass} decoding="async" />
+  </picture>
+) : (
+  <img src={src} alt={alt} loading={loading} class={className || imgClass} decoding="async" />
+)}

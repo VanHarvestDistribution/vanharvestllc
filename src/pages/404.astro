@@ -1,6 +1,40 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import '@/styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 ---
-<BaseLayout title="Page Not Found | Van Harvest Distribution" description="The requested Van Harvest Distribution page could not be found.">
-  <section class="inner-hero" style="min-height:70svh"><div class="shell inner-grid"><div><p class="eyebrow">404 · Page not found</p><h1>Let’s get you<br /><em>back on track.</em></h1></div><div class="inner-copy"><p>The page you requested is not available. Return home or continue to the product catalog.</p><a class="button" href="/products">Browse products →</a></div></div></section>
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#102B52" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Page Not Found (404) | Van Harvest Distribution</title>
+  </head>
+  <body class="inner-page">
+    <Header active="" lang="en" />
+    <main id="main">
+      <section class="inner-hero" style="min-height:70svh">
+        <div class="shell inner-grid">
+          <div>
+            <p class="eyebrow">404 · Page not found</p>
+            <h1>Let’s get you<br /><em>back on track.</em></h1>
+          </div>
+          <div class="inner-copy">
+            <p>The page you requested is not available. Return home or continue to the wholesale product catalog.</p>
+            <div class="hero-actions" style="margin-top:24px">
+              <a class="button" href="/">Return to home →</a>
+              <a class="button button-outline" style="color:var(--navy);border-color:var(--line)" href="/products">Browse products →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

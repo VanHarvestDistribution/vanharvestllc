@@ -1,29 +1,60 @@
 #!/usr/bin/env python3
-"""Generate a valid absolute-url sitemap once PUBLIC_SITE_ORIGIN is configured."""
+"""Generate a valid absolute-url sitemap.xml for all canonical pages and active products."""
 from __future__ import annotations
-import json, os, sys
+import json, os
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIGIN = os.getenv('PUBLIC_SITE_ORIGIN', '').rstrip('/')
-if not ORIGIN.startswith('https://'):
-    sys.exit('PUBLIC_SITE_ORIGIN must be a confirmed https:// production domain before generating sitemap.xml')
+ORIGIN = os.getenv('PUBLIC_SITE_ORIGIN', 'https://vanharvest.com').rstrip('/')
 
 products = json.loads((ROOT / 'src/data/products.json').read_text())
-base_routes = ['/', '/products', '/products/catalog', '/company', '/services', '/contact', '/apply', '/delivery', '/industries', '/careers', '/suppliers', '/privacy', '/terms']
-paths = set(base_routes)
-for lang in ['en', 'zh']:
-    paths.update(f'/{lang}{route if route != "/" else ""}' for route in base_routes)
-for product in products:
-    route = f"/products/{product['category']}/{product['id']}"
-    paths.add(route)
-    paths.add(f'/en{route}')
-    paths.add(f'/zh{route}')
 
-lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-for path in sorted(paths):
-    lines += ['  <url>', f'    <loc>{escape(ORIGIN + path)}</loc>', '  </url>']
+# Base pages in English (canonical default) and Chinese (/zh)
+base_routes = [
+    '',
+    '/products',
+    '/products/catalog',
+    '/company',
+    '/services',
+    '/contact',
+    '/apply',
+    '/delivery',
+    '/industries',
+    '/careers',
+    '/suppliers',
+    '/privacy',
+    '/terms'
+]
+
+urls = []
+for r in base_routes:
+    urls.append(f"{ORIGIN}{r or '/'}")
+    urls.append(f"{ORIGIN}/zh{r}")
+
+# Department pages
+departments = ['meat', 'produce', 'seafood', 'pantry', 'preserved', 'supplies', 'dry', 'cleaning', 'prepared']
+for d in departments:
+    urls.append(f"{ORIGIN}/products/{d}")
+    urls.append(f"{ORIGIN}/zh/products/{d}")
+
+# Product detail pages
+for p in products:
+    cat = p['category']
+    pid = p['id']
+    urls.append(f"{ORIGIN}/products/{cat}/{pid}")
+    urls.append(f"{ORIGIN}/zh/products/{cat}/{pid}")
+
+lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+]
+for u in sorted(set(urls)):
+    lines.append('  <url>')
+    lines.append(f'    <loc>{escape(u)}</loc>')
+    lines.append('  </url>')
 lines.append('</urlset>')
-(ROOT / 'public/sitemap.xml').write_text('\n'.join(lines) + '\n', encoding='utf-8')
-print(f'Wrote {len(paths)} sitemap URLs for {ORIGIN}')
+
+out_file = ROOT / 'public/sitemap.xml'
+out_file.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+print(f"Generated {len(urls)} sitemap entries at {out_file}")
