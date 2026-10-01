@@ -19,7 +19,7 @@
   background-size:cover;
   opacity:0;
   transition:opacity 1.2s ease-in-out;
-  animation:hero-fade-sequence 24s infinite;
+  animation:hero-fade-sequence 24s linear infinite both;
 }
 .home-hero-slide:nth-child(1){animation-delay:0s}
 .home-hero-slide:nth-child(2){animation-delay:6s}
@@ -40,17 +40,13 @@
   .home-hero-slide:first-child{opacity:1}
 }
 
-/* Ensure above-the-fold content shows instantly */
-main > section:first-of-type,
-main > section:first-of-type *,
-.home-hero,
-.home-hero *,
-.inner-hero,
-.inner-hero *,
-.category-detail-hero,
-.category-detail-hero *,
-.product-detail-clean-hero,
-.product-detail-clean-hero * {
+/* Ensure only reveal-marked first-screen content shows instantly.
+   Never target all descendants here: hero-slide animation must remain active. */
+.home-hero .reveal,
+.inner-hero .reveal,
+.category-detail-hero .reveal,
+.product-detail-clean-hero .reveal,
+.catalog-search-hero .reveal {
   animation: none !important;
   opacity: 1 !important;
   transform: none !important;

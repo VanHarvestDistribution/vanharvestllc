@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CallToAction from '@/components/CallToAction.astro';
 import productsData from '@/data/products.json';
-import { productImageFor } from '@/data/productImages';
+import { yellowLabelProductImages } from '@/data/yellowLabelProductImages';
 import { curatedCategoryFeaturedIds } from '@/data/curatedCategoryFeatured';
 import ResponsivePicture from '@/components/ResponsivePicture.astro';
 
@@ -11,31 +11,14 @@ const { category, lang = 'en', localized = false } = Astro.props;
 const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
 const products = (productsData as any[]).filter((product) => product.category === category.key);
-
 const configuredIds = curatedCategoryFeaturedIds[category.key] || [];
-const curatedItems: any[] = [];
-for (const id of configuredIds) {
-  const match = products.find((p) => p.id === id);
-  if (match) curatedItems.push(match);
-}
-// Add remaining items if needed to satisfy 8-12 items
-if (curatedItems.length < 8) {
-  for (const item of products) {
-    if (!curatedItems.some((c) => c.id === item.id)) {
-      curatedItems.push(item);
-      if (curatedItems.length >= 10) break;
-    }
-  }
-}
 
-const usedImages = new Set<string>();
-const featured: Array<{ product: any; image?: string }> = [];
-for (const product of curatedItems) {
-  const source = productImageFor(product.id);
-  const image = source && !usedImages.has(source) ? source : undefined;
-  if (image) usedImages.add(image);
-  featured.push({ product, image });
-}
+// Featured Products intentionally use only user-supplied, conservatively verified
+// yellow-label warehouse photos. There is no generic-image fallback here.
+const featured = configuredIds
+  .map((id) => products.find((product) => product.id === id))
+  .filter((product): product is any => Boolean(product && yellowLabelProductImages[product.id]))
+  .map((product) => ({ product, image: yellowLabelProductImages[product.id] }));
 
 const name = zh ? category.nameZh : category.name;
 const title = zh ? `${name}批发产品 | Van Harvest` : `${category.name} Wholesale Products | Van Harvest`;
@@ -56,23 +39,25 @@ const description = zh ? `浏览 Van Harvest ${name}的精选产品、中英文�
     </div>
   </section>
 
-  <section class="featured-products">
-    <div class="shell">
-      <div class="featured-products-heading">
-        <div><p class="eyebrow">{zh ? '精选产品' : 'Featured products'}</p><h2>{zh ? <>精选<br /><em>产品。</em></> : <>Featured<br /><em>products.</em></>}</h2></div>
-        <p>{zh ? '精选代表性常备条目，方便快速了解品类；更多规格可在完整目录中检索。' : 'A curated selection of representative items. Find full specifications and item numbers in our catalog.'}</p>
+  {featured.length > 0 && (
+    <section class="featured-products">
+      <div class="shell">
+        <div class="featured-products-heading">
+          <div><p class="eyebrow">{zh ? '精选产品' : 'Featured products'}</p><h2>{zh ? <>精选<br /><em>产品。</em></> : <>Featured<br /><em>products.</em></>}</h2></div>
+          <p>{zh ? '精选代表性常备条目，方便快速了解品类；更多规格可在完整目录中检索。' : 'A curated selection of representative items. Find full specifications and item numbers in our catalog.'}</p>
+        </div>
+        <div class="featured-product-grid">
+          {featured.map(({ product, image }) => (
+            <a class="featured-product-card featured-product-card-with-image" href={`${prefix}/products/${category.key}/${product.id}`}>
+              <div class="featured-product-thumb"><img src={image} alt={`${product.name} product photo`} loading="lazy" /></div>
+              <div><small>Item {product.id} · {product.storage || '—'}</small><h3>{product.name}</h3>{product.nameZh && <p class="product-zh">{product.nameZh}</p>}{product.packSize && <p>{product.packSize}</p>}</div>
+              <b aria-hidden="true">↗</b>
+            </a>
+          ))}
+        </div>
+        <div class="featured-products-footer"><p>{zh ? `可在完整目录中按产品编号、英文名或中文名搜索全部${name}。` : `Search the full ${category.name} selection by Item #, English name or Chinese name.`}</p><a class="text-link" href={`${prefix}/products/catalog?category=${category.key}#catalog`}>{zh ? '查看完整品类 →' : 'View full category →'}</a></div>
       </div>
-      <div class="featured-product-grid">
-        {featured.map(({ product, image }) => (
-          <a class="featured-product-card featured-product-card-with-image" href={`${prefix}/products/${category.key}/${product.id}`}>
-            {image ? <div class="featured-product-thumb"><img src={image} alt={`${product.name} product photo`} loading="lazy" /></div> : <div class="featured-product-thumb featured-product-placeholder" role="img" aria-label={zh ? `${name} 分类产品` : `${name} category item`}></div>}
-            <div><small>Item {product.id} · {product.storage || '—'}</small><h3>{product.name}</h3>{product.nameZh && <p class="product-zh">{product.nameZh}</p>}{product.packSize && <p>{product.packSize}</p>}</div>
-            <b aria-hidden="true">↗</b>
-          </a>
-        ))}
-      </div>
-      <div class="featured-products-footer"><p>{zh ? `可在完整目录中按产品编号、英文名或中文名搜索全部${name}。` : `Search the full ${category.name} selection by Item #, English name or Chinese name.`}</p><a class="text-link" href={`${prefix}/products/catalog?category=${category.key}#catalog`}>{zh ? '查看完整品类 →' : 'View full category →'}</a></div>
-    </div>
-  </section>
+    </section>
+  )}
   <CallToAction lang={lang} localized={localized} />
 </BaseLayout>
