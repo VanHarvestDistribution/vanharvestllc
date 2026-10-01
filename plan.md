@@ -53,3 +53,8 @@ TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由
 ## 参考图片研究
 
 已检查 Ideal Meat Shop 的肉类产品摄影和 US Foods 产品分类结构。Ideal Meat 图片 CDN 对直接下载请求返回 403，US Foods 产品页当前返回 CloudFront 403，因此不将外部热链或未经固化的图片写入生产资源；站点继续使用本地原创品类摄影，待用户提供正式产品图片后替换。
+
+
+## 用户资料更新（2026-10-01）
+
+办公室电话已按确认更新为 `(704) 392-8717`，办公室邮箱暂用 `vanharvestoffice2019@gmail.com`。用户上传 PDF 中不含经理姓名的 VH / Van Harvest Distribution 标识已裁切为本地 Logo 资源。FoodMart 草稿中的五张真实产品促销图片已固化并接入 `/products` 产品目录展示区；图片已裁掉两侧黑色留白，后续可继续追加用户提供的真实产品图片。

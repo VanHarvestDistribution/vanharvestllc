@@ -1,0 +1,10 @@
+---
+const products = [
+  { name: 'Sriracha Hot Sauce', localName: '红公鸡是拉差', image: '/images/products/real/sriracha-promotion.jpg', category: 'Sauces & seasonings' },
+  { name: 'Foodservice Takeout Containers', localName: '黑白打包盒', image: '/images/products/real/takeout-containers-promotion.jpg', category: 'Restaurant supplies' },
+  { name: 'Guava', localName: '红心芭乐', image: '/images/products/real/guava-promotion.jpg', category: 'Fresh produce' },
+  { name: 'Hoisin Sauce', localName: '李锦记海鲜酱', image: '/images/products/real/hoisin-sauce-promotion.jpg', category: 'Sauces & seasonings' },
+  { name: 'Florida Longan', localName: '佛州龙眼', image: '/images/products/real/longan-promotion.jpg', category: 'Fresh produce' }
+];
+---
+<section class="real-product-highlights"><div class="shell"><div class="real-products-heading reveal"><div><p class="eyebrow">From the current assortment</p><h2>Real products.<br /><em>Real supply.</em></h2></div><p>Selected product photography from the Van Harvest working assortment. More verified product images can be added as the catalog grows.</p></div><div class="real-product-grid">{products.map((product, index) => <article class="real-product-card reveal"><a href={product.image} target="_blank" rel="noopener noreferrer" aria-label={`View ${product.name} product photo`}><img src={product.image} alt={`${product.name} ${product.localName} product`} loading="lazy" /><span>View image ↗</span></a><div><small>{String(index + 1).padStart(2, '0')} · {product.category}</small><h3>{product.name}</h3><p>{product.localName}</p></div></article>)}</div></div></section>

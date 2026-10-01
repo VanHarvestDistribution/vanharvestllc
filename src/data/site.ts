@@ -1,6 +1,7 @@
 export const contact = {
-  phoneDisplay: '(704) 392-8718',
-  phoneHref: '+17043928718',
+  phoneDisplay: '(704) 392-8717',
+  phoneHref: '+17043928717',
+  officeEmail: 'vanharvestoffice2019@gmail.com',
   address: '5226 Terminal St, Charlotte, NC 28208',
   mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=5226+Terminal+St%2C+Charlotte%2C+NC+28208',
   mapsEmbedUrl: 'https://www.google.com/maps?q=5226+Terminal+St%2C+Charlotte%2C+NC+28208&output=embed'

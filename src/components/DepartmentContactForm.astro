@@ -30,7 +30,7 @@ const departments = [
       const subject = `${department} inquiry from ${data.get('name')}`;
       const body = [`Name: ${data.get('name')}`, `Company: ${data.get('company') || 'Not provided'}`, `Email: ${data.get('email')}`, `Phone: ${data.get('phone') || 'Not provided'}`, '', String(data.get('message') || '')].join('\n');
       if (!mailbox) {
-        status.textContent = 'This department email is being configured. Please call (704) 392-8718 for immediate help.';
+        status.textContent = 'This department email is being configured. Please call (704) 392-8717 for immediate help.';
         status.classList.add('is-pending');
         return;
       }
