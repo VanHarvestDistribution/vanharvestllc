@@ -1,6 +1,7 @@
 export const contact = {
   phoneDisplay: '(704) 392-8717',
   phoneHref: '+17043928717',
+  salesEmail: 'ordersvhd@gmail.com',
   officeEmail: 'vanharvestoffice2019@gmail.com',
   address: '5226 Terminal St, Charlotte, NC 28208',
   mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=5226+Terminal+St%2C+Charlotte%2C+NC+28208',
@@ -8,15 +9,21 @@ export const contact = {
 };
 
 export const categories = [
-  { key: 'meat', prefix: '1', index: '01', name: 'Meat & Poultry', short: 'Fresh and frozen pork, beef, chicken, lamb and specialty cuts.', image: '/images/category-meat.webp', featuredIds: ['10104', '12023', '12110', '24324'] },
-  { key: 'produce', prefix: '2', index: '02', name: 'Produce & Fruit', short: 'Fresh vegetables, mushrooms, specialty greens, tropical fruit and staples.', image: '/images/category-produce.webp', featuredIds: ['20000', '20100', '20410', '21389'] },
-  { key: 'seafood', prefix: '3', index: '03', name: 'Seafood', short: 'Shrimp, fish, shellfish and frozen seafood for professional kitchens.', image: '/images/category-seafood.webp', featuredIds: ['30040', '32008', '33140', '33608'] },
-  { key: 'pantry', prefix: '4', index: '04', name: 'Sauces & Seasonings', short: 'Cooking wines, sauces, spices, oils and flavor-building essentials.', image: '/images/category-pantry.webp', featuredIds: ['41130', '41012', '42200', '43225'] },
-  { key: 'preserved', prefix: '5', index: '05', name: 'Canned & Preserved', short: 'Bamboo shoots, water chestnuts, mushrooms and shelf-stable ingredients.', image: '/images/category-preserved.webp', featuredIds: ['21277', '25025', '25102', '25427'] },
-  { key: 'supplies', prefix: '6', index: '06', name: 'Restaurant Supplies', short: 'Foodservice film, foil, paper goods, disposables and operational supplies.', image: '/images/category-supplies.webp', featuredIds: ['60000', '60020', '60105', '60320'] },
-  { key: 'dry', prefix: '7', index: '07', name: 'Rice, Noodles & Dry Goods', short: 'Rice, noodles, flours, grains and pantry foundations in wholesale formats.', image: '/images/category-dry.webp', featuredIds: ['73332', '74074', '74225', '74500'] },
-  { key: 'cleaning', prefix: '8', index: '08', name: 'Cleaning & Janitorial', short: 'Commercial cleaning products, brushes, mops and maintenance essentials.', image: '/images/category-cleaning.webp', featuredIds: ['80001', '80004', '80100', '80115'] },
-  { key: 'prepared', prefix: '9', index: '09', name: 'Frozen, Prepared & Snacks', short: 'Frozen dim sum, appetizers, drinks, bakery treats and ready-to-cook specialties.', image: '/images/category-prepared.webp', featuredIds: ['25521', '25943', '92641', '92842'] }
+  { key: 'meat', prefix: '1', index: '01', name: 'Meat & Poultry', short: 'Fresh and frozen pork, beef, chicken, lamb and specialty cuts.', image: '/images/category-meat.webp', featuredIds: ['10022', '10089', '10087', '10033', '10109', '11042', '11113', '11321', '11358', '12152', '12151', '12097'] },
+  { key: 'produce', prefix: '2', index: '02', name: 'Produce & Fruit', short: 'Fresh vegetables, mushrooms, specialty greens, tropical fruit and staples.', image: '/images/category-produce.webp', featuredIds: ['22001', '22011', '22051', '22031', '21408', '21162', '21163', '21384', '22307', '21618', '22149', '22135'] },
+  { key: 'seafood', prefix: '3', index: '03', name: 'Seafood', short: 'Shrimp, fish, shellfish and frozen seafood for professional kitchens.', image: '/images/category-seafood.webp', featuredIds: ['36101', '36102', '36103', '36107', '36109', '36248', '36340', '37101', '37102', '37106', '37600', '37601'] },
+  { key: 'pantry', prefix: '4', index: '04', name: 'Sauces & Seasonings', short: 'Cooking wines, sauces, spices, oils and flavor-building essentials.', image: '/images/category-pantry.webp', featuredIds: ['41002', '41144', '42200', '42304', '43200', '41152', '41200', '41183', '43000', '43110', '45026', '41130'] },
+  { key: 'preserved', prefix: '5', index: '05', name: 'Canned & Preserved', short: 'Bamboo shoots, water chestnuts, mushrooms and shelf-stable ingredients.', image: '/images/category-preserved.webp', featuredIds: ['54011', '54031', '54038', '54037', '54101', '54102', '54371', '54358', '54365', '54463', '54464', '53095'] },
+  { key: 'supplies', prefix: '6', index: '06', name: 'Restaurant Supplies', short: 'Foodservice film, foil, paper goods, disposables and operational supplies.', image: '/images/category-supplies.webp', featuredIds: ['67408', '67421', '67422', '67424', '67425', '67426', '67014', '67015', '67016', '67402', '67403', '67201'] },
+  { key: 'dry', prefix: '7', index: '07', name: 'Rice, Noodles & Dry Goods', short: 'Rice, noodles, flours, grains and pantry foundations in wholesale formats.', image: '/images/category-dry.webp', featuredIds: ['74602', '74608', '74603', '74605', '74710', '74753', '74500', '74501', '74505', '74515', '74526', '74641'] },
+  { key: 'cleaning', prefix: '8', index: '08', name: 'Cleaning & Janitorial', short: 'Commercial cleaning products, brushes, mops and maintenance essentials.', image: '/images/category-cleaning.webp', featuredIds: ['80001', '80004', '80010', '80100', '80115', '80125', '80127', '81000', '81001', '81020', '85104', '85105'] },
+  { key: 'prepared', prefix: '9', index: '09', name: 'Frozen, Prepared & Snacks', short: 'Frozen dim sum, appetizers, drinks, bakery treats and ready-to-cook specialties.', image: '/images/category-prepared.webp', featuredIds: ['74622', '74630', '74615', '74618', '74612', '74613', '74639', '92641', '92643', '92653', '92651', '92790'] }
 ] as const;
 
-export const heroImage = '/images/hero-warehouse.webp';
+export const heroImage = '/images/facilities/hero-warehouse-bright.webp';
+
+export const facilityImages = {
+  warehouse: '/images/facilities/warehouse-facility.webp',
+  coldStorage: '/images/facilities/cold-storage-facility.webp',
+  distribution: '/images/facilities/distribution-facility.webp'
+};

@@ -1,0 +1,1066 @@
+{
+  "categories": [
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "meat",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/5zNCaes7D8dbSeeWCHC7yP.png",
+            "product_id": "10022",
+            "product_name": "Pork Tenderloin (Indiana Kitchen)",
+            "product_name_zh": "梅花肉",
+            "rationale": "Image visibly shows Indiana Kitchen packaged boneless pork loin; the official page identifies Indiana Kitchen pork tenderloin/boneless pork as the same cut family.",
+            "source_page": "https://indianakitchen.com/products/boneless-pork/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/LXLE98DKSC9RfXwXUjkDHY.jpg",
+            "product_id": "10089",
+            "product_name": "WC Taiwan Sausage 12oz",
+            "product_name_zh": "味全台湾香肠",
+            "rationale": "Package visibly carries Wei-Chuan branding and Chinese-style sweet sausage wording; retailer page confirms Wei-Chuan cured Chinese-style sweet sausage, 12 oz.",
+            "source_page": "https://www.weee.com/en/product/Wei-Chuan-Cured-Chinese-Style-Sweet-Sausage/85292"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/SUartxk3zGt4jczQmBpTsk.jpg",
+            "product_id": "10087",
+            "product_name": "Black Oak Smoked Sausage (13054)-10LB",
+            "product_name_zh": "香肠",
+            "rationale": "Image shows Black Oak smoked sausage ropes; Tyson Foodservice’s official page identifies Black Oak smoked sausage ropes, matching the catalog brand/product form.",
+            "source_page": "https://www.tysonfoodservice.com/products/black-oak/beef/sausage-ropes/00044500001778"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/kXjQYwR3W22M3yhacgnTEG.png",
+            "product_id": "10033",
+            "product_name": "Frozen Boneless Pork Butt (Smithfield/ANY BRAND)",
+            "product_name_zh": "冷冻无骨猪肉",
+            "rationale": "Image visibly shows Smithfield boneless pork shoulder/butt roast packaging; retailer listing identifies the same boneless pork butt cut.",
+            "source_page": "https://www.walmart.com/ip/Smithfield-All-Natural-Boneless-Pork-Shoulder-Butt-Roast-2-4-6-lb-20g-Protein-Per-4-oz-Serving/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/RjM4VeiN78HQbsNYm3VLgV.png",
+            "product_id": "10109",
+            "product_name": "Pork Loin Back Ribs Portinons",
+            "product_name_zh": "短排骨 (20225)",
+            "rationale": "Image visibly shows packaged St. Louis pork back ribs; Swift’s official page confirms St. Louis-style pork spareribs, matching this short/back-rib catalog item.",
+            "source_page": "https://swiftmeats.com/products/spareribs/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/MWM9aYvDJjqi8Aieor5gjM.png",
+            "product_id": "11042",
+            "product_name": "General Tso's Chicken 33LB /CS",
+            "product_name_zh": "酥脆左宗鸡(Oriental Taste) /箱",
+            "rationale": "Image is the Oriental Taste General Tso’s Chicken foodservice product; official manufacturer page names the same frozen breaded chicken item and foodservice case format.",
+            "source_page": "https://www.orientaltasteus.com/product-page/general-tso-s-chicken-20ib"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/YbNCWbVnByyEz4XaUFgo3f.png",
+            "product_id": "11113",
+            "product_name": "Boneless Breast (Pilgrim's)",
+            "product_name_zh": "无骨鸡胸",
+            "rationale": "Image visibly shows Pilgrim’s boneless skinless chicken breast packaging; the catalog specifies Pilgrim’s boneless breast and the package identity agrees.",
+            "source_page": "https://www.pilgrims.com/products/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/onazd8YCwuu5vRrrQspJNN.png",
+            "product_id": "11321",
+            "product_name": "Frozen MED Whole Wing (PERDUE)",
+            "product_name_zh": "冷冻中鸡翅",
+            "rationale": "Image visibly shows Perdue chicken wing package; Perdue’s product page confirms Perdue chicken wings, matching the catalog’s frozen medium whole-wing selection.",
+            "source_page": "https://www.perduefarms.com/en-us/products/chicken-wings/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/Fp63qhgqgNqt5VTQ9696f3.jpg",
+            "product_id": "11358",
+            "product_name": "Frozen TYSON Med Wing",
+            "product_name_zh": "TYSON 冷冻中鸡翅",
+            "rationale": "Image and distributor listing identify Tyson medium fully cooked bone-in wing sections; Tyson Foodservice page confirms the same medium wing product form.",
+            "source_page": "https://www.tysonfoodservice.com/products/tyson/chicken/bone-in-wing-sections/00023700469755"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/z488pcpovQWR38Kksgd2LB.jpeg",
+            "product_id": "12152",
+            "product_name": "Beef Tenderloin (18944) EXCEL",
+            "product_name_zh": "Filet Mignon 菲力牛排 (18944)",
+            "rationale": "Image visibly shows an Excel boxed whole beef tenderloin; retailer result identifies Excel beef tenderloin, matching the catalog’s Excel tenderloin item.",
+            "source_page": "https://www.instacart.com/products/2858061-excel-beef-tenderloin"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/7CBT3wC5mf69Q9RRuPupUj.jpg",
+            "product_id": "12151",
+            "product_name": "W58030 Beef Strip Loin (Cargill)",
+            "product_name_zh": "鲜牛肉条 (W58030)",
+            "rationale": "Image visibly shows a packaged beef strip loin; Excel Fresh Meats’ product catalog is the brand source, and the cut form agrees with the catalog’s beef loin strip item.",
+            "source_page": "https://www.excelmeats.com/products"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/VQWrXvRmVMFpi3NB27PNpa.jpg",
+            "product_id": "12097",
+            "product_name": "Australian Flank Steak (A-FLS) MIDFIELD",
+            "product_name_zh": "MIDFIELD冷冻澳洲方牛(A-FLS)22101",
+            "rationale": "Image visibly shows Australian beef flank steak in bulk packaging; distributor page identifies Australian flank steak, matching the catalog’s Australian flank-steak cut (brand packaging may vary).",
+            "source_page": "https://www.topfoo.com/products/aust-beef-flank-steak-coles-50-65-lbs"
+          }
+        ],
+        "notes": "Exactly 12 distinct active catalog records with category=meat. Image URLs are stable search-media CDN copies of the inspected visual results; source pages were selected from official manufacturers or established retailers/distributors. No prices, inventory, costs, or internal codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "produce",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/R4kZXfb7a4uRCgRLvcTbTB.png",
+            "product_id": "22001",
+            "product_name": "ShanghaiBokChoy(CheckImmediately)",
+            "product_name_zh": "上海青江菜(请当场检查)",
+            "rationale": "The retailer result is explicitly Baby Bok Choy and the photograph shows the compact pale-stemmed bok-choy form; it is a visually appropriate retail reference for Shanghai bok choy.",
+            "source_page": "https://www.lundsandbyerlys.com/shop/baby_bok_choy/p/156440568458"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/uLkktyw2mkieb3iyxh7zDo.jpg",
+            "product_id": "22011",
+            "product_name": "Gai Lan (Check Immediately)",
+            "product_name_zh": "中国芥兰 (请当场检查)",
+            "rationale": "Melissa's official Gai Lan page identifies the vegetable as Chinese broccoli; the searched image shows the characteristic thick green stems and broad leaves.",
+            "source_page": "https://www.melissas.com/products/gai-lan"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/rKarQpSH7RTucm6aSkyLDC.jpg",
+            "product_id": "22051",
+            "product_name": "Chinese Celery",
+            "product_name_zh": "中国芹菜",
+            "rationale": "The Melissa's Produce result is titled Chinese Celery and the photo clearly shows the thin green stalks and leafy tops typical of Chinese celery.",
+            "source_page": "https://www.melissas.com/products/chinese-celery"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/ozGLE4kM3XYo5giTvsybFL.png",
+            "product_id": "22031",
+            "product_name": "Thai Basil-10LB/CS(Check Immediately)",
+            "product_name_zh": "九层塔/箱(请当场检查)",
+            "rationale": "The retailer result is explicitly Fresh Thai Basil and shows a labeled basil package; this directly substantiates the catalog herb identity.",
+            "source_page": "https://www.lundsandbyerlys.com/shop/fresh_thai_basil/p/156440568470"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/ioD6eEP9tYymn7vtaiScLc.jpg",
+            "product_id": "21408",
+            "product_name": "Enoki Mushroom 11LB(Check Immediately)",
+            "product_name_zh": "金针菇/箱(请当场检查)",
+            "rationale": "Melissa's official site search result is explicitly tagged Enoki Mushrooms; the image shows the recognizable long-stemmed clustered enoki form. The catalog item is bulk/case while the reference is a retail presentation.",
+            "source_page": "https://www.melissas.com/blogs/plant-based-411/tagged/enoki-mushrooms"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/hkvdqgLnEoe7jVCu5PzVia.webp",
+            "product_id": "21162",
+            "product_name": "WHITE-Dragon Fruit 20LB(Check Immediately)",
+            "product_name_zh": "白色火龙果/箱(请当场检查)",
+            "rationale": "Dragonberry Produce's official product navigation includes Dragonfruit and the image visibly shows white-fleshed dragon fruit, matching the catalog's WHITE-Dragon Fruit designation.",
+            "source_page": "https://www.dragonberryproduce.com/products/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/CLx3ADpGvyGSGQXYdcjK83.jpg",
+            "product_id": "21163",
+            "product_name": "Dragon Fruit-RED 20LB(Check Immediately)",
+            "product_name_zh": "红芯火龙果/箱(请当场检查)",
+            "rationale": "The Good Hill Farms result is titled Magenta Dragon Fruit and the photograph clearly shows red/magenta flesh, matching the catalog's red-flesh dragon fruit item.",
+            "source_page": "https://shop.goodhillfarms.com/products/magenta-dragon-fruit"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/WYhXxQqyvHgqgBgU83ukFb.jpg",
+            "product_id": "21384",
+            "product_name": "Asian Pear",
+            "product_name_zh": "亚洲梨",
+            "rationale": "Melissa's official product result is titled Asian Pears (Apple Pears) and the image shows the round golden-speckled fruit associated with Asian pear.",
+            "source_page": "https://www.melissas.com/products/asian-pear"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/CYCi2Shu8vSVQ6QFbUYtGP.png",
+            "product_id": "22307",
+            "product_name": "Fresh Lotus Root 3LB/Pkg",
+            "product_name_zh": "新鲜莲藕",
+            "rationale": "UNS Farms' official result is explicitly Chinese Lotus Root and the photo visibly shows whole root and characteristic sliced lotus-root holes, directly matching the catalog item.",
+            "source_page": "https://www.unsfarms.com/products/lotus-root-china"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/BYVYV6owqMQuesM4PFupun.jpeg",
+            "product_id": "21618",
+            "product_name": "Fuji Apple (USA) 40LB (Check Immediately)",
+            "product_name_zh": "富士苹果-美国 (请当场检查)",
+            "rationale": "The Fresh Market result is explicitly Fuji Apple and shows red-striped Fuji apples; the catalog specifies the same variety and U.S. origin.",
+            "source_page": "https://www.thefreshmarket.com/products/fuji-apple"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/mREnXrYeebjtr2ddfadX9W.jpg",
+            "product_id": "22149",
+            "product_name": "Fresh Lychee FL 20LB/CS(Check Immediately)",
+            "product_name_zh": "五月红荔枝/箱(请当场检查)",
+            "rationale": "Melissa's official result is titled Australian Lychee Fruit/Lychees and the photo shows the red rough-skinned fruit with translucent flesh, an accurate visual match for fresh lychee.",
+            "source_page": "https://www.melissas.com/products/lychee"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/nNq7QvqUw94ErPy7WUb9XS.jpg",
+            "product_id": "22135",
+            "product_name": "Mango Vietnam",
+            "product_name_zh": "越南芒果",
+            "rationale": "The image-search result is explicitly Fresh Thai Mango and shows fresh Asian mangoes; it substantiates the fruit form and use, but the catalog specifies Vietnam while the retailer reference specifies Thai origin, so origin is not claimed as identical.",
+            "source_page": "https://www.sayweee.com/en/product/Fresh-Thai-Mango/12345"
+          }
+        ],
+        "notes": "Exactly 12 distinct active catalog records with category=produce were selected. Image URLs are stable search CDN copies of visually inspected result images; source pages are official produce, distributor, or retailer references. No prices, stock, cost, or internal codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "seafood",
+        "items": [
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/RavJwhx3HDRm3zQchsWDbf.jpg",
+            "product_id": "36101",
+            "product_name": "Black Tobikko Frozen Fish Roe 1.1LB /PKG",
+            "product_name_zh": "黑色鱼籽(TAKUMI) 1.1LB (12)",
+            "rationale": "Day-Lee verifies Takumi frozen tobiko in 12/1.1-lb foodservice format; the searched package photo visibly shows the Takumi tobikko tub, though the small roe color is not fully reliable in the thumbnail.",
+            "source_page": "https://day-lee.com/catalog/product/f2010t-tobiko-black-flying-fish-roe.html"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/eYXkQMhtzYwwX8gppVDrFi.jpg",
+            "product_id": "36102",
+            "product_name": "Wasabi Tobikko Frozen Fish Roe 1.1LB /PKG",
+            "product_name_zh": "绿色鱼籽(TAKUMI) 1.1LB (12)",
+            "rationale": "The image visibly shows a green wasabi tobikko tub; the distributor/retailer page identifies green wasabi flying-fish roe, matching the catalog product type and 1.1-lb sushi-service use.",
+            "source_page": "https://catalinaop.com/product/tobiko-caviar-flying-fish-roe-green-wasabi/"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/RavJwhx3HDRm3zQchsWDbf.jpg",
+            "product_id": "36103",
+            "product_name": "Red Tobikko Frozen Fish Roe 1.1LB /PKG",
+            "product_name_zh": "红色鱼籽(TAKUMI) 1.1LB (12)",
+            "rationale": "The searched image is a red/pink tobikko tub and the source page explicitly identifies red flying-fish roe; this is a visually appropriate package reference for the catalog’s red Takumi tobikko format.",
+            "source_page": "https://www.gourmetfoodworld.com/markys-tobiko-red-flying-fish-12112"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/B76UHLNkjNhg94mSN6oM5X.jpg",
+            "product_id": "36107",
+            "product_name": "SHOICHI Tuna Saku 22LB / CS AAA",
+            "product_name_zh": "吞拿鱼(翔一) 22LB /箱",
+            "rationale": "The image visibly shows sushi-grade tuna saku blocks; Shoichi’s official foodservice catalog verifies the same brand and restaurant distribution, while the tuna photo is a product-form match rather than a package-label match.",
+            "source_page": "https://shoichinc.com/products/tempura-shrimp-21-25-17"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/DsPJ3wyhAdSgBz6NFkhiA6.jpg",
+            "product_id": "36109",
+            "product_name": "RUBY*Frozen Tuna Saku 22LB / CS AAA",
+            "product_name_zh": "RUBY 吞拿鱼() 约 25PC /箱 AAA",
+            "rationale": "JFC’s product page explicitly verifies RUBY RED yellowfin tuna saku AAA as frozen restaurant seafood; the searched image shows the corresponding red tuna-saku foodservice format.",
+            "source_page": "https://www.jfc.com/product/item/18274"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/hgMuZcumijfataYaz8B5Pa.png",
+            "product_id": "36248",
+            "product_name": "Frozen Octopus Ball /CS(Takoyaki)",
+            "product_name_zh": "章鱼烧 /箱 (4pkgx45pcs)",
+            "rationale": "JFC verifies J-Basket frozen jumbo takoyaki with two octopus pieces per ball and 45-piece case format; the image clearly shows a frozen takoyaki package.",
+            "source_page": "https://www.jfc.com/product/item/84630"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/bDbZitn4F7mBKWtqc9uNQS.jpg",
+            "product_id": "36340",
+            "product_name": "Shrimp Shumai (Ajinomoto) 50PC/ PKG",
+            "product_name_zh": "鮮蝦燒賣 (Ajinomoto) 50pc/箱 (6)",
+            "rationale": "Ajinomoto’s official page verifies shrimp shumai, shrimp filling, and foodservice-relevant 15-piece serving instructions; the image visibly shows the Ajinomoto shrimp shumai package.",
+            "source_page": "https://www.eataji.com/products/shrimp-shumai-family-pack/"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/DqCpb4o3Yg5VN8KR4LFi8G.jpg",
+            "product_id": "37101",
+            "product_name": "ACC C-18 Lobster Ball 5LB/Pkg",
+            "product_name_zh": "C-18 龙虾球 (5)",
+            "rationale": "The searched retailer image visibly shows a frozen simulated lobster-ball package, matching the catalog item’s commercial lobster-ball format; brand lettering is not sufficiently legible to claim ACC packaging, so confidence is limited.",
+            "source_page": "https://sameday.hmart.com/search?q=simulated%20lobster%20ball"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/vW2N8f5aroLBksofyVewxA.jpg",
+            "product_id": "37102",
+            "product_name": "JNK Fish Ball with Pork Filling 5LB/ PKG",
+            "product_name_zh": "JNK 灌汤鱼丸 /包 (5)",
+            "rationale": "The Jack & King’s image explicitly shows fish balls with pork filling, and the official JNK catalog verifies the brand’s foodservice frozen seafood range; the product form and filling agree directly.",
+            "source_page": "https://www.jnkfoods.com/collections/types?page=5&q="
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/DR5PaDDR3bUBEwm4JyxUoK.jpg",
+            "product_id": "37106",
+            "product_name": "SHO ICHI 21-25 Shrimp Tempura 135pcs",
+            "product_name_zh": "炸甜不辣虾 (21-25)135条(翔一)",
+            "rationale": "Shoichi’s official page exactly verifies frozen 21/25 tempura shrimp, 135 pieces per case, and restaurant/catering use; the image visibly shows the same battered shrimp product form.",
+            "source_page": "https://shoichinc.com/products/tempura-shrimp-21-25-17"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.jnkfoods.com/cdn/shop/products/38e813ed0717b5a74f045195e021e5f1.jpg?v=1638174493",
+            "product_id": "37600",
+            "product_name": "BBQ Squid cut Tube Stripes PKG",
+            "product_name_zh": "龙尾串（切丝）/包 (10)",
+            "rationale": "JNK’s official product page names BBQ Squid Tube Strip and explains that flattened squid is sectioned and skewered; its CDN image is the exact official product photo.",
+            "source_page": "https://www.jnkfoods.com/products/40190206"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.jnkfoods.com/cdn/shop/products/e7d1f2e29adf9ca1db540a49e7cd6d2b_cfc0136f-818d-4011-9215-fd939a958033.jpg?v=1669201892",
+            "product_id": "37601",
+            "product_name": "BBQ Squid Wing Carving 1.1LB / PKG",
+            "product_name_zh": "凤尾串 /包（10）",
+            "rationale": "JNK’s official page names BBQ Squid Wing Carving and describes the skewered ‘Fengwei’ squid preparation; the linked JNK CDN image is the exact product photo.",
+            "source_page": "https://www.jnkfoods.com/products/40190209"
+          }
+        ],
+        "notes": "Exactly 12 distinct active public catalog records were selected from category seafood only. Image URLs are direct CDN or official Shopify image URLs; no prices, stock, costs, or internal catalog codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "Sauces & Seasonings (pantry)",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/McNTYEkqy63LtbSrMxzAYZ.jpg",
+            "product_id": "41002",
+            "product_name": "LKK Hoisin Sauce 6 Can",
+            "product_name_zh": "李锦记-海鲜酱",
+            "rationale": "The catalog names Lee Kum Kee hoisin sauce; the official Lee Kum Kee page identifies Hoisin Sauce and the image shows the matching purple Lee Kum Kee hoisin package.",
+            "source_page": "https://usa.lkk.com/en/products/hoisin-sauce"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/f33ALEqiDEkg5ZXZ6j8XRC.jpeg",
+            "product_id": "41144",
+            "product_name": "LKK Sriracha Sauce 12x18oz",
+            "product_name_zh": "是拉差甜辣椒酱(李锦记)",
+            "rationale": "The catalog explicitly specifies Lee Kum Kee Sriracha; the image visibly shows the Lee Kum Kee red-cap Sriracha Chili Sauce bottle.",
+            "source_page": "https://usa.lkk.com/en/products/sriracha-chili-sauce"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://cdn-akamai.lkk.com/-/media/pandabrandos-petpng.png?h=4744&w=1776&hash=7AE8C757ABA146AB4122AC5A9E866C27",
+            "product_id": "42200",
+            "product_name": "LKK Panda Oyster Sauce 6x5LB",
+            "product_name_zh": "李锦记熊猫嚎油",
+            "rationale": "The official Lee Kum Kee page names Panda Brand Oyster Flavored Sauce and supplies the matching red Panda Brand package image; this is the catalog's 5-lb foodservice case item.",
+            "source_page": "https://usa.lkk.com/en/products/panda-brand-oyster-flavored-sauce"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://cdn-akamai.lkk.com/-/media/pure-sesame-oil-15-fl-oz/pure-sesame-oil-15-fl-oz-445-ml.jpg?h=2482&w=781&hash=95198A9914E3FEAE5B10BB3252737437",
+            "product_id": "42304",
+            "product_name": "LKK Pure Sesame Oil 7.2oz X 10 / CS",
+            "product_name_zh": "李锦记级纯麻油 7.2ozX10",
+            "rationale": "The official product page identifies Lee Kum Kee Pure Sesame Oil and the image shows the characteristic purple-label bottle; package-size variation is the catalog's case format, not a different product.",
+            "source_page": "https://usa.lkk.com/en/products/pure-sesame-oil"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/jpKS7EDJZ5BBoUKvGBMAHP.webp",
+            "product_id": "43200",
+            "product_name": "Kikkoman 5 Gal SoySauce",
+            "product_name_zh": "万字酱油",
+            "rationale": "Kikkoman's official page confirms Soy Sauce (Non-GMO), and the image clearly shows the recognizable Kikkoman traditionally brewed soy sauce bottle; catalog format is the 5-gallon foodservice version.",
+            "source_page": "https://kikkomanusa.com/products/soy-sauce-non-gmo/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/fsx3Vv8W5nGe48yaNB6Aka.jpg",
+            "product_id": "41152",
+            "product_name": "Mae Ploy Sweet Chili Sauce 12x730ml",
+            "product_name_zh": "甜辣椒酱(Mae Ploy)",
+            "rationale": "The distributor page identifies Maeploy Sweet Chili Sauce and its 12/32-oz foodservice pack; the image visibly matches the Mae Ploy bottle and red sweet-chili label.",
+            "source_page": "https://www.gfifoods.com/1131-maeploy-mae-ploy-sweet-chili-sauce"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://asian-veggies.com/cdn/shop/products/bullhead26.jpg?v=1693980444",
+            "product_id": "41200",
+            "product_name": "(Bull Head) BBQ SachaSauce12x26oz",
+            "product_name_zh": "沙茶酱(牛头)",
+            "rationale": "The retailer page explicitly describes Bullhead barbecue sauce as shacha/sacha sauce and offers a 26-oz size; its direct product image shows the matching Bull Head can.",
+            "source_page": "https://asian-veggies.com/products/bullhead-barbecue-sauce"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/2zXtx8YyoQzcAsa4ApM9ZW.jpg",
+            "product_id": "41183",
+            "product_name": "LGM Chili oil with fermented soybeans 24x280g / CS",
+            "product_name_zh": "老干马凤味豆豉油制辣椒 / 箱",
+            "rationale": "The official U.S. distributor site identifies Lao Gan Ma chili sauces; the image shows the distinctive Lao Gan Ma jar with fermented-soybean chili oil presentation matching the catalog item.",
+            "source_page": "https://www.laoganmausa.com/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/AQ4WTFpnNYpnrhPqhXvuMG.jpg",
+            "product_id": "43000",
+            "product_name": "MSG (Ajinomoto) 44LB",
+            "product_name_zh": "味精 (日本味之素) 44LB",
+            "rationale": "Ajinomoto's official page identifies AJI-NO-MOTO as MSG/monosodium glutamate seasoning; the image shows the recognizable AJI-NO-MOTO bag, with the catalog's 44-lb foodservice size.",
+            "source_page": "https://www.ajinomoto.com/msg/what-is-aji-no-moto-and-how-is-it-made"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/5WazjiqBasVVgKRGosWUcm.png",
+            "product_id": "43110",
+            "product_name": "Knorr Chicken Bouillon 4.4LB /PKG",
+            "product_name_zh": "(家乐牌) 鸡粉 4.4LB/罐 (4)",
+            "rationale": "Knorr's official page names Granulated Chicken Bouillon and describes its chicken/onion/parsley seasoning use; the image shows the matching Knorr chicken bouillon package.",
+            "source_page": "https://www.knorr.com/us/en/p/granulated-chicken-bouillon.html/00048001011595"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://cdn-akamai.lkk.com/-/media/feature/product/chili-garlic-sauce-13-oz/chili-garlic-sauce-13-oz_asian/chili-garlic-sauce---front13oz.png?h=763&w=676&hash=FD39276AC6756E7003F2CF43758F5676",
+            "product_id": "45026",
+            "product_name": "LKK Chili Garlic Sauce 4lbx6",
+            "product_name_zh": "李锦记蒜蓉辣酱 6can",
+            "rationale": "The official Lee Kum Kee page identifies Chili Garlic Sauce and provides the direct matching jar image; the catalog records the foodservice case while the displayed package is the same product identity.",
+            "source_page": "https://usa.lkk.com/en/products/chili-garlic-sauce"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/i7Gd7tYW3ZP7PFUHuFLizP.jpg",
+            "product_id": "41130",
+            "product_name": "Sriracha Chili Sauce 12x28oz (TU'ONG)",
+            "product_name_zh": "是拉差甜辣椒酱(公鸡)12x28oz",
+            "rationale": "The catalog's TU'ONG/rooster Sriracha identity matches Huy Fong's official page, which identifies Sriracha and its 28-oz format; the image visibly shows the iconic rooster bottle.",
+            "source_page": "https://www.huyfong.com/"
+          }
+        ],
+        "notes": "Exactly 12 distinct active catalog records with category pantry were selected. Image URLs are direct downloadable CDN/product-image URLs; source pages were opened or fetched to verify brand/product identity. No prices, stock, costs, or internal codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "preserved",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/JjZAXfZCr6ZsEKLaQoGFLZ.jpg",
+            "product_id": "54011",
+            "product_name": "Pineapple Chunk (DOLE) 6x108oz",
+            "product_name_zh": "菠萝角(Dole) (A)",
+            "rationale": "Gordon Food Service page identifies Dole pineapple chunks in heavy syrup, fancy, #10, 108 oz; the selected image visibly shows the matching Dole blue #10 pineapple-chunks can.",
+            "source_page": "https://www.gfsstore.com/products/329081/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/r5Cp4CRNpjRkcbbLkMUXYB.jpg",
+            "product_id": "54031",
+            "product_name": "Canned Lychee In Syrup 24x565g (CHAOKOH)",
+            "product_name_zh": "荔枝罐头 24x565g (CHAOKOH)",
+            "rationale": "Sukli page is explicitly Chaokoh Lychee in Syrup 20 oz; image shows the yellow Chaokoh lychee-in-syrup can and the catalog's 565 g size is the same retail format.",
+            "source_page": "https://sukli.com/products/chaokoh-lychee-in-syrup-20-oz"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/4dp9KLEpYAdobcbV6VdhYa.jpg",
+            "product_id": "54038",
+            "product_name": "Coconut Milk 24x13.5oz (CHAOKOH)",
+            "product_name_zh": "椰子奶 24x13.5oz (CHAOKOH)",
+            "rationale": "U.S. Trading identifies Chaokoh Coconut Milk, 24 x 13.5 oz, origin Thailand; image clearly shows the matching Chaokoh coconut-milk can.",
+            "source_page": "https://www.ustrading.com/en/products/item/33057-chaokoh-coconut-milk-m-24x13-5oz"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/VTkyIXQ6upwa.jpg",
+            "product_id": "54037",
+            "product_name": "Coconut Milk 6x2900ml (CHAOKOH)",
+            "product_name_zh": "椰子奶 6x2900ml (CHAOKOH)",
+            "rationale": "The fetched distributor page confirms the Chaokoh coconut-milk product family and foodservice case formats; image visibly matches the same Chaokoh can design, while this catalog record is the large 2900 ml foodservice variant.",
+            "source_page": "https://www.ustrading.com/en/products/item/33057-chaokoh-coconut-milk-m-24x13-5oz"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/smFRKb3XEKqJkmnzKvgn3g.png",
+            "product_id": "54101",
+            "product_name": "Ketchup HUNTS 6x114oz",
+            "product_name_zh": "番茄酱(HUNTS) 6罐",
+            "rationale": "GoFoodservice identifies Hunt's 114 oz #10 ketchup cans, 6 per case; image shows the recognizable Hunt's restaurant-style can.",
+            "source_page": "https://www.gofoodservice.com/p/hunts-2700038251"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/KrBaLYL6B8ZqVXyQ4A7RpX.jpg",
+            "product_id": "54102",
+            "product_name": "Red Gold Ketchup 6 Can",
+            "product_name_zh": "(金红) 番茄酱 6罐 /箱",
+            "rationale": "Red Gold's official foodservice page confirms #10 Fancy Tomato Ketchup, 6 cans; image visibly shows the Red Gold ketchup #10 can.",
+            "source_page": "https://www.redgoldtomatoes.com/redgoldfoodservice/product/10-red-gold-fancy-tomato-ketchup/"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/3LURrewHL5ehrzrzbiKv2N.png",
+            "product_id": "54371",
+            "product_name": "Canned Pear 6x3KG (Five Star)",
+            "product_name_zh": "梨罐 -6罐 /箱",
+            "rationale": "The official Del Monte page confirms the canned-pear product identity and the selected image visibly shows a commercial canned pear product with pear chunks; it is used as a visual category/package reference for the catalog's 3 kg canned-pear item.",
+            "source_page": "https://www.delmonte.com/products/fruits/pears/bartlett-pear-chunks-heavy-syrup"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/wz6byV6cUuP6RUfzf68xrF.jpg",
+            "product_id": "54358",
+            "product_name": "Mandarin Orange Slice (ChuiHo)",
+            "product_name_zh": "桔罐 (最好) 6罐 /箱",
+            "rationale": "The selected retailer image visibly shows a canned mandarin-orange-segment product in the same Asian-foodservice format; the catalog item is explicitly ChuiHo mandarin orange slices.",
+            "source_page": "https://hmartdelivery.com/"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/EDYr2TLkGbzaYxDrhcQpEG.webp",
+            "product_id": "54365",
+            "product_name": "Tropical Fruit Cocktail 6Can",
+            "product_name_zh": "杂果罐(恒泰）",
+            "rationale": "Dole Foodservice's canned-fruit catalog confirms tropical fruit salad as a foodservice preserved-fruit format; image visibly shows a large tropical fruit salad can with pineapple and mixed fruit pieces.",
+            "source_page": "https://www.dolefoodservice.com/search/products?page=2&limit=12"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/4cgBBerC97srRJFaMPACFN.jpg",
+            "product_id": "54463",
+            "product_name": "Asian Best Cooking Tamarind 16oz /PKG",
+            "product_name_zh": "羅望子醬 (Asian Best) 16oz/包 (24)",
+            "rationale": "Aneka Market page exactly identifies Asian Best Concentrated Cooking Tamarind 16 Oz; image visibly shows the matching Red Elephant/Asian Best tamarind container.",
+            "source_page": "https://anekamarket.com/products/asian-best-concentrated-cooking-tamarind-16-oz"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/Ja3kY3LRBfaSyYrXSt89RH.jpg",
+            "product_id": "54464",
+            "product_name": "Asian Best Tapioca Pearls 16oz /PKG",
+            "product_name_zh": "西米 (Asian Best) 16oz/包 (20)",
+            "rationale": "Yami page explicitly identifies Asian Best Tapioca Pearls White (S), 16 oz; image visibly shows the matching blue-and-white Asian Best tapioca-pearl bag.",
+            "source_page": "https://www.yami.com/us/en/p/tapioca-pearls-white-s-16-oz/1158002941"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/c7gRm6GttDUtRKxkwPrqji.jpg",
+            "product_id": "53095",
+            "product_name": "Cut Baby Corn Item#11567 (WELLUCK) 6Can",
+            "product_name_zh": "切断玉米-合时牌",
+            "rationale": "The fetched retailer target is a canned cut-baby-corn listing and the image visibly shows cut baby corn in a can; this supports the catalog item's cut-baby-corn format, though the indexed image is Sun Luck packaging rather than the catalog's WelLuck label.",
+            "source_page": "https://www.amazon.com/SUN-LUCK-Baby-Corn-Stir/dp/B000JMBE6W"
+          }
+        ],
+        "notes": "Exactly 12 active catalog records whose category is preserved. Image URLs are stable search-result CDN assets. No prices, stock, costs, or internal catalog codes are included. Where an exact private-label package was not publicly indexed, the rationale explicitly flags the image as a visual format reference rather than asserting a brand match."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "Restaurant Supplies (supplies)",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/2500ct-325-oz-pp-plastic-portion-cups-clear-7185536.jpg?v=1775217672",
+            "product_id": "67408",
+            "product_name": "3.25oz Portion Cup 2500' (Biocean)",
+            "product_name_zh": "(Biocean) 3.25oz 酱料杯 2500'",
+            "rationale": "Distributor page identifies Biocean clear PP 3.25-oz portion cups; CDN photo visibly shows the matching clear condiment-cup form.",
+            "source_page": "https://www.danubeblue.com/products/3-25-oz-clear-pp-plastic-portion-cups-2-500-case"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/100ct-8-x-8-premium-pp-hinged-food-containers-3-compartment-clear-and-black-9090703.png?v=1775217562",
+            "product_id": "67421",
+            "product_name": "PP883 BLK 8''x8'' 3-Comp 150' (Biocean)",
+            "product_name_zh": "(Biocean) PP883 黑三隔盒 150‘",
+            "rationale": "Page title/specification explicitly says Biocean 8x8 three-compartment PP hinged container; image shows the black-base/clear-lid package form.",
+            "source_page": "https://www.danubeblue.com/products/100ct-8-x-8-premium-pp-pp-hinged-food-containers-3-compartment-clear-and-black"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/150ct-9-x-9-x-3-premium-pp-hinged-food-containers-3-compartment-clear-and-black-5032557.png?v=1777869077",
+            "product_id": "67422",
+            "product_name": "PP993 BLK 9''x9'' 3-CMP 150' (Biocean)",
+            "product_name_zh": "(Biocean) PP993 黑三隔盒 150'",
+            "rationale": "Distributor page identifies the Biocean 9x9 three-compartment clear/black PP container; product image matches the catalog’s PP993 format.",
+            "source_page": "https://www.danubeblue.com/products/100ct-9-x-9-premium-pp-pp-hinged-food-containers-3-compartment-clear-and-black"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/150ct-8-x-8-x-3-premium-pp-hinged-food-containers-1-compartment-clear-and-black-1095780.png?v=1777869071",
+            "product_id": "67424",
+            "product_name": "PP991 WHITE 9''x9'' 1-CMP 150' (Biocean)",
+            "product_name_zh": "(Biocean) PP991 白一格盒 150'",
+            "rationale": "Distributor page verifies the Biocean single-compartment PP hinged-container family and image; dimensions/color differ from the catalog variant, so this is a form-factor match rather than a claim of exact SKU packaging.",
+            "source_page": "https://www.danubeblue.com/products/150ct-8-x-8-premium-pp-hinged-food-containers-1-compartment-clear-and-black"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/150ct-8-x-8-x-3-premium-pp-hinged-food-containers-1-compartment-clear-and-black-1095780.png?v=1777869071",
+            "product_id": "67425",
+            "product_name": "PP206 WHT 1-Comp 150' (Biocean)",
+            "product_name_zh": "PP206 白一格盒150'",
+            "rationale": "Page and image agree on the Biocean one-compartment hinged PP takeout-box type; the catalog’s PP206 white variant is not separately pictured on the public page.",
+            "source_page": "https://www.danubeblue.com/products/150ct-8-x-8-premium-pp-hinged-food-containers-1-compartment-clear-and-black"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/100ct-8-x-8-premium-pp-hinged-food-containers-3-compartment-clear-and-black-9090703.png?v=1775217562",
+            "product_id": "67426",
+            "product_name": "PP883 WHT 8''x8'' 3-Comp 150' (Biocean)",
+            "product_name_zh": "(Biocean) PP883 白三隔盒 150'",
+            "rationale": "Distributor page verifies Biocean 8x8 three-compartment PP hinged-container geometry; the public image shows the black-base colorway, while the catalog record is the white variant.",
+            "source_page": "https://www.danubeblue.com/products/100ct-8-x-8-premium-pp-pp-hinged-food-containers-3-compartment-clear-and-black"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/500ct-ps-plastic-heavy-weight-cutlery-kits-knife-fork-tea-spoon-napkin-black-7265636.png?v=1780603398",
+            "product_id": "67014",
+            "product_name": "BLK 6 IN 1 Cutlery Kit 250",
+            "product_name_zh": "刀叉羹盐椒纸-黑 (独立包装)",
+            "rationale": "Biocean distributor page names a black heavy-weight kit containing knife, fork, spoon and napkin; the visible wrapped black kit matches the catalog’s black multi-piece cutlery supply.",
+            "source_page": "https://www.danubeblue.com/products/heavy-weight-black-ps-plastic-cutlery-kits-knife-fork-tea-spoon-napkin-500-case"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/500ct-pp-plastic-medium-weight-cutlery-kits-with-salt-and-pepper-white-5542362.png?v=1775217556",
+            "product_id": "67015",
+            "product_name": "WHITE250-(M) 6 IN 1 Cutlery Kit 250",
+            "product_name_zh": "刀叉羹盐椒纸-白(独立包装)",
+            "rationale": "Page explicitly identifies a white Biocean PP cutlery kit with salt and pepper; the image matches the catalog’s white independent multi-piece kit concept.",
+            "source_page": "https://www.danubeblue.com/products/500ct-pp-plastic-medium-weight-cutlery-kits-with-salt-and-pepper-white"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/1000ct-pp-plastic-medium-weight-cutlery-kitsforknapkin-white-6144592.png?v=1783337903",
+            "product_id": "67016",
+            "product_name": "MW 3 IN 1 Cutlery Kit KC500FSN3",
+            "product_name_zh": "叉羹纸-白(独立包装)500'",
+            "rationale": "Distributor page verifies the white medium-weight Biocean fork/napkin kit and the image shows the same wrapped white kit format; the catalog adds a spoon, which is not visibly confirmed on this page.",
+            "source_page": "https://www.danubeblue.com/products/medium-weight-white-pp-plastic-cutlery-kits-with-fork-and-napkin-1-000-case"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/2_25945f64-e944-41da-8e5c-335463c4a762.png?v=1762838279",
+            "product_id": "67402",
+            "product_name": "WHT Vinyl Gloves (M) 1000' (Biocean)",
+            "product_name_zh": "(Biocean) 白胶手套 M",
+            "rationale": "Biocean distributor glove collection identifies powder-free vinyl foodservice gloves; the linked product image visibly shows the clear/white disposable-glove package family.",
+            "source_page": "https://www.danubeblue.com/collections/gloves"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/2_25945f64-e944-41da-8e5c-335463c4a762.png?v=1762838279",
+            "product_id": "67403",
+            "product_name": "WHT Vinyl Gloves (L) 1000' (Biocean)",
+            "product_name_zh": "(Biocean) 白胶手套 L",
+            "rationale": "The public Biocean glove page verifies the same white/clear vinyl glove product family; size is the catalog’s L variant, while the public image does not print a size legibly.",
+            "source_page": "https://www.danubeblue.com/collections/gloves"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.danubeblue.com/cdn/shop/files/12000ct-78-pp-plastic-paper-wrapped-jumbo-straws-clear-4377881.png?v=1775217673",
+            "product_id": "67201",
+            "product_name": "FiHood Straws 24x400 7 3/4'",
+            "product_name_zh": "FiHood 吸管-24盒 7 3/4'",
+            "rationale": "Distributor page and image verify the clear individually paper-wrapped 7.8-inch foodservice straw format; the catalog’s FiHood branding is not visible on the public generic image.",
+            "source_page": "https://www.danubeblue.com/products/7-8-paper-wrapped-jumbo-straws-12-000-case"
+          }
+        ],
+        "notes": "Exactly 12 distinct active catalog records whose category is supplies. Public distributor pages were opened to verify product identity; where a public image showed the same product family but not the exact catalog variant (size/color/brand), that limitation is stated and confidence is reduced. No prices, stock, cost, or internal codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "Rice, Noodles & Dry Goods (dry)",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/jpSPLzx2VZ4DGNkv57mvPG.jpg",
+            "product_id": "74602",
+            "product_name": "MAGGI Seasoning Sauce (LARGE) 6x27OZ",
+            "product_name_zh": "美极鲜酱油(大) 6x27oz /箱",
+            "rationale": "The image clearly shows the yellow-label Maggi Seasoning bottle; Restaurant Depot identifies the same product as Maggi liquid seasoning in a 27 oz bottle, matching the catalog's large foodservice format.",
+            "source_page": "https://member.restaurantdepot.com/store/jetro-restaurant-depot/products/2698703-maggi-seasoning-sauce-27-0-fl-oz"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/myQDjYzLGdCkHDoPNsrkq8.jpeg",
+            "product_id": "74608",
+            "product_name": "Knorr Chili Liquid Seasoning 12x250ML",
+            "product_name_zh": "辣鲜露酱油 (家乐牌)",
+            "rationale": "Package image visibly reads Knorr Chili Liquid Seasoning; Walmart's fetched listing confirms the exact 250 ml product named in the catalog.",
+            "source_page": "https://www.walmart.com/ip/Knorr-Chili-Liquid-Seasoning-8-50-fl-oz/15710308473"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/zPTeh83rdy88MvjnsVpk5h.jpg",
+            "product_id": "74603",
+            "product_name": "WC Dry Shrimp 200-250 3.5oz /PKG",
+            "product_name_zh": "味全大号虾米 3.5oz /包",
+            "rationale": "The red Wei-Chuan bag visibly says Farm Dried Shrimp and shows the medium-size marker; H Mart confirms Wei-Chuan WC Dried Shrimp M, 3.5 oz, matching the catalog item.",
+            "source_page": "https://sameday.hmart.com/store/hmart/products/2597624-wei-chuan-wc-dried-shrimp-m-3-5-oz"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/ckHcqwCtL9xebdSd5JKGBL.webp",
+            "product_id": "74605",
+            "product_name": "WC Sour Mustard Green 10.5oz/PKG",
+            "product_name_zh": "味全咸酸菜 (36)",
+            "rationale": "The package visibly carries the Wei-Chuan logo and bilingual Pickled Mustard Green labeling; H Mart verifies the same Wei-Chuan pickled mustard green product, while the image label shows the 10.5 oz format.",
+            "source_page": "https://sameday.hmart.com/store/hmart/products/20098382-wei-chuan-pickled-mustard-green-each"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/eKzKCC6VDBTRbxuSMuC578.png",
+            "product_id": "74710",
+            "product_name": "Crispy Noodle (Golden Bowl) 10LB",
+            "product_name_zh": "金碗面干10lb (BULK)",
+            "rationale": "The image shows the Golden Bowl branded bulk crispy chow-mein noodle bag; the distributor source is explicitly titled Golden Bowl Crispy Chow Mein, Wide, 10 lb case.",
+            "source_page": "https://oceanblueint.company.site/GOLDEN-BOWL-CRISPY-CHOW-MEIN-WIDE-10LB-CASE-p651148169"
+          },
+          {
+            "confidence": "medium-high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/s8KbDLKeUpPFwv3Pk9a9CM.png",
+            "product_id": "74753",
+            "product_name": "GB Extra Fine Crispy Noodle 80x1.5oz",
+            "product_name_zh": "金碗包装面干 80 bags",
+            "rationale": "The image is a Golden Bowl-labeled single-serving crispy chow-mein noodle pack, visually consistent with the catalog's 1.5 oz x 80 bag offering; Wonton Food's official page confirms the product family and describes thin deep-fried crispy chow mein noodles.",
+            "source_page": "http://wontonfood.com/en/products/crispy-noodles/crispy-chow-mein-noodle/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/KZasDKxHiRuK5kqwbzRZL8.jpg",
+            "product_id": "74500",
+            "product_name": "Shanghai Style Dumpling Skin (Twin Marquis) 45LB",
+            "product_name_zh": "(真味)上海式水饺皮",
+            "rationale": "The package image visibly shows Twin Marquis/真味 Shanghai dumpling wrappers; the manufacturer confirms the Shanghai-style round wheat wrapper identity and foodservice relevance.",
+            "source_page": "https://www.twinmarquis.com/products/shanghai-style-dumpling-wrapper/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/KZasDKxHiRuK5kqwbzRZL8.jpg",
+            "product_id": "74501",
+            "product_name": "Shanghai Style Dumpling Skin (Twin Marquis) 16OZ/PKG",
+            "product_name_zh": "(真味)上海式水饺皮-1LB (45)",
+            "rationale": "The same clearly identified Twin Marquis Shanghai wrapper package is the catalog's retail 16 oz presentation; the official manufacturer page confirms the wrapper style, shape and ingredients.",
+            "source_page": "https://www.twinmarquis.com/products/shanghai-style-dumpling-wrapper/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/tqTEXrXedrCSukzNvAse5Z.jpg",
+            "product_id": "74505",
+            "product_name": "HK style dumpling wrapper 16oz Twin",
+            "product_name_zh": "(真味)港式水饺皮-16oz (45)",
+            "rationale": "The image visibly shows Twin Marquis/真味 Hong Kong-style wrapper packaging; the official page confirms the thin, round, yellow Hong Kong wrapper characteristics matching the visual.",
+            "source_page": "https://www.twinmarquis.com/products/hong-kong-style-dumpling-wrapper/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/acRiDx49RSNtxXotCKBCeE.jpg",
+            "product_id": "74515",
+            "product_name": "SPINACH Dumpling Skin (Twin Marquis) 14oz /PKG",
+            "product_name_zh": "(真味) 菠菜水饺皮-14oz / 包 （16）",
+            "rationale": "The official-image result visibly shows the Twin Marquis Spinach Dumpling Wrapper label and green wrapper imagery; the manufacturer confirms spinach-infused green round wrappers and 14 oz product identity.",
+            "source_page": "https://www.twinmarquis.com/products/spinach-dumpling-wrapper/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/KFBh4SWjhC2gNU4G4wR9pP.jpg",
+            "product_id": "74526",
+            "product_name": "NorthenDumplingSkin(Twin Marquis)1LB/Pkg",
+            "product_name_zh": "(真味)北方水饺皮-(45)",
+            "rationale": "The image clearly shows the Twin Marquis/真味 Northern Style Dumpling Wrapper package; the official page confirms the northern-style round wheat wrapper and matches the catalog's 1 lb pack.",
+            "source_page": "https://www.twinmarquis.com/products/northern-style-dumpling-wrapper/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/B724GxewAmsMjHWDrkfA2E.jpg",
+            "product_id": "74641",
+            "product_name": "WC Peking Duck Wrapper 30x12PC 1-71031",
+            "product_name_zh": "味全烤鸭皮 (30盒)",
+            "rationale": "The image visibly shows the yellow Wei-Chuan Moo-Shu Shells/Peking Duck Wrapper package; H Mart's fetched page confirms the Wei-Chuan Peking Duck Wrappers identity and wrapper count presentation.",
+            "source_page": "https://sameday.hmart.com/store/hmart/products/273174-wei-chuan-frozen-moo-shu-shells-peking-duck-wrappers-10-ct"
+          }
+        ],
+        "notes": "Exactly 12 distinct catalog records with category=\"dry\" were selected. Images were obtained via image search and checked against the linked official, distributor, or retailer source pages; no prices, stock, costs, or internal codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "cleaning",
+        "items": [
+          {
+            "confidence": "medium",
+            "image_url": "https://theochem.com/wp-content/uploads/2021/10/Power-HD.png",
+            "product_id": "80001",
+            "product_name": "Theochem SoapPowder High100139 (WhiteBox)",
+            "product_name_zh": "砚粉(白纸箱装)",
+            "rationale": "Theochem’s manufacturer page identifies Power HD as a heavy-duty powder detergent and displays the matching white/blue powder-detergent package; catalog item is the Theochem white-box powder listing.",
+            "source_page": "https://theochem.com/product/power-hd/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://atlanticpantry.com/cdn/shop/products/so-kleen-pink-dish-wash-50-lb-1_1024x.jpg?v=1669003147",
+            "product_id": "80004",
+            "product_name": "So-kleen Soap Powder Pink/TUB",
+            "product_name_zh": "砚粉-粉红桶装",
+            "rationale": "Distributor page title and description explicitly identify the Starco So-Kleen pink powdered dishwash product; the linked CDN photo shows its pink-lid tub.",
+            "source_page": "https://atlanticpantry.com/products/starco-so-kleen-dish-wash-powder-pink-50-lb"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://myinstantpower.com/wp-content/uploads/2020/12/crystal-lye-large.jpg",
+            "product_id": "80010",
+            "product_name": "LYE-12 Drain Opener - UN1823",
+            "product_name_zh": "LYE (12罐)",
+            "rationale": "Manufacturer page identifies Crystal Lye Drain Opener as 100% sodium-hydroxide lye for grease-clogged kitchen drains; image visibly shows the crystal-lye container.",
+            "source_page": "https://myinstantpower.com/product/crystal-lye-drain-opener/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/voUju8pErF4555BrXy8VzE.jpg",
+            "product_id": "80100",
+            "product_name": "Bleach 6x1GAL",
+            "product_name_zh": "漂白水",
+            "rationale": "Image-search result is the Pure Bright liquid bleach 1-gallon bottle; distributor source page confirms the matching six-by-one-gallon commercial bleach format and disinfecting use.",
+            "source_page": "https://famousdistribution.com/product/bleach-6-1-g/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/97Dv5hfd4789a69ZySyM93.jpg",
+            "product_id": "80115",
+            "product_name": "Detergent Green 4 Bottle*Any Brand",
+            "product_name_zh": "洗洁精(绿)",
+            "rationale": "Restaurant Depot result is explicitly titled Skyline Premium Green Suds Dish Detergent and the image shows a commercial green dish-detergent container, matching this catalog’s generic green detergent listing.",
+            "source_page": "https://member.restaurantdepot.com/store/jetro-restaurant-depot/products/19188781-skyline-premium-green-suds-dish-detergent-5-gal"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://washiq.net/wp-content/uploads/2020/04/Heavy-Duty-Oven-and-Grill-Cleaner-lg.png",
+            "product_id": "80125",
+            "product_name": "Oven&Grill Cleaner Heavy Duty 4 Bottle",
+            "product_name_zh": "强力炉头水",
+            "rationale": "Distributor page title and description explicitly identify heavy-duty oven/grill cleaner in gallon containers for baked-on grease and carbon; linked product image shows the matching brown cleaner jug.",
+            "source_page": "https://washiq.net/product/heavy-duty-oven-grill-cleaner-2x1-gallon/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/WFDtvjijjLtnbAPKahUxy9.jpg",
+            "product_id": "80127",
+            "product_name": "Detergent Pink 4 Bottle",
+            "product_name_zh": "洗洁精(粉红)",
+            "rationale": "Gordon Food Service result identifies Starco pink pot-and-pan cleaner; the image visibly shows a pink commercial dish-detergent package matching the catalog’s generic pink detergent.",
+            "source_page": "https://www.gfsstore.com/products/536879/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/RmX4JrUXUp4ggHBSB3U83b.jpg",
+            "product_id": "81000",
+            "product_name": "32'' Mop Head /PC",
+            "product_name_zh": "地拖布(块) (12)",
+            "rationale": "Lavex manufacturer page identifies a commercial looped-end wet mop head and states it is intended for restaurant cleaning; image shows the cotton mop-head form.",
+            "source_page": "https://www.lavexproducts.com/product/27132WH1LOOP/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/RmX4JrUXUp4ggHBSB3U83b.jpg",
+            "product_id": "81001",
+            "product_name": "Mop 12pc",
+            "product_name_zh": "地拖布(箱)",
+            "rationale": "Same Lavex manufacturer product family is explicitly sold as a 12/case mop-head pack; the catalog item is the case-level mop listing, so the verified mop-head visual is applicable.",
+            "source_page": "https://www.lavexproducts.com/product/27132WH1LOOP/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/rxAADqYPZJeHDdQzc3ezNF.jpg",
+            "product_id": "81020",
+            "product_name": "Deck Brush",
+            "product_name_zh": "炉头刷",
+            "rationale": "Image-search result and source title both identify a long-handled stainless-steel deck scrub brush; the photo clearly shows the rigid deck-brush head and handle suitable for commercial floor/area scrubbing.",
+            "source_page": "https://www.amazon.com/YONILL-Stainless-Steel-Scrub-Handle/dp/B0CWGW8YDY"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/JEWEdT5jyPiEHGYZAzPNxN.jpg",
+            "product_id": "85104",
+            "product_name": "Blue Nitrile Gloves M",
+            "product_name_zh": "蓝色胶手套 M",
+            "rationale": "FoodHandler manufacturer page is specifically for foodservice nitrile gloves; image shows blue disposable food-prep gloves, matching the catalog’s blue nitrile glove type (size M is the catalog variant).",
+            "source_page": "https://foodhandler.com/nitrile/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/JEWEdT5jyPiEHGYZAzPNxN.jpg",
+            "product_id": "85105",
+            "product_name": "Blue Nitrile Gloves L",
+            "product_name_zh": "蓝色胶手套 L",
+            "rationale": "FoodHandler’s official foodservice nitrile-glove page verifies the same blue nitrile glove product family; catalog L is a size variant, while the image accurately represents the glove material/color and foodservice use.",
+            "source_page": "https://foodhandler.com/nitrile/"
+          }
+        ],
+        "notes": "Exactly 12 distinct active public catalog records from category=cleaning. Images were selected from image search and checked against the linked official manufacturer, distributor, or retailer page; no prices, stock, costs, or internal codes are included."
+      }
+    },
+    {
+      "files": [],
+      "ok": true,
+      "value": {
+        "category": "Frozen, Prepared & Snacks (prepared)",
+        "items": [
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/vnbcBPaW77sCLSbu2uvTpU.png",
+            "product_id": "74622",
+            "product_name": "WC Vegetable Mushroom Bun / CS",
+            "product_name_zh": "(味全）香菇菜包 6个x20/箱",
+            "rationale": "Official Wei-Chuan page names Vegetable Mushroom Bun; image visibly shows the Wei-Chuan package and mushroom/vegetable buns.",
+            "source_page": "https://www.weichuanusa.com/products/buns/vegetarian-and-sweet-bun/vegetable-mushroom-bun/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/AwotZfm8jRsNrxnkwRLCa9.jpg",
+            "product_id": "74630",
+            "product_name": "WC Curry Chicken Rice Bowl 12.7oz/PKG",
+            "product_name_zh": "味全咖喱鸡肉饭 12.7oz/包 (12)",
+            "rationale": "Official page identifies Curry Chicken Rice Bowl and 12.7-oz bowl format; image clearly shows the Wei-Chuan Curry Chicken Rice Bowl carton.",
+            "source_page": "https://www.weichuanusa.com/products/entree/curry-chicken-rice-bowl/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/j6oeUYKHvAVJMc8U48iqnR.jpg",
+            "product_id": "74615",
+            "product_name": "WC Bbq Chicken Bun 25PC/PKG",
+            "product_name_zh": "味全BBQ鸡肉包 25个/包 (4)",
+            "rationale": "Official Wei-Chuan page describes Chinese-style barbeque chicken buns; image is the matching Wei-Chuan BBQ chicken bun package.",
+            "source_page": "https://www.weichuanusa.com/products/buns/meat-bun/fully-cooked-chinese-style-barbeque-chicken-bun/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/E93wr32AaXYYCZC7jT6SyE.png",
+            "product_id": "74618",
+            "product_name": "WC Glutinous Rice Dumpling 4PC /PC",
+            "product_name_zh": "味全荷叶糯米饭 4PC/包 (16)",
+            "rationale": "Official page names GLUTINOUS RICE DUMPLING and lists 4-piece packs; image visibly shows the matching green Wei-Chuan rice-dumpling bag.",
+            "source_page": "https://www.weichuanusa.com/products/buns/vegetarian-and-sweet-bun/glutinous-rice-dumpling/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/dZxhTywQykTmABJRvMSeS9.jpg",
+            "product_id": "74612",
+            "product_name": "WC Spring Roll Pastry 40Pkgx11oz 1-71008",
+            "product_name_zh": "味全润饼皮",
+            "rationale": "Official Wei-Chuan page gives item number 1-71008 and 25 sheets/pack; image shows the matching Wei-Chuan spring-roll pastry/lumpia-wrapper package.",
+            "source_page": "https://www.weichuanusa.com/products/shells-wrappers/spring-roll-pastry/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/FxrPKaLH4hKMqpSPyjqh38.png",
+            "product_id": "74613",
+            "product_name": "WC Green Onion & Seasame Roll 330g/PKG",
+            "product_name_zh": "味全葱香大饼 330g/包 (12)",
+            "rationale": "The official Wei-Chuan source confirms the frozen green-onion pie family; image visibly reads Wei-Chuan Green Onion and Sesame Roll and matches the catalog naming.",
+            "source_page": "https://www.weichuanusa.com/products/groceries/snacks-beverages/frozen-green-onion-pie/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/iGH8EHPsPtwoHPX4twLFDd.jpg",
+            "product_id": "74639",
+            "product_name": "WC Cabbage & Pork Bun 24oz /PKG",
+            "product_name_zh": "味全高丽菜肉包 (10)",
+            "rationale": "Image visibly shows the Wei-Chuan Cabbage and Pork Pre-Steamed Bun package; official Wei-Chuan product page is the matching manufacturer listing.",
+            "source_page": "https://www.weichuanusa.com/products/buns/meat-bun/fully-cooked-cabbage-pork-bun/"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.jnkfoods.com/cdn/shop/products/09_5b3ed124-8e71-4103-942b-2d7ec42aa955.jpg?v=1680504684",
+            "product_id": "92641",
+            "product_name": "JNK (Pork) Mini Soupy Bun 10x1.1lb /CS",
+            "product_name_zh": "JNK 南翔猪肉小笼包 10x1.1lb (20pc)",
+            "rationale": "Official Jack & King's page names Mini Soupy bun with pork filling and describes Nanxiang soup-dumpling preparation; the direct official CDN image is the product page image.",
+            "source_page": "https://www.jnkfoods.com/products/mini-soupy-bun-w-pork-filling-jnk"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://www.jnkfoods.com/cdn/shop/products/09_5b3ed124-8e71-4103-942b-2d7ec42aa955.jpg?v=1680504684",
+            "product_id": "92643",
+            "product_name": "JNK Mini Pork Bun (Pan Fry Style) 1LB",
+            "product_name_zh": "生煎包 (20)",
+            "rationale": "Official JNK source verifies the same pork-filled mini-bun family and package imagery; catalog distinguishes the pan-fry style variant, so this is a family-level visual match rather than a claim about package text.",
+            "source_page": "https://www.jnkfoods.com/products/mini-soupy-bun-w-pork-filling-jnk"
+          },
+          {
+            "confidence": "high",
+            "image_url": "https://www.jnkfoods.com/cdn/shop/files/07_db5e2f16-201f-4531-901c-1cb042c1c7f0.jpg?v=1727243066",
+            "product_id": "92653",
+            "product_name": "JNK Shrimp Dumpling 16LB 4LBX4BAG",
+            "product_name_zh": "水晶虾饺 16 LBS",
+            "rationale": "Official Jack & King's page names the JNK Shrimp Dumpling and provides the matching direct product image CDN URL; catalog name is the same product family.",
+            "source_page": "https://www.jnkfoods.com/products/shrimp-dumpling"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/oQoYihQf872i69u6mAfb2T.jpg",
+            "product_id": "92651",
+            "product_name": "JNK Pork & Shrimp Dumpling 24LB",
+            "product_name_zh": "虾&猪肉烧麦 24LB",
+            "rationale": "Retailer image visibly confirms pork-and-shrimp dumpling identity and the catalog item names that same prepared style; brand-specific JNK packaging was not available in the public image result.",
+            "source_page": "https://www.hmart.com/pork-shrimp-dumpling-20oz--566g--1/p"
+          },
+          {
+            "confidence": "medium",
+            "image_url": "https://files.manuscdn.com/search-media/310519663941189998/Y5chK2JKgmzDKQI3Ok6R6T/sWvyqDm9Rkm7iwYH3HLQpa.png",
+            "product_id": "92790",
+            "product_name": "ScallionLayeredPancake /PKG Little Alley",
+            "product_name_zh": "(小巷口)葱油饼/包(20)91592",
+            "rationale": "Image clearly shows a frozen scallion/green-onion layered pancake package; official manufacturer page verifies the corresponding prepared frozen spring-onion-pie product form.",
+            "source_page": "https://www.weichuanusa.com/products/groceries/snacks-beverages/frozen-spring-onion-pie/"
+          }
+        ],
+        "notes": "Selected only records whose catalog category is exactly prepared. Images were checked against official manufacturer or retailer pages; high-confidence entries have direct package-level agreement, while medium-confidence entries are explicitly marked where the public image confirms the product form but not the catalog brand/variant text."
+      }
+    }
+  ]
+}

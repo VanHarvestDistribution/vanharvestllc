@@ -1,0 +1,12 @@
+---
+import { facilityImages } from '@/data/site';
+interface Props { lang?: 'en' | 'zh' }
+const { lang = 'en' } = Astro.props;
+const zh = lang === 'zh';
+const facilities = [
+  { image: facilityImages.warehouse, index: '01', title: zh ? '食品仓库' : 'Food warehouse', stat: '29,000 SF', copy: zh ? '位于 Charlotte 的食品批发仓库，为多品类餐饮采购提供稳定的收货、存储与备货空间。' : 'A 29,000-square-foot Charlotte warehouse built for organized receiving, storage and foodservice picking.' },
+  { image: facilityImages.coldStorage, index: '02', title: zh ? '冷库与冷链' : 'Cold storage', stat: zh ? '冷链能力' : 'Cold-chain ready', copy: zh ? '新鲜、冷冻与温控产品由不同温层的运营流程支持；具体产品可用性请向办公室确认。' : 'Fresh, frozen and temperature-sensitive products are supported through distinct cold-chain workflows; confirm current availability with the office.' },
+  { image: facilityImages.distribution, index: '03', title: zh ? '配送运营' : 'Distribution operations', stat: zh ? '4 个配送区域' : '4 delivery regions', copy: zh ? '当前合作配送覆盖 North Carolina、South Carolina、Atlanta, GA 和 Virginia。三处运营地点的详细地址将在确认后公布。' : 'Current delivery coverage includes North Carolina, South Carolina, Atlanta, GA and Virginia. Full addresses for all three operating locations will be added after confirmation.' }
+];
+---
+<section class="facility-network" aria-labelledby="facility-title"><div class="shell"><div class="facility-heading"><div><p class="eyebrow">{zh ? '设施与配送网络' : 'Facilities & delivery network'}</p><h2 id="facility-title">{zh ? <>从仓库到<br /><em>专业厨房。</em></> : <>From warehouse<br />to <em>working kitchens.</em></>}</h2></div><p>{zh ? 'Van Harvest 将食品仓储、冷链处理和区域配送集中在同一条可靠的供应链中。' : 'Van Harvest connects food warehousing, cold-chain handling and regional delivery in one dependable supply chain.'}</p></div><div class="facility-grid">{facilities.map((facility) => <article class="facility-card"><div class="facility-image"><img src={facility.image} alt={facility.title} loading="lazy" /><span>{facility.index}</span></div><div class="facility-card-meta"><div><p>{facility.stat}</p><h3>{facility.title}</h3></div><p>{facility.copy}</p></div></article>)}</div></div></section>

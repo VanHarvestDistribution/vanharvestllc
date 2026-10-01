@@ -43,7 +43,7 @@
 
 ## 联系策略
 
-展示已确认电话 `(704) 392-8718` 与地址 `5226 Terminal St, Charlotte, NC 28208`。Sales、Customer Service、Purchasing、Human Resources 保留独立卡片；邮箱未提供时显示 “Email coming soon”，不构造虚假地址。网站提供电话拨号与 Google Maps 路线链接。
+展示已确认电话 `(704) 392-8717` 与地址 `5226 Terminal St, Charlotte, NC 28208`。Sales、Customer Service、Purchasing、Human Resources 保留独立卡片；销售表单直达 `ordersvhd@gmail.com`，客服、采购与人事表单发送至办公室邮箱 `vanharvestoffice2019@gmail.com`。网站提供电话拨号与 Google Maps 路线链接。
 
 ## 验证
 
@@ -66,3 +66,9 @@ TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由
 - The clean catalog PDF is regenerated from the cleaned bilingual data at `public/catalog/van-harvest-product-catalog.pdf`.
 - New public conversion/information routes include `/apply`, `/delivery`, `/industries`, `/careers`, `/suppliers`, `/privacy`, `/terms`, plus `/en` and `/zh` entry points and localized information routes.
 - Delivery territory, delivery days, cutoff time, minimum order, business history and legal copy remain visibly marked placeholders until Van Harvest confirms them. Forms use the existing office mailbox through a mailto draft; private uploads and server-side persistence require a later backend/email-storage integration.
+
+## Brand, facilities and expanded featured products (2026-10-01)
+
+- 首页改用更明亮的红、深蓝、米色品牌体系，并以仓库、冷库和配送运营摄影取代过暗背景；保持首屏文字可读性。
+- 首页新增设施展示：29,000 SF 仓库、冷链能力、North Carolina / South Carolina / Atlanta, GA / Virginia 配送覆盖。三处运营地点的完整地址待 Van Harvest 提供后写入。
+- 九大分类页将升级为每类至少 12 个 Featured Products；优先关联用户上传实拍，缺图时使用经公开来源核验的准确产品包装或产品摄影。
