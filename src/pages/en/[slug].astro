@@ -1,0 +1,6 @@
+---
+import LocalizedInfoPage from '@/components/LocalizedInfoPage.astro';
+export function getStaticPaths(){ const kinds = ['apply','delivery','industries','careers','suppliers','privacy','terms','company','services']; return kinds.map((slug) => ({ params: { slug }, props: { kind: slug } })); }
+const { kind } = Astro.props as { kind: string };
+---
+<LocalizedInfoPage kind={kind} lang="en" />

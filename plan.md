@@ -58,3 +58,11 @@ TypeScript 检查、生产构建与现有交互检查将覆盖所有公开路由
 ## 用户资料更新（2026-10-01）
 
 办公室电话已按确认更新为 `(704) 392-8717`，办公室邮箱暂用 `vanharvestoffice2019@gmail.com`。用户上传 PDF 中不含经理姓名的 VH / Van Harvest Distribution 标识已裁切为本地 Logo 资源。FoodMart 草稿中的五张真实产品促销图片已固化并接入 `/products` 产品目录展示区；图片已裁掉两侧黑色留白，后续可继续追加用户提供的真实产品图片。
+
+## Catalog and conversion expansion (2026-10-01)
+
+- Product data now flows through `scripts/import_catalog.py` with editable rules in `data/catalog-rules.json`; the importer reads the bilingual PDF, removes blocked records, normalizes names, assigns editable categories, and writes a price-free `src/data/products.json` plus reports.
+- The product directory now searches both English and Chinese names, hides internal Code from the UI, and links every active Item # to `/products/:category/:itemNumber` with bilingual metadata, storage, pack-size parsing, category placeholder imagery, and Product JSON-LD without offers or prices.
+- The clean catalog PDF is regenerated from the cleaned bilingual data at `public/catalog/van-harvest-product-catalog.pdf`.
+- New public conversion/information routes include `/apply`, `/delivery`, `/industries`, `/careers`, `/suppliers`, `/privacy`, `/terms`, plus `/en` and `/zh` entry points and localized information routes.
+- Delivery territory, delivery days, cutoff time, minimum order, business history and legal copy remain visibly marked placeholders until Van Harvest confirms them. Forms use the existing office mailbox through a mailto draft; private uploads and server-side persistence require a later backend/email-storage integration.

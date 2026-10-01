@@ -1,0 +1,1462 @@
+{
+  "source": "/home/ubuntu/vanharvest/data/source/082824itemlist.pdf",
+  "rawCount": 2437,
+  "cleanCount": 2399,
+  "blockedCount": 38,
+  "blocked": [
+    {
+      "id": "11211",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "11361",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "12133",
+      "rawName": "*****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "20004",
+      "rawName": "*",
+      "rawNameZh": "*",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "20010",
+      "rawName": ".......",
+      "rawNameZh": "......",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "22111",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "23350",
+      "rawName": "***",
+      "rawNameZh": "*****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "25583",
+      "rawName": "N/A",
+      "rawNameZh": "N/A",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "33255",
+      "rawName": "N/A",
+      "rawNameZh": "N/A",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35065",
+      "rawName": "*****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "35662",
+      "rawName": "*****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "40431",
+      "rawName": "*",
+      "rawNameZh": "商城套餐(A)",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40432",
+      "rawName": "*",
+      "rawNameZh": "商城套餐(B)",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40433",
+      "rawName": "*",
+      "rawNameZh": "商城套餐(C)",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40434",
+      "rawName": "*",
+      "rawNameZh": "商城套餐(D)",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "40435",
+      "rawName": "*",
+      "rawNameZh": "商城套餐(E)",
+      "reason": "keyword:商城套餐"
+    },
+    {
+      "id": "42118",
+      "rawName": "****",
+      "rawNameZh": "*****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "43225",
+      "rawName": "*****",
+      "rawNameZh": "*****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "67200",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "71025",
+      "rawName": "**",
+      "rawNameZh": "**",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "74211",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "74790",
+      "rawName": "*",
+      "rawNameZh": "*",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "74791",
+      "rawName": "****",
+      "rawNameZh": "***",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "80000",
+      "rawName": "******",
+      "rawNameZh": "*****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "80130",
+      "rawName": "Cement",
+      "rawNameZh": "炉头土(桶 )",
+      "reason": "keyword:cement"
+    },
+    {
+      "id": "81100",
+      "rawName": "****",
+      "rawNameZh": "*****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "85013",
+      "rawName": "Calendar - PC",
+      "rawNameZh": "福-挂历",
+      "reason": "keyword:calendar"
+    },
+    {
+      "id": "85110",
+      "rawName": "Hand Truck",
+      "rawNameZh": "小推车",
+      "reason": "keyword:hand truck"
+    },
+    {
+      "id": "92611",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99231",
+      "rawName": "***",
+      "rawNameZh": "***",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99660",
+      "rawName": "****",
+      "rawNameZh": "****",
+      "reason": "placeholder-name"
+    },
+    {
+      "id": "99730",
+      "rawName": "Bag Clam For Free",
+      "rawNameZh": "中国花蛤-(M)/包",
+      "reason": "keyword:for free"
+    },
+    {
+      "id": "99802",
+      "rawName": "Bag ShangHai Bok Choy For Free",
+      "rawNameZh": "上海菜-(M)",
+      "reason": "keyword:for free"
+    },
+    {
+      "id": "99807",
+      "rawName": "Bag Daikon For Free",
+      "rawNameZh": "白萝卜-(M)",
+      "reason": "keyword:for free"
+    },
+    {
+      "id": "99915",
+      "rawName": "Whole Leg for HF Foods Ind.",
+      "rawNameZh": "鸡腿40磅/箱",
+      "reason": "keyword:whole leg for hf foods"
+    },
+    {
+      "id": "99992",
+      "rawName": "Calender PC",
+      "rawNameZh": "挂历",
+      "reason": "keyword:calender"
+    },
+    {
+      "id": "99996",
+      "rawName": "DIFFERENT PAYMENT",
+      "rawNameZh": "补差价",
+      "reason": "item:99996"
+    },
+    {
+      "id": "99999",
+      "rawName": "Special Item",
+      "rawNameZh": "特价商品",
+      "reason": "item:99999"
+    }
+  ],
+  "categoryAdjustments": [
+    {
+      "id": "10337",
+      "rawName": "(White) Choco Nut Puff Pastry 128g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10339",
+      "rawName": "Cashew Nut Cookies 162g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10340",
+      "rawName": "Almond Nut Cookies 162g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10341",
+      "rawName": "(ORANGE) Popping Cookie Balls 165g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10342",
+      "rawName": "(BLUE) Popping Cookie Balls 165g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10345",
+      "rawName": "HAO Mashed Taro Roll Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10347",
+      "rawName": "Meat Floss Cheese Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10348",
+      "rawName": "Egg Yolk Meat Floss Cake 250G /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10350",
+      "rawName": "(Ranli) Coffee Chiffon Cake/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10351",
+      "rawName": "**2KG** (Ranli) Chiffon Cake/CS (red)",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10353",
+      "rawName": "(Ranli) Tiger Skin Cake 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10354",
+      "rawName": "(Ranli) Green Tea Cake 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10355",
+      "rawName": "(Ranli) Red Velvet Cake 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10356",
+      "rawName": "(Ranli) Chocolate Cake 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10357",
+      "rawName": "Salted Egg Yolk Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10358",
+      "rawName": "(Calleton) Milk Box Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10359",
+      "rawName": "Magic Toast Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10360",
+      "rawName": "Cheese Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10362",
+      "rawName": "(Ranli) Yogurt Flavored Fried Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10363",
+      "rawName": "Mooncake With Filling 8P Set",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10368",
+      "rawName": "(Black) Choco Nut Puff Pastry 128g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10369",
+      "rawName": "NAGANO Nut Cake (Mixed Flavor) 345g",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10370",
+      "rawName": "(Ranli) Layered Toast Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10371",
+      "rawName": "(Ranli) Stuffed Salad Rolls Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10372",
+      "rawName": "HAO Milk Burger Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10373",
+      "rawName": "Meat Floss Around Cake 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10374",
+      "rawName": "Meat Floss TARO Bread 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10375",
+      "rawName": "Red Tea Bread Stick 2KG/CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10379",
+      "rawName": "Rice Dumpling (Red Bean Paste) 300g/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10380",
+      "rawName": "Rice Dumpling (Chestnut Osmanthus) 300g/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10381",
+      "rawName": "Rice Dumpling (Alkaline water) 300g/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10382",
+      "rawName": "Rice Dumpling (Red Bean) 300g/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10383",
+      "rawName": "Rice Dumpling (Purple Rice Chestnut) 300g/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "10384",
+      "rawName": "Rice Dumpling (Chestnut) 300g/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "11066",
+      "rawName": "Breaded Chicken Tenders 10LB / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "24271",
+      "rawName": "Pork Bung 5LB/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "24735",
+      "rawName": "Red Bead Favor Rice Cake - 34.5 oz / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25484",
+      "rawName": "*BEST* Fried Fish Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25499",
+      "rawName": "Tofu Fish Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25505",
+      "rawName": "YeShu- Natural Coconut Drink 24x245ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25511",
+      "rawName": "HOT-KID Milk Drink 24x245ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25536",
+      "rawName": "Yeo's Soy Milk Drink 24x300ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25538",
+      "rawName": "Milk Peanut Drink 24x365g",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25540",
+      "rawName": "CARABAO ENERGY DRINK 250ml x 24",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25541",
+      "rawName": "WC Herbal Tea Drink 24x310ml *3-36801*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25542",
+      "rawName": "Grass Jelly Drink (Taisun)",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25551",
+      "rawName": "*ASSI* Aloe Drink 20x16.9oz /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25553",
+      "rawName": "HOT-KID Milk Drink Family Pack 20x125ML / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25563",
+      "rawName": "RAMUNE Drink MELON Flavor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25565",
+      "rawName": "RAMUNE Carbonated drink 30x6.7oz",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25568",
+      "rawName": "RAMUNE Drink Orange Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25589",
+      "rawName": "RAMUNE Drink GrapeFavor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25594",
+      "rawName": "Assam Milk Tea Drink 15x500ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25604",
+      "rawName": "*ACC* B-26 Steamed MilkBun 6pc/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25605",
+      "rawName": "*ACC* B-30 Brown Sugar Bun *ACC* / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25607",
+      "rawName": "B-21 Fuzhou PorkBun 4pc/Pkg*ACC*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25608",
+      "rawName": "*ACC* B-29 Wheat Steamed Bun 6pc/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25618",
+      "rawName": "Rice Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25619",
+      "rawName": "Brown Sugar Glutinous Rice Cake 240g",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25620",
+      "rawName": "Sweet Rice Cake 300g",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25635",
+      "rawName": "FISH CAKE .50#/PKG F3S4A",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25650",
+      "rawName": "Sliced Rice Cake-2LB/Pkg (12)",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25734",
+      "rawName": "Original Favor Rice Cake - 34.5 oz / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25735",
+      "rawName": "Red Bean Favor Rice Cake - 34.5 oz / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25736",
+      "rawName": "Mixed Favor Rice Cake - 34.5 oz / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25739",
+      "rawName": "Red Bean Rice Cake - 18.3oz",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25744",
+      "rawName": "Red Bean Favor Rice Cake - Box",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25755",
+      "rawName": "A1DS Moon Cake *EF*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25761",
+      "rawName": "Moon Cake (Yolk & Lotus) /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25762",
+      "rawName": "FuZhou Moon Cake Piece",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25767",
+      "rawName": "A1SS-01 Moon Cake *EF*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25770",
+      "rawName": "DXC Moon Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25913",
+      "rawName": "KSF Jasmine Tea Drink 15x500ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25933",
+      "rawName": "KSF Sour Plum Drink 15x500ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25938",
+      "rawName": "RAMUNE Drink Blue Hawaii Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25941",
+      "rawName": "MD Peach Vitamin Drink15x600ml (PINK)",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25942",
+      "rawName": "KSF Ice Peach Drink 15x500ml",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25945",
+      "rawName": "KSF Pear Juice Rock Sugar Drink 15x500ml /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "25999",
+      "rawName": "RAMUNE Drink Blueberry Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26111",
+      "rawName": "Moncher Cake Cream",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26161",
+      "rawName": "Pineapple Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26169",
+      "rawName": "Bread",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26200",
+      "rawName": "RAMUNE Drink MixedFavor 24x6.7oz",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26207",
+      "rawName": "RAMUNE Drink Strawberry Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26218",
+      "rawName": "RAMUNE Drink Coconut Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26219",
+      "rawName": "RAMUNE Drink Pineapple Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26223",
+      "rawName": "RAMUNE Drink Lychee Favor 24 x 6.7oz / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26470",
+      "rawName": "Tteokbokki Snack 50g /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "26959",
+      "rawName": "Stick Fish Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "30800",
+      "rawName": "21-25 Bread Shrimp 8x3LB/CS Butterfly",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "30810",
+      "rawName": "Bread Popcorn Shrimp (900385) 20LB / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "32111",
+      "rawName": "Breaded Imi.Scallop",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "33926",
+      "rawName": "FZN Crab Bun Fish Ball - 5LB/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "34208",
+      "rawName": "Heavy Breaded Okra 10LB",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "37105",
+      "rawName": "C-20 Fish Cake Patty - 5LB*ACC* / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "43918",
+      "rawName": "*ASSI* Yogurt Flavored Drink 5x5(10.5oz) /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "43920",
+      "rawName": "Japanese Fried Fish Cake 24.2lb",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "43924",
+      "rawName": "*ASSI* Aloe Drink 1.5L /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "43926",
+      "rawName": "*ASSI* Topokki Rice Cake 2LB /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "46023",
+      "rawName": "RICE CAKE WHITE (RED BAG) 14oz",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "54025",
+      "rawName": "FOCO Guava Drink 24Can /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "54026",
+      "rawName": "FOCO Lychee Drink 24Can /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "54027",
+      "rawName": "FOCO Mango Passion Drink 24Can /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "54028",
+      "rawName": "FOCO Sugar Cane Drink 24Can /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "54029",
+      "rawName": "FOCO Tamarind Drink 24Can /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "54034",
+      "rawName": "FOCO Coconut Juice Drink 24Can /CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "72038",
+      "rawName": "Bread Crumb",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "72039",
+      "rawName": "Japanese Bread Crumb 20LB",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "72040",
+      "rawName": "PANKO Japanese Bread Crumbs",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "72623",
+      "rawName": "WC Vegetable Mushroom Bun *1-46312* / PK",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74612",
+      "rawName": "WC Spring Roll Pastry 40Pkgx11oz 1-71008",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74615",
+      "rawName": "WC Bbq Chicken Bun 25PC/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74617",
+      "rawName": "WC Yogurt Flavored Drink 5x10/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74618",
+      "rawName": "WC Glutinous Rice Dumpling 4PC *1-46328*/PC",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74622",
+      "rawName": "WC Vegetable Mushroom Bun *1-46312* / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74623",
+      "rawName": "WC Vegetable Mushroom Bun PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74624",
+      "rawName": "Rice Dumpling （Mixed Flavor) 20 x 6 pc / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74700",
+      "rawName": "Golden Bowl Fortune Cookie",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74706",
+      "rawName": "Fortune Cookie",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74720",
+      "rawName": "Almond Cookie TUB",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "74737",
+      "rawName": "Rose Fortune Cookie",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92602",
+      "rawName": "Peach Bun",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92603",
+      "rawName": "B-07 Custard Bun 30gx25pcs",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92604",
+      "rawName": "*ACC* B-07 Custard Bun 20pc",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92610",
+      "rawName": "WC Lotuss Leaf Buns *1-46301* / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92615",
+      "rawName": "WC Taro Cake 9pc *1-53014*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92616",
+      "rawName": "WC Radish Cake 10pc *1-53013*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92620",
+      "rawName": "Garlic Bread 125pcs",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92623",
+      "rawName": "B-14 Mini Steamed Bun 30pc (Small) *ACC* / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92624",
+      "rawName": "B-02 Steamed Twisted Roll Bun *ACC* /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92626",
+      "rawName": "B-08 Steam Taro Paste Bun 6Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92627",
+      "rawName": "*ACC* B-08 SteamTaro Bun 20pc",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92628",
+      "rawName": "Steam Bun",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92629",
+      "rawName": "B-17 Pan Fried Bun 30gx25 / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92631",
+      "rawName": "Red Bean Bun 6Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92632",
+      "rawName": "B-03 RedBean Bun 20pc/Pkg *ACC*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92633",
+      "rawName": "Lotus Leaf Bun 12Pkg (L)1-46300",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92634",
+      "rawName": "WC Bamboo Pork&ChickenBun 10Pkg *2-60128*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92637",
+      "rawName": "B-04 PEACH BUN F4L9B",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92638",
+      "rawName": "B-04 PEACH BUN PKG F4L9B",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92639",
+      "rawName": "*ACC* F-08 Glutinous Rice Dumpling 20 pcs",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92641",
+      "rawName": "Mini Soupy Pork Bun with Crab Meat- 1.1LB",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92643",
+      "rawName": "Mini Pork Bun (Pan Fry Style) 1LB",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92645",
+      "rawName": "WC BBQBun H.K.Style Pkg *WC 2-60001*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92646",
+      "rawName": "WC Bamboo Pork&Chicken Bun Pkg *2-60128*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92651",
+      "rawName": "WC BBQ Bun HongKong Style 10Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92664",
+      "rawName": "Fried Bread Sticks 15.87oz/PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92760",
+      "rawName": "Shrimp Roll Cake 1.45lb /PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92761",
+      "rawName": "PorkMiniBunCrabNeatAdded",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92790",
+      "rawName": "Scallion Layered Pancake Pkg*Little Alley*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92791",
+      "rawName": "LayeredPancake20Pkg/CS(Little Alley)",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92792",
+      "rawName": "Green Onion Pancake Pkg *IMEI*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92842",
+      "rawName": "Mini Soupy Pork Bun - 1.1LB",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92880",
+      "rawName": "-Cream Bread",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92886",
+      "rawName": "Red Bean Paste Bun / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92892",
+      "rawName": "-Redbean Bun Piggy",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92971",
+      "rawName": "Pork & Veg Bun (50343)16oz /Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92972",
+      "rawName": "Stick Rice Cake W/CK (50349) 13.5oz/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92973",
+      "rawName": "Curry Chicken Bun (50345) 16oz/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92975",
+      "rawName": "Brown Sugar Bun (50355)16oz /Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "92976",
+      "rawName": "HK BBQ Pork Bun (50341) 17.6oz/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99000",
+      "rawName": "Cream Jelly Roll 4 Roll A8 Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99001",
+      "rawName": "*ACC* A8 Cream Jelly Cake 4 Rolls",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99002",
+      "rawName": "*King* Swiss Roll 4 Rolls AA CakE",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99003",
+      "rawName": "*ACC* AA Swiss Cream Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99004",
+      "rawName": "*ACC* AS Strawberry Cream Cake 4Rolls",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99101",
+      "rawName": "*ACC* Q Mocha (Coffee) Q8 Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99105",
+      "rawName": "*ACC* 10 Oreo Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99110",
+      "rawName": "Coconut Mousse Cake C Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99111",
+      "rawName": "*ACC* C Coconut Cake White",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99121",
+      "rawName": "Strawberry Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99140",
+      "rawName": "*ACC* G8 Carrot Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99141",
+      "rawName": "Carrot Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99150",
+      "rawName": "*ACC* H Coconut Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99160",
+      "rawName": "*ACC* J Black Forest Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99161",
+      "rawName": "Black Forest Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99210",
+      "rawName": "Palm Leaf P Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99212",
+      "rawName": "Napolean Cake NP Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99215",
+      "rawName": "*ACC* P Butterfly Cookies",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99241",
+      "rawName": "Y Cake Mini Bundt Cakes",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99330",
+      "rawName": "Strawberry Cream Puff PS Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99500",
+      "rawName": "Mango Mousse Cake W Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99501",
+      "rawName": "Mango Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99509",
+      "rawName": "*ACC* L Cappuccino Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99510",
+      "rawName": "*King* L Mocha Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99511",
+      "rawName": "*ACC* L8 Mocha Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99520",
+      "rawName": "*King* K Raspberry Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99521",
+      "rawName": "*ACC* K Raspberry Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99525",
+      "rawName": "*ACC* 8 Pineapple Cake 63pc",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99526",
+      "rawName": "*ACC* 3 Strawberry Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99527",
+      "rawName": "*ACC* 4 Mint Mousse Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99529",
+      "rawName": "*ACC* D8 Strawberry Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99617",
+      "rawName": "\"OREO\" Chocolate 10 Cake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99623",
+      "rawName": "Plain Cheesecake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99629",
+      "rawName": "Apple Cheesecake",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99641",
+      "rawName": "HM Semi Cooked Cheese Cake 7x30g / PKG",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99644",
+      "rawName": "Chocolate Cake 400g",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99650",
+      "rawName": "*ACC* 11- Cheese Cake 2pcs",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99658",
+      "rawName": "*ACC* CD8 Cheese Cake 2pcs",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99700",
+      "rawName": "Osmanthus Cake 10.5oz",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99701",
+      "rawName": "Pumpkin Cake 25g x 12pc",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99910",
+      "rawName": "Special Bun *ACC* / CS",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99911",
+      "rawName": "**GIFT** MoonCake 4pc *A1SS-01*",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    },
+    {
+      "id": "99960",
+      "rawName": "Buns BENIE (Assorted) 10pc/Pkg",
+      "category": "snacks",
+      "reason": "keyword/manual category override"
+    }
+  ]
+}

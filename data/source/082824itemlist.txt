@@ -1,0 +1,4877 @@
+Product_ID   Code     Product_English_Name
+10004        BM06C    Fresh Bnls Cushion Meat*28033*(Any Brand)
+10007        BM08S    Bone In Butt Fresh 86793/12036
+10012        BM08     Bone In Butt Fresh (Swift/Any Brand)
+10014        BM08A    IBP Bone In Butt Fresh (A.L.Beck&Sons)
+10018        BM10O    Sausage Original Flavor 12oz/Pkg
+10019                 Sausage Original Favor - 12ozx30Pkg
+10030        BM06Z    FRZ Bnls Cushion Meat(Swift/Any Brand)
+10031        BM06A    Fresh Bnls Pork Butt (A.L.Beck&Sons)
+10033        BM06ZS   FRZ Bnls Pork Butt (Smithfiled/ANY BRAND)
+10034        BM08I    "FROZEN " Bone In Butt Fresh
+10050        BM24     Pork Chop10LB
+10061        BM08     FRESH Bone in Butt #22126 _-Approxmi 75 LB Seaboard
+10078        BM06I    Fresh Bnls Butt *05205*(IndianaKitchen)
+10083        BM06     Fresh Bnls Pork Butt*20080*(Swift/AnyBrand)
+10084        BM06S    Fresh Bnls Butt*70659*(Smithfield)
+10085                 Fresh Bnls Pork Butt *70659*(Smithfield)
+10087                 Black Oak Smoked Sausage (13054)-10LB
+10088        BM10T    Pork Sausage-Taiwan 1LB
+10089        DIMSUM   WC Taiwan Sausage *1-41310* 12oz
+10090        BM07     FRZ Bnls Pork Ham ANY BRAND
+10091        BM07Z    Bone In Pork Ham FRZ
+10096        BM06FS   FRZ Bnls Cushion Meat *21668* (Smithfield)
+10098        BM08Z    Frozen Bone In Butt (ANY BRAND)
+10099        BM04S    (JBS) ST Louis Ribs *61595*
+10100        BM04K    18 Pack Spare Rib(98&18)Chinese Style
+10102        BM04SZ   FRZ #2 STLouis Ribs #21012
+10113        BM04     Pork Spare Ribs Fresh 4.3 Down
+10114        BM04Z    **FRZ** PORK SPARE RIB
+10174        BM35     Pork Spare Ribs 5LB/Pkg
+10208        BM32W    Spare Rib Tips (Wanrong)
+10229        BM32     Spare Rib Tips (98&18)
+10329                 Smoked Sausage 23.625Lb
+10330                 Smoked Sausage (13054)-10LB
+10331        BM10B    BlackOak SmokedSausage-11LB
+10332                 HML CDK HAM (13507) 2x13LB / CS
+10333        SNACK    (YELLOW) Duck Neck Strip (Original) 12pc /PKG
+10334        SNACK    (GREEN) Duck Neck Strip (Honey) 12pc /PKG
+10335        SNACK    (PINK) Duck Neck Strip (Hot) 12pc /PKG
+10336        SNACK    (BLUE) Duck Neck Strip (BBQ) 12pc /PKG
+10337        SNACK    (White) Choco Nut Puff Pastry 128g /PKG
+10338        SNACK    (GREEN) Popping Seedweed Balls 108g /PKG
+10339        SNACK    Cashew Nut Cookies 162g /PKG
+10340        SNACK    Almond Nut Cookies 162g /PKG
+10341        SNACK    (ORANGE) Popping Cookie Balls 165g /PKG
+10342        SNACK    (BLUE) Popping Cookie Balls 165g /PKG
+10343        SNACK    SHUANGHUI Sausage 10x60g (L)
+10344   SNACK      SHUANGHUI Sausage 9x30g (S)
+10345   SNACK      HAO Mashed Taro Roll Bread 2KG/CS
+10347   SNACK      Meat Floss Cheese Bread 2KG/CS
+10348   SNACK      Egg Yolk Meat Floss Cake 250G /CS
+10349   SNACK      (Calleton) Taro Flavor Toast 2KG /CS
+10350   SNACK      (Ranli) Coffee Chiffon Cake/CS
+10351   SNACK      **2KG** (Ranli) Chiffon Cake/CS (red)
+10352   SNACK      Hazelnut Gift Box (2 Cans) 3.3LB/CS
+10353   SNACK      (Ranli) Tiger Skin Cake 2KG/CS
+10354   SNACK      (Ranli) Green Tea Cake 2KG/CS
+10355   SNACK      (Ranli) Red Velvet Cake 2KG/CS
+10356   SNACK      (Ranli) Chocolate Cake 2KG/CS
+10357   SNACK      Salted Egg Yolk Bread 2KG/CS
+10358   SNACK      (Calleton) Milk Box Bread 2KG/CS
+10359   SNACK      Magic Toast Bread 2KG/CS
+10360   SNACK      Cheese Bread 2KG/CS
+10361   SNACK      MeatFloss SeaweedToast 2KG/CS-WHT
+10362   SNACK      (Ranli) Yogurt Flavored Fried Bread 2KG/CS
+10363   MOONCAKE   Mooncake With Filling 8P Set
+10364   SNACK      (RED) Spicy Duck Feet PKG
+10365   SNACK      (GREEN) Original Duck Feet PKG
+10366   SNACK      (WENZHOUYASHE) Duck Tongue 480g/ PKG
+10367   SNACK      Youyou Spicy Chicken Feet 100g/ PKG
+10368   SNACK      (Black) Choco Nut Puff Pastry 128g /PKG
+10369   SNACK      NAGANO Nut Cake (Mixed Flavor) 345g
+10370   SNACK      (Ranli) Layered Toast Bread 2KG/CS
+10371   SNACK      (Ranli) Stuffed Salad Rolls Cake
+10372   SNACK      HAO Milk Burger Bread 2KG/CS
+10373   SNACK      Meat Floss Around Cake 2KG/CS
+10374   SNACK      Meat Floss TARO Bread 2KG/CS
+10375   SNACK      Red Tea Bread Stick 2KG/CS
+10376   SNACK      Bnls Chicken Feet (Lemon) 200g/ PKG
+10377   SNACK      Bnls Chicken Feet (Spicy) 200g/ PKG
+10378   SNACK      Bnls Duck Feet (Lemon) 200g/ PKG
+10379   SNACK      Rice Dumpling (Red Bean Paste) 300g/PKG
+10380   SNACK      Rice Dumpling (Chestnut Osmanthus) 300g/PKG
+10381   SNACK      Rice Dumpling (Alkaline water) 300g/PKG
+10382   SNACK      Rice Dumpling (Red Bean) 300g/PKG
+10383   SNACK      Rice Dumpling (Purple Rice Chestnut) 300g/PKG
+10384   SNACK      Rice Dumpling (Chestnut) 300g/PKG
+10385   SNACK      Ice Jelly Powder 40g /PKG
+11021   BC16L      Chicken Leg Bone 40LB
+11024   BC16       Chicken Bone 30LB
+11025              Chicken Back Bone 35LB
+11042              S3 Battered Chicken (LUCY'S) 30LB/CS
+11050   BC16S      Chicken Skin 40LB
+11066              Breaded Chicken Tenders 10LB / CS
+11069            Dark Meat Chunk Fritters (2024) - 20LB/CS
+11072   BC17X    CHK Breast Chunk 2339 10LB
+11074   BC16L    ChickenBreast Bone 40LB
+11075   BC20L    91914 FRITTER 10 F4L8C
+11076   BC20     91918 DICED LEGMEAT F4R12
+11110   BC03     *25630* Bnls Breast
+11111   BC03     *00796* Boneless Breast Perdue
+11112   BC03S    *14088/26000/25630* Bnls Breast
+11113   BC03P    *20105/20272* Bnls Breast Pilgrim's
+11114   BC03Z    *20105* Frozen Bnls Breast Pilgrim's
+11115   BC03O    Boneless Breast *OK Foods* / CS
+11116   BC03H    *0212* Bnls Breast 40LB
+11117   BC03K    *535* Bnls Breast *Koch Foods*
+11118   BC03P    *946861&946801* Bnls Breast
+11120   BC04P    *84268* Tender Pilgrim's
+11121   BC04Z    FROZEN Chicken Tender
+11122   BC03     *02290&02291(HR)* Bnls Breast - 40 LB / CS
+11130            *2441* Thigh Meat Pilgrim's
+11131   BC08T    *31552* Thigh Meat *Carolina Precision Foods*
+11171   BC03     *20240* Bnls Breast Peco
+11172   BC03F    *6528* Bnls Breast Farm Fresh
+11183            Roaster Breast 822
+11195   BC03FB   Frozen Bone In Breast 456 (P)
+11199   BC03X    Frozen *14088* Bnls Breast Sanderson
+11201            Thigh Meat -40LB (BRIGHTON/ANY BRAND)
+11206   BC06R    *07650* Whole Leg MOUNTAIRE
+11210   BC06R    Whole Leg (Any Brand)
+11211            ****
+11215   BC06H    *0966* Whole Leg 40LB
+11216   BC06P    *4627* FRZ Whole Leg Pilgrim's
+11217   BC06     *65403/65410* Whole Leg Case Farm
+11220   BC06Z    4627WholeLeg Pilgri. FROZEN
+11223   BC06P    *34010* Whole Leg Peco
+11229   BC06T    *025942* Whole Leg Tyson
+11303   BC07X    *7006* Raw Whole Wing
+11320   BC07F    FRZ *14701&14702* Whole (Med)Wing*Sanderson* / CS
+11325   BC07M    *268* Fresh Whole Wing Perdue
+11326   BC07Z    Frozen 268 Wings Perdue 40LB
+11327   BC07F    Frz 20219 MED SIZE WING 20LB
+11328   BC07P    *54425* Whole Wing Pilgrim's
+11329   BC07PF   FRZ *54425* Whole Wing Pilgrim's
+11333   BC05Z    Frozen JUMBO Miscut Wing *620* - 40LB / CS
+11356   BC05P    *84257* Cut Wing Pilgrim's
+11357   BC05M    *55467* FRZ MisCut Chicken Wing
+11358   BC05Z    *84257* Frozen Cut Wing Pilgrim's
+11359   BC05M    *6196* FRZ MisCut Chicken Wing 33LB
+11360   BC05T    #110956 Frozen Tyson Cut Wing
+11361            ****
+11362   BC07FZ   Frozen 606 (120pc) Perdue Wings
+11363   BC07MP   *1606* Wings Perdue FRESH
+11364   BC07MP   FRZ *1606* Wings Perdue FRZ
+11370   BC07SZ   FRZ Whole Wings Sanderson *14540*
+11382   BC07F    FRZ *6222 & 6223* WholeWings MED 33LB
+11384   BC07MK   Economy Party Wings
+11391   BC07M    FRZ *206* MED Whole Wing (Foster Farm)
+11392   BC07M    *206* Fresh MED Whole Wing (Foster Farm)
+11393   BC07M    *35206* Fresh Whole MEDWings Pilgrim's
+11394   BC07M    *35206* FRZ Pilgrim's MED Wings
+11396   BC07S    Fresh*14540*MED Wing 40LB Sanderson
+11397   BC07M    *2950* Fresh MED Whole Wing (FF)
+11399            #372# FEZ Chicken Wing
+11400   BC07T    WING TIP 40LB
+11401   BC08P    *499* Leg Meat Perdue
+11402   BC08     715-24 Leg Meat
+11406   BC08X    ** Bnls Leg Meat 40LB
+11407   BC08C    *51720* Leg Meat 40LB Carolina
+11408   BC08S    *24834/10590*Leg Meat 40LB Sanderson
+11409   BC08P    *499* Leg Meat 40LB Perduce
+11410   BC08HZ   *5988* Frozen Leg Meat 40LB
+11411   BC08     *51411* Frozen Leg Meat 40LB
+11412   BC08     *51030* Frozen DRUMSTICK Meat
+11413            *51005* Frozen Whole LEG
+11417            *51720* Leg Meat 40LB Carolina *EF*
+11418   bc08     *51720* Leg Meat 40LB Carolina FROZEN
+11429   BC08     *10010* Leg Meat Union
+11431   BC02     Thighs Bone-In Meat 40LB *623* Perdue
+11433   BC08U    *10005* Leg Meat 40LB Union
+11473   BC08B    Leg Meat 40LB*Brighton River*
+11490   BC08Z    FZN Boneless Leg Meat Charles
+12001   BM01     Fresh Flank Steak(19321/19341)Excel
+12003   BM01     AMH Australia Flank Steak
+12006   BM02L    Beef Loin Fresh(646421)Peel Strip
+12023   BM01A    FRZ Australia Flank Steak #22101
+12060   BM02T    Beef Loin Ball Tip *EXCEL* (18825)
+12061   BM02L    Beef Loin Fresh( ANY BRAND) Peel Strip
+12074   BM02L    Beef Loin Fresh (418010/02800) Peel Strip
+12085   BM02LF   FROZEN Beef Loin /Peeled Beef
+12089   BM02X    Beef Loin Fresh(02810)Denuded Stirloin 60LB
+12090            (5 Star) Boneless Beef SP/CS
+12097   BM01A    FRZ Flank Steak -60LB *Purcell Internation*Brazilian
+12098   BM01F    FLANK STEAK EXCEL FRZ
+12099   BM01A    FRZ Flank Steak*TEYS#2210* 60LB Australia
+12100   BM01TF   FRZ FLANK STEAK(Trosby)"A/B"
+12110   BM04PC   Beef Short Rib 30LB SELECT
+12118   BM04PC   Beef Short Rib 45LB *WANRONG TRADING*
+12126   BM04PC   FRZ BEEF RIBEYE LIPON LGT 4/BX 011334
+12127   BM04PC   Beef Short Rib Red Box
+12128   BM04PC   BEEF RIBEYE LIPON LGT 4/BX 011334
+12129   BM04PB   Beef Short Rib 5LB
+12130   BM28L    FZ Beef Chuck Riblet (National)
+12131   BM28L    FZ Beef Chuck Riblet (National) PKG
+12132            Beef Short Plate (22138) *CARGILL* 50-70LB
+12133            *****
+12153   BM02PK   #89420 Fresh Beef Pectoral 5 Star
+12154   BM02P    Pectoral Beef Chuck (11425/11435/11445)Excel
+12155   bm02l    Beef loin
+12185   BM01c    FRESH SUKARNE Flank Steak
+12186   BM01S    Fresh Sukarne 53486 Mexico FlankSteak
+12187   BM01M    FRZ Sukarne 53486 FlankSteak Mexcio
+12260   BM03K    Excel 16846 Inside Round Beef
+12268            Eye Round Beef
+12269   BM03     Eye Round Beef (17125/17145/17135) Excel
+12270   BM30C    IndivIdual Pack Beef Bone 20x2LB
+12271   BM28     Beef Soup Bone 35LB
+12272   BM20     Pork Fat 50LB
+12275   BM20S    Pork Skins 10LB
+12279   BM01     Beef Plate Bnls (12194/12184) Excel
+12355   BM02P    *4013203* Beef BACK RIB SPECIAL / CS
+12392            FRESH (10251709) Beef Strip Loin *SUKARNE* / CS
+12393            *FRZ* (10251709) Beef Strip Loin *SUKARNE* / CS
+13011            FROZEN Boneless Lamb Shoulder Tube*Y90* FLECTER BRAND
+20000   BP02H    Ho King Broccoli
+20001   BP02K    Crown KING Broccoli
+20002   BP021    Red Son Hee Broccoli
+20003   BP02J    Golden Dragon Broccoli
+20004            *
+20005   BP02K    Kowloon Broccoli
+20007   BP02T    Top Quality Broccoli
+20008   BP02I    Imperial Broccoli
+20010            .......
+20024   BP02G    Lu Jin Broccoli
+20031   BP02P    King Panda Broccoli
+20045   BP02C    Chui Ho Broccoli
+20100   BP10     Napa
+20310   BP03     Iceless Green Onion 24'x2Pkg
+20312   BP03P    Iceless Green Onion 2 Pkg
+20314   BP03V    Green Onion 2x24' (Vaccum Pack)
+20316   BP03X    Iced Green Onion 4 Doz "PANDA"
+20410   BP06     Yellow Jumbo Onion 50LB
+20411   BP06W    White Jumbo Onion 50LB
+20500   BP07     Celery 24'
+20510   BP07P    Celery 3 CT/PKG
+20600   BP05     Cabbage 50LB
+20606   BP05X    Taiwan Cabbage (FLAT)
+20700   BP04     Green Pepper
+20701   BP04I    Green Pepper IRR (Suntan)
+20702   BP04     LONG HOT PEPPER
+20710   BP04R    Red Pepper
+20711   BP04RX   Red Pepper 5LB/PKG
+20712   BP04RS   Red Pepper Small Case
+20721   GP29     Jalapeno 2LB/PKG
+20722   GP29C    Mexico Jalapeno Small Case
+20723   GP29CL   Mexico Jalapeno LG Case
+20809   BP08     Carrot 50LB
+20810   BP08S    Carrot 10LB
+21000   BP09     Snow Peas
+21001   BP88     Sugar Snap Pea /10 LB
+21010   BP36     String Bean-Box
+21011   BP36S    String Bean 5LB
+21012   BP36X    String Bean-BlackPlastic Basket
+21020   BF03K    FZ Peas & Carrots 12x2LB
+21021   BF03     Fine Line FZ Peas & Carrots 12x40oz
+21022   BF03K    FZ Peas & Carrot 24LB (IQF/EcoVally)
+21029   BF02     FRZ Green Peas 12x40oz FINE LINE
+21030   BF02K    Green Peas # IQF
+21040   BF11     FRZ Slice Carrot-Med 20LB FINE LINE
+21042   BF13     FRZ Cut Corn 20LB FINE LINE
+21044   BF13K    Frz BONANZA Cob Corn 20lb CS
+21046   BF13O    Frozen Organic Corn W.C
+21101   BP28     Potato 50LB
+21110   BP28R    Red Potato B#2 50LB
+21111   BP28RS   Red Potato # A - 50LB / CS
+21120   BP29R    Yam Red (MED) USA
+21121   BP29     Sweet Potato 5LB/Pkg
+21122   GP04CP   California Purple Yam
+21123   GP04     Purple Yam 10LB
+21124   BP29J    Japanese Yam
+21125   GP04CH   Purple Yam - Hawall
+21126   BP29S    Sugar Chestnut Potato
+21127   BP29SR   Sweet Yam Jumbo
+21130   BP06R    Red Onion 25LB
+21140   GP50C    FRESH SWEET CORN 48CT.
+21162   GP81RV   Dragon Fruit Red (WHT Box)
+21163   GP81R    Dragon Fruit Red 20LB
+21165   GP80C    Avocado 48'
+21190   BP52     Watermelon - PC
+21191   BP52     Watermelon Seedless - PC
+21192   BP52C    Cherimoya 10ct / box
+21200   BP59     Honeydew
+21210   BP51     Cantaloupe
+21220   BP25     Large Case Cucumber
+21221   BP25X    Small Case Cucumber
+21223   BP25P    NO.1 Cucumber PERSIAN
+21224   BP25P    ORGANIC EUROPEAN CUCUMBER 12CT
+21230   BP31     Zucchini MED
+21235   BP31X    Zucchini Large Case
+21240   BP19     Orange
+21241   SNACK    J&S Mandarin (Gift Box) - 8.8LB / CS
+21242   BP       Mandarin (ISRAEL) 20LB/ CS
+21243   BP19TM   Morocco Murcott Tangerine - 22LB
+21244   SNACK    HAWAII PAPYA 1.3LB /Pkg
+21245   SNACK    Yacon 15LB
+21246   SNACK    Yacon 10LB
+21247   BP19T    Tangerine Mandarin10x3LB/CS
+21248   GIFT     *GIFT*Orange(Dragon)ChineseNewYear
+21249   BP19M    Mandarin Shiranui SUMO Loose 25LB
+21250   BC10     Egg XL 30 Doz
+21251   BC10XS   Egg XL 15 Doz
+21252   BC10L    Large Egg 30 Doz
+21262   BF46     Plantains 24LB
+21277            COOKED Salted Duck Egg Yolk - PKG
+21283   BC10B    Brown Egg Large-Doz/Pkg
+21310   GP13C    Fresh Pineapple
+21320   BP26     Large Tomato
+21325   GP34W    Guava White 20LB
+21326   GP34R    Guava Red No.1 10LB
+21328            Vampee Fruit 10LB / CS
+21330   BP92     Pomegrante Loose 40LB
+21383   BP58Q    Qiu Yue (Moon) Pear 5-8 CT
+21384   BP22P    Asian Pear
+21385   BP58S    Golden Sand Pear 20LB
+21386   GP01C    Fragrant Pear-China 15LB
+21387   BP58QH   HONEY Qiu Yue (Moon) Pear 5 - 8 CT
+21388   BP58     Yali Pear 6x8 CT
+21389   BP58G    Golden Pear 8-9 CT
+21390            Sweet Pear- 20LB
+21397   BP27S    Seafood Mushrooms 40Pkg
+21398   BP27OS   Oyster Mushroom 6LB
+21399   BP27KC   King Oyster Mushrooms 11LB
+21400   BP27     Fresh Mushrooms
+21401   BP27O    Oyster Mushrooms 5LB
+21402   BP27KP   King Oyster Mushrooms PKG (HOKTO)
+21403   BP27KU   King Oyster Mushrooms USA (HOKTO)
+21404   BP27M    Maitaki Murshrooms
+21405   BP27B    Brown Beech Murshrooms ORG
+21406   bp27b    Brown Beech Murshrooms
+21407   GP09C    SHIMEJI White Mushrooms 40Pkg
+21408   GP08C    Enoki Mushroom 25Pkg
+21409   GP08     Enoki Mushroom Pkg
+21410   BP17     Bean Sprouts
+21411   BP27I    Fresh Mushrooms "IRR" (Brown Box)
+21415   BP27PC   Portabella Caps Murshrooms 8x6oz
+21416   BP27PS   Portabella Slices Murshrooms 8x6oz
+21417   BP27X    Baby Bella Murshrooms Brown 12x8oz
+21418   BP27A    WHT Reg Flat Murshrooms (Agaricus)12x8oz
+21420   BP33     Iceberg Lettuce 24'
+21421   BP34     Green Leaf Lettuce 24'
+21423   BP60C    Cilantro 60'
+21425   BP66     Watercress 24'
+21426   BP65     Watercress 6'/Pkg
+21427   GP17C    Shitake(L) Murshroom Flower 3LB
+21428   GP17LC   Shitake(L)Murshroom-Flower 11 LB / CS
+21429   GP14C    Wood Ear Fresh 10Pkg
+21466            Pickled Minced Vegetables 1LB
+21503   BP15G    Soft Tofu 19ozx12 *01105* GREEN
+21504            Xinxing Tofu
+21505   BP16C    Savory Baked Tofu 30Pkg
+21506   BP16     Savory Baked Tofu Pkg
+21507   BP16X    FRZ SAVORY BAKED TOFU PK
+21513   BP15F    San Sui FIRM Tofu 12x16oz
+21514   BP15K    San SuiI SOFT Tofu 12X16oz
+21515   BP15X    San Sui ORGANIC Extra Firm Tofu 14oz x6
+21516   BP15     (RED) Firm Tofu 14ozx12 *01109*
+21517   BP15S    (GREEN) Soft Tofu 14ozx12 *01105*
+21518   BP61     (BLUE) Med Firm Tofu 14ozx12 *01102*
+21519   BP62     (PINK) Extra Firm Tofu 12ozx12 *01111*
+21520   BP15X    (Purple) Xfirm Tofu 14ozx12 *Ichiban* / CS
+21521            Firm Tofu RED *HF 01109*
+21522   BP20     Nature Tofu (Da Tien)
+21523            Soft Tofu GREEN *HF 01105*
+21524   BP62X    BulkTofu Super Firm 8x2LB *01128*
+21570   BP16P    FRZ Tofu Puffs 2LB/Pkg (20570031)
+21574            *
+21575   BP82C    Deep Fried Tofu 30Pkg
+21576   BN21C    (Ho Fun)RiceNoodle12Pkg-RED
+21577   BN21U    *Cut* (Ho Fun) Rice Noodle 12Pkg- BLUE
+21600   BP13     Fresh Ginger 5LB
+21603   BP14     Peeled Garlic 5LB
+21604   BP23P    Lemon 5LB/Pkg
+21610   BP13C    Ginger Fresh 30LB
+21612   BP14C    Fresh Garlic 30LB
+21614   BP23     Lemon
+21615   BP24X    LIME 40LB
+21617   BP21     WHITE NECTARINE 32CT
+21618   BP22     Fuji Apple USA 40LB
+21619   BP53WC   White Meat Pomelo 25LB
+21620   BP53RC   Red Meat Pomelo 8-9CT
+21621   BP53R    Red Cherry 10Pkg
+21622            Star Fruit (Carambola) 30LB
+21623            JuJube - 40LB
+21624            Mangosteen
+21625            Chestnut 30 LB
+21626            Grape-Red Muscadine 20LB
+21627            YELLOW PLUM - 28 LB
+21628            Baby Mango 8.8LB /CS
+21629            PRINCESS PEACH （12CT）
+21630   BP52B    Watermelon - Bin
+21631            Golden Kiwi
+21632   BP22R    Red Apple
+21633            Plum Red 3.5LB /PKG
+21634   BP53R    Pomelo Red 4 pc/Pkg
+21635            Durian - CS
+21636            Durian Vietnam 4/5CT
+21637   SNACK    Loquat Fruit / PKG
+21638   BP22H    Snow Apple 10PC *FUJI*
+21640   BP54     Kyoho Grape 6x3LB
+21642   BP54S    Kyoho Grape Seedless (4x3LB) USA
+21643   BP91     Winter JuJube 10x2LB/CS
+21644            (T.F K)Fried Garlic 8oz
+21645   BP53RP   Red Cherry 1LB
+21646   BP53G    Cocktail Grapefruit
+21647   BP52C    Watermelon - 4ct/CS
+21648   BP54     Black Grape 9x2LB
+21649   BP54     Black Grape PKG 2LB
+21651   BP93C    Winter JuJube Loose 30LB
+21652   BP93     Winter JuJube 5LB/Pkg
+21655   BP68A    Ataulfo Mango 12CT
+21656   BP68T    Thai Mango Fresh (NAM DOK MAI)
+21657   BP69C    Persimmon 25LB
+21658   BP69     Persimmon 10LB/Pkg
+21660            Jicama Aproxi 5 LB / PKG
+21665            Chestnut 5 LB / PKG
+21701            Spicy Tofu
+21721            Durian Seedless
+22001   GP45C    Shanghai Bok Choy
+22002   GP45     Shanghai Bok 2LB/Pkg
+22003   GP37C    Yu Choy
+22004   GP37     Yu Choy 2LB/Pkg
+22005   GP61C    Sher Li Hon
+22006   GP61     Sher Li Hon 2LB/Pkg
+22007   GP74C    Shanghai Bok Choy JR
+22008   GP74     Shanghai Bok Choy JR 2LB/Pkg
+22009   BP12     Spinach 24'
+22010   BP12S    Spinach 4'
+22011   GP38C    Gai Lan
+22012   GP38     Gai Lan 2LB/Pkg
+22013   GP73C    A Choy
+22014   GP73     A Choy 2LB/Pkg
+22015   GP67C    Malanga Coco (Root Large)
+22016   GP67     Malanga LB
+22017   GP31C    Taiwan Spinach
+22018   GP31     Taiwan Spinach 2LB/Pkg
+22019   BP12X    Spinach 2LBx2Pkg
+22020   GP10H    Papaya HAWAIN
+22021   GP47C    Chinese Eggplant
+22022   GP47     Chinese Eggplant 3LB/Pkg
+22023   GP10C    Green Papaya
+22024   GP58C    Chives (Nira) Green
+22025   GP58     Chives Green 1LB/Pkg
+22026   GP39C    Daikon
+22027   GP39     Daikon 5LB/Pkg
+22028   GP42C    Taro Root Small 5LB/PKG
+22029   GP59C    ChivesFlower 10 LB
+22030   GP42C    Taro Root Small Case
+22031   GP23C    Thai Basil 10LB
+22032   GP67C    Thai Basil Fresh / Pkg
+22033            Mint CASE 60CT
+22035   GP51C    Nagaimo (Japan)
+22036   GP51CX   Nagaimo (CHINA) 22LB
+22037            Jicama 35 LB
+22039   GP59     ChivesFlower 2LB/PKG
+22040   GP44C    Gai Choy (Mustard Green)
+22041   GP49C    On Choy (Green) 25LB /CS
+22042   GP49     On Choy Green/white 3LB/Pkg
+22044   GP49W    On Choy (White) 20LB /CS
+22045   GP44     Gai Choy(Mustard Green) 2LB/PKG
+22047   GP38CJ   Gai Lan Tip
+22048            Fresh Water Bamboo 4LB/PKG
+22049            Passion Fruit 20pc /PKG
+22051   GP70C    Chinese Celery Green
+22052   GP70     Chinese Celery Green 5LB/Pkg
+22055   GP33C    Leek 12LB
+22056   GP33     Leek 2 LB /PKG
+22057   GP10H    Opo Squash 30LB
+22058   GP39     Opo Squash 5PC /PKG
+22082   GP60     Taiwan Bok Choy PKG 2LB
+22083   GP60C    Taiwan Bok Choy CS
+22084   GP60     Sweet Bok Choy 25LB/ CS
+22087   GP54     Baby Bok Choy 2 LB/PKG
+22088   GP53C    Bok Choy (Long)
+22089   GP54C    Baby Bok Choy JR
+22090   GP54     Baby Bok Choy JR 2 LB/PKG
+22098   BP50     Cauliflower 9'
+22099   BP50     Cauliflower 12'
+22100   BP50P    Cauliflowers 3 PC/PKG
+22101   BP50C    Chinese Cauliflower
+22102   BP50CP   Chinese Cauliflower (Around 3LB)/Pkg
+22104   GP12C    Lemon Grass
+22105   GP41     WINTER Melon PC
+22106   GP78C    Fresh Young Thai Coconut 9CT
+22107   GP06C    *** CASE *** GOBO 22#/CS
+22108   GP07     Kabocha
+22109   GP78CE   Coconut Thai Young 9 ct *EasyOpen*
+22110   GP18C    Passion Fruit Purple 25-36 Ct
+22111            ****
+22112   GP20C    Thai Eggplant
+22113   GP25C    Shallot
+22114   GP36C    Korean Melon
+22115   GP36C    Korean Melon - 20LB
+22116   GP55     Pea Tips 1LB/Pkg
+22117   GP55C    Pea Tips
+22118   GP72     Tong Ho Small Leaf 2LB/Pkg
+22119   GP72C    Tong Ho Small Leaf
+22120   GP81CY   Dragon Fruit (WHITE) CS
+22121   BP58H    Pear Honey Green
+22122   GP35     Korean Singo Pear (8x3)
+22123   GP86     Wood Ear (6ozx10Pkg)
+22124   GP36H    Hami Melon 6-8 CT
+22125   GP43C    Chinese Bitter Melon
+22126   GP43     Chinese Bitter Melon 3LB
+22127   GP05C    Chayote Green
+22128   GP05     Chayote Green 5LB/PKG
+22129   GP35G    Pear Golden Korean 6-9CT
+22131   GM28C    Fresh Longan FL 20LB
+22132   GM28     Fresh Longan - 10LB/Pkg
+22133   GP43     Taiwan Melon 5LB/pkg
+22135   BP68V    Mango Vietnam
+22136            Fresh Coconut CASE
+22138   BP57     Wax Apple FL No.1
+22139            MO GUA
+22140            Mo Gua 5LB/ PKG
+22141   BP55     Rambutan 5LB
+22148   GP40C    Taro Small
+22149   BP56      Lychee 20 LB / CS
+22150   BP56N    Nuomici Lychee 10 LB / CS
+22201   GP37CS   Yu Choy Sum
+22207   GP19     Sugar Cane Purple-PC
+22306            Lotus Slice
+22307   GP76     Fresh Lotus Root 3LB/Pkg
+22308   GP76S    *ASSI* Sliced Lotus Root 24x16oz
+22309   GP76C    Lotus Root Fresh 44LB
+22310   GP76S    Poached Lotus Root Slice 22x1LB/CS
+22311   GP76C    Lotus Root Fresh 30LB/CS
+23002   BS21     Butter Fish 22.05LB(BLUE THINKING)
+23044            7/9 Tilapia 10LB
+23045   BS41     FRZ Tilapia Gutted&Scaled *0060906
+23046   B        Sea Bream Fish (750-950G) - 40LB / CS
+23080            FRZ Greenland Hailbut 33LB
+23091            Rocket Shaped Squid Wing 2lb/ PKG
+23092            Baby Octopus
+23093   BS17     Squid 3LB/Pkg
+23094   BS17S    Squid 2.2
+23095   BS17S    Squid (~400) 44.1LB( CALAMAR)
+23096            Frozen Frog Leg 5LB /PKG
+23097            FRZ Squid Carved 2LB/Pkg
+23119            Moon Fish
+23166            Grey Sole (400-500)-33LB
+23171            Grey Sole(400-500)-20LB
+23260            KingSilverCarp FishHead W/DoublePepper 1060g
+23286   BS26C    Belt Fish (500-700/700-1000/1000+) 22LB
+23291            FZN Cuttlefish Whole Round 22.05 LB
+23293            Grass Fish Fillets 8.8oz/PK
+23302   BS47     Frozen . WHOLE ROUND CUTTLEFISH 44LB
+23311            Croaker Yellow Fish 10LB
+23317            Wine Lees Yellow Crocker / PKG
+23321   BS48Y    FZN Yellow Eel 44LB CASE
+23325   BS48     FROZEN CONGER PIKE 22LB
+23329   BS48     Eel 22LB CASE
+23330   BS18X    Yellow Fish (500-700)10LB
+23331   BS18C    (400-500)Yellow Fish10LB
+23343   BS45     Golden Pompano Fish 32LB
+23350            ***
+23464            Yellow Croaker Small
+23603            Tilapia With Pickled Veg&Chili
+23607            Sea Bass Clean 500g /PKG
+24001   BC17B    Black Chicken
+24002            Fortune Chicken （Free Range Chicken) - PC
+24006            Hot Pepper Boneless Chicken Feet / PKG
+24007   BC14     *6129* PERDUE Jumbo Roaster Paws 22lLB
+24008   C        *87421* CASE FARM Chicken Paws 33.07LB
+24009   BC14     Chicken Paws 5LB
+24010   BC17     Aged Chicken PC
+24030   BC17Q    Squab - PC
+24037            Quail 6PC/Pkg
+24038            *805402002* Quail Eggs in Brine 39.7LB /CS
+24049            Whole Chicken *4017*
+24064   BC17C    Aged Chicken
+24100   BC13P    Duck With Head PC
+24101   BC11B    Duckling LAC Brand CS
+24102   BC11     *BAY*Duckling Headless (#034)
+24103   BC13     *BAY* BUDDHIST- Duck With HEAD 6PC (#214)
+24104   BC13P    *PREMIUM POULTRY* Buddist- Duck With HEAD 6PC (6LB)
+24105   BC11U    Ugly Duckling Parts Missing 6pc (#203)
+24108   GP08X    Enoki Mushroom 34Pkg
+24110            Mature Duck - PC
+24111   BC11R    Duck-1 Roasted Duck/PC *ACC*
+24112            Duck Head - CS
+24113            Duck Wing (#106)- CS
+24114            Duck Feet (#096) 40LB / CS
+24115            Duck Chitterlings (#135) 8oz / PKG
+24116            Mature Duck 6PC (#197) / CS
+24117            Roasted Duck Halves (#55332）- PK
+24118            Duck Tongue - Approxi 10 LB/ PKG
+24131   BC15     Duck Feet Bnls 1LB
+24166            Goose
+24178            Chicken Paw
+24181   SNACK    (HAOYASHUANG)300g/Pkg
+24202   BM21P    Pork Stomach 5LB/Pkg
+24203   BM21     Pork Stomach 10LB
+24214   BM25     Pork Feet Cut 3LB
+24220   BM22P    Pork Bellies 5LB/Pkg
+24221   BM22     Fresh Pork Bellies (A.L. Beck) RED
+24222   BM22F    *FROZEN* Pork Bellies (BLUE)
+24223   BM22D    DANISH Skinless Pork Bellies FRN 1808
+24224   BM22DS   DANISH Pork Bellies W/Skin FRN 1805
+24225   BM22DS   FRN Brazilian Pork Bellies W/ Skin *Seara*
+24226   BM22DS   FZN Brazilian Pork Bellies W/ Skin *Costa Brava*(WHITE)
+24230            Roasted Pork Chunk 6x5LB /CS
+24231            Roasted Pork Chunk 6x5LB *JNK USA*
+24232            Roasted Pork Chunk 5LB *JNK USA*
+24234   BM11     Pork Femur Bone 40LB/CS
+24238            Pork Kidney 40LB / CS
+24241            Skinless Pork Bellies FRN / CS
+24243   SNACK    Chinese Bacon (BK145) -12oz / PKG
+24258            Pork Tongue
+24260            Roasted WHOLE Pig - 30-40 LB/ PC
+24271   BM39     Pork Bung 5LB/Pkg
+24280           Pork Brains/Heads (CUT) 3PCS / CS
+24287   BM11P   Pork Femur (Neck) Bone 5LB
+24294           Pork Back Bone *Brighton River*30LB / CS
+24306   BM14    Beef Honey Comb Tripe 10LB
+24321   BM15P   Beef BookTripe (Omassom) 5LB
+24323   BM15N   Beef Omasum NaturalColor 28.3LB (A.L. Beck)
+24326   BM15    Beef BookTripe (Omassom)30LB/CS
+24330   BM17P   Beef Brisket 5LB/PKG
+24331   BM17    Rough Flank Beef BRISKET CASE - 50LB
+24340   BM09    Beef Tendon 10LB
+24342   BM16    Beef Shank Meat 10LB
+24344   BM16L   Beef Shank Meat VAC Pack(Big Case)
+24371   BM19    Beef Tongue
+24372   BM19P   Ox Tail 5LB/Pkg
+24403           Boneless Lamb Leg*LL0152* 35-45LB*THOMAS*
+24404           Lamb Kebab 1.25LB/PKG
+24405           FRZ Bone In Lamb PKG
+24406           Lamb Kebab -14*1.25LB/CS *EF*
+24414           Pork Slice
+24450   BM36    Sliced Lamb 16oz - Hot Pot
+24451   BM37    Sliced Beef 1LB - Hot Pot
+24460   BF44    Taro 1LB - Hot Pot
+24474   BM12    Bone In Cubes Goat 2.2LB (BLUE)
+24475   BM12    Bone In Cubes Goat 5LB
+24557   BM27    Pork Ear Retail PKG
+24558   BM31    Pork Jowl (Face) 5LB
+24559   BM36    Pork Tail 3LB PKG
+24560   BM38    Duck Wing 3LB PKG
+24566   BM11C   Pork Femur Bone （Wangrong) 45LB/CS
+24568   BM13    Pork Jowl (Face) - CS
+24615           Beef Heel Muscle - 27.22LB / CS
+24735           Red Bead Favor Rice Cake - 34.5 oz / PKG
+25022   AS44    Preserved Bean Curd 24 Bottle
+25023           Perserved Bean Curd
+25024           HT Perserved Beancurd (Chunk) - White 288g / PKG
+25030           Hot Oil Bamboo
+25031           Hot Oil Bamboo 24x13oz
+25032           Spicy Chili Crisp 210g/Pkg
+25041           Fried Gluten W/Peanut In SoySauce 24x13oz
+25080           Saline Bamboo Shoot 400g
+25099           Mini Pickled Cucumber
+25100   AS32    Szchuan Preserved 12oz /PKG
+25101   AS32C   Szchuan Preserved (Cha Choy See) 48Can
+25120   A125    Eagle Coin Fried Dace 6.5oz /PKG
+25122   A125X   Black Bean Fish 24x3.5oz
+25125   A125C   Black Bean Fish 24'
+25202   AS33C   Pickled Mustard 36x10.5oz
+25203   AS33    Pickled Mustard Green 500g
+25204           Pickled Mustard Green 150g
+25207           Sweet Beans 100g
+25210           Preserved Daikon
+25220           Preserved Vegetable 2.4oz
+25222           Preserved Vegetable 100x70gm
+25248           PRESERVED MUSTARD STEM 70g
+25275           Pickled Vegetable 75g (100)
+25284           Chili Bamboo Shoots
+25287           Dried Bean Curd
+25288           Presewed Vegetable
+25298           KELP-SPICY
+25302   A124    Preserved Duck Egg 6'/Box
+25306           Salted Duck Egg
+25311           Salted Duck Egg CASE
+25338   A134    Pork FU 18oz Jug
+25340   A154    Quail Eggs 15oz
+25400           Chinese Seaweed
+25404   BF43X   Fuzhou Fish Ball CS
+25426           FRZ Salted Seaweed Knot*LAMINARIA* 11LB
+25440           Five Spice Dried Tofu
+25442           Five Spice Dried Tofu
+25477   BS46    Seafood dumplings 10.58LB/Pkg
+25482   BF45    *BEST* Fried Tofu PKG
+25484           *BEST* Fried Fish Cake
+25486   BF22P   Cuttle Fish Ball 5LB C-21
+25488           FRZ Whold Squid Skewer ColorBag PKG
+25489   BF38    Frozen Cuttefish Ball PKG
+25490           FRZ Vegan Skewer 50g/ PKG
+25491           FRZ Tornado Potato Skewer 500g /PKG
+25492   BF37    Frozen Fish Ball PKG
+25493   BF36    Frozen Simulated Lobster Ball 8oz
+25499           Tofu Fish Cake
+25500   A129    Congee Mixed Cereal (TaiSun) 24'
+25501   A129    Tremella Mixed Porridge (J10103) 24'
+25505   A148    YeShu- Natural Coconut Drink 24x245ml
+25510           Peanut Milk Soup 24x340ml / CS
+25511   DRINK   HOT-KID Milk Drink 24x245ml
+25533   DRINK   Yeo's Sugar Canned Tea 24x300ml
+25534   DRINK   White Fungus Soup 12x7oz /CS
+25535   DRINK   Yeo's Chrysanthemum Tea 24x300ml
+25536   DRINK   Yeo's Soy Milk Drink 24x300ml
+25537           1/2 Gal Sweetened Soy Milk Organic/Pkg
+25538   A149    Milk Peanut Drink 24x365g
+25539           ORGANIC 1/2 Gal Sweetened Soy Milk/Pkg
+25540   DRINK   CARABAO ENERGY DRINK 250ml x 24
+25541   DRINK   WC Herbal Tea Drink 24x310ml *3-36801*
+25542   DRINK      Grass Jelly Drink (Taisun)
+25551   DRINK      *ASSI* Aloe Drink 20x16.9oz /CS
+25553   DRINK      HOT-KID Milk Drink Family Pack 20x125ML / PKG
+25563   DRINK      RAMUNE Drink MELON Flavor 24 x 6.7oz / CS
+25565   DRINK      RAMUNE Carbonated drink 30x6.7oz
+25568   DRINK      RAMUNE Drink Orange Favor 24 x 6.7oz / CS
+25583              N/A
+25589   DRINK      RAMUNE Drink GrapeFavor 24 x 6.7oz / CS
+25594   DRINK      Assam Milk Tea Drink 15x500ml
+25604   DIMSUM     *ACC* B-26 Steamed MilkBun 6pc/Pkg
+25605   DIMSUM     *ACC* B-30 Brown Sugar Bun *ACC* / PKG
+25607   DIMSUM     B-21 Fuzhou PorkBun 4pc/Pkg*ACC*
+25608   DIMSUM     *ACC* B-29 Wheat Steamed Bun 6pc/Pkg
+25616              Banh Pho
+25618              Rice Cake
+25619   DIMSUM     Brown Sugar Glutinous Rice Cake 240g
+25620   DIMSUM     Sweet Rice Cake 300g
+25633   BF43C      FuZhou FIsh Ball 20x1LB/CS
+25635   GM12       FISH CAKE .50#/PKG F3S4A
+25641              Seafood Tofu 40x400g
+25642              Seafood Tofu LAMSHENG KEE 240g/Pkg
+25644              Shrimp Ball In Lychee Shape - 200g （24）
+25645              *ACC* C-30 Shrimp Ball w/ Filling 5LB/PKG
+25646              *ACC* C-44 Mini Curd Pork Link 5LB
+25650              Sliced Rice Cake-2LB/Pkg (12)
+25655   GM23       (O.Tasty) Pork Dumpling 50pcx8Pkg
+25656              (O.Tasty) Dumping Chicken/Veg 50pcx8Pkg
+25657   GM22C      *Chicken&Veg* OCM GYOZA 12x32oz *03102*
+25659   GM22P      *Pork&Veg* OCM GYOZA 12x32oz *03101*
+25661   GM21K      WC Veg&PorkPotsticker *2-62181* 8x32oz
+25665   GM22       WC Veg&Pork GYOZA *2-62051* 8x32oz
+25666   GM21       WC Pork&VegPotsticker *1-72283* 12x21oz
+25685   BF47       Seame Ball PKG
+25687              *
+25698   BF43       FuZhou Fish Ball 454g
+25700              Joss Stick
+25701   BF44       *ACC* C-17 White Fish Balls 5LB
+25720              Joss Paper
+25721              Joss Paper 20Bags
+25730   SNACK      New Year Candy PKG
+25734              Original Favor Rice Cake - 34.5 oz / PKG
+25735   SNACK      Red Bean Favor Rice Cake - 34.5 oz / PKG
+25736   SNACK      Mixed Favor Rice Cake - 34.5 oz / PKG
+25739   SNACK      Red Bean Rice Cake - 18.3oz
+25744   SNACK      Red Bean Favor Rice Cake - Box
+25755   SNACK      A1DS Moon Cake *EF*
+25761   MOONCAKE   Moon Cake (Yolk & Lotus) /PKG
+25762   SNACK   FuZhou Moon Cake Piece
+25767           A1SS-01 Moon Cake *EF*
+25770   GM11D   DXC Moon Cake
+25902           Grapefruit JasmineTea15x500ml
+25913   DRINK   KSF Jasmine Tea Drink 15x500ml
+25923           Peach OolongTea15x500ml (ORANGE)
+25933   DRINK   KSF Sour Plum Drink 15x500ml
+25938   DRINK   RAMUNE Drink Blue Hawaii Favor 24 x 6.7oz / CS
+25941           MD Peach Vitamin Drink15x600ml (PINK)
+25942   DRINK   KSF Ice Peach Drink 15x500ml
+25943   DRINK   KSF GreenTea (Honey Jasmine) 15x500ml
+25945   DRINK   KSF Pear Juice Rock Sugar Drink 15x500ml /CS
+25950   AS60    YeShu- Natural Coconut Milk12x1000ml
+25974   SNACK   KSF Ramen Noodle (Mixed) - EF
+25975   DRINK   KSF Honey Jasmine Tea 15x500ml
+25976   SNACK   KSF Ramen-Beef (RED)/CS
+25977   SNACK   KSF Bowl Ramen-Pickled Veg (PURPLE)/CS
+25978   SNACK   KSF Ramen-Hot&Spice(ORANGE)/CS
+25979   SNACK   KSF Bowl Ramen- Hot&Spice(ORANGE)/CS
+25980   SNACK   KSF Bowl Ramen-Soy Beef (BROWN)/CS
+25981   SNACK   KSF Bowl Ramen-Chicken (GREEN)/CS
+25982   SNACK   KSF Bowl Ramen-Shrimp/Fish (BLUE)/CS
+25983   SNACK   KSF Bowl Ramen-Beef (RED)/CS
+25984   SNACK   KSF Bowl Ramen-Pork&Shallot (YELLOW)/CS
+25989   DRINK   KSF BlackTea 15x500ml
+25999   DRINK   RAMUNE Drink Blueberry Favor 24 x 6.7oz / CS
+26111           Moncher Cake Cream
+26117           Mixed Mochi
+26118           Roasted Green Peas
+26124           Garlic Flv Peanut
+26143           BOBA Milk Tea
+26161           Pineapple Cake
+26169           Bread
+26200   DRINK   RAMUNE Drink MixedFavor 24x6.7oz
+26207   DRINK   RAMUNE Drink Strawberry Favor 24 x 6.7oz / CS
+26218   DRINK   RAMUNE Drink Coconut Favor 24 x 6.7oz / CS
+26219   DRINK   RAMUNE Drink Pineapple Favor 24 x 6.7oz / CS
+26223   DRINK   RAMUNE Drink Lychee Favor 24 x 6.7oz / CS
+26332           *
+26344           Freeze Dried Persimmon
+26347           Evergreen Biscuit - BOX
+26348           Evergreen Biscuit
+26349           Shousi Mianbao
+26350           *
+26353           *
+26365           Ma Zao
+26407           Sunflower Seed Chine 160g/Pkg
+26408            Sunflower Seed Spiced Favor 250g/Pkg
+26409            Sunflower Seed Natrual Favor 250g/Pkg
+26422   SNACK    Sunflower Seed Caramel Favor 160g/Pkg
+26470   SNACK    Tteokbokki Snack 50g /PKG
+26473            XFY Mala Spicy Hot Pot Soup Base 200g
+26495            Fruits Mix Gummy Candy
+26603            *
+26638            WANT WANT Rice Crackers
+26657            Fruit Jelly 49.4oz
+26690            Yogurt Original 24x250ml
+26700            Dried Mango
+26735            senbei rice cracker
+26746            Coffee Mix
+26764            peeled roasted chestnuts
+26766            taro Choco roll
+26767            pudding Choco roll
+26782            I MEI EGG MILK BISUIT
+26804            *
+26925            Squid Silk
+26926            Crispy Fried Fish 2LB (10)
+26927            Crispy Fried Pork IQF 1LB
+26959            Stick Fish Cake
+26994            Garlic Flavor Broad Bean
+26996            Broad Bean BEEF FAVOR 22LB
+26997            Broad Bean BEEF FAVOR 2LB
+28105            *
+28108            *
+28109            *
+28141            Fish Tofu
+28142            *
+28143            *
+28144            *
+28145            *
+30107   BS03S    21-25 P&D Headless Shrimp 10LB
+30120   BS05     31-40 IQF Peeled Shrimp 5x2LB
+30127   BS05     31-40 IQF P&D Shrimp w/Tail 10LB *Stellar Seas*
+30128   BS05X    31-40 IQF Peeled Shrimp 24LB-80%
+30129   BS05X    31-40 IQF PeeledShrimp30LB Northern Seas/ INDY Mermaid
+30131   BS28L    41-50 Headless Shell-On IQF Shrimp 40LB
+30133   BS28X    41-50 IQF P&D Shrimp 24LB-80%(30lbS)
+30136   BS28XS   41-50 IQF P&D Shrimp 10LB
+30138   BS28S    41-50 IQF P&D Shrimp 30LB
+30146   BS06X    51-60 P&D Shrimp 10LB
+30147   BS06     51-60 Shell-on Shrimp - 40LB / CS
+30148   BS06X    51-60 P&D Shrimp 24LB-80%
+30149   BS06X    51-60 P&D Shrimp 30LB
+30156   BS07XS   61-70 P&D Shrimp10LB*Stellar Seas*
+30159   BS07XS   61-70 P&D Shrimp 32.8LB
+30165   BS08S    71-90 IQF P&D Shrimp 10LB
+30166   BS08X    71-90 IQF PND Shrimp 24LB -80%
+30168   BS08     71-90 IQF PeeledShrimp 30LB*NorthernSeas*
+30169   BS08Y    71-90 IQF Peeled Shrimp 50LB
+30210   BS04     26-30 Shrimp P&D 40LB
+30243            IQF P&DShrimp
+30256   BS07X    61-70 IQF P&D Shrimp 20 LB
+30258   BS07K    61-70 IQF P&D Shrimp 24LB-80%
+30268   BS08     71-90 IQF Peeled Shrimp 30LB
+30527   BS28H    30-40 Head on Shrimp 4LB
+30528   BS28HC   30-40 Head on Shrimp (Champmar) 24LB
+30537   BS28HC   40-50 Head on Shrimp (Champmar) 24LB/CS
+30635   BS44     Tempura Shrimp CASE
+30639   BS18     Whole Shrimp Cooked Shell On 90/120 11LB
+30800   BS03B    21-25 Bread Shrimp 8x3LB/CS Butterfly
+30810            Bread Popcorn Shrimp (900385) 20LB / CS
+31100   BS03     21-25 Headless Shell-On Shrimp 50LB
+31110   BS03X    *40LB* 21-25 Shell-On Shrimp
+31111   BS03X    *4LB* 21-25 Shell-On Shrimp PKG
+31140   BS03X    21-25 EZ Peel Shrimp 4LBx10 *MANTA*
+31141   BS03X    21-25 EZ Peel Shrimp 4LB*MANTA*
+31142   BS03X    21-25 Headless Shell-On IQF Shrimp 20LB
+31150   BS03S    21-25 EZ Peel Shrimp 20LB (ANY BRAND) / CS
+31259   BS04L    26-30 Shrimp Shell On 50LB
+31260   BS04S    26-30 Shrimp Shell On 40LB
+31261   BS03X    26-30 Headless Shell-On IQF Shrimp 20LB
+31385            Ecuador Shrimp
+31390   BS05     EcuadorShrimp (31-35)
+31391            Shrimp
+31460            Shrimp
+31500            Shrimp
+31600   BS07S    61-70 Headless Shell-onShrimp Block10x5LB
+31680            Shrimp
+31760   BS08     71-90 Shell-On Shrimp -40LB (12124)
+31764   BS08     71-90 HLSO Shell-on Shrimp - 50LB(0768)
+32004            U-10 Scallops Millennium - 30LB / CS
+32014   BS02L    10-20 BLK Pearl Scallop 6x5LB*Sea Trek Gold*
+32021   BS02S    20-30 IQF Scallops 6x5LB
+32025   BS02     20-30 BLK Pearl Scallop 50LB
+32026   BS02SP   20-30 IQF Scallop 5LB /PKG
+32036            Scallops
+32037            Scallops
+32050   BS02     20-30 BLK Pearl Scallop 30LB
+32051   BS02     20-30 BLK Pearl Scallop 5LB /PKG
+32056            IQF 40-60 Scallops - 30LB / CS
+32057            40-60 IQF Scallop 5LB /PKG
+32089                  Scallops
+32110   BS33           Asian Star Scallop Seafood Nugget 30x1LB
+32111                  Breaded Imi.Scallop
+33032                  Jumbo Crab Rangoon
+33075                  Snow Crab 8/10 *Royal Greenland* 30LB
+33100   BS14           Imit Crab Stick 6x5LB *ASIAN STAR*
+33110   BS14P          Imit Crab Stick 5LB*ASIAN STAR*
+33111                  Minced Stick
+33120   BS14X          Imit Crab Filament Style 6x5LB *ASIAN STAR*
+33122                  Filament Style
+33135   BS14KP         Imit Crab Filament Style 5LB*ASIAN STAR*
+33140   BS15           Imit Crab Flake Style 12x2.5LB*ASIAN STAR*
+33143   BS15           Imit Crab Flake Style *OYSTER BAY*30LB/CS
+33150                  Flake Style
+33154   BS15           Imit Crab Flake Style 12x2.5LB *Marusei*
+33203                  Lobster Tail
+33205                  Snow Crab 3-5 /30LB *Ocean Choice*
+33206                  Snow Crab 8 UP 10LB*118402000*
+33207                  Snow Crab 12+ -10LB*11840400
+33217                  Warm Water Lobster
+33224                  Lobster Tails 5oz 10LB
+33250   BS39           U-10 CRAWFISH *FISHERMAN* 2x5LB
+33253                  10-15 CRAWFISH *FISHERMAN* 2x5LB
+33254   BS39           16-22 CRAWFISH *FISHERMAN* 2x5LB
+33255   BS39           N/A
+33256   BS39           CRAWFISH U10 2x5LB/CS
+33291   BS49           Salmon Fish (2-4) / CASE
+33300                  Pollack
+33301   live seafood   Sea Bass - PC
+33302   live seafood   Black Cod Fish - PC
+33303                  Sea Bass Butterfly 500/600g PC/PKG
+33304   live seafood   Fresh Red Perch - PC
+33305   live seafood   Fresh Yellowtail Rockfish - LB
+33306   BS38           Swai Fish Fillets 15LB (STRIPED)
+33307                  FRN Chilean Sea Bass
+33308   live seafood   Red Rock Fish - PC
+33309   live seafood   Dungeness Crab - PC
+33310                  U5 Frozen Skinless Squid 22LB
+33311   BS26F          Fresh Belt Fish 2LB
+33312                  Crab - PC
+33313   live seafood   Fresh Belt Fish - PC
+33315   live seafood    Lobster - PC
+33316   live seafood   King Crab - PC
+33317   live seafood   Elephant Trunk Clam (Geoduck) - PC
+33318   live seafood   (M) Conch - LB
+33319                  Live Clam - LB
+33320   BS50           COOKED CLAMS FROZEN 1#
+33321   live seafood   Rock Fish - PC
+33322   live seafood   Mussels - LB
+33323   live seafood   Flounder (Grey Sole) - PC
+33324   BS50S          Spicy Cooked Clam (M) 18oz
+33325   live seafood   FRESH EEL - PC
+33326   live seafood   Black Rockfish - PC
+33327   live seafood   Manila Clam - LB
+33328   live seafood   Cockles - PKG 10P
+33329   live seafood   Sea Cucumber - LB
+33330   live seafood   Sea Urchin - LB
+33331   live seafood   RED Crab - PC
+33332   live seafood   Mackerel - PC
+33335   live seafood   Crawfish (LIve) - LB
+33340   live seafood   Bombay-duck Fish - LB
+33350   live seafood   Wild Caught Shrimp 10LB
+33351   live seafood   Spot Prawn - LB
+33352   live seafood   PP Shrimp - LB
+33353   live seafood   Coonstripe Shrimp - LB
+33360   live seafood   FRESH Shrimp - LB
+33361                  FRESH Scallop - LB
+33362   live seafood   Oyster In Shell (Medium) - 6 PC / PKG
+33500                  Mussel
+33510   BS27L          Mussel (M) 24LB/CS GREEN
+33520                  Black mussel
+33521   BS27B          Black Mussel (20-30) 10LB/CS
+33531   BS27           Mussel (10747 & 10671) 10LB/CS
+33543                  Half Shell Mussel 4x5 LB/CS
+33601   BS37C          Clam 11-20 10x2LB
+33603                  Clam
+33605   SEAFOOD        Cooked Abalone Meat (6PC) 100g /PKG
+33606   BS37           Boiled Clam 2LB
+33607   SEAFOOD        Red Abalone Shell On (8PC) 2.2lb /PKG
+33608   BS37           Mollusc Clam (17/22) 1lb /PKG
+33628                  Live Clam - PKG
+33633   live seafood   Razor Clam - LB
+33634                  cooked Razor Clam
+33638                  Frz Oysters Meat 30x1LB
+33646   BS37R          FZN Boiled Razor Clam 4LB / PKG
+33647   BS37R          FZN Boiled Razor Clam 1LB / PKG
+33697                  Oyster
+33701                  Jelly Fish 14 Kg TUB
+33703                  Jelly Fish (B) 5LB/Pkg
+33717                  Jelly Fish Head Spcy
+33756   A150S          Salted Jellyfish 5LB
+33757   A150           Salted jellyfish 20LB
+33900                  Beef Kebab 1.25LB/Pkg
+33901   G3             FROZEN TARO PASTE 1LB/Pkg
+33904            SoicyMiniCuredPorkPattyLink
+33905            Mini Cured Pork Sausage 10oz
+33906            (Prime Food)Taiwan Brand PorkPatty
+33907            MiniCuredPorkPattyLink/Corn
+33910            MiniCuredChickenPattyLink/Corn
+33918            WC Beef Tendon Ball 8oz/Pkg *1-41120*
+33919            Beef Meat Ball 8oz
+33920            Beef Patty Ball C-25 (or 5 LBS) / PKGS
+33926            FZN Crab Bun Fish Ball - 5LB/Pkg
+33932            Rice Pudding 350g
+33938   BF36     Lobstr Balls PKG
+33944            Fish Dumpling
+33950   GM24     WC Pork&ChineseSpinach Wonton *1-73291* / CS
+33951   GM25W    WC Pork,Leek&Shrimp Dumpling *1-71283 *
+33966            Mini Cured Pork (24)
+33974            Beef Meat Ball
+33976            Cuttle Fish Ball
+33977            Cuttle Fish Ball
+33980            Tomato Flavor
+33981            Spicy Dry Pot Seasoning 5kg/ JUG
+33982            Classic ChongQing Hot Pot Soup Base 400g
+33983            Hot & Spicy Pot Soup Seasoning 3.6KG /JUG
+33984            Hot Pot Soup-Plain
+33985            Hot Pot Soup-Hot
+33991   A148T    Tomato Hot Pot Flavor 220g PKG
+33992   A148     Broth Flavor
+34000   BF01KB   1/2" French Fries (Buyers Best 43301) 30LB / CS
+34033   BF01KB   1/2" French Fries (Golden Fry) 30LB
+34040   BF01KB   French Fries 1/2" Crinkle Cut (32006) 30LB
+34041   BF01KB   (WW71)-1/2" 30LB Crinkle Cut Fries
+34048   BF01KB   1/2" French Fries (Oreida) 30LB
+34059   BF01KQ   3/8" French Fries (663292) 30LB / CS
+34065   BF01KB   1/2" FrenchFries CrinkleCut
+34066   BF01K    3/8" French Fries (CTC945) 30LB
+34067   BF01K    3/8" French Fries (Buyers Best 43301) 30LB / CS
+34071   BF01KB   French Fries 1/2" Crinkle Cut (Valley Select) 30LB
+34075   BF01KB   French Fries 1/2" (QualityFarms) 30LB
+34076            Tater Tots/ French Potatoes (34111) - 30LB / CS
+34081   BF01KQ   3/8" French Fries (Quality Farms) 30LB
+34084   BF01KQ   3/8" French Fries (023685) 36LB / CS
+34089   BF01S    Seasoned Cut Fries (CT5672B) 26.46LB
+34207   BF35     Onion Rings *3126365* 10lb
+34208   GP62C    Heavy Breaded Okra 10LB
+34251            Fried Garlic -454g / PKG
+34254            Crispy Fried Onion
+34300            Chicken Nuggets 20LB 004627
+34301            Chicken Cube Firtters/Nuggets Shaped (004627) 20LB
+34320              Chicken Nuggets (CTC9003R) 30LB
+34363              Spicy Chicken Patties (1726)FRITTERS / CS
+34501   BF40       Corn Nugget 12LB CS
+34608              Frozen Frog Leg 30LB
+35000              3" Sushi Stick 20x1.1LB
+35001              Asian Star ICHIBAN 3" Sushi Stick 1.1LB
+35002              Shushi Stick 7"
+35010   A136       Pink Sushi Ginger 20LB
+35014   A136W      White Sushi Ginger 20LB
+35015              Squid&Veg Salad
+35017   BS37S      Arctic Surf Clams PKG
+35018              Sushi Stick
+35021              16/25 Baby Octopus 24LB
+35034   BS48       Roasted Eel 12oz / PKG
+35043   japanese   Shrimp Shumai (Ajinomoto) Pkg
+35050   BF10W      Edamame SoyBean 20x1LB- TAO
+35051   bf10       Edamame 24x14oz
+35052   BF10       Edamame 20x14oz
+35054   BF10K      Edamame FRZ Soybeans 20Pkg*Kouu*
+35056   BF10J      Edamame JNK 20x14oz
+35065              *****
+35066   BF06       Miso Soup Base **BLUE** 44LB
+35070   BS19       Seaweed Salad 4.4LB/Pkg
+35074   BS19C      Seaweed Salad 4 x 4.4LB
+35080              Pickled Radish
+35091              Masago
+35116              Sushi Nori
+35126              Powder Wasabi-2.2lLB*sr*
+35130   AS21S      Fuji Sushi Vinegar 5.28GAL USA
+35136   A34W       (SR)B-Powder Wasabi 10x2.2LB
+35149   A70J       Bamb. Chopstick White (K)10Pkg
+35150   AS54       Tempura Batter"85138" 30LB
+35153   AS54       Tempura Batter Mix-44LB
+35160              Kewpie Mayonnaise 500g /pkg
+35165              Eel / Unagi Suace
+35171   japanese   Wakame Dried Seaweed 500g*KOUU*
+35179   japanese   Dashi Kombu/ Dried Kelp 1kg /Pkg
+35188   AS20M      Mirin Fu (Kouu) 4.76GL / CS
+35199   AS20M      Mirin Sweet Wine (Honteri) 5.28GL
+35206              Sushi Box (OP-1.0) 400'
+35221              Sushi Tray
+35224              Sushi Contaiuer
+35226              Sushi Tray
+35230              Bento Box
+35235              Bento Box
+35300   japanese   ROASTED Cooked Sesame Seed 2.2LB / PKG
+35304              Kurogoma Sesame Seed
+35318              Green Halfcut Sushi Nori
+35321   AS71       Teriyaki Glaze Kikkoman 6x5LB *04910/41390*
+35328              Sushi Rice Vinegar(Marukan)5.28GL
+35329   AS72       Teriyaki Sauce Kikkoman 4x1Gal *01044*
+35331   AS73       Sushi Sauce (EEL) Kikkoman 6x5LB *01564*
+35332   japanese   Bonito Flake * Hana Kstsuo* - 1 LB/ PKG
+35372              *Welna* Tempura Batter Mix 40lb
+35397              (BROWN) Korean BBQ Kalbi Sauce 1.85LB
+35398              (PURPLE) Korean BBQ Bulgogi Sauce 1.85LB
+35400              26/40 Baby Octopus 24LB
+35401              26/40 Baby Octopus 30LB
+35419   BN50       Udon Noodle (250gx5)x6Pkg *Sanuki*
+35451              Jumbo Soft Shell Crab - 2.2LB / BOX
+35453   JAPANESE   *MARUSEI* Imit. Crab Shredded 12x2.5LB /CS
+35465   BN50       Frozen Udon Noodle
+35472   BN50       Frozen UdonNoodle10x(3x250g)*KOUU*
+35489              FRZ Shelled Off Edamame*(KERNRLS)
+35508              *Verlasso* Fillet Trim E SALMON - 22.05LB / CS
+35606              Crawfish Salad
+35624   japanese   Yuzu Citrus Juice *Mizkan* - 32oz / PKG
+35628              Eel Sauce
+35629              Eel Sauce
+35650   A70W       Premium BambooChopsticks WHT1600
+35651   A70J       PREMIUM BAMBOO CHOPSTICK (WHITE)2000
+35652   A70J       Bamboo Chopsticks(GREEN PRINT) White Envelope 10Pkg
+35653   A70JB      B.Chopsticks WHITE Envelope( BLACK PRINT)
+35661              Hondashi Soup Stock
+35662              *****
+35663   japanese   Hondashi Soup Stock - PKG
+35664              Mushroom/Fungus Soup Base 20PKG/CS
+35665              Tomato Soup Base (1kg) 12PKG/CS
+35730              Baran Yamagata 1GO
+35763              Lunch Box
+35767              Sushi Tray
+35769              Sushi Tray
+35776              Sushi Tray
+35808              Edamane CASE
+35811              Shelled Off Edamame 10kg
+36106   japanese   YellowfinTunaCube *Ruby Jade* 22LB
+36248   japanese   Grilled Octopus Ball (ANY BRAND) Pkg
+36340              ShrimpShumai(Nissui)
+36612              Tempura Batter Mix 05051 *Kikkoman* 25lb
+37100              C-28 Beef TendonBall 5LB/Pkg *ACC*
+37101              *ACC* C-18 Lobster Ball 5LB/Pkg
+37102              C-16 Fish Ball with Pork Filling - 5LB*ACC* / PKG
+37104   BF45       C-26 Fried Fish Ball - 5LB*ACC* / PKG
+37105              C-20 Fish Cake Patty - 5LB*ACC* / PKG
+37106                  Uminoko Shrimp Tempura (26/30) 100pcs
+37107                  A-02 Minced FishBeanCurd Roll 80pc*ACC*/Pkg
+37108                  Mini Cured Pork Patty Link - 5LB / PKG
+37109                  Legend of Master Shrimp Tempura (13/15) / CS
+37200                  Beef Short Plate *IBP* 50-70LB
+37201                  BNLS Lamb Shoulder Tube *B401* FLECTER*
+37600                  BBQ Squid cut Tube Stripes PKG
+37601                  BBQ Squid Wing Carving 1.1LB / PKG
+38888   LIVE SEAFOOD   Blue Crab 5LB/PKG
+38889   BS40p          Live Female Blue Crab
+39999   LIVE SEAFOOD   Blue Crab Live 40LB
+40000   AS20KY         Cooking Sherry 4x1Gal (K)
+40001   AS20Y          Cooking Sherry 4x1Gal (AAK)
+40100   AS20K          Cooking Wine White 4x1Gal (K)
+40101   AS20           Cooking Wine White 4x1Gal (AAK)
+40200                  Shaoxing C.Wine
+40202   as20           Shao Xing Cooking Wine "FIVE STAR"
+40214   AS20M          Shao Xing Cooking Wine *MILLION LANTERN*
+40230   AS20X          *King* Shao Xing Wine 4x1GL
+40300                  Fukein C. Wine(Bottle)
+40303                  Fukein C.Wine
+40314   AS20F          Fukein Wine 12x750ml
+40315   AS20F          Fukein C.Wine CASE
+40355   AS20R          Rice Cooking Wine (Kings)4x1Gal
+40362                  Rice Cooking Wine
+40412                  Persimmon
+40414                  New Year Candy
+40416                  Wine
+40420                  *
+40431                  *
+40432                  *
+40433                  *
+40434                  *
+40435                  *
+40500   AS21K          White Vinegar (K)4x1Gal
+40501   AS21H          White Vinegar (Hunsty) 4x1Gal
+40513   AS21B          Black Vinegar 24x550 ML
+40514   AS21BB         Black Vinegar bottle
+40515   AS21D          Dragon Chef Vinegar4x1Gal
+40517   AS20           *Five Star* White Vinegar 4x1Gal
+40518   AS21           White Vinegar 4x1Gal (AAK)
+40519                  White Vinegar
+40520   AS21R          Red Vinegar
+40527   AS21R          Red Vinegar12x500 ML
+40534   AS21A          Seasoned Aromatic Vinegar 6x64fl *LKK* / CS
+40600   A15K           Tomato Shade Color 4x1Gal (K)
+40601                  Tomato Shaded Color
+40602            Tomato Shaded Color
+40603   A15      Tomato Shade Color 4x1Gal (AAK)
+40610   A16K     Egg Shade Food Color 12x2LB (K)
+40611            Egg Shaded Food Color
+40612   A16      Egg Shade Color 12x1qt (AAK)
+40620   AS40C    CAYENNE Hot Sauce 4x1GL (K)
+40623   AS40X    Hot Sauce 4 x 1Gal
+40625            LEMON JUICE
+41000   AS09     KC Hoisin Sauce 6 Can / CS
+41002   AS09L    *LKK* Hoisin Sauce 6 Can
+41003   AS09G    KC Hoisin Sauce 6Can GLUTEN FREE
+41005            *LKK* Hoisin Sauce Kum Chun 6Can
+41006   AS09S    Hoisin Silver Label -6 x 4.85lb
+41007   AS09     KC Plum Sauce 6 Can / CS
+41012   as09     *LKK* Hoisin Sauce CHEFS SELECT 6 Can
+41101            Chili Sauce
+41103   AS40A    *Asiawin* Chili Garlic Sauce 4x140oz
+41106   AS40H    *Haday* Chili Garlic Sauce 15LB / PKG
+41108   AS40     Chili Garlic Sauce 3x1Gal (TU'ONG)
+41120   AS40G    Ground Chili Paste (FG) 4x3450ml
+41124   AS40V    Chili Sauce Paste 3x1Gal
+41125            Chili Sauce
+41130   AS11X    Sriracha Chili Sauce 12x28oz
+41131   AS11K    Sriracha Chili Sauce 12x28oz (Shing Kee)
+41132            Tom Yun Paste Sauce 32oz/Pkg
+41133            Sriracha chili sauce
+41135   AS11     Sriracha chili sauce-17ozx12
+41136   AS11     Sriracha Hot Chili Sauce- *01526* Kikkoman / CS
+41141   AS40K    Ground Fresh Chili Paste 4x1GL*Shing Kee*
+41144   AS11L    *LKK* Sriracha Sauce 12x18oz
+41151   AS40S    *Mae Ploy* Spring Roll Sauce 12x730ml
+41152   AS40S    *Mae Ploy* Sweet Chili Sauce12x730ml
+41153            Sweet chili sauce
+41167   AS11     Sriracha Chili Sauce 12x730ml (Flying Goose)
+41182            *Lao Gan Ma* Bean Sauce PKG
+41183            *Lao Gan Ma* Bean Oil Sauced Chili 24x280g / CS
+41200   AS07B    Bull Head #106102A BBQ SachaSauce12x26oz
+41201   AS07BC   BULL HEAD BBQ SaCha Sauce Can
+41204   AS07S    SH ASN/TAS #1616720 BBQ Sauce 12x26oz
+41205            SH Sacha Sauce 26oz
+41300   AS45     Bean Sauce 6oz/Pkg
+41303            Bean Sauce
+41307            Broad Bean Paste
+41320   AS45C    Bean Sauce 6oz x 96
+41330   AS45CH   H&S Bean Sauce 96x6oz
+41345            *Lao Gan Ma* Spicy Bean Paste PKG
+41353            *30480109* Bean Paste Chilli Oil 13.2LB/TUB
+41354           *Pixian* Broad Bean Paste Chilli Oil 500g/Bottle
+41355           Chili Oil Sauce 8.8LB /TUB
+41363           *LKK* Sweet Bean Sauce 44LB
+41402   A14     Apple Sauce 6 Can *WhiteHouse*
+41405           Strawberry Sauce
+41410   A131    Peanut Butter 6 Can PeanuKids
+41420   A131P   Peanut Butter Can
+41430           Pure Sesame Paste 5kg TUB
+41454           Pad Thai Sauce*PorKwan* -33.33oz / PKG
+41500   AS10    KC Ground Bean Sauce 6 Can
+41603           Maltose
+41611   AS46    Maltose 36x380g
+41616   AS46S   Maltose 24x350g
+41630   A130    Honey(FiveStar/Nature Pro) 6x5LB
+41651   SNACK   Guava Candy 13oz/Pkg
+41653           Guava Candy
+41663           Rock Sugar / CS
+41701           Mayo
+41707   B01     (BROWN) Mayonnaise SuperChef 4x1GAL
+41708   B01L    (WHITE) Mayonnaise SuperChef 4GAL/ TUB
+41712           Cocktail Sauce
+41713           Tar Tar Sauce
+41719   AS80    Tar Tar Sauce (Butcher) 4 Can
+41720           Cocktail Sauce
+41740   A135    Condensed Milk 24x14oz
+41748   AS81    Ranch Dressing (ButcherBoy)4Jars
+41754           ar Tar Sauce
+41755   AS12X   Teriyke Sauce 4x1Gal Maruichi
+41807           Hot Pepper Paste 20x1.1lb/ CS
+41808           Hot Pepper Paste 1.1lb/ PK
+42000   AS13    KC Double Dark Soy Sauce 6 Can / CS
+42001   AS39    KC Dark Soy Sauce 6 Can / CS
+42020   AS12    Mushroom SoySauce-Pearl 3-86014
+42022           Strawmushroom Sauce
+42029           Black Soy Sauce *DSB* - 12x21.3oz / CS
+42040   AS12K   KUM CHUN StrawMushroom SoySauce
+42042   AS12S   Signature Mushroom Soy Sauce 6x1.75L *Haday*
+42090   AS12H   Mushroom SoySauce *Healthy Boy*
+42093   AS12    Mushroom Soy Sauce *Golden Crown* 12x5LB / CS
+42110   AS14    KC Thin Soy Sauce 6 Can
+42118           ****
+42119           Golden Label Light Soy Sauce *Haday* 6x1.9L / PKG
+42200   AS08    *LKK* Panda Oyster Sauce 6x5LB
+42201   AS08B   Panda Oyster Sauce *PLASTIC* 6x5LB
+42202   AS08X   Oyster Sauce *PLASTIC* Kikkoman 6x5LB *01538*
+42206   AS08C   Oyster Sauce(Chung Brand)6x5LB
+42210   AS08K   Oyster Sauce *KUM CHUN* 6x5LB
+42211   AS08K    (Plastic)OysterSauce 6x5LB*KUM CHUN*
+42222   AS08S    Oyster Sauce *Signature* 6x5LB
+42223   AS08SP   Oyster Sauce *Signature* 5LB /PKG
+42240   AS08A    AMOY Oyster Sauce 12Bottles
+42300            Sesame Oil 8*0.5 AOKI
+42302   AS22     DDS Sesame Oil 4x1Gal
+42311   AS22K    Kadoya Sesame Oil 56oz
+42350            Sesame Oil
+42400   AS18     AMOY Gold Label SoySauce 6Can
+42404            Silver Label Soy Sauce 6Can
+42410   AS16G    *LKK* GoldenLabel SoySauce 6 CAN
+43000   AS03     Ajinomoto MSG 44LB
+43010            Ajinomoto MSG
+43026   AS03Y    Japanese MSG (FLOWER)44LB
+43027   AS03F    Japanese MSG (Flower) 44LB
+43121   A97B     Chicken Bouillon (TOTOLE) )4.6LB/TUB
+43122   A97C     5LBx6Bag B-Chicken Bouillon(TOTOLE)
+43142   A97      ChickenFlavorSoupBaseMix (TOTOLE) 4.6LB/TUB
+43155            Mushroom Bouillon (Totole) 20x16oz
+43156            Mushroom Bouillon 1LB PKG
+43200   AS16     Kikkoman 5 Gal SoySauce*00182*
+43201   AS16B    Kikkoman Soy Dispenser 12x5oz
+43203   AS16LX   Less Sodium Soy Sauce 5GL Kikkoman *00175*
+43204   AS18G    GM Seasoning Soy Sauce 12 Bottle
+43205            *
+43206   AS16P    Kikkoma Soy Sauce 1Gal
+43210            Thai Sweet Soy Sauce 12x21oz /CS (WHITE LID)
+43211            Thai Sweet Soy Sauce 12x21oz /CS (BLUE LID)
+43220            Shinho Soy Sauce 5Gal
+43221   AS16K    *LKK* SUPREME Soy Sauce 5GaL
+43222   AS16C    *LKK* Chef's Select SoySauce 5Gal
+43225            *****
+43231   AS17     W.Y. Soy Sauce
+43244   AS16LS   Less Sodium Kikkoman Soy Sauce 4Gal*00174*
+43245   AS16S    Kikkoman Soy Sauce 4Gal*00180*
+43256   AS15H    Thin Soy Sauce (Healthy Boy)12x23.5FL
+43260   AS42     Squid Fish Sauce 12 Bottle
+43261            Squid Fish Sauce
+43268   AS42T    *THREE CRAB* Fish Sauce 12x24oz
+43269            Three Crab Fish Sauce
+43273            L.K.K.Seasoned Soy Sauce 12x14oz
+43275            L.K.K.Seasoned Soy Sauce
+43290   AS12H    HealthyBoy BLK Sauce 12Bottle BrownLabel
+43293   AS16K    *K ONE* SOY SAUCE 5 GAL
+43300   A33      W.Y. Duck Sauce 5 Gal
+43310   A33K     (K) Duck Sauce 5gal
+43400   AS15W    W.Y. Thick Soy Sauce 5Gal
+43410   AS15     KC Thick Soy Sauce 6 Can
+43500   A34      Mustard Powder 25LB #21025
+43511   A34      Mustard Powder 50LB*Lian How*
+43670   AS02U    Sugar United 50LB
+43699   AS02     Sugar Imperial 50LB
+43700   AS01     Salt 50LB
+43701   AS01D    Deicing Salt 50LB
+43707   korean   Wang Sweet Rice Flour 8x3LB *40850*
+43708   korean   WANG Hangawee Rice 40LB
+43709   korean   *174271* CJ Clam Soup Stock (1KG*10EA) CS
+43710   korean   *ASSI* Hot Pepper Paste 37lb /CS
+43711   korean   WANG Soy Bean Paste 30.8LB
+43712            Wang Shou Yi Multi-Flv 45g
+43713   korean   WANG Red Pepper Powder COARSE 6x5 LB
+43714   korean   WANG NATURAL SEA SALT,(FINE) 32oz /pkg
+43715   korean   *16212* WANG Corn Syrup 6x2.45KG
+43716   korean   *05611* WANG Vinegar 1.8Lx9
+43800   AM01     *ACC* Jello-S Strawberry Gelatin
+43801   AM02     *ACC* Jello-O Orange Gelatin
+43802   AM06     *ACC* Lemon Gelatin 12x1.5LB
+43803   AM07     Lime Gelatin 12x1.5LB
+43806            Grape Gelatin
+43807   AM04     *ACC* Lychee Gelatin 12x1.5LB
+43808            Mango Gelatin
+43823   BM52     ButterMargarineSuperChef 30x1LB
+43838   BM52X    **35LB** LiquidMagarine *SC*
+43843   BM52L    **2/17.5LB** LiquidMagarine *SC*
+43849   BM51V    STK47115 Cream Cheese 10X3LB Valley
+43885   BM51     10x3LB Cream Cheese (Smithfield)
+43887   BM51     10x3LB Cream Cheese (Sunny Morning)
+43892   BM51     10x3LB Cream Cheese FFI BROWN
+43893   BM51L    Cream Cheese 1x30LB *Block* 60/40
+43901   korean   *ASSI* Cotton Gloves 30x10PC
+43902   korean   *ASSI* Salted Shrimp 12x2.2LB
+43903   korean   *ASSI* Sweet Rice Flour 10x4LB *202170*
+43904   korean   *ASSI* Concentrated Vinegar 9x1.8L 205296
+43905   korean   *ASSI* Sea Salt (Coarse) 4x10LB 205384
+43906   korean   *ASSI* Sea Salt (Fine) 20LB
+43907   korean   *ASSI* Corn Syrup 2x22LB 209998
+43908   korean   *ASSI* FRZ OYSTER IQF 3LB/Pkg 20083K
+43910   korean   *ASSI* Soybean Paste 37LB
+43911   korean   *ASSI* Beef Soup Stock 10x2.2LB
+43912   korean   *ASSI* Clam Soup Stock 30x10.5OZ
+43913   korean   *ASSI* Red Pepper 05019D (FINE)8x5LB
+43914   korean   *ASSI* RedChili PepperFlakes 8x5LB 05027D
+43915   korean   *ASSI* Luncheon Meat (Spam) 24x12oz
+43916   korean   *ASSI* Pickle Whole Radish 2.2lb /PKG
+43917   korean   *ASSI* Sliced Vegan Kimchi 14.01oz /PKG
+43918   korean   *ASSI* Yogurt Flavored Drink 5x5(10.5oz) /PKG
+43919   korean   *ASSI* FRZ OYSTER IQF 8oz/Pkg (20086K)
+43920   korean   Japanese Fried Fish Cake 24.2lb
+43921   korean   *ASSI* FRZ Veg Dumpling 12x23.8oz 20556K
+43922   korean   *ASSI* Veg Dumpling 23.8oz PKG
+43923   DRINK    *KWANGDONG* Corn Silk Tea 1.5L /PKG
+43924   DRINK    *ASSI* Aloe Drink 1.5L /PKG
+43925   korean   *TOKAI* AJI KIMCHI 4.59oz /PKG
+43926   korean   *ASSI* Topokki Rice Cake 2LB /PKG
+43927   korean   *ASSI* Crispy Seaweed Rolls 1.1 lb /PKG
+44000            "Gel" White Pepper Powder12x1LB
+44001            "Gel" White Pepper Powder1LB
+44007   AS23     Gulf Pacific White Pepper Powder 5LB
+44008   AS23K    White Pepper Powder E&B 5LB
+44009            chef spice white pepper
+44010            White Pepper Powder
+44013   AS23B    Gulf Pacific Black Pepper Powder 5LB
+44014   AS23BI   Imperial Black Pepper Powder 5LB
+44015   AS23BC   Chef Spice Black Pepper Powder 5LB
+44016   AS23C    White Pepper Powder TIS 5LB
+44053   as23     White pepper 6x5lb CHEF
+44054   AS23T    White Pepper Powder TIS 5LB
+44077            OLD BAY Seasoning - 7.5LB / PKG
+44084            Black Pepper 4x5LB
+44085   AS23BG   Black Pepper Ground 5LB
+44092            LOUIS Garlic Butter Seasoning - 5LB / JUG
+44093            LOUIS Special Seasoning - 5LB / JUG
+44095            LOUIS Lemon Pepper Seasoning - 5LB / JUG
+44096   AS23BC   Black Pepper Powder(Nature Pro) 5LB
+44100            Minced Garlic 5LB
+44110            Minced Garlic 6x5LB
+44111   AS25     Minced Garlic 5LB
+44123   AS24K    Garlic Powder 5LB (NO BRAND)
+44141   AS24     Garlic Powder 5 LB 100Mesh U
+44142   AS24H    Garlic Powder 5LB HiFood
+44143   AS24G    Gulf Pacific Garlic Powder 5LB
+44147            Garlic Sliced 5LB
+44204   A22      *ClabberGirl* Baking Powder 6x5LB
+44205   A22P     *Rumfordl* Baking Powder 4LB/Pkg
+44206   A22R     *Rumfordl* Baking Powder 6x4LB
+44210   A23      Baking Soda CLEAN (A&H) 12x2LB
+44211   A23      Baking Soda 33200 24x1LB
+44212   A23      Baking Soda CASE (A&H) for CLEANING 12x2LB
+44309   SD11K    (GEL) Paprika Powder 5 LB
+44310   SD11     (GulfPacific) Paprika Powder 5 LB
+44311            Paprika Powder (Red Pepper) 6x5LB
+44312   SD11R     Paprika (Red Pepper) Powder 5LB
+44313   AS26P     Chili Powder (CayennePepperHot) 5LB
+44420   AS59      Waterchestnut Powder 60x1LB
+44421             Waterchestnut Powder
+44500             Curry Powder (India)
+44509   AS37      Curry Powder (India ) 16oz (JAVIN) /Bottle
+44510   AS37J     CurryPowder (India )12x16oz(JAVIN)-Glass
+44511   AS37S     (DEK) Curry Powder 16oz
+44512   AS37D     (DEK) Curry Powder 12x16oz
+44520             Red Curry Paste (Maesri) 48x4oz
+44521             Panang Curry Paste (Maesri) 48x4oz
+44523             Green Curry Paste (Maesri) 48x4oz
+44524             *
+44525             Masaman Curry Paste (Maesri) 48x4oz
+44526             Masaman Curry Paste (Maesri) 24x14oz
+44529             Karee Curry Paste (Maesri) 48x4oz
+44538             PINK Khing Curry Paste (Maesri) 48x4oz
+44601   korean    *RHEECHUN* Extra Fancy Sweet Rice 50LB
+44602   korean    *RHEECHUN* Fancy Variety Rice 40LB
+44701   korean    *202204* GlucoseSweetener 10x40x2.11OZ
+44702   korean    *OPOWON* Red Pepper Powder (Extra Hot) 20x1.1LB/ CS
+44703   korean    *WAIWAI* Rice Vermicelli 24x17.5OZ
+44704   korean    *WAIWAI* Rice Vermicelli PKG
+44705   seafood   *10570007* IQF FZ BLUE CRAB 2X10LB/ CS
+44706             *COCK* Fried Onion 8oz /PKG
+44707   korean    *DONGWON* Rose Topokki PKG
+44708   korean    *SAONGWON* Fried Spicy Squid 12.34oz
+44709   korean    *227043* Dried Anchovies (3.3LB/1.5KG) / PKG
+45000   A36       W.Y. Soy Sauce Pack 500'
+45001   A36LS     *LKK* Teriyaki Glaze 4x10.5LB
+45002   A36LS     *LKK* Pork Bone Soup Base 4x9.5LB
+45005   A36L      *LKK* Kum Chun Soy sauce Pack 500'
+45010   A36K      (K) Soy Sauce Pack
+45011   A36KF     (K) Soy Sauce Gluten Free.Red Sod Pack
+45021   A36LS     *LKK* Less Sodium Soy Sauce Pack 500'
+45022   AS16S     *LKK* Seasoned Soy Sauce BOTTLE
+45023   AS09      *LKK* Plum Sauce 6 Can / CS
+45024             *LKK* Pure Sesame Oil 1.65Lx10
+45025   AS16G     *LKK* Mala Chili Sauce 4lbx6
+45026   AS16G     *LKK* Chili Garlic Sauce 4lbx6
+45027   AS16G     *LKK* Chili Bean Sauce 4lbx6
+45030   A36M      Soy Sauce Pack Kikkoman 500' *00278*
+45031   A36ML     Less Sodium Soy Sauce Pack Kikkoman 500' *00116*
+45040             Yi Ping Soy sauce Pack
+45100   A37       W.Y. Duck Sauce Pack 500'
+45110   A37K      (K) Duck Sauce Pack
+45120             Yi Ping Duck sauce Pack
+45200   A38     W.Y. Mustard Sauce Pack 500'
+45210   A38K    (K) Mustard Sauce Pack
+45220           Yi Ping Mustard sauce Pack
+45300   A108    W.Y. Hot Sauce Pack 500'
+45301   A108K   (K) Hot Sauce Pack 500'
+45320           Yi Ping Hot sauce Pack
+45322   AS19P   Ketchup Pack1000'Pkg (Hunts)
+45403   AS31    Orange Peel 8oz
+45404   AS31    Orange Peel 8oz/Pkg
+45406   AS26    Dried Chili Pepper (Fi Hood) 5LB
+45407   AS26S   Gulf Pacific Dried Chili Pepper 2LB
+45410   AS29    Szechuan Chili Pepper Corn 450g /PKG
+45413   AS36    Five Spice Powder16oz
+45415           Dried Chili Pepper 5LB
+45416   AS29X   PRICKLY ASH 1 LB
+45417           Orange Peel
+45419           Dried Lir
+45424   AS27    Salted Black Bean 16oz
+45426   AS26C   Dried Chili Pepper 6x5LB
+45427   AS26    Dried Chili Pepper 5LB
+45430           Dried Szechuan Pepper
+45432   AS36    Five Spice Powder 50x16oz
+45435           Salted Black Bean
+45437   AS27    preserved beans & ginger 40pkg
+45438   AS27    Preserved Beans & Ginger 400G /Pkg
+45443   AS30    Star Aniseed 12oz
+45445   AS31    Orange Peel 50x8oz
+45482           Chili Crushed 6x5LB
+45483   AS26R   Chili Crushed 5LB
+45501   A20     Fungus Strip 5LB
+45504           Dried Bean Flour Stick 6oz
+45511   A19      Dried Black Fungu 5LB/Pkg red ink
+45521   A20     Schredded Black Fungus 6x5LB
+45522   A18     Dried Black Mushrooms 5LB/Pkg
+45534   A19      Dried Black Fungu 2.5oz / PK
+45549           Dried White Fungus
+45559           Dried Lily Flowers
+45573           Dried Bean Curd 10oz/Pkg
+45587           Dried Bean Curd 18x400g
+45588           Dried Bean Curd (ANY BRAND) /PKG
+45600   A39     Salt Pack 3000'
+45602           Oolong Tea (Five Star) 6x5LB / CS
+45604           Jasmine Tea (Five Star) 6x5LB / CS
+45610   A28     Sugar Pack
+45611           WE-CAL Pink Pack Sweet & Low 2000' (412824)
+45620           Pepper Pack
+45630           Tartar Sauce Pack 200'
+45640           Ketchup Pack1000' (RED GOLD)
+45652           Ice Tea Bag 96'
+45657           Chinese Tea Bags 600pc (K)
+45658   A35B    Chinese Oolong Tea Bags 600' (K)
+45659   A35     Oolong Tea 5LBx6 (*20402G*JT&TEA,INC)
+45660           Oolong Tea
+45661   A35K    Oolong Tea -Five Star 5LB/Pkg (Green)
+45672           Green Tea Bag *ASIAN TASTE* / BOX
+45682           Thai Tea Mix *PANTAI* / PKG
+45730           DRIED Goji Berres - 340g / PKG
+45735   AS29    Sichuan Pepper Corn - 50g / PKG
+45736           DRIED AMONTUM - 1LB / PKG
+45743           Regal Bay Leave -12oz/ CAN
+45744           Parsley Flakes -12oz/ CAN
+45756   AS29    Pepper Corn *Red Prickly* 454g / PKG
+45766           Cinnamon Stick 160g /PKG
+45802           xue yan
+45819           Medjool Dates -454g / PKG
+45820           Banlangen 7.93oz
+45821           Honey HerbL 10oz/Bottle
+45832           Red Dates
+45835           Xinjiang Jujube- 16OZ / PKG
+45840           TANG CHEN Dried Seaweed 80g / PKG
+46000   BF33    Fermented Sweet Rice Sauce12x16oz (Kings)
+46001   BF33    Sweet Rice Sauce 16oz
+46010   AS41R   Red Rice (Yeast) 14oz
+46011           Red Yeast
+46023   AS41     RICE CAKE WHITE (RED BAG) 14oz
+47001   SNACK   XFJ Hsu Fu Chi Mixed Crispy Candy 358g / PKG
+47002   SNACK   XFJ Hsu Fu Chi Crispy Candy BonBons 600g / PKG
+47003   SNACK   XFJ HsuFuChi Lucky Candy Lychee Favor 280g/Pkg
+47004   SNACK   XFJ Hsu Fu Chi Nougart Candy Blueberry 210g / PKG
+50019   A03     Bamboo Shoot Slice (HiFood) 6 Can
+50024   A03     Bamboo Shoot Slice 6 Can
+50025           Sour Bamboo Shoot Sliced
+50026           Sour Bamboo Shoot Sliced
+50114   A99H    BambooShoot Halves 6' (HiFood)
+50115   A99H    Bamboo Shoot Halves 6 Can
+50116   A99H    *JNK* Smoked Bamboo Shoots 14.1OZ /PKG
+50214   A04     Bamboo Shoot Strip (HiFood) 6 Can
+50280           Bamboo Shoot Stripe 6 Can
+50301           Bamboo Shoot Dice FiHood 6Can
+50302           Bamboo Shoot Tip (FiHood) 6Can
+50461           Slender Bamboo Shoot 24x800g / CS
+50462           Slender Bamboo Shoot 800g pkg
+51026   A06     Waterchestnut Slice (Five Star) 6Can / CS
+51028   A06     Waterchestnut Slice (HiFood) 6Can
+51108   A07     Waterchestnut Dice 6Can
+51121   A07     Water chestnut Dice (HiFood) 6Can
+52002   A09     Straw Mushroom 6X5LB
+52008   A10     Mushroom Slice 6 Can(any brand)
+52201           Golden Mushrooms
+53001   A08H    Cut Corn (FiHood) 6Can
+53008   A08HN   Cut BabyCorn (Nature Pro)6Can
+53012   A08T    Whole Baby Corn250' *Nature Pro*
+53019   A08N    300'up Baby Corn 6Can (Nature Pro)
+53029   A08K    150' Baby Corn 6Can (Nature Pro)
+53032   A08T    Whole Baby Corn 250'UP *Master Lee*
+53038   A08K    Whole Baby Corn150' (Vesin)6Can
+53044   A08H    Cut Corn (Five Star) 6Can
+53046   A08HN   Cut Baby Corn (DUCHESS) 6Can
+53050   BF13K   FRZ 3' Corn Cob 96' *Golden Phoenix/Any Brand*
+53051   BF13K   FZ 3' Sweet Corn Cob 96' *60530101*
+53058   BF13P   Boiled Sweet Corn 3pc
+53059   A08F    Whole Baby Corn 300'(FiHood) 6Can
+53060   BF13    Frozen Corn Kernel 20LB
+53065   A08F    WC Whole Baby Corn 300' 6Can *1-11098* / CS
+53084   A08N    Baby Corn 200' (Tasty Joy / Nature Pro) 6Can
+53087   A08V    Whole Baby Corn 300' (Vesin) 6Can
+53088   A08T    Whole Baby Corn 200' Taste Joy
+53095   A08HN   Cut Baby Corn Item#11567 (WELLUCK) 6Can
+53096   A08HW   WC Cut Baby Corn *1-11083* 6Can
+53097   A08HL   Sweet Baby Corn PreCut #11567*WELLUCK*
+54004   A13N    Pineapple Chunk (Global Pantry) 6Can
+54009   A13N    Pineapple Chunk (Nature Pro) 6Can
+54010   A13J    Juice Pineapple (DOLE) 12x46oz
+54011   A13     Pineapple Chunk (DOLE) 6x108oz
+54015   A13H    Pineapple Chunk (HiFood) 6 Can
+54016   A13D    Pineapple Chunk(Del Monte) 6Can
+54017   A13N    Pineapple Chunk (HUNSTY) 6Can
+54022           Lemon Juice
+54023           Lemon Juice
+54024   DRINK   FOCO Coconut Juice W/ Meat 24Can /CS
+54025   DRINK   FOCO Guava Drink 24Can /CS
+54026   DRINK   FOCO Lychee Drink 24Can /CS
+54027   DRINK   FOCO Mango Passion Drink 24Can /CS
+54028   DRINK   FOCO Sugar Cane Drink 24Can /CS
+54029   DRINK   FOCO Tamarind Drink 24Can /CS
+54034   DRINK   FOCO Coconut Juice Drink 24Can /CS
+54035   AS61K   Coconut Milk(Chef's Choice)24x13.5oz
+54037   AS61    Coconut Milk 6x2900ML CHAOKOH
+54038   AS61    Coconut Milk Chaokoh 24x13.5oz
+54039   AS61K   Coconut MLK C. Choice24x13.5
+54040   AS61X   SUN VOI Coconut Milk 24x13.5oz
+54041              Coconut milk
+54060   A13JH      Juice Pineapple (HiFood) 12x46oz
+54062   A13J       Pineapple Juice (DelMonte)12Can
+54064   A13JN      Juice Pineapple (Nature Pro) 12x46oz
+54100   AS19       Ketchup (Emerald) 6 Can
+54101   AS19H      Ketchup HUNTS 6x114oz
+54110   AS19J      Tomato Juice 12'
+54112   AS19J      Tomato Juice 12x46oz *Star Cross*
+54311   Korean     Canned Longan in Syrup 24 Can/ CS
+54342   AS55M      Peach Slice (Marquis) 6 Can
+54346   AS55       Peach Slice( Hi Hood)
+54358   AS56       Mandarin slice
+54359   AS56X      WHOLE MandarinOrange 6' HIFood
+54365   AS57       Tropical Fruit Cocktail 6Can
+54367              TROPICAL FRUIT COCKTAIL (JHC) 6 Can
+54373              Pear Slice
+54381   AS55       Peach Slice (HiFood) 6Can
+54388   AS55F      Peach Slice (FIVE STAR) 6 Can
+54398   AS56X      MANDARIN SLICE (Five Star) 6x5
+54399   AS56X      Mandarin Slice (FiHood) 6x5 / CS
+54461              Vanilla Pudding
+54465              Tapioca Pudding
+54466   AM05       Banana Pudding-CafeClassics 6Can
+54481   AM03       Chocolate Pudding 6 Can
+54482   AM05       Banana Pudding 6 Can
+54484   AM03       Chocolate Pudding (Wis-Con) 6'/CS
+55000   A27W       FRESH RAW Peanut W/SHELL 5LB/Pkg
+55010              Peanut w/walnut favor - PKG
+55012   A27R       Blanched Peanut (Kernel) 5LB / PKG
+55020   A27        *Bazzini* Cooked Peanut Unsalt 6x4LB
+55030   A27RC      RAW Fresh Peanut 35LB
+55031   A27R       Raw Peanut 5LB (ANY BRAND)
+55048              Red skin peanut Jumbo
+55101   A24        Cashewnut 5LB/Pkg
+55133   A24        Cashewnut 6x5LB
+55300   AS28       White Sesame Seed 5LB
+55307   japanese   Cooked Sesame Seed (Marruchi)10x2.2LB / CS
+55308              Roasted Sesame Seed
+55401              Green Beans
+55501              Dried Soy Bean
+55550              Dried Red Bean - 50LB / CS
+55554              Dried Red Bean 5lb PKG
+55575              whole barley
+55577              Organic Millet 2LB/Pkg
+55579              Black Melon Seed -33LB/Bag
+55580              Black Melon Seed 11LB/Pkg
+60000   A79V       VINTAGE*VFF182* Plastic Film 18"x2000
+60001   A79S    VINTAGE *VFF122* 910 Plastic Film 12"x2000'
+60002   A79     914 Plastic Film REYNOLD 18"x2000
+60003   A79L    916 Plastic Film REYNOLD 24"x2000
+60004   A79LV   VINTAGE *VFF242* Plastic Film 24" x 2000
+60005   TR916   VINTAGE *VFF242* Plastic Film 24" x 2000
+60010   A79LK   Plastic Film 916 24"x2000' 5 STAR
+60011   A79LK   Revolution Plastic Film 916 24"x2000
+60020   A80     614 Aluminum Foil 18'
+60051           Big Clear Wrap
+60060           Tape
+60105   A126    LFN631 Low Fold Napkins 8000
+60120   A126    633 Short Fold Napkin N1100
+60206   A127    TFN - 611 Tall Fold Napkin 10000
+60210   A127    611 Tall Fold Napkin 8000' Novex N1000
+60212           Fold Napkin 611
+60311           Dinner Napkin
+60320   A86     Dinner Napkin15x17 Novex 5281- N1500
+60321   A86     ROSE Dinner Napkin 1000 (Non-Dust)
+60340           DN128 - 15x17 Dinner Napkin
+60347   A127S   (Novex) N-3000-6000 Dispenser Napkin
+60348   A85     Interfold Napkin 4250VN Valay 24/250
+60349   A127K   N3000 Interfolded Dispenser Napkin Novex
+60370   A85     Lunch Napkin CH-7172 Zhong Mei
+60371   A127I   Dispenser Napkin Zhongmei 12Pkg/6000
+60372   A127V   Dispenser Napkin 24 4250VN
+60373   A85     Lunch Napkin L12500 10x13
+60413   A87     Paper Towel -2ply *410136*MORSOFT
+60414   A87B    Paper Towel kleen Line 855305 (3085_
+60415   A88     Roll Towel R12350&R12300 12Roll (Machine)
+60416   A87B    78000002 RC Towel Brown (Machine)12Roll
+60417   A87W    780008 Roll Towel WHT30 Roll
+60446   A87N    J4700 DispenserRollTowels(Machine)12Roll Novex
+60503   A88N    J4800 9"JumboRoll Tissue(Machine)12' Novex
+60522   A88X    Bath Tissue 96ct (410001)
+60523   A88     Bath Tissue 36 Rolls
+60524   A88     129X Morsoft White Jumbo Bath Tissue 12 rolls
+60541   A88M    78000037 RC BathTissue (Machine)12Roll
+60600   A93     Check Book (2 Copy) 50'
+60610   A83     Chinese Zodiac Placemat 1000'
+60630           ThermalPaper 3 1/8"x230' 50Roll
+61020   A59S    Brown Bag # 2 400 CT
+61021   A59S    Brown Bag # 2 500CT
+61040   A59     4 # Brown Bag 500 CT
+61041   A59     Brown Bag # 4 500 CT
+61060   A60S    Brown Bag #6
+61061   A60SP   Brown Bag #6 400 CT
+61080   A60     8# Brown Bag 500 CT
+61086   A60     8 # Brown Bag 400 CT
+61088   A61     #10 Brown Bag 500 CT
+61120   A62     Brown Bag #12 500CT
+61124   A62     Brown Bag #12 400 CT
+61160   A63     Brown Bag #16 500CT
+61163   A63     #16 Brown Bag 400CT
+61200   A64     20 # Brown Bag 500CT (IN BAG)
+61203   A65     25# Brown Bag 400 CT
+61204   A65     25# Brown Bag 500 CT
+61205   A64K    #20 Brown Bag 400 CT (70221)
+61206   A64B    20 # Brown Bag Squat 500CT(IN BOX)
+61210   A66S    1/8 # 57 Brown Bag 500CT
+61211   A66S    1/8 # 57 Brown Bag 500CT-CASE
+61220   A66     Brown Bag 57 # 1/6 400 CT
+61221   A66     Brown Bag 57 # 1/6 500CT-CASE
+61300   A69     SM PaperBag W/Handle 250pc
+61320           Sup-R-Mart shopping bag (L )
+61400   A49     1/2 LB GlassineBags-E/R Bags1000'
+61401   A49C    GlassineBags 1/2 LB Eggroll Bag 12Box
+61404           Glassine Bags
+61410   A50     1 LB Glassine Bags E/R Bags1000'
+61411           1# Glassine Bags E/R Bag 8 Box
+61414           Glassine Bags
+61420   A51     2 LB Glassine Bags (E/R Bags) 1000'
+61421   A51C    2 LB Glassine Bags (E/R Bag) 6 Box/Case
+61424           Glassine Bags
+61425           Glassine Bags
+61430   A51L    3 LB Glassine Bags (E/R Bags)1000'
+61440   A52     4 LB Glassine Bags-E/R Bags 1000'
+61500   A92     BBQ Bag 65-00160 Pint-Foil 1000' (K)
+61501   A92L    BBQ Bag 65-00320 Quart-Foil 1000' (Kari Out)
+61600   A67     ShoppingBag Senior K (LG) 250' *1200135*
+61601   A67X    ShoppingBag Jumbo K (XL) 200' *1200180*
+62000   A103X   1/8 T-Shirt Bags Happy Face
+62001   A105H   10x8x24 Plastic Clear Poly Bag (W/Holes)
+62002   A103X   HD HappyFace 1/8 T-Shirt Bag
+62010   A103    1/6 T-Shirt Bag Happy Face
+62011           -Thank You Bags
+62012   A103    HD 1/6 HappyFace T-Shirt Bag
+62018           Plastic Flat Bagg (290*440*30).
+62022           Pe Bag (Seafood Boil) 18x24 500'*BEST FOOD*
+62030   A81S    24x32 12-16 Gal 46' Can Liner(H4832MW)
+62032   A81     VL3858XHW 38x58 WHT XH 100 60Gal Liner
+62040   A81B    46 XX HD BLK Trash Bag
+62059   A107    Poly Bags 6x3x15 1000'
+62060   A106    Cabbage (E/R Mix) Bags
+62061   A104    Poly Bags 8x3x15 1000'
+62062   A104P   Poly Bags 8x4x18
+62063   A105    Poly Bags 12x8x30 500'
+62064   A104X   Poly Bags 8x4x18 1.0 1M
+62070           Produce Roll Bags
+62083   A105K   10x8x24 Plastic Poly Bag
+62084           8x4x15Plastic Bag
+63112   A90K    2oz Cups 2000'
+63113   A90LK   2oz Lids 62MM 2000pcs
+63114   A90T    2oz Cups 2000' ITEM# TS02SC
+63115   A90LT   2oz Lids 2000' ITEM# TS02SCL
+63116   A90F    Fabri Kal 2oz Cups 2500pc/PC200
+63117   A90LF   FabriKal 2oz Lids 2500pc/XL250PC
+63126   A90K    2oz Cup Souffle 2000' (Portion)
+63127   A90LK   2oz Lid Souffle 2000' (Portion)
+63131   A90T    2oz Clear Plastic Cup 2000' Item#TS02SC
+63132   A90LT   2oz Clear Plastic Cup Lid 2000' Item#TS02SCL
+63213   A91F    Fabri Kal PC400 4oz Cups 2500'
+63214   A91LF   Fabri Kal XL345PC 4oz Lids 2500'
+63221   A91T    4oz Clear Plastic Cup 2000' Item#TS04SC
+63222   A91LT   4oz Clear Plastic Lid 2000' Item#TS325/04SCL
+63224           Portion Lids
+63226           Contaner Lids
+63235   A91A    4oz Cups *ASB400* Polypro 2500'
+63236   A91LA   4oz Lids (ASL4/5) 2500'
+63240   A91S    4oz Cup (KC004SC) 2000' Souffle Cup
+63241   A91LS   4oz Lids (KC325/4SCL) 2000' Souffle Lids
+63242   A91LS   1oz Souffle Cup (KC001SC) 2500
+63243   A91LS   1oz Souffle Lid (KC001SCL) 2500
+63310   A74SL   8oz Foam Cups Dart (8J8) 1000'
+63313   A74     8oz Dart Form Cups (8SJ20)/8FC20 1000'
+63320   A74S    8oz Cup Lid Dart 8JL/8SL 1000'
+63323   A74L    Dart Cup Lid (20JL)1000'
+63410   A72C    12oz (12J16) Cups 1000' *Dart*
+63413   A72C    12oz (12SJ20) Soup Cups 500' *Dart*
+63420   A71K    16SL Dart Cup Lid (12oz/16oz)1000'
+63421   A71     16oz Lids 16FTLS/16SL 1000' *Dart*
+63422   A73R    REYMA Cups 16oz 500 CT
+63432           4 Cup Carrier -300' / CS
+63510   A73     *Dart* 16oz Cups (16J16) 1000'
+63511   A73     *Dart* Cups 16oz (16MJ20) 900'
+63610           *Dart* 20oz Cups (20J16) 500'
+63613           *Dart* 24oz Cups (24J16) 500'
+63614           *Dart* 20oz Cups (20B16) 500'
+63631           20RL Dart Container Lid -500' / CS
+63700           32SL1 Dart Cup Lid
+63710           *Dart* 32oz Cups (32TJ32) 500'
+63820           Cup Lid
+64100   A55      527 K Aluminum Tray 500'
+64110   A54      K Oblong Aluminum 7089 Tray 500'
+64120   A54X     758 K Oblong AlumTray 2# 500pc
+64200   A55L     527 K Lid 500'
+64206            Cover Only
+64210   A54L     70892 K Lid 500' (K)
+64211            Lid
+64212   A113     #2S FOAM TRAY 4/125
+64213            #4S FOAM TRAY
+64214            #17S FOAM TRAY
+64310   A110W    Mic.Containers W7-23 WHT 150' W.Y.
+64311   A110     Mic.Containers W7-23 BLK 150' W.Y
+64312   A110K    7" Round Mic.Cont. BLK *MC0710B* (K)
+64314   A110B    Mic.Containers C7-21/23 150' BLK
+64339   A110K    Mic.Containers C7-21/23 150' WHT
+64348            Mic.containers
+64407   A111     Mic.Containers W7-29 BLK 150' W.Y
+64408   A111K    7" Round Mic.Cont. BLK *MC0710B* (K)
+64423   A111CW   Mic.Container C7-29 WHT 150' W.Y
+64424   A111CB   Mic.Containers C7-29 150' BLK
+64502   A114W    Mic.Containers 86-30 WHT 150'
+64503   A115W    Mic. Containers 86-23 WHT 150'
+64515   A114     RF-8630 BLK 150' / CS
+64516   A114     Mic.Containers 86-30 BLK 150'
+64517   A115     Mic.Containers 86-23 BLK 150'
+64518   A115L    Mic.Containers 86-28 WHT 150'
+64519   A115LW   Mic.Containers 86-28 (#8628) BLK 150'
+64520   A159W    Mic.Containers 96-25 WHT 150'
+64521   A160W    Mic.Containers 96-35 White 150'
+64522   A159     Mic. Containers 96-25 Black150'
+64523   A160     Mic.Containers 96-35 Black150'
+64526   A114K    8623/26 Med MicCont BLK*MC6630B*(K)
+64529   A115LK   8629 Shallow Mic.Cont. BLK *MC6610B* (K)
+64530   A139P    PP206 Container 150' YG206/Ecopax
+64544            *
+64546   A112L    FH-78B Black (86-30) Mic.Container 150'
+64547            - Mic.containers
+64558            Mic.containers
+64565            Mic.containers
+64566            Mic.containers
+64568   A112     Mic.Containers FH-68B Black150'
+64569            Mic.Containers
+64570   Q        Soup Container 8oz *JN*
+64571   Q        Soup Container 32oz *JN*
+64594            Mic.Containers 82-28 BLK 150'
+64611   A102B    Mic.Containers C6-18 BLK
+64625   A102     Mic.Containers C6-18 16oz White 150'
+64700   A160     MT 2-Comp 2850B 150' TRIPAK
+65006   A140     M205 (DARNEL)6.75x9.25x2.75 200'
+65007            205 (33-02205)-200/ Foam Container KARI OUT
+65008   A140     205 (Ecopax) 9.25x6.375x2.875 200'
+65010            Foam Containers
+65101   A139K    206 Foam Tray 200' (K'3301206) 200'
+65103   A139L    206-1 Foam Container 1-Comp 200' (Lucky)
+65104   A139K    *206 Foam Tray Panda 200' (K-3302206)
+65105   A139     M206 FoamTray(Du403101SH)Darnel 200'
+65110            Foam Containers
+65111   A68      9PWQR 9" Laminated FoamPlate WHT 500'
+65118   A109KL   206 LG All Purpose Highed Sandwich Conts (Ecopax)
+65129   A139C    206 White Foam Tray (Ceres) 200'
+65200   A109     22500 Genpak LG Sandwich Conts 500'
+65203   A109K    225 LG HingedSquareCont.(Ecopax/Ceres)
+65303   A143     SN203 3-Comp LG 9.25x9.25x3 200' Genpak
+65304            241 3COMP(Ecopax) 8x7x3-200 /CS
+65305            PP 241 Comp Hinge Cont 150CT
+65306   A143k    Satinware # 71426 - 9x9x3
+65307   A143k    Satinware # 71433 - 8x8x3
+65319   A133K    22310 Small 3-C Tray 200' (Kari-Out)
+65320   A53      SN243 Med 3-C Tray Genpak 8.25x8x3 200'
+65321   A132     Containers 900053
+65322            SN240 FormTray 8.25x8x3 GENPAK 200'
+65323   A144     SN200 Form Tray 9.25x9.25x3 (GENPAK) 200'
+65324   A142H    3-Com TERMOPAC Med 8x8x3 200' *900053*
+65325   A142HL   3-Comp FoamTray Large 9x9x3 (900054) 200'
+65326   A156     S-1 9x9x3 Tray 9x9x3-1/8DU4061101)Darnel 200'
+65332   A139T    Q-1 HINGED 1-COMP 8x8x3" DARNEL
+65340            PP883S (Ecopax)1-CompFormTray 8x8x3 IVORY
+65345   A53E     RE883(Ecopax)3-CompFormTray 8x8x3
+65346            PP883_M (Ecopax) 3CMP 8x8x3 150'/CS
+65347            RE883S(Ecopax)1-CompFoamTray 8x8x1
+65348            *
+65349   A155     S-3 (DU4063101)9x9x3-1/8 Darnel-200'
+65363   A133     C707 (12656)3-CompFoamTray (S) 200'
+65376   A142R    RE993 3-CompFoamTray 9.5x9.25x3.75
+65377   A142R    PP993 3-CMP FoamTray(Ecopax) 9.125x8.81x3 150'
+65378            PP993S 1-CompFoamTray 9.125x8.81 IVORY
+65379            RE993S 1-CompFoamTray 9.5x9.25x3.75
+65380   A142     Q-3 (DU4053101)8-1/8x8-1/8x3 200' Darnel
+65390   A133     22310 (Ecopax) Small 3-C Tray 200'
+65391   SD3      703 Pactiv 3-CompTray Small 150'
+65392   A100     803 Containers 150pc
+65393   A100L    903 3-Comp Form Tray 150pc
+65397   A133L    23300 (Lucky Brand) 3-CMP Tray 8x8x3 200'
+65398   A133     23300 (ECOPAX) 3-CMP 8x8x3 Tray 200'
+65405           -Du5009101(Darnel)- Containers
+65438           AP9125 (ECOPAX)-500 FOAM PLATES 9"
+66001   A45     GW 8oz Food Pail 1000'
+66002   A45P    8oz White Food Pail (PacForce) Pagoda
+66003   A45F    (20010) 8oz Food Pail 1000'
+66004   A45F    D&M 8oz Rice Paper Box 1000'
+66010   A45P    PR-8 Printed Food Pail (PacForce) Pagoda
+66015   A41SK   Soup Container 8oz 240' QH
+66016   A41S    Soup Container 8oz 240' W.Y
+66017   A41SF   Soup Container 8oz TR08SC 240' FH
+66104   A46K    Food Pail 16oz PRINTED GW
+66115   A41K    Soup Container 16oz 240' QH
+66117   A46K    16oz Printed Food Pail 500' 470463
+66118   A46P    16oz Printed Food Pail PacForce Pagoda
+66119   A46W    16oz WHT Food Pail PacForce 500'
+66120   A41     Soup Container 16oz 240' W.Y
+66121   A41F    Soup Container 16oz *JN*
+66126   A41F    FH 16 Soup Container16oz 240'
+66130   A46W    W.Y. 16oz Food Pail WHT G06
+66142   A41G    Soup Container 16oz 240' *GC*
+66202           26 oz Print Food Pail 500' / CS
+66204           Food Pail
+66212           26 oz Food Pail 500' White Pagoda
+66213   A47B    26oz Brown Pacforce PF
+66214   A47     26oz Food Pail WHT 500' W.Y.
+66216           Soup Container 24oz WY
+66218           24oz Soup Cup
+66303           32oz Food Pail W.Y.
+66304   A48P    32oz QT Printed Food Pail (GW)
+66305           Food Pail
+66314   A48P    32oz PRINTFood Pail PacForce
+66315   A48PK   PR-32oz PT PacForce FP Sleeve
+66320   A41Q    Soup Container 32oz 240' W.Y
+66321   A41QK   Soup Container 32oz #QH
+66322   A41QF   FH 32oz Soup Container TR32SC 240'
+66382           30oz Black Bowl+Lid
+66396           QH-32 No Handle Printed Food Pail -500' / CS
+66398   A48P    32oz Printed Food Pail (Lucky) /CS
+67000   A56     A2020F-40CI Plastic Forks White *WHITE BOX*
+67001   A56K    Plastic Fork WHT(QH2.5FK/CY1152)-1000 /2900100
+67007   A56     Plastic Forks DART
+67008   A56W    Plastic Forks W.Y
+67009   A56X    Smart Plastic Fork White *600146*
+67010   A56J    Plastic Fork WHT *JIALE*
+67015   A57CB   WHITE250 - 6 IN 1 Cutlery Kit 250
+67016   A57CB   MW 3 IN 1 Cutlery Kit *KC500FSN3*
+67017   A56BW   Wrapped Black Plastic Fork (KC-950)/CY9981
+67018   A56BW   Wrapped Black Plastic Spoon (KC-950)
+67019           5G Heavy Weight Wrapped Fork (KC-50950F)
+67020   A56     ** Plastic Fork White 1000'
+67021   A58     *KC25926-S* Plastic Spoon White 1000
+67022   A56     M Weight Plastic Fork1000' *KC-25926F*
+67023   A58     Plastic Spoon "DART"
+67024   A58W    Plastic Spoon W.Y
+67025   A58S    *600146* Plastic Spoon WHT (Smart)
+67026   A58J    Plastic Spoon WHT *JIALE*
+67041           Plastic Knife
+67052   A58     Plastic Wrapped Spoon (KC-925SP)
+67053   A58I    A204S PLASTIC SPOON 1000 WHITE BOX
+67063   A57K    Plastic Knife White *Jaile*
+67064   A57     Plastic Knife *Dart*
+67079   A56W    M Weight Plastic Wrapped Fork1000'*KC-925F*
+67080   A56W    Wrapped Fork Heavy Weight WHT(KC-50950F)
+67081   A58W    Single Wrapped Spoon 1000' *KC25925-S*
+67120           Toothpick 24x800ct
+67122           Toothpick
+67140   AS49C   6" Bamboo Skewer 100PCx100BAG/CS *RONSONWOOD*
+67141   AS50C   8" Bamboo Skewer 100PC
+67143   AS49    6" Bamboo Skewer 100pc
+67147   AS50    8" Bamboo Skewer 700pc
+67200           ****
+67201   AS43    FiHood Straws 24x400 7 3/4'
+67202   AS43K   7 3/4' IndividuallyWrapped Straws 24x300'
+67211   A70R    8" Bamboo Chopsticks 65'x10 Bag
+67219           Chopstick
+67220   A70H    RED Chopstick #65002 Hunsty
+67224   A70     Red Chopstick/CS
+67301   AS43P   Paper Straws Bulk 7-3/4 Strght #361 Red&White 4x500' (K)
+70000   A01L    Lucky Rice 50LB
+70001   A01LX   Lucky Rice 100LB
+70003   A01M    Rice Martin 50LB
+70005           Eminence Rice
+70006   A01JX   Jasmine Rice 50LB Eminence
+70007   A01E    50LB Eminence Long Grain Rice
+70022           Organic Millet
+70102   A01JK   Rice King Jasmine Rice 20LB
+70111           Thai Jasmine Rice
+70113   A01J    OrientalFlower J. Rice 50LB
+70114   A01JE   Eminence Jasmine Rice 22LB
+70116   A01JT   Thai Jasmine Rice 22LB
+70120   A01J    8 ELEPHANTS BRAND Jasmine Rice
+70138           Fu Thai Jasmine Rice
+70139   A01JL   Jasmine Rice 50LB Thai Hom Mali Rice
+70193   A01JL   Jasmine Rice 50LB *Green Elephant*
+70195   A01JU   Kouu Jasmine Rice 25LB
+70202   A01Y    Yellow Kokuho Rice 50LB
+70203   A01C    Yellow Kokuho Rice 15LB
+70205           Red Kokuho Rice
+70210   A01N    Nishiki Sushi Rice 50LB
+70211           SushiRice
+70217           Tomita SushiRice
+70218   A01GS   (HAO)GOZEN SushiRice 40LB
+70219   A01G    Gozen Sushi Rice 50LB
+70220   A01X    Chikara Sushi Rice 50LB
+70221   A01U    Kouu Cairose Sushi Rice 40LB
+70260           Brown Rice
+70275   A01N    Sushi Rice (Fortune) 40LB
+70308           Sweet Rice
+70315           LongGrain Sweet Rice
+70316   A01SR   Sweet Rice Rose 5LB/Pkg
+70323   A01S    Black Sweet Rice 4.4LB / PKG
+70350   A01S    Sweet Rice 5LB (Golden Crane)
+70352           Sweet Rice
+70354           LOTUS Sweet Rice
+70356   A01S    Sweet Rice ASIAN DRAGON 5LB
+70360   A01BS   Gulf Pacific Brown Rice 25LB
+70361   A01BL   TOMITA Brown Rice / 50LB
+70364   A01SR   Sweet Rice KOUU 5LB/Pkg
+71000   A02A    Admiration Salad Oil 35LB
+71009           Soybean Oil
+71010   A02     Oasis Soy Bean Oil 35LB (AAK)
+71015   A02D    DragonChef Soybean Oil 35LB
+71025           **
+71026   A02F    CMC Clear Fry Oil 35LB
+71027   A02L    Oasis Shortening *Creamy* Oil 35LB (AAK)
+71030   A02S    Canola Frying Oil -SuperChef 35LB
+71046           GD Shortening OiL
+71053   A02S    Shortening Oil 35# SYSCO
+71054   A02F     Creamy Oil 35# OLD WORLD
+71055   A02C    CMC(Shortening)Fri Oil 35LB
+71077           Premium Chili Oil 6X33.1oz (S&B) / CS
+71081           CUMIN Powder 5LB
+71088           Cumin
+71089           Cumin
+71094           Pickly Ash Oil 2.5L/BOTTLE
+71103           Lard (Pork) *Butcher Boy* 50LB
+72000   AS06H   H&R Flour (Five Stars) 2x25LB
+72003   AS06K   Flour ADM 50LB
+72004   AS06X   (HUNSTY)-50LB Flour
+72005           Wheat Starch *WINDMILL*(ORANGE)
+72006           HK Flour Mill American ROSES Special Wheat Flour / CS
+72012   AS05T    Cornstarch 50LB TORINO
+72017   AS05A    Cornstarch 50LB AMERI STARCH 42922
+72020   AS04K    K Potato Starch *4100100* 44LB (Panda)
+72025   AS04R    *Royal Wagon* Potato Starch 44LB
+72038            Bread Crumb
+72039   AS34     Japanese Bread Crumb 20LB
+72040   AS34P    PANKO Japanese Bread Crumbs
+72049            A10011 -Cornmeal (Cracker Meal) / CS
+72054   korean   *GOMPYO* All Purpose Wheat Flour 6x5.5LB
+72055   korean   (BLUE) *CJ* All Purpose Flour 6x2.5KG/ BAG
+72058   AS04     Windmill Potato Starch 50LB
+72066            Flour
+72071            Tapioca Starch 14OZ
+72073   AS51     Tapioca Starch 1LB/Pkg (BLUE)
+72074   AS51     Tapioca Starch 24 x1LB
+72095            Corn starch
+72096   AS05     Cornstarch 50LB Ingredion
+72097   AS05K    Corn starch ADM/IND 50LB
+72098   AS06R    White Noodle Flour *Royal Special* 50LB
+72623   DIMSUM   WC Vegetable Mushroom Bun *1-46312* / PK
+73000   AS48E    Elite Rice Stick(KongMoon) 60x400g/CS
+73003   AS48     Rice Stick (He Yan/Elite/5 Star) 60x16oz
+73004   AS48P    Rice Stick Pkg
+73005   AS48D    Rice Stick (Double Swallow) 60x16oz
+73006   AS48     *802* Rice Stick 30x2lb
+73007   AS48     *802* Rice Stick 2lb PKG
+73008   AS48K    Always the best Rice Stick 60x400g
+73010   AS48C    Rice Stick (Chao Ching) 60x16oz/CS
+73015   AS48C    Rice Stick (Chao Ching) 60x14.1oz
+73016            Rice Noodle
+73020   AS48X    Xinzhu Rice Noodle 30x14oz
+73025            Rice Noodle
+73056            Shan Dong Noodle -5LB / PKG
+73060            Xinzhu Rice Noodle
+73066            Handmade Noodle - 400g *Essence* / PKG
+73070            Yang Chun Noodle - 400g *Essence* / PKG
+73078            Egg Noodle - 400g *Essence* / PKG
+73079            Ramen Noodle - 400g *Essence* / PKG
+73080            RongZhiWei Dry Noodle （LINS) 750gx18 /CS
+73081            RongZhiWei Dry Noodle 750g/Pkg
+73082            Vermicelli*3500/15208* 2.5Kg x 6 / CS
+73110   AS06RG   Glutinous Rice Flour 1LBx24/CS (GREEN/Any Brand)
+73111   AS06RP   Glutinous Rice Flour 1LB/Pkg (GREEN)
+73120   0        24X1 RICE POWDER
+73121   AS0WR    White Rice Flour 1LBx24/CS (RED)
+73122   AS05RP   White Rice Flour 1LB/Pkg (RED)
+73145            *
+73201            Oriental Style Noodle
+73203            Amoy Flour Noodle
+73217            JiangXI Rice Noodle 60x300gm
+73218            JiangXI Rice Noodle
+73220   AS48T    Tungkow Rice Pasta Vermicelli 40Pkg
+73221   AS62     (M)Oriental Style Noodle 30Pkg
+73222   AS48TP   Tungkow Rice Pasta Vermicelli - Pkg
+73225   AS47L    LongKao BeanThread/Vermicelli(SuperChef)500g
+73226   AS47     LONGKAO (LilyBeanThread/Vermicelli 1603004)10oz
+73239   AS62X    (XL) Oriental Style Noodle 30LB
+73259            *
+73265   AS62C    (Chef'sChoice)3mm (M) Rice Stick30x12oz
+73268            JiangXi Rice Stick
+73273            Dried Noodle 30lb *GREEN FOOD*
+73274            Rice Flakes in Bag -200g/pkg
+73275            Rice Flakes in Bag -200gx24 / CS
+73295   AS47S    OCM Sweet Potato Noodle 5LB / PKG
+73299            Oriental Noodles 12oz
+73307            LQ LiuZhou SnailsNoodle Pkg
+73310   SNACK    JML Korean Ramen No Seasoning 5x80g / PKG
+73330            Shin Hou Noodle 10x4.23oz
+73331   SNACK    Tonkotsu Bowl Ramen 6 x 3.56oz
+73332   korean   NONGSHIM ShinNoodle 4'x4Pkg
+73333   korean   SAMYANG Spicy Chk Bowl Ramen 6x3.7oz
+73355            Sha Xian Noodle - PKG
+73380   SNACK    Instant Vermicelli Comb Pack / PKG
+73405            --Roasted Beef Noodle
+73452            Lacey Noodle - 400g *Essence* / PKG
+73454   A96W     WU-MU Dry Noodle THIN 4LB
+73479            -UNIF Stewed Pork
+73481            -UNIF Sauerkraut
+73500            Dried Noodle *12-30011* 908g x10 / CS
+73506            Orisinal Flavour Del Pkg
+73508            Sweet Starch Noodle - 12oz *OCM*/PK
+73509            Korean Sweet Starch Noodle - 5LB*OCM*/PK
+73515            DT Rice Flakes / PKG
+73529            D.P Vermicelli
+73538            -Fish Noodle
+73539            *
+74000   BN17     GT Egg Noodle 5LBx6
+74001   BN27     Lo Mein Noodle(Golden Bowl)
+74002   BN17P    GT Egg Noodle 5LB/Pkg
+74003   BN17U    Fresh GT Egg Noodle 5LBx6
+74005            Thick Noodle 40LB
+74006   A96      Dry Noodle - ATLANTA NOODLE
+74008            WUHAN Dry Noodle 342g / PK
+74009            CHONGQING Dry Noodle 312g / PK
+74012            Small Popular Noodle (S) 20LB
+74015            Canton Noodle
+74019   A96D     LG Popular Dry Noodle DaiSing 20LB
+74021   BN03GP   GT Noodle 5LB
+74022            Good Taste Thin Noodle / CS
+74025   BN17C    GT CenturyFood EggNoodle 30LB
+74036            Noodle
+74039   BN14T    Thin Noodle 16oz/Pkg (Twin Marquis)
+74040   BN14T    Thick Wonton Noodle 12oz (Twin Marquis)/PKG
+74054            Baily Egg Noodle 6x5LB
+74060            *
+74064            Lo Mein THICK(RED TAPED) Noodle (GB) 30LB
+74067            Noodle
+74073            H K Style Pan Fried Noodle 16oz
+74080            DshSing Lo Mein
+74081            DshSing Lo Mein
+74084   BN06T    THIN Wonton Noodle 12oz/Pkg (Twin Marquis)
+74087   BN17CE   THIN Fresh ESSENCE Noodle 40LB
+74088   BN16F    THICK Fresh Essence Noodles 40LB
+74096   BN50     Taiwan Plain Noodle 12X4LB
+74097   BN50     Taiwan Plain Noodle 4LB PKG
+74100   BN16     GT 7" E/R Skin 5LBx6
+74101   BN16P    GT ER Skin 5LB/Pkg
+74102   BN16T    GT THICK E/R Skin 5LBx6
+74103   BN16U    Fresh GT 7" E/R Skin 5LBx6
+74104   BN16S    GT 6" Egg Roll Skin 5LBx6
+74105   BN16SP   GT Eggroll Skin" 6x6" 5LB PKG
+74106   BN16T    Fresh GT Thick E/R Skin 5LBx6
+74125            *
+74129   BN16     7x7 E/R Skin 30 LB*Golden Bowl* / CS
+74143            Regular Egg Roll Skin
+74165   BN16SE   Fresh ESSENCE Egg Skin 6x6 30LB
+74174   BN16E    Fresh ESSENCE Egg Roll Skin 7x7 40LB
+74200   BN03G    GT Wonton Skin 5LBx6
+74201   BN03GP   GT Wonton Skin 5LB
+74208            DahSing Won Ton Skin
+74210   BN03GB   Reg Wonton Skin 3.5x3.5 (GoldenBowl)40LB
+74211            ****
+74221            RegularBaily Wonton Skin3.5'x3.5' 30LB
+74249            Wonton Wrapper (Twin Marquis) 45LB
+74250            Wonton Wrapper (Twin Marquis) 1LB/PK
+74272            Thick Baily Wonton Skin
+74276            -Thick Fresh Wonton Skin
+74278            Thin Fresh Essence Wonton Skin
+74279            Thick Fresh Essence Wonton
+74280            Wonton Skin (Lucky Noodle) 30LB
+74311   BN07G    GT THIN Wonton Skin
+74312   BN07GT   THIN Wonton Wrapper 24LB *FWTDT24*
+74500   BN08TS   Shanghai Style Dumpling Skin (Twin Marquis) 45LB
+74501            Shanghai Style Dumpling Skin (Twin Marquis) 16OZ/PKG
+74502   BN08P    Sio Mai Skin (First Noodle) CS
+74505            *1021078* HK Style Dumpling Skin (Twin Marquis) 16oz/PKG
+74510   BN01     Egg Roll Skin (First Noodle)
+74511   BN03H    H.K Style Wonton Skin PKG
+74512   BN03     Wonton Skin (First Noodle)
+74513   BN04P    Egg Noodle (First Noodle)5LB
+74514   BN04     Egg Noodle (First Noodle)
+74515            SHANGHAI Dumpling Skin (Twin Marquis) 14oz /PKG
+74516   BN05     Raw/Wet Noodle (First Noodle)
+74517   BN05     Raw/Wet Noodle (First Noodle) 20lb
+74518   BN06     Steam Egg Noodle (First Noodle) DISCONTINUED
+74520   BN07     THIN Wonton Skin (First Noodle)
+74522   BN08     Dumpling Skin (First Noodle)
+74523   BN08     Dumpling Skin (First Noodle) 20LB
+74524   BN14     Shanghai Noodle (First Noodle)
+74526   BN08TP   Northen DumplingSkin(Twin Marquis)1LB/Pkg
+74530   BN18     Sio Mai Skin (First Noodle) 20x1LB
+74541   BN19     Banh Pho 10LBx3 (Vacuum)
+74543   BN20     Banh Pho 1LBx30 (Vacuum)
+74544   BN20S    Banh Pho 1LB
+74545   BN22C    Pad Thai 1LBx30 *Sincere Orient*
+74546   BN23C    Mi Trung Ga 1LBx40 Small
+74547   BN42C    Banh Canh 20Pkg (Banana Box) *BN42C*
+74548   BN42     Banh Canh Bot Gao Pkg
+74549   BN19X    Banh Pho 6x5LB
+74550            Banh Canh (Red Udon) 40# CASE
+74551   BN42L    Banh Canh 40LB *SincereOrient*
+74556   BN23CL   Mi Trung Ga 8x5LB (S)
+74600   BN10     TYJ Spring Roll Skin 40Pkg
+74601   BN10P    TYJ Spring Roll Skin/Pkg
+74602   WC       MAGGI Seasoning Sauce (LARGE) 6x27OZ
+74603   WC       WC Dry Shrimp 200-250 3.5oz /PKG
+74605   AS33     WC Sour Mustard Green 10.5oz/PKG
+74606   DIMSUM   WC Pork&Mushroom Rice Bowl 10.7oz/PKG
+74607   DRINK    WC 100% Coconut Water *1-12066*/CS
+74608   WC       WC MAGGI Seasoning Sauce (Small) 3-55601 /PKG
+74609   DIMSUM   WC Glutinous Rice Roll 6PC/PKG
+74610   BN09     WC Spring Roll Skin 1-71002 40Pkg
+74611   BN09     WC Spring Roll Skin PKg
+74612   BN09X    WC Spring Roll Pastry 40Pkgx11oz 1-71008
+74613   DIMSUM   WC Green Onion & Seasame Roll 330g/PKG
+74614   DIMSUM   WC Black Pepper & Green Onion Roll 330g/PKG
+74615   DIMSUM   WC Bbq Chicken Bun 25PC/PKG
+74616   SNACK    WC Inst Rice Noodle (Onion Flavor) *3-63012*/ CS
+74617   SNACK    WC Yogurt Flavored Drink 5x10/PKG
+74618   DIMSUM   WC Glutinous Rice Dumpling 4PC *1-46328*/PC
+74619   DIMSUM   WC Beef Don Rice Bowl 10.7oz/PKG
+74620   BN11     WC Moo Shu Shell 36Pkg 1-71010
+74621   BN11P    Moo Shu Skin 12pc/PKG W.C
+74622   DIMSUM   WC Vegetable Mushroom Bun *1-46312* / CS
+74623   DIMSUM   WC Vegetable Mushroom Bun PKG
+74624            Rice Dumpling （Mixed Flavor) 20 x 6 pc / CS
+74625   BF31     2oz Chicken Egg Roll WINLY 120PC
+74626   BF31L    3oz Chicken Egg Roll WINLY
+74627   BF30     2oz Pork Egg Roll WINLY
+74628   BF19     2oz Chicken Egg Roll AFFINITY
+74629   BF19L    3oz Chicken Egg Roll 96' AFFINITY
+74630   DIMSUM   WC Curry Chicken Rice Bowl 12.7oz/PKG
+74631   BF17     BAILY 3oz Pork Eggroll 96pc
+74632   BF17S    BAILY 2oz Pork Eggroll 120pc
+74633   BF30L    3oz Pork Egg Roll WINLY
+74634   BF30L    3oz Pork Egg Roll CHIA YING
+74635   BF18     2oz Pork Eggroll 15LB *Affinity*
+74636   BF30L    3oz Pork Egg Roll CHIA YING
+74637   BF19     3oz Chicken Eggroll BAILY
+74638   BF18L    3oz Pork Affinity Eggroll
+74640            Spring Roll Skin *Golden Bowl*
+74646   BF31C    3oz Chicken E/R 13.5LB(Chia Ying)
+74651   BN11K    Moo Shu Skin GoldenBowl 12 pc x22
+74660   BF29B    3oz Philly Rollz THE GOURMET / CS
+74680   BD01B    2oz Vegetable Eggroll 120' Baily
+74690            Fried Bean Curd Roll 120g
+74691            Frozen Tofu Skin Sheet 227g /PKG
+74692            Rice Paper (BT303-25) - 33LB / CS
+74700   A31      Golden Bowl Fortune Cookie
+74706            Fortune Cookie
+74710   A95      Crispy Noodle (Golden Bowl)
+74720   A25H     Almond Cookie TUB
+74721   SNACK    GreenMax Granola (Mixed)/Pkg
+74737   A31R     Rose Fortune Cookie
+74753   A95X     *GB* Extra Fine Crispy Noodle 80x1.5oz
+74757            Essence Dry Noodle
+74763            Essence Dry Noodle
+74790   BP18X    *
+74791            ****
+74792   BP18     Egg Roll Mix 10LB
+74803            Baily CANTON Dry noodle M
+74804            Baily CANTON Dry noodle S
+80000            ******
+80001   A77W     Theochem SoapPowder High100139 (WhiteBox)
+80004   A77P     So-kleen Soap Powder Pink/TUB
+80010   A77L     LYE-12 Drain Opener - UN1823
+80100   A89      Bleach Bottle
+80115   A77D     Detergent Green 4 Bottle*Any Brand*
+80125   A77O     Oven&Grill Cleaner Heavy Duty 4 Bottle
+80127   A77DP    Detergent Pink 4 Bottle
+80128   A89S     Glass Surface Cleaner
+80130            Cement
+80157            *
+81000   A76      Mop Head
+81001            Mop 12pc
+81010   A75      Pot Brush (With Handle)
+81011   A75      Pot Brush12pc (With Handle)
+81020   A75D     Deck Brush
+81021   A75D     Deck Brush 12pc
+81030            B. Handle
+81060            *
+81100   A78      ****
+81101   A78      stainless Sponge (K1400612)12pc/Pkg
+81102   A78C     Steeless Sponge (Tawian)10x10pc/ CS
+81120   A78S     Stainless Steel Sponge 12pc/Pkg
+81122   A78      Stainless Sponge 72pcs
+81601            *
+85013            Calendar - PC
+85060            12X12X18 CARTON
+85100            Glove Vinyl Large
+85102            Glove Vinyl XL
+85103            Glove Vinyl Medium
+85104            Blue Nitrile Gloves M NIT101M
+85105            Blue Nitrile Gloves L NIT101L
+85106            Blue Nitrile Gloves XL NIT101XL
+85107            BlACK Nitrile Gloves M NIT102M
+85108            BlACK Nitrile Gloves L NIT102L
+85109            BlACK Nitrile Gloves XL NIT102XL
+85110            Hand Truck
+85147            Fack Mask
+85172            Polyethlene Gloves / PKG
+85175            Poly Disposable Gloves
+92000            3oz Vegetable Egg Roll
+92600   BD01     A-01 Veg Spring Roll 25gx400pc*ACC*
+92601            Steamed Twisted Roll
+92602   DIMSUM   Peach Bun
+92603   DIMSUM   B-07 Custard Bun 30gx25pcs
+92604   DIMSUM   *ACC* B-07 Custard Bun 20pc
+92605   DIMSUM   WC Shumai Pork&Shrimp Pkg 1-73278
+92606   BM23     WC HK Shrimp Wonton Pkg 1-73292
+92609   DIMSUM   FRZ Gua Bao CHIMEI-300g /Pkg
+92610   DIMSUM   WC Lotuss Leaf Buns *1-46301* / CS
+92611            ****
+92612   DIMSUM   *ACC* D-09 Shrimp Dumpling 8x24pc
+92613   DIMSUM   D-09 Shrimp Dumpling *ACC* PKG
+92614   DIMSUM   WC Shrimp Dumpling 6pc *1-46343*
+92615   DIMSUM   WC Taro Cake 9pc *1-53014*
+92616   DIMSUM   WC Radish Cake 10pc *1-53013*
+92617   BF32     Fried Biscuit 24 Can
+92620   BF48     Garlic Bread 125pcs
+92623   DIMSUM   B-14 Mini Steamed Bun 30pc (Small) *ACC* / PKG
+92624   DIMSUM   B-02 Steamed Twisted Roll Bun *ACC* /PKG
+92626   DIMSUM   B-08 Steam Taro Paste Bun 6Pkg
+92627   DIMSUM   *ACC* B-08 SteamTaro Bun 20pc
+92628   DIMSUM   Steam Bun
+92629   DIMSUM   B-17 Pan Fried Bun 30gx25 / PKG
+92630   BD01HL   *HF* Veg Spring Roll 50G
+92631   DIMSUM   Red Bean Bun 6Pkg
+92632   DIMSUM   B-03 RedBean Bun 20pc/Pkg *ACC*
+92633   DIMSUM   Lotus Leaf Bun 12Pkg (L)1-46300
+92634   DIMSUM   WC Bamboo Pork&ChickenBun 10Pkg *2-60128*
+92635   BD14     E06 Egg Custard Tarts
+92636   BD14     E-06 Egg Custard Tarts *ACC* / PKG
+92637   DIMSUM   B-04 PEACH BUN F4L9B
+92638   DIMSUM   B-04 PEACH BUN PKG F4L9B
+92639   DIMSUM   *ACC* F-08 Glutinous Rice Dumpling 20 pcs
+92641   DIMSUM   Mini Soupy Pork Bun with Crab Meat- 1.1LB
+92643   DIMSUM   Mini Pork Bun (Pan Fry Style) 1LB
+92645   DIMSUM   WC BBQBun H.K.Style Pkg *WC 2-60001*
+92646   DIMSUM   WC Bamboo Pork&Chicken Bun Pkg *2-60128*
+92651   DIMSUM   WC BBQ Bun HongKong Style 10Pkg
+92661   BF34C    Fried Dough 3pcs x 20Pkg
+92662   BF34     Fried Dough 3pc/Pkg
+92663   BF34     Fried Dough 500g/Pkg *Elite*
+92664   BF34     Fried Bread Sticks 15.87oz/PKG
+92670   BD01GS   *GK* Veg Spring Roll 25G
+92672   BD01GL   *GK* Veg Spring Roll 50G
+92675   BD01W    WC Veg.Spring Roll 50gx200pc *1-53226*
+92690   BD01H    *HF* Veg Spring Roll 25G
+92703   BD10     *ACC* E-03 SesameSeed Ball/Pkg
+92720            Fried Twisted Cruelers 3' x 20Pkg
+92721   BF34     Twisted Cruelers Chinese 3pc/Pkg
+92734            Roti Paratha Plain
+92735   BF25I    Roti Paratha Plain PKG
+92760   DIMSUM   Shrimp Roll Cake 1.45lb /PKG
+92761   DIMSUM   PorkMiniBunCrabNeatAdded
+92790   DIMSUM   Scallion Layered Pancake Pkg*Little Alley*
+92791   DIMSUM   LayeredPancake20Pkg/CS(Little Alley)
+92792   DIMSUM   Green Onion Pancake Pkg *IMEI*
+92841   DIMSUM   A-11T Nan Xiang Soupy Dumpling *ACC* (blue) / PKG
+92842   DIMSUM   Mini Soupy Pork Bun - 1.1LB
+92864            Sesame rice ball
+92880            -Cream Bread
+92886   DIMSUM   Red Bean Paste Bun / PKG
+92892            -Redbean Bun Piggy
+92961            *
+92966   DIMSUM   Seasoned Pork Ribs (50348) 12oz/Pkg
+92968   DIMSUM   Shrimp Dumpling (50351) 9.6oz/Pkg
+92969   DIMSUM   Seasoned Chicken Paw (50347)12oz/Pkg
+92970   BM13     Pork&Shrimp Shumai (50350)14.4z/Pkg
+92971   DIMSUM   Pork & Veg Bun (50343)16oz /Pkg
+92972   DIMSUM   Stick Rice Cake W/CK (50349) 13.5oz/Pkg
+92973   DIMSUM   Curry Chicken Bun (50345) 16oz/Pkg
+92975   DIMSUM   Brown Sugar Bun (50355)16oz /Pkg
+92976   DIMSUM   HK BBQ Pork Bun (50341) 17.6oz/Pkg
+99000   BB07     Cream Jelly Roll 4 Roll A8 Cake
+99001   BB07C    *ACC* A8 Cream Jelly Cake 4 Rolls
+99002   BB07A    *King* Swiss Roll 4 Rolls AA CakE
+99003   BB07A    *ACC* AA Swiss Cream Cake
+99004   BB35     *ACC* AS Strawberry Cream Cake 4Rolls
+99013   BB       AB Muffin 50 pcs *ACC*
+99100            Chocolate Brownie
+99101   BB37     *ACC* Q Mocha (Coffee) Q8 Cake
+99105   BB38     *ACC* 10 Oreo Cake
+99110   BB28     Coconut Mousse Cake C Cake
+99111   BB28     *ACC* C Coconut Cake White
+99121            Strawberry Cake
+99140   BB39     *ACC* G8 Carrot Cake
+99141            Carrot Cake
+99150   BB30     *ACC* H Coconut Cake
+99160   BB01     *ACC* J Black Forest Cake
+99161            Black Forest Cake
+99170            Brownie
+99200            Milkflake
+99210   BB16     Palm Leaf P Cake
+99212   BB36     Napolean Cake NP Cake
+99215   BB29     *ACC* P Butterfly Cookies
+99220            Butter Crisp
+99230   BB04K    *ACC* V Coconut Macaroon
+99231   BB04     ***
+99241            Y Cake Mini Bundt Cakes
+99311   BB11     *ACC* PS Open Cream Puff
+99312            *ACC* M Round Puff 48pc
+99320   BB31     *ACC* O Long Puff
+99330   BB33     Strawberry Cream Puff PS Cake
+99331            Puff
+99500   BB25     Mango Mousse Cake W Cake
+99501            Mango Mousse Cake
+99509   BB26K    *ACC* L Cappuccino Mousse Cake
+99510   BB26K    *King* L Mocha Mousse Cake
+99511   BB26     *ACC* L8 Mocha Mousse Cake
+99520   BB27K    *King* K Raspberry Mousse Cake
+99521   BB27     *ACC* K Raspberry Mousse Cake
+99525   BB34     *ACC* 8 Pineapple Cake 63pc
+99526   BB32     *ACC* 3 Strawberry Mousse Cake
+99527   BB41     *ACC* 4 Mint Mousse Cake
+99528   BB       *ACC* 5 Chocolate Mousse
+99529   BB32     *ACC* D8 Strawberry Cake
+99551   BD14S    EA - 3.5" Egg Tart Crust
+99617   BB38K    "OREO" Chocolate 10 Cake
+99623            Plain Cheesecake
+99628            Butter Tart
+99629            Apple Cheesecake
+99641   SNACK    HM Semi Cooked Cheese Cake 7x30g / PKG
+99644            Chocolate Cake 400g
+99650   BB03K    *ACC* 11- Cheese Cake 2pcs
+99658   BB03     *ACC* CD8 Cheese Cake 2pcs
+99660            ****
+99700   DIMSUM   Osmanthus Cake 10.5oz
+99701   DIMSUM   Pumpkin Cake 25g x 12pc
+99702            Golden Durian Roll 10pc
+99730            Bag Clam For Free
+99802            Bag ShangHai Bok Choy For Free
+99807            Bag Daikon For Free
+99838            Chinese Broccoli
+99901            Pork Feet
+99908            Duckling
+99910            Special Bun *ACC* / CS
+99911   GM11     **GIFT** MoonCake 4pc *A1SS-01*
+99915            Whole Leg for HF Foods Ind.
+99920            #19341 SE Flank Steak *EF*
+99921            #11445 SEBeef Pectoral Meat *EF*
+99922            #17125 Eye of Round Beef 001/4" *EF*
+99960   DIMSUM   Buns BENIE (Assorted) 10pc/Pkg
+99992   C1       Calender PC
+99996            DIFFERENT PAYMENT
+99999            Special Item
+Product_Chinese_Name
+新鲜无骨无肥猪肉*28033*
+新鲜有骨猪肉
+新鲜有骨猪肉
+新鲜有骨猪肉(AL BECK)
+原味香肠(东之味)(30)
+原味香肠(东之味)
+冷冻无骨猪肉
+新鲜无骨猪肉
+冷冻无骨猪肉
+冷冻有骨猪肉 ANY BRAND
+猪扒(A级)包
+有骨猪肉-约75LB/箱
+新鲜无骨猪肉*05205*
+新鲜无骨猪肉
+新鲜无骨后腿猪肉*70659*
+新鲜无骨猪肉*70659*
+香肠
+台湾香肠
+味全台湾香肠
+全瘦猪腿肉-冷冻
+冷冻有骨猪腿肉
+冷冻无骨无肥猪肉*21668*
+冷冻有骨猪肉
+上等排骨*61595*
+唐人排骨- 红字
+冷冻上等排骨# 2
+新鲜排骨
+冷冻排骨 SPARE RIB
+点心排骨
+排骨尾
+排骨尾
+香肠(Hillshire Farm)-23.625Lb/箱
+香肠
+香肠(Black Oak)
+火腿(13507) 2x13LB / 箱
+周小贱嗨鸭脖-原味 60g*12根/包
+周小贱嗨鸭脖-蜜汁味 60g*12根/包
+周小贱嗨鸭脖-香辣味 60g*12根/包
+周小贱嗨鸭脖-烧烤味 60g*12根/包
+卡仕伽北岛白巧松塔酥 (16)
+卡仕伽肉松海苔小丸子 (16)
+卡仕伽腰果坚果脆饼干
+卡仕伽巴旦木坚果脆饼干
+卡仕伽可可爆曲奇小丸子 (16)
+卡仕伽啵啵爆曲奇小丸子 (16)
+双汇火腿肠(大王) (16)
+双汇火腿肠(小王）
+豪早点芋泥彩虹卷
+友臣肉松芝士面包
+南萃坊肉松蛋黄酥
+卡尔顿芋香无边土司
+然利手工拿铁蛋糕 120gX32
+2KG 然利手工原味蛋糕
+榛子节日礼盒(2罐)
+然利乳酸虎皮蛋糕
+然利金三角蛋糕(绿若叶味)
+然利金三角蛋糕(草莓味)
+然利金三角蛋糕(巧克力味)
+友臣咸蛋黄土司面包
+卡尔顿奶牛盒子面包
+友臣魔方吐司面包
+友臣奶酪千层面包
+友臣肉松海苔面包(WHT)
+然利老街酸奶炸面包
+馅中馅月饼 8粒
+平哥泡鸭爪-香辣味 (12)
+平哥泡鸭爪-原味(12)
+温州修文鸭舌-酱香味 (10)
+有友泡椒凤爪-山椒味 (70)
+卡仕伽熔岩黑巧松塔酥 (16)
+卡仕伽坚果脆饼干(混合味) 345g
+然利千层牛乳吐司面包 2KG
+然利手工沙拉夹心卷蛋糕
+豪早点蛋堡包
+友臣肉松小贝蛋糕
+友臣芋泥肉松面包
+友臣茶语面包(红茶)
+食神记脱骨凤爪(柠檬味) (30)
+食神记脱骨凤爪(藤椒味) (30)
+食神记脱骨鸭掌 (柠檬味) (30)
+五芳齋豆沙粽子 6枚/包 (20)
+五芳齋桂花血糯栗子 6枚/包 (20)
+五芳齋碱水粽 6枚/包 (20)
+五芳齋赤豆粽子 6枚/包 (20)
+五芳齋血糯栗子粽子 6枚/包 (20)
+五芳齋栗子粽子 6枚/包 (20)
+(康雅酷)冰芬芬40g (100)
+鸡腿骨
+鸡骨
+鸡胸骨
+黑肉左宗鸡(LUCYS)/箱
+鸡皮
+炸鸡条(CT1622B / 12175) /箱
+黑肉左宗鸡(2024)/箱
+白肉左宗鸡
+鸡胸骨
+91914 鸡块 10 F4L8C
+91918 切块鸡腿 F4R12
+*25630*无骨鸡胸
+*00796*无骨鸡胸
+*14088/26000/25630*无骨鸡胸
+*20105/20272*无骨鸡胸
+*20105*冷冻鸡胸
+无骨鸡胸 40磅/箱 OK Foods
+*0212* 无骨鸡胸
+*535*无骨鸡胸
+*946861&946801*无骨鸡胸
+*84268*鸡条肉
+冷冻鸡条肉
+*02290&02291(HR)*无骨鸡胸 / 箱
+*2441*鸡大腿肉
+*31552* 鸡大腿肉
+*20240*无骨鸡胸
+*6528*无骨鸡胸
+冷冻鸡胸
+冷冻有骨鸡胸
+*14088*冷冻鸡胸
+鸡大腿肉
+*07650*有骨鸡腿
+有骨鸡腿- 40磅
+****
+*0966* 有骨鸡腿
+*4627* 冷凍有骨鸡腿
+*65403/65410* 有骨鸡腿
+（冻）*4627*鸡腿 40磅/箱Pilgrim's
+*34010*有骨鸡腿
+*025942*有骨鸡腿
+*7006*鸡翅
+*14701&14702*冷冻中鸡翅 / 箱
+*268*新鲜中鸡翅(140pc)
+(冻)*268*鸡翅(140只)
+冷冻 中翅 20 磅20219
+*54425*鸡翅大(100只)
+*54425*冷冻鸡翅大Pilgrim's (100只)
+(冻)大切断鸡翅 - 40LB / 箱
+*84527*切断鸡翅(大)
+冷冻什翅*55467*
+(冻)切断鸡翅
+*6196*冷冻什翅
+#110956 (冻)切断鸡翅
+****
+*606* 冷冻鸡翅
+*1606*中鸡翅(120只) 新鲜
+*1606*中鸡翅(120只) 冷冻
+*14540*冷冻鸡翅
+*6222&6223*冷冻中鸡翅
+切鸡翅(冻)-95321-40lb/箱
+*206* 冷冻中鸡翅 40LB
+*206* 新鲜中鸡翅 40LB
+*35206*中鸡翅
+*35206*冷冻中鸡翅
+新鲜中鸡翅*14540*Sanderson
+*2950* 新鲜中鸡翅 40LB
+鸡翅(冻)-372
+翅尖
+*499*无骨鸡腿40磅/箱Perdue
+715-24 无骨鸡腿肉
+**无骨无皮鸡腿肉
+*51720*无骨鸡腿肉
+*24834*无骨鸡腿肉
+*499* 无骨鸡腿肉
+*5988*冷冻无骨鸡腿肉
+*51411*冷冻无骨鸡腿肉
+*51030* Frozen DRUMSTICK Meat
+*51005* Frozen Whole LEG
+*51720*无骨鸡腿肉*EF*
+*51720*无骨鸡腿肉FROZEN
+*10010* 无骨腿40磅/箱Union
+*623* 大鸡腿肉-有骨
+*10005* 骨鸡腿肉
+萬泉手切鸡腿肉
+（冻）国超无骨腿 40磅/箱 Charles
+新鲜上等牛肉(Excel)
+澳牛AMH
+新鲜P 牛(646421)
+澳牛(冷冻) #22101 "Southern"
+新鲜牛腰脊(18825)
+新鲜P 牛(A380031)
+新鲜 P 牛
+(冻) P牛100%
+新鲜 P 牛-大箱
+鲜碎牛(89450)/箱
+巴西冰牛
+FROZEN 上等牛肉
+冷冻上等牛肉 TEYS#2210 *59861*
+冷冻方牛牛肉(Trosby-A/B）
+牛仔骨( Select)
+切牛仔骨( WanrongTrading)
+冷冻牛眼-牛排 4/BX 011334
+牛仔骨
+牛眼-牛排 4/BX 011334
+三骨雪花牛仔骨 (6)
+冷冻牛胸骨
+冷冻牛胸骨/袋PKG (3)
+精品肥牛
+****
+新鲜牛胸肉-(五星)
+新鲜牛胸肉(Excel)
+牛里脊
+新鲜好牛肉-(Sukarne)-约30LB/箱
+新鲜好牛肉(53486 Sukarne)
+冷冻好牛肉(53486-Sukarne)
+内侧后腿牛肉(Excel)
+牛肉眼-约80LB/箱
+牛眼肉(Excel )
+牛骨独立包装
+牛骨
+猪油
+猪皮
+肥牛 (Excel)
+中切牛排骨-约62LB / 箱
+鲜牛肉条*10251709*-(Sukarne)-约30LB/箱
+冰鲜牛肉条*10251709*-(Sukarne)-约30LB/箱
+冷冻无骨羊肩* Y90*
+好劲芥兰(Ho King)
+花皇芥兰 (KING)
+红双喜芥兰(Red Song Hee)
+金龙芥兰(Golden Dragon)
+*
+九龙芥兰(Kowloon)
+顶级芥兰(Top Quality)
+芥兰花皇(Imperial)
+......
+禄勁芥兰(Lu Jin)
+金熊猫芥兰(King Panda）
+最好芥兰 (Chui Ho)
+绍菜
+无冰青葱-袋装(4 打)
+无冰青葱/ 袋
+青葱-真空包装(4 打)
+有冰青葱4 打
+黄洋葱
+白洋葱
+芹菜
+芹菜
+椰菜
+箱装软包菜
+青椒
+青椒 IRR (Suntan)
+牛角椒
+红椒
+红椒
+红椒-小箱
+墨西哥辣椒
+墨西哥辣椒-小箱
+墨西哥辣椒-大箱
+红萝卜
+红萝卜-小袋
+雪豆(请当场检查)
+甜豆 / 10 LB (请当场检查)
+四季豆-箱(请当场检查)
+四季豆(请当场检查)
+四季豆-黑塑胶筐(请当场检查)
+冷冻青红豆
+冷冻青红豆(Fine Line)
+冷冻青红豆(IQF-EcoVally)
+冷冻青豆
+青豆-1.2*0.2
+冷冻红萝卜片
+冷冻(黄)玉米粒
+冷冻3 寸玉米 20LB CASE
+味全冷冻 有机玉米
+土豆
+红皮土豆
+红皮土豆 #A
+红皮番薯-中號 美国
+番薯(8)
+加州-紫番薯
+紫薯
+日本番薯(板栗）
+夏威夷-紫番薯
+板栗番薯
+红皮番薯-美国
+红洋葱
+新鲜玉米 48CT.
+越南红色火龙果 (8pc)
+红芯火龙果
+牛油果(请当场检查)
+西瓜 (粒)
+西瓜无籽 (个)
+释迦果10ct / box
+白蜜瓜(4-6粒)
+红蜜瓜
+大黄瓜(青瓜)大箱
+小箱大黄瓜(青瓜)
+特顶级小黄瓜
+有机欧洲黄瓜 12CT
+意大利青丝瓜(中號)
+意大利青丝瓜-大箱
+柑
+爆汁耙耙柑 / 箱
+柑(以色列) 20LB/ 箱
+摩纳哥蜜橘
+夏威夷木瓜1.3LB/颗 (8)
+雪莲果 15LB
+雪莲果 10LB
+蜜橘(3LBx10袋装)
+*GIFT*柑橘(龙年-Red Box)
+醜橘-美国 (2 Layer)
+蛋(特大)-30打
+蛋(特大)-15打
+蛋 (大) 30 打
+炸香蕉(棕箱)
+咸蛋黄（12个） - 包
+超市装黄皮鸡蛋(L)1 打
+新鲜菠萝
+大西红柿
+白心芭乐
+红心芭乐
+鸡心黄皮 / 箱
+红石榴-美国
+中国秋月梨(礼盒)
+亚洲梨
+中国水晶梨
+中国香梨
+蜜皇秋月梨
+中国鸭梨
+中国黄金水晶梨(礼盒)
+香梨 - 20LB
+海鲜菇- 中国
+蚝菇
+中国-杏鲍菇
+新鲜蘑菇(请当场检查)
+新鲜蚝菇(请当场检查)
+杏鲍菇-袋装(HOKTO)
+杏鲍菇 USA (HOKTO)
+Maitaki Murshrooms
+Brown Beech Murshrooms ORG
+Brown Beech Murshrooms
+白玉菇
+金针菇
+金针菇
+芽菜 (请当场检查)
+鲜蘑菇"IRR" (请当场检查)
+P. Caps 蘑菇(请当场检查)
+P. Slices 蘑菇(请当场检查)
+Baby Bella 蘑菇(请当场检查)
+Agaricus Reg Flat蘑菇(请当场检查)
+圆生菜
+绿叶生菜
+香菜
+西洋菜
+西洋菜
+新鲜大香(花)菇
+新鲜大香(花)菇 = 11 LB
+黑木耳-新鲜
+碎米芽菜
+日本豆腐 - 19oz 软(绿)
+新兴豆腐-12盒 x16oz/箱
+福臨門五香豆腐干/箱
+福臨門五香豆腐干/袋
+*FROZEN* 豆腐干 TOFU PKG
+山水硬豆腐12x16oz
+山水嫩豆腐
+山水有机硬豆腐
+日本豆腐 - 老(红) HOUSE
+日本豆腐 - 软(绿) HOUSE
+日本豆腐 - 嫩(蓝) HOUSE
+日本豆腐 - 特老(粉红) HOUSE
+日本炸豆腐 - 特硬(紫色) / 箱
+日本老豆腐(红) *HF 01109*
+大田 大豆腐
+日本软豆腐(绿) *HF 01105*
+日本豆腐 (大盒-特老)
+豆腐卜-包 (10)
+尚品鲜腐皮-454g/包
+福臨門油炸豆腐/箱
+大田河粉
+切条大田河粉
+新鲜姜
+去皮蒜头(4)
+柠檬
+新鲜姜
+新鲜蒜头
+柠檬
+青檬
+油桃 32CT
+富士苹果-美国
+中国-白柚
+中国-红柚
+红樱桃
+杨桃 30LB /箱
+棗子
+新鲜山竹
+板栗 30 LB
+意大利葡萄-红
+黄李子
+小芒果8.8LB /箱
+桃仙子白桃
+西瓜 (大筐)
+奇異果
+红萍果-美国
+红李 3.5LB /包
+红柚子 4个/包
+榴莲(猫山王) 箱
+榴莲(越南)
+枇杷 / 盒 (6)
+雪萍果富士-中国(礼盒)
+巨峰葡萄
+巨峰葡萄(无籽)
+冰糖冬棗(2磅x10盒)
+香酥蒜头片
+红樱桃
+香槟柚
+西瓜 - 4个/箱
+黑葡萄
+黑葡萄 包 2 磅
+冰糖冬棗
+冰糖冬棗
+象芒果
+新鲜泰国芒果
+富贵柿
+富贵柿
+凉薯 （地瓜）约 5 LB / 包
+板栗 5 LB / 包
+福州香干(品来)300g/包
+冻无籽榴莲(金牛王)-454g/包
+上海青江菜
+上海青江菜
+油菜
+油菜
+雪裡红
+雪裡红
+青江苗(小)
+青江菜苗(小)
+菠菜 (6)
+菠菜
+中国芥兰
+中国芥兰
+油麦菜
+油麦菜
+大芋头
+大芋头
+台湾菠菜
+台湾菠菜
+菠菜(2包装)
+大木瓜
+中国茄子
+中国茄子
+青木瓜
+韭菜(请当场检查)
+韭菜 (请当场检查)
+白萝卜
+白萝卜
+芋头 包
+韭菜花
+芋头
+九层塔(请当场检查)
+九层塔（袋）
+薄荷叶
+日本山药
+铁棍山药(中国)
+沙葛
+韭菜花
+大芥菜
+通心菜(蕹菜)
+通心菜(蕹菜)
+白通心菜(蕹菜) / 箱
+大芥菜
+中国芥兰苗(小)
+新鲜茭白 4lb/包
+新鲜百香果 20颗/包
+中国芹菜(绿)
+中国芹菜(绿)
+(西)青蒜苗
+(西)青蒜苗/袋
+长瓜 30LB
+长瓜 5条 /袋
+台湾白菜包 2 磅
+台湾白菜箱
+甜白菜
+廣東小白菜 2LB /包
+廣東大白菜
+廣東白菜苗
+小白菜苗
+白花椰菜
+白花椰菜
+白花椰菜/袋
+中国椰菜花(台山)
+中国椰菜花(台山)/袋
+香茅
+冬瓜- 粒
+新鲜泰国椰青
+*** CASE 牛蒡 22#/CS
+日本南瓜
+新鲜泰国椰青(易开式)
+百香果(紫)
+****
+泰国茄子
+红葱头- 中国
+韩国香瓜
+韩国香瓜 - 20LB
+豆苗 (请当场检查)
+豆苗 (请当场检查)
+小叶茼蒿 (请当场检查)
+小叶茼蒿 (请当场检查)
+白色火龙果
+冰糖蜜梨-中国
+韩国新高梨
+木耳
+新疆哈密瓜- 美国
+苦瓜
+苦瓜
+佛手瓜
+佛手瓜
+韩国黄金梨
+新鲜龙眼
+新鲜龙眼/包
+台湾香瓜 5LB/包
+越南芒果
+新鲜椰子 CASE
+莲雾
+毛 瓜 (绿色)
+毛 瓜 (绿色) 5LB/ 包
+红毛丹
+小芋头- 中国
+五月红荔枝 / 箱
+糯米糍荔枝 / 箱
+油菜心
+甘蔗/条
+水煮莲藕片-1LB/包
+新鲜莲藕
+切片莲藕 24x16oz
+新鲜莲藕- 中国
+莲藕片/箱
+新鲜莲藕中国/箱
+昌板仔(100/200)
+7/9侧鱼片
+冷冻吴郭鱼-去肚去鳞 40lb
+海鲫鱼-无肚 40LB / 箱
+冻格凌兰比目鱼
+火箭鱿鱼 2lb /包 (10)
+小章鱼-12oz/包
+小尤鱼3磅 (12盒/箱)
+小尤鱼2.2
+大鱿鱼44.1LB9 (CALAMAR)
+田鸡腿 5LB (6)
+鱿鱼花/包(10)
+月亮鱼
+龙蜊鱼-(400-500)-33LB/箱
+龙蜊鱼-(400-500)-20LB/箱
+双椒霸王鲶鱼头/袋(12)
+带鱼
+冷冻墨鱼22.05 磅/箱
+脆肉皖鱼片/包（40）
+大目鱼 BEAUTY WING
+真黄瓜鱼
+酒糟黄瓜鱼- 包
+冻黄鳗（康威）-44Lb/箱
+去肚海鳗
+海鳗-22Lb/箱
+真黄花鱼
+真黄花鱼
+金鲳鱼(600-800)
+*****
+小黄花鱼-2LB/包
+酸菜鱼片(X.T)-500g/合
+功夫鲈鱼- 500g/包 (20)
+乌鸡-头 (12)
+平安鸡(公）-约4Lb / 头 4214
+无骨泡椒凤爪 / 包
+鸡脚 22LB /箱 PERDUE
+鸡脚33.07LB /箱 CASE FARM
+鸡脚 5LB (6)
+老鸡-头 (15)
+乳鸽 - 头 (24)
+鹌鹑 (6)
+鹌鹑蛋JNK 39.7LB (6)
+黄油走地鸡-约/头
+老鸡
+有头冻鸭
+冻鸭
+*BAY* 无头冻鸭(6pc)
+*BAY*有头冻鸭(#214)
+*PREMIIUM POULTRY*有头冻鸭 (#213)
+残鸭
+金针菇
+老鸭-头
+Duck-1 烧鸭/只*ACC* (6)
+鸭头 - 箱
+鸭翼 - 箱
+鸭掌 - 箱
+鸭肠 8oz - 包 （24）
+老鸭（6只） - 箱
+烤半鸭 - 包
+鸭舌- 约10 LB / 包
+无骨鸭掌
+冻鹅-约10LB/只
+日旺豉汁凤爪454g/包
+好呀爽 300g (20)
+猪肚
+猪肚
+切好猪脚 (10)
+五花肉 5LB/包 (6)
+新鲜五花肉
+冷冻五花肉(AL BECK)
+丹麦无皮五花肉-冷冻
+丹麦有皮无骨五花肉-冷冻
+巴西有皮无骨五花肉-冷冻
+巴西有皮无骨五花肉(白箱）-冷冻
+港式叉烧肉 6x5LB
+叉烧块
+叉烧块
+整箱猪筒骨
+猪肝/箱
+日式无皮五花肉-冷冻
+腊肉 / 包 （32）
+猪舌头-约5磅
+整只烧猪 / 只
+猪大肠
+猪头（切） / 箱
+猪筒骨(6)
+猪背脊骨- 30LB / 箱
+牛肚
+牛百叶(发) (5)
+牛百叶(原色)
+牛百叶-30LB /箱
+牛腩 5LB/包 (6)
+牛腩 - 50 磅/箱
+牛筋
+牛腱
+牛腱-大箱 Brown Packing Box:4766
+牛舌头
+切好牛尾 (4)
+无骨羊腿
+羊肉串1.25LB/PKG (14)
+羊排 (~1.2LB/PKG)
+羊肉串14*1.25LB/箱
+猪劲肉片-约1LB/合
+火锅羊肉片
+火锅肥牛片
+火锅芋头 F3S4E
+欧洲切块带骨草羊2.2LB
+带皮切块全羊
+猪耳朵-5LB/包
+猪脸肉
+猪尾 3LB PKG
+鸭翅 3LB PKG
+(整箱)切猪筒骨/ 箱
+猪脸肉 - 箱
+金钱腱(109) -箱
+台湾红豆年糕 / 盒
+豆腐乳(黄日香)
+豆腐乳辣(黄日香)-瓶
+(海天) 白腐乳 / 瓶 (12)
+辣油香笋-13oz/瓶
+辣油香笋
+香辣脆油(老干妈)瓶(24)
+花生面筋(吉祥)瓶
+明筍干(24)
+爱之味鲜脆条瓜-180g/瓶
+榨菜丝 (48)
+榨菜丝
+鲜炸鲮鱼
+豆豉鲮鱼
+豆豉鲮鱼
+酸菜
+小葉酸菜 (24)
+小叶酸菜 (80)
+甜豆(巧阿嫂)-100g/包
+贝奇脆萝卜-包
+老板菜-2.4oz/包
+老板菜
+(鱼泉牌）榨菜-70g/包
+糟菜
+香脆筍-400g/包
+永日香卤味豆丝-210g/包
+美味榨菜(斜桥)-90G/包
+特级麻辣海带丝-60G/包
+皮蛋(东之味)
+熟海鸭咸蛋-6粒/盒
+醎蛋
+肉松(宝岛)大
+鹌鹑蛋(24）
+紫菜饼-包
+福州鱼丸(海极鲜)
+海带结
+五香豆腐干-包
+五香豆腐干-20包 /cs箱
+鱼皮海鲜饺
+特级鱼豆腐(极佳) 1lb/包
+炸鱼饼(极佳) 14oz/包
+墨鱼丸(花枝丸) C-21(5）
+整支鱿鱼串彩色包装/包(22)
+珍珍花枝丸-8oz/包
+面筋串 /包(18)
+旋風薯塔串 /包(10)
+珍珍鱼包 蛋-8oz/包
+珍珍龙虾球
+韩国鱼豆腐-8.46oz/包
+泰山八宝粥
+桂圆银耳八宝粥 24罐
+椰树牌-椰汁
+花生牛奶（爱之味) / 箱
+旺仔牛奶
+杨协成甘蔗水(罐装)
+枸杞红枣银耳羹(12瓶) 箱
+杨协成菊花茶(罐装)
+杨协成豆奶(罐装)
+甜豆奶1/2 Gal (8)
+花生牛奶
+福臨門有机甜豆奶- 1/2 Gal (8)
+卡拉宝活力饮料
+王老吉凉茶*WC 3-36801*
+泰山鲜草蜜
+韩国芦荟饮料-20x16.9oz/箱
+旺仔牛奶家庭装 / 盒 (3)
+日本汽水 (哈密瓜） / 箱
+日本汽水(原味) /箱
+日本汽水 (柑味） / 箱
+N/A
+日本汽水(葡萄味)/箱
+统一阿萨姆奶茶
+B-26 牛奶馒头6pc (10)
+B-30 红糖馒头 (10)
+B-21 福州大肉包*ACC*(10)
+B-29 全麦馒头6pc (10)
+鲜潮州稞条(Sincere)-10LB/包
+韩国年糕条-1.16LB/包
+红糖糍粑(20)
+红糖爆浆糍粑
+福州鱼丸
+鱼饼 .50#/PKG F3S4A
+鱼豆腐
+鱼豆腐 (40)
+荔枝虾球
+灌汤虾丸5LB (5)
+亲亲肠
+韩国年糕片(DARUMA/MIXIU/HAN)/包
+全美猪肉锅贴
+鸡肉锅贴(全美)
+(李先生)鸡肉煎饺
+(李先生)猪肉煎饺*03101*
+王府井猪肉锅贴(味全)
+猪肉煎饺(味全)
+王府井猪肉锅贴(味全)
+芝麻汤圆(第一家)-10粒/包
+花生汤圆(第一家)-10粒/包
+福州鱼丸(20)
+香线-扎
+白鱼丸C-17 (5)
+金银纸&旗盘-包
+金银纸&旗盘
+年糖年饼- 包
+台湾原味年糕 / 盒
+台湾红豆年糕 / 盒
+台湾八宝年糕 / 盒
+台湾红豆年糕(方)
+红豆年糕-（盒）
+豆沙月饼
+月饼 -单黄白莲蓉
+福州月饼
+四喜月饼
+稻香村月饼 -礼盒
+茶兀西柚茉莉花茶
+康师傅茉莉清茶
+茶兀蜜桃乌龙茶
+康师傅酸梅汤
+日本汽水 (兰夏威夷味） / 箱
+脉动水蜜桃饮料
+康师傅水蜜桃水果饮料
+康师傅绿茶 (蜂蜜茉莉味)
+康师傅冰糖雪梨/ 箱
+椰树牌-椰奶
+康師傅面
+康师傅茉莉蜜茶
+康師傅紅燒牛肉麵
+康師傅老坛酸菜桶麵/箱(12)
+康師傅香辣牛肉麵/箱
+康師傅香辣牛肉桶麵/箱(12)
+康師傅滷香牛肉桶麵/箱(12)
+康師傅香菇炖鸡桶麵/箱(12)
+康師傅鲜虾鱼板桶麵/箱(12)
+康師傅红烧牛肉桶麵/箱(12)
+康師傅香葱排骨桶麵/箱(12)
+康师傅冰红茶
+日本汽水 (兰莓味） / 箱
+乐天摩卡派-13.54oz/盒
+综合麻糬-15.8oz/盒
+烤青豆-4.9oz/罐
+蒜蓉花生-10.5oz/袋
+喜之郎杯装珍珠奶茶-原味-4x70G/条
+凤梨酥(雪之恋)-250g/盒
+盼盼手撕面包 (奶香味)-480g/包
+日本汽水(混合装)/箱
+日本汽水 (草莓味） / 箱
+日本汽水 (椰子味） / 箱
+日本汽水 (菠萝味） / 箱
+日本汽水 (荔枝味） / 箱
+永和经典原味豆浆粉(350g)12条/包
+柿饼
+万年青饼干- 合
+万年青饼干
+原味手撕面包 (稻香村)-258g/包
+老面包 (稻香村)-310克/包
+榴莲香酥饼-280g/包
+香脆麻枣
+山桃核瓜子160g包
+洽洽五香瓜子250g包
+洽洽原味瓜子250g包
+焦糖瓜子160g包
+COSMOS 辣年糕脆条 50g
+(小肥羊)麻辣火锅底料
+徐福记混合味新年糖-328g/包
+小飞象葵花籽-305g/袋
+旺旺雪饼-4.3oz/包
+综合味果冻
+伊利优酸乳原味
+芒果干-9.88oz/包
+旺旺仙贝-3.95oz/包
+韩国速溶咖啡Mocha味(Maxim)-100x12g/合
+开口笑-有机板栗-150g/袋
+香芋巧克力卷-4.83oz/盒
+绿茶巧克力卷-9.63oz/盒
+义美鲜乳薄饼-240g/包
+义美鲜葱苏打饼干-140g/袋
+尤鱼丝-50g/包
+小酥鱼
+小酥肉
+韩国鱼肠-9.59oz/盒
+蒜味莲花豆-8oz/包
+开花蚕豆(牛肉味)
+开花蚕豆(牛肉味)
+了不得鳗鱼鱼滑-400G/包
+日旺千层肚(火锅专用)-170G/包
+日旺牛百叶(火锅专用)-150G/包
+珍珍鱼豆腐-8oz/包
+思念金牌虾-至臻虾皇饺-12.69oz/袋
+思念金牌虾-虾仁芹菜-12.69oz/袋
+思念金牌虾-虾仁豆苗-12.69oz/袋
+思念金牌虾-虾仁玉米-12.69oz/袋
+21-25 开背无壳虾 10lb
+31-40单冻开背无壳虾
+31-40单冻开背无壳虾(有尾）10LB
+31-40单冻开背无壳虾
+31-40单冻开背无壳虾
+41-50无头有壳虾40LB
+41-50 单冻开背无壳虾
+41-50 单冻开背无壳虾
+41-50 单冻开背无壳虾
+51-60 无壳虾
+51-60 有壳虾- 40LB / 箱
+51-60 无壳虾-24 LB
+51-60 无壳虾-30 LB
+61-70 开背无壳虾
+61-70 开背无壳虾- 32.8lb
+71-90单冻开背无壳虾
+71-90单冻开背无壳虾24LB
+71-90单冻开背虾30LB
+71-90单冻开背虾
+26-30 开背无壳虾
+51-60单冻开背无壳虾-20Lb/箱 (净重100%)
+61-70 (开背)单冻无壳虾
+61-70 (开背)单冻无壳虾
+71-90单冻开背虾
+30-40有头虾
+30-40有头虾(Champmar)
+40-50有头虾(Champmar)/箱
+日本甜不辣炸虾26/30(13-15PC)-10x10/箱
+北极甜虾
+21-25 蝴蝶虾/箱
+有粉园炸虾 （900385） / 箱
+21-25 无头有壳虾
+21-25无头有壳虾
+21-25无头有壳虾 PKG
+21-25 EZ Peel 开背有壳虾40LB
+21-25 EZ Peel 开背有壳虾4LB
+21-25无头有壳虾20lb
+21-25 EZ Peel 开背有壳虾(20磅)
+26-30 带壳虾
+26-30 带壳虾100%
+26-30无头有壳虾20lb
+31-35南美虾(净重100%)-50LB/箱
+31-35南美虾(净重100%)-40LB/箱
+31-35南美虾 50LB/箱
+41-50南美虾 40LB/箱
+51-60虾 50LB/箱
+61-70无头有壳虾
+61-70南美虾 24LB/箱
+71-90 有壳虾-40LB
+71-90无头有壳南美虾-50LB/箱
+U/10特大干贝-30 LB/箱
+10-20 黒珍珠大干贝
+20-30 单冻大干贝
+20-30 黒珍珠大干贝
+20-30 单冻大干贝 盒
+30-40单冻干贝-5LB/盒
+30-40单冻干贝-30LB/箱
+20-30 黒珍珠大干贝
+20-30 黒珍珠大干贝 5LB /包
+40-60单冻小干贝-30LB/箱
+40-60单冻小干贝-5LB/包
+U/10特大干贝-4.4LB/合
+有粉干贝(顶好)
+有粉干贝(顶好)-1LB/包
+特大炸芝士蟹角(百利)-1.1ozx100Pc/箱
+雪蟹脚8/10 (Royal Greenland) 30LB
+实心蟹条(顶好)
+实心蟹条(顶好)
+实心蟹条(恒泰)-5LB/包
+散蟹条(顶好)
+散蟹条(恒泰)-6x5lb/箱
+散蟹条(顶好）
+蟹肉切片(顶好)
+蟹肉切片(Oyster Bay)
+切片(顶好)-2.5LB/包
+蟹肉切片 (?)
+龙虾全尾-2LB/包
+雪蟹脚- 3-5/30LB
+8 UP雪蟹脚(Cluster Greenland)
+雪蟹脚 12+, 10LB/箱(Cluster Greenland)
+铁板龙虾尾(4oz)-10lb/箱
+铁板龙虾尾(5oz)
+U10 埃及小龙虾10LB/ 箱
+10/15 埃及小龙虾10LB/ 箱
+16/22 埃及小龙虾10LB/ 箱
+N/A
+U10 小龙虾(CJ ) 2x5 LB/ 箱
+三文鱼(大片)-30LB/cs箱
+4x6无骨鱼-40LB/箱
+黑鲈鱼（海鲜） -磅
+黑雪鱼(海鲜)- 磅
+清蒸开背鲈鱼- 条/包 (20)
+红鸟石班鱼（海鲜）
+银鲈鱼（海鲜）
+龙蜊鱼片STRIPED PANGASIUS
+银鳕鱼(冻)
+红石斑鱼(海鲜-保鲜不保活)-磅
+温哥华(邓金斯)螃蟹(海鲜- 保鲜不保活)
+去皮鱿鱼 U5
+带鱼盒
+蟹保鲜不保活
+大带鱼 (海鲜）- 磅
+龙虾(海鲜) - 磅
+帝王蟹 (海鲜 -保鲜不保活) - 磅
+象拔蚌(海鲜 -保鲜不保活)
+响螺(海鲜)
+蚬子(海鲜)
+COOKED 蛤蜊 1# F1S2B
+石头鱼（海鲜）- 磅
+青口 (淡菜) - 磅
+龙利鱼(新鲜 -保鲜不保活)- 磅
+香辣花蛤(M)
+鰻魚 鮮/只
+黑石斑鱼/只(海鲜 -保鲜不保活)-磅
+马尼拉蛤蜊(海鲜 -保鲜不保活)
+鸟蛤/ 海扇（海鲜）10P
+海参/磅(海鲜 -保鲜不保活)
+海胆/磅
+红蟹 / 只
+马鲛鱼（海鲜） -磅
+(新鲜)小龙虾/磅
+龙头鱼 - 磅
+游水虾(海鲜-保鲜不保活)
+珊瑚虾 （海鲜）
+琵琶虾/磅
+芝蔴虾 （海鲜）(13)
+海虾/磅
+（海）干贝/磅
+生蚝 6 只
+青口-2LB/盒
+青口(GREEN）-(M)
+双壳黑克菜（760290）10LB /箱
+黑青口(淡菜)
+青口(淡菜)鱼太郎
+半壳黑(47/55)淡菜(青口)
+中国花蛤(11-20)
+中国花蛤(20-30)-10包 x2lb/箱
+冻煮鲍鱼肉 100g/包 (28)
+中国花蛤(10)
+有壳智利黑鲍鱼 2.2LB (10)
+白蛤(20) 1lb /包
+蛤蜊（海鲜） - 包
+蟶子/刀蚬 (海鲜-保鲜不保活)
+百胜老蛏(海极鲜)-2lb/包
+生蠔肉
+（鲜冻）熟连江老蛏 / 包
+冻熟老蛏 / 包 (30)
+珍珠牡蛎(海极鲜)-400g/包
+海蜇皮桶
+海蜇頭/桶 (B)
+(東之味)海蜇頭-辣味150g/包
+特级天然海蜇头(kouu)
+天然特级海蜇头
+牛肉串/包(14)
+芋泥
+辣味亲亲肠(4706)-10oz/包
+亲亲肠 (PS4700)
+亲亲肠 PS4766
+猪肉玉米亲亲肠(4720)-10oz/包
+鸡肉玉米亲亲肠(4710)-10oz/包
+味全牛筋丸*WC 1-41120* (30)
+牛肉丸
+牛肉丸 10x8oz(or 5 LBS) / 包
+蟹粉蟹籽包丸(4)
+八宝饭
+龙虾丸190g/包
+西北鱼饺
+(味全)猪肉菠菜馄饨
+(味全)韭菜鲜虾水饺
+亲亲肠-10oz/包 (24)
+牛筋丸-8oz/包
+味全花枝丸30x8oz/箱
+味全花枝丸-8oz/包
+川香厨房番茄火锅底料-200g/包
+香辣干锅酱/桶 (2)
+重庆老火锅底料 (20)
+麻辣香锅酱/桶
+小肥羊清汤火锅底料-110g/包
+小肥羊辣汤火锅底料-235g/包
+海底捞火锅底料-220g/包
+海底捞清油火锅底料-220g/包
+细薯条1/2寸(43301) / 箱
+粗薯条(Golden Fry)
+粗薯条1/2寸
+粗薯条1/2寸
+粗薯条(Orieda)-30LB/箱
+麦当劳(细)薯条3/8寸
+粗花纹薯条1/2寸
+细薯条3/8寸
+细薯条3/8寸(43301) / 箱
+粗薯条1/2寸
+粗薯条花纹1/2寸(Crinkle Cut)
+炸薯球(34111) / 箱
+细薯条3/8寸
+麦当劳(细)薯条3/8寸
+细平有味薯条(CT5672B)/箱
+洋葱环-10Lb/箱
+炸秋葵
+油蒜酥 / 罐(12)
+油葱酥(荘园)-10x1Lb/箱
+鸡粒 004627
+炸鸡粒(004627)/箱
+鸡粒(CTC9003R)/箱
+辣鸡粒35x1.088 LB /箱
+炸玉米粒/箱 (6)
+田鸡腿 30LB
+3寸顶好日本蟹条SushiStick-20x1.1LB/箱
+3寸顶好日本蟹条SushiStick（20）
+顶好7寸日本寿司蟹条Sushi Stick-10x2.2LB/箱
+日本姜片- 红
+白- 日本姜片
+尤鱼沙拉-4.4Lb/盒
+北极贝（L)-2.2Lb/包
+3寸日本蟹条(匠传)-20x500g/箱
+16/25八爪鱼
+日本烧鰻魚 (36)
+鲜虾烧卖(Ajinomoto) (6)
+东之味毛豆荚(W.L)
+日本毛豆荚
+毛豆荚
+毛豆荚-雨(KOUU)
+毛豆荚(春一番JNK)
+****
+日本白味曾
+日本海带沙拉(TaiWan)(4)
+日本海带沙拉(TaiWan)
+日本萝卜条-450g/包
+日本鱼子4.4LB/盒
+寿司紫菜(Green)HALF-10包 x100/箱
+日本芥辣粉-2.2LB/包
+寿司醋 (富士)
+日本芥辣粉
+白封日本筷子(K)
+日本炸粉(85138)
+天妇罗粉
+Kewpie日本美乃滋 (20)
+鳗鱼汁(KB-23) 6x1.8L/箱
+日本海带芽/包 (20)
+昆布(铁人) 1KG/包 (10)
+米林甜酒(雨) / 箱
+米林甜酒(Mirin)
+寿司盒(OP-1.0)400'
+日本寿司盒 (TZ-010)-400套/箱
+日本高合寿司合(TZ-815)-450套/箱
+日本寿司盒 (TZ-008)-400套/箱
+五格寿司盒 (OP305)-300/箱
+五格寿司盒 (TZ-306)-200/箱
+熟 日本白芝麻-2.2LB/包 (12)
+日本黑芝麻-2.2LB/包
+寿司紫菜半张绿(SR)-10x100/箱
+万字(K) 照烧汁
+(Marukan)日本寿司醋
+万字烧烤酱
+万字(K-Unagi Tare)寿司酱(鳗鱼酱)
+日本柴鱼片/包 (6)
+日本日清炸粉(正宗)-40Lb/包
+韩式牛小排烧烤酱1.85LB/ 瓶 (8)
+韩式牛肉烧烤酱1.85LB/ 瓶 (8)
+26/40八爪鱼
+26/40八爪鱼
+乌冬面(Sanuki Udon)
+日本软壳蟹 / 盒
+日本沙拉蟹丝 (势)
+乌冬面
+乌冬面-雨(Kouu)
+冷冻毛豆仁
+寿司无皮三文鱼 22.05LB / 箱
+日本小龙虾沙拉(Iyoya)-1.43/合
+ 柚子汁(Mizkan) / 瓶
+烧鳗汁(TOYO)-1.8L/罐
+烧鳗汁(万字)-5L/瓶
+白封套筷子
+御膳高级白封套筷子 (WBC2000)
+日本白封筷子绿字(割箸)
+日本白封套双生筷黑字(竹箸)60x20
+日本鱼味精-12x2.2Lb/箱
+****
+日本鱼味精-2.2Lb/盒(12)
+菌菇汤底500gx20/箱
+番茄汤底1gx20/箱
+日本山型1号-1000pc/盒
+日本午餐合(JN-810)-500套/箱
+日本便当合(JN-305)-252/箱
+日本便当合(FH-307)-100/箱
+日本便当合(FH-304)-252/箱
+毛豆荚(Kabuto)-20x14oz/箱
+毛豆仁
+吞拿鱼小块/箱
+八爪鱼丸45pc (4)
+鮮蝦燒賣(Nissui)-12x25pc/箱
+日本甜不辣粉(万字)-25Lb/包
+C-28 牛筋丸(5)
+C-18 龙虾球 (5)
+C-16 灌汤鱼丸 / 包 (5)
+C-26 炸鱼丸 / 包(5)
+C-20 鱼豆腐 / 包 (5)
+炸甜不辣虾 (26/30)
+A-02 腐皮卷-盒(2)
+亲亲肠 5LB / 包 (5)
+炸甜不辣虾 (13/15) / 箱 100pc
+精品肥牛 *IBP*
+无骨羊肩肉筒* B401*
+龙尾串（切丝）/包 (10)
+凤尾串 /包（10）
+蓝蟹 5LB /袋
+母蓝蟹 (保鲜不保活)
+蓝蟹 (保鲜不保活)
+红胶酒(K)
+红胶酒(AAK)
+白胶酒(K)
+白胶酒(AAK)
+绍兴料酒K(金标)(C)-4罐 /箱
+绍兴料酒(五星)
+绍兴料酒(万灯)
+绍兴料酒(帝王牌)
+福建老酒-750毫升/瓶
+福建料酒(万灯)-750毫升/瓶
+福建老酒(福灯)
+福建料酒(万灯)-12x750毫升/箱
+台湾米酒(帝王牌)
+米酒(SummerField)-4瓶 /箱
+*恭贺新禧* 柿 箱
+年糖年饼(恭贺新禧) - 包
+红酒-送(恭贺新禧)
+冻鸭-Duckling-(恭贺新禧)
+商城套餐(A)
+商城套餐(B)
+商城套餐(C)
+商城套餐(D)
+商城套餐(E)
+醋(K)
+醋(合时)
+镇江香醋
+镇江香醋-550毫升/瓶
+白醋(龙师傅) 11135-DC
+白醋(FIve Star) 4x1Gal
+醋(AAK)
+醋(Dragon Chef)-4x1GL/箱
+大红浙醋-12x600毫升/箱
+大红浙醋
+李锦记臻选调味香醋 / 箱
+红水(K)
+红水(K)-1GL/瓶
+红水(W.Y)-4x1GL/箱
+红水(AAK)
+黄水(K)
+黄水(K)-2LB /瓶
+黄水(AAK)
+辣椒水(K)
+辣椒水(一品)
+柠檬水(4X1)箱
+海鲜酱 (冠珍) / 箱
+李锦记-海鲜酱
+海鲜酱-冠珍 GLUTEEN FREE
+海鲜酱-锦珍(李锦记）
+海鲜酱(锦珍)-4.85lbx6罐/箱
+苏梅酱 (冠珍) 6罐/ 箱
+海鲜酱-厨师精选(李锦记）
+蒜蓉越南辣酱(公鸡)-1GL/瓶
+蒜蓉辣椒酱(冠亚)
+蒜蓉辣椒酱(海天) / 罐(2)
+蒜蓉越南辣酱(公鸡)
+飞鹅素辣椒酱
+素辣椒酱(公鸡)
+素辣椒酱(公鸡)-1GL/罐
+是拉差甜辣椒酱(公鸡)12x28oz
+是拉差甜辣椒酱(盛记)
+冬陰功湯醬32oz*Jack&Kings*(12)
+是拉差甜辣椒酱(公鸡)-28oz/瓶
+是拉差甜辣椒酱(公鸡)
+是拉差甜辣椒酱(万字) - 6x4LB / 箱
+素辣椒酱(盛记)
+是拉差甜辣椒酱(李锦记)
+春卷甜辣酱(Mae Ploy)
+甜辣椒酱(Mae Ploy)
+甜辣椒酱(Mae Ploy)-730ml/瓶
+是拉差甜辣椒酱素(飞鹅)
+老干马豆豉油辣椒 瓶（24）
+老干马凤味豆豉油制辣椒 / 箱
+沙茶酱(牛头)
+沙茶酱(牛头)
+沙茶酱(东之味)
+沙茶酱(东之味)
+豆办酱无辣/罐
+豆办酱辣-6oz/罐
+鹃城郫县豆瓣一级-15kg/桶
+豆办酱-无辣
+豆办酱-辣
+老干马香辣酱 瓶（24）
+丹丹红油郫县豆瓣13.2LB /桶
+红油郫县豆瓣
+老川油泼辣子 8.8lb /桶 (2)
+李锦记·甜面酱44LB
+苹果酱
+草莓酱-20Lb/桶
+花生酱
+花生酱(PeanutKids)
+芝麻酱 5kg /桶 (2)
+泰国Pad Thai 酱 /罐 (12)
+磨原豉酱(冠珍)
+麦牙糖-14oz/罐
+麦芽糖
+麦芽糖
+胶蜜
+番石榴糖/包(30）
+番石榴糖-12.35oz/包
+冰糖 / 箱
+美奶酱-罐
+美奶酱4x1Gal
+美奶酱4GAL/桶
+冷虾酱-罐
+它它酱
+它它酱(Butcher)
+冷虾酱-4罐 /箱
+炼奶(鹊巢)
+宁士酱(ButcherBoy)
+它它酱(Butcher)-罐
+铁板汁
+韩国辣椒酱20x1.1LB/ 箱
+韩国辣椒酱1.1LB/ 盒
+双老抽 （冠珍） / 箱
+单老头抽 (冠珍) / 箱
+草菰老抽-珠江桥牌(12x5LB)
+草菰老抽(珠江)-瓶
+黑酱油老抽(DSB) / 箱SP380-1
+锦珍-草菰老抽(12'/CS)
+海天-草菇老抽
+泰国草菰老抽 (Healthy Boy)
+草菰老抽 (鲜味金冠） / 箱
+生抽(冠珍)
+*****
+金标生抽(海天) / 罐（6）
+李锦记熊猫嚎油(LKK)
+*胶瓶*李锦记熊猫嚎油(LKK)
+*胶瓶*万字嚎油
+中字嚎油
+嚎油-*李锦记锦珍*
+嚎油-*李锦记锦珍*胶瓶*
+蚝油海天
+蚝油海天罐 （6）
+瓶装纯味嚎油(淘大)
+麻油(日本) 8x0.5GL/箱
+日本麻油(DDS)
+日本八角麻油(10)
+麻油(日本) 0.5GL/罐
+淘大金标酱油
+銀標(李錦記)金標醬油
+李锦记金标酱油(LKK)
+日本-味之素味精(Ajinomoto)
+味精(味之素)-100LB/桶
+日本味精(美之味)
+日本味精(有图案 美の味)
+鸡精(太太乐)-)4.6LB/桶装
+太太乐鸡精-胶袋装PlasticBag
+鸡精(太太乐)4.6LB/桶装(6)
+蘑菇精(太太乐)
+蘑菇精(太太乐)-1LB/罐(20)
+万字酱油
+万字酱油 小瓶
+*00175*(绿)低盐酱油万字
+金山酱油(GoldenMountain)
+低盐万字(李Lee)Less Sodium 5GL/桶
+万字酱油(K)-1Gal
+泰国滴珠油(白盖) 12x21oz /箱
+泰国酱油精(蓝盖) 12x21oz /箱
+万字(欣和)
+金酱油(李锦记)
+李锦记厨师精选酱油(LKK 5Gal)
+*****
+万字(华榕)-5GL/桶
+(绿箱装)万字低盐酱油 4Gal
+箱装万字酱油 4Gal
+酱油王(HealthyBoy)
+鱼露-鱿鱼牌
+鱼露-25oz/瓶
+三蟹鱿鱼露
+三蟹鱿鱼露-24oz/瓶
+蒸鱼豉油(李锦记)
+蒸鱼豉油(李锦记)-14oz/瓶
+HealthyBoy黑酱油(BownLabel)
+*K ONE* SOY SAUCE 5 GAL
+华容酸梅酱
+酸梅酱桶(佳)
+上珠油(华)
+上珠油(冠珍)
+芥辣粉
+芥辣粉(联合）
+糖(United)
+糖(IMP)
+盐
+雪盐
+Wang 韓囯糯米粉8x3LB
+Wang 韓囯大米 40LB
+*CJ* 花蛤汤粉 (10)
+*ASSI*韩式辣椒酱 37lb /罐
+WANG 韩国黄豆大酱(桶）
+WANG 十三香(王守义)
+WANG 韩国辣椒粉(粗) 6x5LB
+WANG 14795韩国细海盐 (12)
+WANG 玉米糖浆6x2.45KG
+WANG 韩国醋/箱*05611*
+Jello-S 草莓果冻 (12)
+Jello-o 柑果冻
+柠檬果冻
+青柠果冻
+葡萄果冻-12x1.5Lb/箱
+荔枝果冻 (12)
+芒果果冻-12x1.5Lb/箱
+牛油块30x1LB
+35LB 液体牛油(B83735-SC)
+液体牛油 2/17.5LB -83717-SC
+金芝士(Valley) LV
+金芝士(Smithfield)
+金芝士3LB x10 (Sunny Morning)
+金芝士(FFI)
+金芝士
+*ASSI* 布手套 30x10PC
+*ASSI* 咸虾酱 12x2.2LB
+*ASSI* 韓囯糯米粉10x4LB
+*ASSI* 韓囯濃縮白醋 9x1.8L
+*ASSI* 韓囯海鹽 (粗) 4x10LB
+*ASSI* 韓囯海鹽 (細) 20LB
+*ASSI* 韓囯玉米糖漿 2x22LB
+*ASSI* 韓囯急冻生蚝(10)
+*ASSI* 韩国黄豆大酱(桶) 37LB
+*ASSI* 韩国牛肉汤底料 (10)
+*ASSI* 花蛤汤粉 30x10.5OZ
+*ASSI* 韓囯红辣椒粉(细) (8)
+*ASSI*韓囯红辣椒粉KIMCHI(粗)
+*ASSI* 午餐肉 (24)
+*ASSI* 韓囯特大腌萝卜2.2LB /包
+*ASSI* 韓國素泡菜 14.01oz /罐
+*ASSI* 韓國养乐多 5x5(10.5oz) (4)
+*ASSI* 韓囯急冻生蚝 (40)
+日本关东煮炸鱼饼 24.2lb
+*ASSI* 韓囯急凍蔬菜餃子/箱
+*ASSI* 韓囯急凍蔬菜餃子/包(12)
+韩国玉米须茶 1.5L (12) PKG
+韩国芦荟饮料 1.5L (12) PKG
+*TOKAI* 日本泡菜 4.59oz (10)
+*ASSI* 年糕条2LB (20)
+*ASSI* 酥脆海苔卷 1.1lb (16)
+白胡椒粉(GEL)
+白胡椒粉(GEL)pkg (12)
+白胡椒粉(Gulf Pacific)
+白胡椒粉(E & B)
+白胡椒粉(T.I.S)-5LB/罐
+白胡椒粉(GEL)-1Lb/罐
+黑胡椒粉中粗(Gulf Pacific)
+黑胡椒粉 细(Imperial)
+黑胡椒粉粗(Chef Spice)
+白胡椒粉(厨之味)
+白胡椒粉(厨之味)-6x5LB/箱
+白胡椒粉(厨之味)
+OLD BAY 调味料 / 罐
+中粗黑胡椒粉
+中粗黑胡椒粉
+LOUIS 牛油蒜粉 / 罐
+LOUIS 特制海鲜粉 / 罐
+LOUIS 柠檬胡椒粉 / 罐
+黑胡椒粉-粗(Nature Pro)
+蒜头米
+蒜头米
+蒜头米
+蒜头粉 5LB
+蒜头粉
+蒜头粉
+蒜头粉(Gulf Pacific)
+大蒜片
+发粉(ClabberGirl)
+发粉(Rumford)/罐
+发粉(Rumford)
+苏打粉 清洁 (槌头)盒
+苏打粉食用(槌头)
+清洗用苏打粉(槌头)-12x2磅/箱
+红粉(GEL)
+红粉(Gulf Pacifc)
+红粉
+红粉
+高度辣椒粉
+马蹄粉
+马蹄粉-1Lb/盒
+加哩粉(印度)-16oz/瓶
+印度加哩粉(JAVIN-INDIA)
+印度加哩粉(JAVIN-Glass)
+咖喱粉(DEK)
+特级加哩粉(DEK)
+红加哩膏(Maesri)
+泰国紫加哩膏(Maesri)
+泰国绿加哩膏(Maesri)
+Prik Curry Paste-48罐 x4oz/箱
+泰国橙加哩膏(Maesri)
+泰国橙加哩膏(Maesri)24x14oz
+泰国Karee加哩膏(Maesri)
+泰国Prik Khing加哩膏(Maesri)
+*利川* 韩国顶级糯米 50LB
+*利川* 韓囯蓬萊米 40LB
+韩国新糖 10x40x2.11OZ
+*OPOWON* 韩国特级红辣椒粉 (20)
+*WAIWAI* 健力超级米粉 24x17.5OZ
+*WAIWAI* 健力超级米粉 包
+急冻蓝蟹 3/5
+香酸红葱片 8oz /罐
+辣奶油玫瑰炒年糕 14.11OZ (10)
+辣味炸鱿鱼 12.34oz/包 (12)
+韩国公魚干(3.3LB / 1.5KG) /包 (6)
+S-酱油包(华容)
+李錦記烧烤酱油 4x10.5LB
+李锦记日式猪骨浓汤 4x9.5LB
+李锦记锦珍酱油包
+S-酱油包(佳)
+S-无麸酱油包(佳)
+低盐酱油包李锦记
+Seasoned LKK Soy Sauce BOTTLE
+苏梅酱 (李锦记) 6罐/ 箱
+李锦记级纯麻油10
+李锦记麻辣酱 6can
+李锦记蒜蓉辣酱 6can
+李锦记辣豆瓣酱 6can
+万字酱油包
+低盐万字酱油包
+S-酱油包 (一品)
+D-酸梅包(华容)
+D-酸梅包(佳)
+D-酸梅包 (一品)
+M-芥辣包(华容)
+M-芥辣包(佳)
+M-芥辣包 (一品)
+H-S 辣椒包(华容)
+H-S 辣椒包 (佳)
+H-S包 -辣椒包 (一品)
+番茄酱包(Hunts)
+陈皮
+陈皮
+辣椒干(6)
+辣椒干(Gulf Pacific)
+四川花椒450g /包
+五香粉
+碎辣椒干
+花椒
+陈皮-12oz/包
+甘草-14oz/包
+黑豆豉
+辣椒干
+辣椒干 (6)
+花椒25x14oz/箱
+五香粉
+豆豉-40x14oz/箱
+珠江桥牌 阳江豆豉 400G /罐
+珠江桥牌 阳江豆豉 400G /罐
+八角
+陈皮
+碎辣椒干
+碎辣椒干
+木耳丝 (6)
+腐竹
+木耳(5LB) (6)
+木耳丝
+干香菇 (6-8)
+木耳(2.5oz) (100)
+雪耳-5oz/包
+金针菜-6oz/包
+腐竹/包(福建原枝竹)(30)
+腐竹
+腐竹 /包 (40-50)
+盐包
+特级乌龙茶（Five Star）/ 箱
+特级茉莉花茶（Five Star）/ 箱
+糖包 -2000包 /箱(Domino Sugar)
+减肥糖包
+胡椒包 -3000包 /箱
+它它包
+番茄包
+冰茶包
+乌龙茶包 (K)
+福建乌龙茶叶包
+好生意福建乌龙茶叶*20402G*
+福建乌龙茶叶-6x5Lb/箱
+乌龙茶叶-绿袋
+绿茶包(东之味）-7oz/盒
+泰国茶（Pantai）-16oz/ 包
+宁夏枸杞-包（24）
+特极汉源大红袍花椒 - 50g/ 包(10)
+草果-包
+香叶 -12oz/ 罐
+欧芹片 -12oz/ 罐
+大红袍花椒/ 包(10)
+肉桂皮 160g (50)
+雪燕-16oz/包
+蜜枣- 4540g/包
+复方板蓝根果粒
+念慈庵枇杷膏
+金丝红智神大红枣-500g/包
+夏骏枣-包(20)
+无沙紫菜 （汤臣）-包(24)
+甜酒酿(帝王牌)
+酒酿-瓶
+红曲-14oz/包
+红曲-50x14oz/箱
+上海酒并 14oz/包
+(徐福记） 酥心糖/包(20）
+(徐福记） 酥心糖 混合桶装(12）
+(徐福记)荔枝味利是糖扎花/包(20）
+(徐福记）牛扎糖 蓝草莓味/包(20）
+笋片(HiFood)
+笋片
+酸笋片(三象)-6x4lb/箱
+酸笋片(三象)-4lb/罐
+笋块
+笋块
+JNK 烟笋干14.01OZ /包 (30)
+笋丝(HiFood)
+笋丝
+笋丁
+笋尖
+小竹笋(爱杰鑫)- /箱
+小竹笋(爱杰鑫)- /罐
+清水马蹄片(Five Star) / 箱
+清水马蹄片
+清水马蹄丁(最好)
+马蹄丁
+草菇 6X5LB
+蘑菇片
+金针菇-24罐 /箱
+切断玉米(FiHood)
+切断玉米-极品
+整枝玉米250枝(极品)6罐
+300' 整枝玉米-极品
+150' 整枝玉米-极品
+整枝玉米250枝(李先生)6罐
+整枝玉米150枝(Vesin)
+切断玉米(五星)
+切断玉米(Duchess)
+3寸冻玉米段
+3寸冻玉米段 Jack&Kings
+七彩糯玉米(24)
+整支玉米300枝(FiHood )
+冻玉米粒
+整支玉米300枝(味全 )
+整枝玉米(极品）200枝*B010990*
+整枝玉米300枝
+整枝玉米200枝(Taste Joy)
+切断玉米-合时牌
+切断玉米-味全
+切断玉米-合时
+菠萝角(Global Pantry)
+菠萝角(极品)
+菠萝水(Dole-Juice)
+菠萝角(Chunk-Dole)
+菠萝角(HiFood)
+菠萝角(Del Monte)
+菠萝角(和乐)
+柠檬水(P)-4x1Gl/箱
+柠檬水-1Gl/罐
+椰子汁飲料(带果肉) 24X350ml
+石榴汁飲料24X350ml
+荔枝汁飲料24X350ml
+芒果百香果汁飲料24X350ml
+甘蔗汁飲料24X350ml
+罗望子汁飲料24X350ml
+椰子汁飲料 24X350ml
+椰子奶(Chef's Choice)
+椰子奶6x2900ml (Chaokoh)
+椰子奶(Chaokoh)
+椰子奶(CHEF CHOICE )24x13.5oz/箱
+椰子奶 (象阳)
+椰子奶(Maeploy)24x19oz/箱
+菠萝水(HiFood)
+菠萝水(DelMonte)
+菠萝水(Nature Pro)
+番茄酱(Emerald)
+番茄酱(HUNTS)
+番茄水
+番茄水（STAR CROSS)
+龙眼小罐- 24 罐
+糖水桃罐
+糖水桃罐 -6罐 /箱
+桔罐 (象王)-6罐 /箱
+整橘子罐头
+杂果罐(恒泰）
+综合水果罐
+梨罐 (恒泰)-6罐 /箱
+桃罐
+糖水桃罐
+橘子罐头(Five Star)
+橘子罐头(FiHood)
+香草布丁(Wis-Con)-6罐 /箱
+西米露布丁(Cafe Classics)-6罐 /箱
+香蕉布丁
+巧克力布(RealFresh)
+香蕉布丁(RealFresh)
+巧克力布丁
+带壳新鲜花生
+核桃花生-4.4LB/包
+中国大粒去皮花 -包
+宫保熟花生(象) 6x4LB
+新鲜带壳花生
+去皮花生 (6)
+大粒红皮花生5LB/袋
+腰果
+腰果(W320)
+白芝麻
+熟芝麻 10x2.2LB / 箱
+烤芝麻(Sakura)-5Lb/包
+绿豆-14oz/包
+黄豆-5LB/包
+红豆-50 LB /包
+红豆-5 LB /包
+薏米 30oz/包
+有机小米
+甘草(黑)瓜子
+甘草(黑)瓜子
+VFF182 保鲜纸 18寸VINTAGE
+12寸保鲜纸910 *VFF122*
+914保鲜纸18寸
+916保鲜纸24寸
+VFF242 保鲜纸 24寸 VINTAGE
+VFF242 保鲜纸 24寸 VINTAGE
+916 保鲜纸 24寸x2000'
+916 保鲜纸24寸Revolution
+614 锡纸-18寸
+捆纸-个
+透明胶布-箱
+短纸巾 (LFN631)
+短纸巾(633-N1100)
+TFN-611长纸巾
+611长纸巾(Novex N1000)
+佳乐长纸巾-DN611-Tall
+堂吃纸巾1717 Morsoft-单张-17x17
+堂吃纸巾双层(Novex 5281 N1500)
+玫瑰纸巾 1000PC /箱
+DN128-15x17双层堂吃纸巾
+桌面抽纸(Novex)
+桌面抽纸(4250VN)
+桌面抽纸(Novex N3000)
+桌面抽纸
+桌面抽纸(Zhongmei)
+桌面抽纸VALAY)6000/箱
+桌面抽纸
+擦手纸(410136)
+擦手纸kleen Line 855305 (3085_
+(棕色)机装抹手纸
+棕色机装抹手纸78000002 RC
+白色抹手纸
+棕色机装抹手纸J4700 Novex
+机装厕所纸 J4800 Novex
+厕所纸
+厕所纸袋
+129X Morsoft White Jumbo Bath Tissue 12 rolls
+机装厕所纸78000037 RC
+开单簿
+12生肖纸
+收银纸50卷(CashierPaper)
+2 # 纸袋
+2 # 纸袋
+4 # 纸袋 厚
+厚# 4 纸袋
+6#纸袋 -500/包
+厚# 6 纸袋
+8# 纸袋
+8 # 纸袋
+#10 纸袋
+12 # 纸袋
+#12 纸袋
+16 # 纸袋
+#16 纸袋
+20 # 纸袋(袋装）
+25# 纸袋
+25# Brown Bag 500 CT
+#20 纸袋 400 CT (70221)
+20 # 纸袋(箱装)
+1/8 # 57 纸袋
+1/8 # 57 纸袋(箱装)
+57 # 1/6 纸袋
+57 # 1/6 纸袋(箱装)
+小纸抽(手提纸袋)10x5.5x13
+大抽-250/包 13L7W17H
+1/2 磅春卷袋(佳利)(12)
+1/2 磅春卷袋(佳利)(12)
+1/2春卷袋 (一品)-1000/盒
+1 磅春卷袋(佳利)(8)
+1LB 春卷袋(佳利)
+1LB春卷袋 (一品)-1000/盒
+2 磅春卷袋 (佳利) (6)
+2 磅春卷袋 (佳利)
+2LB春卷袋 (一品)-1000/盒
+2LB春卷袋 (一品)-6盒 /箱
+3 磅春卷袋 (佳利)
+4 磅春卷袋 (佳利)
+小排骨袋(Foli-Pint 佳)
+大排骨袋(Foli-Quart 佳)
+手提纸袋 K (大) 13L7W17H
+手提纸袋 K (特大) 18L7W18.5H
+白小胶袋 1/8
+白透明膠袋 10x8x24 (W/HOLES) Plastic Bag
+HD 1/8 白小胶袋
+1/6 白大胶袋
+小库白大胶袋
+HD 1/6 白大胶袋
+防雾大号菜袋（290*440*30）
+#18 手抓海鮮熟食袋 (18x24)
+老外46垃圾袋 白色
+垃圾袋 60Gal
+老外黑垃圾袋*EF*
+白透明膠袋
+春卷码袋
+白透明膠袋
+白透明膠袋
+白透明膠袋-大
+白透明膠袋(8x4x18-1.01M)
+白透明膠袋
+大白透明膠袋(10x8x24)
+白透明膠袋(8x4x18)
+2oz芥辣杯PP
+2oz芥辣盖62MM
+2oz芥辣杯(ITEM# TS02SC)
+2oz芥辣盖(ITEM# TS02SCL)
+2oz Cups 芥辣杯(Fabri Kal)
+2oz Lids 芥辣盖(Fabri Kal)
+2oz 芥辣 杯(Souffle)
+2oz 芥辣盖(Souffle)
+2oz 芥辣杯(Item#TS02SC)
+2oz 芥辣盖(Item#TS02SCL)
+4oz Cups芥辣杯(Fabri Kal)
+4oz Lids芥辣盖(Fabri Kal)
+4oz芥辣杯(Item#TS04SC)
+4oz芥辣盖(Item#TS325/04SCL)
+4oz芥辣盖-(Portion)-2500/箱
+6JL盖-1000/箱 ~(配4oz汤杯)Dart
+4oz Cups芥辣杯(ASB400)
+4oz Lids芥辣盖(ASL4/5)
+4oz芥辣杯(KC004SC)
+4oz芥辣盖 (KC325/4SCL)
+1oz芥辣杯 (KC001SC)
+1oz芥辣杯盖 (KC001SCL)
+8oz 白水杯 Dart Cups
+8oz 汤杯 Dart (8SJ20)
+8oz盖Dart 8JL/8SL（配8oz水杯）
+20JL盖-1000/箱(配8OZ 汤杯) Dart
+12oz 白水杯(12J16)*Dart*
+12oz 白汤杯(12SJ20)*Dart*
+16SL盖Dart (配12oz/16oz水杯)
+16oz水杯盖*Dart*(配12/16/20oz水杯)
+16oz Cups 白水杯REYMA
+4 口杯托 300' / 箱
+16oz 白水杯(16J16)*Dart*
+16oz 白水杯(Dart 16MJ20)
+20oz 白水杯(20J16)*Dart*
+24oz 白水杯(24J16)*Dart*
+20oz 白水杯(20B16)*Dart*
+20RL盖Dart 500' / 箱
+32SL1盖-500/箱 ~(配32oz白水杯)
+32 oz 白水杯(32TJ32)*Dart*
+12JL盖-1000/箱 ~(配6oz汤杯)Foam
+527锡盘(中美)
+7089 (中美)锡盘
+758 (中美)锡盘
+527盖(中美)
+LD 23 705 净盖
+70892 锡盘盖 (中美)
+2062DL盖(7089老外HFA)-500/箱
+#2S泡沫盘 4/125
+#4S泡沫盘
+#17S泡沫盘
+圆(白底)W7-23 W.Y. 23oz 150'
+圆W7-23黑底胶盒(WY)
+圆7“ 黑底胶盒(K)7-22/24
+圆C7-21/23 黑底胶盒
+圆C7-21/23 白底胶盒
+圆FH-23B黑底胶盒 -150/CS箱
+圆W7-29黑底胶盒(华容)
+圆7"黑底胶盒(K) 7-28/30(Kari-Out)
+圆C7-29 白底胶盒 (WY)
+圆C7-29黑底胶盒
+方椭圆86-30白底胶盒
+方椭圆86-23白底胶盒
+方椭圆RF-8630 黑底胶盒30oz / 箱
+方椭圆86-30黑底胶盒30oz
+方椭圆86-23黑底胶盒
+方椭圆86-28白底胶盒
+方椭圆86-28(#8628) 黑底胶盒
+方椭圆9625白底胶盒
+方椭圆9635白底胶盒
+方椭圆9625-B黑底胶盒
+方椭圆9635-B黑底胶盒
+8623/26 方椭圆黑底胶盒 (K)
+8628/30 方椭圆黑底胶盒 (K)
+PP 206 胶盒
+小库-FH-78W-白(86-30)-150/箱
+FH-78B 黑底胶盒(86-30)
+小库-FH-78B-黑(86-30)-150/箱
+FH-18W-白(618)/16oz-150/箱
+小库-FH-68B(86-23)-黑底胶盒 -150/CS箱
+小库-FH-68W(86-23)-白底胶盒 -150/CS箱
+FH-68B (86-23) 黑底胶盒
+方二隔96-32黑底胶盒 (9"x6")32oz-150/箱
+*JN* 8oz 胶汤盒特小
+*JN* 32oz胶汤盒大QT
+方二隔82-28黑底胶盒
+圆C6-18黑底胶盒16oz-150
+圆C6-18 白底胶盒
+两格方椭圆(K)黑底胶盒
+M205浅白(DARNEL)
+205 (33-02205)-200/ Foam Container KARI OUT
+205 白一格盒
+20500白(GENPAK)-200/箱
+206 浅花一隔盒(熊猫)
+206-1浅花一隔盒(福)
+*206白一隔盒(熊猫K3302206)
+206浅白泡沫盒(DARNEL)
+20600白(GENPAK)-200/箱
+白圆盘-泡沫(9PWQR)
+206 大三明治盒(泡沫)200'
+206 白高盒(Ceres)
+22500 大三明治盒(Genpak)
+225 三明治盒-大500'
+SN203大三隔盒(GENPAK)
+241 三隔盒(ECOPAX) 8X7X3（中）200/箱
+7.88x8x2.75 3 Comp Hinge Cont PP241 150CT
+71426 三隔盒 (satinware) 9.25X9.25X3-200/箱
+71433 三隔盒 (satinware) 8x8x3-200/箱
+22310小三格泡沫盒-(熊猫)
+SN243 中三隔盒(Genpak)
+900053三隔盒 8.25x8X3(GENPAK)中-200/箱
+SN240无隔泡沫方盒(GENPAK)
+SN200无隔泡沫方盒 9.25x9.25X3(GENPAK)
+中三隔泡沫盒(佳和900053)
+大三隔泡沫盒(佳和900054)
+S-1无隔盒(DU4061101)
+Q-1 中单格盒子(8x8x3)
+PP883S (Ecopax)1-CompFormTray 8x8x3 IVORY
+RE883中三隔泡沫盒(Ecopax/200')
+PP883 中三隔盒(ECOPAX) 8x8x3
+RE883S一隔盒（Ecopax/200')
+Q-1无隔盒 白-(DU4051101)8-1/8x8-1/8x3 Darnel-200/箱
+S-3三隔盒(DU4063101)
+小三格泡沫盒(C707)
+RE993大三隔泡沫盒(Ecopax/200')
+PP99 3大三隔微波盒 150'
+PP993S 1-CompFoamTray 9.125x8.81 IVORY
+RE993S 1 COMP Ecopax/200')
+Q-3 中白三隔泡沫盒
+22310 小三隔盒(Ecopax)
+703 小三格盒(Pactiv)
+803三格盒-150
+903 三格盒
+23300 中三隔盒(Lucky)
+23300 中三隔盒(ECOPAX)
+8-7/8"纸盘
+AP9125 (ECOPAX)-500 FOAM PLATES
+8oz 饭盒PT白(GW)
+8oz (白)饭盒(PacForce)
+8oz 饭盒 PT白(20010)
+8oz 饭盒 (D&M) 无铁丝
+PR-8 8oz (花)饭盒(PacForce)
+8oz 胶汤盒特小 (QH)
+8oz 胶汤盒特小 (华容)
+8oz 胶汤盒特小(FH)
+PR-16饭花PT(GW)-500/CS箱
+16oz 胶汤盒小PT (QH)
+16oz饭盒-花(福) 470463
+16oz饭盒(PacForce)
+16oz 饭盒-白(PacForce)
+16oz胶汤盒小PT(华容)
+*JN* 16oz胶汤盒小 *JN*
+16oz 胶汤盒小(FH-16)
+16oz 饭盒-白*华容*(G06)
+16oz 胶汤盒小PT(GC)
+26饭PT花(福) / 箱470470
+26饭QT(GW)花-500/箱
+PR-26饭QT花(PacForce)
+PR-26 (棕)饭盒QT(PacForce)-500/箱
+26oz (塔)白饭盒(华容)
+24胶(华)-240/箱
+中国24胶杯-240/箱
+32饭QT(华)-500/箱
+32oz (花)饭盒(QW)-500个/箱
+Printed 32饭(花)-500/箱
+32oz (花)饭盒(PacForce)-500个/箱
+PR-32饭PT(PacForce)/包SLEEVE Food Pail
+32oz胶汤盒大QT(华容)
+32胶PT(QH)-240/箱
+FH 32oz胶汤盒大QT
+30oz黑胶汤碗+盖(K)-150套/箱
+32oz (花)无铁饭盒(QH)-500个/ 箱
+32oz Pt 花(福)饭盒-500个/箱
+白胶叉(A202F-40CI)
+白胶叉
+胶叉(Dart)
+胶叉 (W.Y)
+胶叉(SouthEasten)
+白胶叉(佳乐)
+刀叉羹盐椒纸-白(独立包装)
+刀叉羹 - 白500 (独立包装)
+独立包 装 黑大胶叉(KC-950）
+独立包 装 黑大胶更(KC-950）
+独立包装硬胶叉
+**白胶叉**
+汤羹*KC25926-S*
+中量胶叉1000' *KC-25926F*
+胶更
+胶更 (W.Y)
+胶更(白)
+胶更(佳乐)
+胶刀-1000/盒
+独立包 装 胶更(KC-925SP)PP1000
+A204S PLASTIC SPOON 1000 WHITE
+胶刀(佳乐)
+胶刀(Dart)
+中量独立包装胶叉(KC-925F)
+硬/独立包装胶叉/白(KC50950F)
+独立包装胶汤羹(KC25925-S)
+牙签-(24小盒)
+牙签-(5合)/大箱
+6寸竹签(RONSONWOOD) (100支x100包)
+8寸竹签(RONSONWOOD)100 (20)
+6寸竹签（RONSONWOOD)100
+8寸竹签(佳乐20)
+****
+FiHood 吸管-24盒 7 3/4'
+7 3/4'吸管独立包装
+红封单支竹筷(RANSON & KC)
+红筷(恒泰)-箱
+双生红封套筷
+红套园筷/箱
+7 3/4' 纸吸管(Kari-Out)
+大三元 米
+大三元米100磅
+马丁米
+米(皇上皇)-100lb/包
+香米皇上皇50LB
+皇上皇上等苗米 - 50磅
+有机小米-14oz/包
+米王香米
+泰国香米-50LB
+东方花茉莉香米
+皇上皇香米
+泰国原生态茉莉香米
+八象香米
+福泰香米-44LB/包
+恒泰顶级泰国茉莉香米
+绿象茉莉香米 - 50LB
+雨字香米(Kouu )
+黄国宝米(中粒)
+黄国宝米(中粒)-15LB
+红国宝米(中粒)-40LB
+日本锦米(A)中粒
+富贵花锦米(A-)中粒-50LB
+富田锦米蓝袋 (B)短圆-50LB
+御膳寿司米中(HAO-Gozen)
+御膳寿司米中粒(Gozen)
+寿司米(Chikara)
+寿司米雨字(Kouu Cairose)
+玄米(富田)-50LB
+日本寿司短锦米(福之米） - 40LB
+圆糯米(Harvest)-8x5lbLB/袋
+长糯米(绿象)-50LB/袋
+糯米(玫瑰花)
+黑糯米 (米·王）/ 包· （10）
+圓糯米
+长糯米(Martin)-25LB/袋
+圓糯米(上選)-8x5LB/袋
+圓糯米(8)
+糙米(Gulf Pacific)
+富田米Brown Rice / 50LB
+糯米(雨)
+A 胶油
+SuperA油-35LB
+豆油(Oasis AAK)
+豆油(龙师傅)
+**
+C油 - 炸油 CMC
+炸油 Creamy-OASIS
+菜籽油(超级师傅)
+金龙炸油-35LB/桶
+黄箱炸油(Shortening)-35磅
+乳状炸油-35磅
+CMC炸油
+辣油 (S&B) /箱
+孜然粉-包
+孜然粒16x1LB/箱
+孜然粒-1LB/包
+花椒油 2.5L / 瓶
+猪油 膏(Butch Boy)
+五星面粉
+面粉(ADM)
+面粉(HUNSTY)-50LB Flour
+澄面粉-凤车牌
+玫瑰牌面粉 / 包
+生粉(Torino)
+生粉
+K 超级生粉熊猫(Panda)
+超级生粉-金马车
+小库中粗面包 粉--Janpanese
+中粗面包粉
+粗面包粉
+细面包 粉-25LB/包JAPANESE
+韩国面粉6x5.5LB
+韩国面粉(CJ)
+风车超级生粉(Windmill)
+@@面粉-(NorthDakota)-50LB/包
+菱粉(三鹿牌)-14oz/包
+菱粉(绿象) 1LB (24)
+菱粉
+玉米生粉(ROYAL)-50LB
+生粉 (Ingredion)
+ADM玉米生粉-50LB
+皇家四星特级面粉-50LB
+(味全）香菇菜包
+江门排粉(Elite)/箱
+江门(合燕/五星)米粉
+江门米粉
+江门双燕米粉
+米粉(新鲜农夫家乡) 30x2lb
+米粉(新鲜农夫家乡) 2lb 包
+江门米粉(恒泰KM)
+肇庆米(排)粉/箱
+肇庆排粉(双福燕牌)
+肇庆米粉(恒泰)-60包 /箱
+新竹米粉
+新竹米粉(佛祖牌)-14oz /包
+山东拉面 / 盒
+新竹米粉(金之味)-300x30 /箱
+手擀面(精华)- 400g /包 （20)
+阳春面(精华)- 400g /包 （20)
+蛋面(精华)- 400g /包 （20)
+鲜拉面(精华)- 400g /包 （20)
+闽粉燕(榕知味)-750gx18 /箱
+闽粉燕(榕知味)-(18)
+手工米粉燕 - 2.5Kg x 6 /箱
+糯米粉(三象牌)1LBx24/箱
+糯米粉(三象牌)包(24)
+24X1 RICE POWDER
+粘米粉(三象牌)1LBx24/箱
+粘米粉(三象牌)包(24)
+蛎饼粉-270g/包
+沙河粉(三象)(M)/包
+线面/盒
+江西米粉(翠林)
+江西米粉(翠林)-300gm/包
+粉干(桐口)Thick
+沙河粉-中(三象)
+粉干(桐口)Thick/包
+龙口粉丝-大包(SuperChef)(50)
+龙口粉丝小包-百合(50)
+沙河粉-特大(三象)
+沙河粉(Chef"s Choice)10mm(XL)Rice Stick-30x12oz/箱
+沙河粉(Chef's Choice)
+江西濑粉(翠林)XL-60x300GM/箱
+长乐粉干
+锅边糊片（独稻 (12)
+锅边糊片（独稻 ）/ 箱
+红薯粉丝 (7)
+韩国红薯粉丝
+螺蛳粉(柳州)经典(30)
+(今麦郎) 韩式拉面 无调味料 (6)
+农心辛辣面
+农心黑玉豚骨拉面 (6)
+农心辛辣面/箱
+韩国超辣鸡肉味拌面
+沙县伴面
+白家方便粉丝（综合装5包）/
+统一红烧牛肉面24x125g/箱
+刀削面(精华)- 400g /包 （20)
+五木山东拉面(细)
+统一清炖排骨面-箱
+统一老坛酸菜牛肉面 24包 x125g/箱
+林氏福州手拉面线- 908g x 10 / 箱
+好欢螺螺蛳粉-包
+红薯细粉（OCM) -包 (40)
+韩国红薯粉丝-包 (7)
+锅边糊(独稻)-68g/碗 (12)
+龙口粉丝(双塔)-24x500g/箱
+鱼面-220g/包
+连江鱼面-200g/包
+美洲蛋面(橙黄色)
+金碗蛋面(细)大黄色
+美洲蛋面(美)包
+(新鲜)美洲蛋面(橙黄色)
+粗蛋面 (环球)
+粗干面(新興)
+武汉热干面- 包(20）
+重庆小面- 包(20）
+广东圆干面-细(大升)
+广东扁干面(大升)20LB/箱
+广东圆干面(大昇-粗)
+细蛋面(美洲)-橙黄色
+美洲细蛋面 - 30磅 / 箱
+新世纪蛋面
+面(金厨)-细/磅
+(真味)上海幼面 (50)
+(真味)粗全蛋雲吞麵 (45)
+全蛋捞面-粗(百利)
+条形意大利面(114411)Spaghetti-2x10Lb/箱
+金碗蛋面(粗)大黄色
+面(金厨)-粗/磅
+港式炒面(真味)
+全蛋捞面(大升)粗30Lb/箱
+全蛋捞面(大升)细Thin30Lb/箱
+真味雲吞幼麵(细) (45)
+细鲜蛋面- 精华
+鲜蛋面(精华)
+(五木)台湾油面 12x4LB
+(五木)台湾油面 4LB 包
+美洲春卷皮(薄)7 寸
+美洲薄皮(包)
+美洲春卷皮(厚)
+(新鲜)美洲春卷皮(薄)7 寸
+美洲春卷皮6 寸
+美洲春卷皮6 寸包
+(新鲜)美洲春卷皮(厚)
+7X7春卷皮(大升)Dah SingEgg Roll Skin30LB/箱
+7x7 春卷皮(薄) (金碗) / 箱
+春卷皮7寸(百利)-30LB/箱
+鲜6x6皮(精华)
+鲜7x7皮(精华)
+美洲云吞皮
+美洲云吞皮(包) 5LB
+云皮(大升)8粒/箱
+金碗(西)云吞皮
+****
+云皮普通(百利)
+(真味)上海云吞皮-45LB/箱
+(真味)上海云吞皮-1LB/包
+4x4厚云皮(百利)-30LB/箱
+厚云吞皮(精华)3.25x3.25-40Lb/箱
+鲜薄4x4云皮(精华)-40Lb/箱
+鲜厚4x4云皮(精华)-40LB/箱
+云皮(美味)
+美洲玻璃云吞皮
+玻璃云吞皮(西)-云吞食品
+(真味)上海式水饺皮
+(真味)上海式水饺皮-1LB (45)
+长冠 烧卖 皮
+(真味)港式水饺皮-16oz (45)
+长冠春卷皮
+H.K Style 云吞皮 PKG
+长冠云吞皮
+长冠蛋面
+长冠蛋面
+(真味) 上海水饺皮-14oz / 包 （16）
+长冠大生面
+长冠大生面 20lb
+长冠银丝蛋面DISCONTINUED
+长冠玻璃云吞皮
+长冠 水饺皮
+长冠 水饺皮
+长冠上海面
+(真味)北方水饺皮- (45)
+长冠烧卖皮
+新鲜越南河粉
+新鲜越南河粉
+新鲜越南河粉包
+新鲜泰国细面(Sincere Orient)
+越南细蛋面(黄)
+泰国粗面(BananaBox)
+泰国粗面
+新鲜越南河粉
+乌冬（红） 40磅/箱
+乌冬面(兰)
+越南细蛋面(黄)
+第一家上海春卷皮
+第一家上海春卷皮/包
+美极鲜酱油(大) 6x27oz /箱
+*3-55602* 味全大号虾米 3.5oz /包
+*1-15350* 味全咸酸菜 (36)
+*1-82213* 味全香菇肉燥饭 12.5oz/包 (12)
+(味全）*1-12066* 椰子水 24x500ml
+美极鲜酱油(小） 6.7oz/瓶 (24)
+*1-46334* 味全紫菜虾米饭团 6PC/包 (16)
+味全上海春卷皮
+味全上海春卷皮包
+味全润饼皮
+*1-53017* 味全葱香大饼 330g/包 (12)
+*1-53018* 味全黑胡椒大饼 330g/包 (12)
+*2-60060* 味全BBQ鸡肉包 25个/包 (4)
+统一台肉燥米粉30包 /箱
+*1-54030* 味全养乐多5x10/包
+*1-46328* 味全荷叶糯米饭 4PC/包 (16)
+*1-82200* 味全牛丼饭 10.7oz/包 (12)
+味全木须皮
+味全木须皮 WC Moo Shu Skin-12PC/包
+(味全）香菇菜包 6个x20/箱
+(味全）香菇菜包*1-46312* PKG
+五芳齋 粽 / 箱
+2oz鸡肉春卷(永利) 120PC
+3oz鸡肉春卷(永利)
+2oz猪肉春卷(永利)
+2oz鸡肉春卷(亚辉)-120条/箱
+3oz鸡肉春卷(亚辉)
+*1-82207* 味全咖喱鸡肉饭 12.7oz/包 (12)
+3oz猪肉春卷(百利)
+(百利)2oz猪肉春卷
+3oz猪肉春卷(永利)
+3oz猪肉春卷(佳盈)-13.50lb/箱
+春卷(亚辉)
+3oz猪肉春卷(佳盈)-13.50lb/箱
+3oz鸡肉春卷(百利)
+春卷(亚辉)3oz-18LB/箱
+金碗-(上海春卷皮)25/40/箱
+3oz鸡肉春卷(佳盈)
+Moo Shu Skin *GB*
+3oz Philly Rollz 卷(The Gourment)-11.25lb/箱
+2oz菜卷(百利)
+响铃卷- 包 （24）
+薄百页 227g (48)
+米纸 （园 25 CM）/ 箱
+签语饼(金碗)
+签语饼(永发)-Winfar
+金碗面干10lb bulk
+杏仁饼(双龙) 圆桶
+馬玉山輕烤穀脆 (20)
+签语饼 (玫瑰)
+金碗幼圆炸面干 80 bags
+干面(精华)-中号(M)-8x5Lb/箱
+干面(精华)-小号( s)-8x5Lb/箱
+*
+***
+春卷码-10磅
+白扁广东干面(百利)-中号-30LB/箱
+白扁广东干面(百利)-小号-30LB/箱
+*****
+砚粉(白纸箱装)
+砚粉-粉红桶装
+LYE (12罐)
+漂白水
+洗洁精(绿)
+强力炉头水
+洗洁精(粉红)
+玻璃清洁剂
+炉头土(桶 )
+抗疫双煞(杀菌洗手液x2+酒精x2)/箱
+地拖布(块)(12)
+地拖布(箱)
+洗锅刷带把
+洗锅刷带把
+炉头刷
+炉头刷
+炉头柄(把)Deck
+厨帽Chef"s Hat(100pcs)/盒
+*****
+超强钢丝刷(Kari-Out)/盒(6)
+铁丝刷10x10pc/盒 / 箱
+铁丝刷 (6)
+超强钢丝刷 (6)
+50LB油格-个
+福-挂历
+12X12X18 CARTON
+胶手套 L
+胶手套XL
+胶手套 M
+胶手套 M
+胶手套 L
+胶手套 XL
+胶手套 M
+胶手套 L
+胶手套 XL
+小推车
+一次性口罩-50/合
+日本寿司手套(M)铁人-100支/合(40)
+手抓海鲜手套RH922(L)-10x100/箱
+3oz蔬菜春卷(永利)-13.5LB/箱
+A-01 上海素春卷-新时代
+花卷(B-02)25个x12包 /箱
+寿桃包 (B-04) 23.2gx35个X6包 /箱
+奶黄包(B-07)
+B-07 奶黄包(6)
+味全猪肉鲜虾烧卖(12)
+味全港式虾云吞
+奇美刈包冷冻/包 (20)
+小河叶包 / 箱
+****
+D-09 鮮蝦餃-新食代
+D-09 鮮蝦餃-新食代 PKG (8)
+味全鮮蝦餃
+味全芋头糕(12)
+味全箩卜糕 (12)
+炸包
+烤面包
+B-14 小馒头 ACC (6)
+B-02 花卷 ACC (12)
+芋蓉包(B-08)
+B-08 芋蓉包ACC (6)
+小馒头(B-14) 20gX30个X6包 /箱
+冬菇香葱包 / 包
+第一食品 上海素春卷 200PC
+红豆包
+B-03 红豆包 ACC (6)
+大荷叶包
+味全笋丁肉包
+E06 蛋挞 F4L5B
+E-06 蛋挞 ACC (10)
+B-04 寿桃包 F4L9B
+B-04 寿桃包 包F4L9B
+F-08 糯米鸡 (6)
+蟹粉小龙包 （10）
+生煎包 (20)
+味全港式叉烧包(10)
+味全笋丁肉包 (10)
+味全叉烧包
+油条(真味)
+真味油条(20)
+油条-精华(10)
+大油条 (Fi Hood) (12)
+金康上海素春卷 400PC
+金康上海素春卷 200PC
+上海素春卷(味全)
+第一食品 上海素春卷 400PC
+E-03 炸芝麻球/袋 ACC (10)
+油条(康师傅)
+油条(康师傅)
+印度煎饼-24包 /cs箱
+印度煎饼-5Pcs/包
+冷冻虾仁肠粉1.45lb /包
+蟹粉小笼汤包 (嘉嘉)-20oz/包
+葱油饼/包(20)
+葱油饼/箱(Little Alley)
+義美香酥葱油饼- 包(IMEI) (18)
+A-11T 南翔小龙包 ACC (24)
+南翔小龙包 (10)
+思念大汤圆-醇香黑芝麻-16oz/袋
+韩国奶油包 -2.46oz/包
+奇美豆沙包 / 包
+思念猪猪包 (蜜香红豆)-300G/包
+葱油花卷-300g/袋
+点心排骨(小美点) (16)
+水晶虾饺(小美点) (16）
+豉汁凤爪(小美点) (16)
+虾&猪肉烧卖(Shumai)(小美点)(16)
+菜肉包(小美点) (10)
+糯米鸡(小美点) (16)
+咖喱鸡包(小美点) (10)
+黑糖流沙包(小美点) (10)
+港式叉烧包(小美点) (10)
+A8 蛋糕/奶油蛋卷
+A8 - 蛋糕/ 奶油蛋卷
+AA -蛋糕/虎皮蛋卷
+AA -蛋糕/虎皮蛋卷
+AS 蛋糕/草莓蛋卷
+AB 小松糕 ACC
+AJ蛋糕/朱古力
+Q8-蛋糕/咖啡
+10 Oreo 饼干巧克力蛋糕
+C蛋糕/椰丝慕思
+C 椰丝蛋糕
+D8-蛋糕/草莓
+G8 蛋糕/核桃红萝卜
+G8-蛋糕/核桃红萝卜
+H 蛋糕/椰丝
+J 黑森林蛋糕
+J8-蛋糕/黑森林
+T蛋糕/幻彩朱古力
+B蛋糕/千层酥
+P 蛋糕-蝴蝶酥
+NP 蛋糕/拿破论蛋糕
+P 蝴蝶酥
+U蛋糕-牛油酥
+V 蛋糕/椰蓉酥(椰堆)
+***
+Y蛋糕/迷你小圈圈
+PS 开口巴夫
+M 园巴夫
+O 长泡芙
+PS 蛋糕/ 草莓开口巴夫
+PS8-蛋糕/开口巴夫
+W蛋糕/芒果慕思
+W8蛋糕/芒果慕思
+L 咖啡慕思蛋糕
+L 蛋糕/咖啡慕思
+L8 蛋糕/咖啡慕思
+K 蛋糕/红莓慕思
+K 红草莓慕思蛋糕
+8 菠萝蛋糕
+3 草莓幕斯蛋糕
+4 薄荷幕斯蛋糕
+5 巧克力幕斯蛋糕
+D8 草莓蛋糕
+EA - 蛋挞皮3.5 寸
+10-奥力奥饼干蛋糕
+33-蛋糕/原味芝士
+31-蛋糕/黄油挞
+32-蛋糕/苹果芝士
+半熟芝士蛋糕（华美）(12)
+义美巧克力蛋糕
+11-圆芝士蛋糕
+CD8 圆芝士蛋糕
+****
+白糖桂花糕 (12)
+南瓜饼 JNK (16)
+金丝榴莲酥
+中国花蛤-(M)/包
+上海菜-(M)
+白萝卜-(M)
+中国芥兰菜-(M)
+猪脚-(M)
+冻鸭
+特价包子*ACC*
+**GIFT**四喜月饼
+鸡腿40磅/箱
+*方-Excel鲜牛-19341 *EF*
+牛胸 Pectoral *EF*
+牛肉眼Excel(17125)- *EF*
+面包(综合)BENIE /袋
+ 挂历
+补差价
+特价商品
+

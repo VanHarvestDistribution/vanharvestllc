@@ -8,12 +8,14 @@ interface Props {
   description: string;
   active?: string;
   ogImage?: string;
+  jsonLd?: Record<string, unknown>;
+  lang?: 'en' | 'zh';
 }
 
-const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png' } = Astro.props;
+const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png', jsonLd, lang = 'en' } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,6 +34,7 @@ const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png'
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <title>{title}</title>
   </head>
   <body class:list={{ 'inner-page': active !== '/' }}>

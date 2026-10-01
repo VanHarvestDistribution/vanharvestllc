@@ -1,0 +1,8 @@
+---
+import LocalizedProductDetail from '@/components/LocalizedProductDetail.astro';
+import products from '@/data/products.json';
+import { categories } from '@/data/site';
+export function getStaticPaths(){ return categories.map((category) => ({ params: { category: category.key }, props: { category } })); }
+const { category } = Astro.props;
+---
+<LocalizedProductDetail product={{ id: 'category', name: category.name, nameZh: '', category: category.key, storage: 'dry', packSize: '' }} category={category} lang="en" />

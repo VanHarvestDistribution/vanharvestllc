@@ -1,19 +1,19 @@
 ---
 const departments = [
-  { value: 'sales', label: 'Sales', copy: 'Product and account inquiries', email: '' },
-  { value: 'customer-service', label: 'Customer Service', copy: 'Current order and service questions', email: '' },
-  { value: 'purchasing', label: 'Purchasing', copy: 'Vendor and product conversations', email: '' },
-  { value: 'hr', label: 'Human Resources', copy: 'Employment and workplace inquiries', email: '' }
+  { value: 'sales', label: 'Sales / 销售', copy: 'Product and account inquiries / 产品与开户咨询' },
+  { value: 'customer-service', label: 'Customer Service / 客服', copy: 'Current order and service questions / 订单与服务问题' },
+  { value: 'purchasing', label: 'Purchasing / 采购', copy: 'Vendor and product conversations / 供应商与产品沟通' },
+  { value: 'hr', label: 'Human Resources / 人事', copy: 'Employment and workplace inquiries / 招聘与工作咨询' }
 ];
 ---
 <div class="department-form-wrap">
-  <div class="form-heading"><p class="eyebrow">Send a message</p><h3>Tell us how<br /><em>we can help.</em></h3><p>Choose the team that should receive your request. Department email routing is ready to connect when the dedicated addresses are confirmed.</p></div>
+  <div class="form-heading"><p class="eyebrow">Send / 发送</p><h3>Tell us how<br /><em>we can help.</em></h3><p>Choose a department. Your message will be addressed to the Van Harvest office mailbox.</p></div>
   <form class="department-form" data-department-form>
-    <label><span>Department</span><select name="department" required>{departments.map((department) => <option value={department.value} data-email={department.email}>{department.label}</option>)}</select></label>
-    <div class="form-grid"><label><span>Your name</span><input name="name" autocomplete="name" required /></label><label><span>Company</span><input name="company" autocomplete="organization" /></label></div>
-    <div class="form-grid"><label><span>Email</span><input type="email" name="email" autocomplete="email" required /></label><label><span>Phone</span><input type="tel" name="phone" autocomplete="tel" /></label></div>
-    <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-    <div class="form-actions"><button class="button" type="submit">Prepare message →</button><span class="form-status" data-form-status aria-live="polite"></span></div>
+    <label><span>Department / 部门</span><select name="department" required>{departments.map((department) => <option value={department.value}>{department.label}</option>)}</select></label>
+    <div class="form-grid"><label><span>Your name / 姓名</span><input name="name" autocomplete="name" required /></label><label><span>Company / 公司</span><input name="company" autocomplete="organization" /></label></div>
+    <div class="form-grid"><label><span>Email / 邮箱</span><input type="email" name="email" autocomplete="email" required /></label><label><span>Phone / 电话</span><input type="tel" name="phone" autocomplete="tel" /></label></div>
+    <label><span>Message / 留言</span><textarea name="message" rows="5" required></textarea></label>
+    <div class="form-actions"><button class="button" type="submit">Send / 发送 →</button><span class="form-status" data-form-status aria-live="polite"></span></div>
   </form>
 </div>
 <script is:inline>
@@ -24,16 +24,10 @@ const departments = [
       const form = event.currentTarget;
       const data = new FormData(form);
       const option = form.querySelector('option:checked');
-      const mailbox = option?.dataset.email || '';
-      const status = form.querySelector('[data-form-status]');
+      const mailbox = 'vanharvestoffice2019@gmail.com';
       const department = option?.textContent?.trim() || 'the team';
       const subject = `${department} inquiry from ${data.get('name')}`;
       const body = [`Name: ${data.get('name')}`, `Company: ${data.get('company') || 'Not provided'}`, `Email: ${data.get('email')}`, `Phone: ${data.get('phone') || 'Not provided'}`, '', String(data.get('message') || '')].join('\n');
-      if (!mailbox) {
-        status.textContent = 'This department email is being configured. Please call (704) 392-8717 for immediate help.';
-        status.classList.add('is-pending');
-        return;
-      }
       window.location.href = `mailto:${mailbox}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }

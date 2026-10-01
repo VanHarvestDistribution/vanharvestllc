@@ -16,7 +16,8 @@ export const categories = [
   { key: 'supplies', prefix: '6', index: '06', name: 'Restaurant Supplies', short: 'Foodservice film, foil, paper goods, disposables and operational supplies.', image: '/images/category-supplies.webp', featuredIds: ['60000', '60020', '60105', '60320'] },
   { key: 'dry', prefix: '7', index: '07', name: 'Rice, Noodles & Dry Goods', short: 'Rice, noodles, flours, grains and pantry foundations in wholesale formats.', image: '/images/category-dry.webp', featuredIds: ['70000', '70001', '70003', '70006'] },
   { key: 'cleaning', prefix: '8', index: '08', name: 'Cleaning & Janitorial', short: 'Commercial cleaning products, brushes, mops and maintenance essentials.', image: '/images/category-cleaning.webp', featuredIds: ['80001', '80004', '80100', '80115'] },
-  { key: 'prepared', prefix: '9', index: '09', name: 'Frozen & Prepared', short: 'Dim sum, rolls, breads, appetizers and ready-to-cook specialties.', image: '/images/category-prepared.webp', featuredIds: ['92000', '92600', '92602', '92603'] }
+  { key: 'prepared', prefix: '9', index: '09', name: 'Frozen & Prepared', short: 'Frozen dim sum, appetizers and ready-to-cook specialties.', image: '/images/category-prepared.webp', featuredIds: ['92000', '92600', '92602', '92603'] },
+  { key: 'snacks', prefix: 'S', index: '10', name: 'Snacks & Beverages', short: 'Snacks, drinks, bakery treats, mooncakes and packaged specialties.', image: '/images/category-prepared.webp', featuredIds: ['10337', '10339', '10345', '10348'] }
 ] as const;
 
 export const heroImage = '/images/hero-warehouse.webp';

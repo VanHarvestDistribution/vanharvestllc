@@ -1,0 +1,31 @@
+{
+  "blocked_item_ids": ["99996", "99999"],
+  "blocked_name_patterns": [
+    "different payment",
+    "special item",
+    "for free",
+    "商城套餐",
+    "cement",
+    "calendar",
+    "calender",
+    "hand truck",
+    "whole leg for hf foods",
+    "补差价",
+    "特价商品"
+  ],
+  "category_prefix_map": {
+    "1": "meat",
+    "2": "produce",
+    "3": "seafood",
+    "4": "pantry",
+    "5": "preserved",
+    "6": "supplies",
+    "7": "dry",
+    "8": "cleaning",
+    "9": "prepared"
+  },
+  "category_keyword_overrides": {
+    "snacks": ["snack", "drink", "mooncake", "dimsum", "zongzi", "rice dumpling", "cookie", "pastry", "cake", "bread", "dessert", "bun"]
+  },
+  "manual_item_category": {}
+}

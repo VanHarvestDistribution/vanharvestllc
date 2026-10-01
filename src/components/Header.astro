@@ -15,7 +15,7 @@ const items = [
     <nav class="desktop-nav" aria-label="Primary navigation">
       {items.map(([label, href]) => <a href={href} class:list={{ active: active === href }}>{label}</a>)}
     </nav>
-    <a class="header-call" href="tel:+17043928717"><span>Talk with us</span>(704) 392-8717</a>
+    <div class="header-actions"><a class="language-switch" href="/en">EN</a><a class="language-switch" href="/zh">中文</a><a class="header-call" href="tel:+17043928717"><span>Talk with us</span>(704) 392-8717</a></div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
       <i></i><i></i><span>Menu</span>
     </button>
@@ -29,7 +29,7 @@ const items = [
   <nav aria-label="Mobile navigation">
     {items.map(([label, href], index) => <a href={href}><span>0{index + 1}</span>{label}<b aria-hidden="true">↗</b></a>)}
   </nav>
-  <div class="mobile-drawer-contact"><span>Charlotte office</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
+  <div class="mobile-drawer-contact"><span>Language / 语言</span><p><a href="/en">English</a> · <a href="/zh">中文</a></p><span>Charlotte office</span><a href="tel:+17043928717">(704) 392-8717</a><p>5226 Terminal St<br />Charlotte, NC 28208</p></div>
 </div>
 <script is:inline>
   const header = document.querySelector('[data-header]');
