@@ -9,8 +9,8 @@ All selected source photos were returned by Manus image search as **Unsplash** r
 | Local site asset | Search-result title | Source shown by search | Search-downloaded original |
 | --- | --- | --- | --- |
 | `public/images/home/hero-produce-market.webp` | Fresh Produce Pictures | Unsplash | `/home/ubuntu/upload/search_images/93OQAhPc3HBP.jpg` |
-| `public/images/home/hero-butcher-meat.webp` | Raw Meat on Brown Wooden Tray | Pexels | `/home/ubuntu/upload/search_images/GGc3DJrGSCVK.jpeg` |
-| `public/images/home/hero-seafood-market.webp` | Fresh fish and seafood displayed at a bustling market stall | Unsplash | `/home/ubuntu/upload/search_images/qMMWFWWKOzjs.jpg` |
+| `public/images/home/hero-fruit-still-life.webp` | Top-view fruits and raspberries | User-provided | `/home/ubuntu/upload/top-view-fruits-as-pineapple-pomegranate-apple-peach-plum-with-basket-raspberry-green-surface.webp` |
+| `public/images/home/hero-beef-steaks.webp` | Raw beef steaks with rosemary | User-provided | `/home/ubuntu/upload/raw-beef-steaks-with-spices-rosemary-flat-lay-top-view.webp` |
 | `public/images/home/hero-summer-berries.webp` | Summer Berries Pictures | Unsplash | `/home/ubuntu/upload/search_images/guqbtrlXxU2R.jpg` |
 
 ## User-provided visual references not embedded

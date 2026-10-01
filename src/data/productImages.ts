@@ -1,3 +1,5 @@
+import { yellowLabelProductImages, hasYellowLabelProductImage } from './yellowLabelProductImages';
+
 export const productImages: Record<string, string> = {
   '10022': '/images/products/featured/10022.webp',
   '10033': '/images/products/featured/10033.webp',
@@ -110,9 +112,11 @@ export const productImages: Record<string, string> = {
   '92651': '/images/products/featured/92651.webp',
   '92653': '/images/products/featured/92653.webp',
   '92790': '/images/products/featured/92790.webp',
+  ...yellowLabelProductImages,
 };
 
 export const productImageFor = (itemId: string) => productImages[itemId];
+export const isYellowLabelProductImage = hasYellowLabelProductImage;
 
 export const categoryPlaceholder = '/images/placeholders/product-category.svg';
 

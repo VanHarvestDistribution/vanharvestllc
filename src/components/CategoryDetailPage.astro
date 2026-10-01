@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CallToAction from '@/components/CallToAction.astro';
 import productsData from '@/data/products.json';
-import { productImageFor } from '@/data/productImages';
+import { isYellowLabelProductImage, productImageFor } from '@/data/productImages';
 
 interface Props { category: any; lang?: 'en' | 'zh'; localized?: boolean }
 const { category, lang = 'en', localized = false } = Astro.props;
@@ -27,7 +27,12 @@ const productConcept = (product: any) => product.name
 const featuredOrder: any[] = category.featuredIds
   .map((id: string) => products.find((product) => product.id === id))
   .filter(Boolean);
-const showcaseCandidates = [...featuredOrder, ...products.filter((product) => !featuredOrder.some((featured) => featured.id === product.id))];
+const yellowLabelFirst = products.filter((product) => isYellowLabelProductImage(product.id));
+const showcaseCandidates = [
+  ...yellowLabelFirst,
+  ...featuredOrder,
+  ...products.filter((product) => !yellowLabelFirst.some((matched) => matched.id === product.id) && !featuredOrder.some((featured) => featured.id === product.id)),
+];
 const seenConcepts = new Set<string>();
 const usedImages = new Set<string>();
 const featured: Array<{ product: any; image?: string }> = [];

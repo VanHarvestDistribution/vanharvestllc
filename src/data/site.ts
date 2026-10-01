@@ -23,8 +23,8 @@ export const categories = [
 /** Homepage-only food imagery; distinct from the Products department card images. */
 export const heroImages = [
   '/images/home/hero-produce-market.webp',
-  '/images/home/hero-butcher-meat.webp',
-  '/images/home/hero-seafood-market.webp',
+  '/images/home/hero-fruit-still-life.webp',
+  '/images/home/hero-beef-steaks.webp',
   '/images/home/hero-summer-berries.webp',
 ] as const;
 
