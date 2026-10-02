@@ -510,3 +510,22 @@
   .header-apply-mobile { padding-inline: 8px !important; }
   .menu-toggle { padding-inline: 7px; }
 }
+
+
+/* Unified form submission safeguards */
+.form-trap {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.application-form button:disabled,
+.department-form button:disabled {
+  cursor: wait;
+  opacity: .6;
+}

@@ -65,8 +65,6 @@ const isForm = ['apply', 'careers', 'suppliers'].includes(kind);
 const isIndustries = kind === 'industries';
 const isDelivery = kind === 'delivery';
 const isLegal = ['privacy', 'terms'].includes(kind);
-const subject = kind === 'apply' ? 'Wholesale account application' : kind === 'suppliers' ? 'Supplier partnership inquiry' : 'Career application';
-
 const deliveryRows = zh
   ? [
       { area: '北卡 NC', plan: '每天配送' },
@@ -209,12 +207,15 @@ const legalSections = kind === 'privacy'
                   ? '新客户货到付款，合作满一个月可申请账期。申请开户查看价格。'
                   : 'New accounts start on COD; payment terms available after one month. Apply for an account to see pricing.')
               : (zh
-                  ? '提交信息后，将打开邮件草稿供您发送给 Van Harvest 团队。'
-                  : 'Submitting this form opens an email draft addressed to the Van Harvest team.')}
+                  ? '提交后，信息和附件会直接发送到 Van Harvest 团队。'
+                  : 'Your information and attachments will be sent directly to the Van Harvest team.')}
           </p>
         </div>
 
-        <form id="application-form" class="application-form" data-mail-form data-subject={subject} data-lang={lang}>
+        <form id="application-form" class="application-form" data-unified-form data-form-kind={kind} data-lang={lang} action="https://formsubmit.co/ajax/ordersvhd@gmail.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Van Harvest form submission" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-trap" />
           {kind === 'apply' ? (
             <>
               <label><span>{zh ? '公司名' : 'Company name'}</span><input name="company" required /></label>
@@ -303,20 +304,3 @@ const legalSections = kind === 'privacy'
     </section>
   ) : null}
 </BaseLayout>
-
-{isForm && (
-  <script is:inline define:vars={{ officeEmail: contact.officeEmail }}>{`
-    document.querySelectorAll('[data-mail-form]').forEach((form) => form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const data = new FormData(form);
-      const subject = form.dataset.subject || 'Van Harvest inquiry';
-      const files = Array.from(form.querySelectorAll('input[type=file]')).map((input) => input.files?.[0]?.name).filter(Boolean);
-      const body = Array.from(data.entries()).filter(([key, value]) => typeof value === 'string' && !['resaleCertificate','resume','catalogFile'].includes(key)).map(([key, value]) => key + ': ' + value).join('\\n');
-      window.location.href = 'mailto:' + officeEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      const zh = form.dataset.lang === 'zh';
-      form.querySelector('[data-form-status]').textContent = zh
-        ? (files.length ? '邮件草稿已打开，请在发送前附上所选文件。' : '邮件草稿已打开。')
-        : (files.length ? 'Your email draft is open. Please attach the selected file before sending.' : 'Your email draft is open.');
-    }));
-  `}</script>
-)}

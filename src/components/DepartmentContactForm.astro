@@ -1,5 +1,4 @@
 ---
-import { contact } from '@/data/site';
 interface Props { lang?: 'en' | 'zh' }
 const { lang = 'en' } = Astro.props;
 const zh = lang === 'zh';
@@ -13,9 +12,12 @@ const departments = [
 <div class="department-form-wrap">
   <div class="form-heading">
     <h3>{zh ? '在线留言' : 'Send a message'}</h3>
-    <p>{zh ? <>选择销售时，邮件会直接发送至销售邮箱；客服、采购和人事咨询会发送至办公室邮箱。</> : <>Sales messages go directly to our sales mailbox; customer service, purchasing and HR messages route to the office mailbox.</>}</p>
+    <p>{zh ? <>所有留言都会发送至 ordersvhd@gmail.com，办公室团队会按部门处理。</> : <>All messages are sent to ordersvhd@gmail.com and routed to the appropriate team.</>}</p>
   </div>
-  <form class="department-form" data-department-form data-office-mailbox={contact.officeEmail} data-sales-mailbox={contact.salesEmail} action={`mailto:${contact.officeEmail}`} method="post" enctype="text/plain">
+  <form class="department-form" data-unified-form data-form-kind="contact" data-lang={lang} action="https://formsubmit.co/ajax/ordersvhd@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_subject" value="Van Harvest contact form" />
+    <input type="hidden" name="_captcha" value="true" />
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-trap" />
     <label><span>{zh ? '部门' : 'Department'}</span><select name="department" required>{departments.map((department) => <option value={department.value}>{department.label}</option>)}</select></label>
     <div class="form-grid"><label><span>{zh ? '姓名' : 'Your name'}</span><input name="name" autocomplete="name" required /></label><label><span>{zh ? '公司' : 'Company'}</span><input name="company" autocomplete="organization" /></label></div>
     <div class="form-grid"><label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" autocomplete="email" required /></label><label><span>{zh ? '电话' : 'Phone'}</span><input type="tel" name="phone" autocomplete="tel" /></label></div>
@@ -23,22 +25,3 @@ const departments = [
     <div class="form-actions"><button class="button" type="submit">{zh ? '发送 →' : 'Send →'}</button><span class="form-status" data-form-status aria-live="polite"></span></div>
   </form>
 </div>
-<script is:inline>
-  document.querySelectorAll('[data-department-form]').forEach((departmentForm) => {
-    if (departmentForm.dataset.bound) return;
-    departmentForm.dataset.bound = 'true';
-    departmentForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      const data = new FormData(form);
-      const selection = form.querySelector('[name="department"]');
-      const department = selection?.options?.[selection.selectedIndex]?.textContent?.trim() || 'Van Harvest team';
-      const mailbox = data.get('department') === 'sales' ? form.dataset.salesMailbox : form.dataset.officeMailbox;
-      const subject = `${department} inquiry from ${data.get('name')}`;
-      const body = [`Department: ${department}`, `Name: ${data.get('name')}`, `Company: ${data.get('company') || 'Not provided'}`, `Email: ${data.get('email')}`, `Phone: ${data.get('phone') || 'Not provided'}`, '', String(data.get('message') || '')].join('\n');
-      const status = form.querySelector('[data-form-status]');
-      if (status) status.textContent = 'Opening your email draft… / 正在打开邮件草稿…';
-      window.location.href = `mailto:${mailbox}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
-  });
-</script>

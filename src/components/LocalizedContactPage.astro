@@ -54,11 +54,11 @@ const departments = zh
           </div>
           <div class="contact-line">
             <small>{zh ? '销售邮箱' : 'Sales email'}</small>
-            <a href={`mailto:${contact.salesEmail}`}>{contact.salesEmail}</a>
+            <span>{contact.salesEmail}</span>
           </div>
           <div class="contact-line">
             <small>{zh ? '办公室邮箱' : 'Office email'}</small>
-            <a href={`mailto:${contact.officeEmail}`}>{contact.officeEmail}</a>
+            <span>{contact.officeEmail}</span>
           </div>
           <div class="contact-line contact-line-address">
             <small>{zh ? '仓库地址' : 'Warehouse address'}</small>
@@ -76,7 +76,7 @@ const departments = zh
 
       <div class="department-panel">
         <h2>{zh ? '发送信息' : 'Send a message'}</h2>
-        <p>{zh ? '请选择对应业务部门。销售咨询发送至 ordersvhd@gmail.com，客服、采购与人事咨询发送至办公室邮箱。' : 'Select a department. Sales inquiries route to ordersvhd@gmail.com; customer service, purchasing, and HR route to the main office.'}</p>
+        <p>{zh ? '请选择对应业务部门。所有表单信息都会发送至 ordersvhd@gmail.com。' : 'Select a department. Every form submission is sent to ordersvhd@gmail.com.'}</p>
         <div class="department-list">
           {departments.map(([title, copy, status]) => (
             <article class="department-card">
