@@ -70,7 +70,7 @@ const pageDescription = zh
 <BaseLayout title={pageTitle} description={pageDescription} active="/" lang={lang} ogImage={heroImage} jsonLd={organizationJsonLd}>
   <!-- Hero: ONLY place where italic title style is retained -->
   <section class="home-hero">
-    <div class="home-hero-slideshow" aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>
+    <div class="home-hero-slideshow" data-hero-slideshow aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>
       {heroSlides.map((image, index) => (
         <div class="home-hero-slide" style={`background-image:url('${image}')`} aria-hidden={index !== 0}></div>
       ))}
@@ -165,3 +165,18 @@ const pageDescription = zh
 
   <CallToAction lang={lang} localized={localized} />
 </BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-hero-slideshow]').forEach((slideshow) => {
+    const slides = Array.from(slideshow.querySelectorAll<HTMLElement>('.home-hero-slide'));
+    if (slides.length < 2 || slideshow.dataset.animated === 'true') return;
+
+    slideshow.dataset.animated = 'true';
+    let activeIndex = 0;
+    window.setInterval(() => {
+      slides[activeIndex].setAttribute('aria-hidden', 'true');
+      activeIndex = (activeIndex + 1) % slides.length;
+      slides[activeIndex].setAttribute('aria-hidden', 'false');
+    }, 6500);
+  });
+</script>
