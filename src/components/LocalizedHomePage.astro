@@ -4,9 +4,8 @@ import CallToAction from '@/components/CallToAction.astro';
 import FacilityNetwork from '@/components/FacilityNetwork.astro';
 import HomeCatalogMarquee from '@/components/HomeCatalogMarquee.astro';
 import products from '@/data/products.json';
-import { contact, heroImage, heroImages, liveSeafoodImage } from '@/data/site';
+import { contact, heroImage, heroImages } from '@/data/site';
 import { absoluteUrl } from '@/data/seo';
-import ResponsivePicture from '@/components/ResponsivePicture.astro';
 
 interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang = 'en', localized = false } = Astro.props;
@@ -147,21 +146,6 @@ const pageDescription = zh
   </section>
 
   <FacilityNetwork lang={lang} />
-
-  <!-- Distinct live seafood media (Full width large photograph & editorial copy) -->
-  <section class="live-seafood-band">
-    <div class="shell live-seafood-grid">
-      <div class="live-seafood-media">
-        <ResponsivePicture src={liveSeafoodImage} alt={zh ? 'Van Harvest 活海鲜水产缸与活蟹活龙虾展示' : 'Van Harvest live seafood holding tanks featuring live crab and lobster'} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="lazy" />
-      </div>
-      <div>
-        <h2>{zh ? '活海鲜暂养缸与直配' : 'Live seafood tanks and delivery'}</h2>
-        <div class="editorial-rule"></div>
-        <p>{zh ? '仓库配备专业海鲜暂养缸设施，为餐馆与超市稳定供应鲜活龙虾、螃蟹及当季水产。' : 'Equipped with commercial holding tanks supplying restaurants and markets with live lobster, crab and seasonal shellfish.'}</p>
-        <a class="button button-gold" href={`${prefix}/products/seafood/`}>{zh ? '浏览海鲜品类 →' : 'Explore seafood →'}</a>
-      </div>
-    </div>
-  </section>
 
   <CallToAction lang={lang} localized={localized} />
 </BaseLayout>
