@@ -1,0 +1,52 @@
+# Redirect apex domain to canonical www
+https://vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
+http://vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
+http://www.vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
+
+# Support legacy non-trailing slashes by redirecting to trailing slash
+/products /products/ 301
+/products/catalog /products/catalog/ 301
+/company /company/ 301
+/services /services/ 301
+/contact /contact/ 301
+/apply /apply/ 301
+/delivery /delivery/ 301
+/industries /industries/ 301
+/careers /careers/ 301
+/suppliers /suppliers/ 301
+/privacy /privacy/ 301
+/terms /terms/ 301
+/zh /zh/ 301
+/zh/products /zh/products/ 301
+/zh/products/catalog /zh/products/catalog/ 301
+/zh/company /zh/company/ 301
+/zh/services /zh/services/ 301
+/zh/contact /zh/contact/ 301
+/zh/apply /zh/apply/ 301
+/zh/delivery /zh/delivery/ 301
+/zh/industries /zh/industries/ 301
+/zh/careers /zh/careers/ 301
+/zh/suppliers /zh/suppliers/ 301
+/zh/privacy /zh/privacy/ 301
+/zh/terms /zh/terms/ 301
+
+# Product departments
+/products/meat /products/meat/ 301
+/products/produce /products/produce/ 301
+/products/seafood /products/seafood/ 301
+/products/pantry /products/pantry/ 301
+/products/preserved /products/preserved/ 301
+/products/supplies /products/supplies/ 301
+/products/dry /products/dry/ 301
+/products/cleaning /products/cleaning/ 301
+/products/prepared /products/prepared/ 301
+
+/zh/products/meat /zh/products/meat/ 301
+/zh/products/produce /zh/products/produce/ 301
+/zh/products/seafood /zh/products/seafood/ 301
+/zh/products/pantry /zh/products/pantry/ 301
+/zh/products/preserved /zh/products/preserved/ 301
+/zh/products/supplies /zh/products/supplies/ 301
+/zh/products/dry /zh/products/dry/ 301
+/zh/products/cleaning /zh/products/cleaning/ 301
+/zh/products/prepared /zh/products/prepared/ 301
