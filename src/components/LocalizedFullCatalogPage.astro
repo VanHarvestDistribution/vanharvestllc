@@ -12,6 +12,6 @@ const prefix = localized ? `/${lang}` : '';
 <BaseLayout title={zh ? '完整食品产品目录 | Van Harvest' : 'Full Wholesale Food Catalog | Van Harvest'} description={zh ? '按产品编号、英文名或中文名搜索 Van Harvest 的完整双语食品批发目录。' : 'Search the complete bilingual Van Harvest wholesale food catalog by Item #, English name or Chinese name.'} active="/products" lang={lang}>
   <ProductsSubnav lang={lang} localized={localized} active="catalog" />
   <section class="catalog-search-hero"><div class="shell"><div class="catalog-search-heading"><p class="eyebrow">{zh ? '完整产品目录' : 'Full product catalog'}</p><h1>{zh ? '快速找到你要的产品。' : 'Find the product you need.'}</h1><p>{zh ? '输入产品编号、英文名或中文名，即可搜索全部品类。' : 'Search every department by Item #, English name or Chinese name.'}</p></div><CatalogExplorer lang={lang} localized={localized} /></div></section>
-  <section class="catalog-help"><div class="shell"><p>{zh ? '需要协助建立批发账户？' : 'Need help setting up a wholesale account?'}</p><a class="text-link" href={`${prefix}/apply`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a></div></section>
+  <section class="catalog-help"><div class="shell"><p>{zh ? '需要协助建立批发账户？' : 'Need help setting up a wholesale account?'}</p><a class="text-link" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a></div></section>
   <ProductDrawer lang={lang} localized={localized} />
 </BaseLayout>

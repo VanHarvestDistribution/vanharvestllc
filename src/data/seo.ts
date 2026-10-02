@@ -1,14 +1,31 @@
+const defaultSiteOrigin = 'https://www.vanharvestllc.com';
+
 const configuredOrigin = import.meta.env.PUBLIC_SITE_ORIGIN?.trim().replace(/\/$/, '');
 
-export const siteOrigin = configuredOrigin && /^https:\/\//.test(configuredOrigin) ? configuredOrigin : undefined;
+export const siteOrigin = configuredOrigin && /^https:\/\//.test(configuredOrigin) ? configuredOrigin : defaultSiteOrigin;
 
-export const absoluteUrl = (path: string) => siteOrigin ? `${siteOrigin}${path.startsWith('/') ? path : `/${path}`}` : undefined;
+export const ensureTrailingSlash = (path: string) => {
+  if (!path || path === '/') return '/';
+  const clean = path.split('?')[0].split('#')[0];
+  const trailing = clean.endsWith('/') ? clean : `${clean}/`;
+  const query = path.includes('?') ? `?${path.split('?')[1].split('#')[0]}` : '';
+  const hash = path.includes('#') ? `#${path.split('#')[1]}` : '';
+  return `${trailing}${query}${hash}`;
+};
+
+export const absoluteUrl = (path: string) => {
+  if (!siteOrigin) return undefined;
+  const normalized = ensureTrailingSlash(path.startsWith('/') ? path : `/${path}`);
+  return `${siteOrigin}${normalized}`;
+};
 
 export const languagePaths = (pathname: string) => {
-  const base = pathname.replace(/^\/(?:en|zh)(?=\/|$)/, '') || '/';
+  const normalized = ensureTrailingSlash(pathname);
+  const base = normalized.replace(/^\/zh(?=\/|$)/, '') || '/';
+  const cleanBase = ensureTrailingSlash(base);
   return {
-    english: base,
-    chinese: `/zh${base === '/' ? '' : base}`,
-    default: base,
+    english: cleanBase,
+    chinese: ensureTrailingSlash(`/zh${cleanBase === '/' ? '' : cleanBase}`),
+    default: cleanBase,
   };
 };

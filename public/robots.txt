@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://vanharvest.com/sitemap.xml
+Sitemap: https://www.vanharvestllc.com/sitemap.xml

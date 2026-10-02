@@ -27,7 +27,7 @@ const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' 
     <div class="category-detail-media"><ResponsivePicture src={category.image} alt={`${name} ${zh ? '产品分类' : 'wholesale category'}`} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="eager" /></div>
     <div class="category-detail-shade"></div>
     <div class="shell category-detail-inner">
-      <p class="breadcrumb"><a href={`${prefix}/products`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p>
+      <p class="breadcrumb"><a href={`${prefix}/products/`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p>
       <div class="category-detail-copy">
         <p class="eyebrow eyebrow-light">{name}</p>
         <h1>{name}<br /><em>{zh ? '为专业厨房准备。' : 'for the professional kitchen.'}</em></h1>

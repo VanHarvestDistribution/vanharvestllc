@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const ORIGIN = (process.env.PUBLIC_SITE_ORIGIN || 'https://vanharvest.com').replace(/\/$/, '');
+const ORIGIN = (process.env.PUBLIC_SITE_ORIGIN || 'https://www.vanharvestllc.com').replace(/\/$/, '');
 
 const baseRoutes = [
   '',
@@ -24,13 +24,19 @@ const baseRoutes = [
 const departments = ['meat', 'produce', 'seafood', 'pantry', 'preserved', 'supplies', 'dry', 'cleaning', 'prepared'];
 const urls = [];
 
+const formatUrl = (pathname) => {
+  const clean = pathname.startsWith('/') ? pathname : `/${pathname}`;
+  const trailing = clean === '/' || clean.endsWith('/') ? clean : `${clean}/`;
+  return `${ORIGIN}${trailing}`;
+};
+
 for (const route of baseRoutes) {
-  urls.push(`${ORIGIN}${route || '/'}`);
-  urls.push(`${ORIGIN}/zh${route}`);
+  urls.push(formatUrl(route || '/'));
+  urls.push(formatUrl(`/zh${route}`));
 }
 for (const department of departments) {
-  urls.push(`${ORIGIN}/products/${department}`);
-  urls.push(`${ORIGIN}/zh/products/${department}`);
+  urls.push(formatUrl(`/products/${department}`));
+  urls.push(formatUrl(`/zh/products/${department}`));
 }
 
 const xmlEscape = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

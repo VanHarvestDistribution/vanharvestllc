@@ -23,7 +23,7 @@ const counts = products.reduce<Record<string, number>>((result, product) => {
     </div>
     <div class="category-gallery-grid">
       {categories.map((category) => (
-        <a class="category-gallery-card reveal" href={`${prefix}/products/${category.key}`} aria-label={`${zh ? '浏览' : 'Explore'} ${zh ? category.nameZh : category.name}`}>
+        <a class="category-gallery-card reveal" href={`${prefix}/products/${category.key}/`} aria-label={`${zh ? '浏览' : 'Explore'} ${zh ? category.nameZh : category.name}`}>
           <div class="category-gallery-image">
             <ResponsivePicture src={category.image} alt={`${zh ? category.nameZh : category.name} wholesale selection`} sizes="(max-width: 640px) 400px, 600px" loading="lazy" />
           </div>
