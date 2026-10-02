@@ -1,8 +1,0 @@
----
-import LocalizedProductDetail from '@/components/LocalizedProductDetail.astro';
-import products from '@/data/products.json';
-import { categories } from '@/data/site';
-export function getStaticPaths(){ const all = products as any[]; return all.map((product) => ({ params: { category: product.category, itemNumber: product.id }, props: { product, category: categories.find((entry) => entry.key === product.category) || categories[0] } })); }
-const { product, category } = Astro.props;
----
-<LocalizedProductDetail product={product} category={category} lang="zh" localized />

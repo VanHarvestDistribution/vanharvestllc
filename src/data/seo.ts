@@ -7,7 +7,7 @@ export const absoluteUrl = (path: string) => siteOrigin ? `${siteOrigin}${path.s
 export const languagePaths = (pathname: string) => {
   const base = pathname.replace(/^\/(?:en|zh)(?=\/|$)/, '') || '/';
   return {
-    english: `/en${base === '/' ? '' : base}`,
+    english: base,
     chinese: `/zh${base === '/' ? '' : base}`,
     default: base,
   };

@@ -6,9 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = (process.env.PUBLIC_SITE_ORIGIN || 'https://vanharvest.com').replace(/\/$/, '');
 
-const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/products.json'), 'utf-8'));
-
-const base_routes = [
+const baseRoutes = [
   '',
   '/products',
   '/products/catalog',
@@ -23,36 +21,28 @@ const base_routes = [
   '/privacy',
   '/terms'
 ];
-
-const urls = [];
-for (const r of base_routes) {
-  urls.push(`${ORIGIN}${r || '/'}`);
-  urls.push(`${ORIGIN}/zh${r}`);
-}
-
 const departments = ['meat', 'produce', 'seafood', 'pantry', 'preserved', 'supplies', 'dry', 'cleaning', 'prepared'];
-for (const d of departments) {
-  urls.push(`${ORIGIN}/products/${d}`);
-  urls.push(`${ORIGIN}/zh/products/${d}`);
+const urls = [];
+
+for (const route of baseRoutes) {
+  urls.push(`${ORIGIN}${route || '/'}`);
+  urls.push(`${ORIGIN}/zh${route}`);
+}
+for (const department of departments) {
+  urls.push(`${ORIGIN}/products/${department}`);
+  urls.push(`${ORIGIN}/zh/products/${department}`);
 }
 
-for (const p of products) {
-  urls.push(`${ORIGIN}/products/${p.category}/${p.id}`);
-  urls.push(`${ORIGIN}/zh/products/${p.category}/${p.id}`);
-}
-
-const uniqueUrls = Array.from(new Set(urls)).sort();
-const lines = [
+const xmlEscape = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const uniqueUrls = [...new Set(urls)].sort();
+const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-];
-for (const u of uniqueUrls) {
-  lines.push('  <url>');
-  lines.push(`    <loc>${u.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</loc>`);
-  lines.push('  </url>');
-}
-lines.push('</urlset>');
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ...uniqueUrls.flatMap((url) => ['  <url>', `    <loc>${xmlEscape(url)}</loc>`, '  </url>']),
+  '</urlset>',
+  ''
+].join('\n');
 
-const outFile = path.join(ROOT, 'public/sitemap.xml');
-fs.writeFileSync(outFile, lines.join('\n') + '\n', 'utf-8');
-console.log(`Generated ${uniqueUrls.length} sitemap entries at ${outFile}`);
+const output = path.join(ROOT, 'public/sitemap.xml');
+fs.writeFileSync(output, xml, 'utf-8');
+console.log(`Generated ${uniqueUrls.length} static sitemap entries at ${output}`);
