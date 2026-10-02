@@ -11,7 +11,10 @@ const departments = [
 ];
 ---
 <div class="department-form-wrap">
-  <div class="form-heading"><p class="eyebrow">{zh ? '发送信息' : 'Send'}</p><h3>{zh ? <>告诉我们<br /><em>如何帮助你。</em></> : <>Tell us how<br /><em>we can help.</em></>}</h3><p>{zh ? <>选择销售时，邮件会直接发送至销售邮箱；客服、采购和人事咨询会发送至办公室邮箱。 </> : <>Sales messages go directly to our sales mailbox; customer service, purchasing and HR messages route to the office mailbox.</>}</p></div>
+  <div class="form-heading">
+    <h3>{zh ? '在线留言' : 'Send a message'}</h3>
+    <p>{zh ? <>选择销售时，邮件会直接发送至销售邮箱；客服、采购和人事咨询会发送至办公室邮箱。</> : <>Sales messages go directly to our sales mailbox; customer service, purchasing and HR messages route to the office mailbox.</>}</p>
+  </div>
   <form class="department-form" data-department-form data-office-mailbox={contact.officeEmail} data-sales-mailbox={contact.salesEmail} action={`mailto:${contact.officeEmail}`} method="post" enctype="text/plain">
     <label><span>{zh ? '部门' : 'Department'}</span><select name="department" required>{departments.map((department) => <option value={department.value}>{department.label}</option>)}</select></label>
     <div class="form-grid"><label><span>{zh ? '姓名' : 'Your name'}</span><input name="name" autocomplete="name" required /></label><label><span>{zh ? '公司' : 'Company'}</span><input name="company" autocomplete="organization" /></label></div>

@@ -4,9 +4,57 @@ interface Props { lang?: 'en' | 'zh' }
 const { lang = 'en' } = Astro.props;
 const zh = lang === 'zh';
 const facilities = [
-  { image: facilityImages.warehouse, label: '29,000 SF', title: zh ? '食品仓库' : 'Food warehouse', copy: zh ? '位于 Charlotte 的食品批发仓库，为多品类餐饮采购提供收货、存储与备货空间。' : 'A 29,000-square-foot Charlotte warehouse built for organized receiving, storage and foodservice picking.' },
-  { image: facilityImages.coldStorage, label: zh ? '冷链处理' : 'Cold-chain ready', title: zh ? '冷库与冷链' : 'Cold storage', copy: zh ? '新鲜、冷冻与温控产品由不同温层的运营流程支持。' : 'Fresh, frozen and temperature-sensitive products are supported through distinct cold-chain workflows.' },
-  { image: facilityImages.distribution, label: zh ? '四个配送区域' : 'Four delivery regions', title: zh ? '配送运营' : 'Distribution operations', copy: zh ? '当前路线服务 North Carolina、South Carolina、Atlanta, GA 和 Virginia。' : 'Current routes serve North Carolina, South Carolina, Atlanta, GA and Virginia.' }
+  {
+    image: facilityImages.warehouse,
+    label: '29,000 SF',
+    title: zh ? '夏洛特中央仓库' : 'Charlotte warehouse',
+    copy: zh
+      ? '位于 5226 Terminal St，设有大容量干货架、分拣动线与进出货装卸月台。'
+      : 'Located at 5226 Terminal St, featuring dry pallet racking, organized order picking lines and loading docks.'
+  },
+  {
+    image: facilityImages.coldStorage,
+    label: zh ? '冷库与冷冻' : 'Refrigerated & frozen',
+    title: zh ? '温控冷库设施' : 'Temperature-controlled storage',
+    copy: zh
+      ? '生鲜蔬菜、鲜切肉类、冻品与水产品分别在冷藏与冷冻温区规范存储。'
+      : 'Fresh produce, meats, frozen seafood and poultry are maintained in dedicated refrigerated and freezer zones.'
+  },
+  {
+    image: facilityImages.distribution,
+    label: zh ? '自有冷链车队' : 'Dedicated refrigerated fleet',
+    title: zh ? '货车车队配送' : 'Truck fleet delivery',
+    copy: zh
+      ? '北卡与南卡每日发车配送；弗吉尼亚与亚特兰大定期专线直达。'
+      : 'Daily delivery routes across North and South Carolina; scheduled direct routes to Virginia and Atlanta.'
+  }
 ];
 ---
-<section class="facility-network" aria-labelledby="facility-title"><div class="shell"><div class="facility-heading"><div><p class="eyebrow">{zh ? '设施与配送网络' : 'Facilities & delivery network'}</p><h2 id="facility-title">{zh ? <>从仓库到<br /><em>专业厨房。</em></> : <>From warehouse<br />to <em>working kitchens.</em></>}</h2></div><p>{zh ? 'Van Harvest 将食品仓储、冷链处理和区域配送串联为一条可靠的供应链。' : 'Van Harvest connects food warehousing, cold-chain handling and regional delivery in one dependable supply chain.'}</p></div><div class="facility-grid">{facilities.map((facility) => <article class="facility-card"><div class="facility-image"><img src={facility.image} alt={facility.title} loading="lazy" /></div><div class="facility-card-meta"><p class="facility-label">{facility.label}</p><h3>{facility.title}</h3><p>{facility.copy}</p></div></article>)}</div></div></section>
+<section class="facility-network" aria-labelledby="facility-title">
+  <div class="shell">
+    <div class="facility-heading">
+      <div>
+        <h2 id="facility-title">{zh ? '仓储与冷链配送能力' : 'Warehousing and fleet logistics'}</h2>
+      </div>
+      <p>
+        {zh
+          ? '29,000 平方英尺仓库与自有冷藏货车车队，保障生鲜、冻品和常温商品每天准时送达后厨。'
+          : 'A 29,000 SF facility and dedicated temperature-controlled fleet deliver fresh, frozen and dry goods directly to kitchens daily.'}
+      </p>
+    </div>
+    <div class="facility-grid">
+      {facilities.map((facility) => (
+        <article class="facility-card">
+          <div class="facility-image">
+            <img src={facility.image} alt={facility.title} loading="lazy" />
+          </div>
+          <div class="facility-card-meta">
+            <p class="facility-label">{facility.label}</p>
+            <h3>{facility.title}</h3>
+            <p>{facility.copy}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

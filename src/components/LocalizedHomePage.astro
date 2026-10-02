@@ -20,7 +20,7 @@ const organizationJsonLd = {
     {
       '@type': 'Organization',
       name: 'Van Harvest Distribution LLC',
-      url: absoluteUrl('/') || 'https://vanharvest.com',
+      url: absoluteUrl('/') || 'https://www.vanharvestllc.com',
       logo: absoluteUrl('/brand/van-harvest-official.png'),
       telephone: contact.phoneDisplay,
       email: contact.officeEmail,
@@ -36,7 +36,7 @@ const organizationJsonLd = {
     {
       '@type': 'LocalBusiness',
       name: 'Van Harvest Distribution LLC',
-      url: absoluteUrl('/') || 'https://vanharvest.com',
+      url: absoluteUrl('/') || 'https://www.vanharvestllc.com',
       telephone: contact.phoneDisplay,
       priceRange: '$$$',
       image: absoluteUrl(heroImage),
@@ -64,10 +64,11 @@ const pageTitle = zh
   ? '夏洛特食品批发与冷链配送 | Van Harvest'
   : 'Wholesale Food Distributor & Cold-Chain Logistics in Charlotte | Van Harvest';
 const pageDescription = zh
-  ? 'Van Harvest Distribution 为夏洛特、北卡、南卡、亚特兰大及维吉尼亚的餐馆、超市提供新鲜肉类、蔬果、水产及常温干货批发，一站采购。'
-  : 'Van Harvest Distribution supplies restaurants, markets and professional kitchens across NC, SC, GA and VA with fresh meats, produce, seafood and dry staples.';
+  ? 'Van Harvest Distribution 位于夏洛特，拥有 29,000 平方英尺仓库，提供 2,944+ 种肉类、蔬果、海鲜、干货与餐饮用品批发，每日配送北卡、南卡，预约配送维吉尼亚与亚特兰大，24 小时电话或短信下单，每次最低 $500。'
+  : 'Van Harvest Distribution operates a 29,000 SF warehouse in Charlotte, supplying 2,944+ products across meat, produce, seafood and dry goods with daily NC/SC deliveries, 24/7 ordering and $500 minimum.';
 ---
 <BaseLayout title={pageTitle} description={pageDescription} active="/" lang={lang} ogImage={heroImage} jsonLd={organizationJsonLd}>
+  <!-- Hero: ONLY place where italic title style is retained -->
   <section class="home-hero">
     <div class="home-hero-slideshow" aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>
       {heroSlides.map((image, index) => (
@@ -77,11 +78,10 @@ const pageDescription = zh
     <div class="home-hero-shade"></div>
     <div class="shell hero-inner">
       <div class="hero-topline">
-        <span>{zh ? '食品批发供应' : 'Wholesale food distribution'}</span>
+        <span>{zh ? '夏洛特 29,000 平方英尺食品仓库' : 'Charlotte 29,000 SF warehouse'}</span>
         <span>Charlotte, North Carolina</span>
       </div>
       <div class="hero-copy">
-        <p class="eyebrow">{zh ? '服务专业厨房' : 'Built for professional kitchens'}</p>
         <h1>
           {zh ? (
             <>新鲜、冷冻、<br /><em>常温食品，一站采购。</em></>
@@ -92,8 +92,8 @@ const pageDescription = zh
         <div class="hero-copy-bottom">
           <p>
             {zh
-              ? '为餐馆、超市和专业厨房提供稳定的食品批发选择与区域配送服务。'
-              : 'A dependable wholesale food source for restaurants, markets and professional kitchens across the region.'}
+              ? '服务北卡、南卡、弗吉尼亚与亚特兰大餐馆、超市与专业厨房。24 小时电话或短信下单，无截单时间，每次最低 $500。'
+              : 'Supplying restaurants and markets across NC, SC, VA, and Atlanta. Call or text orders 24/7 with no cutoff time and $500 minimum.'}
           </p>
           <div class="hero-actions">
             <a class="button" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a>
@@ -112,43 +112,51 @@ const pageDescription = zh
     </div>
   </section>
 
+  <!-- Intro: Straightforward plain heading, specific warehouse and daily delivery facts -->
   <section class="home-intro">
     <div class="shell split-heading">
       <div>
-        <p class="eyebrow">{zh ? '一个目录，多种厨房。' : 'One catalog. Many kitchens.'}</p>
-        <h2>{zh ? <>餐饮供应，<br /><em>用心选择。</em></> : <>Foodservice supply,<br /><em>selected with purpose.</em></>}</h2>
+        <h2>{zh ? '夏洛特本地仓库与自有车队配送' : 'Charlotte warehouse and fleet delivery'}</h2>
       </div>
       <div class="split-copy">
-        <p>{zh ? 'Van Harvest 扎根 Charlotte，为餐馆、超市和便利店提供丰富、实用的食品及餐饮用品。' : 'Van Harvest is a Charlotte-based wholesale food distributor serving restaurants, supermarkets and convenience stores across the region.'}</p>
-        <p>{zh ? '新鲜、冷冻、常温食品，一站采购。' : 'Fresh, frozen and shelf-stable foodservice essentials—sourced through one practical partner.'}</p>
-        <a class="text-link" href={`${prefix}/company/`}>{zh ? '了解 Van Harvest →' : 'Meet Van Harvest →'}</a>
+        <p>
+          {zh
+            ? 'Van Harvest 位于夏洛特 5226 Terminal St，拥有 29,000 平方英尺食品仓库，自有冷链货车每天配送北卡与南卡，定期配送弗吉尼亚与亚特兰大。'
+            : 'Van Harvest operates from 5226 Terminal St in Charlotte with a 29,000 SF warehouse, delivering daily across North Carolina and South Carolina with scheduled routes to Virginia and Atlanta.'}
+        </p>
+        <p>
+          {zh
+            ? '九大品类涵盖新鲜及冷冻肉类、蔬果、水产、酱料调味、米面干货、冷冻点心及餐饮用品。新客户货到付款，合作满一个月可申请账期。'
+            : 'Nine departments cover fresh and frozen meats, produce, seafood, sauces, dry staples, frozen dim sum and restaurant disposables. COD on start, terms after one month.'}
+        </p>
+        <a class="text-link" href={`${prefix}/company/`}>{zh ? '了解仓储与配送网络 →' : 'Our warehouse & delivery network →'}</a>
       </div>
     </div>
   </section>
 
   <HomeCatalogMarquee lang={lang} localized={localized} />
 
+  <!-- Specific regional operational statement -->
   <section class="statement">
     <div class="shell statement-grid">
-      <span>{zh ? '为本地厨房建立信任。' : 'Trust built for local kitchens.'}</span>
+      <span>{zh ? '配送标准与起送' : 'Delivery schedule & minimums'}</span>
       <p>
-        <strong>{zh ? '29,000 平方英尺仓库' : '29,000 SF warehouse'}</strong> · <strong>{zh ? '配送至 NC、SC、Atlanta, GA 和 Virginia' : 'delivering across NC, SC, Atlanta, GA and Virginia'}</strong> · {zh ? '冷链产品能力 · 餐馆、亚洲厨房和零售客户。' : 'cold-chain capable assortment · restaurants, Asian kitchens and retailers.'}
+        <strong>{zh ? '北卡与南卡每天配送' : 'Daily delivery across NC & SC'}</strong> · <strong>{zh ? '弗吉尼亚与亚特兰大预约配送' : 'Scheduled routes to VA & Atlanta, GA'}</strong> · {zh ? '24 小时电话或短信下单，每次最低起送额 $500。' : '24/7 phone or text ordering, $500 minimum per delivery.'}
       </p>
     </div>
   </section>
 
   <FacilityNetwork lang={lang} />
 
-  <!-- Distinct live seafood media: live seafood tank, lobster/crab holding facility -->
+  <!-- Distinct live seafood media -->
   <section class="live-seafood-band">
     <div class="shell live-seafood-grid">
       <div class="live-seafood-media">
         <ResponsivePicture src={liveSeafoodImage} alt={zh ? 'Van Harvest 活海鲜水产缸与活蟹活龙虾展示' : 'Van Harvest live seafood holding tanks featuring live crab and lobster'} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="lazy" />
       </div>
       <div>
-        <p class="eyebrow eyebrow-light">{zh ? 'Van Harvest 的特色' : 'A Van Harvest difference'}</p>
-        <h2>{zh ? <>活海鲜，<br /><em>按需采购。</em></> : <>Live seafood<br /><em>when it matters.</em></>}</h2>
-        <p>{zh ? '专业海鲜暂养缸设施，为餐馆与超市提供鲜活龙虾、螃蟹及优质水产直配服务。' : 'Dedicated live holding tanks supplying restaurants and markets with live lobster, crab and market-fresh shellfish.'}</p>
+        <h2>{zh ? '活海鲜暂养缸与直配' : 'Live seafood tanks and delivery'}</h2>
+        <p>{zh ? '仓库配备专业海鲜暂养缸设施，为餐馆与超市稳定供应鲜活龙虾、螃蟹及当季水产。' : 'Equipped with commercial holding tanks supplying restaurants and markets with live lobster, crab and seasonal shellfish.'}</p>
         <a class="button" href={`${prefix}/products/seafood/`}>{zh ? '浏览海鲜品类 →' : 'Explore seafood →'}</a>
       </div>
     </div>

@@ -1,25 +1,86 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { contact } from '@/data/site';
+
 interface Props { kind: string; lang?: 'en' | 'zh'; }
 const { kind, lang = 'en' } = Astro.props;
 const zh = lang === 'zh';
 const localized = Astro.url.pathname.startsWith('/en/') || Astro.url.pathname.startsWith('/zh/');
 const prefix = localized ? `/${lang}` : '';
-const copy: Record<string, { eyebrow: string; title: string; metaTitle: string; intro: string }> = {
-  apply: { eyebrow: zh ? '批发开户' : 'Wholesale account', title: zh ? '申请开户，开始采购。' : 'Apply, then start sourcing.', metaTitle: zh ? '申请食品批发账户 | Van Harvest' : 'Apply for a Wholesale Account | Van Harvest', intro: zh ? '提交企业信息，申请成为 Van Harvest 批发客户。申请开户查看价格。' : 'Share your business details to apply as a Van Harvest wholesale customer. Apply for an account to see pricing.' },
-  delivery: { eyebrow: zh ? '配送范围' : 'Delivery areas', title: zh ? '服务四大区域。' : 'Serving four delivery regions.', metaTitle: zh ? '配送区域 – NC、SC、GA、VA | Van Harvest' : 'Delivery Areas – NC, SC, GA, VA | Van Harvest', intro: zh ? 'Van Harvest 目前服务 North Carolina、South Carolina、Atlanta, GA 和 Virginia 的餐饮与零售客户。' : 'Van Harvest serves restaurant and retail customers across North Carolina, South Carolina, Atlanta, Georgia, and Virginia.' },
-  industries: { eyebrow: zh ? '服务客户' : 'Who we serve', title: zh ? '为不同厨房，提供实用选择。' : 'Practical supply for the way you operate.', metaTitle: zh ? '服务客户 | Van Harvest' : 'Foodservice Customers We Serve | Van Harvest', intro: zh ? '从中餐馆到亚洲超市，按你的经营方式探索推荐品类。' : 'From Chinese restaurants to Asian markets, explore categories that fit the way you operate.' },
-  careers: { eyebrow: zh ? '招聘' : 'Careers', title: zh ? '加入 Van Harvest 团队。' : 'Join the Van Harvest team.', metaTitle: zh ? 'Van Harvest 招聘 | Charlotte, NC' : 'Careers at Van Harvest | Charlotte, NC', intro: zh ? '目前常年招聘司机和仓库人员，欢迎投递。' : 'We regularly hire drivers and warehouse associates. We welcome your application.' },
-  suppliers: { eyebrow: zh ? '供应商合作' : 'Supplier partnerships', title: zh ? '把好产品带进更多厨房。' : 'Bring great products to more kitchens.', metaTitle: zh ? '供应商合作 | Van Harvest' : 'Become a Food Supplier | Van Harvest', intro: zh ? '欢迎食品、餐饮用品及相关品牌与 Van Harvest 建立供应合作。' : 'We welcome food, foodservice supply and related brands interested in working with Van Harvest.' },
-  privacy: { eyebrow: zh ? '隐私政策' : 'Privacy policy', title: zh ? '清楚说明，妥善处理。' : 'Clear terms for your information.', metaTitle: zh ? '隐私政策 | Van Harvest' : 'Privacy Policy | Van Harvest', intro: zh ? '本政策说明 Van Harvest 如何收集、使用和保护网站访客及业务联系人的信息。' : 'This policy explains how Van Harvest collects, uses and protects information from website visitors and business contacts.' },
-  terms: { eyebrow: zh ? '网站条款' : 'Website terms', title: zh ? '使用本网站前请阅读。' : 'Please read before using this site.', metaTitle: zh ? '网站条款 | Van Harvest' : 'Website Terms | Van Harvest', intro: zh ? '本条款适用于您对 Van Harvest 网站、目录和联系表单的使用。' : 'These terms apply to your use of the Van Harvest website, catalog and contact forms.' }
+
+const copy: Record<string, { title: string; metaTitle: string; intro: string }> = {
+  apply: {
+    title: zh ? '申请开户' : 'Apply for an account',
+    metaTitle: zh ? '申请食品批发账户 | Van Harvest' : 'Apply for a Wholesale Account | Van Harvest',
+    intro: zh
+      ? '在线提交企业信息。新客户货到付款，合作满一个月可申请账期。申请开户查看价格。'
+      : 'Share your business details online. New accounts start on COD; payment terms available after one month. Apply for an account to see pricing.'
+  },
+  delivery: {
+    title: zh ? '配送' : 'Delivery',
+    metaTitle: zh ? '配送安排与起送额 | Van Harvest' : 'Delivery Schedule & Minimums | Van Harvest',
+    intro: zh
+      ? '我们自己的货车配送北卡、南卡、弗吉尼亚与亚特兰大。电话或短信下单，24 小时都可以，没有截单时间。'
+      : 'Our own trucks deliver across North Carolina, South Carolina, Virginia, and Atlanta. Call or text orders 24/7 with no order cutoff time.'
+  },
+  industries: {
+    title: zh ? '服务客户' : 'Who we serve',
+    metaTitle: zh ? '服务客户 | Van Harvest' : 'Foodservice Customers We Serve | Van Harvest',
+    intro: zh
+      ? '为中餐馆、日料及亚洲餐馆、超市与便利店供应肉类禽类、蔬果、水产、干货与餐饮用品。'
+      : 'Supplying Chinese restaurants, Japanese and Asian dining, supermarkets and convenience stores with proteins, produce, seafood, dry staples and supplies.'
+  },
+  careers: {
+    title: zh ? '招聘' : 'Careers',
+    metaTitle: zh ? '招聘司机与仓库人员 | Van Harvest' : 'Careers at Van Harvest | Charlotte, NC',
+    intro: zh
+      ? '目前常年招聘司机和仓库人员，欢迎投递。'
+      : 'We regularly hire drivers and warehouse associates. We welcome your application.'
+  },
+  suppliers: {
+    title: zh ? '供应商合作' : 'Supplier partnerships',
+    metaTitle: zh ? '供应商合作 | Van Harvest' : 'Become a Food Supplier | Van Harvest',
+    intro: zh
+      ? '欢迎食品、调味品、包装用品及相关品牌与 Van Harvest 建立长期供应合作。'
+      : 'We welcome food, seasoning, packaging and related brands interested in supplying Van Harvest.'
+  },
+  privacy: {
+    title: zh ? '隐私政策' : 'Privacy policy',
+    metaTitle: zh ? '隐私政策 | Van Harvest' : 'Privacy Policy | Van Harvest',
+    intro: zh
+      ? '本政策说明 Van Harvest 如何收集、使用和保护网站访客及业务联系人的信息。'
+      : 'This policy explains how Van Harvest collects, uses and protects information from website visitors and business contacts.'
+  },
+  terms: {
+    title: zh ? '网站条款' : 'Website terms',
+    metaTitle: zh ? '网站条款 | Van Harvest' : 'Website Terms | Van Harvest',
+    intro: zh
+      ? '本条款适用于您对 Van Harvest 网站、目录和联系表单的使用。'
+      : 'These terms apply to your use of the Van Harvest website, catalog and contact forms.'
+  }
 };
+
 const text = copy[kind] || copy.industries;
 const isForm = ['apply', 'careers', 'suppliers'].includes(kind);
 const isIndustries = kind === 'industries';
+const isDelivery = kind === 'delivery';
 const isLegal = ['privacy', 'terms'].includes(kind);
 const subject = kind === 'apply' ? 'Wholesale account application' : kind === 'suppliers' ? 'Supplier partnership inquiry' : 'Career application';
+
+const deliveryRows = zh
+  ? [
+      { area: '北卡 NC', plan: '每天配送' },
+      { area: '南卡 SC', plan: '每天配送' },
+      { area: '弗吉尼亚 VA', plan: '按需安排，请来电预约' },
+      { area: '亚特兰大 GA', plan: '按需安排，请来电预约' },
+    ]
+  : [
+      { area: 'North Carolina', plan: 'Daily' },
+      { area: 'South Carolina', plan: 'Daily' },
+      { area: 'Virginia', plan: 'Scheduled — call to arrange' },
+      { area: 'Atlanta, Georgia', plan: 'Scheduled — call to arrange' },
+    ];
+
 const legalSections = kind === 'privacy'
   ? (zh ? [
       ['我们收集的信息', '当您浏览网站、下载目录、提交表单或联系我们时，我们可能收集您提供的姓名、公司名称、职位、电话、邮箱、地址、业务需求及您选择附上的文件信息。网站也可能通过 Cookie 和类似技术收集基本设备、浏览器及页面访问数据，以保障网站正常运行并了解内容使用情况。'],
@@ -45,14 +106,218 @@ const legalSections = kind === 'privacy'
     ]);
 ---
 <BaseLayout title={text.metaTitle} description={text.intro} active="" lang={lang}>
-  <section class="inner-hero"><div class="shell inner-grid"><div class="reveal"><p class="eyebrow">{text.eyebrow}</p><h1>{text.title}</h1></div><div class="inner-copy reveal"><p>{text.intro}</p>{kind === 'apply' && <a class="button" href="#application-form">{zh ? '填写申请 →' : 'Start application →'}</a>}</div></div></section>
-  {isIndustries ? <section class="info-section"><div class="shell info-grid industries-grid">{[
-    {title: zh ? '中餐馆' : 'Chinese restaurants', copy: zh ? '肉类禽类、海鲜、酱料调味和冷冻点心，兼顾后厨常用食材。' : 'Meat and poultry, seafood, sauces and seasonings, plus frozen dim sum for busy back-of-house needs.', href: `${prefix}/products/meat/`},
-    {title: zh ? '日料与亚洲餐馆' : 'Japanese & Asian restaurants', copy: zh ? '海鲜、蔬菜水果、米面干货与餐饮用品，覆盖多样化菜单需求。' : 'Seafood, produce, rice and dry goods, plus restaurant supplies for varied menus.', href: `${prefix}/products/seafood/`},
-    {title: zh ? '超市与便利店' : 'Markets & convenience stores', copy: zh ? '新鲜蔬果、零食饮料和包装食品，为零售货架提供更多选择。' : 'Fresh produce, snacks, beverages and packaged food for retail shelves.', href: `${prefix}/products/prepared/`}
-  ].map((item) => <article class="info-card reveal"><h2>{item.title}</h2><p>{item.copy}</p><a class="text-link" href={item.href}>{zh ? '查看推荐品类 →' : 'Browse recommended categories →'}</a></article>)}</div></section> : kind === 'delivery' ? <section class="info-section"><div class="shell info-grid delivery-grid"><article class="info-card"><h2>{zh ? '配送区域' : 'Delivery areas'}</h2><p>North Carolina · South Carolina · Atlanta, GA · Virginia</p></article><article class="info-card"><h2>{zh ? '路线安排' : 'Route scheduling'}</h2><p>{zh ? '配送日与截单安排根据所在路线和账户服务方式沟通。' : 'Delivery-day and order-cutoff scheduling is arranged by route and account service needs.'}</p></article><article class="info-card"><h2>{zh ? '起送与服务' : 'Order service'}</h2><p>{zh ? '开户后可与团队沟通适合您地址与业务类型的配送服务。' : 'After account setup, the team can discuss delivery service suited to your address and operation.'}</p></article></div></section> : isForm ? <section class="info-section"><div class="shell form-page-grid"><div class="info-card"><p class="eyebrow">{zh ? '提交申请' : 'Submit your information'}</p><h2>{kind === 'careers' ? (zh ? '欢迎加入。' : 'We welcome your application.') : kind === 'suppliers' ? (zh ? '期待认识你的品牌。' : 'We look forward to learning about your brand.') : (zh ? '建立你的批发账户。' : 'Set up your wholesale account.')}</h2><p>{kind === 'apply' ? (zh ? '申请开户查看价格。' : 'Apply for an account to see pricing.') : (zh ? '提交信息后，将打开邮件草稿供您发送给 Van Harvest 团队。' : 'Submitting this form opens an email draft addressed to the Van Harvest team.')}</p></div><form id="application-form" class="application-form" data-mail-form data-subject={subject} data-lang={lang}>
-    {kind === 'apply' ? <><label><span>{zh ? '公司名' : 'Company name'}</span><input name="company" required /></label><label><span>{zh ? '业务类型' : 'Business type'}</span><select name="businessType"><option>{zh ? '餐馆' : 'Restaurant'}</option><option>{zh ? '超市' : 'Supermarket'}</option><option>{zh ? '其他' : 'Other'}</option></select></label><label><span>{zh ? '地址' : 'Address'}</span><input name="address" required /></label><div class="form-grid"><label><span>{zh ? '联系人' : 'Contact'}</span><input name="contact" required /></label><label><span>{zh ? '电话' : 'Phone'}</span><input name="phone" required /></label></div><label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" required /></label><label><span>EIN</span><input name="ein" /></label><label><span>{zh ? '预计周采购量' : 'Expected weekly purchasing'}</span><input name="weeklyPurchasing" /></label><label><span>{zh ? '转售证明（PDF 或图片）' : 'Resale Certificate (PDF or image)'}</span><input type="file" name="resaleCertificate" accept="application/pdf,image/*" /></label><label class="checkbox-line"><input type="checkbox" name="netTerms" /> <span>{zh ? '申请账期' : 'Apply for credit terms'}</span></label></> : kind === 'careers' ? <><label><span>{zh ? '姓名' : 'Name'}</span><input name="name" required /></label><div class="form-grid"><label><span>{zh ? '电话' : 'Phone'}</span><input name="phone" required /></label><label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" required /></label></div><label><span>{zh ? '应聘职位' : 'Position'}</span><select name="position"><option>{zh ? '司机' : 'Driver'}</option><option>{zh ? '仓库人员' : 'Warehouse'}</option><option>{zh ? '销售' : 'Sales'}</option><option>{zh ? '其他' : 'Other'}</option></select></label><label><span>{zh ? '是否有 CDL' : 'Do you have a CDL?'}</span><select name="cdl"><option>{zh ? '否' : 'No'}</option><option>{zh ? '是' : 'Yes'}</option></select></label><label><span>{zh ? '可上班时间' : 'Available start date'}</span><input name="availability" /></label><label><span>{zh ? '简历上传' : 'Resume upload'}</span><input type="file" name="resume" accept="application/pdf,.doc,.docx,image/*" /></label><label><span>{zh ? '留言' : 'Message'}</span><textarea name="message" rows="5"></textarea></label></> : <><label><span>{zh ? '公司名' : 'Company name'}</span><input name="company" required /></label><label><span>{zh ? '联系人' : 'Contact'}</span><input name="contact" required /></label><div class="form-grid"><label><span>{zh ? '电话' : 'Phone'}</span><input name="phone" required /></label><label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" required /></label></div><label><span>{zh ? '产品品类' : 'Product category'}</span><input name="category" /></label><label><span>{zh ? '品牌' : 'Brand'}</span><input name="brand" /></label><label><span>{zh ? '所在地' : 'Location'}</span><input name="location" /></label><label><span>{zh ? '产品目录上传' : 'Product catalog upload'}</span><input type="file" name="catalogFile" accept="application/pdf,image/*,.xls,.xlsx,.csv" /></label><label><span>{zh ? '留言' : 'Message'}</span><textarea name="message" rows="5"></textarea></label></>}
-    <div class="form-actions"><button class="button" type="submit">{zh ? '发送 →' : 'Send →'}</button><span class="form-status" data-form-status aria-live="polite"></span></div>
-  </form></div></section> : isLegal ? <section class="info-section"><div class="shell legal-reading">{legalSections.map(([heading, body]) => <article><h2>{heading}</h2><p>{body}</p></article>)}</div></section> : null}
+  <section class="inner-hero">
+    <div class="shell inner-grid">
+      <div class="reveal">
+        <h1>{text.title}</h1>
+      </div>
+      <div class="inner-copy reveal">
+        <p>{text.intro}</p>
+        {kind === 'apply' && <a class="button" href="#application-form">{zh ? '填写申请 →' : 'Start application →'}</a>}
+        {kind === 'delivery' && (
+          <div class="hero-actions" style="margin-top:14px">
+            <a class="button" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a>
+            <a class="button button-outline" href={`tel:${contact.phoneHref}`}>{zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}</a>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  {isIndustries ? (
+    <section class="info-section">
+      <div class="shell info-grid industries-grid">
+        {[
+          {
+            title: zh ? '中餐馆' : 'Chinese restaurants',
+            copy: zh ? '肉类禽类、海鲜、酱料调味和冷冻点心，兼顾后厨常用食材。' : 'Meat and poultry, seafood, sauces and seasonings, plus frozen dim sum for back-of-house needs.',
+            href: `${prefix}/products/meat/`
+          },
+          {
+            title: zh ? '日料与亚洲餐馆' : 'Japanese & Asian restaurants',
+            copy: zh ? '海鲜、蔬菜水果、米面干货与餐饮用品，覆盖多样化菜单需求。' : 'Seafood, produce, rice and dry goods, plus restaurant supplies for varied menus.',
+            href: `${prefix}/products/seafood/`
+          },
+          {
+            title: zh ? '超市与便利店' : 'Markets & convenience stores',
+            copy: zh ? '新鲜蔬果、零食饮料和包装食品，为零售货架提供更多选择。' : 'Fresh produce, snacks, beverages and packaged food for retail shelves.',
+            href: `${prefix}/products/prepared/`
+          }
+        ].map((item) => (
+          <article class="info-card reveal">
+            <h2>{item.title}</h2>
+            <p>{item.copy}</p>
+            <a class="text-link" href={item.href}>{zh ? '查看推荐品类 →' : 'Browse recommended categories →'}</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  ) : isDelivery ? (
+    <section class="info-section">
+      <div class="shell delivery-clean-wrap">
+        <div class="delivery-table-card">
+          <h2>{zh ? '各区域配送安排' : 'Delivery schedule by area'}</h2>
+          <table class="services-clean-table">
+            <thead>
+              <tr>
+                <th scope="col">{zh ? '地区' : 'Area'}</th>
+                <th scope="col">{zh ? '配送安排' : 'Delivery'}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {deliveryRows.map((row) => (
+                <tr>
+                  <td><strong>{row.area}</strong></td>
+                  <td>{row.plan}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="services-min-order">
+            {zh ? '最低起送额：每次 $500。' : 'Minimum order: $500 per delivery.'}
+          </p>
+        </div>
+
+        <div class="delivery-rules-grid">
+          <article class="info-card">
+            <h2>{zh ? '随时下单' : 'Order anytime'}</h2>
+            <p>{zh ? '电话或短信下单，24 小时都可以，没有截单时间。' : 'Call or text your order 24/7. There is no order cutoff time.'}</p>
+          </article>
+          <article class="info-card">
+            <h2>{zh ? '货车送货上门' : 'Truck delivery'}</h2>
+            <p>{zh ? '我们自己的冷链货车送货，到货时请与司机当面核对。如有缺损当场处理。' : 'Your order arrives on our truck. Check it with the driver at the door. Damaged or wrong items are credited or exchanged.'}</p>
+          </article>
+          <article class="info-card">
+            <h2>{zh ? '开户与付款' : 'Account & payment'}</h2>
+            <p>{zh ? '新客户货到付款（COD）。合作满一个月后，可申请账期。' : 'New accounts pay COD (cash on delivery). Payment terms are available after one month.'}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  ) : isForm ? (
+    <section class="info-section">
+      <div class="shell form-page-grid">
+        <div class="info-card">
+          <h2>
+            {kind === 'careers'
+              ? (zh ? '欢迎加入' : 'We welcome your application')
+              : kind === 'suppliers'
+              ? (zh ? '供应商合作' : 'Supplier partnership')
+              : (zh ? '建立批发账户' : 'Set up your wholesale account')}
+          </h2>
+          <p>
+            {kind === 'apply'
+              ? (zh
+                  ? '新客户货到付款，合作满一个月可申请账期。申请开户查看价格。'
+                  : 'New accounts start on COD; payment terms available after one month. Apply for an account to see pricing.')
+              : (zh
+                  ? '提交信息后，将打开邮件草稿供您发送给 Van Harvest 团队。'
+                  : 'Submitting this form opens an email draft addressed to the Van Harvest team.')}
+          </p>
+        </div>
+
+        <form id="application-form" class="application-form" data-mail-form data-subject={subject} data-lang={lang}>
+          {kind === 'apply' ? (
+            <>
+              <label><span>{zh ? '公司名' : 'Company name'}</span><input name="company" required /></label>
+              <label>
+                <span>{zh ? '业务类型' : 'Business type'}</span>
+                <select name="businessType">
+                  <option>{zh ? '餐馆' : 'Restaurant'}</option>
+                  <option>{zh ? '超市' : 'Supermarket'}</option>
+                  <option>{zh ? '其他' : 'Other'}</option>
+                </select>
+              </label>
+              <label><span>{zh ? '地址' : 'Address'}</span><input name="address" required /></label>
+              <div class="form-grid">
+                <label><span>{zh ? '联系人' : 'Contact'}</span><input name="contact" required /></label>
+                <label><span>{zh ? '电话' : 'Phone'}</span><input name="phone" required /></label>
+              </div>
+              <label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" required /></label>
+              <label><span>EIN</span><input name="ein" /></label>
+              <label><span>{zh ? '预计周采购量' : 'Expected weekly purchasing'}</span><input name="weeklyPurchasing" /></label>
+              <label><span>{zh ? '转售证明（PDF 或图片）' : 'Resale Certificate (PDF or image)'}</span><input type="file" name="resaleCertificate" accept="application/pdf,image/*" /></label>
+              <label class="checkbox-line">
+                <input type="checkbox" name="netTerms" />
+                <span>{zh ? '申请账期（合作满 1 个月后生效）' : 'Apply for payment terms (available after 1 month)'}</span>
+              </label>
+            </>
+          ) : kind === 'careers' ? (
+            <>
+              <label><span>{zh ? '姓名' : 'Name'}</span><input name="name" required /></label>
+              <div class="form-grid">
+                <label><span>{zh ? '电话' : 'Phone'}</span><input name="phone" required /></label>
+                <label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" required /></label>
+              </div>
+              <label>
+                <span>{zh ? '应聘职位' : 'Position'}</span>
+                <select name="position">
+                  <option>{zh ? '司机' : 'Driver'}</option>
+                  <option>{zh ? '仓库人员' : 'Warehouse'}</option>
+                  <option>{zh ? '销售' : 'Sales'}</option>
+                  <option>{zh ? '其他' : 'Other'}</option>
+                </select>
+              </label>
+              <label>
+                <span>{zh ? '是否有 CDL' : 'Do you have a CDL?'}</span>
+                <select name="cdl">
+                  <option>{zh ? '否' : 'No'}</option>
+                  <option>{zh ? '是' : 'Yes'}</option>
+                </select>
+              </label>
+              <label><span>{zh ? '可上班时间' : 'Available start date'}</span><input name="availability" /></label>
+              <label><span>{zh ? '简历上传' : 'Resume upload'}</span><input type="file" name="resume" accept="application/pdf,.doc,.docx,image/*" /></label>
+              <label><span>{zh ? '留言' : 'Message'}</span><textarea name="message" rows="5"></textarea></label>
+            </>
+          ) : (
+            <>
+              <label><span>{zh ? '公司名' : 'Company name'}</span><input name="company" required /></label>
+              <label><span>{zh ? '联系人' : 'Contact'}</span><input name="contact" required /></label>
+              <div class="form-grid">
+                <label><span>{zh ? '电话' : 'Phone'}</span><input name="phone" required /></label>
+                <label><span>{zh ? '邮箱' : 'Email'}</span><input type="email" name="email" required /></label>
+              </div>
+              <label><span>{zh ? '产品品类' : 'Product category'}</span><input name="category" /></label>
+              <label><span>{zh ? '品牌' : 'Brand'}</span><input name="brand" /></label>
+              <label><span>{zh ? '所在地' : 'Location'}</span><input name="location" /></label>
+              <label><span>{zh ? '产品目录上传' : 'Product catalog upload'}</span><input type="file" name="catalogFile" accept="application/pdf,image/*,.xls,.xlsx,.csv" /></label>
+              <label><span>{zh ? '留言' : 'Message'}</span><textarea name="message" rows="5"></textarea></label>
+            </>
+          )}
+          <div class="form-actions">
+            <button class="button" type="submit">{zh ? '发送 →' : 'Send →'}</button>
+            <span class="form-status" data-form-status aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  ) : isLegal ? (
+    <section class="info-section">
+      <div class="shell legal-reading">
+        {legalSections.map(([heading, body]) => (
+          <article>
+            <h2>{heading}</h2>
+            <p>{body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  ) : null}
 </BaseLayout>
-{isForm && <script is:inline define:vars={{ officeEmail: contact.officeEmail }}>{`document.querySelectorAll('[data-mail-form]').forEach((form) => form.addEventListener('submit', (event) => { event.preventDefault(); const data = new FormData(form); const subject = form.dataset.subject || 'Van Harvest inquiry'; const files = Array.from(form.querySelectorAll('input[type=file]')).map((input) => input.files?.[0]?.name).filter(Boolean); const body = Array.from(data.entries()).filter(([key, value]) => typeof value === 'string' && !['resaleCertificate','resume','catalogFile'].includes(key)).map(([key, value]) => key + ': ' + value).join('\\n'); window.location.href = 'mailto:' + officeEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); const zh = form.dataset.lang === 'zh'; form.querySelector('[data-form-status]').textContent = zh ? (files.length ? '邮件草稿已打开，请在发送前附上所选文件。' : '邮件草稿已打开。') : (files.length ? 'Your email draft is open. Please attach the selected file before sending.' : 'Your email draft is open.'); }));`}</script>}
+
+{isForm && (
+  <script is:inline define:vars={{ officeEmail: contact.officeEmail }}>{`
+    document.querySelectorAll('[data-mail-form]').forEach((form) => form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const subject = form.dataset.subject || 'Van Harvest inquiry';
+      const files = Array.from(form.querySelectorAll('input[type=file]')).map((input) => input.files?.[0]?.name).filter(Boolean);
+      const body = Array.from(data.entries()).filter(([key, value]) => typeof value === 'string' && !['resaleCertificate','resume','catalogFile'].includes(key)).map(([key, value]) => key + ': ' + value).join('\\n');
+      window.location.href = 'mailto:' + officeEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      const zh = form.dataset.lang === 'zh';
+      form.querySelector('[data-form-status]').textContent = zh
+        ? (files.length ? '邮件草稿已打开，请在发送前附上所选文件。' : '邮件草稿已打开。')
+        : (files.length ? 'Your email draft is open. Please attach the selected file before sending.' : 'Your email draft is open.');
+    }));
+  `}</script>
+)}

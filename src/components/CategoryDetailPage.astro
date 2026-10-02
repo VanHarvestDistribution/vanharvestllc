@@ -29,8 +29,7 @@ const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' 
     <div class="shell category-detail-inner">
       <p class="breadcrumb"><a href={`${prefix}/products/`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p>
       <div class="category-detail-copy">
-        <p class="eyebrow eyebrow-light">{name}</p>
-        <h1>{name}<br /><em>{zh ? '为专业厨房准备。' : 'for the professional kitchen.'}</em></h1>
+        <h1>{name}</h1>
         <p>{zh ? category.shortZh : category.short}</p>
         <a class="button" href="#category-products">{zh ? '浏览全部产品 →' : 'Browse all products →'}</a>
       </div>
@@ -41,7 +40,7 @@ const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' 
     <section class="featured-products">
       <div class="shell">
         <div class="featured-products-heading">
-          <div><p class="eyebrow">{zh ? '精选产品' : 'Featured products'}</p><h2>{zh ? <>精选<br /><em>产品。</em></> : <>Featured<br /><em>products.</em></>}</h2></div>
+          <div><h2>{zh ? '实拍精选产品' : 'Featured products'}</h2></div>
           <p>{zh ? '精选代表性常备条目，方便快速了解品类；更多规格可在下方完整目录中浏览。' : 'A curated selection of representative items. Browse every item in the complete department list below.'}</p>
         </div>
         <div class="featured-product-grid">
@@ -60,7 +59,7 @@ const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' 
   <section class="category-product-list" id="category-products">
     <div class="shell">
       <div class="category-product-list-heading">
-        <div><p class="eyebrow">{zh ? '本品类全部产品' : 'Complete department list'}</p><h2>{zh ? `${name}全系列` : `All ${category.name}`}</h2></div>
+        <div><h2>{zh ? `${name}全部产品` : `All ${category.name}`}</h2></div>
         <p>{zh ? `共 ${products.length.toLocaleString()} 个产品。点击任一产品查看包装、温层与实拍图（如有）。` : `${products.length.toLocaleString()} products. Select any product for pack, storage and an actual product photo where available.`}</p>
       </div>
       <div class="catalog-table-wrap category-product-table-wrap">
