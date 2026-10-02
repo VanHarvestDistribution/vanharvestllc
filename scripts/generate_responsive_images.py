@@ -21,7 +21,7 @@ TARGET_IMAGES = [
     'public/images/category-supplies.webp',
     # Hero images
     'public/images/home/hero-beef-steaks.webp',
-    'public/images/home/hero-produce-market.webp',
+    'public/images/home/hero-fruit-still-life.webp',
     'public/images/home/hero-asian-produce.webp',
     'public/images/home/hero-cold-chain.webp',
     # Live seafood

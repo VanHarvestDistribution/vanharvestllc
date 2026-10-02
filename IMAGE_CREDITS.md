@@ -1,6 +1,6 @@
 # Image Credits and Licensing Information
 
-All photography used on the Van Harvest Distribution website is sourced from real, commercial-use royalty-free collections (**Unsplash** and **Pexels** under their respective free commercial licenses). No AI-generated or synthetic illustrations are used.
+All photography used on the Van Harvest Distribution website is either supplied directly by Van Harvest or sourced from real, commercial-use royalty-free collections (**Unsplash** and **Pexels** under their respective free commercial licenses). No AI-generated or synthetic illustrations are used.
 
 ---
 
@@ -24,8 +24,8 @@ All photography used on the Van Harvest Distribution website is sourced from rea
 
 | Slide | Filename | Subject Description | Source & Author | License URL |
 | :--- | :--- | :--- | :--- | :--- |
-| **Hero 1: Prime Meats** | `hero-beef-steaks.webp` | Prime beef cuts hanging in butcher window | Photo by **Jez Timms** on Unsplash | [Unsplash License](https://unsplash.com/photos/raw-meat-hanging-in-a-butcher-shop-window) |
-| **Hero 2: Fresh Produce** | `hero-produce-market.webp` | Basket of fresh market vegetables | Photo on **Pexels** | [Pexels License](https://www.pexels.com/photo/asian-woman-with-basket-full-of-fresh-produce/) |
+| **Hero 1: Fresh Fruit** | `hero-fruit-still-life.webp` | Pineapple, pomegranate, apple, pear and raspberry still life on green surface | **User-provided Van Harvest asset** | Customer-supplied asset |
+| **Hero 2: Prime Steaks** | `hero-beef-steaks.webp` | Top-view raw beef steaks with rosemary, garlic and spices | **User-provided Van Harvest asset** | Customer-supplied asset |
 | **Hero 3: Asian Greens** | `hero-asian-produce.webp` | Fresh wholesale box of green bok choy | Photo on **Pexels** | [Pexels License](https://www.pexels.com/photo/a-photograph-of-bok-choy-in-a-box/) |
 | **Hero 4: Cold-Chain Logistics** | `hero-cold-chain.webp` | Commercial refrigerated delivery truck fleet | Photo by **CHUTTERSNAP** on Unsplash | [Unsplash License](https://unsplash.com/photos/food-logistics) |
 
