@@ -12,40 +12,40 @@ const title = zh
   : 'Ordering & Delivery | Van Harvest';
 
 const description = zh
-  ? '在 Van Harvest 开户、下单和收货的方式：24 小时电话或短信下单，无截单时间，货车送货上门，最低起送额 $500。'
+  ? '在 Van Harvest 开户、下单和收货的方式：24 小时电话或短信下单，无截单时间，自有货车配送，最低起送额 $500。'
   : 'How to open an account, place orders and get deliveries from Van Harvest. Order 24/7 with no cutoff time, truck delivery and $500 minimum.';
 
 const steps = zh
   ? [
       {
-        num: '1',
+        num: '01',
         title: '申请开户',
         desc: '在线填写开户申请，办公室会联系您完成开户。'
       },
       {
-        num: '2',
+        num: '02',
         title: '随时下单',
         desc: '电话或短信下单，24 小时都可以，没有截单时间。'
       },
       {
-        num: '3',
+        num: '03',
         title: '送货上门',
         desc: '我们自己的货车送货，到货时请与司机当面核对。'
       }
     ]
   : [
       {
-        num: '1',
+        num: '01',
         title: 'Apply for an account',
         desc: 'Fill out the online application. Our office will contact you to set it up.'
       },
       {
-        num: '2',
+        num: '02',
         title: 'Order anytime',
         desc: 'Call or text your order 24/7. There is no order cutoff time.'
       },
       {
-        num: '3',
+        num: '03',
         title: 'We deliver',
         desc: 'Your order arrives on our truck. Check it with the driver at the door.'
       }
@@ -66,135 +66,131 @@ const deliveryRows = zh
     ];
 ---
 <BaseLayout title={title} description={description} active="/services" lang={lang}>
-  <div class="services-clean-page">
-    <header class="services-clean-header">
-      <div class="shell">
-        <h1>{zh ? '下单与配送' : 'Ordering & Delivery'}</h1>
-        <p class="services-clean-intro">
-          {zh ? '在 Van Harvest 开户、下单和收货的方式。' : 'How to open an account, place orders and get deliveries from Van Harvest.'}
-        </p>
+  <div class="services-editorial-page">
+    <!-- 1. Split Hero: 70vh split screen (Left: Real Warehouse photo; Right: Dark Navy with 64px H1 and 3 key metrics) -->
+    <header class="services-editorial-hero">
+      <div class="editorial-hero-media">
+        <img
+          src="/images/facilities/warehouse-facility.webp"
+          alt={zh ? 'Van Harvest 夏洛特中央仓库实拍' : 'Van Harvest Charlotte warehouse facility'}
+          loading="eager"
+        />
+      </div>
+      <div class="editorial-hero-content">
+        <div class="editorial-hero-inner">
+          <h1>{zh ? '下单与配送' : 'Ordering & Delivery'}</h1>
+          <p class="editorial-hero-sub">
+            {zh
+              ? '在 Van Harvest 开户、下单和收货的方式。'
+              : 'How to open an account, place orders and get deliveries from Van Harvest.'}
+          </p>
+          <div class="editorial-hero-divider"></div>
+          <div class="editorial-hero-metrics">
+            <div class="hero-metric-item">
+              <span class="metric-val">24/7</span>
+              <span class="metric-lbl">{zh ? '随时下单' : 'ordering'}</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="metric-val">$500</span>
+              <span class="metric-lbl">{zh ? '每次起送' : 'minimum order'}</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="metric-val">{zh ? '每日' : 'Daily'}</span>
+              <span class="metric-lbl">NC &amp; SC</span>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <!-- Visual Banner: Real warehouse & logistics operations -->
-    <div class="shell services-photo-grid">
-      <figure class="services-photo-item">
-        <img src="/images/facilities/warehouse-facility.webp" alt={zh ? 'Van Harvest 食品仓库备货与分拣' : 'Van Harvest warehouse staging and picking'} loading="eager" />
-        <figcaption>{zh ? '29,000 平方英尺仓库分拣与备货' : '29,000 SF warehouse staging and order picking'}</figcaption>
-      </figure>
-      <figure class="services-photo-item">
-        <img src="/images/home/hero-cold-chain.webp" alt={zh ? 'Van Harvest 冷链配送货车' : 'Van Harvest refrigerated delivery truck fleet'} loading="eager" />
-        <figcaption>{zh ? '自有冷链车队与装车' : 'Dedicated refrigerated fleet and loading'}</figcaption>
-      </figure>
-      <figure class="services-photo-item">
-        <img src="/images/facilities/distribution-facility.webp" alt={zh ? 'Van Harvest 区域配送与月台装卸' : 'Van Harvest distribution operations and dock staging'} loading="eager" />
-        <figcaption>{zh ? '区域配送月台与装运' : 'Regional dock staging and outbound routing'}</figcaption>
-      </figure>
-    </div>
-
-    <!-- Section 1: How ordering works -->
-    <section class="services-section">
-      <div class="shell">
-        <div class="services-section-head">
+    <!-- 2. "How ordering works": Full width 1200px container, 3 unboxed columns, giant thin 01/02/03 numerals -->
+    <section class="editorial-section">
+      <div class="editorial-container">
+        <div class="editorial-section-header">
           <h2>{zh ? '下单流程' : 'How ordering works'}</h2>
         </div>
-        <div class="services-steps-grid">
+        <div class="editorial-rule"></div>
+        <div class="editorial-steps-grid">
           {steps.map((step) => (
-            <article class="services-step-card">
-              <span class="step-badge">{step.num}</span>
+            <div class="editorial-step-col">
+              <span class="editorial-step-num">{step.num}</span>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
-            </article>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Delivery -->
-    <section class="services-section">
-      <div class="shell">
-        <div class="services-section-head">
+    <!-- 3. "Delivery": Timetable style full-width clean row list separated by subtle hairline dividers -->
+    <section class="editorial-section">
+      <div class="editorial-container">
+        <div class="editorial-section-header">
           <h2>{zh ? '配送' : 'Delivery'}</h2>
         </div>
-        <div class="services-table-wrap">
-          <table class="services-clean-table">
-            <thead>
-              <tr>
-                <th scope="col">{zh ? '地区' : 'Area'}</th>
-                <th scope="col">{zh ? '配送安排' : 'Delivery'}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {deliveryRows.map((row) => (
-                <tr>
-                  <td><strong>{row.area}</strong></td>
-                  <td>{row.plan}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p class="services-min-order">
-            {zh ? '最低起送额：每次 $500。' : 'Minimum order: $500 per delivery.'}
-          </p>
+        <div class="editorial-timetable">
+          {deliveryRows.map((row) => (
+            <div class="timetable-row">
+              <span class="timetable-area">{row.area}</span>
+              <span class="timetable-plan">{row.plan}</span>
+            </div>
+          ))}
         </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Payment -->
-    <section class="services-section">
-      <div class="shell">
-        <div class="services-section-head">
-          <h2>{zh ? '付款方式' : 'Payment'}</h2>
-        </div>
-        <div class="services-prose-card">
+        <div class="editorial-timetable-footer">
           <p>
-            {zh
-              ? '新客户货到付款（COD）。合作满一个月后，可申请账期。'
-              : 'New accounts pay COD (cash on delivery). After one month of ordering with us, you can apply for payment terms.'}
+            {zh ? (
+              <>最低起送额 — <strong>$500</strong> 每次配送</>
+            ) : (
+              <>Minimum order — <strong>$500</strong> per delivery</>
+            )}
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Shortages & returns -->
-    <section class="services-section">
-      <div class="shell">
-        <div class="services-section-head">
-          <h2>{zh ? '缺货与退换' : 'Shortages & returns'}</h2>
-        </div>
-        <div class="services-prose-card">
-          <p>
-            {zh
-              ? '到货时请与司机当面核对。如有破损、缺货或送错，当场告诉司机，免费退换。'
-              : 'Check your order with the driver when it arrives. If anything is damaged, missing or wrong, tell the driver on the spot — we exchange or credit it free of charge.'}
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 5: Contact -->
-    <section class="services-section services-contact-section">
-      <div class="shell">
-        <div class="services-section-head">
-          <h2>{zh ? '联系我们' : 'Contact'}</h2>
-        </div>
-        <div class="services-contact-card">
-          <p class="contact-entry">
-            <strong>{zh ? '电话 / 短信下单：' : 'Phone / text orders: '}</strong>
-            <a href={`tel:${contact.phoneHref}`}>{contact.phoneDisplay}</a>
-          </p>
-          <p class="contact-entry">
-            <strong>{zh ? '仓库与办公室地址：' : 'Address: '}</strong>
-            <span>{contact.address}</span>
-          </p>
-          <div class="services-action-buttons">
-            <a class="button" href={`${prefix}/apply/`}>
-              {zh ? '申请开户 →' : 'Apply for an account →'}
-            </a>
-            <a class="button button-outline" href={`tel:${contact.phoneHref}`}>
-              {zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}
-            </a>
+    <!-- 4. "Payment" & "Shortages & returns": Two wide unboxed columns side by side -->
+    <section class="editorial-section">
+      <div class="editorial-container">
+        <div class="editorial-two-col-grid">
+          <div class="editorial-col">
+            <h2>{zh ? '付款方式' : 'Payment'}</h2>
+            <div class="editorial-rule"></div>
+            <p>
+              {zh
+                ? '新客户货到付款（COD）。合作满一个月后，可申请账期。'
+                : 'New accounts pay COD (cash on delivery). After one month of ordering with us, you can apply for payment terms.'}
+            </p>
           </div>
+          <div class="editorial-col">
+            <h2>{zh ? '缺货与退换' : 'Shortages & returns'}</h2>
+            <div class="editorial-rule"></div>
+            <p>
+              {zh
+                ? '到货时请与司机当面核对。如有破损、缺货或送错，当场告诉司机，免费退换。'
+                : 'Check your order with the driver when it arrives. If anything is damaged, missing or wrong, tell the driver on the spot — we exchange or credit it free of charge.'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Full-width dark navy banner with 72px phone number and high-contrast action buttons -->
+    <section class="editorial-contact-banner">
+      <div class="editorial-container contact-banner-inner">
+        <p class="contact-banner-sub">
+          {zh ? '电话或短信下单' : 'Call or text your order'}
+        </p>
+        <a class="contact-banner-phone" href={`tel:${contact.phoneHref}`}>
+          {contact.phoneDisplay}
+        </a>
+        <p class="contact-banner-address">{contact.address}</p>
+        <div class="contact-banner-actions">
+          <a class="button button-gold" href={`${prefix}/apply/`}>
+            {zh ? '申请开户 →' : 'Apply for an account →'}
+          </a>
+          <a class="button button-white-outline" href={`tel:${contact.phoneHref}`}>
+            {zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}
+          </a>
         </div>
       </div>
     </section>

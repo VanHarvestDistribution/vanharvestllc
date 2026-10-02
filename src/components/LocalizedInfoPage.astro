@@ -17,10 +17,10 @@ const copy: Record<string, { title: string; metaTitle: string; intro: string }> 
       : 'Share your business details online. New accounts start on COD; payment terms available after one month. Apply for an account to see pricing.'
   },
   delivery: {
-    title: zh ? '配送' : 'Delivery',
+    title: zh ? '配送安排' : 'Delivery schedule',
     metaTitle: zh ? '配送安排与起送额 | Van Harvest' : 'Delivery Schedule & Minimums | Van Harvest',
     intro: zh
-      ? '我们自己的货车配送北卡、南卡、弗吉尼亚与亚特兰大。电话或短信下单，24 小时都可以，没有截单时间。'
+      ? '我们自己的冷链货车配送北卡、南卡、弗吉尼亚与亚特兰大。电话或短信下单，24 小时都可以，没有截单时间。'
       : 'Our own trucks deliver across North Carolina, South Carolina, Virginia, and Atlanta. Call or text orders 24/7 with no order cutoff time.'
   },
   industries: {
@@ -108,15 +108,15 @@ const legalSections = kind === 'privacy'
 <BaseLayout title={text.metaTitle} description={text.intro} active="" lang={lang}>
   <section class="inner-hero">
     <div class="shell inner-grid">
-      <div class="reveal">
+      <div>
         <h1>{text.title}</h1>
       </div>
-      <div class="inner-copy reveal">
+      <div class="inner-copy">
         <p>{text.intro}</p>
         {kind === 'apply' && <a class="button" href="#application-form">{zh ? '填写申请 →' : 'Start application →'}</a>}
         {kind === 'delivery' && (
-          <div class="hero-actions" style="margin-top:14px">
-            <a class="button" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a>
+          <div class="hero-actions" style="margin-top:20px; display:flex; gap:14px; flex-wrap:wrap;">
+            <a class="button button-gold" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a>
             <a class="button button-outline" href={`tel:${contact.phoneHref}`}>{zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}</a>
           </div>
         )}
@@ -144,53 +144,50 @@ const legalSections = kind === 'privacy'
             href: `${prefix}/products/prepared/`
           }
         ].map((item) => (
-          <article class="info-card reveal">
+          <article class="info-card">
             <h2>{item.title}</h2>
+            <div class="editorial-rule"></div>
             <p>{item.copy}</p>
-            <a class="text-link" href={item.href}>{zh ? '查看推荐品类 →' : 'Browse recommended categories →'}</a>
+            <a class="text-link" href={item.href} style="margin-top:16px;">{zh ? '查看推荐品类 →' : 'Browse recommended categories →'}</a>
           </article>
         ))}
       </div>
     </section>
   ) : isDelivery ? (
     <section class="info-section">
-      <div class="shell delivery-clean-wrap">
-        <div class="delivery-table-card">
-          <h2>{zh ? '各区域配送安排' : 'Delivery schedule by area'}</h2>
-          <table class="services-clean-table">
-            <thead>
-              <tr>
-                <th scope="col">{zh ? '地区' : 'Area'}</th>
-                <th scope="col">{zh ? '配送安排' : 'Delivery'}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {deliveryRows.map((row) => (
-                <tr>
-                  <td><strong>{row.area}</strong></td>
-                  <td>{row.plan}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p class="services-min-order">
-            {zh ? '最低起送额：每次 $500。' : 'Minimum order: $500 per delivery.'}
+      <div class="shell delivery-editorial-wrap">
+        <h2>{zh ? '各区域配送安排' : 'Delivery schedule by area'}</h2>
+        <div class="editorial-timetable">
+          {deliveryRows.map((row) => (
+            <div class="timetable-row">
+              <span class="timetable-area">{row.area}</span>
+              <span class="timetable-plan">{row.plan}</span>
+            </div>
+          ))}
+        </div>
+        <div class="editorial-timetable-footer">
+          <p>
+            {zh ? (
+              <>最低起送额 — <strong>$500</strong> 每次配送</>
+            ) : (
+              <>Minimum order — <strong>$500</strong> per delivery</>
+            )}
           </p>
         </div>
 
-        <div class="delivery-rules-grid">
-          <article class="info-card">
+        <div class="delivery-rules-editorial-grid">
+          <div class="delivery-rule-col">
             <h2>{zh ? '随时下单' : 'Order anytime'}</h2>
             <p>{zh ? '电话或短信下单，24 小时都可以，没有截单时间。' : 'Call or text your order 24/7. There is no order cutoff time.'}</p>
-          </article>
-          <article class="info-card">
+          </div>
+          <div class="delivery-rule-col">
             <h2>{zh ? '货车送货上门' : 'Truck delivery'}</h2>
             <p>{zh ? '我们自己的冷链货车送货，到货时请与司机当面核对。如有缺损当场处理。' : 'Your order arrives on our truck. Check it with the driver at the door. Damaged or wrong items are credited or exchanged.'}</p>
-          </article>
-          <article class="info-card">
+          </div>
+          <div class="delivery-rule-col">
             <h2>{zh ? '开户与付款' : 'Account & payment'}</h2>
             <p>{zh ? '新客户货到付款（COD）。合作满一个月后，可申请账期。' : 'New accounts pay COD (cash on delivery). Payment terms are available after one month.'}</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -205,6 +202,7 @@ const legalSections = kind === 'privacy'
               ? (zh ? '供应商合作' : 'Supplier partnership')
               : (zh ? '建立批发账户' : 'Set up your wholesale account')}
           </h2>
+          <div class="editorial-rule"></div>
           <p>
             {kind === 'apply'
               ? (zh
@@ -297,6 +295,7 @@ const legalSections = kind === 'privacy'
         {legalSections.map(([heading, body]) => (
           <article>
             <h2>{heading}</h2>
+            <div class="editorial-rule"></div>
             <p>{body}</p>
           </article>
         ))}

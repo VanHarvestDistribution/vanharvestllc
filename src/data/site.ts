@@ -25,7 +25,6 @@ export const heroImages = [
   '/images/home/hero-fruit-still-life.webp',
   '/images/home/hero-beef-steaks.webp',
   '/images/home/hero-asian-produce.webp',
-  '/images/home/hero-cold-chain.webp',
 ] as const;
 
 export const heroImage = heroImages[0];
