@@ -1,0 +1,15 @@
+---
+import LocalizedProductDetailPage from '@/components/LocalizedProductDetailPage.astro';
+import products from '@/data/products.json';
+import { categories } from '@/data/site';
+import { yellowLabelProductImages } from '@/data/yellowLabelProductImages';
+
+export function getStaticPaths() {
+  return (products as any[]).filter((product) => yellowLabelProductImages[String(product.id)]).map((product) => ({
+    params: { category: product.category, itemNumber: String(product.id) },
+    props: { product: { ...product, image: yellowLabelProductImages[String(product.id)] }, category: categories.find((item) => item.key === product.category) }
+  }));
+}
+const { product, category } = Astro.props;
+---
+<LocalizedProductDetailPage product={product} category={category} lang="zh" localized />

@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CallToAction from '@/components/CallToAction.astro';
-import ProductDrawer from '@/components/ProductDrawer.astro';
 import productsData from '@/data/products.json';
 import { yellowLabelProductImages } from '@/data/yellowLabelProductImages';
 import { curatedCategoryFeaturedIds } from '@/data/curatedCategoryFeatured';
@@ -13,14 +12,13 @@ const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
 const products = (productsData as any[]).filter((product) => product.category === category.key);
 const configuredIds = curatedCategoryFeaturedIds[category.key] || [];
-const featured = configuredIds
-  .map((id) => products.find((product) => product.id === id))
-  .filter((product): product is any => Boolean(product && yellowLabelProductImages[product.id]))
-  .map((product) => ({ product, image: yellowLabelProductImages[product.id] }));
+const featured = configuredIds.map((id) => products.find((product) => product.id === id)).filter((product): product is any => Boolean(product && yellowLabelProductImages[product.id])).map((product) => ({ product, image: yellowLabelProductImages[product.id] }));
 const name = zh ? category.nameZh : category.name;
 const title = zh ? `${name}批发产品 | Van Harvest` : `${category.name} Wholesale Products | Van Harvest`;
-const description = zh ? `浏览 Van Harvest ${name}的全部产品、中英文名称、包装与温层信息。` : `Browse every Van Harvest ${category.name.toLowerCase()} product with bilingual names, pack and storage details.`;
+const description = zh ? `浏览 Van Harvest ${name}的全部产品、中英文名称与温层信息。` : `Browse Van Harvest ${category.name.toLowerCase()} products with bilingual names and storage information.`;
 const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' : 'Frozen') : storage === 'refrigerated' ? (zh ? '冷藏' : 'Refrigerated') : '';
+const hasImage = (id: string) => Boolean(yellowLabelProductImages[String(id)]);
+const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
 ---
 <BaseLayout title={title} description={description} active="/products" lang={lang}>
   <section class="category-detail-hero">
@@ -28,75 +26,16 @@ const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' 
     <div class="category-detail-shade"></div>
     <div class="shell category-detail-inner">
       <p class="breadcrumb"><a href={`${prefix}/products/`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p>
-      <div class="category-detail-copy">
-        <h1>{name}</h1>
-        <p>{zh ? category.shortZh : category.short}</p>
-        <a class="button" href="#category-products">{zh ? '浏览全部产品 →' : 'Browse all products →'}</a>
-      </div>
+      <div class="category-detail-copy"><h1>{name}</h1><p>{zh ? category.shortZh : category.short}</p><a class="button" href="#category-products">{zh ? '浏览全部产品 →' : 'Browse all products →'}</a></div>
     </div>
   </section>
 
-  {featured.length > 0 && (
-    <section class="featured-products">
-      <div class="shell">
-        <div class="featured-products-heading">
-          <div><h2>{zh ? '实拍精选产品' : 'Featured products'}</h2></div>
-          <p>{zh ? '精选代表性常备条目，方便快速了解品类；更多规格可在下方完整目录中浏览。' : 'A curated selection of representative items. Browse every item in the complete department list below.'}</p>
-        </div>
-        <div class="featured-product-grid">
-          {featured.map(({ product, image }) => (
-            <button class="featured-product-card featured-product-card-with-image" type="button" data-product-open data-product-id={product.id} aria-label={`${zh ? '查看' : 'View'} ${product.name}`}>
-              <div class="featured-product-thumb"><img src={image} alt={`${product.name} product photo`} loading="lazy" /></div>
-              <div><small>Item {product.id}{storageText(product.storage) ? ` · ${storageText(product.storage)}` : ''}</small><h3>{product.name}</h3>{product.nameZh && <p class="product-zh">{product.nameZh}</p>}{product.packSize && <p>{product.packSize}</p>}</div>
-              <b aria-hidden="true">↗</b>
-            </button>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
+  {featured.length > 0 && <section class="featured-products"><div class="shell"><div class="featured-products-heading"><div><h2>{zh ? '实拍精选产品' : 'Featured products'}</h2></div><p>{zh ? '精选已有实拍图的代表商品。' : 'A curated selection of products with real warehouse photos.'}</p></div><div class="featured-product-grid">
+    {featured.map(({ product, image }) => <a class="featured-product-card featured-product-card-with-image" href={detailHref(product.id)}><div class="featured-product-thumb"><img src={image} alt={`${product.name} product photo`} loading="lazy" /></div><div><small>Item {product.id}{storageText(product.storage) ? ` · ${storageText(product.storage)}` : ''}</small><h3>{product.name}</h3>{product.nameZh && <p class="product-zh">{product.nameZh}</p>}</div><b aria-hidden="true">↗</b></a>)}
+  </div></div></section>}
 
-  <section class="category-product-list" id="category-products">
-    <div class="shell">
-      <div class="category-product-list-heading">
-        <div><h2>{zh ? `${name}全部产品` : `All ${category.name}`}</h2></div>
-        <p>{zh ? `共 ${products.length.toLocaleString()} 个产品。点击任一产品查看包装、温层与实拍图（如有）。` : `${products.length.toLocaleString()} products. Select any product for pack, storage and an actual product photo where available.`}</p>
-      </div>
-      <div class="catalog-table-wrap category-product-table-wrap">
-        <table class="catalog-table category-product-table">
-          <thead>
-            <tr>
-              <th class="col-id">Item #</th>
-              <th class="col-product">{zh ? '英文名 / 中文名' : 'English name / Chinese name'}</th>
-              <th class="col-pack">{zh ? '包装' : 'Pack'}</th>
-              <th class="col-storage">{zh ? '温层' : 'Storage'}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {products.map((product) => {
-              const storage = storageText(product.storage);
-              return (
-                <tr class="catalog-product-row" data-product-open data-product-id={product.id} tabindex="0" role="button" aria-label={`${zh ? '查看' : 'View'} ${product.name}`}>
-                  <td class="col-id"><code>{product.id}</code></td>
-                  <td class="col-product">
-                    <span class="name-en">{product.name}</span>
-                    {product.nameZh && <span class="name-zh">{product.nameZh}</span>}
-                    <div class="catalog-mobile-meta">
-                      {product.packSize && <span><strong>{zh ? '规格' : 'Pack'}:</strong> {product.packSize}</span>}
-                      {storage && <span><strong>{zh ? '温层' : 'Storage'}:</strong> {storage}</span>}
-                    </div>
-                  </td>
-                  <td class="col-pack">{product.packSize || '—'}</td>
-                  <td class="col-storage">{storage && <span class:list={['storage-badge', product.storage]}>{storage}</span>}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
+  <section class="category-product-list" id="category-products"><div class="shell"><div class="category-product-list-heading"><div><h2>{zh ? `${name}全部产品` : `All ${category.name}`}</h2></div><p>{zh ? `共 ${products.length.toLocaleString()} 个产品。已有实拍图的商品可进入详情页。` : `${products.length.toLocaleString()} products. Items with real photos link to their detail pages.`}</p></div><div class="catalog-table-wrap category-product-table-wrap"><table class="catalog-table category-product-table"><thead><tr><th class="col-id">Item #</th><th class="col-product">{zh ? '产品名称' : 'Product'}</th><th class="col-storage">{zh ? '温层' : 'Storage'}</th></tr></thead><tbody>
+    {products.map((product) => { const storage = storageText(product.storage); const content = <><span class="name-en">{product.name}</span>{product.nameZh && <span class="name-zh">{product.nameZh}</span>}<div class="catalog-mobile-meta">{storage && <span><strong>{zh ? '温层' : 'Storage'}:</strong> {storage}</span>}</div></>; return <tr class="catalog-product-row"><td class="col-id"><code>{product.id}</code></td><td class="col-product">{hasImage(product.id) ? <a class="catalog-product-link" href={detailHref(product.id)}>{content}</a> : content}</td><td class="col-storage">{storage && <span class:list={['storage-badge', product.storage]}>{storage}</span>}</td></tr>; })}
+  </tbody></table></div></div></section>
   <CallToAction lang={lang} localized={localized} />
-  <ProductDrawer lang={lang} localized={localized} />
 </BaseLayout>

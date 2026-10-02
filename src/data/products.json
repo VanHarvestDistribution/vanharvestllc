@@ -10,16 +10,6 @@
     "active": true
   },
   {
-    "id": "10011",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "10012",
     "name": "90/63/00 Bone In Butt (FRESH)",
     "nameZh": "新鲜有骨猪肉",
@@ -80,16 +70,6 @@
     "active": true
   },
   {
-    "id": "10031",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "10033",
     "name": "FRZ Bnls Pork Butt (Smithfield/ANY BRAND)",
     "nameZh": "冷冻无骨猪肉",
@@ -116,46 +96,6 @@
     "rawName": "Pork Chop 10LB /PKG",
     "category": "meat",
     "packSize": "10LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "10061",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "10078",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "10084",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "10085",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -300,16 +240,6 @@
     "active": true
   },
   {
-    "id": "10114",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "10117",
     "name": "(JBS) Spare Rib CUT",
     "nameZh": "上等排骨条",
@@ -420,32 +350,12 @@
     "active": true
   },
   {
-    "id": "11021",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "11024",
     "name": "Chicken Bone 40LB",
     "nameZh": "鸡骨",
     "rawName": "Chicken Bone 40LB",
     "category": "meat",
     "packSize": "40LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "11025",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -780,46 +690,6 @@
     "active": true
   },
   {
-    "id": "11210",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "11211",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "11214",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "11215",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "11216",
     "name": "FRZ Whole Leg Pilgrim's",
     "nameZh": "冷凍有骨鸡腿",
@@ -830,16 +700,6 @@
     "active": true
   },
   {
-    "id": "11217",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "11220",
     "name": "4627WholeLeg Pilgri. FROZEN",
     "nameZh": "(冻) 鸡腿 40磅/箱Pilgrim's",
@@ -847,16 +707,6 @@
     "category": "meat",
     "packSize": "",
     "storage": "frozen",
-    "active": true
-  },
-  {
-    "id": "11223",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
     "active": true
   },
   {
@@ -1057,16 +907,6 @@
     "category": "meat",
     "packSize": "",
     "storage": "frozen",
-    "active": true
-  },
-  {
-    "id": "11361",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
     "active": true
   },
   {
@@ -1490,16 +1330,6 @@
     "active": true
   },
   {
-    "id": "12006",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "12023",
     "name": "Frz Flank Steak",
     "nameZh": "冷冻澳洲方牛",
@@ -1520,26 +1350,6 @@
     "active": true
   },
   {
-    "id": "12061",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "12075",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "12085",
     "name": "FROZEN Beef Loin /Peeled Beef",
     "nameZh": "(冻) P牛",
@@ -1547,16 +1357,6 @@
     "category": "meat",
     "packSize": "",
     "storage": "frozen",
-    "active": true
-  },
-  {
-    "id": "12089",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
     "active": true
   },
   {
@@ -1587,16 +1387,6 @@
     "category": "meat",
     "packSize": "",
     "storage": "frozen",
-    "active": true
-  },
-  {
-    "id": "12098",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
     "active": true
   },
   {
@@ -1734,16 +1524,6 @@
     "name": "Beef Short Plate (22138) EXCEL (Navel)",
     "nameZh": "精品肥牛",
     "rawName": "Beef Short Plate (22138) *EXCEL* (Navel)",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "12133",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*****",
     "category": "meat",
     "packSize": "",
     "storage": "refrigerated",
@@ -2024,16 +1804,6 @@
     "name": "Beef Korean Ribs",
     "nameZh": "韩式切牛排骨",
     "rawName": "*22160* Beef Korean Ribs",
-    "category": "meat",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "13011",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**********",
     "category": "meat",
     "packSize": "",
     "storage": "refrigerated",
@@ -2740,16 +2510,6 @@
     "active": true
   },
   {
-    "id": "21141",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*********",
-    "category": "produce",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "21162",
     "name": "WHITE-Dragon Fruit 20LB",
     "nameZh": "白色火龙果/箱",
@@ -3096,16 +2856,6 @@
     "rawName": "Tomato 10lb",
     "category": "produce",
     "packSize": "10LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "21325",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "produce",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -4840,16 +4590,6 @@
     "active": true
   },
   {
-    "id": "22060",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**********",
-    "category": "produce",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "22082",
     "name": "Taiwan Bok Choy 2LB/Pkg",
     "nameZh": "台湾白菜/包",
@@ -5390,16 +5130,6 @@
     "active": true
   },
   {
-    "id": "22306",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "produce",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "22307",
     "name": "Fresh Lotus Root 3LB/Pkg",
     "nameZh": "新鲜莲藕",
@@ -5770,32 +5500,12 @@
     "active": true
   },
   {
-    "id": "23330",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*********",
-    "category": "produce",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "23331",
     "name": "Croaker Yellow Fish 10LB",
     "nameZh": "真黄花鱼",
     "rawName": "Croaker Yellow Fish 10LB",
     "category": "produce",
     "packSize": "10LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "23332",
-    "name": "",
-    "nameZh": "",
-    "rawName": "******",
-    "category": "produce",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -5846,16 +5556,6 @@
     "rawName": "Silver Pomfret (80-100) 22LB",
     "category": "produce",
     "packSize": "22LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "23464",
-    "name": "",
-    "nameZh": "",
-    "rawName": "******",
-    "category": "produce",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -6466,16 +6166,6 @@
     "rawName": "Roasted Pork Chunk 6x5LB /CS",
     "category": "produce",
     "packSize": "6X5LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "24231",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "produce",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -7760,16 +7450,6 @@
     "active": true
   },
   {
-    "id": "25507",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "produce",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "25508",
     "name": "YeShu- Natural Coconut Drink 24x245ml",
     "nameZh": "椰树牌 椰子汁(纸包) 24x245ml",
@@ -8070,16 +7750,6 @@
     "active": true
   },
   {
-    "id": "25583",
-    "name": "",
-    "nameZh": "N/A",
-    "rawName": "",
-    "category": "produce",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "25589",
     "name": "RAMUNE Grape 24x6.7oz /CS",
     "nameZh": "日本弹珠汽水 (葡萄味) 24瓶 /箱",
@@ -8176,16 +7846,6 @@
     "rawName": "*ACC* B-28 Roasted Pork Bun 27pc/Pkg",
     "category": "produce",
     "packSize": "27PC/PKG",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "25610",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*********************",
-    "category": "produce",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -11140,16 +10800,6 @@
     "active": true
   },
   {
-    "id": "33697",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "33701",
     "name": "Salted Jelly Fish Head 11kg /TUB",
     "nameZh": "海蜇头 11kg/桶",
@@ -11480,36 +11130,6 @@
     "active": true
   },
   {
-    "id": "33986",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "33987",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "33988",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "33991",
     "name": "Tomato Hot Pot Flavor 220g PKG",
     "nameZh": "海底捞火锅底料-220g/包",
@@ -11544,66 +11164,6 @@
     "name": "SPUD QUEEN 3/8 straight cut seasoned 71179 427",
     "nameZh": "鹽6pkg/ 箱 SPUD QUEEN",
     "rawName": "SPUD QUEEN 3/8 straight cut seasoned  71179 427",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34011",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34033",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34040",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34041",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34048",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34059",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
     "category": "seafood",
     "packSize": "",
     "storage": "refrigerated",
@@ -11686,26 +11246,6 @@
     "rawName": "French Fried Potatoes 3/8\" Straight Cut 6x5lb 21300",
     "category": "seafood",
     "packSize": "6X5LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34071",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "34075",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "seafood",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -12040,32 +11580,12 @@
     "active": true
   },
   {
-    "id": "35043",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "35050",
     "name": "Edamame SoyBean 20x400G",
     "nameZh": "毛豆仁(没壳)20x400G (翔一)",
     "rawName": "*25067* Edamame SoyBean 20x400G",
     "category": "seafood",
     "packSize": "20X400G",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "35051",
-    "name": "",
-    "nameZh": "",
-    "rawName": "********",
-    "category": "seafood",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -12136,16 +11656,6 @@
     "rawName": "Seaweed Salad 4 x 4.4LB(TaiWan)",
     "category": "seafood",
     "packSize": "4.4LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "35080",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*********",
-    "category": "seafood",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -12316,16 +11826,6 @@
     "rawName": "Wakame Dried Seaweed 1lb /PKG",
     "category": "seafood",
     "packSize": "1LB",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "35179",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***********",
-    "category": "seafood",
-    "packSize": "",
     "storage": "refrigerated",
     "active": true
   },
@@ -12610,16 +12110,6 @@
     "active": true
   },
   {
-    "id": "35404",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*****",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
     "id": "35419",
     "name": "Udon Noodle 6x1.25kg Shoichi",
     "nameZh": "乌冬面SHOICHI 翔一",
@@ -12854,16 +12344,6 @@
     "name": "Sushi Tray",
     "nameZh": "日本便当合(JN-305)-252/箱",
     "rawName": "Sushi Tray",
-    "category": "seafood",
-    "packSize": "",
-    "storage": "refrigerated",
-    "active": true
-  },
-  {
-    "id": "35769",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
     "category": "seafood",
     "packSize": "",
     "storage": "refrigerated",
@@ -13290,16 +12770,6 @@
     "active": true
   },
   {
-    "id": "40202",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "pantry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "40203",
     "name": "(K) Shao Xing Wine 4x1GL",
     "nameZh": "绍兴料酒 (熊猫)M1204",
@@ -13360,16 +12830,6 @@
     "active": true
   },
   {
-    "id": "40303",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "pantry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "40311",
     "name": "Fukein Cooking Wine 12x750ML",
     "nameZh": "福建老酒(正中双灯) Double Lanterns",
@@ -13414,16 +12874,6 @@
     "name": "Fukein cooking wine side TN0730NT",
     "nameZh": "福建料酒(万灯)-750-12x750毫升/箱",
     "rawName": "Fukein cooking wine side TN0730NT",
-    "category": "pantry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "40355",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
     "category": "pantry",
     "packSize": "",
     "storage": "",
@@ -13750,16 +13200,6 @@
     "active": true
   },
   {
-    "id": "40625",
-    "name": "",
-    "nameZh": "",
-    "rawName": "********",
-    "category": "pantry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "41000",
     "name": "KC Hoisin Sauce 6 Can/CS",
     "nameZh": "海鲜酱(冠珍)/箱",
@@ -13946,16 +13386,6 @@
     "rawName": "Sriracha chili sauce",
     "category": "pantry",
     "packSize": "28OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "41135",
-    "name": "",
-    "nameZh": "",
-    "rawName": "******",
-    "category": "pantry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -14290,16 +13720,6 @@
     "active": true
   },
   {
-    "id": "41616",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "pantry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "41630",
     "name": "Honey 6x5LB (FIVE STAR)",
     "nameZh": "胶蜜 6x5LB",
@@ -14610,16 +14030,6 @@
     "active": true
   },
   {
-    "id": "42118",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "pantry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "42119",
     "name": "Haday Golden Label Light Soy Sauce 1.9L / PKG",
     "nameZh": "海天 金标生抽 1.9L /罐",
@@ -14826,16 +14236,6 @@
     "rawName": "Kadoya Sesame Oil 56oz",
     "category": "pantry",
     "packSize": "56OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "42350",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
-    "category": "pantry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -16066,16 +15466,6 @@
     "rawName": "White Pepper Powder E&B 5LB",
     "category": "pantry",
     "packSize": "5LB",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "44009",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "pantry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -18060,16 +17450,6 @@
     "active": true
   },
   {
-    "id": "51026",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "preserved",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "51028",
     "name": "Waterchestnut Slice 6Can",
     "nameZh": "清水马蹄片 HF",
@@ -18094,16 +17474,6 @@
     "name": "Waterchestnut Slice 6 Can /CS FiHood",
     "nameZh": "清水马蹄片(Five Star)",
     "rawName": "Waterchestnut Slice 6 Can /CS *FiHood*",
-    "category": "preserved",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "51121",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*********",
     "category": "preserved",
     "packSize": "",
     "storage": "",
@@ -18350,16 +17720,6 @@
     "active": true
   },
   {
-    "id": "54004",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "preserved",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "54005",
     "name": "Pineapple Chunk (Always The Best) 6x108oz",
     "nameZh": "菠萝角(恒泰) (B)",
@@ -18416,16 +17776,6 @@
     "rawName": "Pineapple Chunk (HiFood) 6x108oz",
     "category": "preserved",
     "packSize": "6X108OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "54016",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "preserved",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -18700,30 +18050,10 @@
     "active": true
   },
   {
-    "id": "54346",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**********",
-    "category": "preserved",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "54358",
     "name": "Mandarin Orange Slice (ChuiHo)",
     "nameZh": "桔罐 (最好) 6罐 /箱",
     "rawName": "Mandarin Orange Slice (ChuiHo)",
-    "category": "preserved",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "54359",
-    "name": "",
-    "nameZh": "",
-    "rawName": "********",
     "category": "preserved",
     "packSize": "",
     "storage": "",
@@ -18884,16 +18214,6 @@
     "name": "Banana Pudding 6 Can",
     "nameZh": "香蕉布丁(RealFresh)",
     "rawName": "Banana Pudding 6 Can",
-    "category": "preserved",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "54484",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
     "category": "preserved",
     "packSize": "",
     "storage": "",
@@ -19380,16 +18700,6 @@
     "active": true
   },
   {
-    "id": "60005",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "60010",
     "name": "EFF182 Film Wrap 18\"x2000'",
     "nameZh": "保鲜纸 18寸x2000'",
@@ -19474,16 +18784,6 @@
     "name": "631 Low Fold Napkins 9.3/4in7in 8000' (EP588 | LFN631)",
     "nameZh": "631短纸巾8000' (EP588 | LFN631)",
     "rawName": "631 Low Fold Napkins 9.3/4in*7in 8000' (EP588 | LFN631)",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "60106",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
     "category": "supplies",
     "packSize": "",
     "storage": "",
@@ -20010,16 +19310,6 @@
     "active": true
   },
   {
-    "id": "61300",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "61301",
     "name": "Shopping Bag (S) W/Handle 10''x5''x13'' 250' (EP| Any Brand)",
     "nameZh": "小抽(手提袋)250个(EP|Any Brand)",
@@ -20086,26 +19376,6 @@
     "rawName": "(K) 2 LB EggRoll Bag 1000 /PKG",
     "category": "supplies",
     "packSize": "2LB",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "61421",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "61424",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "supplies",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -20190,16 +19460,6 @@
     "active": true
   },
   {
-    "id": "62002",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "62010",
     "name": "1/6 T-Shirt Bag Happy Face",
     "nameZh": "1/6 白大胶袋",
@@ -20214,16 +19474,6 @@
     "name": "-Thank You Bags",
     "nameZh": "小库白大胶袋",
     "rawName": "-Thank You Bags",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "62012",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
     "category": "supplies",
     "packSize": "",
     "storage": "",
@@ -20410,16 +19660,6 @@
     "active": true
   },
   {
-    "id": "63112",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "63113",
     "name": "2oz Cups 002C-2500",
     "nameZh": "2oz 芥辣杯 2500pc",
@@ -20486,26 +19726,6 @@
     "rawName": "2oz Lid Souffle 2000' (Portion)",
     "category": "supplies",
     "packSize": "2OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "63131",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "63132",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*****",
-    "category": "supplies",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -21440,32 +20660,12 @@
     "active": true
   },
   {
-    "id": "64547",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "64558",
     "name": "Mic.containers",
     "nameZh": "FH-18W-白(618)/16oz-150/箱",
     "rawName": "Mic.containers",
     "category": "supplies",
     "packSize": "16OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "64565",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
-    "category": "supplies",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -21484,16 +20684,6 @@
     "name": "JN-68B Mic.Containers Black150'",
     "nameZh": "JN-68B (86-23) 黑底胶盒 150'",
     "rawName": "JN-68B Mic.Containers Black150'",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "64569",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
     "category": "supplies",
     "packSize": "",
     "storage": "",
@@ -22280,36 +21470,6 @@
     "active": true
   },
   {
-    "id": "66117",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "66118",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "66119",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "66120",
     "name": "16oz Soup Cont. S16 240' W.Y",
     "nameZh": "16oz 胶汤盒小PT(华容)",
@@ -22340,16 +21500,6 @@
     "active": true
   },
   {
-    "id": "66131",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "66140",
     "name": "16oz WHT Food Pail (WIRED) 500' Geely",
     "nameZh": "16oz 有铁饭盒(白) Geely",
@@ -22370,52 +21520,12 @@
     "active": true
   },
   {
-    "id": "66202",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "66204",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "66211",
     "name": "26oz Food Pail PINTE26 no handle 500'/ CASE",
     "nameZh": "26oz饭盒-花(无铁) / 箱",
     "rawName": "26oz Food Pail  PINT*E26* no handle 500'/ CASE",
     "category": "supplies",
     "packSize": "26OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "66212",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "66213",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -22440,16 +21550,6 @@
     "active": true
   },
   {
-    "id": "66217",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "66218",
     "name": "24oz Soup Cup",
     "nameZh": "中国24胶杯-240/箱",
@@ -22460,32 +21560,12 @@
     "active": true
   },
   {
-    "id": "66302",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "66303",
     "name": "W.Y 32oz Food Pail 500' WHITE",
     "nameZh": "32oz饭盒-白华容",
     "rawName": "W.Y 32oz Food Pail  500' WHITE",
     "category": "supplies",
     "packSize": "32OZ",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "66304",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -22570,26 +21650,6 @@
     "active": true
   },
   {
-    "id": "66398",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "67000",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "67001",
     "name": "JIALE PlasticFork WHT1000’",
     "nameZh": "散装中型白胶叉",
@@ -22614,16 +21674,6 @@
     "name": "CHOPSTICK (WHITE)",
     "nameZh": "白封筷子",
     "rawName": "CHOPSTICK (WHITE)",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "67009",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
     "category": "supplies",
     "packSize": "",
     "storage": "",
@@ -22794,26 +21844,6 @@
     "name": "A204S PLASTIC SPOON 1000 WHITE BOX",
     "nameZh": "A204S 白色塑料汤匙 (1000支)",
     "rawName": "A204S PLASTIC SPOON 1000 WHITE BOX",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "67063",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "supplies",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "67079",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
     "category": "supplies",
     "packSize": "",
     "storage": "",
@@ -23630,16 +22660,6 @@
     "active": true
   },
   {
-    "id": "70265",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "dry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "70275",
     "name": "Sushi Rice (Fortune) 40LB",
     "nameZh": "日本寿司短锦米(福之米) - 40LB",
@@ -23750,16 +22770,6 @@
     "active": true
   },
   {
-    "id": "71009",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "dry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "71010",
     "name": "Soy Bean Oil 35LB (Oasis)",
     "nameZh": "豆油 (Oasis)",
@@ -23776,16 +22786,6 @@
     "rawName": "DragonChef Soybean Oil 35LB",
     "category": "dry",
     "packSize": "35LB",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "71025",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "dry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -24110,16 +23110,6 @@
     "active": true
   },
   {
-    "id": "72055",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***********",
-    "category": "dry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "72058",
     "name": "Windmill Potato Starch 50LB",
     "nameZh": "风车超级生粉(Windmill)",
@@ -24166,16 +23156,6 @@
     "rawName": "Tapioca Starch  24 x1LB",
     "category": "dry",
     "packSize": "24X1LB",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "72090",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "dry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -24236,16 +23216,6 @@
     "rawName": "Elite Rice Stick(KongMoon) 60x400g/CS",
     "category": "dry",
     "packSize": "60X400G",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "73003",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*******",
-    "category": "dry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -24970,26 +23940,6 @@
     "active": true
   },
   {
-    "id": "73508",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**********************",
-    "category": "dry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "73509",
-    "name": "",
-    "nameZh": "",
-    "rawName": "********",
-    "category": "dry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "73515",
     "name": "DT Rice Flakes / PKG",
     "nameZh": "锅边糊(独稻)-68g/碗",
@@ -25536,16 +24486,6 @@
     "rawName": "*GB* Reg. Wonton Wrappers 40LB",
     "category": "dry",
     "packSize": "40LB",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "74211",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "dry",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -26560,16 +25500,6 @@
     "active": true
   },
   {
-    "id": "74795",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "dry",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "74803",
     "name": "Baily CANTON Dry noodle M",
     "nameZh": "白扁广东干面(百利)-中号-30LB/箱",
@@ -26586,16 +25516,6 @@
     "rawName": "Baily CANTON Dry noodle S",
     "category": "dry",
     "packSize": "30LB",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "80000",
-    "name": "",
-    "nameZh": "",
-    "rawName": "******",
-    "category": "cleaning",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -26766,16 +25686,6 @@
     "rawName": "*",
     "category": "cleaning",
     "packSize": "100PCS",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "81100",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "cleaning",
-    "packSize": "",
     "storage": "",
     "active": true
   },
@@ -28340,16 +27250,6 @@
     "active": true
   },
   {
-    "id": "92721",
-    "name": "",
-    "nameZh": "",
-    "rawName": "**",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "92734",
     "name": "Roti Paratha Plain",
     "nameZh": "印度煎饼-24包 /cs箱",
@@ -28710,30 +27610,10 @@
     "active": true
   },
   {
-    "id": "99000",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "99001",
     "name": "ACC A8 Cream Jelly Cake 4 Rolls",
     "nameZh": "A8 - 蛋糕/ 奶油蛋卷",
     "rawName": "*ACC* A8  Cream Jelly Cake 4 Rolls",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "99002",
-    "name": "",
-    "nameZh": "",
-    "rawName": "********",
     "category": "prepared",
     "packSize": "",
     "storage": "",
@@ -28824,16 +27704,6 @@
     "name": "ACC C Coconut Cake White",
     "nameZh": "C 椰丝蛋糕",
     "rawName": "*ACC* C Coconut Cake White",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "99121",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
     "category": "prepared",
     "packSize": "",
     "storage": "",
@@ -28970,16 +27840,6 @@
     "active": true
   },
   {
-    "id": "99231",
-    "name": "",
-    "nameZh": "",
-    "rawName": "***",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "99232",
     "name": "King V Coconut Macaroon",
     "nameZh": "V 蛋糕/椰蓉酥(椰堆)",
@@ -29050,16 +27910,6 @@
     "active": true
   },
   {
-    "id": "99331",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "99500",
     "name": "King W Mango Mousse Cake 63'",
     "nameZh": "W蛋糕/芒果慕思",
@@ -29100,30 +27950,10 @@
     "active": true
   },
   {
-    "id": "99509",
-    "name": "",
-    "nameZh": "",
-    "rawName": "******-",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "99510",
     "name": "King L Mocha Mousse Cake 63'",
     "nameZh": "L 蛋糕/咖啡慕思",
     "rawName": "King L Mocha Mousse Cake 63'",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "99511",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*****",
     "category": "prepared",
     "packSize": "",
     "storage": "",
@@ -29290,16 +28120,6 @@
     "active": true
   },
   {
-    "id": "99660",
-    "name": "",
-    "nameZh": "",
-    "rawName": "****",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
     "id": "99700",
     "name": "\"JNK\"Osmanthus Cake 10.5oz 40465011",
     "nameZh": "白糖桂花糕",
@@ -29374,16 +28194,6 @@
     "name": "",
     "nameZh": "鸡腿40磅/箱",
     "rawName": "**",
-    "category": "prepared",
-    "packSize": "",
-    "storage": "",
-    "active": true
-  },
-  {
-    "id": "99920",
-    "name": "",
-    "nameZh": "",
-    "rawName": "*",
     "category": "prepared",
     "packSize": "",
     "storage": "",

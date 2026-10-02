@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { contact, categories } from '@/data/site';
+import { absoluteUrl } from '@/data/seo';
+
+interface Props { product: any; category: any; lang?: 'en' | 'zh'; localized?: boolean }
+const { product, category, lang = 'en', localized = false } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+const primaryName = zh ? (product.nameZh || product.name) : product.name;
+const secondaryName = zh ? product.name : product.nameZh;
+const storage = product.storage === 'frozen' ? (zh ? '冷冻' : 'Frozen') : product.storage === 'refrigerated' ? (zh ? '冷藏' : 'Refrigerated') : '';
+const title = zh ? `${primaryName}｜产品详情 | Van Harvest` : `${product.name} | Wholesale Product Details | Van Harvest`;
+const description = zh ? `查看 ${primaryName} 的产品图片、编号、品类和温层信息。申请 Van Harvest 批发账户。` : `View ${product.name}, Item #${product.id}, wholesale category and storage information from Van Harvest.`;
+const imageUrl = absoluteUrl(product.image);
+const jsonLd = { '@context': 'https://schema.org', '@type': 'Product', name: product.name, image: imageUrl ? [imageUrl] : undefined, sku: product.id, category: category.name, brand: undefined, description };
+---
+<BaseLayout title={title} description={description} active="/products" lang={lang} ogImage={product.image} jsonLd={jsonLd}>
+  <main class="product-detail-page">
+    <section class="product-detail-hero"><div class="shell"><p class="breadcrumb"><a href={`${prefix}/products/`}>{zh ? '产品目录' : 'Products'}</a><span>/</span><a href={`${prefix}/products/${category.key}/`}>{zh ? category.nameZh : category.name}</a><span>/</span>{product.id}</p><p class="eyebrow">{zh ? '实拍产品' : 'Real product photo'}</p><h1>{primaryName}</h1>{secondaryName && <p class="product-detail-subtitle">{secondaryName}</p>}</div></section>
+    <section class="product-detail-body"><div class="shell product-detail-grid"><div class="product-detail-photo"><img src={product.image} alt={`${product.name} product photo`} loading="eager" /></div><div class="product-detail-copy"><p class="product-detail-item">{zh ? '产品编号' : 'Item #'} <strong>{product.id}</strong></p><dl class="product-detail-specs"><div><dt>{zh ? '品类' : 'Department'}</dt><dd>{zh ? category.nameZh : category.name}</dd></div>{storage && <div><dt>{zh ? '温层' : 'Storage'}</dt><dd>{storage}</dd></div>}</dl><div class="detail-actions"><a class="button button-gold" href={`${prefix}/apply/`}>{zh ? '申请开户查看价格' : 'Apply for an account to see pricing'}</a><a class="button button-outline-dark" href={`tel:${contact.phoneHref}`}>{zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}</a></div></div></div></section>
+  </main>
+</BaseLayout>

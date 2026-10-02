@@ -1,48 +1,48 @@
 {
-  "total_active_products": 2944,
+  "total_active_products": 2825,
   "storage_summary": {
-    "refrigerated": 1192,
+    "refrigerated": 1140,
     "frozen": 179,
-    "unspecified": 1573
+    "unspecified": 1506
   },
   "storage_by_category": {
     "meat": {
-      "refrigerated": 140,
+      "refrigerated": 117,
       "frozen": 65
     },
     "produce": {
-      "refrigerated": 679,
+      "refrigerated": 668,
       "frozen": 49
     },
     "preserved": {
-      "unspecified": 138,
+      "unspecified": 131,
       "frozen": 5,
       "refrigerated": 2
     },
     "seafood": {
       "frozen": 45,
-      "refrigerated": 339
+      "refrigerated": 321
     },
     "prepared": {
-      "unspecified": 249,
+      "unspecified": 239,
       "refrigerated": 1,
       "frozen": 2
     },
     "pantry": {
-      "unspecified": 450,
+      "unspecified": 441,
       "frozen": 11,
       "refrigerated": 6
     },
     "supplies": {
-      "unspecified": 396
+      "unspecified": 367
     },
     "dry": {
-      "unspecified": 303,
+      "unspecified": 293,
       "refrigerated": 25,
       "frozen": 2
     },
     "cleaning": {
-      "unspecified": 37
+      "unspecified": 35
     }
   },
   "bracket_fixes_count": 465,
@@ -246,7 +246,7 @@
       "clean_zh": "残鸭"
     }
   ],
-  "cleaning_diffs_count": 1667,
+  "cleaning_diffs_count": 1549,
   "cleaning_diffs_sample": [
     {
       "id": "10004",
@@ -254,13 +254,6 @@
       "after_en": "Fresh Bnls Cushion Meat",
       "before_zh": "新鲜无骨无肥猪肉",
       "after_zh": "新鲜无骨无肥猪肉"
-    },
-    {
-      "id": "10011",
-      "before_en": "**",
-      "after_en": "",
-      "before_zh": "**",
-      "after_zh": ""
     },
     {
       "id": "10012",
@@ -291,13 +284,6 @@
       "after_zh": "新鲜无骨无肥猪肉"
     },
     {
-      "id": "10031",
-      "before_en": "**",
-      "after_en": "",
-      "before_zh": "**",
-      "after_zh": ""
-    },
-    {
       "id": "10033",
       "before_en": "FRZ Bnls Pork Butt  (Smithfiled/ANY BRAND)",
       "after_en": "FRZ Bnls Pork Butt (Smithfield/ANY BRAND)",
@@ -310,34 +296,6 @@
       "after_en": "Pork Chop 10LB /PKG",
       "before_zh": "猪扒(A级)10LB/包 (3)",
       "after_zh": "猪扒(A级)10LB/包"
-    },
-    {
-      "id": "10061",
-      "before_en": "**",
-      "after_en": "",
-      "before_zh": "**",
-      "after_zh": ""
-    },
-    {
-      "id": "10078",
-      "before_en": "**",
-      "after_en": "",
-      "before_zh": "**",
-      "after_zh": ""
-    },
-    {
-      "id": "10084",
-      "before_en": "**",
-      "after_en": "",
-      "before_zh": "**",
-      "after_zh": ""
-    },
-    {
-      "id": "10085",
-      "before_en": "**",
-      "after_en": "",
-      "before_zh": "**",
-      "after_zh": ""
     },
     {
       "id": "10086",
@@ -387,6 +345,48 @@
       "after_en": "FRZ 2 Spareribs St.Louis",
       "before_zh": "# 2 冷冻上等排骨",
       "after_zh": "2 冷冻上等排骨"
+    },
+    {
+      "id": "10104",
+      "before_en": "*PATEL* 1400C FRZ  Pork Back Ribs PVC-215394",
+      "after_en": "1400C FRZ Pork Back Ribs",
+      "before_zh": "冷冻上等排骨PVC-215394",
+      "after_zh": "冷冻上等排骨"
+    },
+    {
+      "id": "10109",
+      "before_en": "*20225* Pork Loin Back Ribs Portinons",
+      "after_en": "Pork Loin Back Ribs Portinons",
+      "before_zh": "短排骨 (20225)",
+      "after_zh": "短排骨"
+    },
+    {
+      "id": "10113",
+      "before_en": "*35980* Pork SpareRibs 4.3 Down",
+      "after_en": "Pork SpareRibs 4.3 Down",
+      "before_zh": "猪排骨 4.3",
+      "after_zh": "猪排骨 4.3"
+    },
+    {
+      "id": "10117",
+      "before_en": "(JBS) Spare Rib CUT *65860*",
+      "after_en": "(JBS) Spare Rib CUT",
+      "before_zh": "上等排骨条 *65860*",
+      "after_zh": "上等排骨条"
+    },
+    {
+      "id": "10208",
+      "before_en": "Pork Brisket Bone Approx 35LB",
+      "after_en": "Pork Brisket Bone Approx 35LB",
+      "before_zh": "排骨尾 (12023)",
+      "after_zh": "排骨尾"
+    },
+    {
+      "id": "10229",
+      "before_en": "68/4941 Pork Spareib Tips",
+      "after_en": "Pork Sparerib Tips",
+      "before_zh": "68/4941 排骨尾",
+      "after_zh": "排骨尾"
     }
   ],
   "real_items_translated_count": 22,

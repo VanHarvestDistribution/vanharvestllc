@@ -5,6 +5,9 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = (process.env.PUBLIC_SITE_ORIGIN || 'https://www.vanharvestllc.com').replace(/\/$/, '');
+const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/products.json'), 'utf-8'));
+const imageMapSource = fs.readFileSync(path.join(ROOT, 'src/data/yellowLabelProductImages.ts'), 'utf-8');
+const imageIds = new Set([...imageMapSource.matchAll(/'([0-9]+)':\s*'\/images\/products\/uploaded\//g)].map((match) => match[1]));
 
 const baseRoutes = [
   '',
@@ -37,6 +40,11 @@ for (const route of baseRoutes) {
 for (const department of departments) {
   urls.push(formatUrl(`/products/${department}`));
   urls.push(formatUrl(`/zh/products/${department}`));
+}
+for (const product of products) {
+  if (!imageIds.has(String(product.id))) continue;
+  urls.push(formatUrl(`/products/${product.category}/${product.id}`));
+  urls.push(formatUrl(`/zh/products/${product.category}/${product.id}`));
 }
 
 const xmlEscape = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

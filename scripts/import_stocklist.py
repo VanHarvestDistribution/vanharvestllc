@@ -236,6 +236,9 @@ def main():
 
         name_en = clean_name(raw_en, is_zh=False)
         name_zh = clean_name(raw_zh, is_zh=True)
+        placeholder_names = {'', '*', '**', '***', '****', 'n/a', 'na', '......', '...'}
+        if name_en.strip().lower() in placeholder_names and name_zh.strip().lower() in placeholder_names:
+            continue
         pack = extract_pack(raw_en) or extract_pack(raw_zh)
         storage = determine_storage(raw_en, raw_zh, cat)
 

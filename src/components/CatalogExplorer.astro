@@ -1,54 +1,25 @@
 ---
 import { categories } from '@/data/site';
+import { yellowLabelProductImages } from '@/data/yellowLabelProductImages';
 
 interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang = 'en' } = Astro.props;
 const zh = lang === 'zh';
 const STEP = 50;
+const imageIds = Object.keys(yellowLabelProductImages);
 const labels = zh ? {
-  all: '全部产品',
-  searchLabel: '搜索产品',
-  placeholder: 'Item #、英文或中文名',
-  quick: '快速筛选',
-  loading: '正在加载产品目录…',
-  noResults: '暂无匹配产品',
-  noResultsBody: '请尝试产品编号、英文名、中文名或品类。',
-  clear: '清除筛选',
-  load: '加载更多',
-  product: '产品名称',
-  item: 'Item #',
-  pack: '包装 / Pack',
-  storage: '温层 / Storage',
-  action: '查看详情',
-  frozen: '冷冻',
-  refrigerated: '冷藏'
+  all: '全部产品', searchLabel: '搜索产品', placeholder: 'Item #、英文或中文名', quick: '快速筛选', loading: '正在加载产品目录…', noResults: '暂无匹配产品', noResultsBody: '请尝试产品编号、英文名、中文名或品类。', clear: '清除筛选', load: '加载更多', product: '产品名称', item: 'Item #', storage: '温层', frozen: '冷冻', refrigerated: '冷藏'
 } : {
-  all: 'All products',
-  searchLabel: 'Search products',
-  placeholder: 'Item #, English or Chinese name',
-  quick: 'Quick filter',
-  loading: 'Loading product catalog…',
-  noResults: 'No matching products',
-  noResultsBody: 'Try an Item #, English name, Chinese name or category.',
-  clear: 'Clear filters',
-  load: 'Load more',
-  product: 'Product description',
-  item: 'Item #',
-  pack: 'Pack size',
-  storage: 'Storage',
-  action: 'View details',
-  frozen: 'Frozen',
-  refrigerated: 'Refrigerated'
+  all: 'All products', searchLabel: 'Search products', placeholder: 'Item #, English or Chinese name', quick: 'Quick filter', loading: 'Loading product catalog…', noResults: 'No matching products', noResultsBody: 'Try an Item #, English name, Chinese name or category.', clear: 'Clear filters', load: 'Load more', product: 'Product', item: 'Item #', storage: 'Storage', frozen: 'Frozen', refrigerated: 'Refrigerated'
 };
 ---
-<div class="catalog-shell catalog-shell-wide" data-catalog data-labels={JSON.stringify(labels)} data-step={STEP}>
+<div class="catalog-shell catalog-shell-wide" data-catalog data-labels={JSON.stringify(labels)} data-step={STEP} data-image-ids={JSON.stringify(imageIds)}>
   <div class="catalog-main">
     <div class="catalog-search">
       <label for="product-search">{labels.searchLabel}</label>
       <input id="product-search" type="search" placeholder={labels.placeholder} autocomplete="off" />
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
     </div>
-
     <div class="catalog-filter-row" aria-label={zh ? '快速筛选' : 'Quick category filter'}>
       <span>{labels.quick}</span>
       <div>
@@ -57,41 +28,24 @@ const labels = zh ? {
         ))}
       </div>
     </div>
-
-    <div class="catalog-summary" aria-live="polite">
-      <span data-current-name>{labels.all}</span>
-      <span data-result-count>{labels.loading}</span>
-    </div>
-
+    <div class="catalog-summary" aria-live="polite"><span data-current-name>{labels.all}</span><span data-result-count>{labels.loading}</span></div>
     <div class="catalog-table-wrap">
       <table class="catalog-table">
-        <thead>
-          <tr>
-            <th class="col-id">{labels.item}</th>
-            <th class="col-product">{labels.product}</th>
-            <th class="col-pack">{labels.pack}</th>
-            <th class="col-storage">{labels.storage}</th>
-            <th class="col-action"><span class="sr-only">{labels.action}</span></th>
-          </tr>
-        </thead>
-        <tbody data-product-results>
-          <tr><td colspan="5" class="catalog-loading-row">{labels.loading}</td></tr>
-        </tbody>
+        <thead><tr><th class="col-id">{labels.item}</th><th class="col-product">{labels.product}</th><th class="col-storage">{labels.storage}</th></tr></thead>
+        <tbody data-product-results><tr><td colspan="3" class="catalog-loading-row">{labels.loading}</td></tr></tbody>
       </table>
     </div>
-
-    <div class="load-more" data-load-wrap hidden>
-      <button type="button" data-load-more class="button button-outline"></button>
-    </div>
+    <div class="load-more" data-load-wrap hidden><button type="button" data-load-more class="button button-outline"></button></div>
   </div>
 </div>
 
 <script is:inline>
   (() => {
     const root = document.querySelector('[data-catalog]');
-    if (!root) return;
-
+    if (!root || root.dataset.initialized === 'true') return;
+    root.dataset.initialized = 'true';
     const labels = JSON.parse(root.dataset.labels || '{}');
+    const imageIds = new Set(JSON.parse(root.dataset.imageIds || '[]').map(String));
     const step = Number(root.dataset.step || 50);
     const input = root.querySelector('#product-search');
     const tbody = root.querySelector('[data-product-results]');
@@ -100,105 +54,52 @@ const labels = zh ? {
     const loadWrap = root.querySelector('[data-load-wrap]');
     const loadButton = root.querySelector('[data-load-more]');
     const buttons = [...root.querySelectorAll('[data-category]')];
-
-    const getCatalog = () => {
-      if (!window.__vhCatalogPromise) {
-        window.__vhCatalogPromise = fetch('/data/catalog.json', { credentials: 'same-origin' })
-          .then((response) => {
-            if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
-            return response.json();
-          });
-      }
-      return window.__vhCatalogPromise;
-    };
-
-    const synonyms = {
-      wing: ['chicken wing', '鸡翅'],
-      '鸡翅': ['wing', 'chicken wing'],
-      shrimp: ['虾'],
-      '虾': ['shrimp'],
-      tofu: ['豆腐'],
-      '豆腐': ['tofu'],
-      beef: ['牛', '牛肉'],
-      pork: ['猪', '猪肉'],
-      fish: ['鱼']
-    };
-
-    let allProducts = [];
+    const categoryCache = new Map();
+    let index = [];
     let category = 'all';
     let query = '';
     let limit = step;
-
+    const synonyms = { wing: ['chicken wing', '鸡翅'], '鸡翅': ['wing', 'chicken wing'], shrimp: ['虾'], '虾': ['shrimp'], tofu: ['豆腐'], '豆腐': ['tofu'], beef: ['牛', '牛肉'], pork: ['猪', '猪肉'], fish: ['鱼'] };
     const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
     const normalize = (value) => value.trim().toLowerCase().replace(/chiken/g, 'chicken').replace(/porkk/g, 'pork');
-    const matches = (product, rawTerm) => {
-      const term = normalize(rawTerm);
-      if (!term) return true;
-      const haystack = `${product.id} ${product.name} ${product.nameZh || ''}`.toLowerCase();
-      return [term, ...(synonyms[term] || [])].some((needle) => haystack.includes(needle));
-    };
+    const matches = (product, rawTerm) => { const term = normalize(rawTerm); if (!term) return true; const haystack = `${product.id} ${product.name} ${product.nameZh || ''}`.toLowerCase(); return [term, ...(synonyms[term] || [])].some((needle) => haystack.includes(needle)); };
     const storageText = (product) => product.storage === 'frozen' ? labels.frozen : product.storage === 'refrigerated' ? labels.refrigerated : '';
-    const storageBadge = (product) => {
-      const text = storageText(product);
-      return text ? `<span class="storage-badge ${product.storage}">${text}</span>` : '';
-    };
-    const resultText = (count) => {
-      const isZh = document.documentElement.lang === 'zh-CN';
-      return isZh ? `${count.toLocaleString()} 个结果` : `${count.toLocaleString()} ${count === 1 ? 'result' : 'results'}`;
-    };
+    const resultText = (count) => document.documentElement.lang === 'zh-CN' ? `${count.toLocaleString()} 个结果` : `${count.toLocaleString()} ${count === 1 ? 'result' : 'results'}`;
     const nameFor = (key) => buttons.find((button) => button.dataset.category === key)?.textContent?.trim() || labels.all;
-    const rowHtml = (product) => {
-      const meta = [
-        product.packSize ? `<span><strong>${document.documentElement.lang === 'zh-CN' ? '规格' : 'Pack'}:</strong> ${escapeHtml(product.packSize)}</span>` : '',
-        storageText(product) ? `<span><strong>${document.documentElement.lang === 'zh-CN' ? '温层' : 'Storage'}:</strong> ${storageText(product)}</span>` : ''
-      ].filter(Boolean).join('');
-      return `<tr class="catalog-product-row" data-product-open data-product-id="${escapeHtml(product.id)}" tabindex="0" role="button" aria-label="${escapeHtml(`${labels.action}: ${product.name || product.nameZh || product.id}`)}">
-        <td class="col-id"><code>${escapeHtml(product.id)}</code></td>
-        <td class="col-product"><span class="name-en">${escapeHtml(product.name)}</span>${product.nameZh ? `<span class="name-zh">${escapeHtml(product.nameZh)}</span>` : ''}<div class="catalog-mobile-meta">${meta}</div></td>
-        <td class="col-pack">${escapeHtml(product.packSize || '—')}</td>
-        <td class="col-storage">${storageBadge(product)}</td>
-        <td class="col-action"><span class="text-link">${labels.action} →</span></td>
-      </tr>`;
-    };
-
-    const render = () => {
-      const filtered = allProducts.filter((product) => (category === 'all' || product.category === category) && matches(product, query));
-      nameNode.textContent = nameFor(category);
-      countNode.textContent = resultText(filtered.length);
-
-      if (!filtered.length) {
-        tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div></td></tr>`;
-      } else {
-        tbody.innerHTML = filtered.slice(0, limit).map(rowHtml).join('');
+    const loadCategory = async (key) => {
+      if (!categoryCache.has(key)) {
+        categoryCache.set(key, fetch(`/data/categories/${encodeURIComponent(key)}.json`, { credentials: 'same-origin' }).then((response) => { if (!response.ok) throw new Error('Category request failed'); return response.json(); }));
       }
-
-      const remaining = filtered.length - limit;
-      loadWrap.hidden = remaining <= 0;
-      loadButton.textContent = `${labels.load} · ${Math.min(step, Math.max(remaining, 0))}`;
-      buttons.forEach((button) => {
-        const active = button.dataset.category === category;
-        button.classList.toggle('is-active', active);
-        button.setAttribute('aria-pressed', String(active));
-      });
-      tbody.querySelector('[data-clear]')?.addEventListener('click', () => {
-        category = 'all'; query = ''; limit = step; input.value = ''; render();
-      });
+      return categoryCache.get(key);
     };
-
-    const params = new URLSearchParams(location.search);
-    if (buttons.some((button) => button.dataset.category === params.get('category'))) category = params.get('category');
-    if (params.get('q')) { query = params.get('q'); input.value = query; }
-
+    const rowHtml = (product) => {
+      const linked = imageIds.has(String(product.id));
+      const name = linked ? `<a class="catalog-product-link" href="${document.documentElement.lang === 'zh-CN' ? '/zh' : ''}/products/${encodeURIComponent(product.category)}/${encodeURIComponent(product.id)}/"><span class="name-en">${escapeHtml(product.name)}</span>${product.nameZh ? `<span class="name-zh">${escapeHtml(product.nameZh)}</span>` : ''}</a>` : `<span class="name-en">${escapeHtml(product.name)}</span>${product.nameZh ? `<span class="name-zh">${escapeHtml(product.nameZh)}</span>` : ''}`;
+      const storage = storageText(product);
+      return `<tr class="catalog-product-row"><td class="col-id"><code>${escapeHtml(product.id)}</code></td><td class="col-product">${name}<div class="catalog-mobile-meta">${storage ? `<span><strong>${document.documentElement.lang === 'zh-CN' ? '温层' : 'Storage'}:</strong> ${storage}</span>` : ''}</div></td><td class="col-storage">${storage ? `<span class="storage-badge ${product.storage}">${storage}</span>` : ''}</td></tr>`;
+    };
+    const render = async () => {
+      const filteredIndex = index.filter((product) => (category === 'all' || product.category === category) && matches(product, query));
+      nameNode.textContent = nameFor(category); countNode.textContent = resultText(filteredIndex.length);
+      if (!filteredIndex.length) { tbody.innerHTML = `<tr><td colspan="3"><div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div></td></tr>`; loadWrap.hidden = true; return; }
+      const visible = filteredIndex.slice(0, limit);
+      tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.loading}</td></tr>`;
+      try {
+        const keys = [...new Set(visible.map((product) => product.category))];
+        const groups = await Promise.all(keys.map((key) => loadCategory(key)));
+        const details = new Map(groups.flat().map((product) => [String(product.id), product]));
+        tbody.innerHTML = visible.map((product) => rowHtml(details.get(String(product.id)) || product)).join('');
+      } catch (_) { tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
+      const remaining = filteredIndex.length - limit; loadWrap.hidden = remaining <= 0; loadButton.textContent = `${labels.load} · ${Math.min(step, Math.max(remaining, 0))}`;
+      buttons.forEach((button) => { const active = button.dataset.category === category; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
+    };
+    const boot = async () => {
+      try { const response = await fetch('/data/catalog-index.json', { credentials: 'same-origin' }); if (!response.ok) throw new Error('Index request failed'); index = await response.json(); render(); } catch (_) { countNode.textContent = labels.noResults; tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
+    };
+    const params = new URLSearchParams(location.search); if (buttons.some((button) => button.dataset.category === params.get('category'))) category = params.get('category'); if (params.get('q')) { query = params.get('q'); input.value = query; }
     input.addEventListener('input', () => { query = input.value; limit = step; render(); });
     buttons.forEach((button) => button.addEventListener('click', () => { category = button.dataset.category || 'all'; limit = step; render(); }));
     loadButton.addEventListener('click', () => { limit += step; render(); });
-
-    getCatalog().then((products) => {
-      allProducts = products;
-      render();
-    }).catch(() => {
-      countNode.textContent = labels.noResults;
-      tbody.innerHTML = `<tr><td colspan="5" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`;
-    });
+    boot();
   })();
 </script>
