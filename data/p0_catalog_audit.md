@@ -15,7 +15,7 @@
 - **冷藏 (Refrigerated)**：1,192 条
 - **冷冻 (Frozen)**：179 条
 - **未指定/不显示 (Unspecified)**：1,573 条
-- **上架有效商品总计**：2,944 条
+- **上架有效商品总计**：2,825 条
 
 ### 2. 九大品类温层分布表
 | 品类 Key | 品类中文名 | 英文名称 | 冷藏 (Refrigerated) | 冷冻 (Frozen) | 不显示/未指定 (—) | 总计 |
@@ -36,7 +36,7 @@
 
 ## 二、中文名括号修复样例表 (Bracket Pairings Audit)
 
-从原始 `Stocklist.xls` 重新读取并规范清洗：严格只识别并剔除末尾完整的 `(纯数字)` 箱装数量备注（如 `(30)`、`(16)`），彻底解决了上一轮简单替换造成的 535+ 处右括号被误删问题。当前数据中 **2,944 条中英文产品名称的括号配对率为 100%（0 条括号失衡）**。
+从原始 `Stocklist.xls` 重新读取并规范清洗：严格只识别并剔除末尾完整的 `(纯数字)` 箱装数量备注（如 `(30)`、`(16)`），彻底解决了上一轮简单替换造成的 535+ 处右括号被误删问题。当前数据中 **2,825 条中英文产品名称的括号配对率为 100%（0 条括号失衡）**。
 
 ### 10 条代表性修复前后对照样例：
 | Item # | 原始中文名称 (Raw Chinese) | 清洗修复后中文名称 (Cleaned Chinese) | 修复说明 | 括号配对 |
@@ -172,8 +172,8 @@
    - `scripts/import_stocklist.py`：全新严格温层、成对括号保护、去编码与翻译草稿注入管道。
    - `scripts/generate_responsive_images.py`：自动生成 400w/800w/1200w 的 WebP 与 AVIF 多分辨率资产。
    - `scripts/generate_public_catalog_pdf.py`：重新生成无价格、无供应商编码的双语公开 PDF 目录。
-   - `scripts/generate_sitemap.py`：根据最新 2,944 条产品生成完整的标准 XML 站点地图。
-   - `src/data/products.json`：2,944 条最新清洗后的标准商品数据。
+   - `scripts/generate_sitemap.py`：根据最新 2,825 条产品生成完整的标准 XML 站点地图。
+   - `src/data/products.json`：2,825 条最新清洗后的标准商品数据。
    - `src/data/curatedCategoryFeatured.ts`：人工精选 9 大品类 8~12 个真实在库且高实拍率的代表性商品配置。
    - `src/data/site.ts`：更新 Hero 图片、活海鲜图片与品类元数据。
    - `data/stocklist-import-report.json`：全量清洗与温层统计事实报表。

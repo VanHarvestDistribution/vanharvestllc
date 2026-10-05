@@ -331,14 +331,20 @@
 }
 .company-editorial-photo {
   margin: 0 !important;
-  overflow: hidden !important;
-  border-radius: 4px !important;
-  box-shadow: 0 24px 64px rgba(16, 43, 82, 0.14) !important;
+  max-width: min(380px, 100%) !important;
+  justify-self: end !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: 0 24px 48px rgba(16, 43, 82, 0.18) !important;
+  transform: rotate(2deg) !important;
 }
 .company-editorial-photo img {
   width: 100% !important;
-  aspect-ratio: 4 / 3 !important;
-  object-fit: cover !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
   display: block !important;
 }
 
@@ -438,6 +444,10 @@
   .company-editorial-grid {
     grid-template-columns: 1fr !important;
     gap: 36px !important;
+  }
+  .company-editorial-photo {
+    justify-self: center !important;
+    max-width: min(380px, 100%) !important;
   }
 }
 

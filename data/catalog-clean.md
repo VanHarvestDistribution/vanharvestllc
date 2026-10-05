@@ -2,7 +2,7 @@
 
 Charlotte, North Carolina · Phone: (704) 392-8717 · Office Email: vanharvestoffice2019@gmail.com
 
-Warehouse: 29,000 SF · Delivery regions: North Carolina, South Carolina, Atlanta, GA, Virginia
+Warehouse: 100,000 SF · Delivery regions: North Carolina, South Carolina, Atlanta, GA, Virginia
 
 | Item # | Product Name | Chinese Name | Category | Pack Format | Storage |
 | --- | --- | --- | --- | --- | --- |

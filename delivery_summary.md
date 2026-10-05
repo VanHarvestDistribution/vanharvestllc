@@ -23,7 +23,7 @@ Van Harvest Distribution is a bilingual (English / Simplified Chinese) wholesale
 4. **100% Balanced Chinese & English Parentheses**:
    - Re-imported from raw `Stocklist.xls`.
    - Strict pattern removes only trailing complete `(digits)` box counts (e.g. `(30)`, `(16)`).
-   - Cleaned 465 tail digits while protecting 100% of brand/spec parentheses. Zero unbalanced parentheses remain across all 2,944 items.
+   - Cleaned 465 tail digits while protecting 100% of brand/spec parentheses. Zero unbalanced parentheses remain across all 2,825 items.
 
 5. **Supplier Codes & Internal Remarks Cleaned**:
    - Cleaned PATEL / PVC-xxx, FLS-xxx / BA-FLS / A-FLS, 10014/Ramarc, 68/4941, LIPON LGT 011334.
@@ -57,7 +57,7 @@ Van Harvest Distribution is a bilingual (English / Simplified Chinese) wholesale
 10. **SEO & Routing**:
     - Canonical default English (`/`) and Chinese (`/zh`) structure.
     - `/en/*` routes 301 redirected to canonical default paths via `_redirects` and static meta-refresh fallback.
-    - Static sitemap generator produces valid XML for all pages and 2,944 products at `/sitemap.xml`.
+    - Static sitemap generator produces valid XML for all pages and 2,825 products at `/sitemap.xml`.
     - `robots.txt` declares `Sitemap: https://vanharvest.com/sitemap.xml`.
     - Standalone 404 page does not emit hreflang and is marked `noindex,nofollow`.
     - Organization & LocalBusiness JSON-LD on homepage with Charlotte address, phone, and hours.

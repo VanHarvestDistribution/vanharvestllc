@@ -5,7 +5,7 @@ interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang = 'en', localized = false } = Astro.props;
 const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
-const poster = '/images/facilities/warehouse-facility.webp';
+const poster = '/images/company/van-harvest-company-poster.webp';
 const coverage = zh
   ? [
       { name: '北卡罗来纳州', sub: '每天配送 · 最低 $500' },
@@ -23,8 +23,8 @@ const coverage = zh
 <BaseLayout
   title={zh ? '公司介绍与仓储网络 | Van Harvest' : 'Company Overview & Warehouse Network | Van Harvest'}
   description={zh
-    ? 'Van Harvest Distribution 成立于 2019 年，位于夏洛特 5226 Terminal St，拥有 29,000 平方英尺仓库，每日配送北卡、南卡，预约配送弗吉尼亚与亚特兰大，24 小时电话或短信下单，最低起送额 $500。'
-    : 'Founded in 2019, Van Harvest operates a 29,000 SF warehouse in Charlotte, delivering daily across NC and SC with scheduled routes to VA and Atlanta. 24/7 ordering, $500 minimum.'}
+    ? 'Van Harvest Distribution 成立于 2019 年，位于夏洛特 5226 Terminal St，拥有 100,000 平方英尺仓库，每日配送北卡、南卡，预约配送弗吉尼亚与亚特兰大，24 小时电话或短信下单，最低起送额 $500。'
+    : 'Founded in 2019, Van Harvest operates a 100,000 SF warehouse in Charlotte, delivering daily across NC and SC with scheduled routes to VA and Atlanta. 24/7 ordering, $500 minimum.'}
   active="/company"
   lang={lang}
   ogImage={poster}
@@ -36,8 +36,8 @@ const coverage = zh
         <div class="editorial-rule"></div>
         <p>
           {zh
-            ? '成立于 2019 年，Van Harvest 位于夏洛特 5226 Terminal St，拥有 29,000 平方英尺仓库。自有货车每天配送北卡与南卡，定期配送弗吉尼亚与亚特兰大。电话或短信 24 小时下单，无截单时间，每次最低起送额 $500。'
-            : 'Founded in 2019, Van Harvest operates a 29,000 SF facility at 5226 Terminal St in Charlotte. Our trucks deliver daily across NC and SC, with scheduled routes to VA and Atlanta. Order 24/7 by phone or text with no cutoff time and a $500 delivery minimum.'}
+            ? '成立于 2019 年，Van Harvest 位于夏洛特 5226 Terminal St，拥有 100,000 平方英尺仓库。自有货车每天配送北卡与南卡，定期配送弗吉尼亚与亚特兰大。电话或短信 24 小时下单，无截单时间，每次最低起送额 $500。'
+            : 'Founded in 2019, Van Harvest operates a 100,000 SF facility at 5226 Terminal St in Charlotte. Our trucks deliver daily across NC and SC, with scheduled routes to VA and Atlanta. Order 24/7 by phone or text with no cutoff time and a $500 delivery minimum.'}
         </p>
         <div class="hero-actions" style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
           <a class="button button-gold" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a>
@@ -45,7 +45,7 @@ const coverage = zh
         </div>
       </div>
       <figure class="company-editorial-photo">
-        <img src={poster} alt={zh ? 'Van Harvest 夏洛特中央仓库实拍' : 'Van Harvest Charlotte central warehouse'} loading="eager" />
+        <img src={poster} alt={zh ? 'Van Harvest 公司宣传海报' : 'Van Harvest company poster'} loading="eager" />
       </figure>
     </div>
   </section>
@@ -62,8 +62,8 @@ const coverage = zh
         </p>
         <p>
           {zh
-            ? '目前，29,000 平方英尺仓储库区支持九大品类集中配货，包含肉类禽类、蔬菜水果、活鲜水产、酱料调味、罐头腌制、餐饮耗材、米面干货、清洁用品及冷冻点心。对于华人餐馆与亚洲厨房，我们提供准确的中文名称、规格标识与熟悉的大包装规格。'
-            : 'Today, our 29,000 SF warehouse supports nine full foodservice departments under one roof: meat and poultry, produce, live seafood, sauces, canned goods, restaurant packaging, dry staples, janitorial chemicals, and frozen dim sum. We provide authentic Chinese product names and standard wholesale pack formats.'}
+            ? '目前，100,000 平方英尺仓储库区支持九大品类集中配货，包含肉类禽类、蔬菜水果、活鲜水产、酱料调味、罐头腌制、餐饮耗材、米面干货、清洁用品及冷冻点心。对于华人餐馆与亚洲厨房，我们提供准确的中文名称、规格标识与熟悉的大包装规格。'
+            : 'Today, our 100,000 SF warehouse supports nine full foodservice departments under one roof: meat and poultry, produce, live seafood, sauces, canned goods, restaurant packaging, dry staples, janitorial chemicals, and frozen dim sum. We provide authentic Chinese product names and standard wholesale pack formats.'}
         </p>
         <p>
           {zh
@@ -90,7 +90,7 @@ const coverage = zh
         <div class="network-origin">
           <span>{zh ? '中央仓库' : 'Central warehouse'}</span>
           <strong>Charlotte, NC</strong>
-          <small>{zh ? '29,000 SF · 5226 Terminal St' : '29,000 SF · 5226 Terminal St'}</small>
+          <small>{zh ? '100,000 平方英尺 · 5226 Terminal St' : '100,000 SF · 5226 Terminal St'}</small>
         </div>
         <div class="network-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="network-destinations">
