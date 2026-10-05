@@ -21,17 +21,17 @@ const departments = zh
     ];
 ---
 <BaseLayout
-  title={zh ? '联系我们 | Van Harvest' : 'Contact Us | Van Harvest'}
+  title={zh ? '夏洛特食品批发联系方式 | Van Harvest 万昌' : 'Contact Van Harvest LLC | Charlotte Wholesale Food Supplier'}
   description={zh
-    ? `联系 Van Harvest：夏洛特 5226 Terminal St。电话或短信下单：${contact.phoneDisplay}，24 小时可接单，无截单时间。`
-    : `Contact Van Harvest Distribution at ${contact.address}. Call or text orders 24/7 at ${contact.phoneDisplay}.`}
+    ? `联系 Van Harvest 万昌：${contact.address}。夏洛特食品批发、开户和配送咨询请致电或短信 ${contact.phoneDisplay}。`
+    : `Contact Van Harvest LLC, a Charlotte wholesale food distributor at ${contact.address}. Call or text ${contact.phoneDisplay} for restaurant supply, account and delivery questions.`}
   active="/contact"
   lang={lang}
 >
   <section class="inner-hero">
     <div class="shell inner-grid">
       <div>
-        <h1>{zh ? '联系我们' : 'Contact Us'}</h1>
+        <h1>{zh ? '联系 Van Harvest 万昌' : 'Contact Van Harvest LLC in Charlotte'}</h1>
       </div>
       <div class="inner-copy">
         <p>

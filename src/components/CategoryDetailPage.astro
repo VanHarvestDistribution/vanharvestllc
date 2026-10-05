@@ -14,8 +14,12 @@ const products = (productsData as any[]).filter((product) => product.category ==
 const configuredIds = curatedCategoryFeaturedIds[category.key] || [];
 const featured = configuredIds.map((id) => products.find((product) => product.id === id)).filter((product): product is any => Boolean(product && yellowLabelProductImages[product.id])).map((product) => ({ product, image: yellowLabelProductImages[product.id] }));
 const name = zh ? category.nameZh : category.name;
-const title = zh ? `${name}批发产品 | Van Harvest` : `${category.name} Wholesale Products | Van Harvest`;
-const description = zh ? `浏览 Van Harvest ${name}的全部产品、中英文名称与温层信息。` : `Browse Van Harvest ${category.name.toLowerCase()} products with bilingual names and storage information.`;
+const title = category.key === 'seafood'
+  ? (zh ? `夏洛特活海鲜批发 | Van Harvest 万昌` : `Live Seafood Wholesale Charlotte NC | Van Harvest LLC`)
+  : (zh ? `${name}食品批发产品 | Van Harvest 万昌` : `${category.name} Wholesale Products Charlotte NC | Van Harvest LLC`);
+const description = category.key === 'seafood'
+  ? (zh ? '浏览 Van Harvest 万昌的海鲜批发目录，了解鲜虾、鱼类、贝类和冷冻海鲜供应。' : 'Browse seafood wholesale products from Van Harvest LLC for Charlotte restaurants, including shrimp, fish, shellfish and frozen seafood.')
+  : (zh ? `浏览 Van Harvest 万昌${name}的全部产品、中英文名称与温层信息，服务夏洛特餐馆和亚洲厨房。` : `Browse ${category.name.toLowerCase()} wholesale products from Van Harvest LLC serving Charlotte restaurants and markets.`);
 const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' : 'Frozen') : storage === 'refrigerated' ? (zh ? '冷藏' : 'Refrigerated') : '';
 const hasImage = (id: string) => Boolean(yellowLabelProductImages[String(id)]);
 const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;

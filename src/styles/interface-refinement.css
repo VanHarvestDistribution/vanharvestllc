@@ -539,3 +539,33 @@
   cursor: wait;
   opacity: .6;
 }
+
+
+/* SEO landing pages: editorial typography, generous whitespace, no card wall */
+.seo-topic-links { padding: 88px 0; background: var(--bone); }
+.seo-topic-links h2 { max-width: 700px; margin: 0 0 28px; font-family: var(--serif); font-size: clamp(30px, 4vw, 52px); font-weight: 400; }
+.seo-topic-links-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+.seo-topic-links-grid a { display: flex; justify-content: space-between; gap: 12px; padding: 22px 16px 22px 0; color: var(--navy); border-bottom: 1px solid var(--line); font-weight: 600; }
+.seo-topic-links-grid a:hover { color: var(--gold); }
+.seo-landing-page { background: var(--white); }
+.seo-landing-hero { padding: clamp(130px, 16vw, 220px) 0 100px; background: var(--navy); color: var(--white); }
+.seo-landing-hero .shell { max-width: 1200px; }
+.seo-landing-hero .eyebrow { color: var(--gold); }
+.seo-landing-hero h1 { max-width: 900px; margin: 18px 0 22px; font-family: var(--serif); font-size: clamp(48px, 7vw, 88px); font-weight: 400; line-height: .98; }
+.seo-landing-hero p:not(.eyebrow) { max-width: 720px; margin: 0; color: rgba(255,255,255,.78); font-size: 18px; line-height: 1.7; }
+.seo-landing-content { padding: 104px 0 120px; }
+.seo-landing-content section { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: 72px; padding: 48px 0; border-top: 1px solid var(--line); }
+.seo-landing-content section h2 { margin: 0; font-family: var(--serif); font-size: clamp(30px, 4vw, 46px); font-weight: 400; line-height: 1.08; }
+.seo-landing-content section p { max-width: 680px; margin: 0; font-size: 17px; line-height: 1.75; color: var(--ink-soft); }
+.seo-landing-actions { display: flex; gap: 14px; padding-top: 42px; }
+@media (max-width: 760px) {
+  .seo-topic-links { padding: 64px 0; }
+  .seo-topic-links-grid { grid-template-columns: 1fr 1fr; }
+  .seo-topic-links-grid a { padding-right: 12px; }
+  .seo-landing-hero { padding: 120px 0 72px; }
+  .seo-landing-content { padding: 56px 0 72px; }
+  .seo-landing-content section { grid-template-columns: 1fr; gap: 18px; padding: 32px 0; }
+  .seo-landing-content section p { font-size: 16px; }
+  .seo-landing-actions { flex-direction: column; }
+  .seo-landing-actions .button { width: 100%; }
+}

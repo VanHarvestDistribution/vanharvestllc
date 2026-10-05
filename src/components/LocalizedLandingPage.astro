@@ -1,0 +1,121 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CallToAction from '@/components/CallToAction.astro';
+import { contact } from '@/data/site';
+
+interface Props { slug: string; lang?: 'en' | 'zh'; localized?: boolean }
+const { slug, lang = 'en', localized = false } = Astro.props;
+const zh = lang === 'zh';
+const prefix = localized ? `/${lang}` : '';
+
+type Landing = { title: string; metaTitle: string; description: string; sections: { heading: string; body: string }[] };
+const pages: Record<string, { en: Landing; zh: Landing }> = {
+  'charlotte-food-distributor': {
+    en: {
+      title: 'Charlotte Food Distributor',
+      metaTitle: 'Charlotte Food Distributor | Van Harvest LLC',
+      description: 'Van Harvest LLC is a Charlotte wholesale food distributor serving restaurants, markets and professional kitchens across the Carolinas.',
+      sections: [
+        { heading: 'A local wholesale food warehouse', body: 'Van Harvest LLC operates from 5226 Terminal St in Charlotte, NC 28208. Our 100,000 SF warehouse supports daily purchasing for restaurants, Asian markets, convenience stores and other foodservice businesses. Customers can call or text (704) 392-8717 to discuss an account, a delivery route or a product question. We are a working wholesale supplier, not a public retail storefront, so our process is built around business accounts and recurring kitchen needs.' },
+        { heading: 'Nine departments for one order', body: 'The catalog brings meat and poultry, produce and fruit, seafood, sauces and seasonings, canned and preserved goods, restaurant supplies, rice and dry goods, cleaning supplies, and frozen prepared foods into one searchable source. The bilingual catalog shows English and Chinese product names together, making it easier for restaurant owners and purchasing teams to identify familiar brands and formats. Product availability can change with supply, but the department structure remains easy to browse.' },
+        { heading: 'Delivery across the region', body: 'Van Harvest delivers daily across North Carolina and South Carolina. Virginia and Atlanta, Georgia are served through scheduled routes arranged with the office. Orders are delivered by our truck team, and customers should check the shipment with the driver at the door. The minimum order is $500 per delivery. Call or text anytime to discuss the best route for your business.' },
+        { heading: 'How to open an account', body: 'Start with the online application and share your company name, business type, address, contact information and purchasing needs. New accounts begin on COD. After one month of ordering, customers may apply for payment terms. Apply for an account to see pricing and receive a purchasing conversation that fits your operation.' }
+      ]
+    },
+    zh: {
+      title: '夏洛特食品批发',
+      metaTitle: '夏洛特食品批发公司 | Van Harvest 万昌',
+      description: 'Van Harvest 万昌位于夏洛特，为餐馆、亚洲超市、便利店和专业厨房提供食品批发、仓储与配送。',
+      sections: [
+        { heading: '夏洛特本地食品仓库', body: 'Van Harvest 万昌位于 5226 Terminal St, Charlotte, NC 28208，拥有 100,000 平方英尺仓库，为餐馆、亚洲超市、便利店及其他餐饮客户提供日常采购支持。我们是面向企业客户的批发供应商，不是普通零售店。您可以致电或短信 (704) 392-8717，咨询开户、配送路线和产品信息。' },
+        { heading: '九大品类集中采购', body: '产品目录涵盖肉类禽类、蔬菜水果、海鲜、酱料调味、罐头腌制、餐饮用品、米面干货、清洁用品和冷冻点心与零食。中英文名称同时显示，方便餐馆老板和采购人员查找熟悉的品牌、包装和产品规格。实际供应会随季节和货源变化，但目录结构清晰，便于持续采购。' },
+        { heading: '覆盖北卡与周边区域', body: '北卡和南卡每天配送；弗吉尼亚及亚特兰大通过预约路线安排。货车送货到店，到货时请与司机当面核对。每次配送最低起送额为 $500。无论是固定路线还是首次采购，都可以先电话或短信沟通适合您餐馆的配送安排。' },
+        { heading: '如何申请开户', body: '在线填写公司名称、业务类型、地址、联系人和预计采购需求即可开始申请。新客户从货到付款（COD）开始，合作满一个月后可申请账期。申请开户后，办公室会根据您的业务类型和配送区域继续沟通。申请开户查看价格。' }
+      ]
+    }
+  },
+  'chinese-restaurant-supplier': {
+    en: {
+      title: 'Chinese Restaurant Food Supplier',
+      metaTitle: 'Chinese Restaurant Supplier Charlotte NC | Van Harvest LLC',
+      description: 'Wholesale ingredients, produce, seafood, sauces, dry goods and supplies for Chinese restaurants in Charlotte and North Carolina.',
+      sections: [
+        { heading: 'Built around Chinese restaurant purchasing', body: 'Chinese restaurants need more than a generic grocery assortment. Menus depend on dependable proteins, Asian vegetables, seafood, sauces, noodles, rice, packaging and frozen prepared foods arriving in useful wholesale formats. Van Harvest LLC organizes these categories for professional kitchens and displays Chinese product names alongside English names, so purchasing teams can search by the terms they use every day.' },
+        { heading: 'Common kitchen categories', body: 'The meat department includes fresh and frozen pork, beef, chicken, lamb and specialty cuts. Produce includes leafy greens, mushrooms, tropical fruit and vegetables used in stir-fries, soups and banquet preparation. Seafood, sauces, cooking ingredients, rice, noodles, dim sum and restaurant supplies can be reviewed in the same catalog. Items with real product photography have dedicated detail pages for easier confirmation.' },
+        { heading: 'Ordering and delivery', body: 'Call or text (704) 392-8717 to place an order or ask about a product. Orders are accepted 24/7 with no cutoff time. North Carolina and South Carolina routes run daily; Virginia and Atlanta are scheduled with the office. The delivery minimum is $500, and the driver checks the shipment with your team at the door.' },
+        { heading: 'A practical account process', body: 'Submit the wholesale account application with your restaurant details and purchasing needs. New accounts begin COD, and payment terms may be requested after one month of ordering. Apply for an account to see pricing. If a product is damaged, missing or wrong, report it to the driver at delivery so the team can address the issue promptly.' }
+      ]
+    },
+    zh: {
+      title: '中餐馆食材供应',
+      metaTitle: '夏洛特中餐馆食材供应 | Van Harvest 万昌',
+      description: 'Van Harvest 万昌为夏洛特和北卡中餐馆供应肉类、蔬果、海鲜、酱料、米面干货与餐饮用品。',
+      sections: [
+        { heading: '围绕中餐后厨采购', body: '中餐馆需要的不是普通超市式商品，而是适合后厨持续使用的肉类、亚洲蔬菜、海鲜、酱料、米面、包装和冷冻食品。Van Harvest 万昌将这些品类集中整理，中英文名称同时展示，采购人员可以按熟悉的中文名称或英文名称查找，减少沟通和核对时间。' },
+        { heading: '常用食材品类', body: '肉类禽类包括猪肉、牛肉、鸡肉、羊肉和特色部位；蔬菜水果包含叶菜、菇类、热带水果和炒菜、汤品常用蔬果；海鲜、酱料调味、米面干货、冷冻点心以及餐饮用品都可以在目录中查找。已有实拍图的商品设有独立详情页，方便确认产品外观。' },
+        { heading: '下单与配送', body: '可致电或短信 (704) 392-8717 下单或咨询产品。电话和短信 24 小时都可以下单，没有截单时间。北卡、南卡每天配送；弗吉尼亚和亚特兰大按路线预约。每次配送最低起送额为 $500，到货时请和司机当面核对。' },
+        { heading: '开户流程清晰', body: '填写批发开户申请，提供餐馆信息和预计采购需求。新客户从货到付款开始，合作满一个月后可以申请账期。申请开户查看价格。如果到货时发现破损、缺货或送错，请当场告诉司机，方便及时处理。' }
+      ]
+    }
+  },
+  'live-seafood-wholesale': {
+    en: {
+      title: 'Live Seafood Wholesale',
+      metaTitle: 'Live Seafood Wholesale Charlotte NC | Van Harvest LLC',
+      description: 'Explore seafood wholesale supply for Charlotte restaurants, including seafood categories, delivery coordination and receiving procedures.',
+      sections: [
+        { heading: 'Seafood supply for professional kitchens', body: 'Van Harvest LLC maintains a seafood department for restaurants and foodservice buyers looking for shrimp, fish, shellfish and related frozen seafood. The catalog helps customers review product names, Chinese names and storage information before contacting the office. Because seafood supply changes with season, harvest and transportation, the right way to confirm a current item is to call or text the team.' },
+        { heading: 'Fresh and frozen options', body: 'The seafood assortment is organized so buyers can distinguish refrigerated and frozen products where the catalog identifies a storage requirement. Restaurant teams can use the department page to compare products and open detail pages for items that have a verified product photograph. This keeps the page useful without presenting a substitute image as if it were the exact product.' },
+        { heading: 'Delivery and receiving', body: 'Seafood orders are delivered on Van Harvest routes. North Carolina and South Carolina receive daily delivery service, while Virginia and Atlanta are arranged through scheduled routes. The minimum order is $500 per delivery. Check the shipment with the driver at the door; report damage, shortages or an incorrect item immediately so the issue can be exchanged or credited.' },
+        { heading: 'Start a wholesale account', body: 'Restaurants can apply online with business details, delivery address and purchasing information. New accounts begin on COD, and payment terms may be requested after one month of ordering. Apply for an account to see pricing, or call (704) 392-8717 to discuss seafood purchasing and delivery coverage.' }
+      ]
+    },
+    zh: {
+      title: '活海鲜批发',
+      metaTitle: '夏洛特活海鲜批发 | Van Harvest 万昌',
+      description: 'Van Harvest 万昌为夏洛特餐馆提供海鲜批发目录、鲜冻水产供应和配送协调服务。',
+      sections: [
+        { heading: '面向专业厨房的海鲜供应', body: 'Van Harvest 万昌设有海鲜品类，服务需要虾类、鱼类、贝类及相关冷冻水产的餐馆和餐饮采购人员。目录可以先查看中英文名称和温层信息，再联系办公室确认。海鲜供应会受到季节、捕捞和运输影响，确认当前货源最可靠的方式是电话或短信咨询。' },
+        { heading: '鲜品与冷冻品', body: '海鲜目录会在能够确认时标明冷藏或冷冻温层，方便采购人员区分产品。已有准确实拍图的商品可以进入详情页查看，避免用不对应的替代图片误导客户。需要具体品种、包装或配送安排时，请直接联系销售团队。' },
+        { heading: '配送与收货', body: '海鲜订单通过 Van Harvest 货车路线配送。北卡、南卡每天配送；弗吉尼亚和亚特兰大按预约路线安排。每次配送最低起送额为 $500。到货时请与司机当面核对，如有破损、缺货或送错，应立即说明，方便安排退换或账务处理。' },
+        { heading: '申请批发账户', body: '餐馆可以在线填写开户申请，提供公司资料、配送地址和采购需求。新客户从货到付款开始，合作满一个月后可以申请账期。申请开户查看价格，也可以致电 (704) 392-8717，沟通海鲜采购和配送范围。' }
+      ]
+    }
+  },
+  'nc-sc-food-delivery': {
+    en: {
+      title: 'North Carolina & South Carolina Food Delivery',
+      metaTitle: 'NC SC Food Delivery for Restaurants | Van Harvest LLC',
+      description: 'Wholesale food delivery from Charlotte to restaurants and markets in North Carolina and South Carolina, with scheduled routes beyond the Carolinas.',
+      sections: [
+        { heading: 'Daily delivery in NC and SC', body: 'Van Harvest LLC runs daily delivery service across North Carolina and South Carolina from its Charlotte warehouse at 5226 Terminal St. The service is designed for restaurant and market customers who need a wholesale source for meat, produce, seafood, pantry goods, frozen foods and restaurant supplies. Call or text (704) 392-8717 to discuss your location and route.' },
+        { heading: 'Virginia and Atlanta routes', body: 'Customers in Virginia and Atlanta, Georgia can contact the office to arrange a scheduled route. Delivery frequency depends on the route and business location, so the site does not promise a daily schedule outside North and South Carolina. The team can explain the practical ordering and delivery options for your account.' },
+        { heading: 'Order anytime', body: 'Orders can be placed by phone or text 24/7. There is no order cutoff time. The minimum order is $500 per delivery. New customers begin with COD, and payment terms can be requested after one month of ordering. These straightforward rules let restaurant operators plan purchasing without a complicated online checkout process.' },
+        { heading: 'Check every delivery', body: 'When the truck arrives, check the shipment with the driver at the door. If an item is damaged, missing or wrong, tell the driver immediately so the team can exchange or credit it free of charge. Apply for a wholesale account online, then use the main line for ordering and delivery questions.' }
+      ]
+    },
+    zh: {
+      title: '北卡南卡食品配送',
+      metaTitle: '北卡南卡餐馆食品配送 | Van Harvest 万昌',
+      description: 'Van Harvest 万昌从夏洛特仓库向北卡、南卡餐馆和市场提供食品批发配送，弗吉尼亚和亚特兰大按路线预约。',
+      sections: [
+        { heading: '北卡与南卡每天配送', body: 'Van Harvest 万昌从 5226 Terminal St 的夏洛特仓库出发，为北卡和南卡餐馆、市场提供每天配送。配送品类包括肉类、蔬果、海鲜、酱料干货、冷冻食品和餐饮用品。请致电或短信 (704) 392-8717，说明地址和采购需求，办公室会协助安排路线。' },
+        { heading: '弗吉尼亚与亚特兰大预约路线', body: '弗吉尼亚和亚特兰大客户可以联系办公室安排预约路线。北卡、南卡以外的配送频率取决于路线和客户地址，网站不承诺每天配送。销售团队会根据账户和采购情况说明适合的配送方式。' },
+        { heading: '24 小时下单', body: '电话或短信 24 小时都可以下单，没有截单时间。每次配送最低起送额为 $500。新客户从货到付款开始，合作满一个月后可以申请账期。规则清晰，餐馆可以按照自己的采购节奏安排补货，不需要复杂的线上结账流程。' },
+        { heading: '到货当面核对', body: '货车到店时，请与司机当面核对整批货物。如果有破损、缺货或送错，请立即告诉司机，方便免费退换或记账处理。可以先在线申请批发账户，再使用主电话进行下单和配送咨询。' }
+      ]
+    }
+  }
+};
+const page = pages[slug]?.[lang] || pages['charlotte-food-distributor'][lang];
+---
+<BaseLayout title={page.metaTitle} description={page.description} active="" lang={lang}>
+  <article class="seo-landing-page">
+    <header class="seo-landing-hero"><div class="shell"><p class="eyebrow">{zh ? 'Van Harvest 万昌 · 食品批发' : 'Van Harvest LLC · Wholesale food supply'}</p><h1>{page.title}</h1><p>{page.description}</p></div></header>
+    <div class="shell seo-landing-content">
+      {page.sections.map((section) => <section><h2>{section.heading}</h2><p>{section.body}</p></section>)}
+      <div class="seo-landing-actions"><a class="button button-gold" href={`${prefix}/apply/`}>{zh ? '申请开户 →' : 'Apply for an account →'}</a><a class="button button-outline-dark" href={`tel:${contact.phoneHref}`}>{zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}</a></div>
+    </div>
+  </article>
+  <CallToAction lang={lang} localized={localized} />
+</BaseLayout>

@@ -14,16 +14,16 @@ const prefix = localized ? `/${lang}` : '';
 const heroSlides = heroImages;
 const productCount = products.length.toLocaleString();
 const pageDescription = zh
-  ? `Van Harvest Distribution 位于夏洛特，拥有 100,000 平方英尺仓库，提供 ${productCount}+ 种肉类、蔬果、海鲜、干货与餐饮用品批发，每日配送北卡、南卡，预约配送维吉尼亚与亚特兰大，24 小时电话或短信下单，每次最低 $500。`
-  : `Van Harvest Distribution operates a 100,000 SF warehouse in Charlotte, supplying ${productCount}+ products across meat, produce, seafood and dry goods with daily NC/SC deliveries, 24/7 ordering and $500 minimum.`;
+  ? `Van Harvest 万昌位于夏洛特，拥有 100,000 平方英尺仓库，提供 ${productCount}+ 种肉类、蔬果、海鲜、干货与餐饮用品批发，每日配送北卡、南卡，预约配送维吉尼亚与亚特兰大，24 小时电话或短信下单，每次最低 $500。`
+  : `Van Harvest LLC operates a 100,000 SF warehouse in Charlotte, supplying ${productCount}+ products across meat, produce, seafood and dry goods with daily NC/SC deliveries, 24/7 ordering and $500 minimum.`;
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Organization',
-      name: 'Van Harvest Distribution LLC',
-      url: absoluteUrl('/') || 'https://www.vanharvestllc.com',
+      name: 'Van Harvest LLC',
+      url: absoluteUrl('/'),
       logo: absoluteUrl('/brand/van-harvest-official.png'),
       telephone: contact.phoneDisplay,
       email: contact.officeEmail,
@@ -38,13 +38,16 @@ const organizationJsonLd = {
       }
     },
     {
-      '@type': 'LocalBusiness',
-      name: 'Van Harvest Distribution LLC',
-      url: absoluteUrl('/') || 'https://www.vanharvestllc.com',
+      '@type': ['WholesaleStore', 'LocalBusiness'],
+      name: 'Van Harvest LLC',
+      url: absoluteUrl('/'),
       telephone: contact.phoneDisplay,
       description: pageDescription,
-      priceRange: '$$$',
       image: absoluteUrl(heroImage),
+      logo: absoluteUrl('/brand/van-harvest-official.png'),
+      sameAs: [],
+      areaServed: ['North Carolina', 'South Carolina', 'Virginia', 'Georgia'],
+      geo: { '@type': 'GeoCoordinates', latitude: 35.2707951, longitude: -80.9019205 },
       address: {
         '@type': 'PostalAddress',
         streetAddress: '5226 Terminal St',
@@ -53,21 +56,14 @@ const organizationJsonLd = {
         postalCode: '28208',
         addressCountry: 'US'
       },
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
-          closes: '17:00'
-        }
-      ]
+      openingHoursSpecification: []
     }
   ]
 };
 
 const pageTitle = zh
-  ? '夏洛特食品批发与冷链配送 | Van Harvest'
-  : 'Wholesale Food Distributor & Cold-Chain Logistics in Charlotte | Van Harvest';
+  ? '夏洛特亚洲食品批发与配送 | Van Harvest 万昌'
+  : 'Asian Food Distributor Charlotte NC | Van Harvest LLC';
 ---
 <BaseLayout title={pageTitle} description={pageDescription} active="/" lang={lang} ogImage={heroImage} jsonLd={organizationJsonLd}>
   <!-- Hero: ONLY place where italic title style is retained -->
@@ -86,9 +82,9 @@ const pageTitle = zh
       <div class="hero-copy">
         <h1>
           {zh ? (
-            <>新鲜、冷冻、<br /><em>常温食品，一站采购。</em></>
+            <>Van Harvest 万昌<br /><em>夏洛特亚洲食品批发与配送</em></>
           ) : (
-            <>Good food starts<br />with a <em>reliable source.</em></>
+            <>Van Harvest —<br /><em>Wholesale Asian Food Distributor in Charlotte, NC</em></>
           )}
         </h1>
         <div class="hero-copy-bottom">
@@ -132,6 +128,19 @@ const pageTitle = zh
             : 'Nine departments cover fresh and frozen meats, produce, seafood, sauces, dry staples, frozen dim sum and restaurant disposables. COD on start, terms after one month.'}
         </p>
         <a class="text-link" href={`${prefix}/company/`}>{zh ? '了解仓储与配送网络 →' : 'Our warehouse & delivery network →'}</a>
+      </div>
+    </div>
+  </section>
+  <section class="seo-topic-links" aria-labelledby="seo-topics-title">
+    <div class="shell">
+      <h2 id="seo-topics-title">{zh ? '按采购需求了解 Van Harvest 万昌' : 'Find the right wholesale supply route'}</h2>
+      <div class="seo-topic-links-grid">
+        {[
+          ['/charlotte-food-distributor/', zh ? '夏洛特食品批发' : 'Charlotte food distributor'],
+          ['/chinese-restaurant-supplier/', zh ? '中餐馆食材供应' : 'Chinese restaurant supplier'],
+          ['/live-seafood-wholesale/', zh ? '活海鲜批发' : 'Live seafood wholesale'],
+          ['/nc-sc-food-delivery/', zh ? '北卡南卡食品配送' : 'NC & SC food delivery']
+        ].map(([path, label]) => <a href={`${prefix}${path}`}>{label} <span aria-hidden="true">→</span></a>)}
       </div>
     </div>
   </section>

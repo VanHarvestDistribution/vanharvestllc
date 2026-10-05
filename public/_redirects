@@ -1,7 +1,7 @@
-# Redirect apex domain to canonical www
-https://vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
-http://vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
-http://www.vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
+# Canonical domain: apex vanharvestllc.com
+https://www.vanharvestllc.com/* https://vanharvestllc.com/:splat 301!
+http://www.vanharvestllc.com/* https://vanharvestllc.com/:splat 301!
+http://vanharvestllc.com/* https://vanharvestllc.com/:splat 301!
 
 # Support legacy non-trailing slashes by redirecting to trailing slash
 /products /products/ 301
@@ -16,6 +16,10 @@ http://www.vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
 /suppliers /suppliers/ 301
 /privacy /privacy/ 301
 /terms /terms/ 301
+/charlotte-food-distributor /charlotte-food-distributor/ 301
+/chinese-restaurant-supplier /chinese-restaurant-supplier/ 301
+/live-seafood-wholesale /live-seafood-wholesale/ 301
+/nc-sc-food-delivery /nc-sc-food-delivery/ 301
 /zh /zh/ 301
 /zh/products /zh/products/ 301
 /zh/products/catalog /zh/products/catalog/ 301
@@ -29,6 +33,10 @@ http://www.vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
 /zh/suppliers /zh/suppliers/ 301
 /zh/privacy /zh/privacy/ 301
 /zh/terms /zh/terms/ 301
+/zh/charlotte-food-distributor /zh/charlotte-food-distributor/ 301
+/zh/chinese-restaurant-supplier /zh/chinese-restaurant-supplier/ 301
+/zh/live-seafood-wholesale /zh/live-seafood-wholesale/ 301
+/zh/nc-sc-food-delivery /zh/nc-sc-food-delivery/ 301
 
 # Product departments
 /products/meat /products/meat/ 301
@@ -40,7 +48,6 @@ http://www.vanharvestllc.com/* https://www.vanharvestllc.com/:splat 301!
 /products/dry /products/dry/ 301
 /products/cleaning /products/cleaning/ 301
 /products/prepared /products/prepared/ 301
-
 /zh/products/meat /zh/products/meat/ 301
 /zh/products/produce /zh/products/produce/ 301
 /zh/products/seafood /zh/products/seafood/ 301

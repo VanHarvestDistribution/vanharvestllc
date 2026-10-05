@@ -1,4 +1,4 @@
-const defaultSiteOrigin = 'https://www.vanharvestllc.com';
+const defaultSiteOrigin = 'https://vanharvestllc.com';
 
 const configuredOrigin = import.meta.env.PUBLIC_SITE_ORIGIN?.trim().replace(/\/$/, '');
 
@@ -7,6 +7,7 @@ export const siteOrigin = configuredOrigin && /^https:\/\//.test(configuredOrigi
 export const ensureTrailingSlash = (path: string) => {
   if (!path || path === '/') return '/';
   const clean = path.split('?')[0].split('#')[0];
+  if (/\.[a-z0-9]{2,5}$/i.test(clean)) return path;
   const trailing = clean.endsWith('/') ? clean : `${clean}/`;
   const query = path.includes('?') ? `?${path.split('?')[1].split('#')[0]}` : '';
   const hash = path.includes('#') ? `#${path.split('#')[1]}` : '';
@@ -14,7 +15,6 @@ export const ensureTrailingSlash = (path: string) => {
 };
 
 export const absoluteUrl = (path: string) => {
-  if (!siteOrigin) return undefined;
   const normalized = ensureTrailingSlash(path.startsWith('/') ? path : `/${path}`);
   return `${siteOrigin}${normalized}`;
 };

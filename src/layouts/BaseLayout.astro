@@ -16,7 +16,56 @@ interface Props {
 const { title, description, active = '', ogImage = '/brand/van-harvest-icon.png', jsonLd, lang = 'en' } = Astro.props;
 const alternates = languagePaths(Astro.url.pathname);
 const canonical = absoluteUrl(Astro.url.pathname);
-const ogImageUrl = absoluteUrl(ogImage) || ogImage;
+const ogImageUrl = absoluteUrl(ogImage);
+const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '/zh' || Astro.url.pathname === '/zh/';
+const routeSegments = Astro.url.pathname.replace(/^\/zh\/?/, '').split('/').filter(Boolean);
+const breadcrumbNames: Record<string, { en: string; zh: string }> = {
+  products: { en: 'Products', zh: '产品目录' },
+  catalog: { en: 'Full catalog', zh: '完整目录' },
+  company: { en: 'Company', zh: '公司介绍' },
+  services: { en: 'Services', zh: '服务' },
+  contact: { en: 'Contact', zh: '联系我们' },
+  apply: { en: 'Apply for an account', zh: '申请开户' },
+  delivery: { en: 'Delivery', zh: '配送安排' },
+  industries: { en: 'Who we serve', zh: '服务客户' },
+  careers: { en: 'Careers', zh: '招聘' },
+  suppliers: { en: 'Suppliers', zh: '供应商合作' },
+  privacy: { en: 'Privacy policy', zh: '隐私政策' },
+  terms: { en: 'Terms', zh: '网站条款' },
+  'charlotte-food-distributor': { en: 'Charlotte food distributor', zh: '夏洛特食品批发' },
+  'chinese-restaurant-supplier': { en: 'Chinese restaurant supplier', zh: '中餐馆食材供应' },
+  'live-seafood-wholesale': { en: 'Live seafood wholesale', zh: '活海鲜批发' },
+  'nc-sc-food-delivery': { en: 'NC & SC food delivery', zh: '北卡南卡食品配送' },
+  meat: { en: 'Meat & poultry', zh: '肉类禽类' },
+  produce: { en: 'Produce & fruit', zh: '蔬菜水果' },
+  seafood: { en: 'Seafood', zh: '海鲜' },
+  pantry: { en: 'Sauces & seasonings', zh: '酱料调味' },
+  preserved: { en: 'Canned & preserved', zh: '罐头腌制' },
+  supplies: { en: 'Restaurant supplies', zh: '餐饮用品' },
+  dry: { en: 'Rice, noodles & dry goods', zh: '米面干货' },
+  cleaning: { en: 'Cleaning & janitorial', zh: '清洁用品' },
+  prepared: { en: 'Frozen, prepared & snacks', zh: '冷冻点心与零食' },
+};
+const breadcrumbItems = isHome ? [] : [
+  { name: lang === 'zh' ? '首页' : 'Home', url: absoluteUrl(lang === 'zh' ? '/zh/' : '/') },
+  ...routeSegments.map((segment, index) => ({
+    name: breadcrumbNames[segment]?.[lang] || (index === routeSegments.length - 1 && /^\d+$/.test(segment) ? `Item #${segment}` : segment),
+    url: absoluteUrl(`/${lang === 'zh' ? 'zh/' : ''}${routeSegments.slice(0, index + 1).join('/')}/`),
+  }))
+];
+const breadcrumbJsonLd = breadcrumbItems.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: item.url }))
+} : undefined;
+const jsonLdNodes = jsonLd
+  ? (Array.isArray(jsonLd['@graph'])
+      ? jsonLd['@graph']
+      : [{ ...jsonLd, '@context': undefined }])
+  : [];
+const structuredData = jsonLdNodes.length || breadcrumbJsonLd
+  ? { '@context': 'https://schema.org', '@graph': [...jsonLdNodes, ...(breadcrumbJsonLd ? [breadcrumbJsonLd] : [])] }
+  : undefined;
 ---
 <!doctype html>
 <html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
@@ -24,25 +73,27 @@ const ogImageUrl = absoluteUrl(ogImage) || ogImage;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="food distributor, wholesale food, Charlotte NC, restaurant supplier, Asian produce" />
+    <meta name="keywords" content="Van Harvest, Charlotte food distributor, wholesale food Charlotte NC, Asian food distributor Charlotte, restaurant food supplier North Carolina" />
     <meta name="theme-color" content="#102B52" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Van Harvest Distribution" />
+    <meta property="og:site_name" content="Van Harvest LLC" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
-    {canonical && <><link rel="canonical" href={canonical} /><meta property="og:url" content={canonical} /></>}
-    <link rel="alternate" hreflang="en" href={absoluteUrl(alternates.english) || alternates.english} />
-    <link rel="alternate" hreflang="zh-CN" href={absoluteUrl(alternates.chinese) || alternates.chinese} />
-    <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.default) || alternates.default} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:url" content={canonical} />
+    <link rel="alternate" hreflang="en" href={absoluteUrl(alternates.english)} />
+    <link rel="alternate" hreflang="zh-CN" href={absoluteUrl(alternates.chinese)} />
+    <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.default)} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
     <title>{title}</title>
   </head>
   <body class:list={{ 'inner-page': active !== '/' }}>
@@ -50,7 +101,7 @@ const ogImageUrl = absoluteUrl(ogImage) || ogImage;
     <Header active={active} lang={lang} />
     <main id="main"><slot /></main>
     <Footer />
-    <a class="contact-fab" href="tel:+17043928717" aria-label={lang === 'zh' ? '电话联系 Van Harvest' : 'Talk to Van Harvest'}><span aria-hidden="true">☎</span><span class="contact-fab-label">{lang === 'zh' ? '电话联系' : 'Talk to us'}</span></a>
+    <a class="contact-fab" href="tel:+17043928717" aria-label={lang === 'zh' ? '电话联系 Van Harvest LLC' : 'Call Van Harvest LLC'}><span aria-hidden="true">☎</span><span class="contact-fab-label">{lang === 'zh' ? '电话联系' : 'Talk to us'}</span></a>
     <script is:inline>
       const revealAll = () => document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
       try {
@@ -108,11 +159,7 @@ const ogImageUrl = absoluteUrl(ogImage) || ogImage;
             if (status) status.textContent = text(form, 'Sending…', '正在发送…');
             if (button) button.disabled = true;
             try {
-              const response = await fetch(endpoint, {
-                method: 'POST',
-                headers: { Accept: 'application/json' },
-                body: data
-              });
+              const response = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: data });
               let payload = null;
               try { payload = await response.json(); } catch (_) {}
               if (!response.ok || (payload && payload.success === false)) throw new Error('submission failed');
