@@ -23,7 +23,7 @@
 
 ## Category migration and old-detail URL policy
 
-**599 legacy category paths** are emitted in `public/_redirects`, each in English and Chinese. A migrated product with an uploaded photo redirects to its new static detail page. A migrated product without a generated detail page redirects to its current category page, preventing a 301-to-404 chain.
+**599 legacy category paths** are generated as static redirect pages, each in English and Chinese. A migrated product with an uploaded photo redirects to its new static detail page. A migrated product without a generated detail page redirects to its current category page, preventing a broken legacy link.
 
 ### Legacy `produce` paths → current categories (387)
 
@@ -733,4 +733,4 @@ The current workbook has **34** blank-English rows. **5** are blacklisted non-pu
 | 21190 / 21425 / 21603 | `produce` · watermelon / watercress / peeled garlic |
 | 23046 | `seafood` · Whole Tilapia Gutted 40LB |
 
-Redirect generation runs inside `pnpm build` through `scripts/generate_redirects.mjs`; future imports preserve and regenerate the appropriate legacy paths automatically.
+Static redirect-page generation runs inside `pnpm build` through `scripts/generate_static_redirect_pages.mjs`; future imports preserve and regenerate the appropriate legacy paths automatically.

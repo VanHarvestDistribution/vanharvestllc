@@ -56,7 +56,7 @@ def main() -> None:
 
     lines += [
         '', '## Category migration and old-detail URL policy', '',
-        f'**{len(HISTORY):,} legacy category paths** are emitted in `public/_redirects`, each in English and Chinese. A migrated product with an uploaded photo redirects to its new static detail page. A migrated product without a generated detail page redirects to its current category page, preventing a 301-to-404 chain.',
+        f'**{len(HISTORY):,} legacy category paths** are generated as static redirect pages, each in English and Chinese. A migrated product with an uploaded photo redirects to its new static detail page. A migrated product without a generated detail page redirects to its current category page, preventing a broken legacy link.',
         '',
     ]
     for source in ('produce', 'seafood', 'meat', 'pantry', 'prepared', 'preserved', 'supplies', 'dry', 'cleaning'):
@@ -99,7 +99,7 @@ def main() -> None:
         '| 35224 / 35149 / 35650 | `supplies` · sushi container / chopsticks |',
         '| 21190 / 21425 / 21603 | `produce` · watermelon / watercress / peeled garlic |',
         '| 23046 | `seafood` · Whole Tilapia Gutted 40LB |',
-        '', 'Redirect generation runs inside `pnpm build` through `scripts/generate_redirects.mjs`; future imports preserve and regenerate the appropriate legacy paths automatically.',
+        '', 'Static redirect-page generation runs inside `pnpm build` through `scripts/generate_static_redirect_pages.mjs`; future imports preserve and regenerate the appropriate legacy paths automatically.',
     ]
     OUT.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)} with {len(lines)} lines.')
