@@ -27,15 +27,6 @@ All photography used on the Van Harvest Distribution website is either supplied 
 | **Hero 1: Fresh Fruit** | `hero-fruit-still-life.webp` | Pineapple, pomegranate, apple, pear and raspberry still life on green surface | **User-provided Van Harvest asset** | Customer-supplied asset |
 | **Hero 2: Prime Steaks** | `hero-beef-steaks.webp` | Top-view raw beef steaks with rosemary, garlic and spices | **User-provided Van Harvest asset** | Customer-supplied asset |
 | **Hero 3: Asian Greens** | `hero-asian-produce.webp` | Fresh wholesale box of green bok choy | Photo on **Pexels** | [Pexels License](https://www.pexels.com/photo/a-photograph-of-bok-choy-in-a-box/) |
-| **Hero 4: Cold-Chain Logistics** | `hero-cold-chain.webp` | Commercial refrigerated delivery truck fleet | Photo by **CHUTTERSNAP** on Unsplash | [Unsplash License](https://unsplash.com/photos/food-logistics) |
-
----
-
-## 3. Dedicated Live Seafood Feature (1 Image, 4:3 Aspect Ratio)
-
-| Feature | Filename | Subject Description | Source & Author | License URL |
-| :--- | :--- | :--- | :--- | :--- |
-| **Live Seafood Holding Tank** | `live-seafood-tank.webp` | Live crabs and seafood in clear glass holding tank | Photo by **Sunguk Kim** on Unsplash | [Unsplash License](https://unsplash.com/photos/brown-and-white-crab-in-clear-glass-tank) |
 
 ---
 

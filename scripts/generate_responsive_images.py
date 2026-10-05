@@ -23,9 +23,6 @@ TARGET_IMAGES = [
     'public/images/home/hero-beef-steaks.webp',
     'public/images/home/hero-fruit-still-life.webp',
     'public/images/home/hero-asian-produce.webp',
-    'public/images/home/hero-cold-chain.webp',
-    # Live seafood
-    'public/images/home/live-seafood-tank.webp',
 ]
 
 WIDTHS = [400, 800, 1200]

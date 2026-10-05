@@ -106,7 +106,9 @@ INTERNAL_REMARKS = [
     re.compile(r'[\-\s]+PC\b', re.I),
     re.compile(r'[\(（]\s*海鲜\s*[）\)]\s*[\-—]?\s*磅', re.I),
     re.compile(r'[\(（]\s*海鲜\s*[）\)]', re.I),
-    re.compile(r'\*保鲜不保活[^\*]*\*', re.I),
+    re.compile(r'[（(]?\s*海鲜\s*[-—,:]?\s*保鲜不保活\s*[,，]?\s*不退货\s*[）)]?', re.I),
+    re.compile(r'保鲜不保活\s*[,，]?\s*不退货', re.I),
+    re.compile(r'保鲜不保活', re.I),
 ]
 
 PACK_PATTERNS = [

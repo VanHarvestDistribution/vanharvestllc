@@ -27,7 +27,6 @@ base_routes = [
     '/terms',
     '/charlotte-food-distributor',
     '/chinese-restaurant-supplier',
-    '/live-seafood-wholesale',
     '/nc-sc-food-delivery'
 ]
 

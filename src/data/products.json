@@ -10162,7 +10162,7 @@
   {
     "id": "33301",
     "name": "(FRESH) Sea Bass",
-    "nameZh": "黑鲈鱼 海鲜-保鲜不保活",
+    "nameZh": "黑鲈鱼 海鲜",
     "rawName": "(FRESH) Sea Bass - PC",
     "category": "seafood",
     "packSize": "",
@@ -10172,7 +10172,7 @@
   {
     "id": "33302",
     "name": "(FRESH) BlackCod Fish",
-    "nameZh": "黑鳕鱼 海鲜-保鲜不保活,不退货",
+    "nameZh": "黑鳕鱼",
     "rawName": "(FRESH) BlackCod Fish-PC *NO RETURN*",
     "category": "seafood",
     "packSize": "",
@@ -10232,7 +10232,7 @@
   {
     "id": "33308",
     "name": "(FRESH) Red Rock Fish",
-    "nameZh": "红石斑鱼 (20) 海鲜-保鲜不保活",
+    "nameZh": "红石斑鱼 (20) 海鲜",
     "rawName": "(FRESH) Red Rock Fish - PC",
     "category": "seafood",
     "packSize": "",
@@ -10272,7 +10272,7 @@
   {
     "id": "33312",
     "name": "Crab",
-    "nameZh": "蟹保鲜不保活",
+    "nameZh": "蟹",
     "rawName": "Crab - PC",
     "category": "seafood",
     "packSize": "",
@@ -10312,7 +10312,7 @@
   {
     "id": "33316",
     "name": "(FRESH) PETRALE SOLE /PC",
-    "nameZh": "新鲜龙利鱼 (海鲜 -保鲜不保活) - 只",
+    "nameZh": "新鲜龙利鱼 (海鲜 -) - 只",
     "rawName": "(FRESH) PETRALE SOLE /PC",
     "category": "seafood",
     "packSize": "",
@@ -10322,7 +10322,7 @@
   {
     "id": "33317",
     "name": "(FRESH) Elephant Trunk Clam (Geoduck)",
-    "nameZh": "象拔蚌 海鲜-保鲜不保活",
+    "nameZh": "象拔蚌 海鲜",
     "rawName": "(FRESH) Elephant Trunk Clam (Geoduck) - PC",
     "category": "seafood",
     "packSize": "",
@@ -10332,7 +10332,7 @@
   {
     "id": "33318",
     "name": "(FRESH) Conch (L) /PKG",
-    "nameZh": "响螺 海鲜-保鲜不保活 /袋",
+    "nameZh": "响螺 海鲜- /袋",
     "rawName": "(FRESH) Conch (L) /PKG",
     "category": "seafood",
     "packSize": "",
@@ -10372,7 +10372,7 @@
   {
     "id": "33322",
     "name": "(FRESH) Mussel 3LB /PKG",
-    "nameZh": "青口 (淡菜) 海鲜-保鲜不保活 3LB",
+    "nameZh": "青口 (淡菜) 海鲜- 3LB",
     "rawName": "(FRESH) Mussel 3LB /PKG",
     "category": "seafood",
     "packSize": "3LB",
@@ -10382,7 +10382,7 @@
   {
     "id": "33323",
     "name": "(FRESH) LingCod",
-    "nameZh": "鲟龙鱼(新鲜 -保鲜不保活)- 磅",
+    "nameZh": "鲟龙鱼(新鲜 -)- 磅",
     "rawName": "(FRESH) LingCod - PC",
     "category": "seafood",
     "packSize": "",
@@ -10412,7 +10412,7 @@
   {
     "id": "33326",
     "name": "(FRESH) Black Rockfish (Tau Tog)",
-    "nameZh": "黑石斑鱼/只(海鲜 -保鲜不保活)-磅",
+    "nameZh": "黑石斑鱼/只(海鲜 -)-磅",
     "rawName": "(FRESH) Black Rockfish (Tau Tog) - PC",
     "category": "seafood",
     "packSize": "",
@@ -10442,7 +10442,7 @@
   {
     "id": "33329",
     "name": "(FRESH) Sea Cucumber 5LB /PKG",
-    "nameZh": "海参 5磅/包 海鲜-保鲜不保活",
+    "nameZh": "海参 5磅/包 海鲜",
     "rawName": "(FRESH) Sea Cucumber 5LB /PKG *NO RETURN*",
     "category": "seafood",
     "packSize": "5LB",
@@ -10482,7 +10482,7 @@
   {
     "id": "33333",
     "name": "(FRESH) Abalone 5 - PKG",
-    "nameZh": "鲍鱼 海鲜-保鲜不保活",
+    "nameZh": "鲍鱼 海鲜",
     "rawName": "(FRESH) Abalone 5 PC - PKG",
     "category": "seafood",
     "packSize": "5PC",
@@ -10532,7 +10532,7 @@
   {
     "id": "33350",
     "name": "Wild Caught Shrimp 10LB",
-    "nameZh": "游水虾(海鲜-保鲜不保活)",
+    "nameZh": "游水虾(海鲜-)",
     "rawName": "Wild Caught Shrimp 10LB *NO RETURN*",
     "category": "seafood",
     "packSize": "10LB",
@@ -10542,7 +10542,7 @@
   {
     "id": "33351",
     "name": "(FRESH) Spot Prawn 3LB/Pkg",
-    "nameZh": "珊瑚虾/包海鲜-保鲜不保活,不退货",
+    "nameZh": "珊瑚虾/包",
     "rawName": "(FRESH) Spot Prawn 3LB/Pkg*NO RETURN*",
     "category": "seafood",
     "packSize": "3LB/PKG",
@@ -10552,7 +10552,7 @@
   {
     "id": "33352",
     "name": "(FRESH) Spotted Shrimp - CS",
-    "nameZh": "珊瑚虾 /箱 海鲜-保鲜不保活,不退货",
+    "nameZh": "珊瑚虾 /箱",
     "rawName": "(FRESH) Spotted Shrimp - CS *NO RETURN*",
     "category": "seafood",
     "packSize": "",
@@ -10752,7 +10752,7 @@
   {
     "id": "33633",
     "name": "(FRESH) Razor Clam-LB",
-    "nameZh": "蟶子/刀蚬 海鲜-保鲜不保活,不退货",
+    "nameZh": "蟶子/刀蚬",
     "rawName": "(FRESH) Razor Clam-LB *NO RETURN*",
     "category": "seafood",
     "packSize": "",
@@ -12682,7 +12682,7 @@
   {
     "id": "38888",
     "name": "Blue Crab 10LB/PKG",
-    "nameZh": "蓝蟹10LB/袋 海鲜-保鲜不保活,不退货",
+    "nameZh": "蓝蟹10LB/袋",
     "rawName": "Blue Crab 10LB/PKG *NO RETURN*",
     "category": "seafood",
     "packSize": "10LB/PKG",
@@ -12692,7 +12692,7 @@
   {
     "id": "38889",
     "name": "(MALE) Blue Crab 40LB",
-    "nameZh": "公蓝蟹 海鲜,保鲜不保活,不退货",
+    "nameZh": "公蓝蟹",
     "rawName": "(MALE) Blue Crab 40LB *NO RETURN*",
     "category": "seafood",
     "packSize": "40LB",
@@ -12722,7 +12722,7 @@
   {
     "id": "39999",
     "name": "(FEMALE) Blue Crab 40LB",
-    "nameZh": "母蟹 海鲜,保鲜不保活,不退货",
+    "nameZh": "母蟹",
     "rawName": "(FEMALE) Blue Crab 40LB *NO RETURN*",
     "category": "seafood",
     "packSize": "40LB",

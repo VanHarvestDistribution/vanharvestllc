@@ -28,7 +28,6 @@ export const heroImages = [
 ] as const;
 
 export const heroImage = heroImages[0];
-export const liveSeafoodImage = '/images/home/live-seafood-tank.webp';
 
 export const facilityImages = {
   warehouse: '/images/facilities/warehouse-facility.webp',

@@ -12,7 +12,7 @@ const imageIds = new Set([...imageMapSource.matchAll(/'([0-9]+)':\s*'\/images\/p
 const baseRoutes = [
   '', '/products', '/products/catalog', '/company', '/services', '/contact', '/apply', '/delivery',
   '/industries', '/careers', '/suppliers', '/privacy', '/terms', '/charlotte-food-distributor',
-  '/chinese-restaurant-supplier', '/live-seafood-wholesale', '/nc-sc-food-delivery'
+  '/chinese-restaurant-supplier', '/nc-sc-food-delivery'
 ];
 const departments = ['meat', 'produce', 'seafood', 'pantry', 'preserved', 'supplies', 'dry', 'cleaning', 'prepared'];
 const urls = [];
