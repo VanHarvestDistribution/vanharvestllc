@@ -598,6 +598,14 @@
   font-style: italic !important;
 }
 
+/* Chinese titles use an upright serif treatment; English retains the editorial italic accent. */
+html[lang="zh-CN"] .home-hero .hero-copy h1 em,
+html[lang="zh-CN"] h1 em,
+html[lang="zh-CN"] h2 em,
+html[lang="zh-CN"] h3 em {
+  font-style: normal !important;
+}
+
 @media (max-width: 680px) {
   .home-hero {
     min-height: 100svh !important;

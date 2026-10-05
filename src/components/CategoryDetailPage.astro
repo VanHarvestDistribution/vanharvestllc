@@ -20,6 +20,7 @@ const title = category.key === 'seafood'
 const description = category.key === 'seafood'
   ? (zh ? '浏览 Van Harvest 万昌的海鲜批发目录，了解虾类、鱼类、贝类和冷冻海鲜产品。' : 'Browse seafood wholesale products from Van Harvest LLC for Charlotte restaurants, including shrimp, fish, shellfish and frozen seafood.')
   : (zh ? `浏览 Van Harvest 万昌${name}的全部产品、中英文名称与温层信息，服务夏洛特餐馆和亚洲厨房。` : `Browse ${category.name.toLowerCase()} wholesale products from Van Harvest LLC serving Charlotte restaurants and markets.`);
+const needsPagination = products.length > 50;
 const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' : 'Frozen') : storage === 'refrigerated' ? (zh ? '冷藏' : 'Refrigerated') : '';
 const hasImage = (id: string) => Boolean(yellowLabelProductImages[String(id)]);
 const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
@@ -80,7 +81,7 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
         </div>
         <p>{zh ? `共 ${products.length.toLocaleString()} 个产品。已有实拍图的商品可进入详情页。` : `${products.length.toLocaleString()} products. Items with real photos link to their detail pages.`}</p>
       </div>
-      <div class="catalog-table-wrap category-product-table-wrap" data-category-pagination data-page-size="50">
+      <div class="catalog-table-wrap category-product-table-wrap" data-category-pagination={needsPagination ? '' : undefined} data-page-size={needsPagination ? '50' : undefined}>
         <table class="catalog-table category-product-table">
           <thead>
             <tr>
@@ -118,7 +119,7 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
             })}
           </tbody>
         </table>
-        {products.length > 50 && (
+        {needsPagination && (
           <div class="category-pagination-bar" style="margin-top: 32px; text-align: center;">
             <p class="category-pagination-status" style="margin-bottom: 14px; font-size: 14px; color: var(--text-muted, #555);">
               {zh ? `当前显示 50 / ${products.length} 个产品` : `Showing 50 of ${products.length} products`}
