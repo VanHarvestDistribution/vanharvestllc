@@ -26,20 +26,144 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
 ---
 <BaseLayout title={title} description={description} active="/products" lang={lang}>
   <section class="category-detail-hero">
-    <div class="category-detail-media"><ResponsivePicture src={category.image} alt={`${name} ${zh ? '产品分类' : 'wholesale category'}`} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="eager" /></div>
+    <div class="category-detail-media">
+      <ResponsivePicture src={category.image} alt={`${name} ${zh ? '产品分类' : 'wholesale category'}`} sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px" loading="eager" />
+    </div>
     <div class="category-detail-shade"></div>
     <div class="shell category-detail-inner">
-      <p class="breadcrumb"><a href={`${prefix}/products/`}>{zh ? '产品目录' : 'Product catalog'}</a><span>/</span>{name}</p>
-      <div class="category-detail-copy"><h1>{name}</h1><p>{zh ? category.shortZh : category.short}</p><a class="button" href="#category-products">{zh ? '浏览全部产品 →' : 'Browse all products →'}</a></div>
+      <p class="breadcrumb">
+        <a href={`${prefix}/products/`}>{zh ? '产品目录' : 'Product catalog'}</a>
+        <span>/</span>
+        {name}
+      </p>
+      <div class="category-detail-copy">
+        <h1>{name}</h1>
+        <p>{zh ? category.shortZh : category.short}</p>
+        <a class="button" href="#category-products">{zh ? '浏览全部产品 →' : 'Browse all products →'}</a>
+      </div>
     </div>
   </section>
 
-  {featured.length > 0 && <section class="featured-products"><div class="shell"><div class="featured-products-heading"><div><h2>{zh ? '实拍精选产品' : 'Featured products'}</h2></div><p>{zh ? '精选已有实拍图的代表商品。' : 'A curated selection of products with real warehouse photos.'}</p></div><div class="featured-product-grid">
-    {featured.map(({ product, image }) => <a class="featured-product-card featured-product-card-with-image" href={detailHref(product.id)}><div class="featured-product-thumb"><img src={image} alt={`${product.name} product photo`} loading="lazy" /></div><div><small>Item {product.id}{storageText(product.storage) ? ` · ${storageText(product.storage)}` : ''}</small><h3>{product.name}</h3>{product.nameZh && <p class="product-zh">{product.nameZh}</p>}</div><b aria-hidden="true">↗</b></a>)}
-  </div></div></section>}
+  {featured.length > 0 && (
+    <section class="featured-products">
+      <div class="shell">
+        <div class="featured-products-heading">
+          <div>
+            <h2>{zh ? '实拍精选产品' : 'Featured products'}</h2>
+          </div>
+          <p>{zh ? '精选已有实拍图的代表商品。' : 'A curated selection of products with real warehouse photos.'}</p>
+        </div>
+        <div class="featured-product-grid">
+          {featured.map(({ product, image }) => (
+            <a class="featured-product-card featured-product-card-with-image" href={detailHref(product.id)}>
+              <div class="featured-product-thumb">
+                <img src={image} alt={`${product.name} product photo`} loading="lazy" />
+              </div>
+              <div>
+                <small>Item {product.id}{storageText(product.storage) ? ` · ${storageText(product.storage)}` : ''}</small>
+                <h3>{product.name}</h3>
+                {product.nameZh && <p class="product-zh">{product.nameZh}</p>}
+              </div>
+              <b aria-hidden="true">↗</b>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
-  <section class="category-product-list" id="category-products"><div class="shell"><div class="category-product-list-heading"><div><h2>{zh ? `${name}全部产品` : `All ${category.name}`}</h2></div><p>{zh ? `共 ${products.length.toLocaleString()} 个产品。已有实拍图的商品可进入详情页。` : `${products.length.toLocaleString()} products. Items with real photos link to their detail pages.`}</p></div><div class="catalog-table-wrap category-product-table-wrap"><table class="catalog-table category-product-table"><thead><tr><th class="col-id">Item #</th><th class="col-product">{zh ? '产品名称' : 'Product'}</th><th class="col-storage">{zh ? '温层' : 'Storage'}</th></tr></thead><tbody>
-    {products.map((product) => { const storage = storageText(product.storage); const content = <><span class="name-en">{product.name}</span>{product.nameZh && <span class="name-zh">{product.nameZh}</span>}<div class="catalog-mobile-meta">{storage && <span><strong>{zh ? '温层' : 'Storage'}:</strong> {storage}</span>}</div></>; return <tr class="catalog-product-row"><td class="col-id"><code>{product.id}</code></td><td class="col-product">{hasImage(product.id) ? <a class="catalog-product-link" href={detailHref(product.id)}>{content}</a> : content}</td><td class="col-storage">{storage && <span class:list={['storage-badge', product.storage]}>{storage}</span>}</td></tr>; })}
-  </tbody></table></div></div></section>
+  <section class="category-product-list" id="category-products">
+    <div class="shell">
+      <div class="category-product-list-heading">
+        <div>
+          <h2>{zh ? `${name}全部产品` : `All ${category.name}`}</h2>
+        </div>
+        <p>{zh ? `共 ${products.length.toLocaleString()} 个产品。已有实拍图的商品可进入详情页。` : `${products.length.toLocaleString()} products. Items with real photos link to their detail pages.`}</p>
+      </div>
+      <div class="catalog-table-wrap category-product-table-wrap" data-category-pagination data-page-size="50">
+        <table class="catalog-table category-product-table">
+          <thead>
+            <tr>
+              <th class="col-id">Item #</th>
+              <th class="col-product">{zh ? '产品名称' : 'Product'}</th>
+              <th class="col-storage">{zh ? '温层' : 'Storage'}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product, idx) => {
+              const storage = storageText(product.storage);
+              const isInitial = idx < 50;
+              const content = (
+                <>
+                  <span class="name-en">{product.name}</span>
+                  {product.nameZh && <span class="name-zh">{product.nameZh}</span>}
+                  <div class="catalog-mobile-meta">
+                    {storage && <span><strong>{zh ? '温层' : 'Storage'}:</strong> {storage}</span>}
+                  </div>
+                </>
+              );
+              return (
+                <tr class="catalog-product-row category-product-row" data-row-index={idx} style={isInitial ? '' : 'display: none;'}>
+                  <td class="col-id"><code>{product.id}</code></td>
+                  <td class="col-product">
+                    {hasImage(product.id) ? (
+                      <a class="catalog-product-link" href={detailHref(product.id)}>{content}</a>
+                    ) : content}
+                  </td>
+                  <td class="col-storage">
+                    {storage && <span class:list={['storage-badge', product.storage]}>{storage}</span>}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {products.length > 50 && (
+          <div class="category-pagination-bar" style="margin-top: 32px; text-align: center;">
+            <p class="category-pagination-status" style="margin-bottom: 14px; font-size: 14px; color: var(--text-muted, #555);">
+              {zh ? `当前显示 50 / ${products.length} 个产品` : `Showing 50 of ${products.length} products`}
+            </p>
+            <button class="button button-gold category-load-more" type="button" data-total={products.length} data-loaded="50" data-page-size="50">
+              {zh ? '加载更多产品 ↓' : 'Load more products ↓'}
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
   <CallToAction lang={lang} localized={localized} />
+
+  <script is:inline>
+    (() => {
+      const wraps = document.querySelectorAll('[data-category-pagination]');
+      wraps.forEach((wrap) => {
+        const btn = wrap.querySelector('.category-load-more');
+        const status = wrap.querySelector('.category-pagination-status');
+        if (!btn) return;
+        const total = parseInt(btn.getAttribute('data-total') || '0', 10);
+        const pageSize = parseInt(btn.getAttribute('data-page-size') || '50', 10);
+        let loaded = parseInt(btn.getAttribute('data-loaded') || '50', 10);
+        const zh = document.documentElement.lang.startsWith('zh');
+
+        btn.addEventListener('click', () => {
+          const nextTarget = Math.min(loaded + pageSize, total);
+          const rows = wrap.querySelectorAll('.category-product-row');
+          for (let i = loaded; i < nextTarget; i++) {
+            if (rows[i]) rows[i].style.display = '';
+          }
+          loaded = nextTarget;
+          btn.setAttribute('data-loaded', String(loaded));
+          if (status) {
+            status.textContent = zh
+              ? `当前显示 ${loaded} / ${total} 个产品`
+              : `Showing ${loaded} of ${total} products`;
+          }
+          if (loaded >= total) {
+            btn.style.display = 'none';
+          }
+        });
+      });
+    })();
+  </script>
 </BaseLayout>

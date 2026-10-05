@@ -569,3 +569,92 @@
   .seo-landing-actions { flex-direction: column; }
   .seo-landing-actions .button { width: 100%; }
 }
+
+
+/* =========================================================
+   Homepage Hero Refinement: Deeper shade overlay and mobile scaling
+   - 60% opacity dark gradient on left to ensure subtitles and stats are legible
+   - Mobile: compact title font size (<=4 lines) so Apply button is visible above the fold
+   ========================================================= */
+.home-hero-shade {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(7, 22, 43, 0.78) 0%, rgba(10, 29, 56, 0.62) 48%, rgba(16, 43, 82, 0.32) 100%),
+              linear-gradient(0deg, rgba(7, 22, 43, 0.52) 0%, transparent 60%) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.home-hero .hero-inner {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.home-hero .hero-copy h1 {
+  font-style: normal !important;
+}
+
+.home-hero .hero-copy h1 em {
+  font-style: italic !important;
+}
+
+@media (max-width: 680px) {
+  .home-hero {
+    min-height: 100svh !important;
+  }
+  .home-hero .hero-inner {
+    padding: 82px 0 20px !important;
+    min-height: 100svh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  .home-hero .hero-topline {
+    font-size: 10px !important;
+    margin-bottom: 8px !important;
+  }
+  .home-hero .hero-copy {
+    margin: 0 0 16px !important;
+  }
+  .home-hero .hero-copy h1 {
+    font-size: clamp(1.9rem, 8vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+    max-width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+  .home-hero .hero-copy-bottom {
+    margin-top: 10px !important;
+    gap: 14px !important;
+  }
+  .home-hero .hero-copy-bottom p {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  .home-hero .hero-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .home-hero .hero-actions .button {
+    flex: 1 !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+    text-align: center !important;
+  }
+  .home-hero .hero-bottom {
+    margin-top: 8px !important;
+  }
+  .home-hero .hero-stats {
+    gap: 16px !important;
+  }
+  .home-hero .hero-stats strong {
+    font-size: 1.15rem !important;
+  }
+  .home-hero .hero-stats span {
+    font-size: 9.5px !important;
+  }
+}
