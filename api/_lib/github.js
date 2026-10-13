@@ -64,21 +64,30 @@ export async function listFolder(path, ref) {
   return tree.tree.filter((entry) => entry.type === 'blob').map((entry) => entry.path);
 }
 
+/** Stores file contents in the repo without committing; returns the blob SHA (used by commitFiles via { blob }). */
+export async function createBlob(buffer) {
+  const blob = await gh('/git/blobs', { method: 'POST', body: { content: buffer.toString('base64'), encoding: 'base64' } });
+  return blob.sha;
+}
+
 /**
  * One commit with several file changes. `files` items: { path, content: Buffer|string } to write,
- * or { path, content: null } to delete. Returns the new commit SHA, or throws GitHubError 409
+ * { path, blob: sha } to write an already-uploaded blob, or { path, content: null } to delete. Returns the new commit SHA, or throws GitHubError 409
  * when the branch moved since `head` (caller retries).
  */
 export async function commitFiles({ head, message, files }) {
   const entries = [];
   for (const file of files) {
+    if (file.blob) {
+      entries.push({ path: file.path, mode: '100644', type: 'blob', sha: file.blob });
+      continue;
+    }
     if (file.content === null) {
       entries.push({ path: file.path, mode: '100644', type: 'blob', sha: null });
       continue;
     }
     const buffer = Buffer.isBuffer(file.content) ? file.content : Buffer.from(file.content, 'utf-8');
-    const blob = await gh('/git/blobs', { method: 'POST', body: { content: buffer.toString('base64'), encoding: 'base64' } });
-    entries.push({ path: file.path, mode: '100644', type: 'blob', sha: blob.sha });
+    entries.push({ path: file.path, mode: '100644', type: 'blob', sha: await createBlob(buffer) });
   }
   const tree = await gh('/git/trees', { method: 'POST', body: { base_tree: head.tree, tree: entries } });
   const commit = await gh('/git/commits', {

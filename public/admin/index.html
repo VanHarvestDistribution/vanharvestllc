@@ -6,136 +6,150 @@
   <meta name="robots" content="noindex, nofollow">
   <title>产品后台 · Van Harvest</title>
   <link rel="icon" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/admin/admin.css">
 </head>
 <body>
   <!-- Sign in -->
   <main id="login" class="login" hidden>
     <form id="login-form" class="login-card">
-      <img src="/brand/van-harvest-official.webp" alt="Van Harvest" class="login-logo">
-      <h1>产品后台</h1>
-      <p class="muted">Product admin</p>
-      <label>密码 Password
-        <input type="password" name="password" autocomplete="current-password" required autofocus>
+      <div class="tag tag-lg login-tag"><span class="tag-no">Van Harvest</span><span class="tag-sub">产品后台</span></div>
+      <label class="field">密码
+        <input type="password" name="password" autocomplete="current-password" required>
       </label>
-      <button type="submit" class="btn btn-primary">登录</button>
-      <p class="form-error" id="login-error" role="alert"></p>
+      <button type="submit" class="btn btn-primary btn-block">登录</button>
+      <p class="error" id="login-error" role="alert"></p>
     </form>
   </main>
 
   <!-- App -->
   <div id="app" hidden>
     <header class="topbar">
-      <div class="brand"><img src="/brand/van-harvest-official.webp" alt=""><span>产品后台</span></div>
-      <nav class="tabs" role="tablist">
-        <button class="tab is-active" data-tab="products" role="tab">产品</button>
-        <button class="tab" data-tab="bulk" role="tab">批量上传图片</button>
-        <button class="tab" data-tab="featured" role="tab">精选产品</button>
+      <a class="brand" href="/" target="_blank" rel="noopener" title="打开网站">
+        <img src="/brand/van-harvest-official.webp" alt="Van Harvest">
+      </a>
+      <nav class="nav" aria-label="后台分区">
+        <button class="nav-item is-active" data-tab="products">产品</button>
+        <button class="nav-item" data-tab="featured">精选产品</button>
       </nav>
-      <div class="topbar-right">
-        <a href="/" target="_blank" rel="noopener" class="link">查看网站 ↗</a>
-        <button class="btn btn-ghost" id="logout">退出</button>
+      <div class="topbar-end">
+        <span class="sync" id="sync"></span>
+        <button class="btn-text" id="logout">退出</button>
       </div>
     </header>
 
-    <div class="status-bar" id="status" hidden></div>
-
     <!-- Products -->
-    <section class="panel" data-panel="products">
+    <section class="workspace" data-panel="products">
       <div class="toolbar">
-        <input type="search" id="search" placeholder="搜索 Item #、英文名或中文名" autocomplete="off">
-        <select id="filter-category"><option value="">全部品类</option></select>
-        <select id="filter-image">
-          <option value="">全部</option>
+        <div class="search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>
+          <input type="search" id="search" placeholder="搜索 Item #、英文或中文名称" autocomplete="off">
+        </div>
+        <select id="filter-category" aria-label="品类"><option value="">全部品类</option></select>
+        <select id="filter-state" aria-label="筛选">
+          <option value="">全部产品</option>
           <option value="none">没有图片</option>
           <option value="studio">白底图</option>
           <option value="warehouse">仓库实拍图</option>
+          <option value="pending">待发布的修改</option>
           <option value="edited">后台改过的</option>
-          <option value="hidden">已隐藏</option>
+          <option value="added">后台新增的</option>
+          <option value="deleted">已删除</option>
         </select>
-        <span class="muted" id="result-count"></span>
+        <span class="count" id="result-count"></span>
+        <div class="toolbar-end">
+          <label class="btn btn-quiet">批量上传图片<input type="file" id="bulk-files" accept="image/*" multiple hidden></label>
+          <button class="btn btn-quiet" id="new-product">新增产品</button>
+        </div>
       </div>
+
       <div class="split">
-        <div class="list" id="product-list" aria-label="产品列表"></div>
-        <form class="editor" id="editor" hidden>
-          <div class="editor-head">
-            <div>
-              <div class="mono muted">Item # <span id="ed-id"></span></div>
-              <h2 id="ed-title"></h2>
-            </div>
-            <a id="ed-view" class="link" target="_blank" rel="noopener">在网站上查看 ↗</a>
+        <div class="sheet" id="product-list" aria-label="产品列表"></div>
+
+        <aside class="detail" id="detail">
+          <div class="detail-empty" id="detail-empty">
+            <p>从左边选择一个产品来编辑。</p>
+            <p class="muted">批量上传图片：文件名以 Item # 开头，例如 <b>12152.jpg</b>，可以一次选很多张。</p>
           </div>
 
-          <div class="image-box">
-            <div class="image-frame" id="ed-image"></div>
-            <div class="image-actions">
-              <label class="btn btn-outline">上传新图片<input type="file" id="ed-file" accept="image/*" hidden></label>
-              <label class="check"><input type="checkbox" id="ed-fill"> 填满画面（会裁掉边缘）</label>
-              <button type="button" class="btn btn-ghost danger" id="ed-remove-image" hidden>删除白底图</button>
-              <p class="hint" id="ed-image-note"></p>
+          <form id="editor" hidden autocomplete="off">
+            <div class="tag tag-lg editor-tag">
+              <span class="tag-no" id="ed-id-text"></span>
+              <span class="tag-sub" id="ed-title"></span>
             </div>
-          </div>
-
-          <div class="grid2">
-            <label>英文名称 English name<input name="name" required maxlength="200"></label>
-            <label>中文名称 Chinese name<input name="nameZh" maxlength="200"></label>
-            <label>品类 Department<select name="category" id="ed-category"></select></label>
-            <label>温层 Storage
-              <select name="storage">
-                <option value="">常温 / 未标注</option>
-                <option value="frozen">冷冻 Frozen</option>
-                <option value="refrigerated">冷藏 Refrigerated</option>
-              </select>
+            <label class="field" id="ed-id-field" hidden>Item #
+              <input name="id" inputmode="numeric" pattern="\d{3,6}" placeholder="例如 12345">
             </label>
-            <label>规格 Pack size<input name="packSize" maxlength="200" placeholder="例如 30LB / 20LB/CS"></label>
-          </div>
-          <label class="check"><input type="checkbox" name="featured"> 放进本品类的精选产品（需要有图片）</label>
-          <label class="check"><input type="checkbox" name="hidden"> 在网站上隐藏这个产品</label>
-          <p class="hint" id="ed-original"></p>
+            <p class="notice" id="ed-notice" hidden></p>
 
-          <div class="editor-actions">
-            <button type="submit" class="btn btn-primary" id="ed-save">保存并发布</button>
-            <button type="button" class="btn btn-ghost" id="ed-reset">撤销修改</button>
-            <span class="form-error" id="ed-error" role="alert"></span>
-          </div>
-        </form>
-        <div class="editor-empty" id="editor-empty">在左边选择一个产品进行编辑</div>
-      </div>
-    </section>
+            <div class="photo">
+              <div class="photo-frame" id="ed-image"></div>
+              <div class="photo-side">
+                <label class="btn btn-quiet">选择图片<input type="file" id="ed-file" accept="image/*" hidden></label>
+                <label class="check"><input type="checkbox" id="ed-fill"> 填满画面</label>
+                <button type="button" class="btn-text danger" id="ed-remove-image" hidden>删除白底图</button>
+                <p class="muted small" id="ed-image-note"></p>
+              </div>
+            </div>
 
-    <!-- Bulk images -->
-    <section class="panel" data-panel="bulk" hidden>
-      <div class="bulk-intro">
-        <h2>批量上传产品图片</h2>
-        <p>文件名以 Item # 开头即可，例如 <code>12152.jpg</code> 或 <code>12152 牛柳.png</code>。图片会自动放到 1280×960 的白底画布上。上传后会替换该产品现有的图片。</p>
-        <label class="dropzone" id="dropzone">
-          <input type="file" id="bulk-files" accept="image/*" multiple hidden>
-          <strong>把图片拖到这里</strong> 或点击选择文件
-        </label>
-        <label class="check"><input type="checkbox" id="bulk-fill"> 填满画面（会裁掉边缘）</label>
-      </div>
-      <div class="bulk-grid" id="bulk-grid"></div>
-      <div class="editor-actions" id="bulk-actions" hidden>
-        <button class="btn btn-primary" id="bulk-upload">上传并发布</button>
-        <button class="btn btn-ghost" id="bulk-clear">清空</button>
-        <span class="muted" id="bulk-summary"></span>
+            <div class="fields">
+              <label class="field">英文名称<input name="name" maxlength="200"></label>
+              <label class="field">中文名称<input name="nameZh" maxlength="200"></label>
+              <label class="field">品类<select name="category" id="ed-category"></select></label>
+              <label class="field">温层
+                <select name="storage">
+                  <option value="">常温</option>
+                  <option value="frozen">冷冻</option>
+                  <option value="refrigerated">冷藏</option>
+                </select>
+              </label>
+              <label class="field field-wide">规格<input name="packSize" maxlength="200" placeholder="例如 30LB/CS"></label>
+            </div>
+            <label class="check"><input type="checkbox" name="featured"> 显示在本品类的精选产品里</label>
+            <p class="muted small" id="ed-original"></p>
+
+            <div class="editor-actions">
+              <button type="submit" class="btn btn-primary" id="ed-apply">加入待发布</button>
+              <button type="button" class="btn-text" id="ed-cancel">取消</button>
+              <span class="spacer"></span>
+              <span class="confirm" id="ed-delete-wrap">
+                <button type="button" class="btn-text danger" id="ed-delete">删除产品</button>
+              </span>
+            </div>
+            <p class="error" id="ed-error" role="alert"></p>
+          </form>
+        </aside>
       </div>
     </section>
 
     <!-- Featured -->
-    <section class="panel" data-panel="featured" hidden>
+    <section class="workspace" data-panel="featured" hidden>
       <div class="toolbar">
-        <select id="feat-category"></select>
-        <input id="feat-add" placeholder="输入 Item # 添加" inputmode="numeric">
-        <button class="btn btn-outline" id="feat-add-btn">添加</button>
-        <span class="muted">建议每个品类 8–12 个，只有带图片的产品才会显示。</span>
+        <select id="feat-category" aria-label="品类"></select>
+        <input id="feat-add" class="feat-add" placeholder="输入 Item # 添加" inputmode="numeric">
+        <button class="btn btn-quiet" id="feat-add-btn">添加</button>
+        <span class="muted small">每个品类放 8 到 12 个效果最好。没有图片的产品不会显示。</span>
       </div>
-      <p class="form-error" id="feat-error" role="alert"></p>
-      <ol class="feat-list" id="feat-list"></ol>
-      <div class="editor-actions">
-        <button class="btn btn-primary" id="feat-save" disabled>保存并发布</button>
-      </div>
+      <p class="error" id="feat-error" role="alert"></p>
+      <ol class="sheet feat-list" id="feat-list"></ol>
     </section>
+
+    <!-- Pending changes -->
+    <div class="dock" id="dock" hidden>
+      <div class="dock-inner">
+        <div class="dock-summary">
+          <strong id="dock-count"></strong>
+          <span id="dock-detail"></span>
+        </div>
+        <button class="btn-text dock-text" id="dock-review">查看</button>
+        <button class="btn-text dock-text" id="dock-discard">全部放弃</button>
+        <button class="btn btn-publish" id="dock-publish">发布到网站</button>
+      </div>
+      <ul class="dock-list" id="dock-list" hidden></ul>
+    </div>
+    <div class="toast" id="toast" role="status" hidden></div>
   </div>
 
   <script src="/admin/admin.js" defer></script>

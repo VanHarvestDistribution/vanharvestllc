@@ -61,14 +61,19 @@ redirect pages for products that moved category.
 
 ## Product admin (/admin)
 
-Staff edit products at https://vanharvestllc.com/admin/ with a shared password. Every save is one
-commit to `main` by "Van Harvest Admin"; Vercel rebuilds and the site updates in about 1–2 minutes.
-A bad edit can be undone by reverting that commit on GitHub.
+Staff edit products at https://vanharvestllc.com/admin/ with a shared password. Changes collect as a
+draft in the browser (it survives a page refresh); images upload in the background as soon as they're
+picked (`/api/admin/upload` stores them as GitHub blobs without committing). **发布到网站** sends the whole
+draft as one commit to `main` by "Van Harvest Admin"; Vercel rebuilds and the site updates in about
+1–2 minutes. A bad publish can be undone by reverting that commit on GitHub.
 
 What it can change:
 - **Images**: uploads are framed on a 1280×960 white canvas in the browser, converted to WebP on the
   server, and saved as `public/images/products/ai/{item#}-{version}.webp` (old files for that item are removed).
-- **Product info** (names, department, pack size, storage, hide): saved to `data/product-overrides.json`.
+- **Product info** (names, department, pack size, storage): saved to `data/product-overrides.json`.
+- **New products** (Item #s the warehouse system doesn't have): entries with `"added": true` in the same file.
+- **Deleting**: a new product is removed outright; a warehouse product gets `"hidden": true` (it can be
+  restored from the admin's 已删除 filter, and re-importing the Excel won't bring it back).
   The warehouse import (`products.json`) is never edited by the admin, so re-importing the Excel keeps
   these edits. `scripts/apply_catalog_overrides.mjs` merges both into `src/data/catalog.json` at build time.
 - **Featured products**: `src/data/featured.json`.

@@ -6,6 +6,7 @@
 //   => src/data/catalog-moves.json (generated; items whose category was changed in /admin)
 //
 // Override fields: name, nameZh, category, packSize, storage, hidden.
+// Entries with "added": true are products created in /admin that the warehouse catalog doesn't have.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './lib/productImages.mjs';
@@ -33,9 +34,17 @@ for (const product of base) {
   catalog.push(merged);
 }
 
-const unknown = Object.keys(overrides).filter((id) => !base.some((p) => String(p.id) === id));
-if (unknown.length) console.warn(`Overrides for items not in the warehouse catalog (ignored): ${unknown.join(', ')}`);
+const baseIds = new Set(base.map((p) => String(p.id)));
+let added = 0;
+for (const [id, o] of Object.entries(overrides)) {
+  if (baseIds.has(id)) continue; // the warehouse now has this item; its override was applied above
+  if (!o.added) { console.warn(`Override for unknown item ${id} ignored`); continue; }
+  if (o.hidden || !CATEGORY_KEYS.includes(o.category) || !o.name) continue;
+  added++;
+  catalog.push({ id, name: o.name, nameZh: o.nameZh || '', category: o.category, packSize: o.packSize || '', storage: o.storage || '', active: true });
+}
+catalog.sort((a, b) => String(a.id).localeCompare(String(b.id), 'en', { numeric: true }));
 
 fs.writeFileSync(path.join(ROOT, 'src/data/catalog.json'), JSON.stringify(catalog), 'utf-8');
 fs.writeFileSync(path.join(ROOT, 'src/data/catalog-moves.json'), JSON.stringify(moves, null, 2), 'utf-8');
-console.log(`Catalog: ${catalog.length} products (${edited} edited in admin, ${hidden} hidden, ${moves.length} moved)`);
+console.log(`Catalog: ${catalog.length} products (${edited} edited in admin, ${added} added, ${hidden} hidden, ${moves.length} moved)`);

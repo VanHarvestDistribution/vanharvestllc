@@ -34,7 +34,7 @@ const config = {
   outputDirectory: 'dist',
   trailingSlash: true,
   // /admin saves: image conversion + several GitHub calls can exceed the 10s default.
-  functions: { 'api/admin/save.js': { maxDuration: 60 } },
+  functions: { 'api/admin/save.js': { maxDuration: 60 }, 'api/admin/upload.js': { maxDuration: 30 } },
   headers: [
     { source: '/admin/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }, { key: 'Cache-Control', value: 'no-store' }] },
     { source: '/_astro/(.*)', headers: immutable },
