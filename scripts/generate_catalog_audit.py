@@ -6,13 +6,16 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import os
+import sys
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 PRODUCTS = {x['id']: x for x in json.loads((ROOT / 'src/data/products.json').read_text(encoding='utf-8'))}
 HISTORY = json.loads((ROOT / 'data/product-route-redirects.json').read_text(encoding='utf-8'))['redirects']
 IMPORT_REPORT = json.loads((ROOT / 'data/stocklist-import-report.json').read_text(encoding='utf-8'))
-RAW_DF = pd.read_excel('/home/ubuntu/upload/Stocklist.xls', dtype=str).fillna('')
+_STOCKLIST = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('STOCKLIST_PATH', str(Path(__file__).resolve().parents[1] / 'data/source/Stocklist.xls'))
+RAW_DF = pd.read_excel(_STOCKLIST, dtype=str).fillna('')
 RAW = {str(row.Product_ID).strip(): row for _, row in RAW_DF.iterrows()}
 OUT = ROOT / 'data/catalog-reclassification-audit.md'
 

@@ -8,14 +8,18 @@ a legacy fallback for records with no usable product language.
 from __future__ import annotations
 
 import json
+import os
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-EXCEL_PATH = Path('/home/ubuntu/upload/Stocklist.xls')
+# Excel export from the warehouse system. Pass a path as the first argument, set STOCKLIST_PATH,
+# or drop the file at data/source/Stocklist.xls (git-ignored).
+EXCEL_PATH = Path(sys.argv[1] if len(sys.argv) > 1 else os.environ.get('STOCKLIST_PATH', ROOT / 'data/source/Stocklist.xls'))
 RULES_PATH = ROOT / 'data/catalog-rules.json'
 OUT_JSON = ROOT / 'src/data/products.json'
 REPORT_JSON = ROOT / 'data/stocklist-import-report.json'
