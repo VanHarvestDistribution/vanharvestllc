@@ -1,0 +1,6058 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/brand/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/catalog/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vanharvestllc.com"
+        }
+      ],
+      "destination": "https://vanharvestllc.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/20702/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/20702/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/20703/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/20703/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21029/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21029/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21030/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21030/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/21165/",
+      "destination": "/products/produce/21165/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/21165/",
+      "destination": "/zh/products/produce/21165/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21190/",
+      "destination": "/products/produce/21190/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21190/",
+      "destination": "/zh/products/produce/21190/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21191/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21191/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21193/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21193/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/21250/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/21250/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21250/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21250/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21251/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21251/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21253/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21253/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21256/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21256/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/21283/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/21283/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21283/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21283/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/21328/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/21328/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21397/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21397/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21398/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21398/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21399/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21399/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21401/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21401/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21402/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21402/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21403/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21403/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21405/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21405/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21406/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21406/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21425/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21425/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21426/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21426/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21466/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21466/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21504/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21504/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21515/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21515/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/dry/21519/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/dry/21519/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21572/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21572/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21573/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21573/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21574/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21574/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/21575/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/21575/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/dry/21576/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/dry/21576/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/dry/21577/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/dry/21577/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/21603/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/21603/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21625/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21625/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21630/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21630/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/21647/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/21647/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/21721/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/21721/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/22021/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/22021/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/22022/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/22022/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/22039/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/22039/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/22048/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/22048/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/22107/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/22107/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/22112/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/22112/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23002/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23002/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23043/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23043/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23044/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23044/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/23046/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/23046/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23046/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23046/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23080/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23080/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/23091/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/23091/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23091/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23091/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23092/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23092/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23093/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23093/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23094/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23094/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23095/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23095/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23096/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23096/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23097/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23097/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23098/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23098/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23099/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23099/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23119/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23119/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23166/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23166/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23171/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23171/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23208/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23208/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23260/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23260/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23261/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23261/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23286/",
+      "destination": "/products/seafood/23286/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23286/",
+      "destination": "/zh/products/seafood/23286/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23287/",
+      "destination": "/products/seafood/23287/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23287/",
+      "destination": "/zh/products/seafood/23287/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23291/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23291/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23292/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23292/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23293/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23293/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/23302/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/23302/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23302/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23302/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23317/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23317/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23321/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23321/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/23325/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/23325/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23325/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23325/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23331/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23331/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23333/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23333/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23342/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23342/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23343/",
+      "destination": "/products/seafood/23343/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23343/",
+      "destination": "/zh/products/seafood/23343/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23350/",
+      "destination": "/products/seafood/23350/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23350/",
+      "destination": "/zh/products/seafood/23350/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23351/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23351/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23603/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23603/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/23607/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/23607/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24001/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24001/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24002/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24002/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24006/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24006/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24007/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24007/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24008/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24008/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24009/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24009/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24010/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24010/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24030/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24030/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24037/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24037/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24038/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24038/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24049/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24049/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24064/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24064/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24100/",
+      "destination": "/products/meat/24100/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24100/",
+      "destination": "/zh/products/meat/24100/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24101/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24101/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24102/",
+      "destination": "/products/meat/24102/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24102/",
+      "destination": "/zh/products/meat/24102/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24103/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24103/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24104/",
+      "destination": "/products/meat/24104/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24104/",
+      "destination": "/zh/products/meat/24104/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24105/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24105/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24106/",
+      "destination": "/products/meat/24106/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24106/",
+      "destination": "/zh/products/meat/24106/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24107/",
+      "destination": "/products/meat/24107/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24107/",
+      "destination": "/zh/products/meat/24107/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24108/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24108/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24109/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24109/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24110/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24110/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24111/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24111/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24112/",
+      "destination": "/products/meat/24112/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24112/",
+      "destination": "/zh/products/meat/24112/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24113/",
+      "destination": "/products/meat/24113/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24113/",
+      "destination": "/zh/products/meat/24113/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24114/",
+      "destination": "/products/meat/24114/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24114/",
+      "destination": "/zh/products/meat/24114/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24115/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24115/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24116/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24116/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24117/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24117/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24118/",
+      "destination": "/products/meat/24118/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24118/",
+      "destination": "/zh/products/meat/24118/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24119/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24119/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24120/",
+      "destination": "/products/meat/24120/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24120/",
+      "destination": "/zh/products/meat/24120/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24121/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24121/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24131/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24131/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24161/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24161/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24166/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24166/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24178/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24178/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24181/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24181/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24202/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24202/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24203/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24203/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24204/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24204/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24205/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24205/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24213/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24213/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24214/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24214/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24215/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24215/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24216/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24216/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24217/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24217/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24220/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24220/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24221/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24221/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24222/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24222/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24223/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24223/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24224/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24224/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24225/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24225/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24226/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24226/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24227/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24227/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24228/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24228/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24229/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24229/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24230/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24230/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24232/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24232/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24234/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24234/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24238/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24238/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24241/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24241/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24243/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24243/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24258/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24258/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24260/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24260/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/24270/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/24270/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24270/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24270/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/24271/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/24271/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24271/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24271/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24280/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24280/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24281/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24281/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24288/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24288/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24289/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24289/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24294/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24294/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24306/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24306/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24307/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24307/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24308/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24308/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24321/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24321/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24323/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24323/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24326/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24326/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24330/",
+      "destination": "/products/meat/24330/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24330/",
+      "destination": "/zh/products/meat/24330/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24331/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24331/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/24332/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/24332/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24332/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24332/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24333/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24333/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24340/",
+      "destination": "/products/meat/24340/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24340/",
+      "destination": "/zh/products/meat/24340/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24341/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24341/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24342/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24342/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24343/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24343/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24344/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24344/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24345/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24345/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24346/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24346/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24347/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24347/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24348/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24348/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24371/",
+      "destination": "/products/meat/24371/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24371/",
+      "destination": "/zh/products/meat/24371/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24372/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24372/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24403/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24403/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24404/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24404/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24405/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24405/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24406/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24406/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24407/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24407/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24414/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24414/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24450/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24450/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24451/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24451/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24474/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24474/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24475/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24475/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24490/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24490/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24491/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24491/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24557/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24557/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24558/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24558/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24559/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24559/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24560/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24560/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24566/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24566/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24568/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24568/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24615/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24615/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/24735/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/24735/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25022/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25022/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25023/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25023/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25024/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25024/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25026/",
+      "destination": "/products/preserved/25026/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25026/",
+      "destination": "/zh/products/preserved/25026/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25030/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25030/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25031/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25031/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25032/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25032/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/25041/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/25041/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25041/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25041/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25045/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25045/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25046/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25046/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25080/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25080/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25099/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25099/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25100/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25100/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25101/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25101/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25120/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25120/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25122/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25122/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25125/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25125/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25202/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25202/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25203/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25203/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25204/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25204/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25207/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25207/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25210/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25210/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25220/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25220/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25222/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25222/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25248/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25248/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25275/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25275/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25284/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25284/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25287/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25287/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25288/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25288/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25289/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25289/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25290/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25290/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25291/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25291/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/25292/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/25292/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25298/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25298/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25302/",
+      "destination": "/products/preserved/25302/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25302/",
+      "destination": "/zh/products/preserved/25302/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25306/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25306/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25311/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25311/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25330/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25330/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25331/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25331/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25340/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25340/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25341/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25341/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25400/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25400/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25404/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25404/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25426/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25426/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/25477/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/25477/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25477/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25477/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25482/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25482/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25484/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25484/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25486/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25486/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25488/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25488/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25489/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25489/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25490/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25490/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25491/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25491/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25492/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25492/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25493/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25493/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25494/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25494/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25495/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25495/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25496/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25496/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25497/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25497/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25498/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25498/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25499/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25499/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25500/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25500/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25501/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25501/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25502/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25502/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25503/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25503/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25504/",
+      "destination": "/products/pantry/25504/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25504/",
+      "destination": "/zh/products/pantry/25504/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25505/",
+      "destination": "/products/pantry/25505/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25505/",
+      "destination": "/zh/products/pantry/25505/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25508/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25508/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25509/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25509/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25510/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25510/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25511/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25511/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25520/",
+      "destination": "/products/pantry/25520/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25520/",
+      "destination": "/zh/products/pantry/25520/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25522/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25522/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25523/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25523/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25524/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25524/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25528/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25528/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25529/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25529/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25530/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25530/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25531/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25531/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25532/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25532/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25533/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25533/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25534/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25534/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25535/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25535/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25536/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25536/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25537/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25537/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25538/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25538/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25539/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25539/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25540/",
+      "destination": "/products/pantry/25540/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25540/",
+      "destination": "/zh/products/pantry/25540/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25541/",
+      "destination": "/products/pantry/25541/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25541/",
+      "destination": "/zh/products/pantry/25541/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25542/",
+      "destination": "/products/pantry/25542/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25542/",
+      "destination": "/zh/products/pantry/25542/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25550/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25550/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25551/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25551/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25553/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25553/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25563/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25563/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25565/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25565/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25568/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25568/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25589/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25589/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25594/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25594/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25600/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25600/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25601/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25601/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25602/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25602/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/25604/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/25604/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25604/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25604/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25605/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25605/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/25607/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/25607/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/25608/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/25608/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25608/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25608/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25609/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25609/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25611/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25611/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25612/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25612/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25616/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25616/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25618/",
+      "destination": "/products/prepared/25618/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25618/",
+      "destination": "/zh/products/prepared/25618/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25619/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25619/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25620/",
+      "destination": "/products/prepared/25620/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25620/",
+      "destination": "/zh/products/prepared/25620/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25633/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25633/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25635/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25635/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25641/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25641/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25642/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25642/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25644/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25644/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25645/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25645/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25646/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25646/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25656/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25656/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25657/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25657/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25659/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25659/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/25661/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/25661/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25661/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25661/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25665/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25665/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/25666/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/25666/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25666/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25666/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25685/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25685/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25687/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25687/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25698/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25698/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25700/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25700/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25701/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25701/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25720/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25720/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25730/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25730/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25731/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25731/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25734/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25734/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25735/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25735/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25736/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25736/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25739/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25739/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25744/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25744/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25755/",
+      "destination": "/products/prepared/25755/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25755/",
+      "destination": "/zh/products/prepared/25755/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25761/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25761/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25762/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25762/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25767/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25767/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25770/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25770/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25902/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25902/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25913/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25913/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/25923/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/25923/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25933/",
+      "destination": "/products/pantry/25933/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25933/",
+      "destination": "/zh/products/pantry/25933/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25938/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25938/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25941/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25941/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25942/",
+      "destination": "/products/pantry/25942/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25942/",
+      "destination": "/zh/products/pantry/25942/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25945/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25945/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25950/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25950/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25973/",
+      "destination": "/products/pantry/25973/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25973/",
+      "destination": "/zh/products/pantry/25973/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25974/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25974/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25975/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25975/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25976/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25976/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25977/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25977/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25978/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25978/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25979/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25979/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25980/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25980/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25981/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25981/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25982/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25982/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25983/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25983/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25984/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25984/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/25989/",
+      "destination": "/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/25989/",
+      "destination": "/zh/products/produce/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/25999/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/25999/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26111/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26111/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26117/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26117/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26118/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26118/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26124/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26124/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26143/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26143/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26161/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26161/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26169/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26169/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26200/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26200/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26207/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26207/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26218/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26218/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26219/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26219/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26223/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26223/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26332/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26332/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26344/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26344/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26347/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26347/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26348/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26348/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26349/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26349/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26350/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26350/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26353/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26353/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26365/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26365/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26405/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26405/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26406/",
+      "destination": "/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26406/",
+      "destination": "/zh/products/preserved/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26407/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26407/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26408/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26408/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26409/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26409/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26422/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26422/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26470/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26470/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26471/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26471/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26472/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26472/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26473/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26473/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26495/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26495/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26636/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26636/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26637/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26637/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26638/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26638/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26657/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26657/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26690/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26690/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26691/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26691/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26692/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26692/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26694/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26694/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26700/",
+      "destination": "/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26700/",
+      "destination": "/zh/products/dry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26735/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26735/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26746/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26746/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26766/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26766/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26767/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26767/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/pantry/26782/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/pantry/26782/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26782/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26782/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26804/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26804/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26925/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26925/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/26926/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/26926/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26926/",
+      "destination": "/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26926/",
+      "destination": "/zh/products/seafood/",
+      "permanent": true
+    },
+    {
+      "source": "/products/prepared/26927/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/prepared/26927/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26927/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26927/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26959/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26959/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26994/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26994/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/26996/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/26996/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26996/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26996/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/meat/26997/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/meat/26997/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/26997/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/26997/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28105/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28105/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28108/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28108/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28109/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28109/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28141/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28141/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28142/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28142/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/28142/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/28142/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28143/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28143/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/28143/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/28143/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28144/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28144/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/28144/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/28144/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/produce/28145/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/produce/28145/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/28145/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/28145/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33401/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33401/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33900/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33900/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33901/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33901/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33902/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33902/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33903/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33903/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33904/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33904/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33905/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33905/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33906/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33906/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33907/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33907/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33910/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33910/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33918/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33918/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33919/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33919/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33920/",
+      "destination": "/products/meat/33920/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33920/",
+      "destination": "/zh/products/meat/33920/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33926/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33926/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33932/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33932/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33944/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33944/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33950/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33950/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33951/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33951/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33966/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33966/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33974/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33974/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33976/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33976/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33977/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33977/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33980/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33980/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33981/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33981/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33982/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33982/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33983/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33983/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33984/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33984/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33985/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33985/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33991/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33991/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/33992/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/33992/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34000/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34000/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34001/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34001/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34060/",
+      "destination": "/products/prepared/34060/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34060/",
+      "destination": "/zh/products/prepared/34060/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34061/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34061/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34062/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34062/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34063/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34063/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34064/",
+      "destination": "/products/prepared/34064/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34064/",
+      "destination": "/zh/products/prepared/34064/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34065/",
+      "destination": "/products/prepared/34065/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34065/",
+      "destination": "/zh/products/prepared/34065/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34066/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34066/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34067/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34067/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34076/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34076/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34081/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34081/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34082/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34082/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34084/",
+      "destination": "/products/meat/34084/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34084/",
+      "destination": "/zh/products/meat/34084/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34206/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34206/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34207/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34207/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34208/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34208/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34251/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34251/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34254/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34254/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34300/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34300/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34301/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34301/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34305/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34305/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34320/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34320/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34363/",
+      "destination": "/products/meat/34363/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34363/",
+      "destination": "/zh/products/meat/34363/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34501/",
+      "destination": "/products/prepared/34501/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34501/",
+      "destination": "/zh/products/prepared/34501/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34906/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34906/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/34907/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/34907/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35010/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35010/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35012/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35012/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35013/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35013/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35014/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35014/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35040/",
+      "destination": "/products/prepared/35040/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35040/",
+      "destination": "/zh/products/prepared/35040/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35050/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35050/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35052/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35052/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35054/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35054/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35056/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35056/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35065/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35065/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35066/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35066/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35070/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35070/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35074/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35074/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35111/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35111/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35112/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35112/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35113/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35113/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35115/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35115/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35116/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35116/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35126/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35126/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35131/",
+      "destination": "/products/pantry/35131/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35131/",
+      "destination": "/zh/products/pantry/35131/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35132/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35132/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35133/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35133/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35136/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35136/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35149/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35149/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35150/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35150/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35153/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35153/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35160/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35160/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35171/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35171/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35180/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35180/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35188/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35188/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35199/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35199/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35206/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35206/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35221/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35221/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35224/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35224/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35226/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35226/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35227/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35227/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35228/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35228/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35230/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35230/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35235/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35235/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35274/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35274/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35276/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35276/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35292/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35292/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35300/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35300/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35304/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35304/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35305/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35305/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35321/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35321/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35328/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35328/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35329/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35329/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35331/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35331/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35332/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35332/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35333/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35333/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35372/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35372/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35397/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35397/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35398/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35398/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35419/",
+      "destination": "/products/prepared/35419/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35419/",
+      "destination": "/zh/products/prepared/35419/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35465/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35465/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35472/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35472/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35489/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35489/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35624/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35624/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35628/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35628/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35629/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35629/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35650/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35650/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35651/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35651/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35652/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35652/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35653/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35653/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35661/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35661/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35662/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35662/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35663/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35663/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35664/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35664/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35665/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35665/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35666/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35666/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35730/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35730/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35763/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35763/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35767/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35767/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35776/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35776/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35808/",
+      "destination": "/products/supplies/35808/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35808/",
+      "destination": "/zh/products/supplies/35808/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/35811/",
+      "destination": "/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/35811/",
+      "destination": "/zh/products/supplies/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36100/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36100/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36104/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36104/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36108/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36108/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36110/",
+      "destination": "/products/prepared/36110/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36110/",
+      "destination": "/zh/products/prepared/36110/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36111/",
+      "destination": "/products/prepared/36111/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36111/",
+      "destination": "/zh/products/prepared/36111/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36248/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36248/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36340/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36340/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/36612/",
+      "destination": "/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/36612/",
+      "destination": "/zh/products/pantry/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37100/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37100/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37101/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37101/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37102/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37102/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37104/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37104/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37105/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37105/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37107/",
+      "destination": "/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37107/",
+      "destination": "/zh/products/prepared/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37108/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37108/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37200/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37200/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37201/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37201/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37202/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37202/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/products/seafood/37203/",
+      "destination": "/products/meat/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products/seafood/37203/",
+      "destination": "/zh/products/meat/",
+      "permanent": true
+    }
+  ]
+}

@@ -2,3 +2,10 @@ node_modules/
 dist/
 .astro/
 *.log
+.vercel/
+.DS_Store
+# Warehouse-system exports contain cost and price columns - never commit them
+data/source/Stocklist.xls
+data/source/*.xls
+data/source/*.xlsx
+__pycache__/
