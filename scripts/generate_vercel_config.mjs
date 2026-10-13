@@ -3,13 +3,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readProductImages } from './lib/productImages.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const history = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/product-route-redirects.json'), 'utf-8')).redirects || [];
 const products = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/products.json'), 'utf-8')).map((p) => [String(p.id), p]));
-const photoMap = fs.readFileSync(path.join(ROOT, 'src/data/yellowLabelProductImages.ts'), 'utf-8');
-const detailIds = new Set([...photoMap.matchAll(/'([0-9]+)':\s*'([^']+)'/g)]
-  .filter(([, , img]) => img.startsWith('/images/products/uploaded/')).map(([, id]) => id));
+const detailIds = new Set(Object.keys(readProductImages()));
 
 const redirects = [];
 const seen = new Set();

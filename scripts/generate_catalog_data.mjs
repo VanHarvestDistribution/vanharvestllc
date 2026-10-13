@@ -1,16 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readProductImages } from './lib/productImages.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/products.json'), 'utf-8'));
-const yellowLabelMapSource = fs.readFileSync(path.join(ROOT, 'src/data/yellowLabelProductImages.ts'), 'utf-8');
-const realPhotoByItem = Object.fromEntries(
-  [...yellowLabelMapSource.matchAll(/'([0-9]+)':\s*'([^']+)'/g)]
-    .filter(([, , image]) => image.startsWith('/images/products/uploaded/'))
-    .map(([, itemId, image]) => [itemId, image])
-);
+const realPhotoByItem = readProductImages();
 
 const outputDir = path.join(ROOT, 'public/data');
 const categoryDir = path.join(outputDir, 'categories');

@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CallToAction from '@/components/CallToAction.astro';
 import productsData from '@/data/products.json';
-import { yellowLabelProductImages } from '@/data/yellowLabelProductImages';
+import { productImages } from '@/data/productImages';
 import { curatedCategoryFeaturedIds } from '@/data/curatedCategoryFeatured';
 import ResponsivePicture from '@/components/ResponsivePicture.astro';
 
@@ -12,7 +12,7 @@ const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
 const products = (productsData as any[]).filter((product) => product.category === category.key);
 const configuredIds = curatedCategoryFeaturedIds[category.key] || [];
-const featured = configuredIds.map((id) => products.find((product) => product.id === id)).filter((product): product is any => Boolean(product && yellowLabelProductImages[product.id])).map((product) => ({ product, image: yellowLabelProductImages[product.id] }));
+const featured = configuredIds.map((id) => products.find((product) => product.id === id)).filter((product): product is any => Boolean(product && productImages[product.id])).map((product) => ({ product, image: productImages[product.id] }));
 const name = zh ? category.nameZh : category.name;
 const title = category.key === 'seafood'
   ? (zh ? `夏洛特海鲜批发产品 | Van Harvest 万昌` : `Seafood Wholesale Products Charlotte NC | Van Harvest LLC`)
@@ -22,7 +22,7 @@ const description = category.key === 'seafood'
   : (zh ? `浏览 Van Harvest 万昌${name}的全部产品、中英文名称与温层信息，服务夏洛特餐馆和亚洲厨房。` : `Browse ${category.name.toLowerCase()} wholesale products from Van Harvest LLC serving Charlotte restaurants and markets.`);
 const needsPagination = products.length > 50;
 const storageText = (storage?: string) => storage === 'frozen' ? (zh ? '冷冻' : 'Frozen') : storage === 'refrigerated' ? (zh ? '冷藏' : 'Refrigerated') : '';
-const hasImage = (id: string) => Boolean(yellowLabelProductImages[String(id)]);
+const hasImage = (id: string) => Boolean(productImages[String(id)]);
 const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
 ---
 <BaseLayout title={title} description={description} active="/products" lang={lang}>
@@ -50,9 +50,9 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
       <div class="shell">
         <div class="featured-products-heading">
           <div>
-            <h2>{zh ? '实拍精选产品' : 'Featured products'}</h2>
+            <h2>{zh ? '精选产品' : 'Featured products'}</h2>
           </div>
-          <p>{zh ? '精选已有实拍图的代表商品。' : 'A curated selection of products with real warehouse photos.'}</p>
+          <p>{zh ? '精选代表商品，点击查看详情。图片仅供参考。' : 'A curated selection from this department. Images are representative.'}</p>
         </div>
         <div class="featured-product-grid">
           {featured.map(({ product, image }) => (
@@ -79,7 +79,7 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
         <div>
           <h2>{zh ? `${name}全部产品` : `All ${category.name}`}</h2>
         </div>
-        <p>{zh ? `共 ${products.length.toLocaleString()} 个产品。已有实拍图的商品可进入详情页。` : `${products.length.toLocaleString()} products. Items with real photos link to their detail pages.`}</p>
+        <p>{zh ? `共 ${products.length.toLocaleString()} 个产品。带链接的商品可查看图片与详情。` : `${products.length.toLocaleString()} products. Linked items have photos and a detail page.`}</p>
       </div>
       <div class="catalog-table-wrap category-product-table-wrap" data-category-pagination={needsPagination ? '' : undefined} data-page-size={needsPagination ? '50' : undefined}>
         <table class="catalog-table category-product-table">

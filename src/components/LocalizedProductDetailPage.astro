@@ -4,7 +4,7 @@ import { categories, contact } from '@/data/site';
 import { absoluteUrl } from '@/data/seo';
 
 interface Props {
-  product: { id: string; name: string; nameZh?: string; category: string; storage?: string; image: string };
+  product: { id: string; name: string; nameZh?: string; category: string; storage?: string; image: string; representative?: boolean };
   category?: any;
   lang?: 'en' | 'zh';
   localized?: boolean;
@@ -42,6 +42,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Product', name: pro
       <div class="shell product-detail-grid">
         <div class="product-detail-photo">
           <img src={product.image} alt={zh ? `${primaryName} 产品图片` : `${product.name} wholesale product photo`} loading="eager" />
+          {product.representative && <p class="image-note">{zh ? '图片仅供参考，实际包装与规格以到货为准。' : 'Representative image. Actual packaging and pack size may vary.'}</p>}
         </div>
         <div class="product-detail-copy">
           <p class="product-detail-item">{zh ? '产品编号' : 'Item #'} <strong>{product.id}</strong></p>

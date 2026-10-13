@@ -666,3 +666,6 @@ html[lang="zh-CN"] h3 em {
     font-size: 9.5px !important;
   }
 }
+
+.product-detail-photo { background: #fff; }
+.product-detail-photo .image-note { margin: 10px 0 0; font-size: 13px; color: var(--text-muted, #666); }

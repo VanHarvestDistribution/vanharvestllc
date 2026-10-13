@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readProductImages } from './lib/productImages.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const historyPath = path.join(ROOT, 'data/product-route-redirects.json');
 const productsPath = path.join(ROOT, 'src/data/products.json');
-const photoMapPath = path.join(ROOT, 'src/data/yellowLabelProductImages.ts');
 
 if (!fs.existsSync(DIST)) {
   console.log('dist directory not found; skipping static redirect page generation.');
@@ -16,12 +16,7 @@ if (!fs.existsSync(DIST)) {
 
 const history = JSON.parse(fs.readFileSync(historyPath, 'utf-8')).redirects || [];
 const products = new Map(JSON.parse(fs.readFileSync(productsPath, 'utf-8')).map((product) => [String(product.id), product]));
-const photoMapSource = fs.readFileSync(photoMapPath, 'utf-8');
-const photoItemIds = new Set(
-  [...photoMapSource.matchAll(/'([0-9]+)':\s*'([^']+)'/g)]
-    .filter(([, , image]) => image.startsWith('/images/products/uploaded/'))
-    .map(([, itemId]) => itemId)
-);
+const photoItemIds = new Set(Object.keys(readProductImages()));
 
 function makeRedirectHtml(destination) {
   const absoluteUrl = `https://vanharvestllc.com${destination}`;

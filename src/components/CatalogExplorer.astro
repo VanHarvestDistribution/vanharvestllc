@@ -1,12 +1,12 @@
 ---
 import { categories } from '@/data/site';
-import { yellowLabelProductImages } from '@/data/yellowLabelProductImages';
+import { productImages } from '@/data/productImages';
 
 interface Props { lang?: 'en' | 'zh'; localized?: boolean }
 const { lang = 'en' } = Astro.props;
 const zh = lang === 'zh';
 const STEP = 50;
-const imageIds = Object.keys(yellowLabelProductImages);
+const imageIds = Object.keys(productImages);
 const labels = zh ? {
   all: '全部产品', searchLabel: '搜索产品', placeholder: 'Item #、英文或中文名', quick: '快速筛选', loading: '正在加载产品目录…', noResults: '暂无匹配产品', noResultsBody: '请尝试产品编号、英文名、中文名或品类。', clear: '清除筛选', load: '加载更多', product: '产品名称', item: 'Item #', storage: '温层', frozen: '冷冻', refrigerated: '冷藏'
 } : {

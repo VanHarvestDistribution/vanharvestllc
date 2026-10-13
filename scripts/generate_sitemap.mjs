@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readProductImages } from './lib/productImages.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = (process.env.PUBLIC_SITE_ORIGIN || 'https://vanharvestllc.com').replace(/\/$/, '');
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/products.json'), 'utf-8'));
-const imageMapSource = fs.readFileSync(path.join(ROOT, 'src/data/yellowLabelProductImages.ts'), 'utf-8');
-const imageIds = new Set([...imageMapSource.matchAll(/'([0-9]+)':\s*'\/images\/products\/uploaded\//g)].map((match) => match[1]));
+const imageIds = new Set(Object.keys(readProductImages()));
 
 const baseRoutes = [
   '', '/products', '/products/catalog', '/company', '/services', '/contact', '/apply', '/delivery',

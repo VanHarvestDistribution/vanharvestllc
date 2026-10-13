@@ -30,8 +30,10 @@ redirect pages for products that moved category.
 | `src/components/` | Shared page sections (header, footer, catalog, forms, product detail). |
 | `src/data/products.json` | **The public catalog** (generated from the warehouse Excel export). |
 | `src/data/site.ts`, `src/data/seo.ts` | Company info, contact details, page titles and descriptions. |
-| `src/data/yellowLabelProductImages.ts`, `uploadedProductImages.json` | Which products have a real photo (only these get a detail page). |
-| `public/images/products/uploaded/` | Product photos (`.webp`). |
+| `public/images/products/ai/{item#}.webp` | White-background studio images, one per Item #. Takes priority over a warehouse photo. Shown with a "representative image" note. |
+| `src/data/yellowLabelProductImages.ts` | Warehouse photos (`public/images/products/uploaded/`) mapped to Item #. |
+| `src/data/productImages.ts` | Merged lookup. Any product with an image here gets a detail page. |
+| `src/data/curatedCategoryFeatured.ts` | Featured Products on each category page. |
 | `public/data/` | Search index and per-category JSON used by the catalog page (generated). |
 | `data/catalog-rules.json` | Name-cleaning and category rules used by the importer. |
 | `data/product-route-redirects.json` | History of products that changed category (drives redirects). |
@@ -59,9 +61,10 @@ redirect pages for products that moved category.
 
 ## Adding product photos
 
-1. Save the photo as `.webp` (about 1280×960, under ~200 KB) in `public/images/products/uploaded/`.
-2. Map the item # to the file in `src/data/yellowLabelProductImages.ts`.
-3. `pnpm build`, commit, push.
+1. Save the image as `{item#}.webp` (1280×960, white background, under ~200 KB) in `public/images/products/ai/`.
+   Replacing a file with the same name replaces the picture.
+2. `pnpm build` (it regenerates `src/data/studioProductImages.ts`), then run `node scripts/generate_vercel_config.mjs`.
+3. Commit and push.
 
 (A browser-based admin page for photos and Excel uploads is planned so this won't require code changes.)
 

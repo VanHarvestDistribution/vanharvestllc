@@ -66,12 +66,12 @@
     },
     {
       "source": "/products/meat/20702/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/20702/",
       "permanent": true
     },
     {
       "source": "/zh/products/meat/20702/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/20702/",
       "permanent": true
     },
     {
@@ -86,12 +86,12 @@
     },
     {
       "source": "/products/produce/21029/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/21029/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/21029/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/21029/",
       "permanent": true
     },
     {
@@ -146,22 +146,22 @@
     },
     {
       "source": "/products/meat/21250/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/21250/",
       "permanent": true
     },
     {
       "source": "/zh/products/meat/21250/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/21250/",
       "permanent": true
     },
     {
       "source": "/products/produce/21250/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/21250/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/21250/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/21250/",
       "permanent": true
     },
     {
@@ -176,12 +176,12 @@
     },
     {
       "source": "/products/produce/21253/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/21253/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/21253/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/21253/",
       "permanent": true
     },
     {
@@ -246,22 +246,22 @@
     },
     {
       "source": "/products/seafood/21399/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/21399/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/21399/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/21399/",
       "permanent": true
     },
     {
       "source": "/products/seafood/21401/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/21401/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/21401/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/21401/",
       "permanent": true
     },
     {
@@ -306,12 +306,12 @@
     },
     {
       "source": "/products/pantry/21425/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/21425/",
       "permanent": true
     },
     {
       "source": "/zh/products/pantry/21425/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/21425/",
       "permanent": true
     },
     {
@@ -406,32 +406,32 @@
     },
     {
       "source": "/products/dry/21576/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/21576/",
       "permanent": true
     },
     {
       "source": "/zh/products/dry/21576/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/21576/",
       "permanent": true
     },
     {
       "source": "/products/dry/21577/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/21577/",
       "permanent": true
     },
     {
       "source": "/zh/products/dry/21577/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/21577/",
       "permanent": true
     },
     {
       "source": "/products/seafood/21603/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/21603/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/21603/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/21603/",
       "permanent": true
     },
     {
@@ -476,22 +476,22 @@
     },
     {
       "source": "/products/pantry/22021/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/22021/",
       "permanent": true
     },
     {
       "source": "/zh/products/pantry/22021/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/22021/",
       "permanent": true
     },
     {
       "source": "/products/pantry/22022/",
-      "destination": "/products/produce/",
+      "destination": "/products/produce/22022/",
       "permanent": true
     },
     {
       "source": "/zh/products/pantry/22022/",
-      "destination": "/zh/products/produce/",
+      "destination": "/zh/products/produce/22022/",
       "permanent": true
     },
     {
@@ -536,12 +536,12 @@
     },
     {
       "source": "/products/produce/23002/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23002/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23002/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23002/",
       "permanent": true
     },
     {
@@ -556,32 +556,32 @@
     },
     {
       "source": "/products/produce/23044/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23044/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23044/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23044/",
       "permanent": true
     },
     {
       "source": "/products/meat/23046/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23046/",
       "permanent": true
     },
     {
       "source": "/zh/products/meat/23046/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23046/",
       "permanent": true
     },
     {
       "source": "/products/produce/23046/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23046/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23046/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23046/",
       "permanent": true
     },
     {
@@ -626,22 +626,22 @@
     },
     {
       "source": "/products/produce/23093/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23093/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23093/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23093/",
       "permanent": true
     },
     {
       "source": "/products/produce/23094/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23094/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23094/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23094/",
       "permanent": true
     },
     {
@@ -656,12 +656,12 @@
     },
     {
       "source": "/products/produce/23096/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/23096/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23096/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/23096/",
       "permanent": true
     },
     {
@@ -676,12 +676,12 @@
     },
     {
       "source": "/products/produce/23098/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23098/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23098/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23098/",
       "permanent": true
     },
     {
@@ -726,22 +726,22 @@
     },
     {
       "source": "/products/produce/23208/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23208/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23208/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23208/",
       "permanent": true
     },
     {
       "source": "/products/produce/23260/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23260/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23260/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23260/",
       "permanent": true
     },
     {
@@ -776,12 +776,12 @@
     },
     {
       "source": "/products/produce/23291/",
-      "destination": "/products/seafood/",
+      "destination": "/products/seafood/23291/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/23291/",
-      "destination": "/zh/products/seafood/",
+      "destination": "/zh/products/seafood/23291/",
       "permanent": true
     },
     {
@@ -946,22 +946,22 @@
     },
     {
       "source": "/products/produce/24001/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24001/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24001/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24001/",
       "permanent": true
     },
     {
       "source": "/products/produce/24002/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24002/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24002/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24002/",
       "permanent": true
     },
     {
@@ -986,32 +986,32 @@
     },
     {
       "source": "/products/produce/24008/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24008/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24008/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24008/",
       "permanent": true
     },
     {
       "source": "/products/produce/24009/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24009/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24009/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24009/",
       "permanent": true
     },
     {
       "source": "/products/produce/24010/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24010/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24010/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24010/",
       "permanent": true
     },
     {
@@ -1026,12 +1026,12 @@
     },
     {
       "source": "/products/produce/24037/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24037/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24037/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24037/",
       "permanent": true
     },
     {
@@ -1046,12 +1046,12 @@
     },
     {
       "source": "/products/produce/24049/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24049/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24049/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24049/",
       "permanent": true
     },
     {
@@ -1076,12 +1076,12 @@
     },
     {
       "source": "/products/produce/24101/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24101/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24101/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24101/",
       "permanent": true
     },
     {
@@ -1096,12 +1096,12 @@
     },
     {
       "source": "/products/produce/24103/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24103/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24103/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24103/",
       "permanent": true
     },
     {
@@ -1116,12 +1116,12 @@
     },
     {
       "source": "/products/produce/24105/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24105/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24105/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24105/",
       "permanent": true
     },
     {
@@ -1156,12 +1156,12 @@
     },
     {
       "source": "/products/produce/24109/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24109/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24109/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24109/",
       "permanent": true
     },
     {
@@ -1176,12 +1176,12 @@
     },
     {
       "source": "/products/produce/24111/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24111/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24111/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24111/",
       "permanent": true
     },
     {
@@ -1226,12 +1226,12 @@
     },
     {
       "source": "/products/produce/24116/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24116/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24116/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24116/",
       "permanent": true
     },
     {
@@ -1276,12 +1276,12 @@
     },
     {
       "source": "/products/produce/24121/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24121/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24121/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24121/",
       "permanent": true
     },
     {
@@ -1296,12 +1296,12 @@
     },
     {
       "source": "/products/produce/24161/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24161/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24161/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24161/",
       "permanent": true
     },
     {
@@ -1336,22 +1336,22 @@
     },
     {
       "source": "/products/produce/24202/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24202/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24202/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24202/",
       "permanent": true
     },
     {
       "source": "/products/produce/24203/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24203/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24203/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24203/",
       "permanent": true
     },
     {
@@ -1366,12 +1366,12 @@
     },
     {
       "source": "/products/produce/24205/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24205/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24205/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24205/",
       "permanent": true
     },
     {
@@ -1386,12 +1386,12 @@
     },
     {
       "source": "/products/produce/24214/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24214/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24214/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24214/",
       "permanent": true
     },
     {
@@ -1406,42 +1406,42 @@
     },
     {
       "source": "/products/produce/24216/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24216/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24216/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24216/",
       "permanent": true
     },
     {
       "source": "/products/produce/24217/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24217/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24217/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24217/",
       "permanent": true
     },
     {
       "source": "/products/produce/24220/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24220/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24220/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24220/",
       "permanent": true
     },
     {
       "source": "/products/produce/24221/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24221/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24221/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24221/",
       "permanent": true
     },
     {
@@ -1466,12 +1466,12 @@
     },
     {
       "source": "/products/produce/24224/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24224/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24224/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24224/",
       "permanent": true
     },
     {
@@ -1486,12 +1486,12 @@
     },
     {
       "source": "/products/produce/24226/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24226/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24226/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24226/",
       "permanent": true
     },
     {
@@ -1546,12 +1546,12 @@
     },
     {
       "source": "/products/produce/24234/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24234/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24234/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24234/",
       "permanent": true
     },
     {
@@ -1606,22 +1606,22 @@
     },
     {
       "source": "/products/prepared/24270/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24270/",
       "permanent": true
     },
     {
       "source": "/zh/products/prepared/24270/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24270/",
       "permanent": true
     },
     {
       "source": "/products/produce/24270/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24270/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24270/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24270/",
       "permanent": true
     },
     {
@@ -1646,32 +1646,32 @@
     },
     {
       "source": "/products/produce/24280/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24280/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24280/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24280/",
       "permanent": true
     },
     {
       "source": "/products/produce/24281/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24281/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24281/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24281/",
       "permanent": true
     },
     {
       "source": "/products/produce/24288/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24288/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24288/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24288/",
       "permanent": true
     },
     {
@@ -1686,22 +1686,22 @@
     },
     {
       "source": "/products/produce/24294/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24294/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24294/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24294/",
       "permanent": true
     },
     {
       "source": "/products/produce/24306/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24306/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24306/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24306/",
       "permanent": true
     },
     {
@@ -1726,12 +1726,12 @@
     },
     {
       "source": "/products/produce/24321/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24321/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24321/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24321/",
       "permanent": true
     },
     {
@@ -1746,12 +1746,12 @@
     },
     {
       "source": "/products/produce/24326/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24326/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24326/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24326/",
       "permanent": true
     },
     {
@@ -1766,12 +1766,12 @@
     },
     {
       "source": "/products/produce/24331/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24331/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24331/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24331/",
       "permanent": true
     },
     {
@@ -1816,42 +1816,42 @@
     },
     {
       "source": "/products/produce/24341/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24341/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24341/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24341/",
       "permanent": true
     },
     {
       "source": "/products/produce/24342/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24342/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24342/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24342/",
       "permanent": true
     },
     {
       "source": "/products/produce/24343/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24343/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24343/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24343/",
       "permanent": true
     },
     {
       "source": "/products/produce/24344/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24344/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24344/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24344/",
       "permanent": true
     },
     {
@@ -1866,12 +1866,12 @@
     },
     {
       "source": "/products/produce/24346/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24346/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24346/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24346/",
       "permanent": true
     },
     {
@@ -1906,32 +1906,32 @@
     },
     {
       "source": "/products/produce/24372/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24372/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24372/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24372/",
       "permanent": true
     },
     {
       "source": "/products/produce/24403/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24403/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24403/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24403/",
       "permanent": true
     },
     {
       "source": "/products/produce/24404/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24404/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24404/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24404/",
       "permanent": true
     },
     {
@@ -2026,12 +2026,12 @@
     },
     {
       "source": "/products/produce/24491/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24491/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24491/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24491/",
       "permanent": true
     },
     {
@@ -2096,12 +2096,12 @@
     },
     {
       "source": "/products/produce/24615/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/24615/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/24615/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/24615/",
       "permanent": true
     },
     {
@@ -2246,12 +2246,12 @@
     },
     {
       "source": "/products/produce/25100/",
-      "destination": "/products/preserved/",
+      "destination": "/products/preserved/25100/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/25100/",
-      "destination": "/zh/products/preserved/",
+      "destination": "/zh/products/preserved/25100/",
       "permanent": true
     },
     {
@@ -2376,12 +2376,12 @@
     },
     {
       "source": "/products/produce/25275/",
-      "destination": "/products/preserved/",
+      "destination": "/products/preserved/25275/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/25275/",
-      "destination": "/zh/products/preserved/",
+      "destination": "/zh/products/preserved/25275/",
       "permanent": true
     },
     {
@@ -2476,12 +2476,12 @@
     },
     {
       "source": "/products/produce/25306/",
-      "destination": "/products/preserved/",
+      "destination": "/products/preserved/25306/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/25306/",
-      "destination": "/zh/products/preserved/",
+      "destination": "/zh/products/preserved/25306/",
       "permanent": true
     },
     {
@@ -2526,12 +2526,12 @@
     },
     {
       "source": "/products/produce/25341/",
-      "destination": "/products/preserved/",
+      "destination": "/products/preserved/25341/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/25341/",
-      "destination": "/zh/products/preserved/",
+      "destination": "/zh/products/preserved/25341/",
       "permanent": true
     },
     {
@@ -3266,12 +3266,12 @@
     },
     {
       "source": "/products/produce/25633/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/25633/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/25633/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/25633/",
       "permanent": true
     },
     {
@@ -4116,12 +4116,12 @@
     },
     {
       "source": "/products/produce/26473/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/26473/",
       "permanent": true
     },
     {
       "source": "/zh/products/produce/26473/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/26473/",
       "permanent": true
     },
     {
@@ -4556,22 +4556,22 @@
     },
     {
       "source": "/products/seafood/33902/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/33902/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/33902/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/33902/",
       "permanent": true
     },
     {
       "source": "/products/seafood/33903/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/33903/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/33903/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/33903/",
       "permanent": true
     },
     {
@@ -4906,12 +4906,12 @@
     },
     {
       "source": "/products/seafood/34066/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/34066/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/34066/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/34066/",
       "permanent": true
     },
     {
@@ -5026,22 +5026,22 @@
     },
     {
       "source": "/products/seafood/34301/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/34301/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/34301/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/34301/",
       "permanent": true
     },
     {
       "source": "/products/seafood/34305/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/34305/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/34305/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/34305/",
       "permanent": true
     },
     {
@@ -5096,12 +5096,12 @@
     },
     {
       "source": "/products/seafood/35010/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/35010/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35010/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/35010/",
       "permanent": true
     },
     {
@@ -5126,12 +5126,12 @@
     },
     {
       "source": "/products/seafood/35014/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/35014/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35014/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/35014/",
       "permanent": true
     },
     {
@@ -5186,22 +5186,22 @@
     },
     {
       "source": "/products/seafood/35065/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35065/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35065/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35065/",
       "permanent": true
     },
     {
       "source": "/products/seafood/35066/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35066/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35066/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35066/",
       "permanent": true
     },
     {
@@ -5276,12 +5276,12 @@
     },
     {
       "source": "/products/seafood/35126/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35126/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35126/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35126/",
       "permanent": true
     },
     {
@@ -5336,22 +5336,22 @@
     },
     {
       "source": "/products/seafood/35150/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35150/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35150/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35150/",
       "permanent": true
     },
     {
       "source": "/products/seafood/35153/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35153/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35153/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35153/",
       "permanent": true
     },
     {
@@ -5366,12 +5366,12 @@
     },
     {
       "source": "/products/seafood/35171/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/35171/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35171/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/35171/",
       "permanent": true
     },
     {
@@ -5516,22 +5516,22 @@
     },
     {
       "source": "/products/seafood/35300/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35300/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35300/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35300/",
       "permanent": true
     },
     {
       "source": "/products/seafood/35304/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35304/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35304/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35304/",
       "permanent": true
     },
     {
@@ -5616,12 +5616,12 @@
     },
     {
       "source": "/products/seafood/35397/",
-      "destination": "/products/pantry/",
+      "destination": "/products/pantry/35397/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/35397/",
-      "destination": "/zh/products/pantry/",
+      "destination": "/zh/products/pantry/35397/",
       "permanent": true
     },
     {
@@ -5866,12 +5866,12 @@
     },
     {
       "source": "/products/seafood/36100/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/36100/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/36100/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/36100/",
       "permanent": true
     },
     {
@@ -5926,12 +5926,12 @@
     },
     {
       "source": "/products/seafood/36340/",
-      "destination": "/products/prepared/",
+      "destination": "/products/prepared/36340/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/36340/",
-      "destination": "/zh/products/prepared/",
+      "destination": "/zh/products/prepared/36340/",
       "permanent": true
     },
     {
@@ -6026,22 +6026,22 @@
     },
     {
       "source": "/products/seafood/37201/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/37201/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/37201/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/37201/",
       "permanent": true
     },
     {
       "source": "/products/seafood/37202/",
-      "destination": "/products/meat/",
+      "destination": "/products/meat/37202/",
       "permanent": true
     },
     {
       "source": "/zh/products/seafood/37202/",
-      "destination": "/zh/products/meat/",
+      "destination": "/zh/products/meat/37202/",
       "permanent": true
     },
     {
