@@ -5,14 +5,15 @@
   "type": "module",
   "packageManager": "pnpm@10.18.3",
   "scripts": {
-    "dev": "astro dev --host 0.0.0.0 --port 3000",
+    "dev": "node scripts/apply_catalog_overrides.mjs && node scripts/build_studio_image_map.mjs && astro dev --host 0.0.0.0 --port 3000",
     "check": "astro check",
-    "catalog:import": "python3 scripts/import_stocklist.py && node scripts/generate_catalog_data.mjs && node scripts/generate_sitemap.mjs && python3 scripts/generate_catalog_audit.py",
-    "build": "node scripts/build_studio_image_map.mjs && node scripts/generate_catalog_data.mjs && node scripts/generate_sitemap.mjs && astro check && astro build && node scripts/generate_static_redirect_pages.mjs",
+    "catalog:import": "python3 scripts/import_stocklist.py && node scripts/apply_catalog_overrides.mjs && node scripts/generate_catalog_data.mjs && node scripts/generate_sitemap.mjs && python3 scripts/generate_catalog_audit.py",
+    "build": "node scripts/apply_catalog_overrides.mjs && node scripts/build_studio_image_map.mjs && node scripts/generate_catalog_data.mjs && node scripts/generate_sitemap.mjs && astro check && astro build && node scripts/generate_static_redirect_pages.mjs",
     "preview": "astro preview --host 0.0.0.0 --port 3000"
   },
   "dependencies": {
-    "astro": "^5.13.5"
+    "astro": "^5.13.5",
+    "sharp": "0.34.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

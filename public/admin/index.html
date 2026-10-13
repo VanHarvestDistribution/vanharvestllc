@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>产品后台 · Van Harvest</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <!-- Sign in -->
+  <main id="login" class="login" hidden>
+    <form id="login-form" class="login-card">
+      <img src="/brand/van-harvest-official.webp" alt="Van Harvest" class="login-logo">
+      <h1>产品后台</h1>
+      <p class="muted">Product admin</p>
+      <label>密码 Password
+        <input type="password" name="password" autocomplete="current-password" required autofocus>
+      </label>
+      <button type="submit" class="btn btn-primary">登录</button>
+      <p class="form-error" id="login-error" role="alert"></p>
+    </form>
+  </main>
+
+  <!-- App -->
+  <div id="app" hidden>
+    <header class="topbar">
+      <div class="brand"><img src="/brand/van-harvest-official.webp" alt=""><span>产品后台</span></div>
+      <nav class="tabs" role="tablist">
+        <button class="tab is-active" data-tab="products" role="tab">产品</button>
+        <button class="tab" data-tab="bulk" role="tab">批量上传图片</button>
+        <button class="tab" data-tab="featured" role="tab">精选产品</button>
+      </nav>
+      <div class="topbar-right">
+        <a href="/" target="_blank" rel="noopener" class="link">查看网站 ↗</a>
+        <button class="btn btn-ghost" id="logout">退出</button>
+      </div>
+    </header>
+
+    <div class="status-bar" id="status" hidden></div>
+
+    <!-- Products -->
+    <section class="panel" data-panel="products">
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="搜索 Item #、英文名或中文名" autocomplete="off">
+        <select id="filter-category"><option value="">全部品类</option></select>
+        <select id="filter-image">
+          <option value="">全部</option>
+          <option value="none">没有图片</option>
+          <option value="studio">白底图</option>
+          <option value="warehouse">仓库实拍图</option>
+          <option value="edited">后台改过的</option>
+          <option value="hidden">已隐藏</option>
+        </select>
+        <span class="muted" id="result-count"></span>
+      </div>
+      <div class="split">
+        <div class="list" id="product-list" aria-label="产品列表"></div>
+        <form class="editor" id="editor" hidden>
+          <div class="editor-head">
+            <div>
+              <div class="mono muted">Item # <span id="ed-id"></span></div>
+              <h2 id="ed-title"></h2>
+            </div>
+            <a id="ed-view" class="link" target="_blank" rel="noopener">在网站上查看 ↗</a>
+          </div>
+
+          <div class="image-box">
+            <div class="image-frame" id="ed-image"></div>
+            <div class="image-actions">
+              <label class="btn btn-outline">上传新图片<input type="file" id="ed-file" accept="image/*" hidden></label>
+              <label class="check"><input type="checkbox" id="ed-fill"> 填满画面（会裁掉边缘）</label>
+              <button type="button" class="btn btn-ghost danger" id="ed-remove-image" hidden>删除白底图</button>
+              <p class="hint" id="ed-image-note"></p>
+            </div>
+          </div>
+
+          <div class="grid2">
+            <label>英文名称 English name<input name="name" required maxlength="200"></label>
+            <label>中文名称 Chinese name<input name="nameZh" maxlength="200"></label>
+            <label>品类 Department<select name="category" id="ed-category"></select></label>
+            <label>温层 Storage
+              <select name="storage">
+                <option value="">常温 / 未标注</option>
+                <option value="frozen">冷冻 Frozen</option>
+                <option value="refrigerated">冷藏 Refrigerated</option>
+              </select>
+            </label>
+            <label>规格 Pack size<input name="packSize" maxlength="200" placeholder="例如 30LB / 20LB/CS"></label>
+          </div>
+          <label class="check"><input type="checkbox" name="featured"> 放进本品类的精选产品（需要有图片）</label>
+          <label class="check"><input type="checkbox" name="hidden"> 在网站上隐藏这个产品</label>
+          <p class="hint" id="ed-original"></p>
+
+          <div class="editor-actions">
+            <button type="submit" class="btn btn-primary" id="ed-save">保存并发布</button>
+            <button type="button" class="btn btn-ghost" id="ed-reset">撤销修改</button>
+            <span class="form-error" id="ed-error" role="alert"></span>
+          </div>
+        </form>
+        <div class="editor-empty" id="editor-empty">在左边选择一个产品进行编辑</div>
+      </div>
+    </section>
+
+    <!-- Bulk images -->
+    <section class="panel" data-panel="bulk" hidden>
+      <div class="bulk-intro">
+        <h2>批量上传产品图片</h2>
+        <p>文件名以 Item # 开头即可，例如 <code>12152.jpg</code> 或 <code>12152 牛柳.png</code>。图片会自动放到 1280×960 的白底画布上。上传后会替换该产品现有的图片。</p>
+        <label class="dropzone" id="dropzone">
+          <input type="file" id="bulk-files" accept="image/*" multiple hidden>
+          <strong>把图片拖到这里</strong> 或点击选择文件
+        </label>
+        <label class="check"><input type="checkbox" id="bulk-fill"> 填满画面（会裁掉边缘）</label>
+      </div>
+      <div class="bulk-grid" id="bulk-grid"></div>
+      <div class="editor-actions" id="bulk-actions" hidden>
+        <button class="btn btn-primary" id="bulk-upload">上传并发布</button>
+        <button class="btn btn-ghost" id="bulk-clear">清空</button>
+        <span class="muted" id="bulk-summary"></span>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="panel" data-panel="featured" hidden>
+      <div class="toolbar">
+        <select id="feat-category"></select>
+        <input id="feat-add" placeholder="输入 Item # 添加" inputmode="numeric">
+        <button class="btn btn-outline" id="feat-add-btn">添加</button>
+        <span class="muted">建议每个品类 8–12 个，只有带图片的产品才会显示。</span>
+      </div>
+      <p class="form-error" id="feat-error" role="alert"></p>
+      <ol class="feat-list" id="feat-list"></ol>
+      <div class="editor-actions">
+        <button class="btn btn-primary" id="feat-save" disabled>保存并发布</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/admin/admin.js" defer></script>
+</body>
+</html>

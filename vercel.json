@@ -5,7 +5,25 @@
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "trailingSlash": true,
+  "functions": {
+    "api/admin/save.js": {
+      "maxDuration": 60
+    }
+  },
   "headers": [
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
     {
       "source": "/_astro/(.*)",
       "headers": [

@@ -1,9 +1,10 @@
 // Shared product-image lookup for the Node build scripts.
 //
 // Two sources, merged per Item #:
-//   1. Studio images: public/images/products/ai/{itemId}.webp
-//      White-background representative photos. To add or replace one, drop
-//      a .webp named after the Item # into that folder and rebuild.
+//   1. Studio images: public/images/products/ai/{itemId}.webp or {itemId}-{version}.webp
+//      White-background product photos. Uploaded from /admin (which writes a new
+//      versioned file name so browsers never show a cached old picture), or added
+//      by hand as {itemId}.webp.
 //   2. Warehouse photos listed in src/data/yellowLabelProductImages.ts
 //      (/images/products/uploaded/...).
 // A studio image wins over a warehouse photo for the same item.
@@ -14,15 +15,18 @@ import { fileURLToPath } from 'node:url';
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 export const AI_DIR = path.join(ROOT, 'public/images/products/ai');
 export const AI_URL_PREFIX = '/images/products/ai/';
+export const STUDIO_FILE = /^(\d+)(?:-[a-z0-9]+)?\.webp$/;
 
 export function readStudioImages() {
   if (!fs.existsSync(AI_DIR)) return {};
-  return Object.fromEntries(
-    fs.readdirSync(AI_DIR)
-      .filter((file) => /^\d+\.webp$/.test(file))
-      .sort()
-      .map((file) => [file.replace('.webp', ''), `${AI_URL_PREFIX}${file}`])
-  );
+  const map = {};
+  // Normally one file per item. If both exist, a versioned upload (12152-abc.webp) wins over 12152.webp.
+  for (const file of fs.readdirSync(AI_DIR).sort()) {
+    const match = file.match(STUDIO_FILE);
+    if (!match || (map[match[1]] && !file.includes('-'))) continue;
+    map[match[1]] = `${AI_URL_PREFIX}${file}`;
+  }
+  return map;
 }
 
 export function readWarehousePhotos() {
@@ -36,4 +40,9 @@ export function readWarehousePhotos() {
 
 export function readProductImages() {
   return { ...readWarehousePhotos(), ...readStudioImages() };
+}
+
+/** The catalog the site shows: warehouse products with /admin edits applied (see apply_catalog_overrides.mjs). */
+export function readCatalog() {
+  return JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/catalog.json'), 'utf-8'));
 }

@@ -9,3 +9,7 @@ data/source/Stocklist.xls
 data/source/*.xls
 data/source/*.xlsx
 __pycache__/
+
+# Generated at build from products.json + data/product-overrides.json
+src/data/catalog.json
+src/data/catalog-moves.json

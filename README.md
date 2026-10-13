@@ -59,6 +59,31 @@ redirect pages for products that moved category.
 4. Review the summary printed by the importer (`data/stocklist-import-report.json` has the details),
    then commit and push. Vercel deploys automatically.
 
+## Product admin (/admin)
+
+Staff edit products at https://vanharvestllc.com/admin/ with a shared password. Every save is one
+commit to `main` by "Van Harvest Admin"; Vercel rebuilds and the site updates in about 1–2 minutes.
+A bad edit can be undone by reverting that commit on GitHub.
+
+What it can change:
+- **Images**: uploads are framed on a 1280×960 white canvas in the browser, converted to WebP on the
+  server, and saved as `public/images/products/ai/{item#}-{version}.webp` (old files for that item are removed).
+- **Product info** (names, department, pack size, storage, hide): saved to `data/product-overrides.json`.
+  The warehouse import (`products.json`) is never edited by the admin, so re-importing the Excel keeps
+  these edits. `scripts/apply_catalog_overrides.mjs` merges both into `src/data/catalog.json` at build time.
+- **Featured products**: `src/data/featured.json`.
+
+Code: `public/admin/` (page) and `api/admin/` (Vercel functions). Environment variables in Vercel:
+
+| Variable | Value |
+| --- | --- |
+| `ADMIN_PASSWORD` | The shared staff password. Changing it signs everyone out. |
+| `GITHUB_TOKEN` | Fine-grained token, repository `VanHarvestDistribution/vanharvestllc` only, permission **Contents: Read and write**. |
+| `GITHUB_REPO`, `GITHUB_BRANCH` | Optional; default `VanHarvestDistribution/vanharvestllc` and `main`. |
+
+Note: the Vercel Hobby plan allows 100 deployments a day. Bulk uploads are grouped into a few commits,
+but saving products one by one all day can reach that limit; extra saves still commit and go live with the next deployment.
+
 ## Adding product photos
 
 1. Save the image as `{item#}.webp` (1280×960, white background, under ~200 KB) in `public/images/products/ai/`.

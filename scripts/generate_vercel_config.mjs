@@ -3,11 +3,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readProductImages } from './lib/productImages.mjs';
+import { readProductImages, readCatalog } from './lib/productImages.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const history = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/product-route-redirects.json'), 'utf-8')).redirects || [];
-const products = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/products.json'), 'utf-8')).map((p) => [String(p.id), p]));
+const products = new Map(readCatalog().map((p) => [String(p.id), p]));
 const detailIds = new Set(Object.keys(readProductImages()));
 
 const redirects = [];
@@ -33,7 +33,10 @@ const config = {
   buildCommand: 'pnpm build',
   outputDirectory: 'dist',
   trailingSlash: true,
+  // /admin saves: image conversion + several GitHub calls can exceed the 10s default.
+  functions: { 'api/admin/save.js': { maxDuration: 60 } },
   headers: [
+    { source: '/admin/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }, { key: 'Cache-Control', value: 'no-store' }] },
     { source: '/_astro/(.*)', headers: immutable },
     { source: '/images/(.*)', headers: immutable },
     { source: '/brand/(.*)', headers: immutable },
