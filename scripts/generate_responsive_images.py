@@ -10,15 +10,15 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 TARGET_IMAGES = [
     # Category images
-    'public/images/category-cleaning.webp',
-    'public/images/category-dry.webp',
-    'public/images/category-meat.webp',
-    'public/images/category-pantry.webp',
-    'public/images/category-prepared.webp',
-    'public/images/category-preserved.webp',
-    'public/images/category-produce.webp',
-    'public/images/category-seafood.webp',
-    'public/images/category-supplies.webp',
+    'public/images/category-cleaning-v2.webp',
+    'public/images/category-dry-v2.webp',
+    'public/images/category-meat-v2.webp',
+    'public/images/category-pantry-v2.webp',
+    'public/images/category-prepared-v2.webp',
+    'public/images/category-preserved-v2.webp',
+    'public/images/category-produce-v2.webp',
+    'public/images/category-seafood-v2.webp',
+    'public/images/category-supplies-v2.webp',
     # Hero images
     'public/images/home/hero-beef-steaks.webp',
     'public/images/home/hero-fruit-still-life.webp',
