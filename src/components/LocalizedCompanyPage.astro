@@ -10,7 +10,7 @@ const coverage = zh
   ? [
       { name: '北卡罗来纳州', sub: '每天配送 · 最低 $500' },
       { name: '南卡罗来纳州', sub: '每天配送 · 最低 $500' },
-      { name: '亚特兰大', sub: '按需预约 · 最低 $500' },
+      { name: '佐治亚州', sub: '按需预约 · 最低 $500' },
       { name: '维吉尼亚州', sub: '按需预约 · 最低 $500' },
     ]
   : [
@@ -23,7 +23,7 @@ const coverage = zh
 <BaseLayout
   title={zh ? '夏洛特食品仓库与批发公司介绍 | Van Harvest 万昌' : 'Van Harvest LLC | Charlotte Food Warehouse & Asian Distributor'}
   description={zh
-    ? 'Van Harvest 万昌成立于 2019 年，位于夏洛特 5226 Terminal St，拥有 100,000 平方英尺仓库，每日配送北卡、南卡，预约配送弗吉尼亚与亚特兰大。'
+    ? 'Van Harvest 万昌成立于 2019 年，位于夏洛特 5226 Terminal St，拥有 100,000 平方英尺仓库，每日配送北卡、南卡，预约配送弗吉尼亚与佐治亚州。'
     : 'Van Harvest LLC is a Charlotte, NC wholesale food distributor with a 100,000 SF warehouse, serving restaurants and markets across NC, SC, VA and Georgia.'}
   active="/company"
   lang={lang}
@@ -36,7 +36,7 @@ const coverage = zh
         <div class="editorial-rule"></div>
         <p>
           {zh
-            ? '成立于 2019 年，Van Harvest 位于夏洛特 5226 Terminal St，拥有 100,000 平方英尺仓库。自有货车每天配送北卡与南卡，定期配送弗吉尼亚与亚特兰大。电话或短信 24 小时下单，无截单时间，每次最低起送额 $500。'
+            ? '成立于 2019 年，Van Harvest 位于夏洛特 5226 Terminal St，拥有 100,000 平方英尺仓库。自有货车每天配送北卡与南卡，定期配送弗吉尼亚与佐治亚州。电话或短信 24 小时下单，无截单时间，每次最低起送额 $500。'
             : 'Founded in 2019, Van Harvest operates a 100,000 SF facility at 5226 Terminal St in Charlotte. Our trucks deliver daily across NC and SC, with scheduled routes to VA and Atlanta. Order 24/7 by phone or text with no cutoff time and a $500 delivery minimum.'}
         </p>
         <div class="hero-actions" style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
@@ -82,17 +82,16 @@ const coverage = zh
         </div>
         <p>
           {zh
-            ? '以夏洛特中央仓库为中心，北卡与南卡每天有车队发车配送，弗吉尼亚与亚特兰大按需预约发车。每次最低起送额均为 $500。'
+            ? '以夏洛特中央仓库为中心，北卡与南卡每天有车队发车配送，弗吉尼亚与佐治亚州按需预约发车。每次最低起送额均为 $500。'
             : 'Centered at our Charlotte hub, our fleet runs daily deliveries throughout North and South Carolina, with scheduled routes to Virginia and Atlanta. $500 minimum per delivery.'}
         </p>
       </div>
-      <div class="network-plot" role="img" aria-label={zh ? 'Van Harvest 配送网络：Charlotte 连接北卡、南卡、亚特兰大和维吉尼亚' : 'Van Harvest delivery network: Charlotte connects to North Carolina, South Carolina, Atlanta and Virginia'}>
+      <div class="network-plot" role="img" aria-label={zh ? 'Van Harvest 配送网络：Charlotte 连接北卡、南卡、佐治亚州和维吉尼亚' : 'Van Harvest delivery network: Charlotte connects to North Carolina, South Carolina, Atlanta and Virginia'}>
         <div class="network-origin">
           <span>{zh ? '中央仓库' : 'Central warehouse'}</span>
           <strong>Charlotte, NC</strong>
           <small>{zh ? '100,000 平方英尺 · 5226 Terminal St' : '100,000 SF · 5226 Terminal St'}</small>
         </div>
-        <div class="network-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="network-destinations">
           {coverage.map((place) => (
             <article class="network-node">
