@@ -95,6 +95,7 @@ const description = zh
 
   <script>
     import { readCart, setQty, removeItem, clearCart, onCartChange, cartCount, MAX_QTY, type CartItem } from '@/scripts/cart';
+    import { sendForm } from '@/scripts/submit';
 
     const root = document.querySelector<HTMLElement>('[data-cart-page]');
     if (root) {
@@ -210,26 +211,24 @@ const description = zh
         const ref = orderRef();
         const isNew = value('customerType') === 'new';
         const units = cartCount(items);
-        const out = new FormData();
-        out.set('_subject', `[网站订单] ${value('business')} · ${items.length} 种 / ${units} 件 · ${ref}`);
-        out.set('_template', 'table');
-        out.set('_captcha', 'false');
-        if (email) out.set('_replyto', email);
-        out.set('订单编号 Order #', ref);
-        out.set('客户类型 Customer', isNew ? '新客户 New customer（需开户 / COD）' : '已开户客户 Existing customer');
-        out.set('店名 Business', value('business'));
-        out.set('联系人 Contact', value('contact'));
-        out.set('电话 Phone', value('phone'));
-        out.set('邮箱 Email', email || '—');
-        out.set('送货地址 Address', value('address'));
-        out.set('希望送货日期 Preferred date', value('deliveryDate') || '—');
-        out.set('备注 Notes', value('notes') || '—');
-        out.set('产品数 Lines / 总件数 Units', `${items.length} / ${units}`);
-        items.slice(0, 200).forEach((item, index) => {
-          const names = [item.nameZh, item.name].filter(Boolean).join(' / ');
-          out.set(`${String(index + 1).padStart(2, '0')}. Item #${item.id}`, `× ${item.qty}　${names}`);
-        });
-        out.set('下单页面 Language', zh ? '中文' : 'English');
+        const subject = `[网站订单] ${value('business')} · ${items.length} 种 / ${units} 件 · ${ref}`;
+        const fields: [string, string][] = [
+          ['订单编号 Order #', ref],
+          ['客户类型 Customer', isNew ? '新客户 New customer（需开户 / COD）' : '已开户客户 Existing customer'],
+          ['店名 Business', value('business')],
+          ['联系人 Contact', value('contact')],
+          ['电话 Phone', value('phone')],
+          ['邮箱 Email', email || '—'],
+          ['送货地址 Address', value('address')],
+          ['希望送货日期 Preferred date', value('deliveryDate') || '—'],
+          ['备注 Notes', value('notes') || '—'],
+          ['产品数 Lines / 总件数 Units', `${items.length} / ${units}`],
+          ...items.slice(0, 200).map((item, index): [string, string] => [
+            `${String(index + 1).padStart(2, '0')}. Item #${item.id}`,
+            `× ${item.qty}　${[item.nameZh, item.name].filter(Boolean).join(' / ')}`,
+          ]),
+          ['下单页面 Language', zh ? '中文' : 'English'],
+        ];
 
         // Plain-text copy of the order, used for the email / text / copy fallback.
         const orderText = [
@@ -261,15 +260,8 @@ const description = zh
         status.textContent = t('Sending your order…', '正在提交订单…');
         submit.disabled = true;
         try {
-          const response = await fetch('https://formsubmit.co/ajax/ordersvhd@gmail.com', {
-            method: 'POST',
-            signal: AbortSignal.timeout ? AbortSignal.timeout(20000) : undefined,
-            headers: { Accept: 'application/json' },
-            body: out,
-          });
-          let payload: { success?: boolean | string } | null = null;
-          try { payload = await response.json(); } catch { /* ignore */ }
-          if (!response.ok || (payload && (payload.success === false || payload.success === 'false'))) throw new Error('failed');
+          const sent = await sendForm({ kind: 'order', subject, replyTo: email || undefined, fields, elapsedMs: Date.now() - startedAt, honey: value('_honey') });
+          if (!sent) throw new Error('failed');
 
           const successList = root.querySelector<HTMLUListElement>('[data-success-list]')!;
           successList.replaceChildren(...items.map((item) => el('li', '', `#${item.id}  ${primary(item)}  × ${item.qty}`)));

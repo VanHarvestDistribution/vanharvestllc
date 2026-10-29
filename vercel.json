@@ -11,6 +11,9 @@
     },
     "api/admin/upload.js": {
       "maxDuration": 30
+    },
+    "api/submit.js": {
+      "maxDuration": 30
     }
   },
   "headers": [

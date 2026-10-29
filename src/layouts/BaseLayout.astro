@@ -120,65 +120,76 @@ const structuredData = jsonLdNodes.length || breadcrumbJsonLd
       } catch (_) { revealAll(); }
       window.setTimeout(revealAll, 1500);
     </script>
-    <script is:inline>
-      (() => {
-        const endpoint = 'https://formsubmit.co/ajax/ordersvhd@gmail.com';
-        const maxFileBytes = 10 * 1024 * 1024;
-        const allowedExtensions = /\.(pdf|doc|docx|xls|xlsx|csv|jpe?g|png|webp)$/i;
-        const text = (form, en, zh) => form.dataset.lang === 'zh' ? zh : en;
-        const subjectFor = (form, data) => {
-          const kind = form.dataset.formKind;
-          const label = kind === 'apply' ? '开户申请' : kind === 'careers' ? '招聘' : kind === 'suppliers' ? '供应商' : '联系';
-          const person = data.get(kind === 'apply' || kind === 'suppliers' ? 'company' : 'name') || data.get('contact') || '网站表单';
-          return `[${label}] ${String(person).trim()}`;
-        };
-        document.querySelectorAll('[data-unified-form]').forEach((form) => {
-          if (form.dataset.bound) return;
-          form.dataset.bound = 'true';
-          const startedAt = Date.now();
-          form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const status = form.querySelector('[data-form-status]');
-            const button = form.querySelector('button[type="submit"]');
-            const data = new FormData(form);
-            const honey = String(data.get('_honey') || '').trim();
-            if (honey || Date.now() - startedAt < 2500) {
-              if (status) status.textContent = text(form, 'Please wait a moment and try again.', '请稍等片刻后再提交。');
-              return;
-            }
-            let totalBytes = 0;
-            for (const input of form.querySelectorAll('input[type="file"]')) {
-              for (const file of input.files || []) {
-                totalBytes += file.size;
-                if (!allowedExtensions.test(file.name)) {
-                  if (status) status.textContent = text(form, 'Please upload a PDF, document, spreadsheet or image file.', '请上传 PDF、文档、表格或图片文件。');
-                  return;
-                }
+    <script>
+      import { sendForm } from '@/scripts/submit';
+
+      const maxFileBytes = 10 * 1024 * 1024;
+      const allowedExtensions = /\.(pdf|doc|docx|xls|xlsx|csv|jpe?g|png|webp)$/i;
+      const text = (form: HTMLElement, en: string, zh: string) => (form.dataset.lang === 'zh' ? zh : en);
+      const kinds = ['contact', 'apply', 'careers', 'suppliers'] as const;
+      type Kind = (typeof kinds)[number];
+      const subjectFor = (kind: Kind, data: FormData) => {
+        const label = kind === 'apply' ? '开户申请' : kind === 'careers' ? '招聘' : kind === 'suppliers' ? '供应商' : '联系';
+        const person = data.get(kind === 'apply' || kind === 'suppliers' ? 'company' : 'name') || data.get('contact') || data.get('company') || '网站表单';
+        return `[${label}] ${String(person).trim()}`;
+      };
+      // Readable label for each field: the text of its <label>, e.g. "Company name".
+      const labelFor = (form: HTMLFormElement, name: string) => {
+        const field = form.querySelector<HTMLElement>(`[name="${CSS.escape(name)}"]`);
+        const caption = field?.closest('label')?.querySelector('span')?.textContent?.trim();
+        return caption ? `${caption} (${name})` : name;
+      };
+
+      document.querySelectorAll<HTMLFormElement>('[data-unified-form]').forEach((form) => {
+        if (form.dataset.bound) return;
+        form.dataset.bound = 'true';
+        const startedAt = Date.now();
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const status = form.querySelector<HTMLElement>('[data-form-status]');
+          const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+          const data = new FormData(form);
+          const honey = String(data.get('_honey') || '').trim();
+          if (honey || Date.now() - startedAt < 2500) {
+            if (status) status.textContent = text(form, 'Please wait a moment and try again.', '请稍等片刻后再提交。');
+            return;
+          }
+          const files: File[] = [];
+          for (const input of form.querySelectorAll<HTMLInputElement>('input[type="file"]')) {
+            for (const file of Array.from(input.files || [])) {
+              if (!allowedExtensions.test(file.name)) {
+                if (status) status.textContent = text(form, 'Please upload a PDF, document, spreadsheet or image file.', '请上传 PDF、文档、表格或图片文件。');
+                return;
               }
+              files.push(file);
             }
-            if (totalBytes > maxFileBytes) {
-              if (status) status.textContent = text(form, 'Attachments must be 10 MB or smaller in total.', '附件总大小不能超过 10 MB。');
-              return;
-            }
-            data.set('_subject', subjectFor(form, data));
-            data.set('_captcha', 'true');
-            if (status) status.textContent = text(form, 'Sending…', '正在发送…');
-            if (button) button.disabled = true;
-            try {
-              const response = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: data });
-              let payload = null;
-              try { payload = await response.json(); } catch (_) {}
-              if (!response.ok || (payload && payload.success === false)) throw new Error('submission failed');
-              if (status) status.textContent = text(form, 'Thank you. Your message was sent successfully.', '感谢您，信息已成功发送。');
-              form.reset();
-            } catch (_) {
-              if (status) status.textContent = text(form, 'We could not send this form. Please call (704) 392-8717.', '提交失败，请致电 (704) 392-8717。');
-            } finally {
-              if (button) button.disabled = false;
-            }
-          });
+          }
+          if (files.reduce((sum, file) => sum + file.size, 0) > maxFileBytes) {
+            if (status) status.textContent = text(form, 'Attachments must be 10 MB or smaller in total.', '附件总大小不能超过 10 MB。');
+            return;
+          }
+          const kind = (kinds as readonly string[]).includes(form.dataset.formKind || '') ? (form.dataset.formKind as Kind) : 'contact';
+          const fields: [string, string][] = [];
+          for (const [name, value] of data.entries()) {
+            if (name.startsWith('_') || typeof value !== 'string') continue;
+            const field = form.querySelector<HTMLInputElement>(`[name="${CSS.escape(name)}"]`);
+            const shown = field?.type === 'checkbox' ? text(form, 'Yes', '是') : value.trim();
+            if (shown) fields.push([labelFor(form, name), shown]);
+          }
+          fields.push(['页面 Page', location.pathname]);
+          const email = String(data.get('email') || '').trim();
+          if (status) status.textContent = text(form, 'Sending…', '正在发送…');
+          if (button) button.disabled = true;
+          const sent = await sendForm({ kind, subject: subjectFor(kind, data), replyTo: email || undefined, fields, files, elapsedMs: Date.now() - startedAt, honey });
+          if (sent) {
+            if (status) status.textContent = text(form, 'Thank you. Your message was sent successfully.', '感谢您，信息已成功发送。');
+            form.reset();
+          } else if (status) {
+            status.textContent = text(form, 'We could not send this form. Please call (704) 392-8717 or email ordersvhd@gmail.com.', '提交失败，请致电 (704) 392-8717 或发邮件至 ordersvhd@gmail.com。');
+          }
+          if (button) button.disabled = false;
         });
-      })();
+      });
     </script>
   </body>
 </html>
