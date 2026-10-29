@@ -78,6 +78,15 @@ const description = zh
             <button class="button" type="submit" data-order-submit>{zh ? '提交订单 →' : 'Submit order →'}</button>
             <span class="form-status" data-order-status aria-live="polite"></span>
           </div>
+          <div class="cart-fallback" data-order-fallback hidden>
+            <p><strong>{zh ? '在线提交暂时不可用。' : 'Online submission is temporarily unavailable.'}</strong> {zh ? '订单已整理好，可以直接用下面的方式发给我们，购物车内容会保留：' : 'Your order is ready to send another way, and your cart is kept:'}</p>
+            <div class="cart-fallback-actions">
+              <a class="button" data-fallback-email href="#">{zh ? '用邮件发送订单' : 'Send order by email'}</a>
+              <a class="button button-outline-dark" data-fallback-sms href="#">{zh ? '用短信发送订单' : 'Send order by text'}</a>
+              <button class="button button-outline-dark" type="button" data-fallback-copy>{zh ? '复制订单内容' : 'Copy order'}</button>
+            </div>
+            <p class="cart-fallback-note">{zh ? `也可以直接致电 ${contact.phoneDisplay}。` : `Or call ${contact.phoneDisplay}.`}</p>
+          </div>
           <p class="cart-form-fineprint">{zh ? '提交后不会扣款。我们只用这些信息联系您确认订单。' : 'Nothing is charged when you submit. We only use these details to confirm your order with you.'}</p>
         </form>
       </div>
@@ -222,11 +231,39 @@ const description = zh
         });
         out.set('下单页面 Language', zh ? '中文' : 'English');
 
+        // Plain-text copy of the order, used for the email / text / copy fallback.
+        const orderText = [
+          `${t('Order', '订单')} ${ref}`,
+          `${t('Customer', '客户类型')}: ${isNew ? t('New customer', '新客户') : t('Existing customer', '已开户客户')}`,
+          `${t('Business', '店名')}: ${value('business')}`,
+          `${t('Contact', '联系人')}: ${value('contact')}  ${value('phone')}${email ? '  ' + email : ''}`,
+          `${t('Address', '送货地址')}: ${value('address')}`,
+          value('deliveryDate') ? `${t('Preferred date', '希望送货日期')}: ${value('deliveryDate')}` : '',
+          value('notes') ? `${t('Notes', '备注')}: ${value('notes')}` : '',
+          '',
+          ...items.map((item, index) => `${index + 1}. #${item.id} × ${item.qty}  ${[item.nameZh, item.name].filter(Boolean).join(' / ')}`),
+        ].filter((line, i, arr) => line !== '' || arr[i - 1] !== '').join('\n');
+        const fallback = root.querySelector<HTMLElement>('[data-order-fallback]')!;
+        fallback.hidden = true;
+        const emailLink = fallback.querySelector<HTMLAnchorElement>('[data-fallback-email]')!;
+        emailLink.href = `mailto:ordersvhd@gmail.com?subject=${encodeURIComponent(`[网站订单] ${value('business')} · ${ref}`)}&body=${encodeURIComponent(orderText)}`;
+        fallback.querySelector<HTMLAnchorElement>('[data-fallback-sms]')!.href = `sms:+17043928717?&body=${encodeURIComponent(orderText)}`;
+        const copyButton = fallback.querySelector<HTMLButtonElement>('[data-fallback-copy]')!;
+        copyButton.onclick = async () => {
+          try {
+            await navigator.clipboard.writeText(orderText);
+            copyButton.textContent = t('Copied ✓', '已复制 ✓');
+          } catch {
+            window.prompt(t('Copy the order below:', '请复制下面的订单内容：'), orderText);
+          }
+        };
+
         status.textContent = t('Sending your order…', '正在提交订单…');
         submit.disabled = true;
         try {
           const response = await fetch('https://formsubmit.co/ajax/ordersvhd@gmail.com', {
             method: 'POST',
+            signal: AbortSignal.timeout ? AbortSignal.timeout(20000) : undefined,
             headers: { Accept: 'application/json' },
             body: out,
           });
@@ -245,7 +282,9 @@ const description = zh
           success.focus();
           success.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } catch {
-          status.textContent = t('We could not send your order. Please try again or call (704) 392-8717.', '订单提交失败，请重试或致电 (704) 392-8717。');
+          status.textContent = t('We could not send your order online.', '在线提交失败。');
+          fallback.hidden = false;
+          fallback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } finally {
           submit.disabled = false;
         }

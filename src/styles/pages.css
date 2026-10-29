@@ -120,3 +120,10 @@
 .company-editorial-copy h1{font-size:clamp(3rem,6.4vw,6.4rem);line-height:1.02}
 @media(max-width:680px){.company-editorial-copy h1{font-size:clamp(2.5rem,10.5vw,3.4rem)}.company-editorial-copy .hero-actions .button{flex:1 1 100%;justify-content:center}}
 .seo-landing-hero h1{color:#fff}
+
+.cart-fallback{display:grid;gap:12px;padding:16px;border:1px solid var(--gold);background:rgba(184,134,72,.08)}
+.cart-fallback[hidden]{display:none}
+.cart-fallback p{margin:0;color:var(--ink);font-size:14px;line-height:1.55;text-transform:none;letter-spacing:0}
+.cart-fallback-actions{display:flex;flex-wrap:wrap;gap:10px}
+.cart-fallback-actions .button{flex:1 1 180px;justify-content:center;text-align:center;cursor:pointer}
+.cart-fallback-note{color:var(--muted)!important;font-size:13px!important}
