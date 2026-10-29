@@ -288,9 +288,6 @@
 }
 
 /* 8. Delivery page timetable and rules grid */
-.delivery-editorial-wrap {
-  width: 100% !important;
-}
 .delivery-rules-editorial-grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;

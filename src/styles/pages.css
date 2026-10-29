@@ -102,3 +102,21 @@
   .cart-item-controls{justify-content:space-between}
   .cart-form,.cart-success{padding:20px}
 }
+
+/* Footer logo: show the whole mark (the shared .official-brand box crops a plain <img>) */
+.site-footer .footer-brand{width:142px;height:auto;overflow:visible}
+.site-footer .footer-brand img{display:block;width:142px;height:auto}
+.site-footer .footer-email{overflow-wrap:anywhere;font-size:13px}
+.not-found-zh{margin:10px 0 0;color:var(--muted);font-size:1.4rem}
+
+/* Contact page: labels sit above their values; department rows use the full width */
+.contact-details .contact-line{grid-template-columns:1fr;gap:4px;margin:18px 0}
+.contact-details .contact-line small{font-size:9px}
+.contact-details .contact-line a{overflow-wrap:anywhere;font-size:15px}
+.department-card{grid-template-columns:minmax(0,1fr) auto}
+.department-card p{font-size:13px;line-height:1.5}
+@media(max-width:680px){.department-card{grid-template-columns:1fr;gap:8px}.department-card .status-pill{grid-column:1}}
+
+.company-editorial-copy h1{font-size:clamp(3rem,6.4vw,6.4rem);line-height:1.02}
+@media(max-width:680px){.company-editorial-copy h1{font-size:clamp(2.5rem,10.5vw,3.4rem)}.company-editorial-copy .hero-actions .button{flex:1 1 100%;justify-content:center}}
+.seo-landing-hero h1{color:#fff}

@@ -14,7 +14,7 @@ const prefix = localized ? `/${lang}` : '';
 const heroSlides = heroImages;
 const productCount = products.length.toLocaleString();
 const pageDescription = zh
-  ? `Van Harvest 万昌位于夏洛特，拥有 100,000 平方英尺仓库，提供 ${productCount}+ 种肉类、蔬果、海鲜、干货与餐饮用品批发，每日配送北卡、南卡，预约配送维吉尼亚与佐治亚州，24 小时电话或短信下单，每次最低 $500。`
+  ? `Van Harvest 万昌位于夏洛特，拥有 100,000 平方英尺仓库，提供 ${productCount}+ 种肉类、蔬果、海鲜、干货与餐饮用品批发，每日配送北卡、南卡，预约配送弗吉尼亚与佐治亚州，24 小时电话或短信下单，每次最低 $500。`
   : `Van Harvest LLC is a Charlotte Asian food distributor with ${productCount}+ products, a 100,000 SF warehouse, daily NC and SC delivery, and 24/7 ordering.`;
 
 const organizationJsonLd = {
@@ -24,7 +24,7 @@ const organizationJsonLd = {
       '@type': 'Organization',
       name: 'Van Harvest LLC',
       url: absoluteUrl('/'),
-      logo: absoluteUrl('/brand/van-harvest-official.webp'),
+      logo: absoluteUrl('/brand/van-harvest-official-v2.webp'),
       telephone: contact.phoneDisplay,
       email: contact.officeEmail,
       description: pageDescription,
@@ -44,7 +44,7 @@ const organizationJsonLd = {
       telephone: contact.phoneDisplay,
       description: pageDescription,
       image: absoluteUrl(heroImage),
-      logo: absoluteUrl('/brand/van-harvest-official.webp'),
+      logo: absoluteUrl('/brand/van-harvest-official-v2.webp'),
       sameAs: [],
       areaServed: ['North Carolina', 'South Carolina', 'Virginia', 'Georgia'],
       geo: { '@type': 'GeoCoordinates', latitude: 35.2707951, longitude: -80.9019205 },
@@ -67,9 +67,9 @@ const pageTitle = zh
 <BaseLayout title={pageTitle} description={pageDescription} active="/" lang={lang} ogImage={heroImage} jsonLd={organizationJsonLd}>
   <!-- Hero: ONLY place where italic title style is retained -->
   <section class="home-hero">
-    <div class="home-hero-slideshow" data-hero-slideshow aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>
+    <div class="home-hero-slideshow" data-hero-slideshow role="img" aria-label={zh ? 'Van Harvest 首页食品主视觉' : 'Van Harvest foodservice hero image'}>
       {heroSlides.map((image, index) => (
-        <div class="home-hero-slide" style={`background-image:url('${image}')`} aria-hidden={index !== 0}></div>
+        <div class="home-hero-slide" style={index === 0 ? `background-image:url('${image}')` : undefined} data-bg={index === 0 ? undefined : image} aria-hidden={index !== 0}></div>
       ))}
     </div>
     <div class="home-hero-shade"></div>
@@ -161,6 +161,14 @@ const pageTitle = zh
 </BaseLayout>
 
 <script>
+  // Later hero slides load after the page has finished loading, so they don't compete with the first screen.
+  const loadDeferredSlides = () => document.querySelectorAll<HTMLElement>('.home-hero-slide[data-bg]').forEach((slide) => {
+    slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
+    slide.removeAttribute('data-bg');
+  });
+  if (document.readyState === 'complete') loadDeferredSlides();
+  else window.addEventListener('load', loadDeferredSlides, { once: true });
+
   document.querySelectorAll<HTMLElement>('[data-hero-slideshow]').forEach((slideshow) => {
     const slides = Array.from(slideshow.querySelectorAll<HTMLElement>('.home-hero-slide'));
     if (slides.length < 2 || slideshow.dataset.animated === 'true') return;

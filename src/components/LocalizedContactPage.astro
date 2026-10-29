@@ -54,11 +54,11 @@ const departments = zh
           </div>
           <div class="contact-line">
             <small>{zh ? '销售邮箱' : 'Sales email'}</small>
-            <span>{contact.salesEmail}</span>
+            <a href={`mailto:${contact.salesEmail}`}>{contact.salesEmail}</a>
           </div>
           <div class="contact-line">
             <small>{zh ? '办公室邮箱' : 'Office email'}</small>
-            <span>{contact.officeEmail}</span>
+            <a href={`mailto:${contact.officeEmail}`}>{contact.officeEmail}</a>
           </div>
           <div class="contact-line contact-line-address">
             <small>{zh ? '仓库地址' : 'Warehouse address'}</small>

@@ -5,14 +5,19 @@ import productsData from '@/data/catalog.json';
 import { productImages } from '@/data/productImages';
 import { curatedCategoryFeaturedIds } from '@/data/curatedCategoryFeatured';
 import ResponsivePicture from '@/components/ResponsivePicture.astro';
+import thumbSources from '@/data/productThumbs.json';
 
 interface Props { category: any; lang?: 'en' | 'zh'; localized?: boolean }
 const { category, lang = 'en', localized = false } = Astro.props;
 const zh = lang === 'zh';
 const prefix = localized ? `/${lang}` : '';
 const products = (productsData as any[]).filter((product) => product.category === category.key);
+const hasThumb = new Set(thumbSources as string[]);
+const thumbFor = (image: string) => hasThumb.has(image)
+  ? image.replace(/^\/images\/products\//, '/images/products/thumb/').replace(/\.(jpe?g|png)$/i, '.webp')
+  : image;
 const configuredIds = curatedCategoryFeaturedIds[category.key] || [];
-const featured = configuredIds.map((id) => products.find((product) => product.id === id)).filter((product): product is any => Boolean(product && productImages[product.id])).map((product) => ({ product, image: productImages[product.id] }));
+const featured = configuredIds.map((id) => products.find((product) => product.id === id)).filter((product): product is any => Boolean(product && productImages[product.id])).map((product) => ({ product, image: thumbFor(productImages[product.id]) }));
 const name = zh ? category.nameZh : category.name;
 const title = category.key === 'seafood'
   ? (zh ? `夏洛特海鲜批发产品 | Van Harvest 万昌` : `Seafood Wholesale Products Charlotte NC | Van Harvest LLC`)

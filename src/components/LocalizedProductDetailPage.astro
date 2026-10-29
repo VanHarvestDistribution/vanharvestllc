@@ -18,8 +18,8 @@ const primaryName = zh && product.nameZh ? product.nameZh : product.name;
 const secondaryName = zh && product.nameZh ? product.name : (product.nameZh || '');
 const storageMap: Record<string, string> = { frozen: zh ? '冷冻' : 'Frozen', refrigerated: zh ? '冷藏' : 'Refrigerated' };
 const storage = product.storage ? storageMap[product.storage] || product.storage : '';
-const title = zh ? `${primaryName} | Van Harvest 万昌` : `${primaryName} | Van Harvest`;
-const description = zh ? `查看 Van Harvest 万昌夏洛特食品批发目录中的${primaryName}，了解产品图片、编号、品类和温层信息，方便餐馆采购核对。` : `View ${product.name}, Item #${product.id}, from Van Harvest LLC, a wholesale food distributor serving Charlotte restaurants.`;
+const title = zh ? `${primaryName}（#${product.id}）| Van Harvest 万昌` : `${primaryName} (#${product.id}) | Van Harvest`;
+const description = zh ? `查看 Van Harvest 万昌夏洛特食品批发目录中的${primaryName}（产品编号 ${product.id}），了解产品图片、编号、品类和温层信息，方便餐馆采购核对。` : `View ${product.name}, Item #${product.id}, from Van Harvest LLC, a wholesale food distributor serving Charlotte restaurants.`;
 const imageUrl = absoluteUrl(product.image);
 const jsonLd = { '@context': 'https://schema.org', '@type': 'Product', name: product.name, image: imageUrl ? [imageUrl] : undefined, sku: product.id, category: category.name, brand: undefined, description };
 ---

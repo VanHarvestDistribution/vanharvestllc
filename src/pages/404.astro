@@ -1,39 +1,22 @@
 ---
-import '@/styles/global.css';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#102B52" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <title>Page Not Found (404) | Van Harvest LLC</title>
-  </head>
-  <body class="inner-page">
-    <Header active="" lang="en" />
-    <main id="main">
-      <section class="inner-hero" style="min-height:70svh">
-        <div class="shell inner-grid">
-          <div>
-            <h1>Page not found</h1>
-          </div>
-          <div class="inner-copy">
-            <p>The page you requested is not available. Return home or continue to the wholesale product catalog.</p>
-            <div class="hero-actions" style="margin-top:24px">
-              <a class="button" href="/">Return to home →</a>
-              <a class="button button-outline" style="color:var(--navy);border-color:var(--line)" href="/products/">Browse products →</a>
-            </div>
-          </div>
+<BaseLayout title="Page Not Found (404) | Van Harvest LLC" description="The page you requested is not available." active="" noindex>
+  <section class="inner-hero" style="min-height:70svh">
+    <div class="shell inner-grid">
+      <div>
+        <h1>Page not found</h1>
+        <p class="not-found-zh">页面不存在</p>
+      </div>
+      <div class="inner-copy">
+        <p>The page you requested is not available. Return home or continue to the wholesale product catalog.</p>
+        <p>您访问的页面不存在，可以返回首页或浏览产品目录。</p>
+        <div class="hero-actions" style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="button" href="/">Return to home →</a>
+          <a class="button button-outline-dark" href="/products/">Browse products →</a>
+          <a class="button button-outline-dark" href="/zh/products/">中文产品目录 →</a>
         </div>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
