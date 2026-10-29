@@ -58,8 +58,17 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Product', name: pro
               </div>
             )}
           </dl>
+          <div class="detail-order" data-cart-scope>
+            <div class="qty-stepper">
+              <button type="button" data-qty-step="-1" aria-label={zh ? '减少数量' : 'Decrease quantity'}>−</button>
+              <input type="number" inputmode="numeric" min="1" max="999" value="1" data-cart-qty aria-label={zh ? '数量' : 'Quantity'} />
+              <button type="button" data-qty-step="1" aria-label={zh ? '增加数量' : 'Increase quantity'}>+</button>
+            </div>
+            <button type="button" class="button button-gold detail-add-cart" data-add-to-cart data-id={product.id} data-name={product.name} data-name-zh={product.nameZh || ''} data-category={product.category}><span data-add-label>{zh ? '加入购物车' : 'Add to cart'}</span></button>
+          </div>
+          <p class="detail-order-note">{zh ? '不需要在线付款。提交订单后，销售会致电和您确认价格、数量和送货时间。' : 'No online payment. After you submit your order, our sales team calls you to confirm pricing, quantities and delivery.'} <a href={`${prefix}/apply/`}>{zh ? '申请开户查看价格 →' : 'Apply for an account to see pricing →'}</a></p>
           <div class="detail-actions">
-            <a class="button button-gold" href={`${prefix}/apply/`}>{zh ? '申请开户查看价格' : 'Apply for an account to see pricing'}</a>
+            <a class="button button-outline-dark" href={`${prefix}/cart/`}>{zh ? '查看购物车' : 'View cart'}</a>
             <a class="button button-outline-dark" href={`tel:${contact.phoneHref}`}>{zh ? `致电 ${contact.phoneDisplay}` : `Call ${contact.phoneDisplay}`}</a>
           </div>
         </div>

@@ -31,8 +31,8 @@ const labels = zh ? {
     <div class="catalog-summary" aria-live="polite"><span data-current-name>{labels.all}</span><span data-result-count>{labels.loading}</span></div>
     <div class="catalog-table-wrap">
       <table class="catalog-table">
-        <thead><tr><th class="col-id">{labels.item}</th><th class="col-product">{labels.product}</th><th class="col-storage">{labels.storage}</th></tr></thead>
-        <tbody data-product-results><tr><td colspan="3" class="catalog-loading-row">{labels.loading}</td></tr></tbody>
+        <thead><tr><th class="col-id">{labels.item}</th><th class="col-product">{labels.product}</th><th class="col-storage">{labels.storage}</th><th class="col-cart"><span class="sr-only">{zh ? '加入购物车' : 'Add to cart'}</span></th></tr></thead>
+        <tbody data-product-results><tr><td colspan="4" class="catalog-loading-row">{labels.loading}</td></tr></tbody>
       </table>
     </div>
     <div class="pager-wrap" data-pager-wrap hidden>
@@ -103,31 +103,32 @@ const labels = zh ? {
       }
       return categoryCache.get(key);
     };
+    const zhPage = document.documentElement.lang === 'zh-CN';
     const rowHtml = (product) => {
       const linked = imageIds.has(String(product.id));
       const name = linked ? `<a class="catalog-product-link" href="${document.documentElement.lang === 'zh-CN' ? '/zh' : ''}/products/${encodeURIComponent(product.category)}/${encodeURIComponent(product.id)}/"><span class="name-en">${escapeHtml(product.name)}</span>${product.nameZh ? `<span class="name-zh">${escapeHtml(product.nameZh)}</span>` : ''}</a>` : `<span class="name-en">${escapeHtml(product.name)}</span>${product.nameZh ? `<span class="name-zh">${escapeHtml(product.nameZh)}</span>` : ''}`;
       const storage = storageText(product);
-      return `<tr class="catalog-product-row"><td class="col-id"><code>${escapeHtml(product.id)}</code></td><td class="col-product">${name}<div class="catalog-mobile-meta">${storage ? `<span><strong>${document.documentElement.lang === 'zh-CN' ? '温层' : 'Storage'}:</strong> ${storage}</span>` : ''}</div></td><td class="col-storage">${storage ? `<span class="storage-badge ${product.storage}">${storage}</span>` : ''}</td></tr>`;
+      return `<tr class="catalog-product-row"><td class="col-id"><code>${escapeHtml(product.id)}</code></td><td class="col-product">${name}<div class="catalog-mobile-meta">${storage ? `<span><strong>${document.documentElement.lang === 'zh-CN' ? '温层' : 'Storage'}:</strong> ${storage}</span>` : ''}</div></td><td class="col-storage">${storage ? `<span class="storage-badge ${product.storage}">${storage}</span>` : ''}</td><td class="col-cart"><button type="button" class="add-cart-btn" data-add-to-cart data-id="${escapeHtml(product.id)}" data-name="${escapeHtml(product.name)}" data-name-zh="${escapeHtml(product.nameZh || '')}" data-category="${escapeHtml(product.category || '')}" aria-label="${escapeHtml((zhPage ? '加入购物车：' : 'Add to cart: ') + (zhPage && product.nameZh ? product.nameZh : product.name))}"><span aria-hidden="true">+</span><span data-add-label>${zhPage ? '加入' : 'Add'}</span></button></td></tr>`;
     };
     const render = async () => {
       const filteredIndex = index.filter((product) => (category === 'all' || product.category === category) && matches(product, query));
       nameNode.textContent = nameFor(category); countNode.textContent = resultText(filteredIndex.length);
-      if (!filteredIndex.length) { tbody.innerHTML = `<tr><td colspan="3"><div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div></td></tr>`; pagerWrap.hidden = true; return; }
+      if (!filteredIndex.length) { tbody.innerHTML = `<tr><td colspan="4"><div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div></td></tr>`; pagerWrap.hidden = true; return; }
       const pages = Math.max(1, Math.ceil(filteredIndex.length / step));
       page = Math.min(Math.max(1, page), pages);
       const visible = filteredIndex.slice((page - 1) * step, page * step);
-      tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.loading}</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="4" class="catalog-loading-row">${labels.loading}</td></tr>`;
       try {
         const keys = [...new Set(visible.map((product) => product.category))];
         const groups = await Promise.all(keys.map((key) => loadCategory(key)));
         const details = new Map(groups.flat().map((product) => [String(product.id), product]));
         tbody.innerHTML = visible.map((product) => rowHtml(details.get(String(product.id)) || product)).join('');
-      } catch (_) { tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
+      } catch (_) { tbody.innerHTML = `<tr><td colspan="4" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
       pagerWrap.hidden = pages <= 1; pagerNav.innerHTML = pagerHtml(page, pages, isZh); pagerStatus.textContent = rangeText(page, step, filteredIndex.length, isZh); syncUrl();
       buttons.forEach((button) => { const active = button.dataset.category === category; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
     };
     const boot = async () => {
-      try { const response = await fetch('/data/catalog-index.json', { credentials: 'same-origin' }); if (!response.ok) throw new Error('Index request failed'); index = await response.json(); render(); } catch (_) { countNode.textContent = labels.noResults; tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
+      try { const response = await fetch('/data/catalog-index.json', { credentials: 'same-origin' }); if (!response.ok) throw new Error('Index request failed'); index = await response.json(); render(); } catch (_) { countNode.textContent = labels.noResults; tbody.innerHTML = `<tr><td colspan="4" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
     };
     const params = new URLSearchParams(location.search); if (buttons.some((button) => button.dataset.category === params.get('category'))) category = params.get('category'); if (params.get('q')) { query = params.get('q'); input.value = query; } page = parseInt(params.get('page') || '1', 10) || 1;
     input.addEventListener('input', () => { query = input.value; page = 1; render(); });

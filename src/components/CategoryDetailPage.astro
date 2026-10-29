@@ -88,6 +88,7 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
               <th class="col-id">Item #</th>
               <th class="col-product">{zh ? '产品名称' : 'Product'}</th>
               <th class="col-storage">{zh ? '温层' : 'Storage'}</th>
+              <th class="col-cart"><span class="sr-only">{zh ? '加入购物车' : 'Add to cart'}</span></th>
             </tr>
           </thead>
           <tbody>
@@ -113,6 +114,9 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
                   </td>
                   <td class="col-storage">
                     {storage && <span class:list={['storage-badge', product.storage]}>{storage}</span>}
+                  </td>
+                  <td class="col-cart">
+                    <button type="button" class="add-cart-btn" data-add-to-cart data-id={product.id} data-name={product.name} data-name-zh={product.nameZh || ''} data-category={product.category || category.key} aria-label={zh ? `加入购物车：${product.nameZh || product.name}` : `Add to cart: ${product.name}`}><span aria-hidden="true">+</span><span data-add-label>{zh ? '加入' : 'Add'}</span></button>
                   </td>
                 </tr>
               );

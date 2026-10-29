@@ -1,0 +1,255 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { contact } from '@/data/site';
+
+interface Props { lang?: 'en' | 'zh' }
+const { lang = 'en' } = Astro.props;
+const zh = lang === 'zh';
+const prefix = zh ? '/zh' : '';
+const title = zh ? '购物车与提交订单 | Van Harvest 万昌' : 'Order Cart | Van Harvest LLC';
+const description = zh
+  ? '把需要的产品加入购物车并提交订单。不需要在线付款，Van Harvest 销售会致电与您确认价格、数量和送货时间。'
+  : 'Add products to your order cart and submit it. No online payment: the Van Harvest sales team calls you to confirm pricing, quantities and delivery.';
+---
+<BaseLayout title={title} description={description} active="" lang={lang} noindex>
+  <section class="inner-hero cart-hero">
+    <div class="shell inner-grid">
+      <div>
+        <h1>{zh ? '购物车' : 'Order cart'}</h1>
+      </div>
+      <div class="inner-copy">
+        <p>{zh
+          ? '提交订单不需要在线付款。我们收到订单后，销售会致电与您确认价格、数量和送货时间，确认后才安排送货。'
+          : 'Submitting an order takes no online payment. When we receive it, our sales team calls you to confirm pricing, quantities and delivery before anything ships.'}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section cart-section" data-cart-page data-lang={lang} data-prefix={prefix}>
+    <div class="shell">
+      <noscript>
+        <p class="cart-noscript">{zh ? `购物车需要启用 JavaScript。也可以直接致电 ${contact.phoneDisplay} 下单。` : `The order cart needs JavaScript. You can also call ${contact.phoneDisplay} to order.`}</p>
+      </noscript>
+
+      <div class="cart-success" data-cart-success hidden tabindex="-1">
+        <p class="cart-success-kicker">{zh ? '订单已提交' : 'Order submitted'}</p>
+        <h2>{zh ? '谢谢！我们已收到您的订单。' : 'Thank you. We received your order.'}</h2>
+        <p>{zh ? '订单编号' : 'Order reference'} <strong data-success-ref></strong></p>
+        <p>{zh ? `销售会尽快致电与您确认价格、数量和送货时间。如有急事请致电 ${contact.phoneDisplay}。` : `Our sales team will call you shortly to confirm pricing, quantities and delivery. For anything urgent, call ${contact.phoneDisplay}.`}</p>
+        <ul class="cart-success-list" data-success-list></ul>
+        <a class="button" href={`${prefix}/products/`}>{zh ? '继续浏览产品 →' : 'Keep browsing products →'}</a>
+      </div>
+
+      <div class="cart-grid" data-cart-main>
+        <div class="cart-items-panel">
+          <div class="cart-items-head">
+            <h2>{zh ? '订单产品' : 'Products in your order'}</h2>
+            <span data-cart-summary></span>
+          </div>
+          <ul class="cart-items" data-cart-items></ul>
+          <div class="cart-empty" data-cart-empty hidden>
+            <p>{zh ? '购物车还是空的。在产品目录里点“加入”就可以把产品放进来。' : 'Your cart is empty. Tap “Add” next to any product in the catalog to put it here.'}</p>
+            <a class="button" href={`${prefix}/products/`}>{zh ? '浏览产品目录 →' : 'Browse products →'}</a>
+          </div>
+          <p class="cart-unit-note">{zh
+            ? '数量按目录里的包装单位（箱 / 包）计算。需要散装、特殊规格或可接受替代品，请写在备注里。每次送货最低 $500，销售确认时会核对。'
+            : 'Quantities are in the catalog pack unit (case / pack). Write any loose quantities, special sizes or acceptable substitutes in the notes. Deliveries have a $500 minimum; sales will check this when confirming.'}</p>
+        </div>
+
+        <form class="application-form cart-form" data-order-form novalidate>
+          <h2>{zh ? '联系与送货信息' : 'Contact & delivery'}</h2>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-trap" />
+          <fieldset class="cart-customer-type">
+            <legend>{zh ? '您是' : 'I am'}</legend>
+            <label class="radio-line"><input type="radio" name="customerType" value="existing" checked /> <span>{zh ? '已开户客户' : 'An existing customer'}</span></label>
+            <label class="radio-line"><input type="radio" name="customerType" value="new" /> <span>{zh ? '新客户' : 'A new customer'}</span></label>
+          </fieldset>
+          <p class="cart-new-note" data-new-note hidden>{zh ? '新客户首单货到付款（COD）。销售确认订单时会顺便帮您开户。' : 'New customers pay COD on the first order. Sales will set up your account when confirming the order.'}</p>
+          <label><span>{zh ? '店名 / 公司名 *' : 'Business name *'}</span><input name="business" autocomplete="organization" required maxlength="120" /></label>
+          <div class="form-grid">
+            <label><span>{zh ? '联系人 *' : 'Contact name *'}</span><input name="contact" autocomplete="name" required maxlength="80" /></label>
+            <label><span>{zh ? '电话 *' : 'Phone *'}</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" /></label>
+          </div>
+          <label><span>{zh ? '邮箱（选填）' : 'Email (optional)'}</span><input name="email" type="email" autocomplete="email" maxlength="120" /></label>
+          <label><span>{zh ? '送货地址 *' : 'Delivery address *'}</span><textarea name="address" rows="2" autocomplete="street-address" required maxlength="300"></textarea></label>
+          <label><span>{zh ? '希望送货日期（选填）' : 'Preferred delivery date (optional)'}</span><input name="deliveryDate" type="date" data-min-today /></label>
+          <label><span>{zh ? '备注（选填）' : 'Notes (optional)'}</span><textarea name="notes" rows="4" maxlength="1500" placeholder={zh ? '例如：散装数量、可接受的替代品、收货时间' : 'e.g. loose quantities, acceptable substitutes, receiving hours'}></textarea></label>
+          <div class="form-actions">
+            <button class="button" type="submit" data-order-submit>{zh ? '提交订单 →' : 'Submit order →'}</button>
+            <span class="form-status" data-order-status aria-live="polite"></span>
+          </div>
+          <p class="cart-form-fineprint">{zh ? '提交后不会扣款。我们只用这些信息联系您确认订单。' : 'Nothing is charged when you submit. We only use these details to confirm your order with you.'}</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import { readCart, setQty, removeItem, clearCart, onCartChange, cartCount, MAX_QTY, type CartItem } from '@/scripts/cart';
+
+    const root = document.querySelector<HTMLElement>('[data-cart-page]');
+    if (root) {
+      const zh = root.dataset.lang === 'zh';
+      const t = (en: string, cn: string) => (zh ? cn : en);
+      const list = root.querySelector<HTMLUListElement>('[data-cart-items]')!;
+      const empty = root.querySelector<HTMLElement>('[data-cart-empty]')!;
+      const summary = root.querySelector<HTMLElement>('[data-cart-summary]')!;
+      const form = root.querySelector<HTMLFormElement>('[data-order-form]')!;
+      const status = root.querySelector<HTMLElement>('[data-order-status]')!;
+      const submit = root.querySelector<HTMLButtonElement>('[data-order-submit]')!;
+      const main = root.querySelector<HTMLElement>('[data-cart-main]')!;
+      const success = root.querySelector<HTMLElement>('[data-cart-success]')!;
+      const newNote = root.querySelector<HTMLElement>('[data-new-note]')!;
+      const startedAt = Date.now();
+
+      const el = <K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, text?: string) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+        return node;
+      };
+      const primary = (item: CartItem) => (zh && item.nameZh ? item.nameZh : item.name);
+      const secondary = (item: CartItem) => (zh ? (item.nameZh ? item.name : '') : item.nameZh || '');
+
+      const render = (items: CartItem[]) => {
+        list.replaceChildren();
+        empty.hidden = items.length > 0;
+        form.hidden = items.length === 0;
+        summary.textContent = items.length
+          ? t(`${items.length} ${items.length === 1 ? 'product' : 'products'} · ${cartCount(items)} units`, `${items.length} 种产品 · 共 ${cartCount(items)} 件`)
+          : '';
+        for (const item of items) {
+          const row = el('li', 'cart-item');
+          const info = el('div', 'cart-item-info');
+          info.append(el('code', '', `#${item.id}`), el('strong', '', primary(item)));
+          if (secondary(item)) info.append(el('span', 'cart-item-alt', secondary(item)));
+          const controls = el('div', 'cart-item-controls');
+          const stepper = el('div', 'qty-stepper');
+          const minus = el('button', '', '−');
+          minus.type = 'button';
+          minus.setAttribute('aria-label', t('Decrease quantity', '减少数量'));
+          const input = el('input');
+          input.type = 'number';
+          input.inputMode = 'numeric';
+          input.min = '1';
+          input.max = String(MAX_QTY);
+          input.value = String(item.qty);
+          input.setAttribute('aria-label', t(`Quantity for item ${item.id}`, `产品 ${item.id} 的数量`));
+          const plus = el('button', '', '+');
+          plus.type = 'button';
+          plus.setAttribute('aria-label', t('Increase quantity', '增加数量'));
+          minus.addEventListener('click', () => setQty(item.id, item.qty - 1));
+          plus.addEventListener('click', () => setQty(item.id, item.qty + 1));
+          input.addEventListener('change', () => setQty(item.id, Number(input.value)));
+          stepper.append(minus, input, plus);
+          const remove = el('button', 'cart-remove', t('Remove', '删除'));
+          remove.type = 'button';
+          remove.setAttribute('aria-label', t(`Remove ${item.name}`, `删除 ${primary(item)}`));
+          remove.addEventListener('click', () => removeItem(item.id));
+          controls.append(stepper, remove);
+          row.append(info, controls);
+          list.append(row);
+        }
+      };
+
+      render(readCart());
+      onCartChange(render);
+      window.addEventListener('storage', () => render(readCart()));
+
+      form.querySelectorAll<HTMLInputElement>('input[name="customerType"]').forEach((radio) =>
+        radio.addEventListener('change', () => { newNote.hidden = form.querySelector<HTMLInputElement>('input[name="customerType"]:checked')?.value !== 'new'; })
+      );
+      const dateInput = form.querySelector<HTMLInputElement>('[data-min-today]');
+      if (dateInput) {
+        const now = new Date();
+        dateInput.min = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+      }
+
+      const orderRef = () => {
+        const d = new Date();
+        const stamp = `${String(d.getFullYear()).slice(2)}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+        return `VH-${stamp}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+      };
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const items = readCart();
+        if (!items.length) return;
+        const data = new FormData(form);
+        const value = (name: string) => String(data.get(name) || '').trim();
+        if (value('_honey') || Date.now() - startedAt < 2500) {
+          status.textContent = t('Please wait a moment and try again.', '请稍等片刻后再提交。');
+          return;
+        }
+        const missing = ['business', 'contact', 'phone', 'address'].filter((name) => !value(name));
+        if (missing.length) {
+          status.textContent = t('Please fill in business name, contact, phone and delivery address.', '请填写店名、联系人、电话和送货地址。');
+          (form.elements.namedItem(missing[0]) as HTMLElement | null)?.focus();
+          return;
+        }
+        if (value('phone').replace(/\D/g, '').length < 7) {
+          status.textContent = t('Please enter a phone number we can call.', '请填写可以联系到您的电话号码。');
+          (form.elements.namedItem('phone') as HTMLElement | null)?.focus();
+          return;
+        }
+        const email = value('email');
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          status.textContent = t('Please check the email address.', '请检查邮箱格式。');
+          return;
+        }
+
+        const ref = orderRef();
+        const isNew = value('customerType') === 'new';
+        const units = cartCount(items);
+        const out = new FormData();
+        out.set('_subject', `[网站订单] ${value('business')} · ${items.length} 种 / ${units} 件 · ${ref}`);
+        out.set('_template', 'table');
+        out.set('_captcha', 'false');
+        if (email) out.set('_replyto', email);
+        out.set('订单编号 Order #', ref);
+        out.set('客户类型 Customer', isNew ? '新客户 New customer（需开户 / COD）' : '已开户客户 Existing customer');
+        out.set('店名 Business', value('business'));
+        out.set('联系人 Contact', value('contact'));
+        out.set('电话 Phone', value('phone'));
+        out.set('邮箱 Email', email || '—');
+        out.set('送货地址 Address', value('address'));
+        out.set('希望送货日期 Preferred date', value('deliveryDate') || '—');
+        out.set('备注 Notes', value('notes') || '—');
+        out.set('产品数 Lines / 总件数 Units', `${items.length} / ${units}`);
+        items.slice(0, 200).forEach((item, index) => {
+          const names = [item.nameZh, item.name].filter(Boolean).join(' / ');
+          out.set(`${String(index + 1).padStart(2, '0')}. Item #${item.id}`, `× ${item.qty}　${names}`);
+        });
+        out.set('下单页面 Language', zh ? '中文' : 'English');
+
+        status.textContent = t('Sending your order…', '正在提交订单…');
+        submit.disabled = true;
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/ordersvhd@gmail.com', {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: out,
+          });
+          let payload: { success?: boolean | string } | null = null;
+          try { payload = await response.json(); } catch { /* ignore */ }
+          if (!response.ok || (payload && (payload.success === false || payload.success === 'false'))) throw new Error('failed');
+
+          const successList = root.querySelector<HTMLUListElement>('[data-success-list]')!;
+          successList.replaceChildren(...items.map((item) => el('li', '', `#${item.id}  ${primary(item)}  × ${item.qty}`)));
+          root.querySelector<HTMLElement>('[data-success-ref]')!.textContent = ref;
+          clearCart();
+          form.reset();
+          status.textContent = '';
+          main.hidden = true;
+          success.hidden = false;
+          success.focus();
+          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch {
+          status.textContent = t('We could not send your order. Please try again or call (704) 392-8717.', '订单提交失败，请重试或致电 (704) 392-8717。');
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    }
+  </script>
+</BaseLayout>
