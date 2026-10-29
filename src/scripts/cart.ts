@@ -125,6 +125,11 @@ function bindAddButtons() {
     const { id = '', name = '', nameZh = '', category = '' } = button.dataset;
     if (!id) return;
     addToCart({ id, name, nameZh, category }, qty);
+    // List-row buttons turn into a quantity box right away; only the product-page button flashes "Added".
+    if (button.classList.contains('add-cart-btn')) {
+      showToast(isZh() && nameZh ? nameZh : name);
+      return;
+    }
     button.classList.add('is-added');
     const label = button.querySelector('[data-add-label]');
     const original = label?.textContent;
@@ -152,3 +157,86 @@ window.addEventListener('storage', (event) => {
 });
 window.addEventListener('pageshow', () => updateBadges());
 bindAddButtons();
+
+// ---------- Inline quantity on list rows ----------
+// Once a product is in the cart, its "Add" button in the list turns into − [qty] +, so a customer can
+// type 15 instead of tapping Add 15 times. Setting it to 0 removes the product.
+const qtyFor = (id: string, items = readCart()) => items.find((item) => item.id === id)?.qty || 0;
+
+function ensureRowStepper(button: HTMLButtonElement) {
+  const cell = button.parentElement;
+  if (!cell) return null;
+  let stepper = cell.querySelector<HTMLElement>('.row-qty');
+  if (!stepper) {
+    const zh = isZh();
+    const name = (zh && button.dataset.nameZh) || button.dataset.name || '';
+    stepper = document.createElement('div');
+    stepper.className = 'row-qty';
+    stepper.dataset.id = button.dataset.id || '';
+    stepper.hidden = true;
+    stepper.innerHTML = '<button type="button" data-row-step="-1">−</button><input type="number" inputmode="numeric" min="0" max="999" data-row-qty /><button type="button" data-row-step="1">+</button>';
+    const [minus, input, plus] = Array.from(stepper.children) as HTMLElement[];
+    minus.setAttribute('aria-label', zh ? `减少 ${name} 的数量` : `Decrease quantity of ${name}`);
+    plus.setAttribute('aria-label', zh ? `增加 ${name} 的数量` : `Increase quantity of ${name}`);
+    input.setAttribute('aria-label', zh ? `${name} 的数量` : `Quantity of ${name}`);
+    cell.appendChild(stepper);
+  }
+  return stepper;
+}
+
+function syncRows(items = readCart()) {
+  document.querySelectorAll<HTMLButtonElement>('.add-cart-btn[data-add-to-cart]').forEach((button) => {
+    const id = button.dataset.id || '';
+    const qty = qtyFor(id, items);
+    const stepper = qty || button.parentElement?.querySelector('.row-qty') ? ensureRowStepper(button) : null;
+    button.hidden = qty > 0;
+    if (!stepper) return;
+    stepper.hidden = qty === 0;
+    const input = stepper.querySelector<HTMLInputElement>('[data-row-qty]');
+    if (input && document.activeElement !== input) input.value = String(qty);
+  });
+}
+
+function setRowQty(id: string, qty: number) {
+  if (!Number.isFinite(qty) || qty <= 0) removeItem(id);
+  else setQty(id, qty);
+}
+
+document.addEventListener('click', (event) => {
+  const step = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>('[data-row-step]');
+  if (!step) return;
+  const stepper = step.closest<HTMLElement>('.row-qty');
+  const id = stepper?.dataset.id;
+  if (!id) return;
+  setRowQty(id, qtyFor(id) + Number(step.dataset.rowStep));
+});
+document.addEventListener('change', (event) => {
+  const input = event.target as HTMLInputElement;
+  if (!input.matches?.('[data-row-qty]')) return;
+  const id = input.closest<HTMLElement>('.row-qty')?.dataset.id;
+  if (id) setRowQty(id, input.value.trim() === '' ? 0 : Math.floor(Number(input.value)));
+});
+document.addEventListener('keydown', (event) => {
+  const input = event.target as HTMLInputElement;
+  if (event.key === 'Enter' && input.matches?.('[data-row-qty]')) input.blur();
+});
+// After "Add" in a list, put the cursor in the new quantity box so the customer can type a number.
+document.addEventListener('click', (event) => {
+  const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>('.add-cart-btn[data-add-to-cart]');
+  if (!button) return;
+  window.setTimeout(() => {
+    const input = button.parentElement?.querySelector<HTMLInputElement>('.row-qty [data-row-qty]');
+    if (input && !matchMedia('(pointer: coarse)').matches) input.select();
+  }, 0);
+});
+
+syncRows();
+onCartChange(syncRows);
+window.addEventListener('pageshow', () => syncRows());
+window.addEventListener('storage', (event) => { if (event.key === KEY) syncRows(); });
+// The full catalog renders its rows after loading data, and re-renders on search / page change.
+let pending = 0;
+new MutationObserver(() => {
+  if (pending) return;
+  pending = requestAnimationFrame(() => { pending = 0; syncRows(); });
+}).observe(document.body, { childList: true, subtree: true });

@@ -127,3 +127,13 @@
 .cart-fallback-actions{display:flex;flex-wrap:wrap;gap:10px}
 .cart-fallback-actions .button{flex:1 1 180px;justify-content:center;text-align:center;cursor:pointer}
 .cart-fallback-note{color:var(--muted)!important;font-size:13px!important}
+
+/* Inline quantity on list rows (replaces the Add button once the product is in the cart) */
+.add-cart-btn[hidden],.row-qty[hidden]{display:none!important}
+.row-qty{display:inline-flex;align-items:stretch;height:34px;border:1px solid var(--navy);border-radius:2px;background:#fff;vertical-align:middle}
+.row-qty button{width:30px;border:0;background:transparent;color:var(--navy);font:600 16px/1 var(--sans);cursor:pointer}
+.row-qty button:hover{background:rgba(16,43,82,.07)}
+.row-qty input{width:44px;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);background:rgba(184,134,72,.1);color:var(--ink);font:700 13px var(--mono);text-align:center;-moz-appearance:textfield;appearance:textfield}
+.row-qty input::-webkit-outer-spin-button,.row-qty input::-webkit-inner-spin-button{margin:0;-webkit-appearance:none}
+.catalog-table .col-cart{width:118px}
+@media(max-width:767px){.row-qty{height:36px}.row-qty button{width:32px}.row-qty input{width:40px}}
