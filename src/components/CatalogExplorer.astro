@@ -8,9 +8,9 @@ const zh = lang === 'zh';
 const STEP = 50;
 const imageIds = Object.keys(productImages);
 const labels = zh ? {
-  all: '全部产品', searchLabel: '搜索产品', placeholder: 'Item #、英文或中文名', quick: '快速筛选', loading: '正在加载产品目录…', noResults: '暂无匹配产品', noResultsBody: '请尝试产品编号、英文名、中文名或品类。', clear: '清除筛选', load: '加载更多', product: '产品名称', item: 'Item #', storage: '温层', frozen: '冷冻', refrigerated: '冷藏'
+  all: '全部产品', searchLabel: '搜索产品', placeholder: 'Item #、英文或中文名', quick: '快速筛选', loading: '正在加载产品目录…', noResults: '暂无匹配产品', noResultsBody: '请尝试产品编号、英文名、中文名或品类。', clear: '清除筛选', product: '产品名称', item: 'Item #', storage: '温层', frozen: '冷冻', refrigerated: '冷藏'
 } : {
-  all: 'All products', searchLabel: 'Search products', placeholder: 'Item #, English or Chinese name', quick: 'Quick filter', loading: 'Loading product catalog…', noResults: 'No matching products', noResultsBody: 'Try an Item #, English name, Chinese name or category.', clear: 'Clear filters', load: 'Load more', product: 'Product', item: 'Item #', storage: 'Storage', frozen: 'Frozen', refrigerated: 'Refrigerated'
+  all: 'All products', searchLabel: 'Search products', placeholder: 'Item #, English or Chinese name', quick: 'Quick filter', loading: 'Loading product catalog…', noResults: 'No matching products', noResultsBody: 'Try an Item #, English name, Chinese name or category.', clear: 'Clear filters', product: 'Product', item: 'Item #', storage: 'Storage', frozen: 'Frozen', refrigerated: 'Refrigerated'
 };
 ---
 <div class="catalog-shell catalog-shell-wide" data-catalog data-labels={JSON.stringify(labels)} data-step={STEP} data-image-ids={JSON.stringify(imageIds)}>
@@ -35,7 +35,10 @@ const labels = zh ? {
         <tbody data-product-results><tr><td colspan="3" class="catalog-loading-row">{labels.loading}</td></tr></tbody>
       </table>
     </div>
-    <div class="load-more" data-load-wrap hidden><button type="button" data-load-more class="button button-outline"></button></div>
+    <div class="pager-wrap" data-pager-wrap hidden>
+      <p class="pager-status" data-pager-status aria-live="polite"></p>
+      <nav class="pager" data-pager aria-label={zh ? '产品分页' : 'Product pages'}></nav>
+    </div>
   </div>
 </div>
 
@@ -51,14 +54,42 @@ const labels = zh ? {
     const tbody = root.querySelector('[data-product-results]');
     const nameNode = root.querySelector('[data-current-name]');
     const countNode = root.querySelector('[data-result-count]');
-    const loadWrap = root.querySelector('[data-load-wrap]');
-    const loadButton = root.querySelector('[data-load-more]');
+    const pagerWrap = root.querySelector('[data-pager-wrap]');
+    const pagerNav = root.querySelector('[data-pager]');
+    const pagerStatus = root.querySelector('[data-pager-status]');
+    const isZh = document.documentElement.lang === 'zh-CN';
+    const pagerHtml = (page, pages, zh) => {
+      if (pages <= 1) return '';
+      const nums = [];
+      for (let i = 1; i <= pages; i++) {
+        if (i === 1 || i === pages || Math.abs(i - page) <= 1) nums.push(i);
+        else if (nums[nums.length - 1] !== '…') nums.push('…');
+      }
+      const btn = (label, target, extra = '', aria = '') => `<button type="button" data-page="${target}" ${extra}${aria ? ` aria-label="${aria}"` : ''}>${label}</button>`;
+      return btn('‹', page - 1, page <= 1 ? 'disabled' : '', zh ? '上一页' : 'Previous page')
+        + nums.map((n) => n === '…' ? '<span class="pager-gap" aria-hidden="true">…</span>' : btn(String(n), n, n === page ? 'class="is-current" aria-current="page"' : '', (zh ? '第 ' + n + ' 页' : 'Page ' + n))).join('')
+        + btn('›', page + 1, page >= pages ? 'disabled' : '', zh ? '下一页' : 'Next page');
+    };
+    const rangeText = (page, size, total, zh) => {
+      const from = total ? (page - 1) * size + 1 : 0;
+      const to = Math.min(page * size, total);
+      return zh ? `第 ${from}–${to} 个，共 ${total.toLocaleString()} 个产品` : `Showing ${from}–${to} of ${total.toLocaleString()} products`;
+    };
+    const syncUrl = () => {
+      const url = new URL(location.href);
+      const set = (key, value) => { if (value) url.searchParams.set(key, value); else url.searchParams.delete(key); };
+      set('category', category !== 'all' ? category : '');
+      set('q', query.trim());
+      set('page', page > 1 ? String(page) : '');
+      history.replaceState(history.state, '', url);
+    };
+
     const buttons = [...root.querySelectorAll('[data-category]')];
     const categoryCache = new Map();
     let index = [];
     let category = 'all';
     let query = '';
-    let limit = step;
+    let page = 1;
     const synonyms = { wing: ['chicken wing', '鸡翅'], '鸡翅': ['wing', 'chicken wing'], shrimp: ['虾'], '虾': ['shrimp'], tofu: ['豆腐'], '豆腐': ['tofu'], beef: ['牛', '牛肉'], pork: ['猪', '猪肉'], fish: ['鱼'] };
     const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
     const normalize = (value) => value.trim().toLowerCase().replace(/chiken/g, 'chicken').replace(/porkk/g, 'pork');
@@ -81,8 +112,10 @@ const labels = zh ? {
     const render = async () => {
       const filteredIndex = index.filter((product) => (category === 'all' || product.category === category) && matches(product, query));
       nameNode.textContent = nameFor(category); countNode.textContent = resultText(filteredIndex.length);
-      if (!filteredIndex.length) { tbody.innerHTML = `<tr><td colspan="3"><div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div></td></tr>`; loadWrap.hidden = true; return; }
-      const visible = filteredIndex.slice(0, limit);
+      if (!filteredIndex.length) { tbody.innerHTML = `<tr><td colspan="3"><div class="empty-state"><h3>${labels.noResults}</h3><p>${labels.noResultsBody}</p><button type="button" data-clear>${labels.clear}</button></div></td></tr>`; pagerWrap.hidden = true; return; }
+      const pages = Math.max(1, Math.ceil(filteredIndex.length / step));
+      page = Math.min(Math.max(1, page), pages);
+      const visible = filteredIndex.slice((page - 1) * step, page * step);
       tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.loading}</td></tr>`;
       try {
         const keys = [...new Set(visible.map((product) => product.category))];
@@ -90,16 +123,16 @@ const labels = zh ? {
         const details = new Map(groups.flat().map((product) => [String(product.id), product]));
         tbody.innerHTML = visible.map((product) => rowHtml(details.get(String(product.id)) || product)).join('');
       } catch (_) { tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
-      const remaining = filteredIndex.length - limit; loadWrap.hidden = remaining <= 0; loadButton.textContent = `${labels.load} · ${Math.min(step, Math.max(remaining, 0))}`;
+      pagerWrap.hidden = pages <= 1; pagerNav.innerHTML = pagerHtml(page, pages, isZh); pagerStatus.textContent = rangeText(page, step, filteredIndex.length, isZh); syncUrl();
       buttons.forEach((button) => { const active = button.dataset.category === category; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
     };
     const boot = async () => {
       try { const response = await fetch('/data/catalog-index.json', { credentials: 'same-origin' }); if (!response.ok) throw new Error('Index request failed'); index = await response.json(); render(); } catch (_) { countNode.textContent = labels.noResults; tbody.innerHTML = `<tr><td colspan="3" class="catalog-loading-row">${labels.noResultsBody}</td></tr>`; }
     };
-    const params = new URLSearchParams(location.search); if (buttons.some((button) => button.dataset.category === params.get('category'))) category = params.get('category'); if (params.get('q')) { query = params.get('q'); input.value = query; }
-    input.addEventListener('input', () => { query = input.value; limit = step; render(); });
-    buttons.forEach((button) => button.addEventListener('click', () => { category = button.dataset.category || 'all'; limit = step; render(); }));
-    loadButton.addEventListener('click', () => { limit += step; render(); });
+    const params = new URLSearchParams(location.search); if (buttons.some((button) => button.dataset.category === params.get('category'))) category = params.get('category'); if (params.get('q')) { query = params.get('q'); input.value = query; } page = parseInt(params.get('page') || '1', 10) || 1;
+    input.addEventListener('input', () => { query = input.value; page = 1; render(); });
+    buttons.forEach((button) => button.addEventListener('click', () => { category = button.dataset.category || 'all'; page = 1; render(); }));
+    pagerNav.addEventListener('click', (event) => { const button = event.target.closest('button[data-page]'); if (!button || button.disabled) return; page = parseInt(button.dataset.page, 10); render().then(() => root.querySelector('.catalog-summary')?.scrollIntoView({ behavior: 'smooth', block: 'start' })); });
     boot();
   })();
 </script>

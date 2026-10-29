@@ -54,7 +54,7 @@ const activeNormalized = active.endsWith('/') ? active : (active === '' ? '' : `
       <a class="header-apply button header-apply-desktop" href={localHref('/apply/')}>{isZh ? '申请开户' : 'Apply for an account'}</a>
       <a class="header-apply-mobile button" href={localHref('/apply/')}>{isZh ? '开户' : 'Apply'}</a>
       <button class="menu-toggle" type="button" aria-label={isZh ? '打开菜单' : 'Open menu'} aria-expanded="false" data-menu-toggle>
-        <i></i><i></i>
+        <b class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></b>
         <span>{isZh ? '菜单' : 'Menu'}</span>
       </button>
     </div>

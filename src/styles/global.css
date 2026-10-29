@@ -189,8 +189,8 @@ h1 em,h2 em{font-weight:500}
   cursor:pointer;
   transition:border-color 200ms ease,color 200ms ease;
 }
-.menu-toggle i{display:block;width:18px;height:2px;background:currentColor}
-.menu-toggle i+i{margin-top:-3px}
+.menu-icon{display:flex;flex-direction:column;justify-content:center;gap:4px}
+.menu-toggle i{display:block;width:18px;height:2px;border-radius:1px;background:currentColor}
 .menu-toggle span{font:600 12px/1 var(--mono);text-transform:uppercase}
 .site-header.is-scrolled .menu-toggle{border-color:rgba(16,43,82,.28)}
 
@@ -266,6 +266,7 @@ h1 em,h2 em{font-weight:500}
   text-transform:uppercase;
   transition:transform 200ms var(--ease),background 200ms var(--ease),border-color 200ms var(--ease);
 }
+.contact-fab-icon{flex:none;display:block}
 .contact-fab:hover{
   transform:translateY(-2px);
   background:var(--gold);

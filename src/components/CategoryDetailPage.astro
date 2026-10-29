@@ -120,13 +120,9 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
           </tbody>
         </table>
         {needsPagination && (
-          <div class="category-pagination-bar" style="margin-top: 32px; text-align: center;">
-            <p class="category-pagination-status" style="margin-bottom: 14px; font-size: 14px; color: var(--text-muted, #555);">
-              {zh ? `当前显示 50 / ${products.length} 个产品` : `Showing 50 of ${products.length} products`}
-            </p>
-            <button class="button button-gold category-load-more" type="button" data-total={products.length} data-loaded="50" data-page-size="50">
-              {zh ? '加载更多产品 ↓' : 'Load more products ↓'}
-            </button>
+          <div class="pager-wrap">
+            <p class="pager-status" data-pager-status aria-live="polite">{zh ? `第 1–50 个，共 ${products.length.toLocaleString()} 个产品` : `Showing 1–50 of ${products.length.toLocaleString()} products`}</p>
+            <nav class="pager" data-pager aria-label={zh ? '产品分页' : 'Product pages'}></nav>
           </div>
         )}
       </div>
@@ -137,33 +133,52 @@ const detailHref = (id: string) => `${prefix}/products/${category.key}/${id}/`;
 
   <script is:inline>
     (() => {
-      const wraps = document.querySelectorAll('[data-category-pagination]');
-      wraps.forEach((wrap) => {
-        const btn = wrap.querySelector('.category-load-more');
-        const status = wrap.querySelector('.category-pagination-status');
-        if (!btn) return;
-        const total = parseInt(btn.getAttribute('data-total') || '0', 10);
-        const pageSize = parseInt(btn.getAttribute('data-page-size') || '50', 10);
-        let loaded = parseInt(btn.getAttribute('data-loaded') || '50', 10);
-        const zh = document.documentElement.lang.startsWith('zh');
+    const pagerHtml = (page, pages, zh) => {
+      if (pages <= 1) return '';
+      const nums = [];
+      for (let i = 1; i <= pages; i++) {
+        if (i === 1 || i === pages || Math.abs(i - page) <= 1) nums.push(i);
+        else if (nums[nums.length - 1] !== '…') nums.push('…');
+      }
+      const btn = (label, target, extra = '', aria = '') => `<button type="button" data-page="${target}" ${extra}${aria ? ` aria-label="${aria}"` : ''}>${label}</button>`;
+      return btn('‹', page - 1, page <= 1 ? 'disabled' : '', zh ? '上一页' : 'Previous page')
+        + nums.map((n) => n === '…' ? '<span class="pager-gap" aria-hidden="true">…</span>' : btn(String(n), n, n === page ? 'class="is-current" aria-current="page"' : '', (zh ? '第 ' + n + ' 页' : 'Page ' + n))).join('')
+        + btn('›', page + 1, page >= pages ? 'disabled' : '', zh ? '下一页' : 'Next page');
+    };
+    const rangeText = (page, size, total, zh) => {
+      const from = total ? (page - 1) * size + 1 : 0;
+      const to = Math.min(page * size, total);
+      return zh ? `第 ${from}–${to} 个，共 ${total.toLocaleString()} 个产品` : `Showing ${from}–${to} of ${total.toLocaleString()} products`;
+    };
+    const setPageParam = (page) => {
+      const url = new URL(location.href);
+      if (page > 1) url.searchParams.set('page', String(page)); else url.searchParams.delete('page');
+      history.replaceState(history.state, '', url);
+    };
 
-        btn.addEventListener('click', () => {
-          const nextTarget = Math.min(loaded + pageSize, total);
-          const rows = wrap.querySelectorAll('.category-product-row');
-          for (let i = loaded; i < nextTarget; i++) {
-            if (rows[i]) rows[i].style.display = '';
-          }
-          loaded = nextTarget;
-          btn.setAttribute('data-loaded', String(loaded));
-          if (status) {
-            status.textContent = zh
-              ? `当前显示 ${loaded} / ${total} 个产品`
-              : `Showing ${loaded} of ${total} products`;
-          }
-          if (loaded >= total) {
-            btn.style.display = 'none';
-          }
+      document.querySelectorAll('[data-category-pagination]').forEach((wrap) => {
+        const nav = wrap.querySelector('[data-pager]');
+        const status = wrap.querySelector('[data-pager-status]');
+        const rows = [...wrap.querySelectorAll('.category-product-row')];
+        if (!nav) return;
+        const size = parseInt(wrap.getAttribute('data-page-size') || '50', 10);
+        const total = rows.length;
+        const pages = Math.max(1, Math.ceil(total / size));
+        const zh = document.documentElement.lang.startsWith('zh');
+        const anchor = document.getElementById('category-products');
+        const show = (page, scroll) => {
+          page = Math.min(Math.max(1, page || 1), pages);
+          rows.forEach((row, i) => { row.style.display = i >= (page - 1) * size && i < page * size ? '' : 'none'; });
+          nav.innerHTML = pagerHtml(page, pages, zh);
+          if (status) status.textContent = rangeText(page, size, total, zh);
+          setPageParam(page);
+          if (scroll && anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+        nav.addEventListener('click', (event) => {
+          const button = event.target.closest('button[data-page]');
+          if (button && !button.disabled) show(parseInt(button.dataset.page, 10), true);
         });
+        show(parseInt(new URLSearchParams(location.search).get('page') || '1', 10), false);
       });
     })();
   </script>
